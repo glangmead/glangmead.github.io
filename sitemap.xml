@@ -3,13 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/</loc>
+    <loc>/categories/</loc>
     <lastmod>2018-11-05T12:36:54+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/</loc>
+    <loc>/</loc>
     <lastmod>2018-11-05T12:36:54+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -97,6 +97,46 @@
   </url>
   
   <url>
+    <loc>/publication_types/1/</loc>
+    <lastmod>2010-01-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/</loc>
+    <lastmod>2010-01-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/greg-langmead/</loc>
+    <lastmod>2010-01-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/mark-hopkins/</loc>
+    <lastmod>2010-01-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/publication_types/</loc>
+    <lastmod>2010-01-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/publication/</loc>
+    <lastmod>2010-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication/hopkins-scfg-2010/</loc>
+    <lastmod>2010-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/2009-12-08-giving-digital-items-is-hard/</loc>
     <lastmod>2009-12-08T20:28:12+00:00</lastmod>
   </url>
@@ -160,6 +200,11 @@
   </url>
   
   <url>
+    <loc>/publication/hopkins-cube-2009/</loc>
+    <lastmod>2009-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/2008-10-08-freshness/</loc>
     <lastmod>2008-10-08T20:06:03+00:00</lastmod>
   </url>
@@ -198,6 +243,35 @@
   <url>
     <loc>/post/2008-06-20-microsoft-engineers-couldnt-care-less/</loc>
     <lastmod>2008-06-20T18:48:24+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication_types/5/</loc>
+    <lastmod>2008-06-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/daniel-marcu/</loc>
+    <lastmod>2008-06-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/kenji-yamada/</loc>
+    <lastmod>2008-06-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/kevin-knight/</loc>
+    <lastmod>2008-06-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/publication/langmead-task-2008/</loc>
+    <lastmod>2008-06-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -501,6 +575,41 @@
   </url>
   
   <url>
+    <loc>/publication_types/2/</loc>
+    <lastmod>2002-10-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/publication/langmead-supersymmetric-2002/</loc>
+    <lastmod>2002-10-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/gregory-langmead/</loc>
+    <lastmod>2002-10-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/high-energy-physics-theory/</loc>
+    <lastmod>2002-10-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/mathematics-differential-geometry/</loc>
+    <lastmod>2002-10-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2002-10-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/post/2002-08-14-so-langmeadinfo-seems-relatively-stable/</loc>
     <lastmod>2002-08-14T21:49:59+00:00</lastmod>
   </url>
@@ -610,26 +719,7 @@
   </url>
   
   <url>
-    <loc>/authors/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/publication_types/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/publication/</loc>
-  </url>
-  
-  <url>
     <loc>/talk/</loc>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
-    <priority>0</priority>
   </url>
   
 </urlset>

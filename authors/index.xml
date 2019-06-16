@@ -1,14 +1,70 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Authors on Academic</title>
+    <title>Authors on Long Head</title>
     <link>/authors/</link>
-    <description>Recent content in Authors on Academic</description>
+    <description>Recent content in Authors on Long Head</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
+    <copyright>&amp;copy; Greg Langmead 1998–2019</copyright>
+    <lastBuildDate>Fri, 01 Jan 2010 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="/authors/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Greg Langmead</title>
+      <link>/authors/greg-langmead/</link>
+      <pubDate>Fri, 01 Jan 2010 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/greg-langmead/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mark Hopkins</title>
+      <link>/authors/mark-hopkins/</link>
+      <pubDate>Fri, 01 Jan 2010 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/mark-hopkins/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Daniel Marcu</title>
+      <link>/authors/daniel-marcu/</link>
+      <pubDate>Sun, 01 Jun 2008 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/daniel-marcu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kenji Yamada</title>
+      <link>/authors/kenji-yamada/</link>
+      <pubDate>Sun, 01 Jun 2008 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/kenji-yamada/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kevin Knight</title>
+      <link>/authors/kevin-knight/</link>
+      <pubDate>Sun, 01 Jun 2008 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/kevin-knight/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gregory Langmead</title>
+      <link>/authors/gregory-langmead/</link>
+      <pubDate>Tue, 01 Oct 2002 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/gregory-langmead/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title></title>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>High Energy Physics - Theory on Long Head</title>
+    <link>/tags/high-energy-physics-theory/</link>
+    <description>Recent content in High Energy Physics - Theory on Long Head</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Greg Langmead 1998–2019</copyright>
+    <lastBuildDate>Tue, 01 Oct 2002 00:00:00 +0000</lastBuildDate>
+    
+	    <atom:link href="/tags/high-energy-physics-theory/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>A Supersymmetric Quantum Field Theory Formulation of the Donaldson Polynomial Invariants</title>
+      <link>/publication/langmead-supersymmetric-2002/</link>
+      <pubDate>Tue, 01 Oct 2002 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/langmead-supersymmetric-2002/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

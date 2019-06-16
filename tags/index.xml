@@ -1,14 +1,34 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Academic</title>
+    <title>Tags on Long Head</title>
     <link>/tags/</link>
-    <description>Recent content in Tags on Academic</description>
+    <description>Recent content in Tags on Long Head</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
+    <copyright>&amp;copy; Greg Langmead 1998–2019</copyright>
+    <lastBuildDate>Tue, 01 Oct 2002 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>High Energy Physics - Theory</title>
+      <link>/tags/high-energy-physics-theory/</link>
+      <pubDate>Tue, 01 Oct 2002 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/high-energy-physics-theory/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mathematics - Differential Geometry</title>
+      <link>/tags/mathematics-differential-geometry/</link>
+      <pubDate>Tue, 01 Oct 2002 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/mathematics-differential-geometry/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

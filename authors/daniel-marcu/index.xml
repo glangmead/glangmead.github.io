@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Daniel Marcu on Long Head</title>
+    <link>/authors/daniel-marcu/</link>
+    <description>Recent content in Daniel Marcu on Long Head</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Greg Langmead 1998–2019</copyright>
+    <lastBuildDate>Sun, 01 Jun 2008 00:00:00 +0000</lastBuildDate>
+    
+	    <atom:link href="/authors/daniel-marcu/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Task parallelization in a text-to-text system</title>
+      <link>/publication/langmead-task-2008/</link>
+      <pubDate>Sun, 01 Jun 2008 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/langmead-task-2008/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,14 +1,52 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Publications on Academic</title>
+    <title>Publications on Long Head</title>
     <link>/publication/</link>
-    <description>Recent content in Publications on Academic</description>
+    <description>Recent content in Publications on Long Head</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
+    <copyright>&amp;copy; Greg Langmead 1998–2019</copyright>
+    <lastBuildDate>Fri, 01 Jan 2010 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="/publication/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>SCFG decoding without binarization</title>
+      <link>/publication/hopkins-scfg-2010/</link>
+      <pubDate>Fri, 01 Jan 2010 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/hopkins-scfg-2010/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cube pruning as heuristic search</title>
+      <link>/publication/hopkins-cube-2009/</link>
+      <pubDate>Thu, 01 Jan 2009 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/hopkins-cube-2009/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Task parallelization in a text-to-text system</title>
+      <link>/publication/langmead-task-2008/</link>
+      <pubDate>Sun, 01 Jun 2008 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/langmead-task-2008/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A Supersymmetric Quantum Field Theory Formulation of the Donaldson Polynomial Invariants</title>
+      <link>/publication/langmead-supersymmetric-2002/</link>
+      <pubDate>Tue, 01 Oct 2002 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/langmead-supersymmetric-2002/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

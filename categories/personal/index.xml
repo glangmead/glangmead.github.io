@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Personal on Academic</title>
+    <title>Personal on Long Head</title>
     <link>/categories/personal/</link>
-    <description>Recent content in Personal on Academic</description>
+    <description>Recent content in Personal on Long Head</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
+    <copyright>&amp;copy; Greg Langmead 1998–2019</copyright>
     <lastBuildDate>Tue, 23 Jun 2015 02:21:22 +0000</lastBuildDate>
     
 	    <atom:link href="/categories/personal/index.xml" rel="self" type="application/rss+xml" />
