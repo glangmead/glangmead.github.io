@@ -13,10 +13,10 @@
     
     <item>
       <title>iPhone hack: reading strap</title>
-      <link>/</link>
+      <link>/post/2009-11-30-iphone-hack-reading-strap/</link>
       <pubDate>Mon, 30 Nov 2009 15:04:16 +0000</pubDate>
       
-      <guid>/</guid>
+      <guid>/post/2009-11-30-iphone-hack-reading-strap/</guid>
       <description>&lt;p&gt;I use my iPhone quite heavily as an ebook reader. I read in various situations, but one of the most frequent is when I&amp;rsquo;m in bed. When you&amp;rsquo;re lying down, either on your back or on your side, it can be quite a strain on your hand muscles to grip the phone and also use your thumb to scroll the pages. So a while back, I came up with a super-cheap way to improve the situation by adding a strap that holds the phone to your hand (actually, it holds it to just your index finger). Whenever I show this trick to other folks, including seasoned, cynical tech folks, they seem impressed. So I thought I would post it for search engines to find. All you need are&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;  * an iPhone or iPod touch, any model
@@ -54,10 +54,10 @@
     
     <item>
       <title>Infocom games, using your voice</title>
-      <link>/</link>
+      <link>/post/2008-08-17-infocom-games-using-your-voice/</link>
       <pubDate>Sun, 17 Aug 2008 05:17:07 +0000</pubDate>
       
-      <guid>/</guid>
+      <guid>/post/2008-08-17-infocom-games-using-your-voice/</guid>
       <description>&lt;p&gt;I have a long history with Infocom games (&amp;ldquo;text adventures&amp;rdquo; was what I called them as a kid, and &amp;ldquo;interactive fiction&amp;rdquo; is the new name). People still write these games, did you know that? There&amp;rsquo;s a &lt;a href=&#34;http://ifdb.tads.org/&#34; target=&#34;_blank&#34;&gt;big archive&lt;/a&gt; and an &lt;a href=&#34;http://ifcomp.org/&#34; target=&#34;_blank&#34;&gt;annual competition&lt;/a&gt;. I haven&amp;rsquo;t played any of the non-Infocom variety, though I think I ought to try one. I have copies of all the data files for all the original Infocom games from the 80s, and for years there has been an open-source program to load these files and let you play the games. It&amp;rsquo;s called &lt;a href=&#34;http://frotz.sourceforge.net/&#34; target=&#34;_blank&#34;&gt;Frotz&lt;/a&gt;. I&amp;rsquo;ve had a version of Frotz on all my computers for the last 12 years, including my various Palm PDAs. The only Infocom game I&amp;rsquo;ve ever finished in my life (making it one of like 5 games of any variety that I have ever finished) was &amp;ldquo;Enchanter&amp;rdquo;, which I played on the Palm. The &lt;a href=&#34;http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=287653015&amp;amp;mt=8&#34; target=&#34;_blank&#34;&gt;latest incarnation of Frotz&lt;/a&gt; is for the iPhone, and so of course I downloaded it right away.&lt;/p&gt;
 
 &lt;p&gt;PDAs in general are not the easiest devices to type on, though, and there&amp;rsquo;s lots of typing in Infocom games. So it occurred to me that it would be really cool to speak the commands. After all, there is a limited vocabulary, which should be ideal for getting good accuracy from automatic speech recognition, and furthermore the engine should require a pretty small amount of data. On top of that, what if Frotz synthesized a (pleasant, configurable) computer voice to read you all the text in the game? Then you could set the iPhone down in front of you, close your eyes, and enjoy a nice bit of interactive fiction by having a dialog with thin air. All of a sudden the very stodgiest and oldest of technology leapfrogs three decades of competition and actually sounds futuristic! I patted myself on the back for thinking of such a great idea, and told myself I&amp;rsquo;d take a stab at it myself &amp;ldquo;one day,&amp;rdquo; since speech recognition is just a hop, skip and a jump away from machine translation.&lt;/p&gt;
@@ -70,10 +70,10 @@
     
     <item>
       <title>Microsoft engineers couldn&#39;t care less</title>
-      <link>/</link>
+      <link>/post/2008-06-20-microsoft-engineers-couldnt-care-less/</link>
       <pubDate>Fri, 20 Jun 2008 18:48:24 +0000</pubDate>
       
-      <guid>/</guid>
+      <guid>/post/2008-06-20-microsoft-engineers-couldnt-care-less/</guid>
       <description>&lt;p&gt;Microsoft Excel was released in 1985 for the Mac and in 1987 for Windows. Today I was using the 2007 version. After 20 years of work by countless engineers, it cannot open two files with the same name, and the dialog is quite shameless about it. That&amp;rsquo;s a good word: &amp;ldquo;shameless.&amp;rdquo; Details are everything. Click to see the full size.
 &lt;a href=&#34;http://greg.langmead.info/wp-content/uploads/2008/06/excel_cant_open_samename.png&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://greg.langmead.info/wp-content/uploads/2008/06/excel_cant_open_samename.png&#34; alt=&#34;excel_cant_open_samename.png&#34; /&gt;
 &lt;/a&gt;&lt;/p&gt;
@@ -82,10 +82,10 @@
     
     <item>
       <title>I won my fight with Windows Media Player</title>
-      <link>/</link>
+      <link>/post/2008-05-18-i-won-my-fight-with-windows-media-player/</link>
       <pubDate>Sun, 18 May 2008 04:18:59 +0000</pubDate>
       
-      <guid>/</guid>
+      <guid>/post/2008-05-18-i-won-my-fight-with-windows-media-player/</guid>
       <description>&lt;p&gt;As you know, I want to stream movies and music from my PC to my TV. I have an all-star lineup of tools:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;  * PC running Vista with Windows Media Player 11 (WMP11), iTunes, and Zune software
@@ -110,10 +110,10 @@
     
     <item>
       <title>How old is the term &#39;bug&#39;?</title>
-      <link>/</link>
+      <link>/post/2008-03-16-how-old-is-the-term-bug/</link>
       <pubDate>Sun, 16 Mar 2008 17:29:24 +0000</pubDate>
       
-      <guid>/</guid>
+      <guid>/post/2008-03-16-how-old-is-the-term-bug/</guid>
       <description>&lt;p&gt;Robert X. Cringely, my favorite tech pundit, had an interesting aside in this week&amp;rsquo;s column (which is otherwise about Apple and Blu-Ray). He ran across a use of the term &amp;lsquo;bug&amp;rsquo; to mean a glitch in a technical system in a magazine article from the 1930s. I found this fascinating, since we always assume &amp;ldquo;we&amp;rdquo; invented the term when computers came along. He closes with this:&lt;/p&gt;
 
 &lt;blockquote&gt;It turns out that &#34;bug&#34; was a common term for hardware glitches and dates back to the 19th century and possibly before. Edison used the term in a letter he wrote in 1878. This is no earthshaking news, of course, but simply reminds me how self-centered we are as an industry and there really isn&#39;t much that&#39;s truly new.&lt;/blockquote&gt;
@@ -124,10 +124,10 @@
     
     <item>
       <title>More on Zune (Moron Zune?)</title>
-      <link>/</link>
+      <link>/post/2007-11-14-more-on-zune-moron-zune/</link>
       <pubDate>Wed, 14 Nov 2007 17:21:38 +0000</pubDate>
       
-      <guid>/</guid>
+      <guid>/post/2007-11-14-more-on-zune-moron-zune/</guid>
       <description>&lt;p&gt;The Zune software turned out not to be so great at working with iTunes playlists. It&amp;rsquo;s not a dynamic synchronization, just a one-time thing. So after asking the Zune to read my iTunes playlists, it did so, but after I changed my playlists in iTunes, the Zune did not see the change. Also, the Zune does not attempt to pull in the smart playlists, just the static ones. Even just treating the smart playlists as regular ones and pulling in their current contents would have been great, but no.&lt;/p&gt;
 
 &lt;p&gt;My last gripe is that there are playlists I can&amp;rsquo;t get rid of with the attractive names &amp;ldquo;__127.0.0.1&amp;rdquo; and similar. Why is the software showing me its disgusting internal details?&lt;/p&gt;
@@ -138,10 +138,10 @@
     
     <item>
       <title>Two reasons to download Microsoft&#39;s Zune software</title>
-      <link>/</link>
+      <link>/post/2007-10-08-two-reasons-to-download-microsofts-zune-software/</link>
       <pubDate>Mon, 08 Oct 2007 18:05:34 +0000</pubDate>
       
-      <guid>/</guid>
+      <guid>/post/2007-10-08-two-reasons-to-download-microsofts-zune-software/</guid>
       <description>&lt;p&gt;Microsoft includes a Windows-based desktop media player with their Zune portable media players, to manage your music and sync it with the Zune. It&amp;rsquo;s a lot like Windows Media Player, which I despise, but actually if you own an Xbox 360 there are two reasons to install the Zune software even if you don&amp;rsquo;t own a Zune:&lt;/p&gt;
 
 &lt;ol&gt;
@@ -161,10 +161,10 @@
     
     <item>
       <title>Struggles with new computer</title>
-      <link>/</link>
+      <link>/post/2007-09-27-struggles-with-new-computer/</link>
       <pubDate>Thu, 27 Sep 2007 23:29:40 +0000</pubDate>
       
-      <guid>/</guid>
+      <guid>/post/2007-09-27-struggles-with-new-computer/</guid>
       <description>&lt;p&gt;Recently I bought all the bits and pieces to build a new PC for home. My old one is a few years old now, and isn&amp;rsquo;t up for all the video transcoding I throw at it these days (mainly converting Xvid and Divx TV shows into MP4 for use on Xbox). I&amp;rsquo;m not a real hardware guru, but every few years I read enough to know what the state of the art is and roll up my sleeves for a few weeks. This time I had one small snafu which was that nothing powered on after I put it together. It turned out that the problem was the CPU was not completely seated. I had to twist it off of its heatsink, straighten a bent pin, and re-seat it. Wow, it worked!&lt;/p&gt;
 
 &lt;p&gt;So far I&amp;rsquo;ve installed Vista, and a few basic apps. Next I need to move all my hard drives over, but since for some reason I installed my biggest drive as Raid 0 (with just itself in the array), I have to move the files off and reformat it on the new system. To help with that, I purchased an external USB hard drive that will also help me store completed iMovie projects so that I an keep one Greer movie at a time on my Powerbook.&lt;/p&gt;
@@ -173,10 +173,10 @@
     
     <item>
       <title>Amazon music downloads</title>
-      <link>/</link>
+      <link>/post/2007-09-27-amazon-music-downloads/</link>
       <pubDate>Thu, 27 Sep 2007 23:25:47 +0000</pubDate>
       
-      <guid>/</guid>
+      <guid>/post/2007-09-27-amazon-music-downloads/</guid>
       <description>&lt;p&gt;Ars Technica is a wonderful tech news site that&amp;rsquo;s fast becoming more and more like a &lt;strong&gt;real&lt;/strong&gt; news source, with journalists and investigation and everything!&lt;/p&gt;
 
 &lt;p&gt;Anyway, recently &lt;a href=&#34;http://arstechnica.com/news.ars/post/20070925-amazon-launches-public-beta-of-mp3-music-store.html&#34; target=&#34;_blank&#34;&gt;they reviewed&lt;/a&gt; Amazon&amp;rsquo;s &lt;a href=&#34;http://www.amazon.com/exec/obidos/tg/browse/-/163856011&#34; target=&#34;_blank&#34;&gt;new MP3 store&lt;/a&gt;. It sounded very positive because they sell straight MP3 files with no rights management, and so the files will play on my iPod.&lt;/p&gt;
@@ -191,10 +191,10 @@
     
     <item>
       <title>One view on the state of media-in-the-home</title>
-      <link>/</link>
+      <link>/post/2007-02-04-one-view-on-the-state-of-media-in-the-home/</link>
       <pubDate>Sun, 04 Feb 2007 18:14:07 +0000</pubDate>
       
-      <guid>/</guid>
+      <guid>/post/2007-02-04-one-view-on-the-state-of-media-in-the-home/</guid>
       <description>&lt;p&gt;Within the last year, I&amp;rsquo;ve purchased both an Xbox 360 and an HDTV (a 37&amp;rdquo; Sharp Aquos LCD). I have a TiVo, a home network, a Powerbook, and a fast PC with lots of storage. Surely somewhere in all of that is a viable, clean, easy to use method of expanding what I can enjoy on my home entertainment center to include my iTunes music, any downloaded video files, saved TiVo videos, and personal photos.&lt;/p&gt;
 
 &lt;p&gt;The executive summary is that I&amp;rsquo;m going to be purchasing a Mac Mini when they are next updated by Apple (should be soon), because that is going to be the most flexible entertainment hub. I also learned that our household is more of an Apple shop than I had guessed, mainly due to iTunes.&lt;/p&gt;
@@ -257,10 +257,10 @@
     
     <item>
       <title>Amusingly bad web design</title>
-      <link>/</link>
+      <link>/post/2006-06-28-amusingly-bad-web-design/</link>
       <pubDate>Wed, 28 Jun 2006 03:16:46 +0000</pubDate>
       
-      <guid>/</guid>
+      <guid>/post/2006-06-28-amusingly-bad-web-design/</guid>
       <description>&lt;p&gt;I came across this site while looking for card tables. It made me laugh out loud.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;/wp-content/my_images/bad_design.png&#34; alt=&#34;bad_design.png&#34; /&gt;&lt;/p&gt;
@@ -269,10 +269,10 @@
     
     <item>
       <title>ShelfCentered.com</title>
-      <link>/</link>
+      <link>/post/2005-04-25-shelfcenteredcom/</link>
       <pubDate>Mon, 25 Apr 2005 04:50:16 +0000</pubDate>
       
-      <guid>/</guid>
+      <guid>/post/2005-04-25-shelfcenteredcom/</guid>
       <description>&lt;p&gt;For the last couple of months, I&amp;rsquo;ve been working on a new side project that my wife, brother and sister and I came up with, called ShelfCentered.com. I haven&amp;rsquo;t posted about ShelfCentered.com as of yet, because honestly I suspect it might be a good enough idea to really become something good, and I want to protect us from competitors! For example, there are a couple of shareware programs out there already that do what we&amp;rsquo;re planning, and they&amp;rsquo;ve created some limited buzz, but so far no one has thought to put the idea online in a nice web site. I won&amp;rsquo;t go into detail just yet, but it&amp;rsquo;s hard to maintain a blog without mentioning the thing that&amp;rsquo;s my primary occupation outside work!&lt;/p&gt;
 
 &lt;p&gt;The burden has been on me to get the site off the ground, but once it&amp;rsquo;s to a certain point the rest of the family will be able to help out more. I&amp;rsquo;ve been struggling to get enough mental traction, but now I think I&amp;rsquo;m getting somewhere. As always, it was a combination of gathering the right set of tools, and being organized enough to start drawing some specifications. There was a longish period of experimentation with a particular application of Web Services as well.&lt;/p&gt;
@@ -292,10 +292,10 @@
     
     <item>
       <title>MathML</title>
-      <link>/</link>
+      <link>/post/2005-04-16-mathml/</link>
       <pubDate>Sat, 16 Apr 2005 22:27:14 +0000</pubDate>
       
-      <guid>/</guid>
+      <guid>/post/2005-04-16-mathml/</guid>
       <description>&lt;p&gt;My friend and former coworker, Robert Miner, has written an article about MathML in the latest issue of Notices of the American Mathematics Society, which you can &lt;a href=&#34;http://www.ams.org/notices/200505/fea-miner.pdf&#34; target=&#34;_blank&#34;&gt;read online&lt;/a&gt; [pdf]. MathML is a standard XML representation of math notation and semantics, and has been adopted steadily ever since Robert co-created it in 1998.  When I worked at &lt;a href=&#34;http://www.dessci.com&#34; target=&#34;_blank&#34;&gt;Design Science&lt;/a&gt; with Robert, MathML was becoming a major focus for the company.&lt;/p&gt;
 
 &lt;p&gt;I was happy to see this article, because the academic math community is still very focused on TeX/LaTeX, which are fine as far as they go, but somewhat old-fashioned and limited compared to MathML.  TeX is strictly for presentation, for example, and conveys no semantic content. You couldn&amp;rsquo;t paste TeX into a computer algebra system, for example, and expect it to compute anything.  MathML is a better, more general solution, and has other benefits Robert covers in the article. One likely future application is the ability to index and search math formulas, something I began working on with Robert towards the end of my tenure at Design Science.&lt;/p&gt;
@@ -306,70 +306,70 @@
     
     <item>
       <title>Hello from Clié</title>
-      <link>/</link>
+      <link>/post/2004-03-28-hello-from-clie/</link>
       <pubDate>Sun, 28 Mar 2004 21:40:32 +0000</pubDate>
       
-      <guid>/</guid>
+      <guid>/post/2004-03-28-hello-from-clie/</guid>
       <description>&lt;p&gt;I&amp;rsquo;m blogging this from my new Clié TH-55. It has wireless networking and a full web browser, plus email. I&amp;rsquo;m still looking fo a free instant messaging client.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Hotspot</title>
-      <link>/</link>
+      <link>/post/2004-03-14-hotspot/</link>
       <pubDate>Sun, 14 Mar 2004 05:26:01 +0000</pubDate>
       
-      <guid>/</guid>
+      <guid>/post/2004-03-14-hotspot/</guid>
       <description>&lt;p&gt;I&amp;rsquo;m blogging this from a Starbucks in Hollywood, near the big shopping center called Hollywood &amp;amp; Highland. Alison is out with a friend nearby, so I decided to try out the Starbucks hotspot system. Works pretty well, but only for 24 hours &amp;ndash; next time I visit a Starbucks I&amp;rsquo;ll have to pay $6 for an hour, then 10 cents a minute afterwards.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>New family additions</title>
-      <link>/</link>
+      <link>/post/2003-10-12-new-family-additions/</link>
       <pubDate>Sun, 12 Oct 2003 20:32:59 +0000</pubDate>
       
-      <guid>/</guid>
+      <guid>/post/2003-10-12-new-family-additions/</guid>
       <description>&lt;p&gt;I&amp;rsquo;ve made two changes to my video game family. First, I bought a GameCube and a couple games (&lt;a href=&#34;http://www.gamespot.com/gamecube/adventure/legendofzeldathewindwaker/review.html&#34; target=&#34;_blank&#34;&gt;Zelda&lt;/a&gt;, &lt;a href=&#34;http://www.gamespot.com/gamecube/action/viewtifuljoe/review.html&#34; target=&#34;_blank&#34;&gt;Viewtiful Joe&lt;/a&gt;). Also, a friend with a vinyl cutter made a wood-grain applique for my Xbox. &lt;a href=&#34;/images/GregsTrueLoves.html&#34;&gt;Click to see the new family!&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>VisiCalc history</title>
-      <link>/</link>
+      <link>/post/2003-04-09-visicalc-history/</link>
       <pubDate>Wed, 09 Apr 2003 05:59:58 +0000</pubDate>
       
-      <guid>/</guid>
+      <guid>/post/2003-04-09-visicalc-history/</guid>
       <description>&lt;p&gt;Bob Frankston, co-creator of the original spreadsheet VisiCalc, has recently written down &lt;a href=&#34;http://www.frankston.com/?name=ImplementingVisiCalc&#34; target=&#34;_blank&#34;&gt;a postmortem&lt;/a&gt;, 25 years later!&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Work category coming</title>
-      <link>/</link>
+      <link>/post/2003-04-08-work-category-coming/</link>
       <pubDate>Tue, 08 Apr 2003 04:17:38 +0000</pubDate>
       
-      <guid>/</guid>
+      <guid>/post/2003-04-08-work-category-coming/</guid>
       <description>&lt;p&gt;Not that you care, but I&amp;rsquo;m going to merge in all my work content into a category, and see how it coexists with my main category.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Beware of Bounceweb!</title>
-      <link>/</link>
+      <link>/post/2003-04-01-beware-of-bounceweb/</link>
       <pubDate>Tue, 01 Apr 2003 02:29:03 +0000</pubDate>
       
-      <guid>/</guid>
+      <guid>/post/2003-04-01-beware-of-bounceweb/</guid>
       <description>&lt;p&gt;Boy, Bounceweb threw us for a loop. Our site went down so hard that when it came back up, various files and directories were gone! They had to restore from backups, and even so there was a lot of work to do.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>So langmead.info seems relatively stable</title>
-      <link>/</link>
+      <link>/post/2002-08-14-so-langmeadinfo-seems-relatively-stable/</link>
       <pubDate>Wed, 14 Aug 2002 21:49:59 +0000</pubDate>
       
-      <guid>/</guid>
+      <guid>/post/2002-08-14-so-langmeadinfo-seems-relatively-stable/</guid>
       <description>&lt;p&gt;So langmead.info seems relatively stable at the moment. As of now I have tried three hosting companies. This latest one strikes a good balance between price and features. They are having trouble installing PHPlib, which is needed for IMP, which is a web-based email client Alison wants. I might consider moving if they never get around to that (or upgrading to PHP 4.1, which would be just as good).&lt;/p&gt;
 
 &lt;p&gt;The idea here is that we have a home for family pictures, personal web sites (like this blog) and email. Mostly the last, because with mac.com going fee-based, and with the years passing and the number of email addresses I&amp;rsquo;ve used growing, it seems like a good time to have a &lt;em&gt;permanent&lt;/em&gt; email address, and paying for the domain and the hosting puts it under my control, so it can remain as permanent as &lt;em&gt;I&lt;/em&gt; want it to.&lt;/p&gt;
@@ -378,20 +378,20 @@
     
     <item>
       <title>Good evening. Go-Gan is progressing,</title>
-      <link>/</link>
+      <link>/post/2002-03-14-good-evening-go-gan-is-progressing/</link>
       <pubDate>Thu, 14 Mar 2002 02:08:19 +0000</pubDate>
       
-      <guid>/</guid>
+      <guid>/post/2002-03-14-good-evening-go-gan-is-progressing/</guid>
       <description>&lt;p&gt;Good evening. Go-Gan is progressing, albeit slowly. It&amp;rsquo;s encouraging, though, to know that even though my job is largely programming, I still want to do it in the evenings.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>So the Paint-by-Numbers project, named</title>
-      <link>/</link>
+      <link>/post/2002-03-06-so-the-paint-by-numbers-project-named/</link>
       <pubDate>Wed, 06 Mar 2002 02:05:03 +0000</pubDate>
       
-      <guid>/</guid>
+      <guid>/post/2002-03-06-so-the-paint-by-numbers-project-named/</guid>
       <description>&lt;p&gt;So the Paint-by-Numbers project, named Go-Gan, is proceeding. Absolutely no interface has been coded yet, just the representation of the underlying puzzle. Tonight I&amp;rsquo;ll write the logic that creates the list of clues from a row or column of painted cells.&lt;/p&gt;
 
 &lt;p&gt;After that&amp;rsquo;s done, I&amp;rsquo;m going to skip over the hardest part of all, and go to the user interface and Cocoa bits. The hard part is a feature where a player working on a puzzle can get a hint.  No matter what hinting system I eventually implement, they all rely on the computer being able to (secretly) solve a puzzle completely. Certain scenarios may not require the whole puzzle to be solved in order to give the hint, but the real underlying purpose of this project, besides learning Cocoa, is to figure out how to get a computer to solve a PBN from just the clues.&lt;/p&gt;
@@ -402,10 +402,10 @@
     
     <item>
       <title>I&#39;m going to get started</title>
-      <link>/</link>
+      <link>/post/2002-03-04-im-going-to-get-started/</link>
       <pubDate>Mon, 04 Mar 2002 02:03:06 +0000</pubDate>
       
-      <guid>/</guid>
+      <guid>/post/2002-03-04-im-going-to-get-started/</guid>
       <description>&lt;p&gt;I&amp;rsquo;m going to get started today on a new piece of software. It will be a multipurpose &amp;ldquo;Paint by Numbers&amp;rdquo; application. Paint by Numbers is a puzzle game (I am not yet sure whether this name is a trademark or not) where you are presented with a blank rectangular grid of squares, usually about 20x20 or larger (the bigger it is, the harder it is). The goal is to reproduce the picture by deducing which squares should be colored. The clues are lists of numbers, one list for each row and one list for each column. Each number in the list is the tally for a consecutive run of colored squares. Visit &lt;a href=&#34;http://www02.so-net.ne.jp/~kajitani/cgi-bin/pbn.cgi/index.html&#34; target=&#34;_blank&#34;&gt;this Japanese site&lt;/a&gt; for some examples to try.&lt;/p&gt;
 
 &lt;p&gt;I&amp;rsquo;m going to write the app in Cocoa, the native environment for Mac OS X. In fact, this is just my excuse to learn Cocoa. When Apple computer bought Steve Jobs&amp;rsquo; company Next in 1995 (?), they did so to obtain the sophisticated Nextstep operating system. This became Mac OS X, and the then-revolutionary Nextstep programming framework became Cocoa. Tim Berners-Lee, the creator of HTML, HTTP, and the first web browser, wrote all of it using Nextstep. Why? Because it was easy, supposedly. I&amp;rsquo;ve explored it a little bit and I find it very exciting. It is easy in the sense that many things come for free, as in Java, but it is also hard in that it leaves me running to the documentation all the time &amp;ndash; once I commit the core of Cocoa to memory, this will disappear as well and it probably &lt;em&gt;will&lt;/em&gt; seem easy.&lt;/p&gt;
@@ -420,10 +420,10 @@
     
     <item>
       <title>I&#39;m starting to understand the</title>
-      <link>/</link>
+      <link>/post/2002-02-28-im-starting-to-understand-the/</link>
       <pubDate>Thu, 28 Feb 2002 01:59:12 +0000</pubDate>
       
-      <guid>/</guid>
+      <guid>/post/2002-02-28-im-starting-to-understand-the/</guid>
       <description>&lt;p&gt;I&amp;rsquo;m starting to understand the news aggregator concept. It is the flipside of the blog. It addresses my earliest question about blogs: won&amp;rsquo;t everything I write just disappear into the void?&lt;/p&gt;
 
 &lt;p&gt;For non-geeks reading this, a news aggregator is a single program or web page that gathers together a generalized version of &amp;ldquo;headlines.&amp;rdquo; These can certainly include headlines, like from the BBC or AP wire. But they can also include postings or articles from any site that is &amp;ldquo;syndicated,&amp;rdquo; in a certain technical way, like this one is. You could ask your aggregator to pull in content from this very site, each time I update it. See how it provides the &lt;em&gt;audience&lt;/em&gt; with the corresponding tool to the &lt;em&gt;author&amp;rsquo;s&lt;/em&gt; tool of the blog?  By the way, this very product, Radio, includes a news aggregator and so marries the two tools.&lt;/p&gt;
@@ -432,10 +432,10 @@
     
     <item>
       <title>My e-book obsession</title>
-      <link>/</link>
+      <link>/post/2001-11-09-my-e-book-obsession/</link>
       <pubDate>Fri, 09 Nov 2001 01:29:03 +0000</pubDate>
       
-      <guid>/</guid>
+      <guid>/post/2001-11-09-my-e-book-obsession/</guid>
       <description>&lt;!-- more --&gt;
 
 &lt;p&gt;I HAVE AN E-BOOK OBSESSION! Did you know that? Let me explain.&lt;/p&gt;
@@ -464,10 +464,10 @@
     
     <item>
       <title>Computer geeks</title>
-      <link>/geeks/</link>
+      <link>/post/1998-02-09-computer-geeks/</link>
       <pubDate>Mon, 09 Feb 1998 07:51:29 +0000</pubDate>
       
-      <guid>/geeks/</guid>
+      <guid>/post/1998-02-09-computer-geeks/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;http://greg.langmead.info/wp-content/uploads/2008/03/banner.gif&#34; alt=&#34;1998Banner&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Note, this was written before I had a blog. I recovered it from the Internet Archive. Back in graduate school I had a “musings” section of my site and those essays are in the same spirit as this blog so I’ve added them with retroactive datestamps.&lt;/em&gt;&lt;/p&gt;
