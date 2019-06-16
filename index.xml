@@ -7,37 +7,47 @@
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Greg Langmead 1998–2019</copyright>
-    <lastBuildDate>Mon, 05 Nov 2018 12:36:54 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 16 Jun 2019 19:33:19 -0400</lastBuildDate>
     
 	    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Smoothness</title>
-      <link>/post/2018-11-05-smoothness/</link>
+      <link>/talk/smoothness/</link>
+      <pubDate>Sun, 16 Jun 2019 19:33:19 -0400</pubDate>
+      
+      <guid>/talk/smoothness/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Smoothness</title>
+      <link>/2018/11/smoothness/</link>
       <pubDate>Mon, 05 Nov 2018 12:36:54 +0000</pubDate>
       
-      <guid>/post/2018-11-05-smoothness/</guid>
+      <guid>/2018/11/smoothness/</guid>
       <description>&lt;p&gt;This post accompanies a pair of talks given at CMU in November 2018.&lt;/p&gt;
 
 &lt;p&gt;Coming soon: my notes from the talk, and possibly a screencast.&lt;/p&gt;
 
 &lt;p&gt;Links&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;  * [Wikipedia article about differential structures](https://en.wikipedia.org/wiki/Differential_structure), with a table of counts of exotic spheres.
-  * [The Wild World of Four-manifolds](https://bookstore.ams.org/fourman) by Alexandru Scorpan (2005), a simply wonderful resource about smooth structures in all dimensions, as a matter of fact.
-  * [A post that helped me](https://math.stackexchange.com/questions/1577985/smooth-manifold-m-is-completely-determined-by-the-ring-f) with a proof about the ring of smooth functions determining a manifold.
-  * [A book that looks wonderful](https://www.springer.com/gp/book/9783540562351) (_Natural Operations in Differential Geometry_ by Kolar, Michor and Slovak, 1993), but which I&#39;ve had to pilfer rudely for information about the fully faithful embedding of smooth manifolds inside the category of commutative algebras.
-&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Differential_structure&#34; target=&#34;_blank&#34;&gt;Wikipedia article about differential structures&lt;/a&gt;, with a table of counts of exotic spheres.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://bookstore.ams.org/fourman&#34; target=&#34;_blank&#34;&gt;The Wild World of Four-manifolds&lt;/a&gt; by Alexandru Scorpan (2005), a simply wonderful resource about smooth structures in all dimensions, as a matter of fact.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://math.stackexchange.com/questions/1577985/smooth-manifold-m-is-completely-determined-by-the-ring-f&#34; target=&#34;_blank&#34;&gt;A post that helped me&lt;/a&gt; with a proof about the ring of smooth functions determining a manifold.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.springer.com/gp/book/9783540562351&#34; target=&#34;_blank&#34;&gt;A book that looks wonderful&lt;/a&gt; (&lt;em&gt;Natural Operations in Differential Geometry&lt;/em&gt; by Kolar, Michor and Slovak, 1993), but which I&amp;rsquo;ve had to pilfer rudely for information about the fully faithful embedding of smooth manifolds inside the category of commutative algebras.&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
     <item>
       <title>Rubik&#39;s Cube</title>
-      <link>/post/2015-06-23-rubiks-cube/</link>
+      <link>/2015/06/rubiks-cube/</link>
       <pubDate>Tue, 23 Jun 2015 02:21:22 +0000</pubDate>
       
-      <guid>/post/2015-06-23-rubiks-cube/</guid>
+      <guid>/2015/06/rubiks-cube/</guid>
       <description>&lt;p&gt;I decided recently to embrace my dilettantism. I don&amp;rsquo;t think there have been two consecutive days in my life where I wanted to pursue and learn the same ideas. Now mind you, the complete list of topics is finite and I cycle back eventually.&lt;/p&gt;
 
 &lt;p&gt;But recently, when I was reminded of the existence of superfast Rubik&amp;rsquo;s cube solver people, blindfold solvers, one-handed solvers, and foot solvers, I thought it might finally be time to learn how to solve the cube, and to push down the stack the rest of my crazy research agenda.&lt;/p&gt;
@@ -55,10 +65,10 @@
     
     <item>
       <title>Lossless Lord of the Rings Blu-ray rip on iPad 3</title>
-      <link>/post/2012-03-24-lossless-lord-of-the-rings-blu-ray-rip-on-ipad-3/</link>
+      <link>/2012/03/lossless-lord-of-the-rings-blu-ray-rip-on-ipad-3/</link>
       <pubDate>Sat, 24 Mar 2012 02:16:24 +0000</pubDate>
       
-      <guid>/post/2012-03-24-lossless-lord-of-the-rings-blu-ray-rip-on-ipad-3/</guid>
+      <guid>/2012/03/lossless-lord-of-the-rings-blu-ray-rip-on-ipad-3/</guid>
       <description>&lt;p&gt;I have seen what 1080p from a Blu-ray looks like on iPad 3, and it is something to behold. The detail and the colors are just beautiful. Over the last few days I&amp;rsquo;ve worked through the technical issues of ripping one of my Blu-ray discs and converting it losslessly to a format the iPad can play. This doesn&amp;rsquo;t work for every Blu-ray because they are not all encoded on the disc in H.264. For example, Blade Runner: The Final Cut is encoded in VC1, and so I had to transcode that (but it still looks amazing). But the LOTR Extended trilogy uses H.264 and so you can have perfection. The steps were:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;  1. On Windows, where my Blu-ray reader is, I ran makemkv and ripped the main movie plus all the audio tracks to disc. Each of the 6 discs in this trilogy takes between 20-35 GB of disk space. So, a lot!
@@ -72,10 +82,10 @@
     
     <item>
       <title>Lord of the Rings project to become a web site</title>
-      <link>/post/2011-06-15-lord-of-the-rings-project-to-become-a-web-site/</link>
+      <link>/2011/06/lord-of-the-rings-project-to-become-a-web-site/</link>
       <pubDate>Wed, 15 Jun 2011 01:46:14 +0000</pubDate>
       
-      <guid>/post/2011-06-15-lord-of-the-rings-project-to-become-a-web-site/</guid>
+      <guid>/2011/06/lord-of-the-rings-project-to-become-a-web-site/</guid>
       <description>&lt;p&gt;As I &lt;a href=&#34;/?p=114&#34;&gt;have written previously&lt;/a&gt;, I created an annotated list of excerpts from &lt;em&gt;The Lord of the Rings&lt;/em&gt; to encapsulate the differences in the plot (and theme) from the Peter Jackson films. I was unhappy with the tabular format of a Google spreadsheet though, and so I cast around for other ways to present this information. My requirements were&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;  1. Each excerpt should have its own page so I could write expanded versions of my thoughts.
@@ -97,10 +107,10 @@
     
     <item>
       <title>Mathematics with MathJax</title>
-      <link>/post/2011-06-14-mathematics-with-mathjax/</link>
+      <link>/2011/06/mathematics-with-mathjax/</link>
       <pubDate>Tue, 14 Jun 2011 16:05:46 +0000</pubDate>
       
-      <guid>/post/2011-06-14-mathematics-with-mathjax/</guid>
+      <guid>/2011/06/mathematics-with-mathjax/</guid>
       <description>&lt;p&gt;This is a post to test the functionality of &lt;a href=&#34;http://www.mathjax.org&#34; target=&#34;_blank&#34;&gt;MathJax&lt;/a&gt;. Just put a simple script tag in your header, pointing to a global copy of mathjax.js distributed via Amazon&amp;rsquo;s CloudFront content distribution network. After that, you can enter LaTeX or MathML directly in your posts and MathJax will render it into beautiful equations. Here is a favorite (from &lt;a href=&#34;http://arxiv.org/abs/hep-th/0210192&#34; target=&#34;_blank&#34;&gt;my dissertation&lt;/a&gt;):&lt;/p&gt;
 
 &lt;p&gt;[ \Pi \wedge^{2}&lt;em&gt;{+}TX\otimes\wedge^{2}&lt;/em&gt;{+}T^{&lt;em&gt;}X \hookrightarrow
@@ -110,20 +120,20 @@
     
     <item>
       <title>Digital conservation</title>
-      <link>/post/2010-09-30-digital-conservation/</link>
+      <link>/2010/09/digital-conservation/</link>
       <pubDate>Thu, 30 Sep 2010 13:38:16 +0000</pubDate>
       
-      <guid>/post/2010-09-30-digital-conservation/</guid>
+      <guid>/2010/09/digital-conservation/</guid>
       <description>&lt;p&gt;If I&amp;rsquo;m fixing a typo where I typed &amp;ldquo;loose&amp;rdquo; instead of &amp;ldquo;lose&amp;rdquo;, then is it less wasteful if I click inside and delete one of the &amp;ldquo;o&amp;rdquo;s, versus double-clicking the whole word and typing four brand new letters? If I do it the first way, it seems like I am reusing the existing four correct letters, so it seems less wasteful.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>The Ur-Quan Masters</title>
-      <link>/post/2010-09-26-the-ur-quan-masters/</link>
+      <link>/2010/09/the-ur-quan-masters/</link>
       <pubDate>Sun, 26 Sep 2010 19:34:42 +0000</pubDate>
       
-      <guid>/post/2010-09-26-the-ur-quan-masters/</guid>
+      <guid>/2010/09/the-ur-quan-masters/</guid>
       <description>&lt;p&gt;[caption id=&amp;ldquo;attachment_203&amp;rdquo; align=&amp;ldquo;alignleft&amp;rdquo; width=&amp;ldquo;720&amp;rdquo; caption=&amp;ldquo;The Ur-Quan Masters&amp;rdquo;]&lt;a href=&#34;http://greg.langmead.info/wp-content/uploads/2010/09/Screen-shot-2010-09-26-at-3.06.20-PM.png&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://greg.langmead.info/wp-content/uploads/2010/09/Screen-shot-2010-09-26-at-3.06.20-PM.png&#34; alt=&#34;Screenshot of The Ur-Quan Masters&#34; /&gt;
 &lt;/a&gt;[/caption]
 I learned something new this weekend. First, I learned that one of my favorite childhood games, &lt;a href=&#34;http://en.wikipedia.org/wiki/Archon:_The_Light_and_the_Dark&#34; target=&#34;_blank&#34;&gt;Archon&lt;/a&gt;, has some spiritual successors. The game designer Paul Reiche III, who designed Archon, went on to design other games from his studio Toys for Bob. I just learned all of this when I was listening to a podcast where some old timers like me were discussing the game Star Control 2, which Reiche designed and which was released for PC in 1992, and then on 3DO. It sounded like a great game, and given the Archon pedigree I was curious to try it out. Well the good news is that 3DO released the source code back to Reiche in 2002 and he made it open source, and so there are many ways to &lt;a href=&#34;http://sc2.sourceforge.net/downloads.php&#34; target=&#34;_blank&#34;&gt;play the game today on modern hardware&lt;/a&gt; including Mac, PC, Wii, and Android. The name &amp;ldquo;Star Control 2&amp;rdquo; is trademarked and so this open source version is called &amp;ldquo;The Ur-Quan Masters.&amp;rdquo; Having played for 30 minutes, I was immediately drawn in to the accessible gameplay, the gentle introduction that gives you full control but subtly guides you to try new things, and the tinge of humor in the dialog. An abandonware success story!&lt;/p&gt;
@@ -134,10 +144,10 @@ I learned something new this weekend. First, I learned that one of my favorite c
     
     <item>
       <title>Star Wars for Toddlers is a go</title>
-      <link>/post/2010-09-26-star-wars-for-toddlers-is-a-go/</link>
+      <link>/2010/09/star-wars-for-toddlers-is-a-go/</link>
       <pubDate>Sun, 26 Sep 2010 19:19:32 +0000</pubDate>
       
-      <guid>/post/2010-09-26-star-wars-for-toddlers-is-a-go/</guid>
+      <guid>/2010/09/star-wars-for-toddlers-is-a-go/</guid>
       <description>&lt;p&gt;I finished editing Star Wars, and my 3-year-old loves it, and I feel guilt-free about showing it to her. There were some wrinkles during the process, so the current version is actually the third one I made (I&amp;rsquo;m REAL familiar with the movie now, at least around the problematic scenes). I ended up having success with the Mac-based tool &lt;a href=&#34;http://simplemoviex.com/SimpleMovieX/&#34; target=&#34;_blank&#34;&gt;SimpleMovieX&lt;/a&gt;, and in fact it&amp;rsquo;s the first piece of software I&amp;rsquo;ve paid for in a long time (and it&amp;rsquo;s not cheap, $40). The free version is full-featured, but saving out the whole movie would have taken a couple of days because they deliberately slow down file saves in order to get you to pay. Still, I ended up liking that particular method of having a free trial, because it let me experiment with all the features over any number of weeks or months (which is sometimes how long it takes me to get my act together).&lt;/p&gt;
 
 &lt;p&gt;All that said, I would like to make a fourth version. In addition to fixing a couple of my edits, I have two other problems. First, the file size is too big, and I think I can get decent quality with a lower bit rate and smaller file size. Secondly, there is a white line along the bottom. I believe this is because the software decided to render it at 768x327 instead of 768x328. Many players assume a multiple of four for the resolution, and so put a white line since there&amp;rsquo;s no data on the 328th row. I&amp;rsquo;m not sure how to force SimpleMovieX to use a different size, since it only had a short pop-up of choices. Maybe I can use a different tool for the transcoding part.&lt;/p&gt;
@@ -148,20 +158,20 @@ I learned something new this weekend. First, I learned that one of my favorite c
     
     <item>
       <title>Star Wars for toddlers</title>
-      <link>/post/2010-09-11-star-wars-for-toddlers/</link>
+      <link>/2010/09/star-wars-for-toddlers/</link>
       <pubDate>Sat, 11 Sep 2010 18:03:16 +0000</pubDate>
       
-      <guid>/post/2010-09-11-star-wars-for-toddlers/</guid>
+      <guid>/2010/09/star-wars-for-toddlers/</guid>
       <description>&lt;p&gt;My daughter is 3, and her best friend is also 3. He has been shown the entire Star Wars trilogy already, and is in love with Darth Vader. So my daughter hears about it a lot, and is excited to see it too. Recently I showed her a couple moments from Episode 4, and she loved it. So I&amp;rsquo;m going to try to make a version of the movie that is appropriate for her. I&amp;rsquo;ll edit out everything I deem too intense or violent, and see how it goes. So far, I have a rip of the DVD, and I&amp;rsquo;m trying to get it into iMovie.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Let&#39;s hurry along the iPad gaming revolution</title>
-      <link>/post/2010-07-10-lets-hurry-along-the-ipad-gaming-revolution/</link>
+      <link>/2010/07/lets-hurry-along-the-ipad-gaming-revolution/</link>
       <pubDate>Sat, 10 Jul 2010 19:19:43 +0000</pubDate>
       
-      <guid>/post/2010-07-10-lets-hurry-along-the-ipad-gaming-revolution/</guid>
+      <guid>/2010/07/lets-hurry-along-the-ipad-gaming-revolution/</guid>
       <description>&lt;p&gt;I am so excited at the possibilities the iPad holds for gaming, especially strategy gaming. Others have voiced enthusiasm, but I think there&amp;rsquo;s another level or two of excitement that folks are missing. So let&amp;rsquo;s hasten the story along because I want to play these games. Let me convince you I&amp;rsquo;m right, and then you can go make some games for me. I&amp;rsquo;ll pay $50 for the games I have in mind. Do you hear me, Matrix, Paradox, Slitherine, Panther, Creative Assembly, SSG, Firaxis, Big Huge Games, TGW, Wizards, and friends?&lt;/p&gt;
 
 &lt;p&gt;The best examples of strategy games on the iPad right now are Small World and Civilization Revolution. I consider these &amp;ldquo;console-like&amp;rdquo; games, since Civ Rev is in fact a port of a console game, and Small World is in the same vein as the recent spate of board game conversions for XBLA, like Catan, Carcassonne, Lost Cities, and Ticket to Ride. I&amp;rsquo;d like to argue that these titles are not nearly ambitious enough, because I think the iPad can supplant every aspect of PC gaming due to the touch interface. Small World comes closer to what I mean since it uses touch, and it makes excellent use of pretty 2D graphics and sound, but still, it could easily live on XBLA. Conversely, I don&amp;rsquo;t see any reason all of Civ IV couldn&amp;rsquo;t be brought to the iPad.&lt;/p&gt;
@@ -182,30 +192,30 @@ I learned something new this weekend. First, I learned that one of my favorite c
     
     <item>
       <title>Tolkien project complete</title>
-      <link>/post/2010-07-10-tolkien-project-complete/</link>
+      <link>/2010/07/tolkien-project-complete/</link>
       <pubDate>Sat, 10 Jul 2010 17:58:10 +0000</pubDate>
       
-      <guid>/post/2010-07-10-tolkien-project-complete/</guid>
+      <guid>/2010/07/tolkien-project-complete/</guid>
       <description>&lt;p&gt;I finished my project to annotate the differences between the book and movie version of LOTR. So I updated &lt;a href=&#34;http://greg.langmead.info/?p=114&#34; target=&#34;_blank&#34;&gt;my earlier post&lt;/a&gt; to point to the finished product.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>OK</title>
-      <link>/post/2010-03-30-ok/</link>
+      <link>/2010/03/ok/</link>
       <pubDate>Tue, 30 Mar 2010 20:14:31 +0000</pubDate>
       
-      <guid>/post/2010-03-30-ok/</guid>
+      <guid>/2010/03/ok/</guid>
       <description>&lt;p&gt;I&amp;rsquo;ve read a few theories about the origin of our expression &amp;ldquo;OK.&amp;rdquo; But I haven&amp;rsquo;t come across this one that occurred to me the other day. When you hold your hand in that gesture that means &amp;ldquo;OK&amp;rdquo;, you make a circle with your thumb and index finger. That&amp;rsquo;s an O, and your other three fingers sort of make a &amp;ldquo;K&amp;rdquo;. The middle finger is the vertical stem, and the other two fingers are the diagonal ones. Just a thought.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Distance learning for the over-educated</title>
-      <link>/post/2010-03-24-distance-learning-for-the-over-educated/</link>
+      <link>/2010/03/distance-learning-for-the-over-educated/</link>
       <pubDate>Wed, 24 Mar 2010 02:51:23 +0000</pubDate>
       
-      <guid>/post/2010-03-24-distance-learning-for-the-over-educated/</guid>
+      <guid>/2010/03/distance-learning-for-the-over-educated/</guid>
       <description>&lt;p&gt;I&amp;rsquo;m definitely a &amp;ldquo;lifelong learner&amp;rdquo; type, always craving new courses, books, or ideas. I even love reading long computer game manuals for complicated games like Europa Universalis 3. It&amp;rsquo;s pretty easy to learn the beginning of a new field, because there are usually some audiobooks, Teaching Company courses, or online materials to introduce you to the main concepts. But what if you already know a lot about something, and you want to learn even more?&lt;/p&gt;
 
 &lt;p&gt;What if you are already educated in a field, and you want to learn about a sub-field, or a more advanced version of what you already know? Here, your options are more limited. If you are lucky enough to live near a college or university, and that university teaches in your field, and offers a course in the sub-field you want to explore, and you have time to audit a course, and the professor permits you to audit, and you manage to attend twice a week while holding down a job, then goody for you! I am almost in that boat, since I live in Pittsburgh, which has several colleges and universities, including two major universities that have several departments covering the areas I love. In browsing the Fall 2010 class schedules, I see a few courses I&amp;rsquo;d like to take. Some are more related to work, some are more related to my past life as a mathematician. If I convince myself I should take time during the work day to take a class, then I might be in luck. But what if I specifically wanted to take a graduate-level class in, say, algebraic geometry, and none was on offer in the Fall? Are there online algebraic geometry courses?&lt;/p&gt;
@@ -233,10 +243,10 @@ I learned something new this weekend. First, I learned that one of my favorite c
     
     <item>
       <title>Giving digital items is hard</title>
-      <link>/post/2009-12-08-giving-digital-items-is-hard/</link>
+      <link>/2009/12/giving-digital-items-is-hard/</link>
       <pubDate>Tue, 08 Dec 2009 20:28:12 +0000</pubDate>
       
-      <guid>/post/2009-12-08-giving-digital-items-is-hard/</guid>
+      <guid>/2009/12/giving-digital-items-is-hard/</guid>
       <description>&lt;p&gt;Here&amp;rsquo;s a list of a few things I like: books, audiobooks, music, movies, video games, iPhone apps. I consume these items on a variety of devices: Kindle, iPhone, PC, Mac, Xbox, PS3, Wii. Most of those platforms have a digital download mechanism in place for the software, e.g. you can download music or audiobooks from the iTunes store, Amazon or Audible. You can download movies from iTunes, Amazon, Xbox, or PS3. You download iPhone apps from iTunes. You can download Kindle books from Amazon. You can download many PC games from Steam. Some games are ONLY available for download. The consoles have their own built-in stores that use points or a credit card.&lt;/p&gt;
 
 &lt;p&gt;Of all the permutations and combinations, only a handful permit gift-giving. You can &amp;ldquo;gift&amp;rdquo; (as we say now) iTunes music, movies, or audiobooks from one account to another. You can do the same with Steam to give someone a PC game. You can purchase an Xbox downloadable game code from Amazon and give it to somebody. That&amp;rsquo;s it, that&amp;rsquo;s the full subset of the above available for giving as a gift. You cannot give iPhone apps, Amazon music or movies, Kindle books, or PS3 or Wii downloadable games. The best gift-giving experience is still to give someone a physical item, but as time goes on that&amp;rsquo;s just not what I want to receive, with the notable exception of movies. I am not yet comfortable owning a purely digital version of a movie. I want to have the disc, preferably blu-ray since the quality is the highest possible.&lt;/p&gt;
@@ -245,10 +255,10 @@ I learned something new this weekend. First, I learned that one of my favorite c
     
     <item>
       <title>iPhone hack: reading strap</title>
-      <link>/post/2009-11-30-iphone-hack-reading-strap/</link>
+      <link>/2009/11/iphone-hack-reading-strap/</link>
       <pubDate>Mon, 30 Nov 2009 15:04:16 +0000</pubDate>
       
-      <guid>/post/2009-11-30-iphone-hack-reading-strap/</guid>
+      <guid>/2009/11/iphone-hack-reading-strap/</guid>
       <description>&lt;p&gt;I use my iPhone quite heavily as an ebook reader. I read in various situations, but one of the most frequent is when I&amp;rsquo;m in bed. When you&amp;rsquo;re lying down, either on your back or on your side, it can be quite a strain on your hand muscles to grip the phone and also use your thumb to scroll the pages. So a while back, I came up with a super-cheap way to improve the situation by adding a strap that holds the phone to your hand (actually, it holds it to just your index finger). Whenever I show this trick to other folks, including seasoned, cynical tech folks, they seem impressed. So I thought I would post it for search engines to find. All you need are&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;  * an iPhone or iPod touch, any model
@@ -306,10 +316,10 @@ I learned something new this weekend. First, I learned that one of my favorite c
     
     <item>
       <title>Mac Moments: Not using paths</title>
-      <link>/post/2009-07-27-mac-moments-not-using-paths/</link>
+      <link>/2009/07/mac-moments-not-using-paths/</link>
       <pubDate>Mon, 27 Jul 2009 03:14:45 +0000</pubDate>
       
-      <guid>/post/2009-07-27-mac-moments-not-using-paths/</guid>
+      <guid>/2009/07/mac-moments-not-using-paths/</guid>
       <description>&lt;p&gt;On my Mac, I had a movie in my Movies folder called &amp;ldquo;Sesame Street Season 1 part 1.m4v&amp;rdquo;. I dragged it to iTunes so I could play it there (for my daughter), and all was well. One day I wanted to move those old Sesame Streets into a folder called &amp;ldquo;old&amp;rdquo;, so I made the &amp;ldquo;old&amp;rdquo; folder and dragged that movie in, no big deal.&lt;/p&gt;
 
 &lt;p&gt;iTunes still had a record of that movie file of course, but what happens when I ask iTunes to play it? What do you think &lt;em&gt;ought&lt;/em&gt; to happen? What do you &lt;em&gt;wish&lt;/em&gt; would happen? What do you think computers are &lt;em&gt;capable&lt;/em&gt; of enabling to happen?&lt;/p&gt;
@@ -326,10 +336,10 @@ I learned something new this weekend. First, I learned that one of my favorite c
     
     <item>
       <title>Lord of the Rings in 100 48 pages</title>
-      <link>/post/2009-07-19-lord-of-the-rings-in-100-pages/</link>
+      <link>/2009/07/lord-of-the-rings-in-100-48-pages/</link>
       <pubDate>Sun, 19 Jul 2009 18:12:40 +0000</pubDate>
       
-      <guid>/post/2009-07-19-lord-of-the-rings-in-100-pages/</guid>
+      <guid>/2009/07/lord-of-the-rings-in-100-48-pages/</guid>
       <description>&lt;p&gt;I am a huge fan of Peter Jackson’s movie versions of The Lord of the Rings novels. A HUGE fan. But I am also a fan of the books, which I have read several times, and which I have also done supplementary reading on.&lt;/p&gt;
 
 &lt;p&gt;This post is for anyone who enjoyed watching the movies, is willing to re-watch the extended editions, and has a desire to read the books but hesitates to invest the full time required to read 3 novels.&lt;/p&gt;
@@ -346,10 +356,10 @@ I learned something new this weekend. First, I learned that one of my favorite c
     
     <item>
       <title>My interpretation of 42% pro-choice</title>
-      <link>/post/2009-05-18-my-interpretation-of-42-pro-choice/</link>
+      <link>/2009/05/my-interpretation-of-42-pro-choice/</link>
       <pubDate>Mon, 18 May 2009 02:44:31 +0000</pubDate>
       
-      <guid>/post/2009-05-18-my-interpretation-of-42-pro-choice/</guid>
+      <guid>/2009/05/my-interpretation-of-42-pro-choice/</guid>
       <description>&lt;p&gt;I&amp;rsquo;m going way out on a limb here, so bear with me.&lt;/p&gt;
 
 &lt;p&gt;42% of Americans are pro-choice, according to a new Gallup poll, and 51% are pro-life. My response to this is: since so many Americans disagree with the pro-life stance, then we should stick with the neutral road, which is the policy to keep abortions legal.&lt;/p&gt;
@@ -364,10 +374,10 @@ I learned something new this weekend. First, I learned that one of my favorite c
     
     <item>
       <title>Why is science important?</title>
-      <link>/post/2009-03-13-why-is-science-important/</link>
+      <link>/2009/03/why-is-science-important/</link>
       <pubDate>Fri, 13 Mar 2009 21:23:42 +0000</pubDate>
       
-      <guid>/post/2009-03-13-why-is-science-important/</guid>
+      <guid>/2009/03/why-is-science-important/</guid>
       <description>&lt;p&gt;I was linked to this video today and really enjoyed it. I have never heard of Alom Shaha, but I hope to see more from him in the future.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://vimeo.com/3531977&#34; target=&#34;_blank&#34;&gt;Why is Science Important?&lt;/a&gt; from &lt;a href=&#34;http://vimeo.com/user1353157&#34; target=&#34;_blank&#34;&gt;Alom Shaha&lt;/a&gt; on &lt;a href=&#34;http://vimeo.com&#34; target=&#34;_blank&#34;&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;
@@ -376,20 +386,20 @@ I learned something new this weekend. First, I learned that one of my favorite c
     
     <item>
       <title>Nudge</title>
-      <link>/post/2009-02-24-nudge/</link>
+      <link>/2009/02/nudge/</link>
       <pubDate>Tue, 24 Feb 2009 04:58:28 +0000</pubDate>
       
-      <guid>/post/2009-02-24-nudge/</guid>
+      <guid>/2009/02/nudge/</guid>
       <description>&lt;p&gt;I&amp;rsquo;m reading an interesting book about economics, public policy, and psychology. It&amp;rsquo;s called &lt;a href=&#34;http://www.amazon.com/Nudge-Improving-Decisions-Health-Happiness/dp/014311526X%3FSubscriptionId%3D13D7MCZQKMM5E1WMY782%26tag%3Dshelfcentered-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D014311526X&#34; target=&#34;_blank&#34;&gt;Nudge&lt;/a&gt;. They make many interesting points that were completely new to me about the way people do &lt;em&gt;not&lt;/em&gt; behave in the rational manner modeled by the previous generation of economists. In fact, there are systematic biases in our decision-making that can be quantified and worked around by enacting sensible policies. The cover issues ranging from the Medicare prescription drug plan to 401k plans, to organ donation, to the environment. The ideas are presented clearly with lots of examples. Highly recommended.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Vista = Ick</title>
-      <link>/post/2009-01-12-vista-ick/</link>
+      <link>/2009/01/vista-ick/</link>
       <pubDate>Mon, 12 Jan 2009 03:22:02 +0000</pubDate>
       
-      <guid>/post/2009-01-12-vista-ick/</guid>
+      <guid>/2009/01/vista-ick/</guid>
       <description>&lt;p&gt;I&amp;rsquo;m so tired of living with Windows Vista. Especially when it comes to USB. Whenever I plug in a USB device that I&amp;rsquo;ve used a million times before, but I plug it into a different USB port, Vista goes into overdrive. &amp;ldquo;Searching for driver!&amp;rdquo; it exclaims in a balloon. The hard drive churns and churns for about two minutes. You can&amp;rsquo;t do anything else disk-intensive during this time, so basically you&amp;rsquo;re just waiting at this point. If you click the little tray icon that appears, it says &amp;ldquo;Searching for driver in installed locations&amp;rdquo; or something. Finally it&amp;rsquo;s done and it says &amp;ldquo;Canon digital camera.&amp;rdquo; No kidding, the one I plugged in yesterday? Congratulations. Maybe I should plug it into each port in my hub so that I can go through this once and then know that I&amp;rsquo;m safe.&lt;/p&gt;
 </description>
     </item>
@@ -405,20 +415,20 @@ I learned something new this weekend. First, I learned that one of my favorite c
     
     <item>
       <title>Freshness</title>
-      <link>/post/2008-10-08-freshness/</link>
+      <link>/2008/10/freshness/</link>
       <pubDate>Wed, 08 Oct 2008 20:06:03 +0000</pubDate>
       
-      <guid>/post/2008-10-08-freshness/</guid>
+      <guid>/2008/10/freshness/</guid>
       <description>&lt;p&gt;I love the feeling I get after I tweak what songs are on my iPhone. I added a composer (Mahler) and a Teaching Company course (about Mahler) because I finished listening to another course (about US relations with the Middle East). I added some Beatles album art and the latest Ben Folds album. It&amp;rsquo;s all freshened up and ready for new listening!&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Infocom games, using your voice</title>
-      <link>/post/2008-08-17-infocom-games-using-your-voice/</link>
+      <link>/2008/08/infocom-games-using-your-voice/</link>
       <pubDate>Sun, 17 Aug 2008 05:17:07 +0000</pubDate>
       
-      <guid>/post/2008-08-17-infocom-games-using-your-voice/</guid>
+      <guid>/2008/08/infocom-games-using-your-voice/</guid>
       <description>&lt;p&gt;I have a long history with Infocom games (&amp;ldquo;text adventures&amp;rdquo; was what I called them as a kid, and &amp;ldquo;interactive fiction&amp;rdquo; is the new name). People still write these games, did you know that? There&amp;rsquo;s a &lt;a href=&#34;http://ifdb.tads.org/&#34; target=&#34;_blank&#34;&gt;big archive&lt;/a&gt; and an &lt;a href=&#34;http://ifcomp.org/&#34; target=&#34;_blank&#34;&gt;annual competition&lt;/a&gt;. I haven&amp;rsquo;t played any of the non-Infocom variety, though I think I ought to try one. I have copies of all the data files for all the original Infocom games from the 80s, and for years there has been an open-source program to load these files and let you play the games. It&amp;rsquo;s called &lt;a href=&#34;http://frotz.sourceforge.net/&#34; target=&#34;_blank&#34;&gt;Frotz&lt;/a&gt;. I&amp;rsquo;ve had a version of Frotz on all my computers for the last 12 years, including my various Palm PDAs. The only Infocom game I&amp;rsquo;ve ever finished in my life (making it one of like 5 games of any variety that I have ever finished) was &amp;ldquo;Enchanter&amp;rdquo;, which I played on the Palm. The &lt;a href=&#34;http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=287653015&amp;amp;mt=8&#34; target=&#34;_blank&#34;&gt;latest incarnation of Frotz&lt;/a&gt; is for the iPhone, and so of course I downloaded it right away.&lt;/p&gt;
 
 &lt;p&gt;PDAs in general are not the easiest devices to type on, though, and there&amp;rsquo;s lots of typing in Infocom games. So it occurred to me that it would be really cool to speak the commands. After all, there is a limited vocabulary, which should be ideal for getting good accuracy from automatic speech recognition, and furthermore the engine should require a pretty small amount of data. On top of that, what if Frotz synthesized a (pleasant, configurable) computer voice to read you all the text in the game? Then you could set the iPhone down in front of you, close your eyes, and enjoy a nice bit of interactive fiction by having a dialog with thin air. All of a sudden the very stodgiest and oldest of technology leapfrogs three decades of competition and actually sounds futuristic! I patted myself on the back for thinking of such a great idea, and told myself I&amp;rsquo;d take a stab at it myself &amp;ldquo;one day,&amp;rdquo; since speech recognition is just a hop, skip and a jump away from machine translation.&lt;/p&gt;
@@ -431,10 +441,10 @@ I learned something new this weekend. First, I learned that one of my favorite c
     
     <item>
       <title>Phasing out music progress bars?</title>
-      <link>/post/2008-07-23-phasing-out-music-progress-bars/</link>
+      <link>/2008/07/phasing-out-music-progress-bars/</link>
       <pubDate>Wed, 23 Jul 2008 21:33:23 +0000</pubDate>
       
-      <guid>/post/2008-07-23-phasing-out-music-progress-bars/</guid>
+      <guid>/2008/07/phasing-out-music-progress-bars/</guid>
       <description>&lt;p&gt;The iPhone does not display any progress bar or countdown to let you know when the song you&amp;rsquo;re listening to will end. If you tap the screen, such a bar is temporarily displayed, but it isn&amp;rsquo;t there all the time. On the classic iPod, in iTunes, and in most other software-based music players, we&amp;rsquo;ve been getting used to having these indicators. I don&amp;rsquo;t like them because I think a song should set its own pace. I think it detracts from the listening experience to see there are 30 seconds left, because when I see that, I start thinking about how short a time that is, and will the rest of the song really fit because they have a whole other chorus to sing, etc.&lt;/p&gt;
 
 &lt;p&gt;I&amp;rsquo;m glad the iPhone does not show this information all the time, and I hope it becomes an option in the other players I use.&lt;/p&gt;
@@ -443,10 +453,10 @@ I learned something new this weekend. First, I learned that one of my favorite c
     
     <item>
       <title>iPhone versus Clie</title>
-      <link>/post/2008-07-20-iphone-versus-clie/</link>
+      <link>/2008/07/iphone-versus-clie/</link>
       <pubDate>Sun, 20 Jul 2008 22:27:22 +0000</pubDate>
       
-      <guid>/post/2008-07-20-iphone-versus-clie/</guid>
+      <guid>/2008/07/iphone-versus-clie/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;http://greg.langmead.info/wp-content/uploads/2008/07/clie.jpg&#34; alt=&#34;Clie TH55&#34; /&gt;
 &lt;img src=&#34;http://greg.langmead.info/wp-content/uploads/2008/07/iphone1.jpg&#34; alt=&#34;iPhone 3G&#34; /&gt;
 I&amp;rsquo;ve owned a Palm or Clie device (which used the Palm OS) for 8 years. I used them as my PIM and as an eBook reader. My very first blog post was about eBooks, back in 2001. But my needs for a calendar are slim (but not zero), and my need for contact information is confined to making phone calls, which my devices couldn&amp;rsquo;t do, or sending Christmas cards, when I&amp;rsquo;m at home. So eventually my latest Clie, the TH-55, sat on my bedside table as my bedtime eBook reader.&lt;/p&gt;
@@ -461,10 +471,10 @@ I&amp;rsquo;ve owned a Palm or Clie device (which used the Palm OS) for 8 years.
     
     <item>
       <title>The iPod becomes software</title>
-      <link>/post/2008-07-16-the-ipod-becomes-software/</link>
+      <link>/2008/07/the-ipod-becomes-software/</link>
       <pubDate>Wed, 16 Jul 2008 16:22:48 +0000</pubDate>
       
-      <guid>/post/2008-07-16-the-ipod-becomes-software/</guid>
+      <guid>/2008/07/the-ipod-becomes-software/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;http://greg.langmead.info/wp-content/uploads/2008/07/iphone_ipod.jpg&#34; alt=&#34;iPhone’s iPod icon&#34; /&gt;
 I bought an iPhone 3G this past weekend (and waited 4 &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;2&lt;/sub&gt; hours for the privilege). One of its functions is to play your music/movies like an iPod. You access this feature through a button labeled &amp;ldquo;iPod&amp;rdquo;. It has a picture of an &lt;em&gt;old, non-iPhone&lt;/em&gt; iPod on it. This struck me as funny (haha funny). I think of the iPhone as subsuming the iPod in a device with extra functionality. But to explain to the user what this button does, it has a picture of an old iPod on it. And it&amp;rsquo;s not called &amp;ldquo;iTunes&amp;rdquo; or &amp;ldquo;Music and Movies&amp;rdquo;, or &amp;ldquo;Media&amp;rdquo; &amp;ndash; it&amp;rsquo;s called &amp;ldquo;iPod&amp;rdquo;. So the iPod has become a piece of software, and the hardware has just become an icon.&lt;/p&gt;
 </description>
@@ -472,10 +482,10 @@ I bought an iPhone 3G this past weekend (and waited 4 &lt;sup&gt;1&lt;/sup&gt;&a
     
     <item>
       <title>On the importance of mentors</title>
-      <link>/post/2008-07-10-on-the-importance-of-mentors/</link>
+      <link>/2008/07/on-the-importance-of-mentors/</link>
       <pubDate>Thu, 10 Jul 2008 04:10:41 +0000</pubDate>
       
-      <guid>/post/2008-07-10-on-the-importance-of-mentors/</guid>
+      <guid>/2008/07/on-the-importance-of-mentors/</guid>
       <description>&lt;p&gt;I grew up assuming that people make their own way in the world. I thought it was up to me to make every decision, plan every move, open every door, and find my own way in my life and career. Only much later did I learn that I was doing it all wrong. Not only is my way much harder, it&amp;rsquo;s also completely miserable to be so isolated. Here&amp;rsquo;s an example. The place where I started making these wrong decisions was in college. I attended my classes, which in some cases were way below my capabilities, and in other cases were way above. Either way, at the end of class, I packed up my things and walked back to my room. I dreamed of being a scientist, just like I had since I was 10 years old. But all I did was go to class, I never spoke with any professors, nor was I ever approached by any. My talents started to appear in my sophomore year, but I was still doing things in this retarded way. Then in my junior year the first consequence of my nihilistic lifestyle happened, and I didn&amp;rsquo;t even really notice it for what it was until years later. I switched my major from Astronomy to Astrophysics, then I added a concentration (minor) in Math, and then I made Math a second major. This all happened within a couple of months. Even these bureaucratic thrashings didn&amp;rsquo;t raise any red flags in any administrators or professors. No one cared. So, I shifted my focus to math, threw away the pile of physics grad school applications I had, and requested a bunch of math ones. I went to graduate school for a year at Stony Brook, then transferred back to Columbia for the rest of my Ph.D., because my then-girlfriend, now-wife, was continuing on from Columbia undergrad to grad school.&lt;/p&gt;
 
 &lt;p&gt;OK, here&amp;rsquo;s the denoument to the story. In my second year or so, the reference librarian of the math library was leaving Columbia, and she was well-liked by the department. I had worked for her as an undergraduate, so I was invited to her going away party. At that party, there was a professor who was a fixture in the math department. He was the kind of professor who was very focused on undergraduates and mentoring. I had never had a class with him, and had never met him personally until I was a graduate student. We got to chatting, and it came out that I had attended Columbia as an undergrad as well as a grad student. He was shocked. &amp;ldquo;How is it that I don&amp;rsquo;t remember you?&amp;rdquo; he asked. My answer was &amp;ldquo;I do a good job of going under the radar.&amp;rdquo;&lt;/p&gt;
@@ -488,10 +498,10 @@ I bought an iPhone 3G this past weekend (and waited 4 &lt;sup&gt;1&lt;/sup&gt;&a
     
     <item>
       <title>Microsoft engineers couldn&#39;t care less</title>
-      <link>/post/2008-06-20-microsoft-engineers-couldnt-care-less/</link>
+      <link>/2008/06/microsoft-engineers-couldnt-care-less/</link>
       <pubDate>Fri, 20 Jun 2008 18:48:24 +0000</pubDate>
       
-      <guid>/post/2008-06-20-microsoft-engineers-couldnt-care-less/</guid>
+      <guid>/2008/06/microsoft-engineers-couldnt-care-less/</guid>
       <description>&lt;p&gt;Microsoft Excel was released in 1985 for the Mac and in 1987 for Windows. Today I was using the 2007 version. After 20 years of work by countless engineers, it cannot open two files with the same name, and the dialog is quite shameless about it. That&amp;rsquo;s a good word: &amp;ldquo;shameless.&amp;rdquo; Details are everything. Click to see the full size.
 &lt;a href=&#34;http://greg.langmead.info/wp-content/uploads/2008/06/excel_cant_open_samename.png&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://greg.langmead.info/wp-content/uploads/2008/06/excel_cant_open_samename.png&#34; alt=&#34;excel_cant_open_samename.png&#34; /&gt;
 &lt;/a&gt;&lt;/p&gt;
@@ -509,10 +519,10 @@ I bought an iPhone 3G this past weekend (and waited 4 &lt;sup&gt;1&lt;/sup&gt;&a
     
     <item>
       <title>I won my fight with Windows Media Player</title>
-      <link>/post/2008-05-18-i-won-my-fight-with-windows-media-player/</link>
+      <link>/2008/05/i-won-my-fight-with-windows-media-player/</link>
       <pubDate>Sun, 18 May 2008 04:18:59 +0000</pubDate>
       
-      <guid>/post/2008-05-18-i-won-my-fight-with-windows-media-player/</guid>
+      <guid>/2008/05/i-won-my-fight-with-windows-media-player/</guid>
       <description>&lt;p&gt;As you know, I want to stream movies and music from my PC to my TV. I have an all-star lineup of tools:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;  * PC running Vista with Windows Media Player 11 (WMP11), iTunes, and Zune software
@@ -537,20 +547,20 @@ I bought an iPhone 3G this past weekend (and waited 4 &lt;sup&gt;1&lt;/sup&gt;&a
     
     <item>
       <title>Alison on Jumping Monkeys!</title>
-      <link>/post/2008-03-16-alison-on-jumping-monkeys/</link>
+      <link>/2008/03/alison-on-jumping-monkeys/</link>
       <pubDate>Sun, 16 Mar 2008 17:30:43 +0000</pubDate>
       
-      <guid>/post/2008-03-16-alison-on-jumping-monkeys/</guid>
+      <guid>/2008/03/alison-on-jumping-monkeys/</guid>
       <description>&lt;p&gt;Alison was interviewed on one of our favorite podcasts, Jumping Monkeys. &lt;a href=&#34;http://www.jumpingmonkeys.com/jumpingmonkeys/2008/03/jumping-monke-2.html&#34; target=&#34;_blank&#34;&gt;Here&amp;rsquo;s the episode page&lt;/a&gt;. She discusses home archives and how to approach saving your family&amp;rsquo;s stuff for the future. Cool!&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>How old is the term &#39;bug&#39;?</title>
-      <link>/post/2008-03-16-how-old-is-the-term-bug/</link>
+      <link>/2008/03/how-old-is-the-term-bug/</link>
       <pubDate>Sun, 16 Mar 2008 17:29:24 +0000</pubDate>
       
-      <guid>/post/2008-03-16-how-old-is-the-term-bug/</guid>
+      <guid>/2008/03/how-old-is-the-term-bug/</guid>
       <description>&lt;p&gt;Robert X. Cringely, my favorite tech pundit, had an interesting aside in this week&amp;rsquo;s column (which is otherwise about Apple and Blu-Ray). He ran across a use of the term &amp;lsquo;bug&amp;rsquo; to mean a glitch in a technical system in a magazine article from the 1930s. I found this fascinating, since we always assume &amp;ldquo;we&amp;rdquo; invented the term when computers came along. He closes with this:&lt;/p&gt;
 
 &lt;blockquote&gt;It turns out that &#34;bug&#34; was a common term for hardware glitches and dates back to the 19th century and possibly before. Edison used the term in a letter he wrote in 1878. This is no earthshaking news, of course, but simply reminds me how self-centered we are as an industry and there really isn&#39;t much that&#39;s truly new.&lt;/blockquote&gt;
@@ -561,50 +571,50 @@ I bought an iPhone 3G this past weekend (and waited 4 &lt;sup&gt;1&lt;/sup&gt;&a
     
     <item>
       <title>Panzer Tactics</title>
-      <link>/post/2007-12-30-panzer-tactics/</link>
+      <link>/2007/12/panzer-tactics/</link>
       <pubDate>Sun, 30 Dec 2007 22:36:16 +0000</pubDate>
       
-      <guid>/post/2007-12-30-panzer-tactics/</guid>
+      <guid>/2007/12/panzer-tactics/</guid>
       <description>&lt;p&gt;Over this holiday break, I played through all the tutorials in one of my newer DS games _&lt;a href=&#34;http://www.amazon.com/Atlus-PT-00070-2-Panzer-Tactics/dp/B000TU4M4Q/ref=pd_bbs_sr_1?ie=UTF8&amp;amp;s=videogames&amp;amp;qid=1199053915&amp;amp;sr=8-1&#34; target=&#34;_blank&#34;&gt;Panzer Tactics&lt;/a&gt;_. It&amp;rsquo;s a very engrossing turn-based war game, very much along the lines of _&lt;a href=&#34;http://www.amazon.com/Nintendo-PS2-ACT-81033-Advance/dp/B0009XEC02/ref=pd_bbs_sr_2?ie=UTF8&amp;amp;s=videogames&amp;amp;qid=1199054118&amp;amp;sr=8-2&#34; target=&#34;_blank&#34;&gt;Advance Wars&lt;/a&gt;_. Panzer Tactics clicked much more with me, though, and I grasped how to deploy my units intuitively pretty quickly. I think I can take this experience back to Advance Wars as well, and have more fun with it, too. But first, I&amp;rsquo;m ready to start the real campaigns in Panzer Tactics. Then maybe I&amp;rsquo;ll go back to &lt;em&gt;&lt;a href=&#34;http://greg.langmead.info/?p=68&#34; target=&#34;_blank&#34;&gt;Korsun Pocket&lt;/a&gt;&lt;/em&gt;, which is more complicated.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Competitiveness considered harmful?</title>
-      <link>/post/2007-12-13-competitiveness-considered-harmful/</link>
+      <link>/2007/12/competitiveness-considered-harmful/</link>
       <pubDate>Thu, 13 Dec 2007 16:53:28 +0000</pubDate>
       
-      <guid>/post/2007-12-13-competitiveness-considered-harmful/</guid>
+      <guid>/2007/12/competitiveness-considered-harmful/</guid>
       <description>&lt;p&gt;Over Thanksgiving, I was complaining about people who crowd forward when boarding a plane, even if their row hasn&amp;rsquo;t been called, so that when it &lt;em&gt;is&lt;/em&gt; called, they get on first. And if they can get away with boarding before their row is called, they&amp;rsquo;ll do that too. Someone close to me retorted, &amp;ldquo;competition made the human race what it is today.&amp;rdquo; I haven&amp;rsquo;t stopped thinking about that remark ever since. Can this person be right? I dearly, dearly hope not. Because all I can think of in reply is, &amp;ldquo;yes, it did make us what we are &amp;ndash; especially the World Wars and the Holocaust.&amp;rdquo;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Lord of the Rings soundtrack</title>
-      <link>/post/2007-11-30-lord-of-the-rings-soundtrack/</link>
+      <link>/2007/11/lord-of-the-rings-soundtrack/</link>
       <pubDate>Fri, 30 Nov 2007 20:30:22 +0000</pubDate>
       
-      <guid>/post/2007-11-30-lord-of-the-rings-soundtrack/</guid>
+      <guid>/2007/11/lord-of-the-rings-soundtrack/</guid>
       <description>&lt;p&gt;I&amp;rsquo;m listening to &lt;a href=&#34;http://www.amazon.com/Lord-Rings-Return-Complete-Recordings/dp/B000V6BE6M/ref=pd_bbs_sr_1?ie=UTF8&amp;amp;s=music&amp;amp;qid=1196454269&amp;amp;sr=8-1&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;The Return of the King: The Complete Recordings&lt;/em&gt;&lt;/a&gt; at work, and I&amp;rsquo;m at the point near the (first) end when Frodo and Sam have just destroyed the ring (with Gollum&amp;rsquo;s unwitting help) and they&amp;rsquo;re escaping the flowing lava by standing on a rock, feeling a relieved. With all the events of the story to back up the scene, I think it&amp;rsquo;s truly moving to see these two regular guys, who together destroyed a great and senseless evil power. I actually see it as a very tragic moment, when two of the world&amp;rsquo;s great forces are being presented to us via the heightened drama of this point in the story: senseless evil/destruction/chaos on the one hand, and the fortitude and perseverance and good of the common person on the other hand. You can ask all sorts of questions at this point, like if the common person is so good, where is all the evil coming from? Why must the most ordinary and good people sustain such injury and sacrifice to ward off the worst effects of the evil?&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Masterpiece Theater?</title>
-      <link>/post/2007-11-19-masterpiece-theater/</link>
+      <link>/2007/11/masterpiece-theater/</link>
       <pubDate>Mon, 19 Nov 2007 22:29:11 +0000</pubDate>
       
-      <guid>/post/2007-11-19-masterpiece-theater/</guid>
+      <guid>/2007/11/masterpiece-theater/</guid>
       <description>&lt;p&gt;Has &lt;em&gt;Masterpiece Theater&lt;/em&gt; always just been some British TV show? Lately they&amp;rsquo;ve been showing &lt;em&gt;The Amazing Mrs. Prithcard&lt;/em&gt;, which felt like an American TV show that happened to be British. Is it a masterpiece? Did they pick it because they felt it was a masterpiece? Maybe they should rename Masterpiece Theater to &amp;ldquo;Some British TV Show&amp;rdquo;.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>More on Zune (Moron Zune?)</title>
-      <link>/post/2007-11-14-more-on-zune-moron-zune/</link>
+      <link>/2007/11/more-on-zune-moron-zune/</link>
       <pubDate>Wed, 14 Nov 2007 17:21:38 +0000</pubDate>
       
-      <guid>/post/2007-11-14-more-on-zune-moron-zune/</guid>
+      <guid>/2007/11/more-on-zune-moron-zune/</guid>
       <description>&lt;p&gt;The Zune software turned out not to be so great at working with iTunes playlists. It&amp;rsquo;s not a dynamic synchronization, just a one-time thing. So after asking the Zune to read my iTunes playlists, it did so, but after I changed my playlists in iTunes, the Zune did not see the change. Also, the Zune does not attempt to pull in the smart playlists, just the static ones. Even just treating the smart playlists as regular ones and pulling in their current contents would have been great, but no.&lt;/p&gt;
 
 &lt;p&gt;My last gripe is that there are playlists I can&amp;rsquo;t get rid of with the attractive names &amp;ldquo;__127.0.0.1&amp;rdquo; and similar. Why is the software showing me its disgusting internal details?&lt;/p&gt;
@@ -615,10 +625,10 @@ I bought an iPhone 3G this past weekend (and waited 4 &lt;sup&gt;1&lt;/sup&gt;&a
     
     <item>
       <title>Two reasons to download Microsoft&#39;s Zune software</title>
-      <link>/post/2007-10-08-two-reasons-to-download-microsofts-zune-software/</link>
+      <link>/2007/10/two-reasons-to-download-microsofts-zune-software/</link>
       <pubDate>Mon, 08 Oct 2007 18:05:34 +0000</pubDate>
       
-      <guid>/post/2007-10-08-two-reasons-to-download-microsofts-zune-software/</guid>
+      <guid>/2007/10/two-reasons-to-download-microsofts-zune-software/</guid>
       <description>&lt;p&gt;Microsoft includes a Windows-based desktop media player with their Zune portable media players, to manage your music and sync it with the Zune. It&amp;rsquo;s a lot like Windows Media Player, which I despise, but actually if you own an Xbox 360 there are two reasons to install the Zune software even if you don&amp;rsquo;t own a Zune:&lt;/p&gt;
 
 &lt;ol&gt;
@@ -638,10 +648,10 @@ I bought an iPhone 3G this past weekend (and waited 4 &lt;sup&gt;1&lt;/sup&gt;&a
     
     <item>
       <title>Struggles with new computer</title>
-      <link>/post/2007-09-27-struggles-with-new-computer/</link>
+      <link>/2007/09/struggles-with-new-computer/</link>
       <pubDate>Thu, 27 Sep 2007 23:29:40 +0000</pubDate>
       
-      <guid>/post/2007-09-27-struggles-with-new-computer/</guid>
+      <guid>/2007/09/struggles-with-new-computer/</guid>
       <description>&lt;p&gt;Recently I bought all the bits and pieces to build a new PC for home. My old one is a few years old now, and isn&amp;rsquo;t up for all the video transcoding I throw at it these days (mainly converting Xvid and Divx TV shows into MP4 for use on Xbox). I&amp;rsquo;m not a real hardware guru, but every few years I read enough to know what the state of the art is and roll up my sleeves for a few weeks. This time I had one small snafu which was that nothing powered on after I put it together. It turned out that the problem was the CPU was not completely seated. I had to twist it off of its heatsink, straighten a bent pin, and re-seat it. Wow, it worked!&lt;/p&gt;
 
 &lt;p&gt;So far I&amp;rsquo;ve installed Vista, and a few basic apps. Next I need to move all my hard drives over, but since for some reason I installed my biggest drive as Raid 0 (with just itself in the array), I have to move the files off and reformat it on the new system. To help with that, I purchased an external USB hard drive that will also help me store completed iMovie projects so that I an keep one Greer movie at a time on my Powerbook.&lt;/p&gt;
@@ -650,10 +660,10 @@ I bought an iPhone 3G this past weekend (and waited 4 &lt;sup&gt;1&lt;/sup&gt;&a
     
     <item>
       <title>Amazon music downloads</title>
-      <link>/post/2007-09-27-amazon-music-downloads/</link>
+      <link>/2007/09/amazon-music-downloads/</link>
       <pubDate>Thu, 27 Sep 2007 23:25:47 +0000</pubDate>
       
-      <guid>/post/2007-09-27-amazon-music-downloads/</guid>
+      <guid>/2007/09/amazon-music-downloads/</guid>
       <description>&lt;p&gt;Ars Technica is a wonderful tech news site that&amp;rsquo;s fast becoming more and more like a &lt;strong&gt;real&lt;/strong&gt; news source, with journalists and investigation and everything!&lt;/p&gt;
 
 &lt;p&gt;Anyway, recently &lt;a href=&#34;http://arstechnica.com/news.ars/post/20070925-amazon-launches-public-beta-of-mp3-music-store.html&#34; target=&#34;_blank&#34;&gt;they reviewed&lt;/a&gt; Amazon&amp;rsquo;s &lt;a href=&#34;http://www.amazon.com/exec/obidos/tg/browse/-/163856011&#34; target=&#34;_blank&#34;&gt;new MP3 store&lt;/a&gt;. It sounded very positive because they sell straight MP3 files with no rights management, and so the files will play on my iPod.&lt;/p&gt;
@@ -668,10 +678,10 @@ I bought an iPhone 3G this past weekend (and waited 4 &lt;sup&gt;1&lt;/sup&gt;&a
     
     <item>
       <title>Lord of the Rings, movie versus book</title>
-      <link>/post/2007-09-27-lord-of-the-rings-movie-versus-book/</link>
+      <link>/2007/09/lord-of-the-rings-movie-versus-book/</link>
       <pubDate>Thu, 27 Sep 2007 22:46:40 +0000</pubDate>
       
-      <guid>/post/2007-09-27-lord-of-the-rings-movie-versus-book/</guid>
+      <guid>/2007/09/lord-of-the-rings-movie-versus-book/</guid>
       <description>&lt;p&gt;A while back I wanted to read &lt;em&gt;The Lord of the Rings&lt;/em&gt; aloud with my wife. We&amp;rsquo;ve read lots of books together this way, and I&amp;rsquo;m a huge LOTR fan, so I really wanted to share it. The problem is it&amp;rsquo;s very long and many people consider lots of it boring. So, I took a clever (if I do say so myself) shortcut! I went through the books and dog-eared ranges of pages where the plot differed from the movies in a way I thought significant or noteworthy. For example, I read the entire chapter &amp;ldquo;The scouring of the shire&amp;rdquo; because this was left out of the movie. I highlighted the differences in Denethor&amp;rsquo;s character as much as I could, as well as Faramir&amp;rsquo;s. Both were substantially diminished in moral quality in the movies.&lt;/p&gt;
 
 &lt;p&gt;I want to go back through what I did, and post it here with annotations, so that others can read the same portions of the books in tandem with the movies to get a much more accurate picture of what the books are all about. The problem is that before I had this great idea, I had already read half of &lt;em&gt;Fellowship&lt;/em&gt;, so I&amp;rsquo;ll have to make some decisions about what parts of that to keep.&lt;/p&gt;
@@ -680,10 +690,10 @@ I bought an iPhone 3G this past weekend (and waited 4 &lt;sup&gt;1&lt;/sup&gt;&a
     
     <item>
       <title>Mac Moments: Software update</title>
-      <link>/post/2007-04-25-mac-moments-software-update/</link>
+      <link>/2007/04/mac-moments-software-update/</link>
       <pubDate>Wed, 25 Apr 2007 03:44:12 +0000</pubDate>
       
-      <guid>/post/2007-04-25-mac-moments-software-update/</guid>
+      <guid>/2007/04/mac-moments-software-update/</guid>
       <description>&lt;p&gt;Makers of software demonstrate their values in their products. Each decision they made along the way is visible to the user in one way or another. Most Windows users I talk to don&amp;rsquo;t even grasp this idea. They claim that Mac users are nigglers, and are too detail-obsessed. But I believe these issues can have an effect on everyone&amp;rsquo;s daily life, in a much bigger way than we generally acknowledge. This post presents a great example of this, namely OS updates.&lt;/p&gt;
 
 &lt;p&gt;Every month or so, both Mac OS and Windows need to apply some patches, often for security reasons. I approve of this practice, because it helps guarantee the squashing of bugs that can affect security. But my work habits need to be taken into consideration, too. Rebooting my computer is a big deal, and takes a long time, on both platforms. At work, I usually have quite a bit of my own personal state of mind reflected in what&amp;rsquo;s running. I have many command-line sessions, documents, notes, and web browser windows open. These can only be reinstated by re-opening each item one at a time, which takes effort, and constitutes a major interruption, probably 20 minutes before my mind and machine are back where they were. I think interruption is a major drag on productivity in todays multitasking environments, and being able to concentrate for long times is precious. Certainly it adds to my stress to have to bring all this stuff back up when I wasn&amp;rsquo;t expecting it.&lt;/p&gt;
@@ -724,10 +734,10 @@ I bought an iPhone 3G this past weekend (and waited 4 &lt;sup&gt;1&lt;/sup&gt;&a
     
     <item>
       <title>One view on the state of media-in-the-home</title>
-      <link>/post/2007-02-04-one-view-on-the-state-of-media-in-the-home/</link>
+      <link>/2007/02/one-view-on-the-state-of-media-in-the-home/</link>
       <pubDate>Sun, 04 Feb 2007 18:14:07 +0000</pubDate>
       
-      <guid>/post/2007-02-04-one-view-on-the-state-of-media-in-the-home/</guid>
+      <guid>/2007/02/one-view-on-the-state-of-media-in-the-home/</guid>
       <description>&lt;p&gt;Within the last year, I&amp;rsquo;ve purchased both an Xbox 360 and an HDTV (a 37&amp;rdquo; Sharp Aquos LCD). I have a TiVo, a home network, a Powerbook, and a fast PC with lots of storage. Surely somewhere in all of that is a viable, clean, easy to use method of expanding what I can enjoy on my home entertainment center to include my iTunes music, any downloaded video files, saved TiVo videos, and personal photos.&lt;/p&gt;
 
 &lt;p&gt;The executive summary is that I&amp;rsquo;m going to be purchasing a Mac Mini when they are next updated by Apple (should be soon), because that is going to be the most flexible entertainment hub. I also learned that our household is more of an Apple shop than I had guessed, mainly due to iTunes.&lt;/p&gt;
@@ -790,10 +800,10 @@ I bought an iPhone 3G this past weekend (and waited 4 &lt;sup&gt;1&lt;/sup&gt;&a
     
     <item>
       <title>Korsun Pocket</title>
-      <link>/post/2006-12-04-korsun-pocket/</link>
+      <link>/2006/12/korsun-pocket/</link>
       <pubDate>Mon, 04 Dec 2006 19:40:43 +0000</pubDate>
       
-      <guid>/post/2006-12-04-korsun-pocket/</guid>
+      <guid>/2006/12/korsun-pocket/</guid>
       <description>&lt;p&gt;I&amp;rsquo;ve bought my first computer wargame, called &lt;em&gt;Korsun Pocket&lt;/em&gt;, from &lt;a href=&#34;http://www.matrixgames.com&#34; target=&#34;_blank&#34;&gt;Matrix Games&lt;/a&gt;.  I wanted to share a short section from the manual, because it gets me pretty excited to play and so I thought it would be a good illustration to share:&lt;/p&gt;
 
 &lt;blockquote&gt;
@@ -854,10 +864,10 @@ As German Commander, can you obey your
     
     <item>
       <title>Wargames</title>
-      <link>/post/2006-12-01-wargames/</link>
+      <link>/2006/12/wargames/</link>
       <pubDate>Fri, 01 Dec 2006 05:31:20 +0000</pubDate>
       
-      <guid>/post/2006-12-01-wargames/</guid>
+      <guid>/2006/12/wargames/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;/wp-content/my_images/s317_TOAW3_shot9.jpg&#34; alt=&#34;s317_TOAW3_shot9.jpg&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;My interest in the World Wars, and my recent reading of &lt;em&gt;The Guns of August&lt;/em&gt; (Tuchman), led me somehow to look into the wargaming universe. I learned that there is of course a sizable community of computer wargamers and developers, and I took a look around the landscape and selected a few to zero in on. Some of these are on my &lt;a href=&#34;http://www.shelfcentered.com/index.php?event=user_shelf&amp;amp;userid=26&amp;amp;user_shelf=Christmas%202006&#34; target=&#34;_blank&#34;&gt;Christmas shelf&lt;/a&gt;, and some I pirated so I could read the manual and get a feel for how it goes.  It turns out the more detailed ones are more appealing so far, such as the one pictured above, &lt;a href=&#34;http://www.matrixgames.com/games/game.asp?gid=317&#34; target=&#34;_blank&#34;&gt;The Operational Art of War III&lt;/a&gt;.&lt;/p&gt;
@@ -868,10 +878,10 @@ As German Commander, can you obey your
     
     <item>
       <title>The Jasons</title>
-      <link>/post/2006-08-10-the-jasons/</link>
+      <link>/2006/08/the-jasons/</link>
       <pubDate>Thu, 10 Aug 2006 01:09:28 +0000</pubDate>
       
-      <guid>/post/2006-08-10-the-jasons/</guid>
+      <guid>/2006/08/the-jasons/</guid>
       <description>&lt;p&gt;I recently heard of a book called &lt;a href=&#34;http://www.amazon.com/gp/product/0670034894/ref=nosim/002-6749880-5641633?n=283155&#34; target=&#34;_blank&#34;&gt;The Jasons&lt;/a&gt; at &lt;a href=&#34;http://www.math.columbia.edu/~woit/wordpress/?p=376&#34; target=&#34;_blank&#34;&gt;the blog of a former colleague&lt;/a&gt;, Peter Woit. Since I spent the summer of 2004 doing classified math research for the government, I was very interested to hear of another such group. In a way, the Jasons are a sequel to the very successful Manhattan Project, and there is lots of overlap of personnel. The Jasons came into being in the aftermath of the Soviet launch of Sputnik, in 1960 to be exact.&lt;/p&gt;
 
 &lt;p&gt;After buying the book on a recent visit to the &lt;a href=&#34;http://www.ciweb.org&#34; target=&#34;_blank&#34;&gt;Chautauqua Institution&lt;/a&gt;, I was fascinated to read that in their very early years, they invented an idea that today is revolutionizing astronomy: &lt;a href=&#34;http://en.wikipedia.org/wiki/Adaptive_optics&#34; target=&#34;_blank&#34;&gt;adaptive optics&lt;/a&gt;. By coincidence, this technique was just starting to move its way to the front of my mind, because I try to keep up with astronomy news, due to my lifelong interest in the subject. I&amp;rsquo;m thrilled to happen upon it in the quite different context of the Jasons.&lt;/p&gt;
@@ -880,10 +890,10 @@ As German Commander, can you obey your
     
     <item>
       <title>The huamn mnid</title>
-      <link>/post/2006-07-26-the-huamn-mnid/</link>
+      <link>/2006/07/the-huamn-mnid/</link>
       <pubDate>Wed, 26 Jul 2006 02:57:21 +0000</pubDate>
       
-      <guid>/post/2006-07-26-the-huamn-mnid/</guid>
+      <guid>/2006/07/the-huamn-mnid/</guid>
       <description>&lt;p&gt;&amp;ldquo;Aoccdrnig to a rscheearch at Cmabrigde Uinervtisy, it deosn&amp;rsquo;t mttaer in waht oredr the ltteers in a wrod are, the olny iprmoetnt tihng is taht the frist and lsat ltteer be at the rghit pclae. The rset can be a toatl mses and you can sitll raed it wouthit porbelm. Tihs is bcuseae the huamn mnid deos not raed ervey lteter by istlef, but the wrod as a wlohe.&amp;rdquo;&lt;/p&gt;
 
 &lt;p&gt;Here&amp;rsquo;s &lt;a href=&#34;http://www.mrc-cbu.cam.ac.uk/~mattd/Cmabrigde/&#34; target=&#34;_blank&#34;&gt;a link that discusses this phenomenon&lt;/a&gt;.&lt;/p&gt;
@@ -896,10 +906,10 @@ As German Commander, can you obey your
     
     <item>
       <title>Amusingly bad web design</title>
-      <link>/post/2006-06-28-amusingly-bad-web-design/</link>
+      <link>/2006/06/amusingly-bad-web-design/</link>
       <pubDate>Wed, 28 Jun 2006 03:16:46 +0000</pubDate>
       
-      <guid>/post/2006-06-28-amusingly-bad-web-design/</guid>
+      <guid>/2006/06/amusingly-bad-web-design/</guid>
       <description>&lt;p&gt;I came across this site while looking for card tables. It made me laugh out loud.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;/wp-content/my_images/bad_design.png&#34; alt=&#34;bad_design.png&#34; /&gt;&lt;/p&gt;
@@ -908,10 +918,10 @@ As German Commander, can you obey your
     
     <item>
       <title>Intelligent Design: The Final Word, Part 3</title>
-      <link>/post/2006-03-12-intelligent-design-the-final-word-part-3/</link>
+      <link>/2006/03/intelligent-design-the-final-word-part-3/</link>
       <pubDate>Sun, 12 Mar 2006 21:53:52 +0000</pubDate>
       
-      <guid>/post/2006-03-12-intelligent-design-the-final-word-part-3/</guid>
+      <guid>/2006/03/intelligent-design-the-final-word-part-3/</guid>
       <description>&lt;p&gt;The central question I have been trying to satisfy myself about with these notes is the following: is there a way to formulate Intelligent Design as a scientific theory? (See &lt;a href=&#34;http://greg.langmead.info/?p=61&#34; target=&#34;_blank&#34;&gt;part 1&lt;/a&gt; and &lt;a href=&#34;http://greg.langmead.info/?p=62&#34; target=&#34;_blank&#34;&gt;part 2&lt;/a&gt;.)&lt;/p&gt;
 
 &lt;p&gt;By definition, a scientific theory is a model of a part of the world that makes verifiable and falsifiable predictions about specific observations. To answer this question, I will reformulate the statement of ID. Behe&amp;rsquo;s formulation looks like this (this is not a quote, I&amp;rsquo;m summing up his argument):&lt;/p&gt;
@@ -956,10 +966,10 @@ Evolution cannot explain irreducible complexity.
     
     <item>
       <title>Intelligent Design: The Final Word, Part 2</title>
-      <link>/post/2006-03-12-intelligent-design-the-final-word-part-2/</link>
+      <link>/2006/03/intelligent-design-the-final-word-part-2/</link>
       <pubDate>Sun, 12 Mar 2006 21:32:22 +0000</pubDate>
       
-      <guid>/post/2006-03-12-intelligent-design-the-final-word-part-2/</guid>
+      <guid>/2006/03/intelligent-design-the-final-word-part-2/</guid>
       <description>&lt;p&gt;This is a continuation of my discussion of ID (see &lt;a href=&#34;http://greg.langmead.info/?p=61&#34; target=&#34;_blank&#34;&gt;part 1&lt;/a&gt;). Here in part 2 I have exerpted from Behe&amp;rsquo;s book in order to summarize his argument. I am using the 2003 trade paperback edition published by Free Press, lent to me by a work colleague.&lt;/p&gt;
 
 &lt;p&gt;The ID argument in a nutshell:&lt;/p&gt;
@@ -988,10 +998,10 @@ Evolution cannot explain irreducible complexity.
     
     <item>
       <title>Intelligent Design: The Final Word, Part 1</title>
-      <link>/post/2006-03-12-intelligent-design-the-final-word-part-1/</link>
+      <link>/2006/03/intelligent-design-the-final-word-part-1/</link>
       <pubDate>Sun, 12 Mar 2006 20:59:54 +0000</pubDate>
       
-      <guid>/post/2006-03-12-intelligent-design-the-final-word-part-1/</guid>
+      <guid>/2006/03/intelligent-design-the-final-word-part-1/</guid>
       <description>&lt;p&gt;I am finally ready to write some definitive thoughts about Intelligent Design. I just finished reading Michael Behe&amp;rsquo;s book &lt;em&gt;Darwin&amp;rsquo;s Black Box&lt;/em&gt; from 1996, and I&amp;rsquo;ve thought about it from the perspective of science, falsifiability, religion, and philosophy. I would like to be very careful about where I plan and do not plan to take issue with him, so let me start in Part 1 by delineating the argument.&lt;/p&gt;
 
 &lt;p&gt;First of all, the eponymous designer of ID need not be divine, says Behe, and I agree completely. It could be an alien species, or something way beyond our understanding, but non-divine. ID is not inherently theological. So this discussion will have nothing whatsoever to do with God or religion. Religious folks may want ID to become a political movement so they can impose their views into everyone&amp;rsquo;s lives, but that is the problem of those religious folks, and does not bear on ID&amp;rsquo;s validity.&lt;/p&gt;
@@ -1012,10 +1022,10 @@ Evolution cannot explain irreducible complexity.
     
     <item>
       <title>Written verbal tics</title>
-      <link>/post/2005-12-10-written-verbal-tics/</link>
+      <link>/2005/12/written-verbal-tics/</link>
       <pubDate>Sat, 10 Dec 2005 22:17:26 +0000</pubDate>
       
-      <guid>/post/2005-12-10-written-verbal-tics/</guid>
+      <guid>/2005/12/written-verbal-tics/</guid>
       <description>&lt;p&gt;I&amp;rsquo;ve been meaning to write this down for a long time. There are two very widespread and very annoying idioms that I see a lot in amateur writing. The main example of the kind of writing I mean is product reviews on sites like Amazon, but I see it also on Macworld, CNet and other more professional sites.&lt;/p&gt;
 
 &lt;p&gt;The first is the word &amp;ldquo;little&amp;rdquo; as in &amp;ldquo;this little device from Apple,&amp;rdquo; or even worse, &amp;ldquo;this little gem from Apple.&amp;rdquo;  There&amp;rsquo;s nothing wrong with it really, it&amp;rsquo;s just hugely overused, and I&amp;rsquo;m oversensitive to triteness.  The second phrase is &amp;ldquo;a winner,&amp;rdquo; as in &amp;ldquo;this telescope is a real winner.&amp;rdquo;  Both phrases are frequently found together, as in &amp;ldquo;This little gem from Apple is a definite winner!&amp;rdquo;  Cut it out, please.&lt;/p&gt;
@@ -1028,10 +1038,10 @@ Evolution cannot explain irreducible complexity.
     
     <item>
       <title>Contact</title>
-      <link>/post/2005-10-19-contact/</link>
+      <link>/2005/10/contact/</link>
       <pubDate>Wed, 19 Oct 2005 04:00:59 +0000</pubDate>
       
-      <guid>/post/2005-10-19-contact/</guid>
+      <guid>/2005/10/contact/</guid>
       <description>&lt;p&gt;I just watched &lt;a href=&#34;http://www.amazon.com/gp/product/0790733226/104-8979811-4830322?v=glance&amp;amp;n=130&amp;amp;n=507846&amp;amp;s=dvd&amp;amp;v=glance&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;Contact&lt;/em&gt;&lt;/a&gt; again for the first time in a while. A major theme of the movie is that the goals of science and religion are so hard to untangle that the two main protagonists have a very complicated adult relationship based on it.&lt;/p&gt;
 
 &lt;p&gt;In the current context of the debate about religion in the science classroom, I think about my own feelings about science quite a bit. Far from feeling that science and religion are incompatible, I actually feel that they are two sides of the same coin.  I mean, think about it. How often do people&amp;rsquo;s deeply held, innermost core beliefs actually tend to be different?  Can we really believe that, given the size of the universe (which I guess you&amp;rsquo;ll have to grant me) and all the diversity of our planet, that two of us humans could really be all that &lt;em&gt;tremendously&lt;/em&gt; different in our innermost models of what our purpose is in the universe? OF COURSE SCIENCE AND RELIGION ARE THE SAME THING, HOW COULD THEY NOT BE? WE&amp;rsquo;RE ALL PEOPLE, WE ALL WANT THE SAME THINGS AND WE ALL FEEL THE SAME WAY!&lt;/p&gt;
@@ -1042,10 +1052,10 @@ Evolution cannot explain irreducible complexity.
     
     <item>
       <title>Irrational Design?</title>
-      <link>/post/2005-10-09-irrational-design/</link>
+      <link>/2005/10/irrational-design/</link>
       <pubDate>Sun, 09 Oct 2005 22:00:28 +0000</pubDate>
       
-      <guid>/post/2005-10-09-irrational-design/</guid>
+      <guid>/2005/10/irrational-design/</guid>
       <description>&lt;p&gt;There is a great deal of controversy at the moment over Intelligent Design (ID) being taught in science classrooms. I have always felt very strongly about the dangers faced by science in our society, and this crisis is a perfect example of what can happen without careful vigilance on the part of science teachers and practitioners.&lt;/p&gt;
 
 &lt;p&gt;I will be trying to understand this issue thoroughly in the coming months, though I must admit my conclusion is rather clear in advance. Nonetheless, I believe there are subtle arguments being made in ID, and if I am truly worried about the role of science in my society, then I owe it to my children to understand the debate completely, so that I can be an informed participant in any future discussions that involve my district.&lt;/p&gt;
@@ -1062,10 +1072,10 @@ Evolution cannot explain irreducible complexity.
     
     <item>
       <title>Mac Moments 2</title>
-      <link>/post/2005-06-16-mac-moments-2/</link>
+      <link>/2005/06/mac-moments-2/</link>
       <pubDate>Thu, 16 Jun 2005 03:40:39 +0000</pubDate>
       
-      <guid>/post/2005-06-16-mac-moments-2/</guid>
+      <guid>/2005/06/mac-moments-2/</guid>
       <description>&lt;p&gt;My second Mac moment came when using the text editor TextWrangler to work on ShelfCentered.com. Yesterday I had put my Mac on mute for some reason, and of course I forgot about it and was working away this evening. I was searching a document for occurrences of a word, and there were none. Now, usually this would produce the usual audible beep. But the developers of TextWrangler included a feature that automatically detected my Mac was on mute, and instead popped a message up on the screen that said &amp;ldquo;Not Found.&amp;rdquo; I didn&amp;rsquo;t even really notice how wonderful this was until a minute later, because I just received the information and proceeded accordingly. I managed to capture the message before it faded out:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;/wp-content/my_images/TextWranglerVisual.png&#34; alt=&#34;Textwranglervisual&#34; /&gt;&lt;/p&gt;
@@ -1076,10 +1086,10 @@ Evolution cannot explain irreducible complexity.
     
     <item>
       <title>Mac Moments</title>
-      <link>/post/2005-05-15-mac-moments/</link>
+      <link>/2005/05/mac-moments/</link>
       <pubDate>Sun, 15 May 2005 22:01:26 +0000</pubDate>
       
-      <guid>/post/2005-05-15-mac-moments/</guid>
+      <guid>/2005/05/mac-moments/</guid>
       <description>&lt;p&gt;At my workplace, the Mac platform is often derided by what I consider typical &amp;ldquo;PC guys.&amp;rdquo; These are technically savvy folks who for whatever reason feel very strongly that the Mac platform is poor, or should go away, or that Windows has definitively proven its superiority. Sometimes these same people are also very skeptical of Microsoft, but usually not. It&amp;rsquo;s strange, though, that someone can feel so ambivalent about Microsoft yet so strongly negative about the Mac. Recently, the success of the iPod has served to greatly increase the bitterness and spite felt towards the Mac by such people.&lt;/p&gt;
 
 &lt;p&gt;Anyway, since I&amp;rsquo;m often asked at work, &amp;ldquo;Why do you love the Mac so much,&amp;rdquo; I decided to try to answer it. I am unable to give detailed reasons on the spot, so I thought I&amp;rsquo;d keep it in the back of my mind, and blog about it when something occurred to me. Besides, most of my reasons are very mundane and subtle interface design issues that sort of accumulate in my mind into a positive feeling over time. When one of these small things happens, rather than let it fall through the cracks, I hoped to catch it for a segment I call &amp;ldquo;Mac Moments.&amp;rdquo;&lt;/p&gt;
@@ -1098,10 +1108,10 @@ Evolution cannot explain irreducible complexity.
     
     <item>
       <title>Poker</title>
-      <link>/post/2005-04-26-poker/</link>
+      <link>/2005/04/poker/</link>
       <pubDate>Tue, 26 Apr 2005 01:15:24 +0000</pubDate>
       
-      <guid>/post/2005-04-26-poker/</guid>
+      <guid>/2005/04/poker/</guid>
       <description>&lt;p&gt;I&amp;rsquo;ve had poker on my mind since last Thanksgiving, specifically Texas Hold&amp;rsquo;em. At this point, I have special hold&amp;rsquo;em software, four poker strategy books and one nonfiction book about poker. I mostly study the books and play a bit with the software, but eventually I want to start a real-money account on one of the online poker sites. I feel that if I apply what&amp;rsquo;s in the books, then I can win money, which would be a very fun goal to shoot for. Of course, to avoid having a gambling problem I have to tread very carefully and lower my expectations within reason for the early stages. I have been procrastinating setting up a new checking account for my poker money both because I truly hesitate to take this step, and because I don&amp;rsquo;t feel I&amp;rsquo;m good enough yet.&lt;/p&gt;
 
 &lt;p&gt;The poker sites all offer games with pretend money, but the problem there is the opponents are so crazy and bad that you can hardly apply any real strategy. The poker software offers a good challenge, but it&amp;rsquo;s almost to the other extreme &amp;ndash; it&amp;rsquo;s designed to provide challenging opponents. This is a good thing, but the kind of opponents I&amp;rsquo;m aiming to win money from are inbetween: they&amp;rsquo;re better than lunatics, but they won&amp;rsquo;t play like a typical strong opponent. They&amp;rsquo;ll play too many hands and go too far with them. If I can tune my poker software to simulate this, maybe I can grow more confident and eventually open that bank account. I&amp;rsquo;m sure my friends and family will all be equally horrified by this (my wife doesn&amp;rsquo;t like to discuss it with me), but I still feel like it&amp;rsquo;s something I should try.&lt;/p&gt;
@@ -1110,10 +1120,10 @@ Evolution cannot explain irreducible complexity.
     
     <item>
       <title>ShelfCentered.com</title>
-      <link>/post/2005-04-25-shelfcenteredcom/</link>
+      <link>/2005/04/shelfcentered.com/</link>
       <pubDate>Mon, 25 Apr 2005 04:50:16 +0000</pubDate>
       
-      <guid>/post/2005-04-25-shelfcenteredcom/</guid>
+      <guid>/2005/04/shelfcentered.com/</guid>
       <description>&lt;p&gt;For the last couple of months, I&amp;rsquo;ve been working on a new side project that my wife, brother and sister and I came up with, called ShelfCentered.com. I haven&amp;rsquo;t posted about ShelfCentered.com as of yet, because honestly I suspect it might be a good enough idea to really become something good, and I want to protect us from competitors! For example, there are a couple of shareware programs out there already that do what we&amp;rsquo;re planning, and they&amp;rsquo;ve created some limited buzz, but so far no one has thought to put the idea online in a nice web site. I won&amp;rsquo;t go into detail just yet, but it&amp;rsquo;s hard to maintain a blog without mentioning the thing that&amp;rsquo;s my primary occupation outside work!&lt;/p&gt;
 
 &lt;p&gt;The burden has been on me to get the site off the ground, but once it&amp;rsquo;s to a certain point the rest of the family will be able to help out more. I&amp;rsquo;ve been struggling to get enough mental traction, but now I think I&amp;rsquo;m getting somewhere. As always, it was a combination of gathering the right set of tools, and being organized enough to start drawing some specifications. There was a longish period of experimentation with a particular application of Web Services as well.&lt;/p&gt;
@@ -1133,10 +1143,10 @@ Evolution cannot explain irreducible complexity.
     
     <item>
       <title>MathML</title>
-      <link>/post/2005-04-16-mathml/</link>
+      <link>/2005/04/mathml/</link>
       <pubDate>Sat, 16 Apr 2005 22:27:14 +0000</pubDate>
       
-      <guid>/post/2005-04-16-mathml/</guid>
+      <guid>/2005/04/mathml/</guid>
       <description>&lt;p&gt;My friend and former coworker, Robert Miner, has written an article about MathML in the latest issue of Notices of the American Mathematics Society, which you can &lt;a href=&#34;http://www.ams.org/notices/200505/fea-miner.pdf&#34; target=&#34;_blank&#34;&gt;read online&lt;/a&gt; [pdf]. MathML is a standard XML representation of math notation and semantics, and has been adopted steadily ever since Robert co-created it in 1998.  When I worked at &lt;a href=&#34;http://www.dessci.com&#34; target=&#34;_blank&#34;&gt;Design Science&lt;/a&gt; with Robert, MathML was becoming a major focus for the company.&lt;/p&gt;
 
 &lt;p&gt;I was happy to see this article, because the academic math community is still very focused on TeX/LaTeX, which are fine as far as they go, but somewhat old-fashioned and limited compared to MathML.  TeX is strictly for presentation, for example, and conveys no semantic content. You couldn&amp;rsquo;t paste TeX into a computer algebra system, for example, and expect it to compute anything.  MathML is a better, more general solution, and has other benefits Robert covers in the article. One likely future application is the ability to index and search math formulas, something I began working on with Robert towards the end of my tenure at Design Science.&lt;/p&gt;
@@ -1147,10 +1157,10 @@ Evolution cannot explain irreducible complexity.
     
     <item>
       <title>Daylight Savings Time</title>
-      <link>/post/2005-04-08-daylight-savings-time/</link>
+      <link>/2005/04/daylight-savings-time/</link>
       <pubDate>Fri, 08 Apr 2005 05:16:35 +0000</pubDate>
       
-      <guid>/post/2005-04-08-daylight-savings-time/</guid>
+      <guid>/2005/04/daylight-savings-time/</guid>
       <description>&lt;p&gt;I don&amp;rsquo;t understand daylight savings time. No one I talk to has a clear idea of when and why it was invented. What country started it?  What countries adhere to it?  Why is Europe still doing it a week before the US?&lt;/p&gt;
 
 &lt;p&gt;It seems clear to me that having extremely accurate measurements of time has become an indispensible part of our society.  Computers and many other timekeeping devices are synchronized regularly with servers maintained by (or synchronized with) our standards bodies&amp;rsquo; equipment, so that their inherent inaccuracy can be overcome.  Very nearly, there is one nearly standard idea of time.&lt;/p&gt;
@@ -1167,10 +1177,10 @@ Evolution cannot explain irreducible complexity.
     
     <item>
       <title>C. S. Lewis 2005</title>
-      <link>/post/2005-01-17-c-s-lewis-2005/</link>
+      <link>/2005/01/c.-s.-lewis-2005/</link>
       <pubDate>Mon, 17 Jan 2005 01:39:40 +0000</pubDate>
       
-      <guid>/post/2005-01-17-c-s-lewis-2005/</guid>
+      <guid>/2005/01/c.-s.-lewis-2005/</guid>
       <description>&lt;p&gt;I visited my parents for the holidays again this year, and like last year I decided to read some of their C. S. Lewis collection. I felt like progressing on with his Christian works, and so I chose &lt;em&gt;Mere Christianity&lt;/em&gt;.&lt;/p&gt;
 
 &lt;p&gt;In this book, there are good, simple explanations of many points of Christian doctrine that I rarely heard explained in Catholic school.  Without fully admitting it to myself, however, I was looking for something specific.  Namely, I was looking for more material like that which I found to be  compelling in &lt;em&gt;The Great Divorce&lt;/em&gt;, describing what it might be like to really surrender to a certain impulse. In Lewis&amp;rsquo; mind this is the religious, specifically Christian impulse, to be one with God. In my mind, I&amp;rsquo;d rather not say it&amp;rsquo;s religious, but yet I know exactly what he&amp;rsquo;s talking about.  I am familiar with trying to improve myself, and also with failing to do so. I am familiar with many doubts and fears, and I also perceive that it is possible to defeat all of these with a single choice. That choice is simply to give them up and stop having the doubts and fears. The funny thing is, though, that we don&amp;rsquo;t want to give them up.  We feel very possessive of these feelings because they are part of our identity. I enjoy very much reading about this idea, because it gives me glimpses into what life might be like after such a surrender.&lt;/p&gt;
@@ -1187,10 +1197,10 @@ Evolution cannot explain irreducible complexity.
     
     <item>
       <title>The Civil War</title>
-      <link>/post/2004-07-17-the-civil-war/</link>
+      <link>/2004/07/the-civil-war/</link>
       <pubDate>Sat, 17 Jul 2004 16:07:02 +0000</pubDate>
       
-      <guid>/post/2004-07-17-the-civil-war/</guid>
+      <guid>/2004/07/the-civil-war/</guid>
       <description>&lt;p&gt;I&amp;rsquo;ve been renting Ken Burns&amp;rsquo; &lt;em&gt;Civil War&lt;/em&gt; shows lately, from Netflix. I thought I&amp;rsquo;d share a misconception I learned I had about the Civil War. My memory from school left me thinking that the war would involve a large set of complicated virtuosic battlefield maneuvers, and that I&amp;rsquo;d come to appreciate how all the famous generals were geniuses. In fact, I&amp;rsquo;d somehow developed the opinion that the generals during that war outshine generals in other wars, that through a coincidence of history, the best strategists somehow simultaneously appeared during that conflict.&lt;/p&gt;
 
 &lt;p&gt;Well, now that I&amp;rsquo;ve written that idea down, you can see how ill-informed it must be. The way Ken Burns presents most of the battles, there are indeed arrows and colored bars moving over maps, but the level of intelligence rarely rises above common sense. In fact, it seems that common sense alone makes you a great general. There were many instances of really stupid attacks. A pattern that I&amp;rsquo;ve seen repeated (Picket&amp;rsquo;s Charge, Cold Harbor, etc.) is where a really entrenched group on a hill and/or behind a wall is charged by the enemy (the North, usually) and the troops that are dug in just mow down the attackers, for hours and hours, killing thousands of men. It seemed that all that was needed to be a great general was to avoid that kind of decision.&lt;/p&gt;
@@ -1199,10 +1209,10 @@ Evolution cannot explain irreducible complexity.
     
     <item>
       <title>Does Tolkien think Good always defeats Evil?</title>
-      <link>/post/2004-06-01-does-tolkien-think-good-always-defeats-evil/</link>
+      <link>/2004/06/does-tolkien-think-good-always-defeats-evil/</link>
       <pubDate>Tue, 01 Jun 2004 02:54:49 +0000</pubDate>
       
-      <guid>/post/2004-06-01-does-tolkien-think-good-always-defeats-evil/</guid>
+      <guid>/2004/06/does-tolkien-think-good-always-defeats-evil/</guid>
       <description>&lt;p&gt;I&amp;rsquo;ve always thought Tolkien was essentially pessimistic, despite the happy ending of &lt;em&gt;The Lord of the Rings&lt;/em&gt;. The power of Evil he describes, and the inevibatle comparisons to the horror of World War I make this a convincing point of view. The army of Gondor is forced to risk a suicidal attack against a formidable foe to even preserve their tiny ghost of a chance of victory.&lt;/p&gt;
 
 &lt;p&gt;More than this, the mood of the work is very bleak. The larger story arc about the Elves that includes &lt;em&gt;The Silmarillion&lt;/em&gt; is in Elrond&amp;rsquo;s words a story about &amp;ldquo;fighting the long defeat.&amp;rdquo; The defeat of Sauron, a minor lieutenant of the world&amp;rsquo;s great evil, Melkor, means the end of the Elves&amp;rsquo; rings of power and their final flight into the West, having finally failed to &amp;ldquo;make a go of it&amp;rdquo; in Middle Earth.&lt;/p&gt;
@@ -1245,10 +1255,10 @@ Far above the Ephel Duath in the West the night-sky was still dim and pale. Ther
     
     <item>
       <title>New feature: better links</title>
-      <link>/post/2004-04-17-new-feature-better-links/</link>
+      <link>/2004/04/new-feature-better-links/</link>
       <pubDate>Sat, 17 Apr 2004 21:46:18 +0000</pubDate>
       
-      <guid>/post/2004-04-17-new-feature-better-links/</guid>
+      <guid>/2004/04/new-feature-better-links/</guid>
       <description>&lt;p&gt;A new feature on Long Head is the new super-accurate &amp;ldquo;Greg Links&amp;rdquo; list on the left. Except for the other langmead.info sites, these links are the sites I&amp;rsquo;m actually actively reading every day.&lt;/p&gt;
 
 &lt;p&gt;I keep up to date with almost all my favorite internet sites by subscribing to RSS feeds using the free service at &lt;a href=&#34;http://www.bloglines.com&#34; target=&#34;_blank&#34;&gt;BlogLines&lt;/a&gt;. RSS feeds are little XML files published by sites alongside the web pages with the actual content. As an example, here is a link to one of the many &lt;a href=&#34;http://news.bbc.co.uk/rss/newsonline_uk_edition/world/europe/rss091.xml&#34; target=&#34;_blank&#34;&gt;RSS feeds published by the BBC&lt;/a&gt; (covering, in this case, just their European news).&lt;/p&gt;
@@ -1265,10 +1275,10 @@ Far above the Ephel Duath in the West the night-sky was still dim and pale. Ther
     
     <item>
       <title>Book review: C. S. Lewis</title>
-      <link>/post/2004-04-17-book-review-c-s-lewis/</link>
+      <link>/2004/04/book-review-c.-s.-lewis/</link>
       <pubDate>Sat, 17 Apr 2004 21:00:08 +0000</pubDate>
       
-      <guid>/post/2004-04-17-book-review-c-s-lewis/</guid>
+      <guid>/2004/04/book-review-c.-s.-lewis/</guid>
       <description>&lt;p&gt;This winter I read three books by C. S. Lewis: &lt;em&gt;The Great Divorce&lt;/em&gt;, &lt;em&gt;The Screwtape Letters&lt;/em&gt; and &lt;em&gt;Surprised by Joy&lt;/em&gt;.&lt;/p&gt;
 
 &lt;p&gt;I&amp;rsquo;ve been introduced to Lewis before, when I was young. I read the first several books of the &lt;em&gt;Narnia&lt;/em&gt; series, and I read the whole &lt;em&gt;Out of the Silent Planet&lt;/em&gt; trilogy. Back then, however, I was looking for pure entertainment from those books, and although they delivered it, the religious level was also apparent, and detracted from their enjoyment for me.&lt;/p&gt;
@@ -1301,20 +1311,20 @@ Here and here only in all time the myth must have become fact; the Word, flesh; 
     
     <item>
       <title>Hello from Clié</title>
-      <link>/post/2004-03-28-hello-from-clie/</link>
+      <link>/2004/03/hello-from-cli%C3%A9/</link>
       <pubDate>Sun, 28 Mar 2004 21:40:32 +0000</pubDate>
       
-      <guid>/post/2004-03-28-hello-from-clie/</guid>
+      <guid>/2004/03/hello-from-cli%C3%A9/</guid>
       <description>&lt;p&gt;I&amp;rsquo;m blogging this from my new Clié TH-55. It has wireless networking and a full web browser, plus email. I&amp;rsquo;m still looking fo a free instant messaging client.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>MathType for Mac&#39;s out!</title>
-      <link>/post/2004-03-26-mathtype-for-macs-out/</link>
+      <link>/2004/03/mathtype-for-macs-out/</link>
       <pubDate>Fri, 26 Mar 2004 19:25:30 +0000</pubDate>
       
-      <guid>/post/2004-03-26-mathtype-for-macs-out/</guid>
+      <guid>/2004/03/mathtype-for-macs-out/</guid>
       <description>&lt;p&gt;After nearly three years of development, &lt;a href=&#34;http://www.dessci.com/en/products/mathtype/mtm_upgrade.htm&#34; target=&#34;_blank&#34;&gt;MathType 5 for Mac&lt;/a&gt; has been released.&lt;/p&gt;
 
 &lt;p&gt;It&amp;rsquo;s been a long time coming, and I&amp;rsquo;m looking forward to moving on to other projects, but for now I&amp;rsquo;m happy it&amp;rsquo;s finished.&lt;/p&gt;
@@ -1323,60 +1333,60 @@ Here and here only in all time the myth must have become fact; the Word, flesh; 
     
     <item>
       <title>Hotspot</title>
-      <link>/post/2004-03-14-hotspot/</link>
+      <link>/2004/03/hotspot/</link>
       <pubDate>Sun, 14 Mar 2004 05:26:01 +0000</pubDate>
       
-      <guid>/post/2004-03-14-hotspot/</guid>
+      <guid>/2004/03/hotspot/</guid>
       <description>&lt;p&gt;I&amp;rsquo;m blogging this from a Starbucks in Hollywood, near the big shopping center called Hollywood &amp;amp; Highland. Alison is out with a friend nearby, so I decided to try out the Starbucks hotspot system. Works pretty well, but only for 24 hours &amp;ndash; next time I visit a Starbucks I&amp;rsquo;ll have to pay $6 for an hour, then 10 cents a minute afterwards.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Update on Mac rant</title>
-      <link>/post/2004-02-12-update-on-mac-rant/</link>
+      <link>/2004/02/update-on-mac-rant/</link>
       <pubDate>Thu, 12 Feb 2004 05:37:13 +0000</pubDate>
       
-      <guid>/post/2004-02-12-update-on-mac-rant/</guid>
+      <guid>/2004/02/update-on-mac-rant/</guid>
       <description>&lt;p&gt;I don&amp;rsquo;t think I&amp;rsquo;ll finish my &lt;a href=&#34;/archives/000090.html&#34;&gt;rant against the Mac&lt;/a&gt;. I think that primarily I was angry about the state of affairs typically faced by a developer. However, despite the fact that I do think documentation of the Carbon toolkit is flawed, and I have some fundamental problems with the way these legacy facilities have been brought into OS X, for the most part I find I&amp;rsquo;m still very excited about the Mac, and I&amp;rsquo;ve had a very positive experience with the much more modern Cocoa environment. So, all in all, I think the game situation is pathetic, but the Mac still has many compelling advantages. Maybe I&amp;rsquo;ll try to sort this out in a later posting.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Coming soon...</title>
-      <link>/post/2004-02-12-coming-soon/</link>
+      <link>/2004/02/coming-soon.../</link>
       <pubDate>Thu, 12 Feb 2004 05:32:36 +0000</pubDate>
       
-      <guid>/post/2004-02-12-coming-soon/</guid>
+      <guid>/2004/02/coming-soon.../</guid>
       <description>&lt;p&gt;I&amp;rsquo;ll be adding my thoughts soon about three books by C. S. Lewis that I&amp;rsquo;ve recently finished. Although I had a few false starts with the Narnia books as a youth, these were read more to find out about the real Christian thinker, and because I wanted to branch out from Tolkien to some of his colleagues.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>I&#39;m a pundit, I&#39;m punditing, I pun</title>
-      <link>/post/2003-12-04-im-a-pundit-im-punditing-i-pun/</link>
+      <link>/2003/12/im-a-pundit-im-punditing-i-pun/</link>
       <pubDate>Thu, 04 Dec 2003 04:00:45 +0000</pubDate>
       
-      <guid>/post/2003-12-04-im-a-pundit-im-punditing-i-pun/</guid>
+      <guid>/2003/12/im-a-pundit-im-punditing-i-pun/</guid>
       <description>&lt;p&gt;A few weeks ago I decided to put some thought into why I have so much trouble getting good at real-time strategy computer games. I went ahead and submitted it to &lt;a href=&#34;http://www.gamespot.com&#34; target=&#34;_blank&#34;&gt;GameSpot&lt;/a&gt;, my favorite gaming news site, which does a weekly set of op-ed pieces with a slot for a reader to opine. Well, my article was accepted! &lt;a href=&#34;http://www.gamespot.com/features/6084762/index.html&#34; target=&#34;_blank&#34;&gt;Have a read&lt;/a&gt; &amp;ndash; I&amp;rsquo;m the second one down.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>New family additions</title>
-      <link>/post/2003-10-12-new-family-additions/</link>
+      <link>/2003/10/new-family-additions/</link>
       <pubDate>Sun, 12 Oct 2003 20:32:59 +0000</pubDate>
       
-      <guid>/post/2003-10-12-new-family-additions/</guid>
+      <guid>/2003/10/new-family-additions/</guid>
       <description>&lt;p&gt;I&amp;rsquo;ve made two changes to my video game family. First, I bought a GameCube and a couple games (&lt;a href=&#34;http://www.gamespot.com/gamecube/adventure/legendofzeldathewindwaker/review.html&#34; target=&#34;_blank&#34;&gt;Zelda&lt;/a&gt;, &lt;a href=&#34;http://www.gamespot.com/gamecube/action/viewtifuljoe/review.html&#34; target=&#34;_blank&#34;&gt;Viewtiful Joe&lt;/a&gt;). Also, a friend with a vinyl cutter made a wood-grain applique for my Xbox. &lt;a href=&#34;/images/GregsTrueLoves.html&#34;&gt;Click to see the new family!&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Mac Diatribe: Lack of Games</title>
-      <link>/post/2003-09-10-mac-diatribe-lack-of-games/</link>
+      <link>/2003/09/mac-diatribe-lack-of-games/</link>
       <pubDate>Wed, 10 Sep 2003 01:35:57 +0000</pubDate>
       
-      <guid>/post/2003-09-10-mac-diatribe-lack-of-games/</guid>
+      <guid>/2003/09/mac-diatribe-lack-of-games/</guid>
       <description>&lt;p&gt;I&amp;rsquo;m a serious gamer, just below the rank of what the press call &amp;ldquo;hardcore.&amp;rdquo; I own an XBox, a GameBoy, and a very fast PC. By way of Mac hardware, I own an aging 1999 Powerbook, and I have no plans to buy another Mac. In fact, any serious gamer must automatically reject the Mac.
 &lt;!-- more --&gt;
 Games played on computers remain of a different character than those you find on consoles, and include genres that will never be appropriate on a console, especially real-time strategy games (Warcraft, Rise of Nations, etc.). If you want to play real-time strategy games, you need Windows, though, because the best games are not available on the Mac. Apple would have you believe that the cream of the crop gets ported to Mac, and this is true for Warcraft, but in general it&amp;rsquo;s an unfair overstatement. Rise of Nations is a superb game, and its absence from the Mac pretty much makes the Mac a non-viable gaming platform. There are many more examples of top-flight games that never get ported than do. Half-Life and Grim Fandango, where were those? And most of the smaller games that flesh out the offerings on PC have no hope of being ported.&lt;/p&gt;
@@ -1395,10 +1405,10 @@ Games played on computers remain of a different character than those you find on
     
     <item>
       <title>Outline of Mac Diatribe</title>
-      <link>/post/2003-09-10-outline-of-mac-diatribe/</link>
+      <link>/2003/09/outline-of-mac-diatribe/</link>
       <pubDate>Wed, 10 Sep 2003 01:24:38 +0000</pubDate>
       
-      <guid>/post/2003-09-10-outline-of-mac-diatribe/</guid>
+      <guid>/2003/09/outline-of-mac-diatribe/</guid>
       <description>&lt;p&gt;Please understand I&amp;rsquo;m of two minds about the Mac, and so my remarks should be taken like those of a concerned parent, rather than, say, a Palestinian suicide bomber.&lt;/p&gt;
 
 &lt;p&gt;My main points are&lt;/p&gt;
@@ -1416,10 +1426,10 @@ Games played on computers remain of a different character than those you find on
     
     <item>
       <title>Diatribe against Macs coming</title>
-      <link>/post/2003-09-07-diatribe-against-macs-coming/</link>
+      <link>/2003/09/diatribe-against-macs-coming/</link>
       <pubDate>Sun, 07 Sep 2003 02:10:52 +0000</pubDate>
       
-      <guid>/post/2003-09-07-diatribe-against-macs-coming/</guid>
+      <guid>/2003/09/diatribe-against-macs-coming/</guid>
       <description>&lt;p&gt;I&amp;rsquo;ve been writing a pretty major piece of Mac software for almost two and a half years. As I&amp;rsquo;ve gone along, I&amp;rsquo;ve run up against the shortcomings not only of the developer resources, but of course also in OS X itself, since developers are also users.&lt;/p&gt;
 
 &lt;p&gt;At this point, I&amp;rsquo;m essentially ready to abandon the Mac for greener pastures elsewhere, but I have to work it out a bit first, so I&amp;rsquo;m going to be posting a multi-section reflection on the matter. I am extremely hesitant to change my attitude from &amp;ldquo;mac-zealot&amp;rdquo; to &amp;ldquo;mac-doubter,&amp;rdquo; and that&amp;rsquo;s definitely one of the issues going on here. The Mac demands defensiveness from its adherents, and so I meet much resistance from my own history and contrary nature when I consider embracing my disgust.&lt;/p&gt;
@@ -1430,20 +1440,20 @@ Games played on computers remain of a different character than those you find on
     
     <item>
       <title>Blogging from bed</title>
-      <link>/post/2003-06-28-blogging-from-bed/</link>
+      <link>/2003/06/blogging-from-bed/</link>
       <pubDate>Sat, 28 Jun 2003 07:58:43 +0000</pubDate>
       
-      <guid>/post/2003-06-28-blogging-from-bed/</guid>
+      <guid>/2003/06/blogging-from-bed/</guid>
       <description>&lt;p&gt;Got wireless today! It&amp;rsquo;s totally new to me, but not to most other people, so I won&amp;rsquo;t dwell on it. Anyway, I&amp;rsquo;m in bed, which means Penelope is in the chair and Alison&amp;rsquo;s got her arms all over my pillows. This laptop has a very loud hard drive, which I already knew, but which is a bit more of a problem in this context.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Don&#39;t Want to Miss a Thing</title>
-      <link>/post/2003-06-11-dont-want-to-miss-a-thing/</link>
+      <link>/2003/06/dont-want-to-miss-a-thing/</link>
       <pubDate>Wed, 11 Jun 2003 05:59:11 +0000</pubDate>
       
-      <guid>/post/2003-06-11-dont-want-to-miss-a-thing/</guid>
+      <guid>/2003/06/dont-want-to-miss-a-thing/</guid>
       <description>&lt;p&gt;I just finished watching &lt;em&gt;Armageddon&lt;/em&gt; and it reminds me of an issue I have with the grammar of the Aerosmith/Dianne Warren song &amp;ldquo;Don&amp;rsquo;t Want to Miss a Thing.&amp;rdquo; The lyrics go &amp;ldquo;&amp;hellip;don&amp;rsquo;t want to fall asleep / &amp;lsquo;cause I miss you babe / and I don&amp;rsquo;t want to miss a thing.&amp;rdquo;&lt;/p&gt;
 
 &lt;p&gt;I can&amp;rsquo;t help but hear this the wrong way &amp;ndash; it&amp;rsquo;s my contrary nature. My interpretation is that he&amp;rsquo;s singing &amp;ldquo;I miss you. You&amp;rsquo;re an object. I don&amp;rsquo;t want to miss an object, so I don&amp;rsquo;t want to miss you.&amp;rdquo; It&amp;rsquo;s analogous to saying &amp;ldquo;&amp;lsquo;cause I miss you babe / and I don&amp;rsquo;t want to miss a blockhead.&amp;rdquo;&lt;/p&gt;
@@ -1454,10 +1464,10 @@ Games played on computers remain of a different character than those you find on
     
     <item>
       <title>I&#39;m 30</title>
-      <link>/post/2003-04-20-im-30/</link>
+      <link>/2003/04/im-30/</link>
       <pubDate>Sun, 20 Apr 2003 17:53:29 +0000</pubDate>
       
-      <guid>/post/2003-04-20-im-30/</guid>
+      <guid>/2003/04/im-30/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;/wp-content/my_images/BunnyCake.jpg&#34; alt=&#34;Bunny Cake!&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Yesterday was my 30th birthday. Alison threw me a surprise party (just the two of us) on Friday night and made me a bunny cake! Yesterday she gave me a bottle of &lt;em&gt;really&lt;/em&gt; nice tequila, and I had some with breakfast ;-). My brother got me a book, and there are more gifts on the way that I don&amp;rsquo;t know what they are. Alison and I had a nice visit to our favorite boba tea place in Long Beach, then headed over to Anaheim to see the Angels play the Mariners, and I got a proper Angels hat. It&amp;rsquo;s made of really light, breathable material and it was very comfortable. It also represents some sort of turning point for me, as I do not change baseball allegience lightly, though eventually I guess I always do.&lt;/p&gt;
@@ -1466,10 +1476,10 @@ Games played on computers remain of a different character than those you find on
     
     <item>
       <title>Alison&#39;s PhD</title>
-      <link>/post/2003-04-14-alisons-phd/</link>
+      <link>/2003/04/alisons-phd/</link>
       <pubDate>Mon, 14 Apr 2003 04:39:01 +0000</pubDate>
       
-      <guid>/post/2003-04-14-alisons-phd/</guid>
+      <guid>/2003/04/alisons-phd/</guid>
       <description>&lt;p&gt;This past week, my wife&amp;rsquo;s dissertation was aproved by Columbia&amp;rsquo;s dissertation office, meaning the printouts had the right margins, her paperwork made its way from the Art History department, her library fees were all paid, her account was in good standing, and 12 years of your typical bureaucratic wrangling has sorted itself out.&lt;/p&gt;
 
 &lt;p&gt;I&amp;rsquo;m very proud of Alison for seeing this project through. It was a long project, beginning back in 1997 when we took our first trip to Cahors in southern France and she got the idea of doing a massive geographic survey of Romanesque architecture. But it&amp;rsquo;s not just the length, it&amp;rsquo;s the fact that she did it on her own (with a little technical and minor logistical help from me, but my whining cancels that out), often against hardship imposed by lesser or more jaded minds. If anyone had thought that academics was about the pursuit of knowledge and study, to understand our place in history and in the universe, they would be pretty much wrong. Academics is dominated by small minds and people who try to stop the proliferation of great ideas, just like in other pursuits. There really is no good home for people who want to pursue true, pure knowledge and understanding.&lt;/p&gt;
@@ -1478,10 +1488,10 @@ Games played on computers remain of a different character than those you find on
     
     <item>
       <title>Games, games and games</title>
-      <link>/post/2003-04-14-games-games-and-games/</link>
+      <link>/2003/04/games-games-and-games/</link>
       <pubDate>Mon, 14 Apr 2003 03:14:38 +0000</pubDate>
       
-      <guid>/post/2003-04-14-games-games-and-games/</guid>
+      <guid>/2003/04/games-games-and-games/</guid>
       <description>&lt;p&gt;I actually had time to play some Gameboy games today! I have quite a backlog, which will surprise no one who knows me, and it felt good to give it some attention.&lt;/p&gt;
 
 &lt;p&gt;My father-in-law got me &lt;a href=&#34;http://www.gamespot.com/gba/strategy/advancewars/index.html&#34; target=&#34;_blank&#34;&gt;Advance Wars&lt;/a&gt; for Christmas, and I love it! I was afraid it would be confusing, but the designers have succeeded in making it very accessible. Any game that hides complexity with an accessible and fun interface, and especially good tutorials, becomes addictive &amp;ndash; it&amp;rsquo;s a rule somewhere.&lt;/p&gt;
@@ -1494,60 +1504,60 @@ Games played on computers remain of a different character than those you find on
     
     <item>
       <title>VisiCalc history</title>
-      <link>/post/2003-04-09-visicalc-history/</link>
+      <link>/2003/04/visicalc-history/</link>
       <pubDate>Wed, 09 Apr 2003 05:59:58 +0000</pubDate>
       
-      <guid>/post/2003-04-09-visicalc-history/</guid>
+      <guid>/2003/04/visicalc-history/</guid>
       <description>&lt;p&gt;Bob Frankston, co-creator of the original spreadsheet VisiCalc, has recently written down &lt;a href=&#34;http://www.frankston.com/?name=ImplementingVisiCalc&#34; target=&#34;_blank&#34;&gt;a postmortem&lt;/a&gt;, 25 years later!&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Work category coming</title>
-      <link>/post/2003-04-08-work-category-coming/</link>
+      <link>/2003/04/work-category-coming/</link>
       <pubDate>Tue, 08 Apr 2003 04:17:38 +0000</pubDate>
       
-      <guid>/post/2003-04-08-work-category-coming/</guid>
+      <guid>/2003/04/work-category-coming/</guid>
       <description>&lt;p&gt;Not that you care, but I&amp;rsquo;m going to merge in all my work content into a category, and see how it coexists with my main category.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Buy me toys!</title>
-      <link>/post/2003-04-08-buy-me-toys/</link>
+      <link>/2003/04/buy-me-toys/</link>
       <pubDate>Tue, 08 Apr 2003 04:14:06 +0000</pubDate>
       
-      <guid>/post/2003-04-08-buy-me-toys/</guid>
+      <guid>/2003/04/buy-me-toys/</guid>
       <description>&lt;p&gt;My birthday&amp;rsquo;s coming up, so head on over to amazon.com and &lt;a href=&#34;http://www.amazon.com/exec/obidos/registry/1T63DINEDI1C1/ref%3Dwl%5Fs%5F3/104-1790558-0272731&#34; target=&#34;_blank&#34;&gt;check out my wish list&lt;/a&gt;! :)&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Beware of Bounceweb!</title>
-      <link>/post/2003-04-01-beware-of-bounceweb/</link>
+      <link>/2003/04/beware-of-bounceweb/</link>
       <pubDate>Tue, 01 Apr 2003 02:29:03 +0000</pubDate>
       
-      <guid>/post/2003-04-01-beware-of-bounceweb/</guid>
+      <guid>/2003/04/beware-of-bounceweb/</guid>
       <description>&lt;p&gt;Boy, Bounceweb threw us for a loop. Our site went down so hard that when it came back up, various files and directories were gone! They had to restore from backups, and even so there was a lot of work to do.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>So I guess I&#39;ve made</title>
-      <link>/post/2003-03-08-so-i-guess-ive-made/</link>
+      <link>/2003/03/so-i-guess-ive-made/</link>
       <pubDate>Sat, 08 Mar 2003 18:36:01 +0000</pubDate>
       
-      <guid>/post/2003-03-08-so-i-guess-ive-made/</guid>
+      <guid>/2003/03/so-i-guess-ive-made/</guid>
       <description>&lt;p&gt;So I guess I&amp;rsquo;ve made a mess of all my various weblogs. First there was a Movable Type blog in 2001, then a radio blog, then a new radio blog, and then this new Movable Type blog. I&amp;rsquo;m going to settle on this one, but all my old posts to the other blogs will just have to be lost unless I can muster the enthusiasm for scrounging them up somehow.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Still working on Fabric of</title>
-      <link>/post/2003-03-08-still-working-on-fabric-of/</link>
+      <link>/2003/03/still-working-on-fabric-of/</link>
       <pubDate>Sat, 08 Mar 2003 18:35:11 +0000</pubDate>
       
-      <guid>/post/2003-03-08-still-working-on-fabric-of/</guid>
+      <guid>/2003/03/still-working-on-fabric-of/</guid>
       <description>&lt;p&gt;Still working on &lt;em&gt;Fabric of Reality&lt;/em&gt;, because I am a little lost in the chapter on quantum computing, which was the main topic I bought the book to read about. I&amp;rsquo;m sure I&amp;rsquo;ll figure it out eventually.&lt;/p&gt;
 
 &lt;p&gt;I&amp;rsquo;m just about finished re-listening to my audio-book version of &lt;em&gt;The Fellowship of the Ring&lt;/em&gt;, which I enjoyed immensely. I&amp;rsquo;ve now read the dead-tree book once, and listened to this audio book twice.&lt;/p&gt;
@@ -1556,30 +1566,30 @@ Games played on computers remain of a different character than those you find on
     
     <item>
       <title>Now that I&#39;m finished American</title>
-      <link>/post/2003-03-08-now-that-im-finished-american/</link>
+      <link>/2003/03/now-that-im-finished-american/</link>
       <pubDate>Sat, 08 Mar 2003 18:34:16 +0000</pubDate>
       
-      <guid>/post/2003-03-08-now-that-im-finished-american/</guid>
+      <guid>/2003/03/now-that-im-finished-american/</guid>
       <description>&lt;p&gt;Now that I&amp;rsquo;m finished &lt;em&gt;American Gods&lt;/em&gt;, I&amp;rsquo;m just reading &lt;a href=&#34;http://www.amazon.com/exec/obidos/tg/detail/-/014027541X/qid=1046661995/sr=12-1/104-0484812-0662315?v=glance&amp;amp;s=books&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;The Fabric of Reality&lt;/em&gt;&lt;/a&gt; by David Deutsch. It&amp;rsquo;s about physics, quantum computation, DNA, and lots of other topics, sort of unified into a really interesting and idiosyncratic world-view. David Deutsch is a father of quantum computing, so he knows what he&amp;rsquo;s talking about. I always prefer well-expressed personal viewpoints to bland, objective information.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>I just finished reading American</title>
-      <link>/post/2003-03-08-i-just-finished-reading-american/</link>
+      <link>/2003/03/i-just-finished-reading-american/</link>
       <pubDate>Sat, 08 Mar 2003 18:33:43 +0000</pubDate>
       
-      <guid>/post/2003-03-08-i-just-finished-reading-american/</guid>
+      <guid>/2003/03/i-just-finished-reading-american/</guid>
       <description>&lt;p&gt;I just finished reading &lt;em&gt;&lt;a href=&#34;http://www.amazon.com/exec/obidos/tg/detail/-/0380789035/qid=1046661792/sr=12-1/104-0484812-0662315?v=glance&amp;amp;s=books&#34; target=&#34;_blank&#34;&gt;American Gods&lt;/a&gt;&lt;/em&gt; by Neil Gaiman. I enjoyed it, but it was a little slow. Basically it explores the idea (in fictional form) that gods from the various pantheons traveled to America with the settlers and started trying to eke their living here. In this day and age, it&amp;rsquo;s not easy to be a god, and they&amp;rsquo;re almost like pathetic people.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Oh my, I haven&#39;t posted</title>
-      <link>/post/2003-03-08-oh-my-i-havent-posted/</link>
+      <link>/2003/03/oh-my-i-havent-posted/</link>
       <pubDate>Sat, 08 Mar 2003 18:32:47 +0000</pubDate>
       
-      <guid>/post/2003-03-08-oh-my-i-havent-posted/</guid>
+      <guid>/2003/03/oh-my-i-havent-posted/</guid>
       <description>&lt;p&gt;Oh my, I haven&amp;rsquo;t posted for a long time.&lt;/p&gt;
 </description>
     </item>
@@ -1595,10 +1605,10 @@ Games played on computers remain of a different character than those you find on
     
     <item>
       <title>So langmead.info seems relatively stable</title>
-      <link>/post/2002-08-14-so-langmeadinfo-seems-relatively-stable/</link>
+      <link>/2002/08/so-langmead.info-seems-relatively-stable/</link>
       <pubDate>Wed, 14 Aug 2002 21:49:59 +0000</pubDate>
       
-      <guid>/post/2002-08-14-so-langmeadinfo-seems-relatively-stable/</guid>
+      <guid>/2002/08/so-langmead.info-seems-relatively-stable/</guid>
       <description>&lt;p&gt;So langmead.info seems relatively stable at the moment. As of now I have tried three hosting companies. This latest one strikes a good balance between price and features. They are having trouble installing PHPlib, which is needed for IMP, which is a web-based email client Alison wants. I might consider moving if they never get around to that (or upgrading to PHP 4.1, which would be just as good).&lt;/p&gt;
 
 &lt;p&gt;The idea here is that we have a home for family pictures, personal web sites (like this blog) and email. Mostly the last, because with mac.com going fee-based, and with the years passing and the number of email addresses I&amp;rsquo;ve used growing, it seems like a good time to have a &lt;em&gt;permanent&lt;/em&gt; email address, and paying for the domain and the hosting puts it under my control, so it can remain as permanent as &lt;em&gt;I&lt;/em&gt; want it to.&lt;/p&gt;
@@ -1607,40 +1617,40 @@ Games played on computers remain of a different character than those you find on
     
     <item>
       <title>Long Head moving to Langmead.info</title>
-      <link>/post/2002-08-14-long-head-moving-to-langmeadinfo/</link>
+      <link>/2002/08/long-head-moving-to-langmead.info/</link>
       <pubDate>Wed, 14 Aug 2002 07:51:22 +0000</pubDate>
       
-      <guid>/post/2002-08-14-long-head-moving-to-langmeadinfo/</guid>
+      <guid>/2002/08/long-head-moving-to-langmead.info/</guid>
       <description>&lt;p&gt;Test, test. Blah, blah, blah.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>We have proper internet hosting</title>
-      <link>/post/2002-08-01-we-have-proper-internet-hosting/</link>
+      <link>/2002/08/we-have-proper-internet-hosting/</link>
       <pubDate>Thu, 01 Aug 2002 21:34:09 +0000</pubDate>
       
-      <guid>/post/2002-08-01-we-have-proper-internet-hosting/</guid>
+      <guid>/2002/08/we-have-proper-internet-hosting/</guid>
       <description>&lt;p&gt;We have proper internet hosting now, via the domain langmead.info. More soon.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Alison and I are all</title>
-      <link>/post/2002-05-17-alison-and-i-are-all/</link>
+      <link>/2002/05/alison-and-i-are-all/</link>
       <pubDate>Fri, 17 May 2002 02:33:54 +0000</pubDate>
       
-      <guid>/post/2002-05-17-alison-and-i-are-all/</guid>
+      <guid>/2002/05/alison-and-i-are-all/</guid>
       <description>&lt;p&gt;Alison and I are all set up in L.A.! We have an apartment on the beach, and two cars. We&amp;rsquo;re moving June 1. &lt;a href=&#34;http://homepage.mac.com/langmead/PhotoAlbum5.html&#34; target=&#34;_blank&#34;&gt;Here&lt;/a&gt; are some pictures.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>So I have progressed nicely</title>
-      <link>/post/2002-05-07-so-i-have-progressed-nicely/</link>
+      <link>/2002/05/so-i-have-progressed-nicely/</link>
       <pubDate>Tue, 07 May 2002 02:32:08 +0000</pubDate>
       
-      <guid>/post/2002-05-07-so-i-have-progressed-nicely/</guid>
+      <guid>/2002/05/so-i-have-progressed-nicely/</guid>
       <description>&lt;p&gt;So I have progressed nicely in my quest to hear new music that I like. I bought two CDs! Blur&amp;rsquo;s greatest hits (or is it &amp;ldquo;best of?&amp;rdquo;) and Ben Folds Five (Whatever and ever amen).&lt;/p&gt;
 
 &lt;p&gt;I have enjoyed both, especially the Blur. I will be trying some more of their stuff very soon. I&amp;rsquo;m a little frustrated that they didn&amp;rsquo;t get along with Andy Partridge when he was lined up as producer, but then again Andy is supposedly not very easy to get along with, at least when it comes to music.&lt;/p&gt;
@@ -1649,10 +1659,10 @@ Games played on computers remain of a different character than those you find on
     
     <item>
       <title>Hall of Fame Game M.U.L.E.</title>
-      <link>/post/2002-04-16-hall-of-fame-game-mule/</link>
+      <link>/2002/04/hall-of-fame-game-m.u.l.e./</link>
       <pubDate>Tue, 16 Apr 2002 02:26:30 +0000</pubDate>
       
-      <guid>/post/2002-04-16-hall-of-fame-game-mule/</guid>
+      <guid>/2002/04/hall-of-fame-game-m.u.l.e./</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://slashdot.org/article.pl?sid=02/04/15/1153203&#34; target=&#34;_blank&#34;&gt;Hall of Fame Game M.U.L.E. To Be Ported To PC&lt;/a&gt; [&lt;a href=&#34;http://slashdot.org/&#34; target=&#34;_blank&#34;&gt;Slashdot&lt;/a&gt;]&lt;/p&gt;
 
 &lt;p&gt;M.U.L.E. was one of my favorite games. It&amp;rsquo;s like the modern real-time strategy games we have now, except that it was fun. I&amp;rsquo;ll definitely be checking this out.&lt;/p&gt;
@@ -1661,10 +1671,10 @@ Games played on computers remain of a different character than those you find on
     
     <item>
       <title>I need new music. For</title>
-      <link>/post/2002-03-26-i-need-new-music-for/</link>
+      <link>/2002/03/i-need-new-music.-for/</link>
       <pubDate>Tue, 26 Mar 2002 02:09:51 +0000</pubDate>
       
-      <guid>/post/2002-03-26-i-need-new-music-for/</guid>
+      <guid>/2002/03/i-need-new-music.-for/</guid>
       <description>&lt;p&gt;I need new music. For years I&amp;rsquo;ve been listening to a core group of bands: XTC, Beatles, Squeeze, Joe Jackson, various solo Beatles, R.E.M., Billy Joel and They Might Be Giants, with smaller amounts of the B-52&amp;rsquo;s, Indigo Girls, and a little Classical (mostly Mozart, Bach and Beethoven of course).&lt;/p&gt;
 
 &lt;p&gt;In the last few years, I&amp;rsquo;ve started to change a little bit.  I&amp;rsquo;ve dipped my toes into new music and I have been really well rewarded. Radiohead, Jude, and David Yazbek are the biggest successes. Alanis Morisette not so much, really. I just started another push into the water with Badly Drawn Boy, Owsley, and Apples in Stereo.  Those didn&amp;rsquo;t impress me much.&lt;/p&gt;
@@ -1681,20 +1691,20 @@ Games played on computers remain of a different character than those you find on
     
     <item>
       <title>Good evening. Go-Gan is progressing,</title>
-      <link>/post/2002-03-14-good-evening-go-gan-is-progressing/</link>
+      <link>/2002/03/good-evening.-go-gan-is-progressing/</link>
       <pubDate>Thu, 14 Mar 2002 02:08:19 +0000</pubDate>
       
-      <guid>/post/2002-03-14-good-evening-go-gan-is-progressing/</guid>
+      <guid>/2002/03/good-evening.-go-gan-is-progressing/</guid>
       <description>&lt;p&gt;Good evening. Go-Gan is progressing, albeit slowly. It&amp;rsquo;s encouraging, though, to know that even though my job is largely programming, I still want to do it in the evenings.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>I recently rented The Lord</title>
-      <link>/post/2002-03-14-i-recently-rented-the-lord/</link>
+      <link>/2002/03/i-recently-rented-the-lord/</link>
       <pubDate>Thu, 14 Mar 2002 02:07:34 +0000</pubDate>
       
-      <guid>/post/2002-03-14-i-recently-rented-the-lord/</guid>
+      <guid>/2002/03/i-recently-rented-the-lord/</guid>
       <description>&lt;p&gt;I recently rented &lt;em&gt;The Lord of the Rings&lt;/em&gt; in audiobook format, on CD, from &lt;a href=&#34;http://www.recordedbooks.com&#34; target=&#34;_blank&#34;&gt;Recorded Books&lt;/a&gt;. They make, sell, and rent audiobooks. When you rent, they send you the books in a box-within-a-box. The inner box is for sending it back, so there is very little hassle.&lt;/p&gt;
 
 &lt;p&gt;Don&amp;rsquo;t tell them, but I am ripping the whole set into MP3 format, so that I can listen on my &lt;a href=&#34;http://www.apple.com/ipod&#34; target=&#34;_blank&#34;&gt;iPod&lt;/a&gt;. I am not doing it to steal the books, or put them up on Limewire, I just want to put the data in my own bucket, as it were. It&amp;rsquo;s &lt;em&gt;very&lt;/em&gt; relaxing to kick back and listen to a book, so I recommend poring over the selection at Recorded Books.&lt;/p&gt;
@@ -1703,10 +1713,10 @@ Games played on computers remain of a different character than those you find on
     
     <item>
       <title>So the Paint-by-Numbers project, named</title>
-      <link>/post/2002-03-06-so-the-paint-by-numbers-project-named/</link>
+      <link>/2002/03/so-the-paint-by-numbers-project-named/</link>
       <pubDate>Wed, 06 Mar 2002 02:05:03 +0000</pubDate>
       
-      <guid>/post/2002-03-06-so-the-paint-by-numbers-project-named/</guid>
+      <guid>/2002/03/so-the-paint-by-numbers-project-named/</guid>
       <description>&lt;p&gt;So the Paint-by-Numbers project, named Go-Gan, is proceeding. Absolutely no interface has been coded yet, just the representation of the underlying puzzle. Tonight I&amp;rsquo;ll write the logic that creates the list of clues from a row or column of painted cells.&lt;/p&gt;
 
 &lt;p&gt;After that&amp;rsquo;s done, I&amp;rsquo;m going to skip over the hardest part of all, and go to the user interface and Cocoa bits. The hard part is a feature where a player working on a puzzle can get a hint.  No matter what hinting system I eventually implement, they all rely on the computer being able to (secretly) solve a puzzle completely. Certain scenarios may not require the whole puzzle to be solved in order to give the hint, but the real underlying purpose of this project, besides learning Cocoa, is to figure out how to get a computer to solve a PBN from just the clues.&lt;/p&gt;
@@ -1717,10 +1727,10 @@ Games played on computers remain of a different character than those you find on
     
     <item>
       <title>I&#39;m going to get started</title>
-      <link>/post/2002-03-04-im-going-to-get-started/</link>
+      <link>/2002/03/im-going-to-get-started/</link>
       <pubDate>Mon, 04 Mar 2002 02:03:06 +0000</pubDate>
       
-      <guid>/post/2002-03-04-im-going-to-get-started/</guid>
+      <guid>/2002/03/im-going-to-get-started/</guid>
       <description>&lt;p&gt;I&amp;rsquo;m going to get started today on a new piece of software. It will be a multipurpose &amp;ldquo;Paint by Numbers&amp;rdquo; application. Paint by Numbers is a puzzle game (I am not yet sure whether this name is a trademark or not) where you are presented with a blank rectangular grid of squares, usually about 20x20 or larger (the bigger it is, the harder it is). The goal is to reproduce the picture by deducing which squares should be colored. The clues are lists of numbers, one list for each row and one list for each column. Each number in the list is the tally for a consecutive run of colored squares. Visit &lt;a href=&#34;http://www02.so-net.ne.jp/~kajitani/cgi-bin/pbn.cgi/index.html&#34; target=&#34;_blank&#34;&gt;this Japanese site&lt;/a&gt; for some examples to try.&lt;/p&gt;
 
 &lt;p&gt;I&amp;rsquo;m going to write the app in Cocoa, the native environment for Mac OS X. In fact, this is just my excuse to learn Cocoa. When Apple computer bought Steve Jobs&amp;rsquo; company Next in 1995 (?), they did so to obtain the sophisticated Nextstep operating system. This became Mac OS X, and the then-revolutionary Nextstep programming framework became Cocoa. Tim Berners-Lee, the creator of HTML, HTTP, and the first web browser, wrote all of it using Nextstep. Why? Because it was easy, supposedly. I&amp;rsquo;ve explored it a little bit and I find it very exciting. It is easy in the sense that many things come for free, as in Java, but it is also hard in that it leaves me running to the documentation all the time &amp;ndash; once I commit the core of Cocoa to memory, this will disappear as well and it probably &lt;em&gt;will&lt;/em&gt; seem easy.&lt;/p&gt;
@@ -1735,10 +1745,10 @@ Games played on computers remain of a different character than those you find on
     
     <item>
       <title>I was thinking about Close</title>
-      <link>/post/2002-03-02-i-was-thinking-about-close/</link>
+      <link>/2002/03/i-was-thinking-about-close/</link>
       <pubDate>Sat, 02 Mar 2002 21:33:17 +0000</pubDate>
       
-      <guid>/post/2002-03-02-i-was-thinking-about-close/</guid>
+      <guid>/2002/03/i-was-thinking-about-close/</guid>
       <description>&lt;p&gt;I was thinking about &lt;em&gt;Close Encounters of the Third Kind&lt;/em&gt; the other day. I was pretty young, so take this with a grain of salt, but here&amp;rsquo;s what I was thinking. At the beginning, a mood of chaos is set when as-yet-unintroduced high-ranking officials meet in a remote location where a World War II plane (boat?) has been found.  They arrive in a helicopter, and part of the fun and tension of the scene is the landing of this loud helicopter. It really is exciting, because, you know, you don&amp;rsquo;t see helicopters land every day.  These guys must really be important, and there must be quite a bit of urgency!&lt;/p&gt;
 
 &lt;p&gt;Nowadays, having helicopters land in movies is totally cliche. I will never again feel like it is significant for characters to use helicopters, so the device is useless.  I just say to myself, &amp;ldquo;Okay, here these guys are. They&amp;rsquo;re army dudes, there are three of them&amp;hellip;&amp;rdquo; whatever.  This is a very general problem with imitation, really.&lt;/p&gt;
@@ -1751,20 +1761,20 @@ Games played on computers remain of a different character than those you find on
     
     <item>
       <title>There is a lot of</title>
-      <link>/post/2002-02-28-there-is-a-lot-of/</link>
+      <link>/2002/02/there-is-a-lot-of/</link>
       <pubDate>Thu, 28 Feb 2002 21:32:06 +0000</pubDate>
       
-      <guid>/post/2002-02-28-there-is-a-lot-of/</guid>
+      <guid>/2002/02/there-is-a-lot-of/</guid>
       <description>&lt;p&gt;There is a lot of buzz about a book called &lt;a href=&#34;http://www.gonzomarkets.com/cluetrain&#34; target=&#34;_blank&#34;&gt;The Cluetrain Manifesto&lt;/a&gt;. I can&amp;rsquo;t tell if it&amp;rsquo;s about dotcoms, or about social forces in the Internet Age. But, they provided the whole book online, so I ciphoned it onto my Palm and I&amp;rsquo;m going to read it. I&amp;rsquo;ll keep you posted.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Speaking of books, here is</title>
-      <link>/post/2002-02-28-speaking-of-books-here-is/</link>
+      <link>/2002/02/speaking-of-books-here-is/</link>
       <pubDate>Thu, 28 Feb 2002 21:26:36 +0000</pubDate>
       
-      <guid>/post/2002-02-28-speaking-of-books-here-is/</guid>
+      <guid>/2002/02/speaking-of-books-here-is/</guid>
       <description>&lt;p&gt;Speaking of books, here is my reading list for the coming months:&lt;/p&gt;
 
 &lt;ul&gt;
@@ -1779,10 +1789,10 @@ Games played on computers remain of a different character than those you find on
     
     <item>
       <title>Alison came up with an</title>
-      <link>/post/2002-02-28-alison-came-up-with-an/</link>
+      <link>/2002/02/alison-came-up-with-an/</link>
       <pubDate>Thu, 28 Feb 2002 21:25:00 +0000</pubDate>
       
-      <guid>/post/2002-02-28-alison-came-up-with-an/</guid>
+      <guid>/2002/02/alison-came-up-with-an/</guid>
       <description>&lt;p&gt;Alison came up with an interesting quote in her dissertation research on 12th century France:&lt;/p&gt;
 
 &lt;blockquote&gt;Scholars of that time delighted in exploring complex interlocking patterns and eschewed univocal interpretations.*&lt;/blockquote&gt;
@@ -1795,10 +1805,10 @@ Games played on computers remain of a different character than those you find on
     
     <item>
       <title>I&#39;m starting to understand the</title>
-      <link>/post/2002-02-28-im-starting-to-understand-the/</link>
+      <link>/2002/02/im-starting-to-understand-the/</link>
       <pubDate>Thu, 28 Feb 2002 01:59:12 +0000</pubDate>
       
-      <guid>/post/2002-02-28-im-starting-to-understand-the/</guid>
+      <guid>/2002/02/im-starting-to-understand-the/</guid>
       <description>&lt;p&gt;I&amp;rsquo;m starting to understand the news aggregator concept. It is the flipside of the blog. It addresses my earliest question about blogs: won&amp;rsquo;t everything I write just disappear into the void?&lt;/p&gt;
 
 &lt;p&gt;For non-geeks reading this, a news aggregator is a single program or web page that gathers together a generalized version of &amp;ldquo;headlines.&amp;rdquo; These can certainly include headlines, like from the BBC or AP wire. But they can also include postings or articles from any site that is &amp;ldquo;syndicated,&amp;rdquo; in a certain technical way, like this one is. You could ask your aggregator to pull in content from this very site, each time I update it. See how it provides the &lt;em&gt;audience&lt;/em&gt; with the corresponding tool to the &lt;em&gt;author&amp;rsquo;s&lt;/em&gt; tool of the blog?  By the way, this very product, Radio, includes a news aggregator and so marries the two tools.&lt;/p&gt;
@@ -1807,10 +1817,10 @@ Games played on computers remain of a different character than those you find on
     
     <item>
       <title>Jingo Bells, Jingo Bells...</title>
-      <link>/post/2002-02-09-jingo-bells-jingo-bells/</link>
+      <link>/2002/02/jingo-bells-jingo-bells.../</link>
       <pubDate>Sat, 09 Feb 2002 01:34:13 +0000</pubDate>
       
-      <guid>/post/2002-02-09-jingo-bells-jingo-bells/</guid>
+      <guid>/2002/02/jingo-bells-jingo-bells.../</guid>
       <description>&lt;p&gt;I was really looking forward to the opening ceremonies of the Winter Olympics tonight, but over the last few days I&amp;rsquo;ve been growing increasingly uneasy about what I might see there. As it turned out, after the initial voice-overs by Messrs. McKay (co-alum of my high school!) and Costas, I turned off the television. I&amp;rsquo;m only going to tune in when events I want to see are on.&lt;/p&gt;
 
 &lt;p&gt;My problem is nationalism, and the two forms it has taken since September 11th. First, is the lower-brow flag waving habit. There was actually a fight over allowing the flag from the top of the WTC to make an appearance during the ceremonies. Give me a break! If it wasn&amp;rsquo;t that important before &lt;sup&gt;9&lt;/sup&gt;&amp;frasl;&lt;sub&gt;11&lt;/sub&gt;, then it is exactly that important today, no more and no less. All people really mean when they wave these things around is &amp;ldquo;I&amp;rsquo;m part of something bigger than I am and I don&amp;rsquo;t have to assert my identity for a few minutes! Hooray!&amp;rdquo; My good friend Carl Sagan has a pretty good understanding of what&amp;rsquo;s going on here: the pre-human part of our brain controls this emotion. In fact, it&amp;rsquo;s reptilian. Don&amp;rsquo;t follow leaders or symbols blindly, you&amp;rsquo;re better than that.&lt;/p&gt;
@@ -1821,10 +1831,10 @@ Games played on computers remain of a different character than those you find on
     
     <item>
       <title>My e-book obsession</title>
-      <link>/post/2001-11-09-my-e-book-obsession/</link>
+      <link>/2001/11/my-e-book-obsession/</link>
       <pubDate>Fri, 09 Nov 2001 01:29:03 +0000</pubDate>
       
-      <guid>/post/2001-11-09-my-e-book-obsession/</guid>
+      <guid>/2001/11/my-e-book-obsession/</guid>
       <description>&lt;!-- more --&gt;
 
 &lt;p&gt;I HAVE AN E-BOOK OBSESSION! Did you know that? Let me explain.&lt;/p&gt;
@@ -1853,10 +1863,10 @@ Games played on computers remain of a different character than those you find on
     
     <item>
       <title>Aging</title>
-      <link>/post/1999-01-29-aging/</link>
+      <link>/1999/01/aging/</link>
       <pubDate>Fri, 29 Jan 1999 04:11:53 +0000</pubDate>
       
-      <guid>/post/1999-01-29-aging/</guid>
+      <guid>/1999/01/aging/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;http://greg.langmead.info/wp-content/uploads/2008/03/banner.gif&#34; alt=&#34;1998Banner&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Note, this was written before I had a blog. I recovered it from the Internet Archive. Back in graduate school I had a “musings” section of my site and those essays are in the same spirit as this blog so I’ve added them with retroactive datestamps.&lt;/em&gt;&lt;/p&gt;
@@ -1879,10 +1889,10 @@ Games played on computers remain of a different character than those you find on
     
     <item>
       <title>Titanic</title>
-      <link>/post/1998-04-17-titanic/</link>
+      <link>/1998/04/titanic/</link>
       <pubDate>Fri, 17 Apr 1998 17:43:32 +0000</pubDate>
       
-      <guid>/post/1998-04-17-titanic/</guid>
+      <guid>/1998/04/titanic/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;http://greg.langmead.info/wp-content/uploads/2008/03/banner.gif&#34; alt=&#34;1998Banner&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Note, this was written before I had a blog. I recovered it from the Internet Archive. Back in graduate school I had a &amp;ldquo;musings&amp;rdquo; section of my site and those essays are in the same spirit as this blog so I&amp;rsquo;ve added them with retroactive datestamps.&lt;/em&gt;&lt;/p&gt;
@@ -1925,10 +1935,10 @@ Games played on computers remain of a different character than those you find on
     
     <item>
       <title>Computer geeks</title>
-      <link>/post/1998-02-09-computer-geeks/</link>
+      <link>/1998/02/computer-geeks/</link>
       <pubDate>Mon, 09 Feb 1998 07:51:29 +0000</pubDate>
       
-      <guid>/post/1998-02-09-computer-geeks/</guid>
+      <guid>/1998/02/computer-geeks/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;http://greg.langmead.info/wp-content/uploads/2008/03/banner.gif&#34; alt=&#34;1998Banner&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Note, this was written before I had a blog. I recovered it from the Internet Archive. Back in graduate school I had a “musings” section of my site and those essays are in the same spirit as this blog so I’ve added them with retroactive datestamps.&lt;/em&gt;&lt;/p&gt;
