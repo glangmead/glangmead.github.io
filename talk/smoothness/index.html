@@ -28,7 +28,7 @@
   
     
   
-  <meta name="description" content="">
+  <meta name="description" content="Differential cohesion and modal HoTT promise to give access to constructions from differential geometry. In this series of talks I will tell a story that takes us from the classical definition of a smooth manifold to differential cohesion in a category where we can interpret modal HoTT. I will assume only basic topology and category theory and will provide details that are sometimes waved away. I will also motivate the study of smooth manifolds as a worthy field with surprising results and tough open questions such as the smooth four-dimensional Poincaré conjecture.">
 
   
   <link rel="alternate" hreflang="en-us" href="/talk/smoothness/">
@@ -112,13 +112,13 @@
   
   <meta property="og:site_name" content="Long Head">
   <meta property="og:url" content="/talk/smoothness/">
-  <meta property="og:title" content="Smoothness | Long Head">
-  <meta property="og:description" content=""><meta property="og:image" content="/img/icon-192.png">
+  <meta property="og:title" content="Categories and modalities for smoothness | Long Head">
+  <meta property="og:description" content="Differential cohesion and modal HoTT promise to give access to constructions from differential geometry. In this series of talks I will tell a story that takes us from the classical definition of a smooth manifold to differential cohesion in a category where we can interpret modal HoTT. I will assume only basic topology and category theory and will provide details that are sometimes waved away. I will also motivate the study of smooth manifolds as a worthy field with surprising results and tough open questions such as the smooth four-dimensional Poincaré conjecture."><meta property="og:image" content="/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
   <meta property="article:published_time" content="2019-06-16T19:33:19-04:00">
   
-  <meta property="article:modified_time" content="2019-06-16T19:33:19-04:00">
+  <meta property="article:modified_time" content="2018-11-09T00:00:00&#43;00:00">
   
 
   
@@ -130,7 +130,7 @@
 
 
 
-  <title>Smoothness | Long Head</title>
+  <title>Categories and modalities for smoothness | Long Head</title>
 
 </head>
 
@@ -413,7 +413,7 @@
   
   
 <div class="article-container pt-3">
-  <h1 itemprop="name">Smoothness</h1>
+  <h1 itemprop="name">Categories and modalities for smoothness</h1>
 
   
 
@@ -422,8 +422,8 @@
 
 
 
-<meta content="2019-06-16 19:33:19 -0400 EDT" itemprop="datePublished">
-<meta content="2019-06-16 19:33:19 -0400 EDT" itemprop="dateModified">
+<meta content="2018-11-09 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2018-11-09 00:00:00 &#43;0000 UTC" itemprop="dateModified">
 
 <div class="article-metadata">
 
@@ -472,7 +472,8 @@
   <div class="article-container">
 
     
-      <br>
+      <h3>Abstract</h3>
+      <p class="pub-abstract" itemprop="text">Differential cohesion and modal HoTT promise to give access to constructions from differential geometry. In this series of talks I will tell a story that takes us from the classical definition of a smooth manifold to differential cohesion in a category where we can interpret modal HoTT. I will assume only basic topology and category theory and will provide details that are sometimes waved away. I will also motivate the study of smooth manifolds as a worthy field with surprising results and tough open questions such as the smooth four-dimensional Poincaré conjecture.</p>
     
 
     <div class="row">
@@ -482,12 +483,10 @@
           <div class="col-12 col-md-3 pub-row-heading">Date</div>
           <div class="col-12 col-md-9" itemprop="datePublished">
             
-            Jun 16, 2019
+            Nov 9, 2018
             <div class="talk-time">
               
-                7:33 PM
-                
-                  &mdash; 7:33 PM
+                12:00 AM
                 
               
             </div>
@@ -519,7 +518,296 @@
     <div class="space-below"></div>
 
     <div class="article-style">
-      
+      <!DOCTYPE html><html>
+<head>
+<title>Smoothness</title>
+<!--Generated on Wed Jun  5 23:01:41 2019 by LaTeXML (version 0.8.3) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Smoothness</h1>
+<div class="ltx_authors">
+<span class="ltx_creator ltx_role_author">
+<span class="ltx_personname">Greg Langmead
+</span></span>
+</div>
+
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>Introduction</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">As someone “classically trained” in differential geometry, my recent adventures in homotopy type theory have made me very excited to explore an entirely new angle on a topic I love. It is the case today that modal HoTT allows us to access smoothness and prove theorems about manifolds, Lie groups and more. In order to participate in this new and exciting field, someone like me needs a bridge. More than one, in fact. The current document is intended as one of those bridges. Starting from the classical definition of a smooth manifold and the category containing these objects and the smooth maps between them, we will define several enlargements of the category until we arrive at something where modal HoTT can be interpreted.</p>
+</div>
+<div id="S1.p2" class="ltx_para">
+<p class="ltx_p">To make the most of this process, we will always try to keep track of where smoothness is entering in. It’s not always obvious!</p>
+</div>
+<div id="Thmmydef1" class="ltx_theorem ltx_theorem_mydef">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Definition 1</span></span>.</h6>
+<div id="Thmmydef1.p1" class="ltx_para">
+<p class="ltx_p ltx_emph"><span class="ltx_text ltx_font_italic">A smooth manifold is a Hausdorff topological space <math id="Thmmydef1.p1.m1" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> with countable basis, and with a maximal smooth atlas. An atlas is a covering of <math id="Thmmydef1.p1.m2" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> by open sets <math id="Thmmydef1.p1.m3" class="ltx_Math" alttext="U_{i}" display="inline"><msub><mi>U</mi><mi>i</mi></msub></math>, each of which is the image of a homeomorphism <math id="Thmmydef1.p1.m4" class="ltx_Math" alttext="f_{i}:\mathbb{R}^{n}\to M" display="inline"><mrow><msub><mi>f</mi><mi>i</mi></msub><mo mathvariant="normal">:</mo><mrow><msup><mi mathvariant="normal">R</mi><mi>n</mi></msup><mo mathvariant="normal">→</mo><mi>M</mi></mrow></mrow></math> (called a </span>chart<span class="ltx_text ltx_font_italic">), such that <math id="Thmmydef1.p1.m5" class="ltx_Math" alttext="f_{j}^{-1}\circ f_{i}" display="inline"><mrow><msubsup><mi>f</mi><mi>j</mi><mrow><mo mathvariant="normal">-</mo><mn mathvariant="normal">1</mn></mrow></msubsup><mo mathvariant="normal">∘</mo><msub><mi>f</mi><mi>i</mi></msub></mrow></math> is smooth wherever it is defined. Two atlases are compatible if their union is again an atlas. The maximal atlas is the union of all compatible atlases.</span></p>
+</div>
+</div>
+<div id="S1.p3" class="ltx_para">
+<p class="ltx_p">Note that this definition expresses <math id="S1.p3.m1" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> as a colimit of a diagram of arrows from <math id="S1.p3.m2" class="ltx_Math" alttext="\mathbb{R}^{n}\to M" display="inline"><mrow><msup><mi>ℝ</mi><mi>n</mi></msup><mo>→</mo><mi>M</mi></mrow></math>, more specifically a pushout. More on this shortly.</p>
+</div>
+<div id="S1.p4" class="ltx_para">
+<p class="ltx_p">A continuous function <math id="S1.p4.m1" class="ltx_Math" alttext="f:M\to N" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>M</mi><mo>→</mo><mi>N</mi></mrow></mrow></math> between two smooth manifolds is defined to be smooth if the appropriate composition with charts is a smooth function between cartesian spaces.</p>
+</div>
+<div id="S1.p5" class="ltx_para">
+<p class="ltx_p">The category <span class="ltx_text ltx_font_sansserif">SmoothMfd</span> has objects the smooth manifolds of any finite dimension, and morphisms the smooth maps.</p>
+</div>
+<div id="S1.p6" class="ltx_para">
+<p class="ltx_p">This category, innocuous though it seems, has some strange properties! There are topological manifolds that are missing from it, and some that are way over-represented! You can’t just take a topological manifold and assume you can give it a unique maximal smooth atlas and stick it into <span class="ltx_text ltx_font_sansserif">SmoothMfd</span>.</p>
+</div>
+<div id="S1.p7" class="ltx_para">
+<p class="ltx_p">The table below contains some examples.</p>
+</div>
+<div id="S1.p8" class="ltx_para ltx_align_center">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<thead class="ltx_thead">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_column ltx_th_row ltx_border_l ltx_border_r ltx_border_t">kind of manifold</th>
+<th class="ltx_td ltx_align_left ltx_th ltx_th_column ltx_border_r ltx_border_t">number of inequivalent smooth atlases</th>
+</tr>
+</thead>
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t">dim <math id="S1.p8.m1" class="ltx_Math" alttext="\leq 3" display="inline"><mrow><mi></mi><mo>≤</mo><mn>3</mn></mrow></math>
+</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">1</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t">dim <math id="S1.p8.m2" class="ltx_Math" alttext="\geq 5" display="inline"><mrow><mi></mi><mo>≥</mo><mn>5</mn></mrow></math>
+</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">
+<math id="S1.p8.m3" class="ltx_Math" alttext="\geq 0" display="inline"><mrow><mi></mi><mo>≥</mo><mn>0</mn></mrow></math>, finite</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t"><math id="S1.p8.m4" class="ltx_Math" alttext="\mathbb{R}^{n},n\neq 4" display="inline"><mrow><mrow><msup><mi>ℝ</mi><mi>n</mi></msup><mo>,</mo><mi>n</mi></mrow><mo>≠</mo><mn>4</mn></mrow></math></th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">1</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t"><math id="S1.p8.m5" class="ltx_Math" alttext="\mathbb{R}^{4}" display="inline"><msup><mi>ℝ</mi><mn>4</mn></msup></math></th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">uncountably many</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t"><math id="S1.p8.m6" class="ltx_Math" alttext="S^{4}" display="inline"><msup><mi>S</mi><mn>4</mn></msup></math></th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">unknown, <math id="S1.p8.m7" class="ltx_Math" alttext="\geq 1" display="inline"><mrow><mi></mi><mo>≥</mo><mn>1</mn></mrow></math>
+</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t">dim <math id="S1.p8.m8" class="ltx_Math" alttext="=4" display="inline"><mrow><mi></mi><mo>=</mo><mn>4</mn></mrow></math>, compact without boundary</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">
+<math id="S1.p8.m9" class="ltx_Math" alttext="\geq 0" display="inline"><mrow><mi></mi><mo>≥</mo><mn>0</mn></mrow></math>, at most countably many</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l ltx_border_r ltx_border_t">dim <math id="S1.p8.m10" class="ltx_Math" alttext="=4" display="inline"><mrow><mi></mi><mo>=</mo><mn>4</mn></mrow></math>, otherwise</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r ltx_border_t">
+<math id="S1.p8.m11" class="ltx_Math" alttext="\geq 1" display="inline"><mrow><mi></mi><mo>≥</mo><mn>1</mn></mrow></math>, at most uncountably many</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="S1.p9" class="ltx_para">
+<p class="ltx_p">The claim that <math id="S1.p9.m1" class="ltx_Math" alttext="S^{4}" display="inline"><msup><mi>S</mi><mn>4</mn></msup></math> has exactly one smooth structure is known as the four-dimensional smooth Poincaré conjecture. Its status is “extremely unknown”.</p>
+</div>
+<div id="S1.p10" class="ltx_para">
+<p class="ltx_p">The spheres behave surprisingly as well.</p>
+</div>
+<div id="S1.p11" class="ltx_para ltx_align_center">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t"><math id="S1.p11.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math></th>
+<td class="ltx_td ltx_align_justify ltx_border_r ltx_border_t" style="width:113.8pt;">number of inequivalent smooth atlases on <math id="S1.p11.m2" class="ltx_Math" alttext="S^{n}" display="inline"><msup><mi>S</mi><mi>n</mi></msup></math>
+</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t">1</th>
+<td class="ltx_td ltx_align_justify ltx_border_r ltx_border_t" style="width:113.8pt;">1</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t">2</th>
+<td class="ltx_td ltx_align_justify ltx_border_r ltx_border_t" style="width:113.8pt;">1</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t">3</th>
+<td class="ltx_td ltx_align_justify ltx_border_r ltx_border_t" style="width:113.8pt;">1</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t">4</th>
+<td class="ltx_td ltx_align_justify ltx_border_r ltx_border_t" style="width:113.8pt;"><math id="S1.p11.m3" class="ltx_Math" alttext="\geq 1" display="inline"><mrow><mi></mi><mo>≥</mo><mn>1</mn></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t">5</th>
+<td class="ltx_td ltx_align_justify ltx_border_r ltx_border_t" style="width:113.8pt;">1</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t">6</th>
+<td class="ltx_td ltx_align_justify ltx_border_r ltx_border_t" style="width:113.8pt;">1</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t">7</th>
+<td class="ltx_td ltx_align_justify ltx_border_r ltx_border_t" style="width:113.8pt;">28</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t">8</th>
+<td class="ltx_td ltx_align_justify ltx_border_r ltx_border_t" style="width:113.8pt;">2</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t">9</th>
+<td class="ltx_td ltx_align_justify ltx_border_r ltx_border_t" style="width:113.8pt;">8</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t">10</th>
+<td class="ltx_td ltx_align_justify ltx_border_r ltx_border_t" style="width:113.8pt;">6</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t">11</th>
+<td class="ltx_td ltx_align_justify ltx_border_r ltx_border_t" style="width:113.8pt;">992</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t">12</th>
+<td class="ltx_td ltx_align_justify ltx_border_r ltx_border_t" style="width:113.8pt;">1</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t">13</th>
+<td class="ltx_td ltx_align_justify ltx_border_r ltx_border_t" style="width:113.8pt;">3</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t">14</th>
+<td class="ltx_td ltx_align_justify ltx_border_r ltx_border_t" style="width:113.8pt;">2</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t">15</th>
+<td class="ltx_td ltx_align_justify ltx_border_r ltx_border_t" style="width:113.8pt;">16256</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t">16</th>
+<td class="ltx_td ltx_align_justify ltx_border_r ltx_border_t" style="width:113.8pt;">2</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t">17</th>
+<td class="ltx_td ltx_align_justify ltx_border_r ltx_border_t" style="width:113.8pt;">16</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t">18</th>
+<td class="ltx_td ltx_align_justify ltx_border_r ltx_border_t" style="width:113.8pt;">16</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t">19</th>
+<td class="ltx_td ltx_align_justify ltx_border_r ltx_border_t" style="width:113.8pt;">523264</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l ltx_border_r ltx_border_t">20</th>
+<td class="ltx_td ltx_align_justify ltx_border_b ltx_border_r ltx_border_t" style="width:113.8pt;">24</td>
+</tr>
+</tbody>
+</table>
+<br class="ltx_break">
+<p class="ltx_p">(from https://en.wikipedia.org/wiki/Differential_structure)</p>
+</div>
+<div id="S1.p12" class="ltx_para">
+<p class="ltx_p">Is <span class="ltx_text ltx_font_sansserif">SmoothMfd</span> a nice category? It is closed under finite products and coproducts. Manifolds are themselves certain colimits. However in general this category has neither limits nor colimits. Nor is it cartesian closed.</p>
+</div>
+<div id="S1.p13" class="ltx_para">
+<p class="ltx_p">For example, consider the equalizer <math id="S1.p13.m1" class="ltx_Math" alttext="\left\{(x,y)|xy=0\right\}\subset\mathbb{R}^{2}" display="inline"><mrow><mrow><mo>{</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo stretchy="false">|</mo><mrow><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow><mo>=</mo><mn>0</mn></mrow><mo>}</mo></mrow><mo>⊂</mo><msup><mi>ℝ</mi><mn>2</mn></msup></mrow></math>. As a set this must be equal to the union of the <math id="S1.p13.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>-axis and <math id="S1.p13.m3" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>-axis. But this cannot be given the structure of a topological manifold nor a smooth one, due to the failure to be homeomorphic to any <math id="S1.p13.m4" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math> at the origin. Full argument: the forgetful functor <math id="S1.p13.m5" class="ltx_Math" alttext="U:\textsf{SmoothMfd}\to\textsf{Set}" display="inline"><mrow><mi>U</mi><mo>:</mo><mrow><mtext>𝖲𝗆𝗈𝗈𝗍𝗁𝖬𝖿𝖽</mtext><mo>→</mo><mtext>𝖲𝖾𝗍</mtext></mrow></mrow></math> preserves limits and colimits as it has both left and right adjoints. The equalizer as a set is this union of axes, and so the manifold must have that underlying set. But this set cannot be promoted to a smooth manifold.</p>
+</div>
+<div id="S1.p14" class="ltx_para">
+<p class="ltx_p">Consider the coequalizer <math id="S1.p14.m1" class="ltx_Math" alttext="\left(\mathbb{R}^{2}\coprod\mathbb{R}\right)/(0,0)\sim 0" display="inline"><mrow><mrow><mrow><mo>(</mo><mrow><msup><mi>ℝ</mi><mn>2</mn></msup><mo>⁢</mo><mrow><mo largeop="true" symmetric="true">∐</mo><mi>ℝ</mi></mrow></mrow><mo>)</mo></mrow><mo>/</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>∼</mo><mn>0</mn></mrow></math>. Similarly this cannot be given the structure of a topological manifold nor a smooth one, also at the origin.</p>
+</div>
+<div id="S1.p15" class="ltx_para">
+<p class="ltx_p">Is <span class="ltx_text ltx_font_sansserif">SmoothMfd</span> cartesian closed, i.e. does it contain function spaces of smooth maps? This has been attempted with some success, but we’ll skip over that story because we’re going to do it with sheaves later. In fact right now.</p>
+</div>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2 </span>Sheaves on <span class="ltx_text ltx_font_sansserif">CartSp</span>
+</h2>
+
+<div id="S2.p1" class="ltx_para">
+<p class="ltx_p">Define <span class="ltx_text ltx_font_sansserif">CartSp</span> to be the full subcategory of <span class="ltx_text ltx_font_sansserif">SmoothMfd</span> containing just the <math id="S2.p1.m1" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math> for finite <math id="S2.p1.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> (recall that “full” means include every morphism). In the case of <math id="S2.p1.m3" class="ltx_Math" alttext="\mathbb{R}^{4}" display="inline"><msup><mi>ℝ</mi><mn>4</mn></msup></math> let’s just bring the standard smooth structure. We can try to build the fake <math id="S2.p1.m4" class="ltx_Math" alttext="\mathbb{R}^{4}" display="inline"><msup><mi>ℝ</mi><mn>4</mn></msup></math>s later on with surgery and such.</p>
+</div>
+<div id="S2.p2" class="ltx_para">
+<p class="ltx_p">Due to the existence of real-valued functions such as <math id="S2.p2.m1" class="ltx_Math" alttext="\frac{1}{1+e^{-x}}" display="inline"><mfrac><mn>1</mn><mrow><mn>1</mn><mo>+</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>x</mi></mrow></msup></mrow></mfrac></math> we can map all of <math id="S2.p2.m2" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math> to the open interval <math id="S2.p2.m3" class="ltx_Math" alttext="(0,1)" display="inline"><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></math>. So note that this category is not as pitifully empty as I, at least, thought at first. You can cover <math id="S2.p2.m4" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math> with balls each of which is a diffeomorphic image of <math id="S2.p2.m5" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math>. We’ll be doing just that.</p>
+</div>
+<div id="S2.p3" class="ltx_para">
+<p class="ltx_p">To generalize <span class="ltx_text ltx_font_sansserif">SmoothMfd</span> we’ll use <span class="ltx_text ltx_font_sansserif">CartSp</span> in a new way. In the original definition of a smooth manifold we captured the concept of “modeled on <math id="S2.p3.m1" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math>” in a definition we can summarize as “is locally isomorphic to <math id="S2.p3.m2" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math>.” But we will now shift to a definition like “can be probed by <math id="S2.p3.m3" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math>” or “has specified maps from the test spaces <math id="S2.p3.m4" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math>.”</p>
+</div>
+<div id="S2.p4" class="ltx_para">
+<p class="ltx_p">A <span class="ltx_text ltx_emph ltx_font_italic">presheaf</span> on <span class="ltx_text ltx_font_sansserif">CartSp</span> is a functor</p>
+<table id="S2.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex1.m1" class="ltx_Math" alttext="\textsf{CartSp}^{\mathrm{op}}\to\mathrm{Set}" display="block"><mrow><msup><mtext>𝖢𝖺𝗋𝗍𝖲𝗉</mtext><mi>op</mi></msup><mo>→</mo><mi>Set</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Think of one presheaf <math id="S2.p4.m1" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> (suggestive name) as a would-be space together with the specification of what probing functions are smooth. Sometimes these probes are called <span class="ltx_text ltx_emph ltx_font_italic">plots</span>. These are different from charts. Charts are specific homeomorphisms that cover <math id="S2.p4.m2" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math>. Here we must provide the entire set of all possible smooth functions into <math id="S2.p4.m3" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> from <math id="S2.p4.m4" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math>, for all <math id="S2.p4.m5" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>.</p>
+</div>
+<div id="S2.p5" class="ltx_para">
+<p class="ltx_p">The category <span class="ltx_text ltx_font_sansserif">Psh</span>(<span class="ltx_text ltx_font_sansserif">CartSp</span>) consists of all such functors, together with the natural transformations between them. This is an interesting category! If <math id="S2.p5.m1" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math> is any locally small category, there is an embedding (a full and faithful functor that is injective on objects) <math id="S2.p5.m2" class="ltx_Math" alttext="C\to\textsf{Psh}(C)" display="inline"><mrow><mi>C</mi><mo>→</mo><mrow><mtext>𝖯𝗌𝗁</mtext><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>C</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> called the <span class="ltx_text ltx_emph ltx_font_italic">Yoneda embedding</span>. In fact <span class="ltx_text ltx_font_sansserif">Psh</span>(C) is the <span class="ltx_text ltx_emph ltx_font_italic">free cocompletion</span> of <math id="S2.p5.m3" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math>, meaning it freely adds all colimits from <math id="S2.p5.m4" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math>. In fact <span class="ltx_text ltx_font_sansserif">Psh</span>(C) is a <span class="ltx_text ltx_emph ltx_font_italic">topos</span> which is a checklist of wonderful properties, and we’ll be using them all by the end because HoTT and toposes are closely related. In a nutshell, <span class="ltx_text ltx_font_sansserif">Psh</span>(C) inherits these nice properties from <math id="S2.p5.m5" class="ltx_Math" alttext="\mathsf{Set}" display="inline"><mi>𝖲𝖾𝗍</mi></math>.</p>
+</div>
+<div id="S2.p6" class="ltx_para">
+<p class="ltx_p">BUT.</p>
+</div>
+<div id="S2.p7" class="ltx_para">
+<p class="ltx_p">If <math id="S2.p7.m1" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math> already has some colimits, <span class="ltx_text ltx_font_sansserif">Psh</span>(C) will not respect these. It is <span class="ltx_text ltx_emph ltx_font_italic">too free</span>.</p>
+</div>
+<div id="S2.p8" class="ltx_para">
+<p class="ltx_p">Consider two subobjects of <math id="S2.p8.m1" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math> in <span class="ltx_text ltx_font_sansserif">CartSp</span>, say two disjoint open balls <math id="S2.p8.m2" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> and <math id="S2.p8.m3" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>.</p>
+</div>
+<div id="S2.p9" class="ltx_para">
+<p class="ltx_p">Following Duggers we think of sheaves as the subcategory of presheaves that preserve the existing colimits that we had. There is an analogy to specifying a group as the quotient of a free group by a subgroup generated by some relations.</p>
+</div>
+</section>
+<section id="S3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">3 </span>The algebra of functions</h2>
+
+</section>
+<section id="S4" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">4 </span>The lemmas about smoothness</h2>
+
+</section>
+<section id="S5" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">5 </span>Nilpotents</h2>
+
+<div id="S5.p1" class="ltx_para">
+<p class="ltx_p">How the power is about the jet degree and the number of variables is about the dimension of the probing vector space. Remember <a href="#Thmmydef1" title="Definition 1. ‣ 1 Introduction ‣ Smoothness" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>?
+</p>
+</div>
+</section>
+<section id="S6" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">6 </span>The Kan extention</h2>
+
+</section>
+<section id="S7" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">7 </span>The modality</h2>
+
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Wed Jun  5 23:01:41 2019 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>
+
     </div>
 
     
