@@ -41,10 +41,11 @@
       <guid>/2012/03/lossless-lord-of-the-rings-blu-ray-rip-on-ipad-3/</guid>
       <description>&lt;p&gt;I have seen what 1080p from a Blu-ray looks like on iPad 3, and it is something to behold. The detail and the colors are just beautiful. Over the last few days I&amp;rsquo;ve worked through the technical issues of ripping one of my Blu-ray discs and converting it losslessly to a format the iPad can play. This doesn&amp;rsquo;t work for every Blu-ray because they are not all encoded on the disc in H.264. For example, Blade Runner: The Final Cut is encoded in VC1, and so I had to transcode that (but it still looks amazing). But the LOTR Extended trilogy uses H.264 and so you can have perfection. The steps were:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;  1. On Windows, where my Blu-ray reader is, I ran makemkv and ripped the main movie plus all the audio tracks to disc. Each of the 6 discs in this trilogy takes between 20-35 GB of disk space. So, a lot!
-  2. I copied each .mkv file to my Mac and ran MP4Tools, but just to convert the DTS audio track to AAC stereo format.
-  3. I opened the .mkv and the AAC in Subler and &amp;quot;muxed&amp;quot; them together.
-&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;On Windows, where my Blu-ray reader is, I ran makemkv and ripped the main movie plus all the audio tracks to disc. Each of the 6 discs in this trilogy takes between 20-35 GB of disk space. So, a lot!&lt;/li&gt;
+&lt;li&gt;I copied each .mkv file to my Mac and ran MP4Tools, but just to convert the DTS audio track to AAC stereo format.&lt;/li&gt;
+&lt;li&gt;I opened the .mkv and the AAC in Subler and &amp;ldquo;muxed&amp;rdquo; them together.&lt;/li&gt;
+&lt;/ol&gt;
 
 &lt;p&gt;Joy!&lt;/p&gt;
 </description>

@@ -67,6 +67,52 @@
   </url>
   
   <url>
+    <loc>/publication_types/1/</loc>
+    <lastmod>2011-01-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/</loc>
+    <lastmod>2011-01-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/publication/hopkins-extraction-2011/</loc>
+    <lastmod>2011-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/greg-langmead/</loc>
+    <lastmod>2011-01-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/mark-hopkins/</loc>
+    <lastmod>2011-01-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/publication_types/</loc>
+    <lastmod>2011-01-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/publication/</loc>
+    <lastmod>2011-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/tai-vo/</loc>
+    <lastmod>2011-01-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/2010/09/digital-conservation/</loc>
     <lastmod>2010-09-30T13:38:16+00:00</lastmod>
   </url>
@@ -104,41 +150,6 @@
   <url>
     <loc>/2010/03/distance-learning-for-the-over-educated/</loc>
     <lastmod>2010-03-24T02:51:23+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/publication_types/1/</loc>
-    <lastmod>2010-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/authors/</loc>
-    <lastmod>2010-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/authors/greg-langmead/</loc>
-    <lastmod>2010-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/authors/mark-hopkins/</loc>
-    <lastmod>2010-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/publication_types/</loc>
-    <lastmod>2010-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/publication/</loc>
-    <lastmod>2010-01-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -253,35 +264,6 @@
   <url>
     <loc>/2008/06/microsoft-engineers-couldnt-care-less/</loc>
     <lastmod>2008-06-20T18:48:24+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/publication_types/5/</loc>
-    <lastmod>2008-06-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/authors/daniel-marcu/</loc>
-    <lastmod>2008-06-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/authors/kenji-yamada/</loc>
-    <lastmod>2008-06-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/authors/kevin-knight/</loc>
-    <lastmod>2008-06-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/publication/langmead-task-2008/</loc>
-    <lastmod>2008-06-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>

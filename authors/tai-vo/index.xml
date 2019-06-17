@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tai Vo on Long Head</title>
+    <link>/authors/tai-vo/</link>
+    <description>Recent content in Tai Vo on Long Head</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Greg Langmead 1998–2019</copyright>
+    <lastBuildDate>Sat, 01 Jan 2011 00:00:00 +0000</lastBuildDate>
+    
+	    <atom:link href="/authors/tai-vo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Extraction programs: a unified approach to translation rule extraction</title>
+      <link>/publication/hopkins-extraction-2011/</link>
+      <pubDate>Sat, 01 Jan 2011 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/hopkins-extraction-2011/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
