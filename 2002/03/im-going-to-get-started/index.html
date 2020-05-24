@@ -82,7 +82,7 @@
   
   
   
-  <link rel="stylesheet" href="/css/academic.min.fe324a743d05bd8bed782fb421e8bf36.css">
+  <link rel="stylesheet" href="/css/academic.min.388dcad2e4827b76a36fe5d8406d95f5.css">
 
   
 
@@ -456,15 +456,11 @@
   <div class="article-container">
 
     <div class="article-style" itemprop="articleBody">
-      <p>I&rsquo;m going to get started today on a new piece of software. It will be a multipurpose &ldquo;Paint by Numbers&rdquo; application. Paint by Numbers is a puzzle game (I am not yet sure whether this name is a trademark or not) where you are presented with a blank rectangular grid of squares, usually about 20x20 or larger (the bigger it is, the harder it is). The goal is to reproduce the picture by deducing which squares should be colored. The clues are lists of numbers, one list for each row and one list for each column. Each number in the list is the tally for a consecutive run of colored squares. Visit <a href="http://www02.so-net.ne.jp/~kajitani/cgi-bin/pbn.cgi/index.html" target="_blank">this Japanese site</a> for some examples to try.</p>
-
+      <p>I&rsquo;m going to get started today on a new piece of software. It will be a multipurpose &ldquo;Paint by Numbers&rdquo; application. Paint by Numbers is a puzzle game (I am not yet sure whether this name is a trademark or not) where you are presented with a blank rectangular grid of squares, usually about 20x20 or larger (the bigger it is, the harder it is). The goal is to reproduce the picture by deducing which squares should be colored. The clues are lists of numbers, one list for each row and one list for each column. Each number in the list is the tally for a consecutive run of colored squares. Visit <a href="http://www02.so-net.ne.jp/~kajitani/cgi-bin/pbn.cgi/index.html">this Japanese site</a> for some examples to try.</p>
 <p>I&rsquo;m going to write the app in Cocoa, the native environment for Mac OS X. In fact, this is just my excuse to learn Cocoa. When Apple computer bought Steve Jobs&rsquo; company Next in 1995 (?), they did so to obtain the sophisticated Nextstep operating system. This became Mac OS X, and the then-revolutionary Nextstep programming framework became Cocoa. Tim Berners-Lee, the creator of HTML, HTTP, and the first web browser, wrote all of it using Nextstep. Why? Because it was easy, supposedly. I&rsquo;ve explored it a little bit and I find it very exciting. It is easy in the sense that many things come for free, as in Java, but it is also hard in that it leaves me running to the documentation all the time &ndash; once I commit the core of Cocoa to memory, this will disappear as well and it probably <em>will</em> seem easy.</p>
-
 <p>I&rsquo;ll write the engine in C++, though, not Objective-C (the language you have to use to use Cocoa). The engine will include the abstraction of what a Paint-by-Numbers puzzle is, and the things the player can do to it. Actually wiring that up to a user of the app will be another layer, the user interface layer. This layer will listen to mouse clicks and whatnot, and will then call the appropriate message in the engine.</p>
-
 <p>For example, the most common way to interact with the puzzle will be to click on a square cell. When the click is heard, I will have to compute which square on the screen it was in, and therefore which abstract cell it is. Then, I will ask the abstract &ldquo;paint by numbers cell object,&rdquo; which is invisible to the user, to alter its state (turn it black, for example). Then, I&rsquo;ll have the representation of the cell on the screen update accordingly, by asking the abstract cell what color it is now.</p>
-
-<p>I&rsquo;m still working out the architecture, but I should have some progress by day&rsquo;s end.  I have some <em><a href="http://www.economist.com" target="_blank">Economist</a></em> magazine reading to do too.</p>
+<p>I&rsquo;m still working out the architecture, but I should have some progress by day&rsquo;s end.  I have some <em><a href="http://www.economist.com">Economist</a></em> magazine reading to do too.</p>
 
     </div>
 
@@ -673,7 +669,7 @@
     
     
     
-    <script src="/js/academic.min.9ef1b53ee2bde6c7f33b150c6ba4d452.js"></script>
+    <script src="/js/academic.min.3394a224b26ce58ff36f44c54743e0ab.js"></script>
 
     
 
@@ -688,7 +684,7 @@
   
 
   <p class="powered-by">
-    &copy; Greg Langmead 1998–2019 &middot; 
+    © Greg Langmead 1998–2019 &middot; 
 
     Powered by the
     <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for

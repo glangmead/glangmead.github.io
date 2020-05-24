@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
@@ -10,7 +10,6 @@
   <url>
     <loc>/</loc>
     <lastmod>2018-11-09T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -21,13 +20,11 @@
   <url>
     <loc>/categories/</loc>
     <lastmod>2018-11-05T12:36:54+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/misc/</loc>
     <lastmod>2018-11-05T12:36:54+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -43,7 +40,6 @@
   <url>
     <loc>/categories/personal/</loc>
     <lastmod>2015-06-23T02:21:22+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -69,13 +65,11 @@
   <url>
     <loc>/publication_types/1/</loc>
     <lastmod>2011-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/</loc>
     <lastmod>2011-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -86,19 +80,16 @@
   <url>
     <loc>/authors/greg-langmead/</loc>
     <lastmod>2011-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/mark-hopkins/</loc>
     <lastmod>2011-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/publication_types/</loc>
     <lastmod>2011-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -109,7 +100,6 @@
   <url>
     <loc>/authors/tai-vo/</loc>
     <lastmod>2011-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -163,19 +153,17 @@
   </url>
   
   <url>
+    <loc>/2009/11/iphone-hack-reading-strap/</loc>
+    <lastmod>2009-11-30T15:04:16+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/categories/mac-stuff/</loc>
     <lastmod>2009-11-30T15:04:16+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/tech/</loc>
-    <lastmod>2009-11-30T15:04:16+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/2009/11/iphone-hack-reading-strap/</loc>
     <lastmod>2009-11-30T15:04:16+00:00</lastmod>
   </url>
   
@@ -187,7 +175,6 @@
   <url>
     <loc>/project/</loc>
     <lastmod>2009-08-11T20:21:41+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -233,7 +220,6 @@
   <url>
     <loc>/categories/games/</loc>
     <lastmod>2008-08-17T05:17:07+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -569,7 +555,6 @@
   <url>
     <loc>/publication_types/2/</loc>
     <lastmod>2002-10-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -580,25 +565,21 @@
   <url>
     <loc>/authors/gregory-langmead/</loc>
     <lastmod>2002-10-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/high-energy-physics-theory/</loc>
     <lastmod>2002-10-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/mathematics-differential-geometry/</loc>
     <lastmod>2002-10-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/</loc>
     <lastmod>2002-10-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>

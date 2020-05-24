@@ -11,25 +11,5 @@
 	    <atom:link href="/authors/admin/index.xml" rel="self" type="application/rss+xml" />
     
     
-    <item>
-      <title></title>
-      <link>/authors/admin/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/authors/admin/</guid>
-      <description>&lt;p&gt;My name is Greg Langmead. I am a machine learning engineer at &lt;a href=&#34;https://machinelearning.apple.com&#34; target=&#34;_blank&#34;&gt;Apple&lt;/a&gt;, where I work on &lt;a href=&#34;https://www.apple.com/news/&#34; target=&#34;_blank&#34;&gt;Apple News&lt;/a&gt; and Stocks.&lt;/p&gt;
-
-&lt;p&gt;I am also a student in the &lt;a href=&#34;https://www.cmu.edu/dietrich/philosophy&#34; target=&#34;_blank&#34;&gt;Philosophy department&lt;/a&gt; at Carnegie Mellon University. I study &lt;a href=&#34;https://homotopytypetheory.org&#34; target=&#34;_blank&#34;&gt;homotopy type theory&lt;/a&gt; and differential geometry. I use theorem proving software such as &lt;a href=&#34;https://en.wikipedia.org/wiki/Agda_(programming_language)&#34; target=&#34;_blank&#34;&gt;Agda&lt;/a&gt; and &lt;a href=&#34;https://leanprover.github.io&#34; target=&#34;_blank&#34;&gt;Lean&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;I have a Ph.D. in mathematics from Columbia University (2001) where I studied gauge theory, supersymmetry, and four-dimensional topology. My dissertation was titled &amp;ldquo;&lt;a href=&#34;https://arxiv.org/abs/hep-th/0210192&#34; target=&#34;_blank&#34;&gt;A Supersymmetric Gauge Theory Formulation of the Donaldson Polynomial Invariants&lt;/a&gt;.&amp;rdquo;&lt;/p&gt;
-
-&lt;p&gt;Previously I worked at Design Science and SDL Language Weaver. I&amp;rsquo;m all over the map.&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;m interested in music and try to find time to practice piano, guitar and sometimes the ukulele. I love learning about the chord progressions used in music and am a frequent visitor to &lt;a href=&#34;https://www.hooktheory.com/theorytab&#34; target=&#34;_blank&#34;&gt;Theorytab&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;My interests include mathematics, physics, software, board games (including their iPad versions), and I pile up video games for iOS, Xbox, PC and Mac and never quite get around to playing them. I do the same with books and movies.&lt;/p&gt;
-</description>
-    </item>
-    
   </channel>
 </rss>
