@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mathematics - Differential Geometry | Long Head</title>
+    <link>https://greg.langmead.info/tag/mathematics-differential-geometry/</link>
+      <atom:link href="https://greg.langmead.info/tag/mathematics-differential-geometry/index.xml" rel="self" type="application/rss+xml" />
+    <description>Mathematics - Differential Geometry</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 01 Oct 2002 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://greg.langmead.info/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
+      <title>Mathematics - Differential Geometry</title>
+      <link>https://greg.langmead.info/tag/mathematics-differential-geometry/</link>
+    </image>
+    
+    <item>
+      <title>A Supersymmetric Quantum Field Theory Formulation of the Donaldson Polynomial Invariants</title>
+      <link>https://greg.langmead.info/publications/langmead-supersymmetric-2002/</link>
+      <pubDate>Tue, 01 Oct 2002 00:00:00 +0000</pubDate>
+      <guid>https://greg.langmead.info/publications/langmead-supersymmetric-2002/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

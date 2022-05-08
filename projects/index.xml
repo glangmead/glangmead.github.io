@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects | Long Head</title>
+    <link>https://greg.langmead.info/projects/</link>
+      <atom:link href="https://greg.langmead.info/projects/index.xml" rel="self" type="application/rss+xml" />
+    <description>Projects</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 11 Aug 2009 20:21:41 +0000</lastBuildDate>
+    <image>
+      <url>https://greg.langmead.info/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
+      <title>Projects</title>
+      <link>https://greg.langmead.info/projects/</link>
+    </image>
+    
+    <item>
+      <title>Lord of the Rings Annotated Differences From the Peter Jackson Movies</title>
+      <link>https://greg.langmead.info/projects/lord-of-the-rings-annotated-differences-from-the-peter-jackson-movies/</link>
+      <pubDate>Tue, 11 Aug 2009 20:21:41 +0000</pubDate>
+      <guid>https://greg.langmead.info/projects/lord-of-the-rings-annotated-differences-from-the-peter-jackson-movies/</guid>
+      <description>&lt;p&gt;I am a huge fan of Peter Jackson’s movie versions of The Lord of the Rings novels. A HUGE fan. But I am also a fan of the books, which I have read several times, and which I have also done supplementary reading on.&lt;/p&gt;
+&lt;p&gt;This post is for anyone who enjoyed watching the movies, is willing to re-watch the extended editions, and has a desire to read the books but hesitates to invest the full time required to read 3 novels.&lt;/p&gt;
+&lt;p&gt;What I have done is go through the books and find the paragraphs where the story differs from the story told in the movies. This serves two purposes. Firstly, for me, there are a few things I felt were especially disappointing or overlooked in the movies, including elements that I consider thematically crucial, and I want others to share in that opinion without having to read every word. Secondly, for you, it will allow you to use the movies to substitute for most of the content of the novels, which when added to the material I am listing here, will give you the entire story as presented in the book. It will also give you good exposure to Tolkien’s writing style and the tone of the books.&lt;/p&gt;
+&lt;p&gt;I have tried to make it easy for you to follow along no matter what edition of the novels you have. I have provided page numbers for the 3-paperback version published by Ballantine in 1993, and the red single-volume collector’s edition. But in addition I provide the chapter number and the snippet of text that begins and ends the excerpt, plus the approximate number of pages the excerpt runs in my paperback edition, just to give you a sense of the size of the excerpt. If you own the Kindle or another electronic edition, you can probably type in my snippets to find the beginning. I have also annotated each excerpt, to indicate why I am including it.&lt;/p&gt;
+&lt;p&gt;Note that each novel has two sets of chapters numbered from 1, since it’s actually a 6 ‘book’ story the way Tolkien divided it up. So &amp;ldquo;TTT 2.5&amp;rdquo; means &lt;em&gt;The Two Towers&lt;/em&gt;, book 2, chapter 5.&lt;/p&gt;
+&lt;p&gt;The table is available as &lt;a href=&#34;https://www.icloud.com/numbers/0eQMQfTxpGY1eNPQknNVh1dHQ#LOTRBooksVersusMovies&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;an iCloud Numbers spreadsheet document&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

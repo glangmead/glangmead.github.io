@@ -1,23 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Recent &amp; Upcoming Talks on Long Head</title>
-    <link>/talk/</link>
-    <description>Recent content in Recent &amp; Upcoming Talks on Long Head</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; Greg Langmead 1998–2020</copyright>
-    <lastBuildDate>Fri, 09 Nov 2018 00:00:00 +0000</lastBuildDate>
-    
-	    <atom:link href="/talk/index.xml" rel="self" type="application/rss+xml" />
-    
+    <title>Recent &amp; Upcoming Talks | Long Head</title>
+    <link>https://greg.langmead.info/talk/</link>
+      <atom:link href="https://greg.langmead.info/talk/index.xml" rel="self" type="application/rss+xml" />
+    <description>Recent &amp; Upcoming Talks</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 09 Nov 2018 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://greg.langmead.info/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
+      <title>Recent &amp; Upcoming Talks</title>
+      <link>https://greg.langmead.info/talk/</link>
+    </image>
     
     <item>
       <title>Categories and modalities for smoothness</title>
-      <link>/talk/smoothness/</link>
+      <link>https://greg.langmead.info/talk/smoothness/</link>
       <pubDate>Fri, 09 Nov 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/talk/smoothness/</guid>
+      <guid>https://greg.langmead.info/talk/smoothness/</guid>
       <description>&lt;!DOCTYPE html&gt;&lt;html&gt;
 &lt;head&gt;
 &lt;title&gt;Categories and modalities for smoothness&lt;/title&gt;

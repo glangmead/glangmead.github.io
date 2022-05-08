@@ -1,34 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Long Head</title>
-    <link>/tags/</link>
-    <description>Recent content in Tags on Long Head</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; Greg Langmead 1998–2020</copyright>
-    <lastBuildDate>Tue, 01 Oct 2002 00:00:00 +0000</lastBuildDate>
-    
-	    <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>High Energy Physics - Theory</title>
-      <link>/tags/high-energy-physics-theory/</link>
-      <pubDate>Tue, 01 Oct 2002 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/high-energy-physics-theory/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Mathematics - Differential Geometry</title>
-      <link>/tags/mathematics-differential-geometry/</link>
-      <pubDate>Tue, 01 Oct 2002 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/mathematics-differential-geometry/</guid>
-      <description></description>
-    </item>
+    <title>Tags | Long Head</title>
+    <link>https://greg.langmead.info/tags/</link>
+      <atom:link href="https://greg.langmead.info/tags/index.xml" rel="self" type="application/rss+xml" />
+    <description>Tags</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 01 Oct 2002 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://greg.langmead.info/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
+      <title>Tags</title>
+      <link>https://greg.langmead.info/tags/</link>
+    </image>
     
   </channel>
 </rss>

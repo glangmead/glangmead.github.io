@@ -1,67 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Authors on Long Head</title>
-    <link>/authors/</link>
-    <description>Recent content in Authors on Long Head</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; Greg Langmead 1998–2020</copyright>
-    <lastBuildDate>Sat, 01 Jan 2011 00:00:00 +0000</lastBuildDate>
-    
-	    <atom:link href="/authors/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Greg Langmead</title>
-      <link>/authors/greg-langmead/</link>
-      <pubDate>Sat, 01 Jan 2011 00:00:00 +0000</pubDate>
-      
-      <guid>/authors/greg-langmead/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Mark Hopkins</title>
-      <link>/authors/mark-hopkins/</link>
-      <pubDate>Sat, 01 Jan 2011 00:00:00 +0000</pubDate>
-      
-      <guid>/authors/mark-hopkins/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Tai Vo</title>
-      <link>/authors/tai-vo/</link>
-      <pubDate>Sat, 01 Jan 2011 00:00:00 +0000</pubDate>
-      
-      <guid>/authors/tai-vo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Gregory Langmead</title>
-      <link>/authors/gregory-langmead/</link>
-      <pubDate>Tue, 01 Oct 2002 00:00:00 +0000</pubDate>
-      
-      <guid>/authors/gregory-langmead/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>/authors/admin/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/authors/admin/</guid>
-      <description>&lt;p&gt;My name is Greg Langmead. I am a machine learning engineer at &lt;a href=&#34;https://machinelearning.apple.com&#34;&gt;Apple&lt;/a&gt;, where I work on &lt;a href=&#34;https://www.apple.com/news/&#34;&gt;Apple News&lt;/a&gt; and Stocks.&lt;/p&gt;
-&lt;p&gt;I am also a student in the &lt;a href=&#34;https://www.cmu.edu/dietrich/philosophy&#34;&gt;Philosophy department&lt;/a&gt; at Carnegie Mellon University. I study &lt;a href=&#34;https://homotopytypetheory.org&#34;&gt;homotopy type theory&lt;/a&gt; and differential geometry. I use theorem proving software such as &lt;a href=&#34;https://en.wikipedia.org/wiki/Agda_(programming_language)&#34;&gt;Agda&lt;/a&gt; and &lt;a href=&#34;https://leanprover.github.io&#34;&gt;Lean&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;I have a Ph.D. in mathematics from Columbia University (2001) where I studied gauge theory, supersymmetry, and four-dimensional topology. My dissertation was titled &amp;ldquo;&lt;a href=&#34;https://arxiv.org/abs/hep-th/0210192&#34;&gt;A Supersymmetric Gauge Theory Formulation of the Donaldson Polynomial Invariants&lt;/a&gt;.&amp;rdquo;&lt;/p&gt;
-&lt;p&gt;Previously I worked at Design Science and SDL Language Weaver. I&amp;rsquo;m all over the map.&lt;/p&gt;
-&lt;p&gt;I&amp;rsquo;m interested in music and try to find time to practice piano, guitar and sometimes the ukulele. I love learning about the chord progressions used in music and am a frequent visitor to &lt;a href=&#34;https://www.hooktheory.com/theorytab&#34;&gt;Theorytab&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;My interests include mathematics, physics, software, board games (including their iPad versions), and I pile up video games for iOS, Xbox, PC and Mac and never quite get around to playing them. I do the same with books and movies.&lt;/p&gt;
-</description>
-    </item>
+    <title>Authors | Long Head</title>
+    <link>https://greg.langmead.info/authors/</link>
+      <atom:link href="https://greg.langmead.info/authors/index.xml" rel="self" type="application/rss+xml" />
+    <description>Authors</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 01 Jan 2011 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://greg.langmead.info/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
+      <title>Authors</title>
+      <link>https://greg.langmead.info/authors/</link>
+    </image>
     
   </channel>
 </rss>

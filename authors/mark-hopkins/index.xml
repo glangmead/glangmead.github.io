@@ -1,41 +1,38 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Mark Hopkins on Long Head</title>
-    <link>/authors/mark-hopkins/</link>
-    <description>Recent content in Mark Hopkins on Long Head</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; Greg Langmead 1998–2020</copyright>
-    <lastBuildDate>Sat, 01 Jan 2011 00:00:00 +0000</lastBuildDate>
-    
-	    <atom:link href="/authors/mark-hopkins/index.xml" rel="self" type="application/rss+xml" />
-    
+    <title>Mark Hopkins | Long Head</title>
+    <link>https://greg.langmead.info/authors/mark-hopkins/</link>
+      <atom:link href="https://greg.langmead.info/authors/mark-hopkins/index.xml" rel="self" type="application/rss+xml" />
+    <description>Mark Hopkins</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 01 Jan 2011 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://greg.langmead.info/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
+      <title>Mark Hopkins</title>
+      <link>https://greg.langmead.info/authors/mark-hopkins/</link>
+    </image>
     
     <item>
       <title>Extraction programs: a unified approach to translation rule extraction</title>
-      <link>/publication/hopkins-extraction-2011/</link>
+      <link>https://greg.langmead.info/publications/hopkins-extraction-2011/</link>
       <pubDate>Sat, 01 Jan 2011 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/hopkins-extraction-2011/</guid>
+      <guid>https://greg.langmead.info/publications/hopkins-extraction-2011/</guid>
       <description></description>
     </item>
     
     <item>
       <title>SCFG decoding without binarization</title>
-      <link>/publication/hopkins-scfg-2010/</link>
+      <link>https://greg.langmead.info/publications/hopkins-scfg-2010/</link>
       <pubDate>Fri, 01 Jan 2010 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/hopkins-scfg-2010/</guid>
+      <guid>https://greg.langmead.info/publications/hopkins-scfg-2010/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Cube pruning as heuristic search</title>
-      <link>/publication/hopkins-cube-2009/</link>
+      <link>https://greg.langmead.info/publications/hopkins-cube-2009/</link>
       <pubDate>Thu, 01 Jan 2009 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/hopkins-cube-2009/</guid>
+      <guid>https://greg.langmead.info/publications/hopkins-cube-2009/</guid>
       <description></description>
     </item>
     

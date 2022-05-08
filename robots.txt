@@ -1,0 +1,3 @@
+User-agent: *
+
+Sitemap: https://greg.langmead.info/sitemap.xml
