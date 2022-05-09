@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Donald R. Beaver | Long Head</title>
+    <link>https://greg.langmead.info/authors/donald-r.-beaver/</link>
+      <atom:link href="https://greg.langmead.info/authors/donald-r.-beaver/index.xml" rel="self" type="application/rss+xml" />
+    <description>Donald R. Beaver</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 04 Dec 2018 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://greg.langmead.info/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
+      <title>Donald R. Beaver</title>
+      <link>https://greg.langmead.info/authors/donald-r.-beaver/</link>
+    </image>
+    
+    <item>
+      <title>Apparatus, system and method for string disambiguation and entity ranking</title>
+      <link>https://greg.langmead.info/publications/entity-linking-2015/</link>
+      <pubDate>Tue, 04 Dec 2018 00:00:00 +0000</pubDate>
+      <guid>https://greg.langmead.info/publications/entity-linking-2015/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Reader application with a personalized feed and method of providing recommendations while maintaining user privacy</title>
+      <link>https://greg.langmead.info/publications/reader-privacy-2015/</link>
+      <pubDate>Thu, 15 Dec 2016 00:00:00 +0000</pubDate>
+      <guid>https://greg.langmead.info/publications/reader-privacy-2015/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>System and method for interacting with a displayed work space</title>
+      <link>https://greg.langmead.info/publications/work-space-2012/</link>
+      <pubDate>Tue, 16 Aug 2016 00:00:00 +0000</pubDate>
+      <guid>https://greg.langmead.info/publications/work-space-2012/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

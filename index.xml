@@ -5,7 +5,7 @@
     <link>https://greg.langmead.info/</link>
       <atom:link href="https://greg.langmead.info/index.xml" rel="self" type="application/rss+xml" />
     <description>Long Head</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 09 Nov 2018 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 24 Sep 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://greg.langmead.info/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
       <title>Long Head</title>
@@ -13,10 +13,34 @@
     </image>
     
     <item>
+      <title>Personalization Aggregate Content Item Recommendations</title>
+      <link>https://greg.langmead.info/publications/recommendations-2019/</link>
+      <pubDate>Thu, 24 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>https://greg.langmead.info/publications/recommendations-2019/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Column fit document traversal for reader application</title>
+      <link>https://greg.langmead.info/publications/column-doc-traversal-2015/</link>
+      <pubDate>Thu, 30 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>https://greg.langmead.info/publications/column-doc-traversal-2015/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Apparatus, system and method for string disambiguation and entity ranking</title>
+      <link>https://greg.langmead.info/publications/entity-linking-2015/</link>
+      <pubDate>Tue, 04 Dec 2018 00:00:00 +0000</pubDate>
+      <guid>https://greg.langmead.info/publications/entity-linking-2015/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Categories and modalities for smoothness</title>
-      <link>https://greg.langmead.info/talk/smoothness/</link>
+      <link>https://greg.langmead.info/writing/smoothness/</link>
       <pubDate>Fri, 09 Nov 2018 00:00:00 +0000</pubDate>
-      <guid>https://greg.langmead.info/talk/smoothness/</guid>
+      <guid>https://greg.langmead.info/writing/smoothness/</guid>
       <description>&lt;!DOCTYPE html&gt;&lt;html&gt;
 &lt;head&gt;
 &lt;title&gt;Categories and modalities for smoothness&lt;/title&gt;
@@ -618,6 +642,22 @@ ev_{x_{1}}}}\mathbb{R}.&#34; display=&#34;block&#34;&gt;&lt;mrow&gt;&lt;mrow&gt;
     </item>
     
     <item>
+      <title>Reader application with a personalized feed and method of providing recommendations while maintaining user privacy</title>
+      <link>https://greg.langmead.info/publications/reader-privacy-2015/</link>
+      <pubDate>Thu, 15 Dec 2016 00:00:00 +0000</pubDate>
+      <guid>https://greg.langmead.info/publications/reader-privacy-2015/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>System and method for interacting with a displayed work space</title>
+      <link>https://greg.langmead.info/publications/work-space-2012/</link>
+      <pubDate>Tue, 16 Aug 2016 00:00:00 +0000</pubDate>
+      <guid>https://greg.langmead.info/publications/work-space-2012/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Rubik&#39;s Cube</title>
       <link>https://greg.langmead.info/posts/2015-06-23-rubiks-cube/</link>
       <pubDate>Tue, 23 Jun 2015 02:21:22 +0000</pubDate>
@@ -965,9 +1005,9 @@ I learned something new this weekend. First, I learned that one of my favorite c
     
     <item>
       <title>Lord of the Rings Annotated Differences From the Peter Jackson Movies</title>
-      <link>https://greg.langmead.info/projects/lord-of-the-rings-annotated-differences-from-the-peter-jackson-movies/</link>
+      <link>https://greg.langmead.info/writing/lord-of-the-rings-annotated-differences-from-the-peter-jackson-movies/</link>
       <pubDate>Tue, 11 Aug 2009 20:21:41 +0000</pubDate>
-      <guid>https://greg.langmead.info/projects/lord-of-the-rings-annotated-differences-from-the-peter-jackson-movies/</guid>
+      <guid>https://greg.langmead.info/writing/lord-of-the-rings-annotated-differences-from-the-peter-jackson-movies/</guid>
       <description>&lt;p&gt;I am a huge fan of Peter Jackson’s movie versions of The Lord of the Rings novels. A HUGE fan. But I am also a fan of the books, which I have read several times, and which I have also done supplementary reading on.&lt;/p&gt;
 &lt;p&gt;This post is for anyone who enjoyed watching the movies, is willing to re-watch the extended editions, and has a desire to read the books but hesitates to invest the full time required to read 3 novels.&lt;/p&gt;
 &lt;p&gt;What I have done is go through the books and find the paragraphs where the story differs from the story told in the movies. This serves two purposes. Firstly, for me, there are a few things I felt were especially disappointing or overlooked in the movies, including elements that I consider thematically crucial, and I want others to share in that opinion without having to read every word. Secondly, for you, it will allow you to use the movies to substitute for most of the content of the novels, which when added to the material I am listing here, will give you the entire story as presented in the book. It will also give you good exposure to Tolkien’s writing style and the tone of the books.&lt;/p&gt;
