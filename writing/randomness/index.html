@@ -1,0 +1,1597 @@
+<!DOCTYPE html><html lang="en-us" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.5.0 for Hugo" />
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Mathematicians have been exploring the advantages of locale theory for 60 or so years, along with its related disciplines of topos theory and type theory. When you tie one hand behind your back (such as avoiding the use of the existence of points, the axiom of choice, and/or the law of the excluded middle) then the constructions and proofs you invent can be more illuminating and deeper than before. I want to convince you that this may be true for algorithmic randomness notions." />
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://greg.langmead.info/writing/randomness/" />
+
+  
+  
+  
+    <meta name="theme-color" content="#1565c0" />
+  
+
+  
+  
+    
+    <script src="/js/mathjax-config.js"></script>
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.c7b8d9abd591ba2253ea42747e3ac3f5.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha512-W0xM4mr6dEP9nREo7Z9z+9X70wytKvMGeDsj7ps2+xg5QPrEBXC8tAW1IFnzjR6eoJ90JmCnFzerQJTLzIEHjA==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.1052fab8b7700a3dc49ee23683097d66.css" />
+
+  
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+    <link rel="manifest" href="/manifest.webmanifest" />
+  
+
+  <link rel="icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_3.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_180x180_fill_lanczos_center_3.png" />
+
+  <link rel="canonical" href="https://greg.langmead.info/writing/randomness/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+
+  
+  
+    
+    
+  
+  <meta property="twitter:card" content="summary" />
+  
+    <meta property="twitter:site" content="@@glangmead" />
+    <meta property="twitter:creator" content="@@glangmead" />
+  
+  <meta property="og:site_name" content="Long Head" />
+  <meta property="og:url" content="https://greg.langmead.info/writing/randomness/" />
+  <meta property="og:title" content="Randomness as Pointlessness | Long Head" />
+  <meta property="og:description" content="Mathematicians have been exploring the advantages of locale theory for 60 or so years, along with its related disciplines of topos theory and type theory. When you tie one hand behind your back (such as avoiding the use of the existence of points, the axiom of choice, and/or the law of the excluded middle) then the constructions and proofs you invent can be more illuminating and deeper than before. I want to convince you that this may be true for algorithmic randomness notions." /><meta property="og:image" content="https://greg.langmead.info/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
+    <meta property="twitter:image" content="https://greg.langmead.info/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+  
+    
+      <meta
+        property="article:published_time"
+        content="2020-12-16T00:00:00&#43;00:00"
+      />
+    
+    <meta property="article:modified_time" content="2020-12-16T00:00:00&#43;00:00">
+  
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+
+
+  <title>Randomness as Pointlessness | Long Head</title>
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="e58adf9ff25adb1e1317e333397b8efc" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.2ed908358299dd7ab553faae685c746c.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="header--fixed">
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+      
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/">Long Head</a>
+      </div>
+      
+
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+      
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/">Long Head</a>
+      </div>
+      
+
+      
+      
+      <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+        
+        <ul class="navbar-nav d-md-inline-flex">
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#about"><span>Home</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/posts"><span>Blog</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link  active" href="/writing"><span>Writing</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/publications"><span>Publications</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/uploads/resume.pdf"><span>CV</span></a>
+          </li>
+
+          
+          
+
+        
+
+          
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+        
+        
+          
+        
+
+        
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+        
+        
+        <li class="nav-item dropdown theme-dropdown">
+          <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+            <i class="fas fa-moon" aria-hidden="true"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-item js-set-theme-light">
+              <span>Light</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-dark">
+              <span>Dark</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-auto">
+              <span>Automatic</span>
+            </a>
+          </div>
+        </li>
+        
+
+        
+        
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+    
+    
+    
+
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Randomness as Pointlessness</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Dec 16, 2020
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+  
+
+  
+  
+
+</div>
+
+    
+
+
+
+
+<div class="btn-links mb-3">
+  
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+<a class="btn btn-outline-primary btn-page-header" href="/writing/randomness/randomness.pdf" target="_blank" rel="noopener">
+  PDF
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <h1 id="introduction">Introduction</h1>
+<p>Mathematicians have been exploring the advantages of locale theory for
+60 or so years, along with its related disciplines of topos theory and
+type theory. When you tie one hand behind your back (such as avoiding
+the use of the existence of points, the axiom of choice, and/or the law
+of the excluded middle) then the constructions and proofs you invent can
+be more illuminating and deeper than before. I want to convince you that
+this may be true for algorithmic randomness notions. In [@simpson], Alex
+Simpson has formulated a measure theory for locales and provided a new
+definition of randomness in this setting. I will describe this work,
+emphasizing the <em>point-free</em> interpretation.</p>
+<p>Random real numbers satisfy the following hand-waving characterizations.</p>
+<ol>
+<li>
+<p>They cannot be obtained constructively.</p>
+</li>
+<li>
+<p>They obey almost-everywhere properties.</p>
+</li>
+<li>
+<p>They appear tied to the foundations of mathematics.</p>
+</li>
+</ol>
+<p>For a survey of these and other properties, see Rute [@rute]. I will
+argue that defining random points in terms of locales is well suited to
+capturing or even explaining all three of these properties. First of
+all, locales provide a setting for topology that supports constructive
+arguments, and randomness is in some sense the opposite of
+constructivity. Secondly, locales provide a model of topological spaces
+and continuous functions, so we can connect with classical results in
+analysis including almost-everywhere theorems like Lebesgue&rsquo;s theorem.
+And thirdly locales mediate a generalization from set theory to topos
+theory and type theory, modern constructive settings where mathematical
+foundations are being explored. Constructions like the effective topos
+and assemblies capture computability in this general context. It seems
+inevitable that randomness will find enhanced definitions in these new
+foundations.</p>
+<h2 id="randomness-vs-determinism-a-confused-debate">Randomness vs determinism: a confused debate</h2>
+<p>In the Stanford Encyclopedia of Philosophy&rsquo;s article on Chance and
+Randomness [@sep-chance-randomness], section 5.2 (&quot;Chaotic Dynamics&quot;),
+the authors describe an iterated transformation on the unit square,
+somewhat analogous to repeatedly folding dough. Given a starting point
+$(p,q), 0\leq p, q\leq 1$, define a function $$\phi(p,q) =
+\begin{cases}
+(2p, q/2), &amp; \text{if } 0 \le p \le \frac{1}{2} \
+(2p-1,(1+q)/2), &amp; \text{if } \frac{1}{2} \le p \le 1
+\end{cases}$$ As the authors say, &ldquo;This corresponds to transforming the
+unit square to a rectangle twice as wide and half the height, chopping
+off the right half, and stacking it back on top to fill the unit square
+again.&rdquo; So, needlessly more violent than folding, but close. If we
+represent $p$ and $q$ in their binary expansion, we have
+$$\phi (0.p_1 p_2\ldots, 0.q_1 q_2\ldots) = (0.p_2 p_3\ldots , 0.p_1 q_1 q_2\ldots).$$
+In the article this example is intended to convey a paradox. On the one
+hand, the system is ergodic and behaves like a random process. Points
+will wander throughout the space without any pattern. But on the other
+hand the system is deterministic. The bit shift formula shows how it
+works: this is an engine that uses the next bit of the binary expansion
+to determine where the point moves next.</p>
+<p>The resolution of the paradox, I believe, is to worry more about whether
+you can get your hands on $p$ and $q$ in the first place. Sure, once you
+have them, the machine behaves deterministically. But you can&rsquo;t have
+them! They require an infinite amount of information to specify, and to
+have one is to provide its entire future path through the process. The
+problem with the paradox is therefore in one of its assumptions. The
+process is deterministic, but the randomness is in the input data.</p>
+<p>Indeed, the most important property of random numbers appears to be
+their infinite nature, which prevents us from ever having one fully
+specified for us, either in a machine, in our minds, or in our theories.
+They are not computable, and they are not constructible.</p>
+<p>Confusingly, there are several different definitions of algorithmic
+randomness. In fact there is a whole family (or if you&rsquo;re in a teasing
+mood, a zoo) of them. They go by names such as Martin-Löf randomness,
+Schnorr randomness, weak-$n$-randomness, and computable randomness. They
+are not equivalent but they form a simple chain of inclusions, and smart
+people have worked out that the differences can be explained and
+parameterized by a family of choices that relate them. What I will
+present here is a consideration that is orthogonal to the flavor of
+randomness, namely the <em>packaging</em> of the random numbers inside the
+reals. The main ingredient is a shift from <em>set theory</em> to <em>locale
+theory</em>. A locale is a generalization of a topological space, and I will
+argue that it is very well suited to a philosophical interpretation of
+randomness.</p>
+<h1 id="frames-and-locales">Frames and Locales</h1>
+<p>Locale theory is point-free topology. See Johnstone [@johnstone1983] for
+an accessible survey, or Chapter IX of Mac Lane and Moerdijk [@maclane]
+for a pleasantly breezy but more thorough introduction, or Johnstone
+[@sketches] chapter C1 for a detailed treatment. We can also call it
+<em>synthetic</em> topology in that it takes open sets as basic, undefined
+objects, instead of defining them as collections of points. Instead it
+is points that will become a derived concept. Topological spaces with
+their actual open sets of actual points provide examples of locales, but
+there are more general ones as well. This will give us a new point of
+view on randomness.</p>
+<p>A locale is a <em>frame</em>. A frame is a partially ordered set (poset) with
+finite meets $\wedge$ and arbitrary joins $\vee$, with a maximal element
+$\top$ and minimal element $\ensuremath{\bot}$, and where the infinite
+distributive law holds:
+$$x \wedge (\bigvee_i y_i)=\bigvee_i (x\wedge y_i).$$ This definition is
+clearly abstracted from the axioms for a topology: we are to imagine the
+elements of the poset are open sets of a generalized space. If we
+require only countable joins then it is called a $\sigma$-frame. The
+open sets of a topological space form a frame (or a $\sigma$-frame). A
+frame map is a function that preserves finite meets and arbitrary joins.
+A $\sigma$-frame map preserves countable joins. We collect this data
+into the category $\mathsf{Frm}$ of frames and $\mathsf{\sigma Frm}$ of
+$\sigma$-frames.</p>
+<p>A continuous map between topological spaces induces a frame map on the
+frames of open sets, but in the opposite direction because the <em>inverse</em>
+image of an open is open. This motivates the definition of the category
+$\mathsf{Loc}$ of locales to be simply
+$\ensuremath{\mathsf{Frm}}^{\textsf{op}}$ and
+$\ensuremath{\mathsf{\sigma Loc}}=\ensuremath{\mathsf{\sigma Frm}}^{\textsf{op}}$.
+(Recall that the opposite of a category is a category with all the same
+objects and morphisms, but with the direction of all the morphism arrows
+reversed.) We can define a functor
+$L:\ensuremath{\mathsf{Top}}\to\ensuremath{\mathsf{Loc}}$ on objects by
+mapping a space $X$ to its frame of open sets
+$\ensuremath{\mathcal{O}}(X)$ (so on objects,
+$L=\ensuremath{\mathcal{O}}$), and on morphisms by mapping a function
+$f:X\to Y$ to the opposite arrow of the induced morphism on frames, so
+that&rsquo;s two inversions giving us an arrow $L(f):L(X)\to L(Y)$.</p>
+<p>We&rsquo;ll use notation like $X, Y, \ldots$ to denote locales, and
+$\ensuremath{\mathcal{O}}(X), \ensuremath{\mathcal{O}}(Y), \ldots$ to
+denote frames of open sets.</p>
+<h1 id="points">Points</h1>
+<p>Consider the topological space $\star$ consisting of a single point. Its
+topology is just the poset ${\bot \leq \top}$ (the empty set and the
+whole space). To treat points as a derived concept, note that a point in
+a space $X$ is equivalent to a map $\mathrm{pt}:\star\to X$, which at
+the level of frames is a map
+$\ensuremath{\mathcal{O}}(X)\to{\top, \bot}$. The inverse image of
+$\top$ is the collection of all open sets that contain the point
+$\mathrm{pt}(\star)$. This forms what is known as a <em>completely prime
+filter</em> in the frame, which is a collection $P$ of opens such that if
+$x\vee y\in P$ then $x\in P$ or $y\in P$. (This is analogous to a prime
+ideal, or the ideal generated by a prime number.) We can then move
+forward with locales and completely prime filters instead of spaces and
+points!</p>
+<p>Note how compatible this is with a constructive point of view. To supply
+a point you must supply a function $\star\to X$. The points aren&rsquo;t
+given, you have to do work to produce one.</p>
+<p>Given a locale $X$, the set of completely prime filters constitutes the
+<em>spatial part</em> of $X$, and this set inherits a topology from the
+structure of $X$. Locale maps preserve prime filters so we obtain a set
+function between the spatial parts of the locales. We can package this
+as a functor $S:\ensuremath{\mathsf{Loc}}\to\ensuremath{\mathsf{Top}}$
+which turns out to be right adjoint to $L$. If we go back and forth with
+$S\circ L$, starting from an honest topological space, then we get back
+an equivalent space with an equivalent topology so long as the original
+space is <em>sober</em>, which is a definition that is almost circularly
+defined to meet this condition. Hausdorff spaces are sober. (The
+mathematicians who developed locale theory were very self-conscious
+about the names according to Peter Johnstone in [@johnstone2] and it
+shows &mdash; they chose great names like &ldquo;sober.&rdquo;)</p>
+<p>We won&rsquo;t make use of $S$, but it&rsquo;s important to know about it to have a
+global picture of how spaces are embedded in the larger category of
+locales.</p>
+<h1 id="sublocales">Sublocales</h1>
+<p>Mathematicians have been careful to choose the correct notion of
+subspace in this context: the sublocale. There are three equivalent ways
+to define sublocales. Normally I&rsquo;d expect two since we are bouncing
+between two opposite categories. But there is a super interesting third
+definition as well, and the interplay of all three sheds light on the
+application to randomness.</p>
+<h2 id="definition-1-embedded-subspaces">Definition 1: Embedded subspaces</h2>
+<p>To me the most intuitive definition is the one that lets us think of a
+sublocale as being like an <em>embedded subspace</em>, i.e. a monomorphic map
+with the extra requirement that the subspace is embedded. In the
+category of topological spaces this means the domain is homeomorphic to
+its image. For example, for a map from $[0,1]$ into a space $X$ to be an
+embedding the curve must not self-intersect or do anything pathological.
+In categorical terms embeddings and sublocales are <em>regular
+monomorphisms</em> and these have special factorization properties. You can
+maybe already tell that this is a less permissive notion of subspace
+than subspaces in $\mathsf{Top}$, where any old subset of a topological
+space (i.e. any monomorphism) can be equipped with the subspace topology
+and considered a subobject.</p>
+<h2 id="definition-2-quotients-of-frames">Definition 2: Quotients of frames</h2>
+<p>In the category of frames the arrows are reversed and so a sublocale is
+in fact a quotient frame, i.e. an equivalence relation. Intuitively, two
+open sets are equivalent if they agree on the sublocale. Precisely, a
+sublocale $=_Y$ is an equivalence relation that preserves finite meets
+and arbitrary joins: $$\begin{aligned}
+U=_Y V\mathrm{\ and\ }U&rsquo;=_Y V&rsquo;&amp;\quad\implies\quad U\wedge U&rsquo;=_Y V\wedge V&rsquo; \
+U_i=<em>Y V_i\mathrm{\ for\ all\ } i\geq 0&amp;\quad\implies\quad \bigvee</em>{i\geq 0}U_i =<em>Y \bigvee</em>{i\geq 0} V_i.\end{aligned}$$</p>
+<h2 id="definition-3-nuclei">Definition 3: Nuclei</h2>
+<p>The nucleus definition of a sublocale also takes place in the category
+of frames. It is just the surjective map corresponding to the quotient.
+A nucleus is a function
+$j:\ensuremath{\mathcal{O}}(X)\to\ensuremath{\mathcal{O}}(X)$ satisfying
+$$\begin{aligned}
+U&amp;\leq jU \
+jjU &amp;= jU \
+j(U\wedge V)&amp;=j(U)\wedge j(V)\end{aligned}$$ The intuition is that $j$
+takes an open set to some largest version of itself satisfying some
+property, which is why the first condition has the containment, and why
+the second condition is idempotence &ndash; doing the operation twice yields
+the same largest open. The third condition is that forming the &ldquo;largest
+version&rdquo; preserves finite intersection.</p>
+<p>Denote the fixed points of $j$ (i.e. the collection of largest sets) by
+$\ensuremath{\mathcal{O}}_j(X)$ and denote the dual object by $X_j$.
+Then $X_j$ is the sublocale. The map $j$ is a surjective frame map onto
+the set of fixed points, and so gives an embedding
+$i:X_j\hookrightarrow X$. This is basically performing the quotient from
+the previous definition, mapping every open onto the largest
+representative in the equivalence class.</p>
+<h2 id="the-collection-of-all-sublocales">The collection of all sublocales</h2>
+<p>The collection of all sublocales of a fixed locale $X$ is partially
+ordered by inclusion, just as we have in any category where we can
+define subobjects. It&rsquo;s worth mentioning that even more is true: the
+collection of sublocales forms a <em>coframe</em>, which is duel to a frame, so
+is a poset with finite joins and arbitrary meets, and where the joins
+distribute over the meets. This collection is nowhere near as
+straightforward to contemplate as the collection of subsets of a set,
+but we will keep thinking through some of the consequences to find how
+it connects with randomness.</p>
+<h2 id="a-pointless-sublocale">A pointless sublocale</h2>
+<p>We&rsquo;re ready to define a sublocale with no points! Let $X$ be a Hausdorff
+topological space without isolated points and let
+$\ensuremath{\mathcal{O}}(X)$ be the frame of its open sets. Consider
+the double-negation operation
+$\neg\neg:\ensuremath{\mathcal{O}}(X)\to\ensuremath{\mathcal{O}}(X)$.
+What does this do? The negation of an open $U$ is the largest open
+disjoint from $U$ (or equivalently, the union of all opens disjoint from
+$U$). In an actual space such as $X$ this is the same as the interior of
+the complement, but in a locale we don&rsquo;t have complements since they are
+not open. Repeating the operation, $\neg\neg U$ is thus the largest open
+disjoint from the largest open disjoint from $U$. For a lot of sets this
+is just $U$ again but sometimes it erases information. For any $p\in X$
+we have that $\neg\neg(X-{p}) = X$, because
+$\neg (X-{p})=\emptyset$. So this operation blurs out the points.</p>
+<p>$\neg\neg$ is idempotent, and in fact defines a nucleus hence an
+embedding $nn:X_{\neg\neg}\hookrightarrow X$, where
+$nn^{-1}U=\neg\neg U$. It&rsquo;s this sublocale $X_{\neg\neg}$ that has no
+points. For suppose $p:\star\to X_{\neg\neg}$ is a point. The
+composition $nn\circ p$ is thus a point of $X$. Consider the open set
+given by deleting this point from $X$, i.e. $X-{nn(p(\star))}$. Taking
+the inverse image in frames we have
+$p^{-1}(\neg\neg(X-{nn(p(\star))})) = \bot$ because only opens that
+contain the image of $\star$ map back to $\top$. But as we saw in the
+previous paragraph $\neg\neg(X-{nn(p(\star))}) = X$, so the above
+expression $p^{-1}(\neg\neg(X-{nn(p(\star))})$ becomes $p^{-1}(X)$
+which is $\top$, a contradiction! You can&rsquo;t have points if you blurred
+away the points.</p>
+<p>Furthermore, $X_{\neg\neg}$ is <em>dense</em> in $X$. For a sublocale
+$A\hookrightarrow X$ to be dense means that $A$ intersects every open
+sublocale. (An open sublocale is one of the original open sets in $X$,
+promoted to a sublocale by embedding it in $X$.) This follows from being
+a nucleus: $\neg\neg A \supseteq A$. The definitions are piling up,
+aren&rsquo;t they?</p>
+<h2 id="locale-morphisms">Locale morphisms</h2>
+<p>A fact that makes the category of locales different from the category of
+spaces is that any two dense sublocales intersect to form another dense
+sublocale! If we intersect all dense sublocales we form a <em>smallest
+dense sublocale</em> of any locale $X$ and it turns out to be exactly
+$X_{\neg\neg}$. By smallest I mean inside the poset of sublocales. None
+of this is the case with topological spaces such as $\mathbb{R}$ which
+can be decomposed into disjoint dense sub<em>sets</em> such as $\mathbb{Q}$ and
+$\mathbb{R}\backslash\mathbb{Q}$. This is confusing! What does the
+sublocale $\mathbb{Q}\hookrightarrow\mathbb{R}$ look like then? The
+consequences for measure theory are significant, since defining measures
+on sets leads to some pathological examples involving cosets of the
+rationals.</p>
+<p>Let&rsquo;s look at the <em>image</em> of a sublocale inclusion. For this we need the
+&ldquo;push-forward&rdquo; map
+$f_<em>:\ensuremath{\mathcal{O}}(X)\to\ensuremath{\mathcal{O}}(Y)$, which
+is actually right adjoint to the inverse image map
+$f^{-1}:\ensuremath{\mathcal{O}}(Y)\to\ensuremath{\mathcal{O}}(X)$. It
+is defined as follows: $$f_</em>(U)=\bigcup_{f^{-1}(V)\subseteq U}V.$$ In
+other words, an open set $U\subseteq X$ maps under $f_*$ to the
+<em>largest</em> open set in $Y$ that pulls back to some subset of $U$.</p>
+<p>This is an elementary operation but not one that comes up in a standard
+undergraduate topology course (at least a 20th century one!). Here&rsquo;s an
+example that may help: imagine $f:[0,1]\to\mathbb{R}^2$ is some smooth
+curve in the plane. Given an open interval $(a,b)\subseteq[0,1]$, its
+image in the plane is a one-dimensional subset, so won&rsquo;t itself be open.
+Instead to compute $f_*((a,b))$ we have to find the largest open set in
+the plane whose inverse image is $(a,b)$, which will look like <em>all of
+$\mathbb{R}^2$</em> minus two skinny pieces of the curve that are the images
+of $[0,a]$ and $[b,1]$. So it has the image in it, plus all the rest of
+the plane that isn&rsquo;t in the image of the rest of $[0,1]$.</p>
+<p>The requirement that $f_<em>$ give the <em>largest</em> open set such that some
+condition holds should remind us of a nucleus. In fact given a sublocale
+$f:X\to Y$ then $f_</em> \circ f^{-1}$ is the nucleus for the sublocale! It
+maps an open set to the direct image of its inverse image, which will be
+the largest open that contains the one you started with, and which
+itself also maps back to the same open in $X$.</p>
+<p>Now let&rsquo;s get back to considering the inclusion
+$i:\mathbb{Q}\hookrightarrow\mathbb{R}$. The push-forward map $i_*$
+sends the open set &ldquo;all of $\mathbb{Q}$&rdquo; in $\mathbb{Q}$ to the largest
+open in $\mathbb{R}$ whose inverse image is contained in $\mathbb{Q}$.
+But $\mathbb{Q}$ is dense so this is all of $\mathbb{R}$! There&rsquo;s no
+smaller open that contains the rationals! The requirement that this
+push-forward be an open set is forbidding us from carving out these
+pathological dense subsets in the category of locales. The topological
+glue of the real numbers is constraining what kind of subobjects we have
+access to.</p>
+<h1 id="measure-theory">Measure theory</h1>
+<p>We have prepared all the abstract background. We have a new setting for
+topology called locale theory, which has broken away from the concept of
+a point. We have seen that the monomorphisms are different than in the
+category of topological spaces, and we have examples of sublocales that
+have no points. Let&rsquo;s bring measure theory into the mix and define
+randomness in this setting.</p>
+<p>Technically we are back to requiring the &ldquo;$\sigma-$&rdquo; on the words
+&ldquo;frame&rdquo;, &ldquo;locale&rdquo; and &ldquo;sublocale&rdquo; so that we can reconnect with the
+countability requirements of measures. On the other hand many spaces we
+care about are &ldquo;strongly Lindelöf&rdquo; and we can drop the $\sigma-$.
+Simpson works out the details in [@simpson]. To be strongly Lindelöf
+means that for any collection of open sets, their union is contained in
+a <em>countable</em> union of open sets. This includes $\mathbb{R}$. For the
+rest of the essay we&rsquo;ll assume we are dealing with strongly Lindelöf
+spaces and we&rsquo;ll drop the $\sigma-$, but of course the full theory can
+be more general if we want.</p>
+<p>We will define a measure on a locale/frame and then extend it to all the
+sublocales of the frame.</p>
+<p>A measure on a frame is a function $\mu:F\to [0,\infty]$ satisfying
+$$\mu(\bot)=0$$ $$x\leq y\implies \mu(x)\leq\mu(y)$$
+$$\mu(x)+\mu(y)=\mu(x\vee y)+\mu(x\wedge y)\quad\mathrm{(&ldquo;modularity&rdquo;)}$$
+$$(x_i)<em>{i\geq 0}\mathrm{\ ascending\ }\implies \mu(\bigvee</em>{i\geq 0}x_i)=\sup_{i\geq 0}\mu(x_i)\quad\mathrm{(&ldquo;continuity&rdquo;)}.$$
+We say $\mu$ is a probability measure if $\mu(\top)=1$. We will also
+call $\mu$ a measure on a locale if it is a measure on the corresponding
+frame of opens.</p>
+<p>To bring the concept of measure to sublocales we will generalize the
+concept of outer measure. We say a locale is <em>fitted</em> if for every
+sublocale $Y\subseteq X$ it holds that $Y=\bigwedge\mathcal{N}(Y)$ where
+$\mathcal{N}(Y)={U\in\ensuremath{\mathcal{O}}(X)|Y\subseteq U}$, the
+family of opens containing $Y$. We extend the measure $\mu$ to a measure
+$\mu^<em>$ on any sublocale by $\mu^</em>(Y)=\inf_{U\in\mathcal{N}(Y)}\mu(U)$,
+i.e. the limit of the measure of the open sets that intersect to $Y$.
+There is work to show that spaces we care about are fitted, and that
+this definition really defines a measure (see section 5 of [@simpson]).</p>
+<p>We can now cash in the fact that we cannot decompose locales into two
+dense sublocales. Simpson [@simpson] proves in Example 4.7 that the
+standard measure on open subsets of $\mathbb{R}^n$, which extends to a
+measure on sublocales in the way we just defined, is preserved under
+Euclidean translations. This measure agrees with Lebesgue measure
+whenever the sublocale agrees with a measurable set. In standard measure
+theory there is no translation invariant measure on arbitrary subsets of
+$\mathbb{R}^n$ due to pathological examples like cosets of rational
+numbers, which of course are automatically avoided in locale theory.</p>
+<h2 id="the-random-sublocale">The random sublocale</h2>
+<p>We are ready to define the random sublocale
+$\ensuremath{\mathrm{Ran}}_X$ of an arbitrary locale $X$ equipped with a
+probability measure $\mu$. We&rsquo;ll do it three times, once for each
+definition of sublocale.</p>
+<p>The spatial definition of $\ensuremath{\mathrm{Ran}}<em>X$ is the smallest
+sublocale of measure 1, or equivalently the intersection of all
+sublocales of measure 1. This tracks exactly with the definition of
+Kurtz randomness seen in the algorithmic randomness literature. It&rsquo;s
+morally similar to $X</em>{\neg\neg}$ but making use of measure.
+$X_{\neg\neg}$ is the smallest dense sublocale of $X$, whereas
+$\ensuremath{\mathrm{Ran}}_X$ is the smallest measure-1 sublocale.</p>
+<p>The quotient definition of $\ensuremath{\mathrm{Ran}}<em>X$ is the
+equivalence relation $=</em>{\ensuremath{\mathrm{Ran}}<em>X}$ given by
+$U=</em>{\ensuremath{\mathrm{Ran}}_X} V \iff \mu(U)=\mu(U\cap V)=\mu(V)$.
+Opens are equivalent if they cover the same piece of space with equal
+measure.</p>
+<p>The nucleus definition is not mentioned by Simpson, but obviously it&rsquo;s
+given by
+$j_{\ensuremath{\mathrm{Ran}}<em>X}(U) = \bigcup</em>{V\supseteq U, \mu(U)=\mu(V)}V.$
+In other words, it maps $U$ to the maximal open that contains $U$ and
+has the same measure as $U$.</p>
+<p>This sublocale has no points! Given a point $p\in X$, the set $X-{p}$
+has measure 1 and so $\ensuremath{\mathrm{Ran}}_X\subseteq X-{p}$ and
+so $p$ is not present in the random sublocale. Equating sets blurs away
+the points like $\neg\neg$ does.</p>
+<h1 id="conclusion-open-sets-vs-randomness">Conclusion: open sets vs randomness</h1>
+<p>Topology is about open sets, and open sets correspond to semideciadable
+properties, i.e. properties that can be verified in finite time, but
+might need infinite time to refute. This is philosophically adjacent to
+being computable and constructive. In the Cantor space of binary
+sequences, the open sets are unions of cylinders, which are finite
+prefixes of sequences. We can verify propositions about infinite
+sequences just when we can do it in finite time. The finiteness is the
+openness and vice versa.</p>
+<p>Locales take just the open sets from topology and build from there,
+without allowing us to have points unless we can construct them.</p>
+<p>We&rsquo;ve seen that locales behave very differently! There have smallest
+dense subsets so you can&rsquo;t decompose the reals into a disjoint union of
+rational and irrational. The topological glue constrains you from doing
+this.</p>
+<p>Measure theory can be done on locales and it avoids some pathological
+problems that set theory causes. And we can form a smallest full-measure
+sublocale, &ldquo;random sublocale.&rdquo; This sublocale has no points.</p>
+<p>So if we revisit our set theoretic foundations and consider open sets to
+be primary, then we arrive at a definition of randomness where the
+randoms constitute a space with full measure but no points. This makes
+perfect sense once you appreciate that having points requires work to
+produce one, but random points can never be fully produced.</p>
+<p>This simple presentation gives the appearance, at least to me, that
+locale theory permits only one definition of randomness, which if true
+would be a major disadvantage. Algorithmic randomness contains a few
+moving parts such as whether certain measures can be computably
+obtained, or whether convergence of a limit is computable or can be
+computably bounded. Can we gain control over analogous parts of the
+theory within locale theory? Or are we stuck with Kurtz randomness?
+There are indications that the Borel hierarchy of sets can be imported
+into locale theory<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> from which we could obtain weak $n$-randomness,
+so that would be the logical next step to flesh out.</p>
+<p>Perhaps there is another option, which is that locale theory may not by
+itself offer control over all the extra choices contained in the theory
+of algorithmic randomness, but that passing from locales to the theory
+of assemblies in a realizability topos may offer them instead. Topos
+theory is built on top of locale theory, so this would be like
+continuing the narrative. In such a case locales would offer the unified
+big picture of the origins of randomness, which are then exported to
+different implementations.</p>
+<p>Lastly let me speculate on the role of almost-everywhere properties in
+locale theory. I imagine we could replace statements like</p>
+<blockquote>
+<p>$x\in [0,1]$ is Schnorr random if and only if every computable
+function $f$ of bounded variation with effectively integrable
+derivative $f&rsquo;$ is differentiable at $x$</p>
+</blockquote>
+<p>with</p>
+<blockquote>
+<p>If $f:[0,1]\to\mathbb{R}$ is a morphism in $\mathsf{Loc}$, then $f$ is
+differentiable on $\ensuremath{\mathrm{Ran}}_{[0,1]}$.</p>
+</blockquote>
+<p>We could perhaps drop the explicit requirement of computability because
+we&rsquo;d be in a constructive framework already, and instead of stating the
+result pointwise we&rsquo;d have a global statement. It remains to properly
+define smoothness in the locale framework and to work out many details!</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>See slides by Simpson at
+<a href="https://ccc2017.loria.fr/slides/ccc_simpson.pdf" target="_blank" rel="noopener">https://ccc2017.loria.fr/slides/ccc_simpson.pdf</a>.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+    </div>
+
+    
+
+
+
+
+
+
+<div class="share-box">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://greg.langmead.info/writing/randomness/&amp;text=Randomness%20as%20Pointlessness" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://greg.langmead.info/writing/randomness/&amp;t=Randomness%20as%20Pointlessness" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook-f">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Randomness%20as%20Pointlessness&amp;body=https://greg.langmead.info/writing/randomness/" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://greg.langmead.info/writing/randomness/&amp;title=Randomness%20as%20Pointlessness" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=Randomness%20as%20Pointlessness%20https://greg.langmead.info/writing/randomness/" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://greg.langmead.info/writing/randomness/&amp;title=Randomness%20as%20Pointlessness" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      <a href="https://greg.langmead.info/"><img class="avatar mr-3 avatar-circle" src="https://s.gravatar.com/avatar/3b9a5c159ed5c3414cb78274f6058cc2?s=200" alt=""></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://greg.langmead.info/"></a></h5>
+      <h6 class="card-subtitle">Machine Learning Engineer</h6>
+      <p class="card-text">I am a software engineer and mathematician. I work on NLP algorithms for Apple News, and research homotopy type theory in CMU&rsquo;s philosophy department.</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/glangmead" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.co.uk/citations?user=KFbBBPD_nAoJ" target="_blank" rel="noopener">
+        <i class="ai ai-google-scholar"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/glangmead" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+    
+  
+  
+    
+  
+
+  
+
+  
+  <p class="powered-by copyright-license-text">
+    © 2022 Me. This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank">CC BY NC ND 4.0</a>
+  </p>
+  
+
+  <p class="powered-by footer-license-icons">
+    <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank" aria-label="Creative Commons">
+      <i class="fab fa-creative-commons fa-2x" aria-hidden="true"></i>
+      <i class="fab fa-creative-commons-by fa-2x" aria-hidden="true"></i>
+      
+        <i class="fab fa-creative-commons-nc fa-2x" aria-hidden="true"></i>
+      
+      
+        <i class="fab fa-creative-commons-nd fa-2x" aria-hidden="true"></i>
+      
+    </a>
+  </p>
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-themes" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+      
+
+    
+    <script src="/js/vendor-bundle.min.53d67dc2cb1ebceb89d5e2aba2f86112.js"></script>
+
+    
+    
+    
+      
+
+      
+      
+
+      
+
+      
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/highlight.min.js" integrity="sha512-Ypjm0o7jOxAd4hpdoppSEN0TQOC19UtPAqD+4s5AlXmUvbmmS/YMxYqAqarQYyxTnB6/rqip9qcxlNB/3U9Wdg==" crossorigin="anonymous"></script>
+        
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/r.min.js" crossorigin="anonymous"></script>
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/latex.min.js" crossorigin="anonymous"></script>
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/agda.min.js" crossorigin="anonymous"></script>
+        
+      
+
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+      
+      <script id="search-hit-fuse-template" type="text/x-template">
+        <div class="search-hit" id="summary-{{key}}">
+          <div class="search-hit-content">
+            <div class="search-hit-name">
+              <a href="{{relpermalink}}">{{title}}</a>
+              <div class="article-metadata search-hit-type">{{type}}</div>
+              <p class="search-hit-description">{{snippet}}</p>
+            </div>
+          </div>
+        </div>
+      </script>
+      
+        <script src="https://cdn.jsdelivr.net/gh/krisk/Fuse@v3.2.1/dist/fuse.min.js" integrity="sha512-o38bmzBGX+hD3JHWUFCDA09btWaqrNmoJ3RXLlrysA7PP01Kgs4UlE4MhelE1v5dJR3+cxlR4qQlotsW7jKsnw==" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/gh/julmot/mark.js@8.11.1/dist/jquery.mark.min.js" integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg==" crossorigin="anonymous"></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+
+    
+    
+    
+    <script id="page-data" type="application/json">{"use_headroom":true}</script>
+
+    
+    
+      <script src="/js/wowchemy-headroom.c251366b4128fd5e6b046d4c97a62a51.js" type="module"></script>
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/en/js/wowchemy.min.ab2f2890dbe3e2e83579366d3d6e8fd9.js"></script>
+
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+
+</body>
+</html>

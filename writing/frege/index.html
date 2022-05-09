@@ -1,0 +1,1525 @@
+<!DOCTYPE html><html lang="en-us" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.5.0 for Hugo" />
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Gottlob Frege had a healthier and more humanistic view of the separation between the doing of math and the formalization of math than today&#39;s AI advocates do." />
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://greg.langmead.info/writing/frege/" />
+
+  
+  
+  
+    <meta name="theme-color" content="#1565c0" />
+  
+
+  
+  
+    
+    <script src="/js/mathjax-config.js"></script>
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.c7b8d9abd591ba2253ea42747e3ac3f5.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha512-W0xM4mr6dEP9nREo7Z9z+9X70wytKvMGeDsj7ps2+xg5QPrEBXC8tAW1IFnzjR6eoJ90JmCnFzerQJTLzIEHjA==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.1052fab8b7700a3dc49ee23683097d66.css" />
+
+  
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+    <link rel="manifest" href="/manifest.webmanifest" />
+  
+
+  <link rel="icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_3.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_180x180_fill_lanczos_center_3.png" />
+
+  <link rel="canonical" href="https://greg.langmead.info/writing/frege/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+
+  
+  
+    
+    
+  
+  <meta property="twitter:card" content="summary" />
+  
+    <meta property="twitter:site" content="@@glangmead" />
+    <meta property="twitter:creator" content="@@glangmead" />
+  
+  <meta property="og:site_name" content="Long Head" />
+  <meta property="og:url" content="https://greg.langmead.info/writing/frege/" />
+  <meta property="og:title" content="Frege&#39;s Values | Long Head" />
+  <meta property="og:description" content="Gottlob Frege had a healthier and more humanistic view of the separation between the doing of math and the formalization of math than today&#39;s AI advocates do." /><meta property="og:image" content="https://greg.langmead.info/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
+    <meta property="twitter:image" content="https://greg.langmead.info/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+  
+    
+      <meta
+        property="article:published_time"
+        content="2021-12-15T00:00:00&#43;00:00"
+      />
+    
+    <meta property="article:modified_time" content="2021-12-15T00:00:00&#43;00:00">
+  
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+
+
+  <title>Frege&#39;s Values | Long Head</title>
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="3f2aa65d88ef038d34045cd2d3f09a42" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.2ed908358299dd7ab553faae685c746c.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="header--fixed">
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+      
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/">Long Head</a>
+      </div>
+      
+
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+      
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/">Long Head</a>
+      </div>
+      
+
+      
+      
+      <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+        
+        <ul class="navbar-nav d-md-inline-flex">
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#about"><span>Home</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/posts"><span>Blog</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link  active" href="/writing"><span>Writing</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/publications"><span>Publications</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/uploads/resume.pdf"><span>CV</span></a>
+          </li>
+
+          
+          
+
+        
+
+          
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+        
+        
+          
+        
+
+        
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+        
+        
+        <li class="nav-item dropdown theme-dropdown">
+          <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+            <i class="fas fa-moon" aria-hidden="true"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-item js-set-theme-light">
+              <span>Light</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-dark">
+              <span>Dark</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-auto">
+              <span>Automatic</span>
+            </a>
+          </div>
+        </li>
+        
+
+        
+        
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+    
+    
+    
+
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Frege&#39;s Values</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Dec 15, 2021
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+  
+
+  
+  
+
+</div>
+
+    
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <h1 id="freges-values">Frege&rsquo;s Values</h1>
+<p><strong>By Greg Langmead, December 2021.</strong></p>
+<p>In the final decades of the 19th century Gottlob Frege expanded the power of logic as well as its scope. His stated goal was to show that the natural numbers could be created inside logic. But why was he doing this? What benefits did he think this would have and what value statements did he provide? I will show that what Frege valued was the rigorous pursuit of mathematical truth, and that he viewed his own contributions as entirely methodological. I will further show that this view, that logic serves the broader mathematical endeavor, is consistent with major streams of foundational mathematical activity today. I will examine type theory and the communities who use it to cultivate a flourishing mathematical practice. But lurking inside this rosy picture is a new crisis for mathematics. Ironically, this is not another instance of the crises of the 19th and 20th centuries, where mathematics required a renewed commitment to rigor in order to avoid confusion, paradoxes, or errors. There are indeed vocal elements today who claim that we are in just such a crisis! But this time we have all the tools we need to achieve the desired standards. Unfortunately, the proponents of those very tools have indirectly brought about a crisis of values, by supporting and celebrating a nihilistic, computational, and literally dehumanizing view of mathematics. What we need now is to repel these attacks with a new commitment to Frege&rsquo;s values: that logic is a tool of the inherently human exploration of mathematics, and not a value unto itself.</p>
+<h2 id="1-freges-goals-logic-in-service-of-mainstream-mathematics">1. Frege&rsquo;s goals: logic in service of mainstream mathematics</h2>
+<p>Frege&rsquo;s first big document, the <em>Begriffsschrift</em> (1879), begins its preface with the sentence &ldquo;The recognition of a scientific truth generally passes through several stages of certainty.&rdquo;<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> The rest of the document, and indeed Frege&rsquo;s entire body of work, is devoted to upgrading the <em>certainty</em> of <em>scientific truth</em>. The value is truth, and his methodology would help lend additional certainty to it. He does not level any criticisms at the agenda inside of mathematics or science generally. It&rsquo;s true that he argues for what we would call a realist take on science and mathematics, i.e. the position that mathematical objects are real objects in a platonic realm of ideas. It&rsquo;s also true that he argues against a psychological frame for such objects. But these are philosophical underpinnings, and again do not second guess the activities that the practitioners choose to focus on. So the arc of scientific inquiry, and of mathematical research, is a fixed background object that he seems to approve of and wants to support.</p>
+<p>The support he wants to offer is an epistemological upgrade: more airtight arguments which are more grounded in logic. Delivering this upgrade has two parts. First Frege will add constructions to logic itself, notably universal quantifiers, a primitive system of types, and the observation that equality comes in multiple kinds. This enables the logic to support a broader class of reasoning.</p>
+<p>With his suite of logical tools, Frege can offer his second idea, which is the Begriffsschrift, or concept script, itself. This is a notational tool for a mathematician to apply the laws of logic to some starting expressions that have been suitably encoded, working down the page applying laws of inference from the small permitted library, until a conclusion is reached. It is crucial that the concept script is a new notation, with little in common with spoken and written human languages except the use of letters for variables (he cites &ldquo;the inadequacy of language&rdquo;<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>). Here is an example that in modern notation would be &ldquo;B ∧ (B → A) → A&rdquo; or in words &ldquo;if B holds, and B implies A, then A holds&rdquo;<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>:</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="Modus ponens in the concept script" srcset="
+               /writing/frege/modus_ponens_hu47a97259ec38e74dd7eabcdfd7b30ccb_8300_f6be9a95d902c6a6a46d320c3ef793b0.webp 400w,
+               /writing/frege/modus_ponens_hu47a97259ec38e74dd7eabcdfd7b30ccb_8300_0dbd5f5f237c945fd92de88589205561.webp 760w,
+               /writing/frege/modus_ponens_hu47a97259ec38e74dd7eabcdfd7b30ccb_8300_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/writing/frege/modus_ponens_hu47a97259ec38e74dd7eabcdfd7b30ccb_8300_f6be9a95d902c6a6a46d320c3ef793b0.webp"
+               width="144"
+               height="151"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<p>and here is his diagram showing that his expressions can subsume the &ldquo;square of opposition&rdquo;, a sort of ad-hoc logical tool used over the preceding centuries<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup><sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup>:</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="Square of opposition" srcset="
+               /writing/frege/opposition_square_hucb7acf808629d9ada98edfaa0c2821f5_48927_3c85efc895475ed5ee04d7ab50e90b7c.webp 400w,
+               /writing/frege/opposition_square_hucb7acf808629d9ada98edfaa0c2821f5_48927_a80513893145bfe6d3f1f4a8d6283fb5.webp 760w,
+               /writing/frege/opposition_square_hucb7acf808629d9ada98edfaa0c2821f5_48927_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/writing/frege/opposition_square_hucb7acf808629d9ada98edfaa0c2821f5_48927_3c85efc895475ed5ee04d7ab50e90b7c.webp"
+               width="432"
+               height="307"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<p>Frege&rsquo;s proposal can be expressed as a layer diagram, where lower levels support the ones above, and higher layers make use of the ones directly underneath:</p>
+<pre><code>Science and Mathematics
+-----------------------
+Concept script
+-----------------------
+Logic
+</code></pre>
+<p>He wanted the concept script and logical framework to be adopted, to be used by mathematicians in daily practice, or at least when extra certainty was desired. The concept script is the interface to the logic, and so if a practitioner were to successfully use the concept script to prove a result, that result would be connected all the way to the logical bedrock of knowledge:</p>
+<blockquote>
+<p>The firmest proof is obviously the purely logical, which, prescinding from [i.e., holding itself apart from] the particularity of things, is based solely on the laws on which all knowledge rests.<sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup></p>
+</blockquote>
+<p>The user is empowered to avoid all intuitive leaps; the proof would be free of gaps:</p>
+<blockquote>
+<p>So that nothing intuitive could intrude here unnoticed, everything had to depend on the chain of inference being free of gaps.<sup id="fnref:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">7</a></sup></p>
+</blockquote>
+<blockquote>
+<p>Everything that is necessary for a valid inference is fully expressed [in the concept script]; but what is not necessary is mostly not even indicated; <em>nothing is left to guessing</em>.<sup id="fnref:8"><a href="#fn:8" class="footnote-ref" role="doc-noteref">8</a></sup></p>
+</blockquote>
+<p>His comparison of the concept script to a microscope is very illuminating. First of all it is a tool which we use to examine the true subject matter at hand, namely scientific truth. But used properly the microscope does not set the agenda or ask the questions. It is a tool that lays alongside the primary inquiry.</p>
+<p>He even includes a roadmap of future goals for the concept script, to support even more scientific areas such as geometry, analysis, and physics:</p>
+<blockquote>
+<p>It seems to me to be even easier to extend the domain of this formula language to geometry. Only a few more symbols would have to be added for the intuitive relations that occur here. In this way one would obtain a kind of analysis situs. The transition to the pure theory of motion and thence to mechanics and physics might follow here.<sup id="fnref:9"><a href="#fn:9" class="footnote-ref" role="doc-noteref">9</a></sup></p>
+</blockquote>
+<p>The analogy to a software library gaining features over time is hard to avoid, and I don&rsquo;t think it needs to be avoided! But the point I want to keep emphasizing is that he is not trying to disturb the trajectory of these fields, he&rsquo;s trying to help them succeed. The scientific fields in question already have the right mission statements: scientific truth. He is aligned with that goal.</p>
+<p>Frege might feel that I am downplaying his primary achievement, which was to enlarge logic to the point where the natural numbers and laws of arithmetic were included directly in the logical layer. This was the subject of his later works <em>The Foundations of Arithmetic</em> (1884) and <em>Basic Laws of Arithmetic</em> (part 1 in 1893, part 2 in 1903). Since the real numbers had been built up rigorously from the natural numbers by contemporaries such as Richard Dedekind, Frege would be connecting the whole edifice directly into logic. He felt this was a big missing piece:</p>
+<blockquote>
+<p>Yet is it not shameful that a science should be so unclear about its most prominent object, which is apparently so simple?<sup id="fnref:10"><a href="#fn:10" class="footnote-ref" role="doc-noteref">10</a></sup></p>
+</blockquote>
+<p>He spends many pages of these later works trying to define &ldquo;concepts&rdquo; and &ldquo;objects&rdquo;, so that numbers can be given the status of real objects in a platonic sense. He captures his definition using something similar to set theory except that the atomic objects are extensions of concepts. Concepts in turn are propositional functions, that is functions that have the value True or False for any given object. The extension of the concept is then all the objects that yield the value True when plugged into the function. Then he defines 0 and 1 and a successor function, and can then use the concept script to prove theorems about arithmetic.</p>
+<p>This part of his quest, subsuming arithmetic into logic, is not easy to assess. Most of it in <em>The Foundations of Arithmetic</em> takes the form of philosophical writing in human language, like any other philosophy paper, and so it&rsquo;s doubtful he has an airtight case. But it doesn&rsquo;t matter so long as we allow ourselves to deal separately with the philosophical status of our foundations, and the inferences we make from those foundations. The successful portion of Frege&rsquo;s work is the strategy of building a system of logic, and then somehow empowering ourselves to make airtight arguments <em>starting from that system</em>. Frege himself does just this in the subsequent <em>Basic Laws of Arithmetic</em>, wielding his concept script to prove the laws of arithmetic starting from his definition of the natural numbers.</p>
+<p>Tying it all together we have these elements:</p>
+<ol>
+<li>Science and mathematics have value.</li>
+<li>They generate value in part because they are rigorous.</li>
+<li>Enhancing the rigor would enhance the power and the value of these activities.</li>
+<li>The enhancement can be brought about by expanding logic and by creating methods to effectively wield the logic: tools for people to perform gap-free inference.</li>
+</ol>
+<h2 id="2-formalizing-mathematics-carrying-out-freges-project">2. Formalizing mathematics: carrying out Frege&rsquo;s project</h2>
+<p>The microscope that Frege invented is a logical system with a primitive notion of types. The type system consisted of &ldquo;objects&rdquo; at the lowest level, then functions of objects at level 1, then higher functions at the higher levels. His logical rules of inference are these nine (in modern notation):</p>
+<ol>
+<li>⊢ a → (b → a)</li>
+<li>⊢ (c → (b → a)) → (c → b) → (c → a)</li>
+<li>⊢ (d → (b → a)) → b → (d → a)</li>
+<li>⊢ (b → a) → (¬a → ¬b)</li>
+<li>⊢ ¬¬a → a</li>
+<li>⊢ a → ¬¬a</li>
+<li>⊢ (c ≣ d) → f(c) → f(d)</li>
+<li>⊢ c ≣ c</li>
+<li>⊢ ∀a.f(a) → f(c)</li>
+</ol>
+<p>Quite a lot of his specification is easily recognizable today, of course because we adopted it. His introduction of the universal quantifier, for example, (∀ in modern notation) was an original and impactful contribution. He was also careful about the use of bound and free variables in the concept script, and of the fact that the quantifiers need to have their scope specified. He also distinguished two kinds of equality to accompany his two levels of meaning, known as <em>sense</em> and <em>reference</em>. The sense of an expression is the exact meaning of the syntactic encoding (but isn&rsquo;t the same as the syntactic encoding itself, which is a distinct third layer we can ignore here), and the reference is a semantic object to which the sense eventually refers, possibly after doing a lot of work to unpack the sense. His famous linguistic example is how &ldquo;the morning star&rdquo; has the same reference as &ldquo;the evening star&rdquo; since both are the planet Venus. But they differ at the level of sense, and they pick out the planet via different methods. Similarly, the equation &ldquo;a = a&rdquo; holds because the senses are syntactically the same, whereas &ldquo;a + b = b + a&rdquo; holds after a short proof, i.e. the senses differ but the references turn out to be the same. All of these ideas remain relevant today and we&rsquo;ll return to them when we look at type theory.</p>
+<p>It&rsquo;s not just the logic that was prescient, but the concept script as well. Compare the concept script notation we saw earlier with, say, the heavy use of prose in most mathematics textbooks from the last 150 years. Most mathematicians are content with a lesser version of rigor, where arguments are made very carefully and as airtight as possible, but remain optimistically rooted in the intuition and incisiveness of the human operator. Frege did not think this was good enough:</p>
+<blockquote>
+<p>The requirements on the rigour of proofs inevitably result in greater length. Anyone who does not bear this in mind will indeed be surprised at how long-winded the proof often is here of a proposition that he believes can be immediately grasped in a single act of understanding. This will be particularly striking if we compare Dedekind’s work <em>Was sind und was sollen die Zahlen?</em>, the most thorough work on the foundation of arithmetic that has come to my attention in the last few years. In much less space it pursues the laws of arithmetic much further than is done here. This brevity is admittedly only achieved by not really proving much at all.<sup id="fnref:11"><a href="#fn:11" class="footnote-ref" role="doc-noteref">11</a></sup></p>
+</blockquote>
+<p>Patrick Massot, a prominent member of the Lean and Mathlib community, makes a convincing case<sup id="fnref:12"><a href="#fn:12" class="footnote-ref" role="doc-noteref">12</a></sup> that it is easy to overlook special cases such as the empty set when reasoning informally, but that Frege-style gap-free reasoning, of a kind that is literally being performed today with the help of computers, will catch these cases. This sort of completeness of argumentation is helpful, even crucial, and Frege deserves credit for focusing on this part of the challenge. Frege was clearly able to relate to the experience Massot is describing, where the formal system informs the operator that they must consider the case of the empty set:</p>
+<blockquote>
+<p>one must write down all intermediate steps, to let the full light of consciousness fall upon them.<sup id="fnref:13"><a href="#fn:13" class="footnote-ref" role="doc-noteref">13</a></sup></p>
+</blockquote>
+<p>I&rsquo;ll have more to say about computers and Mathlib shortly. But before I leave the subject of computers for now, it&rsquo;s important to note something we do <em>not</em> see in Frege&rsquo;s value system. There is a danger of conflating strictly computational activity, such as that performed by digital or human computers with mindless or degrading or even harmful jobs<sup id="fnref:14"><a href="#fn:14" class="footnote-ref" role="doc-noteref">14</a></sup>. There is no evidence that Frege felt this way about a would-be operator of the concept script. We have just seen that he admitted the proofs would be long, but nowhere does he mention automation or machinery. He seems to have envisioned even the fully rigorous process as intended not only for people, but for mathematicians themselves.</p>
+<h2 id="3-disagreement-with-hilbert">3. Disagreement with Hilbert</h2>
+<p>I want to discuss something Frege knew about but wrongly rejected. It&rsquo;s a little depressing that he missed out on it, because as we will see it&rsquo;s the other piece of the modern point of view, and enabled the vindication of Frege&rsquo;s logic and concept script in the end.</p>
+<p>In 1899 Hilbert published <em>Foundations of Geometry</em>, which we recognize now as a major development. He proposed splitting mathematical theories, such as Euclidean geometry, into two parts. One part contains the axioms of the theory, including any conceptual objects which the theory will talk about and operate on. For geometry the objects are <em>points</em>, <em>lines</em>, <em>line segments</em>, <em>circles</em>, <em>angles</em>, and so on. The axioms could be, say, Euclid&rsquo;s postulates (from Wolfram MathWorld<sup id="fnref:15"><a href="#fn:15" class="footnote-ref" role="doc-noteref">15</a></sup>):</p>
+<ol>
+<li>A straight line segment can be drawn joining any two points.</li>
+<li>Any straight line segment can be extended indefinitely in a straight line.</li>
+<li>Given any straight line segment, a circle can be drawn having the segment as radius and one endpoint as center.</li>
+<li>All right angles are congruent.</li>
+<li>Given any straight line and a point not on it, there exists one and only one straight line which passes&quot; through that point and never intersects the first line, no matter how far they are extended.</li>
+</ol>
+<p>The second part of the theory is to take the axioms and <em>interpret</em> them in some specific mathematical setting. We could interpret all the objects (points, lines, etc.) in the usual Euclidean way in the plane, for example. But we could also work on a two-dimensional sphere and interpret &ldquo;point&rdquo; to mean &ldquo;pair of antipodal points on the sphere&rdquo; and &ldquo;line&rdquo; to mean &ldquo;great circle&rdquo;. We then get a second consistent theory except for postulate 5, which fails to hold because instead of having one such line, there are none.</p>
+<p>There are at least three things going on here. First of all, it condenses geometry, both Euclidean and non-Euclidean, into a concise logical package. Secondly it empowers us to split our arguments into two parts. One part can focus on all the deductions we can make inside the system, simply based on the axioms, without referring to the interpretation. Some results require postulate 5 for their proof and these hold only in the planar interpretation. I like to think of the purely axiom-derived theorems as supplying strong answers to &ldquo;why&rdquo; questions. Why does some fact hold in both Euclidean and non-Euclidean geometry? If we can prove it straight from the postulates, then it is because <em>anything</em> that obeys postulates 1-4 also obeys this rule. In a way the axiom systems together with deductions therefrom constitute a <em>schema</em> for a whole family of mathematical theorems.</p>
+<p>But Hilbert&rsquo;s method also gives us one more capability. We can directly ask whether the axioms are consistent, or the related question whether some of the axioms are independent of the rest. Since there are two interpretations of postulates 1-4 one of which obeys postulate 5 and one of which does not, we can conclude that postulate 5 does not follow from 1-4. That&rsquo;s a result that took 2,000 years to discover. By moving back and forth between the axioms and some clever special models, we can conclude things just about the axioms. The independence of axiom 5 follows from an argument that uses a model. This is a standard trick today, which is why this was a major development.</p>
+<p>When I learned that Frege responded strongly <em>against</em> this idea of Hilbert&rsquo;s, I was truly surprised. What were his objections? Frege wrote:</p>
+<blockquote>
+<p>No man can serve two masters. One cannot serve both truth and untruth. If Euclidean geometry is true, then non-Euclidean geometry is false, and if non-Euclidean geometry is true, then Euclidean geometry is false.<sup id="fnref:16"><a href="#fn:16" class="footnote-ref" role="doc-noteref">16</a></sup></p>
+</blockquote>
+<blockquote>
+<p>If one is content to have only phantoms hovering around one, there is no need to take the matter so seriously; but in science we are subject to the necessity of seeking after truth.<sup id="fnref:17"><a href="#fn:17" class="footnote-ref" role="doc-noteref">17</a></sup></p>
+</blockquote>
+<p>The &ldquo;phantoms&rdquo; would presumably be the bare axiom system, devoid of interpretation.</p>
+<p>It seems clear Frege is misunderstanding Hilbert, but I think we can learn some important lessons even from that. The misunderstanding is that Frege is unable to, or unaware that he should, merely <em>postpone</em> the interpretation of the axioms. The phantoms are temporary, and the process definitely has two steps. Frege insists in the first quote that the axioms must be <em>true</em> which entails that they also be <em>fully interpreted</em>. He and many other thinkers believed they were being invited to live <em>only</em> in axiom-space, proving empty results with no meaning. This was likened (pejoratively) to a game, and is given the name &ldquo;formalism&rdquo;. Hilbert retorted in 1919:</p>
+<blockquote>
+<p>We are not speaking here of arbitrariness in any sense. Mathematics is not like a game whose tasks are determined by arbitrarily stipulated rules. Rather, it is a conceptual system possessing internal necessity that can only be so and by no means otherwise.<sup id="fnref:18"><a href="#fn:18" class="footnote-ref" role="doc-noteref">18</a></sup></p>
+</blockquote>
+<p>I would argue that Frege is doing more than simply misunderstanding the proposal. He is defending mathematics from being drained of meaning. Hilbert is not of course draining it of meaning, but Frege thought he was and it bothered him. A geometrical point is a mathematical object and claims about it can be true or false, and such claims have value. An axiom is just a phantom, and has no value at all. This is very clarifying for us. If we consider Hilbert&rsquo;s procedure a piece of new technology, Frege is like a luddite, worrying whether it will damage the field of mathematics.</p>
+<p>Frege must have believed this so fully that he did not take advantage of the synergy with his life&rsquo;s work. The combination of axioms with logic allows an even larger portion of mathematical proofs to remain analytic, rigorous, and also general. The original theorems in planar geometry are fully recovered after performing interpretation, so nothing is lost but many new theorems are gained simultaneously, across all known and future interpretations.</p>
+<p>In hindsight, Frege was trying to base his theory of natural numbers directly in platonic philosophical bedrock. He spent many pages arguing philosophically about concepts, functions, and extensions of functions, to lend credence that numbers are real objects. This is the realist part of his philosophy, but it&rsquo;s actually not dependent on, or coupled to, the logical tools. We can preserve the logic and the value system, the quest for mathematical truth, and plug these into Hilbert&rsquo;s axiomatic approach instead of into would-be real objects. In fact maybe we can even preserve the realism! Frege could have blessed certain interpretations of the axioms as &ldquo;real&rdquo; for example. But this counterfactual will not be of use to us here.</p>
+<h2 id="4-modern-foundations-vindication-of-freges-logic">4. Modern foundations: vindication of Frege&rsquo;s logic</h2>
+<h3 id="41-synthesis-of-frege-and-hilbert">4.1. Synthesis of Frege and Hilbert</h3>
+<p>Here is a very informal picture of modern mathematical foundations: mathematics is a graph structure (see picture below). It&rsquo;s not a true formal graph, but the metaphor is so close to true that perhaps it could be made precise even without an explicit formalization like the ones we will discuss shortly. Each node is a theorem, and the edges (which are directed) represent the interdependency between the theorems. In other words, each node has a proof that makes use of the incoming edges. Maybe there are multiple proofs, each of which draws on a different subset of the edges. The source nodes, those with no incoming edges, are either axioms or definitions. The leaf nodes, with no outgoing edges, are results that are not yet used to prove something else. Some of these are at the frontier of research, and might be extended one day with outgoing edges to new results.</p>
+<p>Let&rsquo;s fix our attention on some node, such as the theorem which states that the collection of smooth functions {f : M → ℝ | is_smooth(f)} forms an algebra under pointwise multiplication and addition, and multiplication by real numbers. Call this node &ldquo;is_algebra(M → ℝ)&rdquo;. Now light up all the nodes that lie on some path that flows into is_algebra(M → ℝ). If we are working in a foundation system like ZFC, then there are some ZFC axiom nodes, and also some definition nodes from various theories that we need (such as topology and calculus). From these there are edges that flow through a bunch of intermediate nodes (lemmas and other theorems) into is_algebra(M → ℝ). For example, somewhere there is a node that states that the pointwise product fg of two smooth functions f, g : M → ℝ is itself smooth. This will be needed to show that the algebra is closed under this operation.</p>
+<p>This can all be formalized in a computer program (perhaps a proof assistant) that offers a system of logic together with the ZFC axioms. We then have some really valuable outputs: we have is_algebra(M → ℝ) itself, plus some documentation about the proof. But note that it&rsquo;s <em>relative to</em> a few things:</p>
+<ol>
+<li>The choice of ZFC as our foundations</li>
+<li>The choice of logical system</li>
+<li>The computer software, for example Metamath<sup id="fnref:19"><a href="#fn:19" class="footnote-ref" role="doc-noteref">19</a></sup></li>
+</ol>
+<p>Hopefully the computer program doesn&rsquo;t add very much on top of ZFC and the logical system, but it&rsquo;s always possible there are bugs or other caveats hiding in there, so we&rsquo;d better include it. We might be using a different proof assistant such as Lean, which uses a form of Martin-Löf type theory (MLTT) and which in general supports only constructive logic (though I hasten to add that you can add extra axioms that permit classical reasoning such as the law of excluded middle, in which case the results are simply applicable to fewer interpretations, in the Hilbert sense, of MLTT.)</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="Graph of dependencies, relative to the foundation" srcset="
+               /writing/frege/graph_hu76806657eac2add264b4aa19f72b86d0_104283_b1a1400fca2c824432e0afb1f76bb3fe.webp 400w,
+               /writing/frege/graph_hu76806657eac2add264b4aa19f72b86d0_104283_c229b0779effaf2577b7ba0cd382b878.webp 760w,
+               /writing/frege/graph_hu76806657eac2add264b4aa19f72b86d0_104283_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/writing/frege/graph_hu76806657eac2add264b4aa19f72b86d0_104283_b1a1400fca2c824432e0afb1f76bb3fe.webp"
+               width="576"
+               height="347"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<p>This relativism is a part of the modern picture of mathematics that I want to highlight so we can compare it with Frege&rsquo;s ideas. Mathematicians themselves explore the relativism <em>inside of mathematics</em>, by swapping in various axiom systems and various logical systems, and re-proving the theorems. Some mathematicians practice <em>reverse mathematics</em><sup id="fnref:20"><a href="#fn:20" class="footnote-ref" role="doc-noteref">20</a></sup> which is a project to explore the entire graph I described, for example by discovering requirements for some given axiom system to support (flow to) some family of theorems. Software practitioners that use multiple computer software packages in fact <em>must</em> move between foundations, since with our current technology they are forced to reimplement theorems in each programming language separately, and those languages may also have different logics. There is a large body of Coq software, and a separate body of Lean software as well that covers an overlapping set of theorems, and similar bodies of software in other languages.</p>
+<p>Frege acknowledged that there may be imperfections in his logical axioms and inference rules. In fact he was made aware of a paradox by Bertrand Russell and tried to repair it. But he doesn&rsquo;t indicate that we should entertain having more than one such system. It&rsquo;s nearly certain that his views were incompatible with such a notion. As we saw, he tried in true realist fashion to ground his logic in philosophical bedrock, in order to increase the world&rsquo;s total number of true, realist, complete logics from zero to one. His aversion to Hilbert&rsquo;s rootless vision of axiom systems is another hint that there was room for only one version of the truth. We can&rsquo;t rule out that he could have made room for multiple foundational vantage points, of course. Setting that difference aside, the narrative that begins <em>after</em> we select a foundation is very much compatible with Frege: we use the foundation to prove the same family of theorems, on the same quest for scientific truth, and establish them firmly and free of gaps.</p>
+<h3 id="42-type-theory">4.2. Type theory</h3>
+<p>The particular foundation offered by Martin-Löf&rsquo;s intuitionistic type theory<sup id="fnref:21"><a href="#fn:21" class="footnote-ref" role="doc-noteref">21</a></sup><sup id="fnref:22"><a href="#fn:22" class="footnote-ref" role="doc-noteref">22</a></sup> is especially noteworthy in this context, since it so perfectly incorporates the Hilbert picture into the foundations, while also capturing all three of Frege&rsquo;s most important contributions that I am highlighting: logic, a system of types, and two kinds of equality. In intuitionistic type theory the types are &ldquo;Hilbertian&rdquo;, meaning they are abstract objects that are meant to eventually be interpreted into more concrete mathematical objects. And the interpretation process is completely formal and mathematical! For example if a mathematician has some objects of interest to which they wish to apply type theory (such as sets, or sheaves of sets over a topological space, or many other examples), they simply have to arrange for those objects to live inside a category with a few specific properties and the type theory will automatically be interpretable on these objects. Proofs expressed in type theory become proofs about those objects. Different versions of type theory with more or fewer features will require different features to be present in the category. That rather beautiful picture covers the Hilbert side of things.</p>
+<p>On the Frege side, intuitionistic type theory has his notion of function objects and his distinction between free and bound variables, and the requirement that variables have types. It&rsquo;s definitely more fleshed out and carefully thought through than what Frege gave us, but I believe it fulfills the very requirements that Frege set out.</p>
+<p>Miraculously, in type theory the logical framework is actually emergent from the type system! This is in some sense the greatest validation of Frege of all. Just by having function types, product types, coproduct types and so on, and assigning universal properties to these, we do not need to separately impose a logic. The behavior of the function types, for example, automatically establishes that B ∧ (B → A) → A. The behavior of the product types satisfies the rules of conjunction, and the coproduct types do the same for disjunction. Type theorists call this emergent logic &ldquo;internal&rdquo; since it uses the material of the types to state and prove results. Whereas Frege&rsquo;s goal was to absorb the natural numbers, and hence part of mathematics, into logic, the modern perspective is to couple them in the opposite way: it is logic that is emergent!</p>
+<p>Finally we come to Frege&rsquo;s distinction between &ldquo;a = a&rdquo; and &ldquo;a + b = b + a&rdquo;, which he discusses in a few places including in <em>On Sense and Reference</em> (1892). He didn&rsquo;t incorporate it directly into his logic or concept script, but he spent some time describing the distinction as a sort of metamathematical commentary. This has been the most recent and perhaps unexpected vindication of Frege&rsquo;s priorities. Intuitionistic type theory indeed includes exactly the two kinds of equality Frege distinguished. One of them, dubbed &ldquo;judgmental equality&rdquo;, operates at the level of sense while the other, named &ldquo;propositional equality&rdquo;, which is a <em>type</em>, corresponds to reference. Having equality of sense gives you equality of reference automatically, but not vice versa. The exploration of these propositional equality types has led to the discovery of homotopy type theory and its infinite tower of equality types. Since equality is a type, there can be equalities between equalities and so on. This then turns out to generate an even more powerful theory for proving mathematical results.</p>
+<h2 id="5-proof-assistants-vindication-of-freges-concept-script">5. Proof assistants: vindication of Frege&rsquo;s concept script</h2>
+<p>Frege&rsquo;s vision was for mathematicians to use logic and gap-free formal methods to strengthen the research they were already doing, i.e. the seeking of scientific truth. Nowhere is this goal more visibly realized than in the community projects that have grown up around various proof assistants. Two prominent examples are Mathematical Components<sup id="fnref:23"><a href="#fn:23" class="footnote-ref" role="doc-noteref">23</a></sup>, which uses the Coq proof assistant, and Mathlib<sup id="fnref:24"><a href="#fn:24" class="footnote-ref" role="doc-noteref">24</a></sup> which uses the newer Lean proof assistant. There are mathematical communities around each of the other proof assistants as well, such as Isabelle, HOL Light, Agda, and so on. Some of these communities are growing quickly<sup id="fnref:25"><a href="#fn:25" class="footnote-ref" role="doc-noteref">25</a></sup>, and I imagine new languages will come along every few years as well to stir the pot. The mathematical communities and their leadership are distinct from the teams that implement and support the proof assistant software. The goal is to formalize some body of mathematics, eventually all of it, <em>using</em> the proof assistant. The math libraries are therefore a combination of a software project and a mathematical project. We should equate the focus of these teams on the mathematical content itself, and not just the tools, with an alignment with Frege&rsquo;s vision of the concept script as a mere microscope.</p>
+<p>There are diverse public statements by mathematicians such as Vladimir Voevodsky, recipient of a Fields Medal in 2002, who expressed worry in 2015 about the scale of the mathematical literature and how this undermines the certainty of new results<sup id="fnref:26"><a href="#fn:26" class="footnote-ref" role="doc-noteref">26</a></sup>:</p>
+<blockquote>
+<p>&ldquo;The world of mathematics is becoming very large, the complexity of mathematics is becoming very high, and there is a danger of an accumulation of mistakes,&rdquo; Voevodsky said.</p>
+<p>[&hellip;]In 1999 he discovered an error in a paper he had written seven years earlier.</p>
+</blockquote>
+<p>Kevin Buzzard frames this same problem as a crisis of rigor<sup id="fnref:27"><a href="#fn:27" class="footnote-ref" role="doc-noteref">27</a></sup>:</p>
+<blockquote>
+<p>Buzzard believes that these kinds of problems [mistakes and unpublished proofs] undermine pure maths to such an extent that it&rsquo;s slid into a crisis.</p>
+</blockquote>
+<p>And Peter Scholze, recipient of a Fields Medal in 2018, explains how the formalization project he led went very smoothly, and also made a profound contribution to his understanding of the theory itself<sup id="fnref:28"><a href="#fn:28" class="footnote-ref" role="doc-noteref">28</a></sup>:</p>
+<blockquote>
+<p>I am excited to announce that the Experiment has verified the entire part of the argument that I was unsure about. I find it absolutely insane that interactive proof assistants are now at the level that within a very reasonable time span they can formally verify difficult original research. Congratulations to everyone involved in the formalization!!</p>
+</blockquote>
+<blockquote>
+<p>What else did you learn?</p>
+<p>Answer: What actually makes the proof work! When I wrote the blog post half a year ago, I did not understand why the argument worked, and why we had to move from the reals to a certain ring of arithmetic Laurent series. But during the formalization, a significant amount of convex geometry had to be formalized (in order to prove a well-known lemma known as Gordan’s lemma), and this made me realize that actually the key thing happening is a reduction from a non-convex problem over the reals to a convex problem over the integers.</p>
+</blockquote>
+<p>All of these scientists developed a positive view towards the formalization of mathematics mid-career. The common reason is that they all wanted to keep doing mathematics successfully. They wanted to do the same work as before, but with more certainty. This is exactly what Frege was proposing. But on top of that, Scholze in particular articulated the additional benefit Frege highlighted, that when formalizing math &ldquo;one must write down all intermediate steps, to let the full light of consciousness fall upon them&rdquo;. The computer mediated the additional shared understanding of actual mathematics, by structuring the work required to build the theory, and by forbidding gaps.</p>
+<p>It will help to tease out what parts of the mathematical agenda the computer is currently helping with, because then we can spot the area where the actual crisis has begun. To study this I used the Lean proof assistant myself. I proved the proposition we discussed above, is_algebra(M → ℝ)<sup id="fnref:29"><a href="#fn:29" class="footnote-ref" role="doc-noteref">29</a></sup>. Lean has a small &ldquo;trusted kernel&rdquo; where the core logic is implemented, and this corresponds to Frege&rsquo;s logic, albeit expanded into the more powerful logic of intuitionistic type theory. In addition to the kernel, the language allows proofs to be built up incrementally with tactics that advance the state of the proof by applying various transformations and lemmas. Sometimes it&rsquo;s more intuitive to apply a tactic to the chain of steps that started with the assumptions, and sometimes you want to apply a tactic to transform the chain that leads to the goal. Eventually they will meet in the middle and form an unbroken chain. The software permits you to focus on one step at a time. It also enables you to designate one step as a possibly large sub-problem, which becomes the current lemma to prove. What the computer is offering among other things is a set of affordances to support a linear ordering of the work.</p>
+<p>I browsed the library of theorems about smooth and topological manifolds, and the library of definitions around vector spaces, rings, and algebras. I saw how to create an algebra out of a carrier object plus some operations, plus proofs that the carrier object was closed under those operations. I will call this the &ldquo;proof strategy&rdquo;. Then I performed the work to enter all this data into my own source file. At any given moment I could choose a place to add a step to the proof, at which point I had to type something! Knowing what to type after you choose a location is a tough sub-problem that I want to highlight. In summary, to formalize a proof you must:</p>
+<ol>
+<li>Formalize all the definitions.</li>
+<li>Plan the strategy, i.e. the method of proof. In my case the strategy was to prove that the collection of smooth real-valued functions satisfied each of the half-dozen requirements to be an algebra.</li>
+<li>Perform many iterations of the small-scale tactical piece: select a rule or lemma from the library, and apply it somewhere on the frontier of the proof.</li>
+<li>Choose an order to perform the actions in 3.</li>
+</ol>
+<p>The community manages the storage of definitions and existing theorems in the digital library (such as the Mathlib Github repository), which helps with 1. The mathematical content exists mainly in 2. Often an existing known proof is what you need to formalize, but in other situations you might have reason to prove the result with a different method in order to fit the logic being used. For example, some type theories do not offer classical logic such as the law of the excluded middle, requiring constructive proofs. Often these are not available in the literature. The computer helps with 3 and 4, and I want to come back and focus on 3 in a moment.</p>
+<p>Lean&rsquo;s tactics engine is one way to support 4. The whole paradigm of tactics is that you build up the proof from small commands. But other systems like Agda lack this explicitly incremental paradigm. Instead they offer interactive tools to probe the state of the proof, or leave figurative holes to come back to later. These contortions that the user went to are not saved with the file, however.</p>
+<p>So what about 3? If you are in the middle of a proof, and you believe that elsewhere in the library is a lemma that the pointwise product of two smooth functions is smooth, how do you find it so that you can type its name? What if you don&rsquo;t know whether that lemma is available or not? This portion of the task is not apparent in Frege&rsquo;s description but turns out to dominate the work. This is also the least mathematical part of the process! And it is here where mathematicians began to envision a role for artificial intelligence. What if I was in the middle of this proof and I could ask the proof assistant to <em>search</em> for an appropriate lemma? It could use any combination of brute-force search through all the definitions in the library, or some naming hints, or even some patterns learned from a database of example proofs. All of these approaches are taken by a diverse collection of tactics. The most general-purpose tools are sometimes called &ldquo;hammers&rdquo; because of the name of an early paradigmatic example. The community is eager for new hammers to help with such searches. One recent example in Coq was worthy of publication<sup id="fnref:30"><a href="#fn:30" class="footnote-ref" role="doc-noteref">30</a></sup>. The expertise required is quite orthogonal to the subject matter of smooth manifolds, and so it makes sense for a different sort of specialist to help tackle it.</p>
+<p>But it turns out there is a bit of a trap here. We converted a mathematical problem that used to be tackled with pencil and paper into a semi-computerized process. One part of that process, the finding of lemmas, is a problem entirely created by the computerization! It turns out to be hard for people to convert back into a human-solvable problem. And so now we have phoned our friends in the AI department to help us solve it. Might an AI researcher look at formalized math and wonder if the computer can do all of it, and do it better than people?</p>
+<h2 id="6-the-privilege-to-do-math">6. The privilege to do math</h2>
+<p>For fear of obfuscating what I want to say about today&rsquo;s crisis let me start by simply stating it: I think limiting the definition of &ldquo;doers of mathematics&rdquo; to people as soon as possible would be a healthy step. I think we should close ranks to defend this position because it is being attacked under the cloak of AI research. But I also think that computers are amazing tools and I have devoted my own career to making them smarter. Many mathematicians have the same positive view of computers, especially those in the formalization community that I have described. This makes it seem that I am trying to split hairs, and I worry that this appearance will make it even more difficult to mount a humanist defense against AI. My goal for the rest of this section is to convince you that:</p>
+<ol>
+<li>Some prominent AI researchers want to redefine mathematics to include computers as the doers, in the way others have done for the playing of chess and Go.</li>
+<li>Some mathematicians want to yield to this.</li>
+<li>Frege offers a vision for compartmentalizing the use of computers in math.</li>
+</ol>
+<h3 id="61-quantas-muddled-report">6.1. Quanta&rsquo;s muddled report</h3>
+<p>In the 2020 Quanta Magazine article &ldquo;How Close are Computers to Automating Mathematical Reasoning&rdquo;<sup id="fnref:31"><a href="#fn:31" class="footnote-ref" role="doc-noteref">31</a></sup> we get a good status report on the redefinition of mathematics as non-human. Several researchers are quoted in the article, but their viewpoints do not gel into a single coherent narrative. The picture becomes much clearer if we examine each quote and ask &ldquo;is this person focused on helping people do math, or helping computers do it?&rdquo;</p>
+<p>Michael Harris (a mathematician) wants people such as himself to do math and he worries that a proof assistant would make it harder: &ldquo;By the time I’ve reframed my question into a form that could fit into this technology, I would have solved the problem myself.&rdquo;</p>
+<p>Kevin Buzzard (the mathematician and evangelist for formalizing mathematics we met earlier) wants computers to be mathematicians and claims that mainstream mathematicians want the same: &ldquo;Computers have done amazing calculations for us, but they have never solved a hard problem on their own,&rdquo; he said. &ldquo;Until they do, mathematicians aren’t going to be buying into this stuff.&rdquo; I want to especially note the circular salesmanship in this sentiment: we want computers to get better at doing math because we want to sell the project to mathematicians, presumably so that computers can continue to do more math <em>for them</em>.</p>
+<p>Emily Riehl wants to learn to do math with a proof assistant and wants her students to learn too: &ldquo;It’s not necessarily something you have to use all the time, and will never substitute for scribbling on a piece of paper,&rdquo; she said, &ldquo;but using a proof assistant has changed the way I think about writing proofs.&rdquo;</p>
+<p>Two computer scientists, Christian Szegedy (at Google) and Josef Urban (at the Czech Institute of Informatics, Robotics and Cybernetics) want to teach computers to do math without any human involvement:</p>
+<blockquote>
+<p>Urban was partially inspired by Andrej Karpathy, who a few years ago trained a neural network to generate mathematical-looking nonsense that looked legitimate to non-experts. Urban didn’t want nonsense, though — he and his group instead designed their own tool to find new proofs after training on millions of theorems. Then they used the network to generate new conjectures and checked the validity of those conjectures using an ATP[automatic theorem prover] called E.</p>
+<p>The network proposed more than 50,000 new formulas, though tens of thousands were duplicates. &ldquo;It seems that we are not yet capable of proving the more interesting conjectures,&rdquo; Urban said.</p>
+</blockquote>
+<blockquote>
+<p>[Szegedy&rsquo;s] group at Google Research recently described a way to use language models — which often use neural networks — to generate new proofs. After training the model to recognize a kind of treelike structure in theorems that are known to be true, they ran a kind of free-form experiment, simply asking the network to generate and prove a theorem without any further guidance. Of the thousands of generated conjectures, about 13% were both provable and new (meaning they didn’t duplicate other theorems in the database). The experiment, he said, suggests that the neural net could teach itself a kind of understanding of what a proof looks like.</p>
+<p>&ldquo;Neural networks are able to develop an artificial style of intuition,&rdquo; Szegedy said.</p>
+</blockquote>
+<p>We will come back to Szegedy and the idea of computers generating theorems shortly. Note however that these researchers are not extending proof assistants with hammers and the like. Instead they are digesting the existing human-crafted proofs and treating them as raw data to train neural networks that are similar to those that perform other text-based tasks such as translating text or performing automatic summarizations.</p>
+<p>Getting back to the article, Timothy Gowers (a mathematician) says computers will literally replace mathematicians (without saying whether he thinks this is good):</p>
+<blockquote>
+<p>mathematicians will enjoy a kind of golden age, &ldquo;when mathematicians do all the fun parts and computers do all the boring parts. But I think it will last a very short time.&rdquo;</p>
+</blockquote>
+<p>Michael Harris has some pushback on this: &ldquo;Even if computers understand, they don’t understand in a human way.&rdquo;</p>
+<h3 id="62-only-people-have-meaning">6.2. Only people have meaning</h3>
+<p>Szegedy&rsquo;s confusion can be traced in a way to a misreading of Frege. Here is Szegedy&rsquo;s definition of mathematics:</p>
+<blockquote>
+<p>Mathematics is the discipline of pure reasoning. Mathematical reasoning is not about mathematics per se, it is about reasoning in general.</p>
+</blockquote>
+<p>This is taken from Szegedy&rsquo;s 2020 article<sup id="fnref:32"><a href="#fn:32" class="footnote-ref" role="doc-noteref">32</a></sup> as cited by Harris<sup id="fnref:33"><a href="#fn:33" class="footnote-ref" role="doc-noteref">33</a></sup>, who grapples in his public writing with the uses of AI in mathematics. Szegedy&rsquo;s position erases literally everything that has value. Think again of Frege&rsquo;s separation: there is logic, and there is mathematics. Logic and the concept script are methods for making airtight arguments while doing mathematics. Szegedy is taking the &ldquo;doing mathematics&rdquo; part and folding it back into the logic. There is only logic for Szegedy &ndash; &ldquo;reasoning in general&rdquo;. And so if the computer can learn to emit deductions automatically with a method that draws on human examples, then the computer is doing mathematics. After all, mathematics is not about mathematics per se!</p>
+<p>I simply do not believe that the bare theorems themselves, or their proofs, carry any intrinsic value or meaning. After all, they are analytically entailed by the starting material, i.e. the definitions, axioms, and rules of logic. They do not themselves carry any information beyond that. There is a large space of facts that are entailed by these same starting conditions, and every point in this space carries, by itself, merely that information. Only by <em>selecting</em> one such result for a moment, for some <em>reason</em>, can we make one of them special and carry additional meaning. Meaning <em>for us</em> is inside us, tautologically. Therefore automatically enumerating theorems can add no meaning.</p>
+<p>Is a computer playing chess when a user interacts with chess software? Only if the computer is also playing chess when it is playing both sides of the game by itself, like when training AlphaZero<sup id="fnref:34"><a href="#fn:34" class="footnote-ref" role="doc-noteref">34</a></sup>. The only meaning of such a game stems from the fact that there are some people who set the computer to that task. The people behind the game, and their motives, have meaning, but the game does not stand by itself as a meaningful act. I can easily <em>grant</em> such a game a meaning, by a conscious act! But if I don&rsquo;t, then nothing happens. The game cannot <em>insist</em>, it is not a source node for meaning.</p>
+<p>So where is the idea coming from that the computer is indeed playing chess? I propose that the programmers of the computer are asking us to grant it that, as they have. Who benefits if we agree, and who suffers a negative consequence? And who benefits if we disagree? I&rsquo;m insisting that we focus only on people, so we should focus on people when we try to figure out why we&rsquo;re being asked to call the computer a person.</p>
+<p>Let me say this one final way. When Szegedy&rsquo;s team&rsquo;s computer emits some theorems, how will they evaluate the results? How long will they stare at the meaningless (to them) output before they copy and paste it into an email to a mathematician? They will <em>have</em> to bring these theorems to human mathematicians to interpret them and evaluate them. There is no other notion of interpretation. There is no audience besides the audience of mathematicians. When a willing mathematician identifies some such result as interesting and tells Nature magazine about it<sup id="fnref:35"><a href="#fn:35" class="footnote-ref" role="doc-noteref">35</a></sup>, that person will perhaps <em>transfer</em> some of the fame of mathematics onto the programmers and their computer. The whole process conserves the value the mathematician was already bringing.</p>
+<p>And when these programmers need to build their AI, how will they do it? We know how because it has already been done. The programmers will copy the data files from a public repository of HOL Light, Coq or Lean proofs, and encode them as training examples for the computer. Again, the computer can only perform analytic trivialities, and so mathematicians need to <em>both</em> create the input and evaluate the output.</p>
+<p>Will mathematicians cooperate? Should they? What could we even do? My only suggestion at the moment is to choose a restricted license file to attach to the source code repositories of Mathlib and the other libraries. Currently Mathlib uses the Apache 2.0 license, which is a very permissive license in common use. It even allows commercial uses.</p>
+<p>What will happen in five years after ten very hard problems are solved through a collaboration with AI? Who will explain to society that the humans are still doing all the meaning-making? And when we try to explain, will the programmers cooperate?</p>
+<h3 id="63-good-uses-of-computers">6.3. Good uses of computers</h3>
+<p>So what then are some value-enhancing uses of computers? Frege showed us one: use computers to implement the concept script, to help formalize mathematics. Inside the formalization software are additional affordances such as tactics, which constitute entirely new use cases for the computer that also help us bring meaning into the world.</p>
+<p>Other promising use cases are being invented daily. One family of ideas is to make better search engines for mathematical literature, or for specific theorems. MathFoldr<sup id="fnref:36"><a href="#fn:36" class="footnote-ref" role="doc-noteref">36</a></sup> aims to use wikis such as the nLab<sup id="fnref:37"><a href="#fn:37" class="footnote-ref" role="doc-noteref">37</a></sup> as data sets to learn how to add metadata to mathematical texts, enhancing search indexes. Their stated goal is suitably humanistic: &ldquo;MathFoldr will provide search and literature curation tools that will make mathematics more accessible, with the ultimate goal of transforming the way mathematics is created and navigated&rdquo;.</p>
+<p>FAbstracts<sup id="fnref:38"><a href="#fn:38" class="footnote-ref" role="doc-noteref">38</a></sup> aims to build a digital library of formalized mathematics, including the statements of not-yet-formalized results. But their vision statement is as muddled as the Quanta article, having as goals both the worrisome &ldquo;machine learning in math&rdquo; as well as the more human-centered &ldquo;tools for exploration such as a Google Earth for mathematics, providing an intuitive visual map of the entire world of mathematics&rdquo;.</p>
+<p>The mathematician William Thurston said &ldquo;Mathematics is not about numbers, equations, computations, or algorithms: it is about understanding.&rdquo;<sup id="fnref:39"><a href="#fn:39" class="footnote-ref" role="doc-noteref">39</a></sup>. Doing mathematics makes changes to us, to our minds. Proving theorems with a computer brings a strikingly similar experience to proving them on paper. That is because the <em>meaning</em> of the act is the same.</p>
+<h2 id="references">References</h2>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>Frege, Gottlob, <em>Begriffsschrift</em>, p. iii, from <em>The Frege Reader</em>, Micheal Beaney (ed.), Blackwell 1997&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>ibid., p. iv&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p>ibid., p. 8&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4">
+<p>Read more at <a href="https://en.wikipedia.org/wiki/Square_of_opposition" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Square_of_opposition</a>&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:5">
+<p><em>Begriffsschrift</em>, p. 24&#160;<a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:6">
+<p>ibid., p. iii&#160;<a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:7">
+<p>ibid., p. iv&#160;<a href="#fnref:7" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:8">
+<p>ibid., p. 3&#160;<a href="#fnref:8" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:9">
+<p>ibid., p. vi&#160;<a href="#fnref:9" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:10">
+<p>Frege, Gottlob, <em>Foundations of Arithmetic</em>, p. ii, from <em>The Frege Reader</em>, Micheal Beaney (ed.), Blackwell 1997&#160;<a href="#fnref:10" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:11">
+<p>Frege, Gottlob, <em>Basic Laws of Arithmetic</em>, p. vii, from <em>The Frege Reader</em>, Micheal Beaney (ed.), Blackwell 1997&#160;<a href="#fnref:11" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:12">
+<p><a href="https://www.imo.universite-paris-saclay.fr/~pmassot/files/exposition/why_formalize.pdf" target="_blank" rel="noopener">https://www.imo.universite-paris-saclay.fr/~pmassot/files/exposition/why_formalize.pdf</a>&#160;<a href="#fnref:12" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:13">
+<p><em>Basic Laws of Arithmetic</em>, p. viii&#160;<a href="#fnref:13" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:14">
+<p>Daston, Lorraine. &ldquo;Calculation and the Division of Labor, 1750-1950.&rdquo; Bulletin of the German Historical Institute 62.Spring (2018): 9-30.&#160;<a href="#fnref:14" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:15">
+<p><a href="https://mathworld.wolfram.com/ParallelPostulate.html" target="_blank" rel="noopener">https://mathworld.wolfram.com/ParallelPostulate.html</a>&#160;<a href="#fnref:15" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:16">
+<p><em>On Euclidean Geometry</em>, p. 183, from <em>The Frege Reader</em>, Micheal Beaney (ed.), Blackwell 1997&#160;<a href="#fnref:16" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:17">
+<p>ibid., p. 184&#160;<a href="#fnref:17" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:18">
+<p><a href="https://en.wikipedia.org/wiki/David_Hilbert#cite_note-44" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/David_Hilbert#cite_note-44</a>&#160;<a href="#fnref:18" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:19">
+<p>Megill, Norman D. and Wheeler, David A. (2019) <em>Metamath: A Computer Language for Mathematical Proofs</em>, Lulu Press. <a href="http://us.metamath.org/downloads/metamath.pdf" target="_blank" rel="noopener">http://us.metamath.org/downloads/metamath.pdf</a>&#160;<a href="#fnref:19" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:20">
+<p>Simpson, Stephen G. (2009), <em>Subsystems of second-order arithmetic</em>, Perspectives in Logic (2nd ed.), Cambridge University Press.&#160;<a href="#fnref:20" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:21">
+<p><a href="https://en.wikipedia.org/wiki/Intuitionistic_type_theory" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Intuitionistic_type_theory</a>&#160;<a href="#fnref:21" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:22">
+<p><a href="https://plato.stanford.edu/entries/type-theory-intuitionistic/" target="_blank" rel="noopener">https://plato.stanford.edu/entries/type-theory-intuitionistic/</a>&#160;<a href="#fnref:22" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:23">
+<p><a href="https://math-comp.github.io" target="_blank" rel="noopener">https://math-comp.github.io</a>&#160;<a href="#fnref:23" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:24">
+<p><a href="https://leanprover-community.github.io" target="_blank" rel="noopener">https://leanprover-community.github.io</a>&#160;<a href="#fnref:24" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:25">
+<p><a href="https://leanprover-community.github.io/mathlib_stats.html" target="_blank" rel="noopener">https://leanprover-community.github.io/mathlib_stats.html</a>&#160;<a href="#fnref:25" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:26">
+<p><a href="https://www.quantamagazine.org/univalent-foundations-redefines-mathematics-20150519/;" target="_blank" rel="noopener">https://www.quantamagazine.org/univalent-foundations-redefines-mathematics-20150519/;</a> links to <a href="https://www.ias.edu/sites/default/files/pdfs/publications/letter-2014-summer.pdf" target="_blank" rel="noopener">https://www.ias.edu/sites/default/files/pdfs/publications/letter-2014-summer.pdf</a>&#160;<a href="#fnref:26" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:27">
+<p><a href="https://plus.maths.org/content/pure-maths-crisis" target="_blank" rel="noopener">https://plus.maths.org/content/pure-maths-crisis</a>&#160;<a href="#fnref:27" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:28">
+<p><a href="https://xenaproject.wordpress.com/2021/06/05/half-a-year-of-the-liquid-tensor-experiment-amazing-developments/" target="_blank" rel="noopener">https://xenaproject.wordpress.com/2021/06/05/half-a-year-of-the-liquid-tensor-experiment-amazing-developments/</a>&#160;<a href="#fnref:28" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:29">
+<p><a href="https://github.com/glangmead/geometry/blob/ab8cbeab722eb3df8d77885f812af8063b1f5906/src/algebra_of_smooth_functions.lean" target="_blank" rel="noopener">https://github.com/glangmead/geometry/blob/ab8cbeab722eb3df8d77885f812af8063b1f5906/src/algebra_of_smooth_functions.lean</a>&#160;<a href="#fnref:29" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:30">
+<p>Czajka, Ł., Kaliszyk, C. Hammer for Coq: Automation for Dependent Type Theory. J Autom Reasoning 61, 423–453 (2018). <a href="https://doi.org/10.1007/s10817-018-9458-4" target="_blank" rel="noopener">https://doi.org/10.1007/s10817-018-9458-4</a>&#160;<a href="#fnref:30" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:31">
+<p><a href="https://www.quantamagazine.org/how-close-are-computers-to-automating-mathematical-reasoning-20200827/" target="_blank" rel="noopener">https://www.quantamagazine.org/how-close-are-computers-to-automating-mathematical-reasoning-20200827/</a>&#160;<a href="#fnref:31" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:32">
+<p>Szegedy C. (2020) A Promising Path Towards Autoformalization and General Artificial Intelligence. In: Benzmüller C., Miller B. (eds) Intelligent Computer Mathematics. CICM 2020. Lecture Notes in Computer Science, vol 12236. Springer, Cham. <a href="https://doi.org/10.1007/978-3-030-53518-6_1" target="_blank" rel="noopener">https://doi.org/10.1007/978-3-030-53518-6_1</a>&#160;<a href="#fnref:32" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:33">
+<p><a href="https://siliconreckoner.substack.com/p/intelligent-computer-mathematics" target="_blank" rel="noopener">https://siliconreckoner.substack.com/p/intelligent-computer-mathematics</a>&#160;<a href="#fnref:33" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:34">
+<p>Silver, David, et al. &ldquo;Mastering chess and shogi by self-play with a general reinforcement learning algorithm.&rdquo; arXiv preprint arXiv:1712.01815 (2017).&#160;<a href="#fnref:34" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:35">
+<p><a href="https://www.nature.com/articles/s41586-021-04086-x" target="_blank" rel="noopener">https://www.nature.com/articles/s41586-021-04086-x</a>&#160;<a href="#fnref:35" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:36">
+<p><a href="https://topos.site/blog/2021/07/introducing-the-mathfoldr-project/" target="_blank" rel="noopener">https://topos.site/blog/2021/07/introducing-the-mathfoldr-project/</a>&#160;<a href="#fnref:36" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:37">
+<p><a href="https://ncatlab.org/" target="_blank" rel="noopener">https://ncatlab.org/</a>&#160;<a href="#fnref:37" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:38">
+<p><a href="https://formalabstracts.github.io" target="_blank" rel="noopener">https://formalabstracts.github.io</a>&#160;<a href="#fnref:38" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:39">
+<p>Cook, Mariana. Mathematicians: An Outer View of the Inner World. Princeton University Press, 2009, <a href="http://www.jstor.org/stable/j.ctt2jc8h2" target="_blank" rel="noopener">http://www.jstor.org/stable/j.ctt2jc8h2</a>.&#160;<a href="#fnref:39" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+    </div>
+
+    
+
+
+
+
+
+
+<div class="share-box">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://greg.langmead.info/writing/frege/&amp;text=Frege&amp;#39;s%20Values" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://greg.langmead.info/writing/frege/&amp;t=Frege&amp;#39;s%20Values" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook-f">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Frege&amp;#39;s%20Values&amp;body=https://greg.langmead.info/writing/frege/" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://greg.langmead.info/writing/frege/&amp;title=Frege&amp;#39;s%20Values" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=Frege&amp;#39;s%20Values%20https://greg.langmead.info/writing/frege/" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://greg.langmead.info/writing/frege/&amp;title=Frege&amp;#39;s%20Values" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      <a href="https://greg.langmead.info/"><img class="avatar mr-3 avatar-circle" src="https://s.gravatar.com/avatar/3b9a5c159ed5c3414cb78274f6058cc2?s=200" alt=""></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://greg.langmead.info/"></a></h5>
+      <h6 class="card-subtitle">Machine Learning Engineer</h6>
+      <p class="card-text">I am a software engineer and mathematician. I work on NLP algorithms for Apple News, and research homotopy type theory in CMU&rsquo;s philosophy department.</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/glangmead" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.co.uk/citations?user=KFbBBPD_nAoJ" target="_blank" rel="noopener">
+        <i class="ai ai-google-scholar"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/glangmead" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+    
+  
+  
+    
+  
+
+  
+
+  
+  <p class="powered-by copyright-license-text">
+    © 2022 Me. This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank">CC BY NC ND 4.0</a>
+  </p>
+  
+
+  <p class="powered-by footer-license-icons">
+    <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank" aria-label="Creative Commons">
+      <i class="fab fa-creative-commons fa-2x" aria-hidden="true"></i>
+      <i class="fab fa-creative-commons-by fa-2x" aria-hidden="true"></i>
+      
+        <i class="fab fa-creative-commons-nc fa-2x" aria-hidden="true"></i>
+      
+      
+        <i class="fab fa-creative-commons-nd fa-2x" aria-hidden="true"></i>
+      
+    </a>
+  </p>
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-themes" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+      
+
+    
+    <script src="/js/vendor-bundle.min.53d67dc2cb1ebceb89d5e2aba2f86112.js"></script>
+
+    
+    
+    
+      
+
+      
+      
+
+      
+
+      
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/highlight.min.js" integrity="sha512-Ypjm0o7jOxAd4hpdoppSEN0TQOC19UtPAqD+4s5AlXmUvbmmS/YMxYqAqarQYyxTnB6/rqip9qcxlNB/3U9Wdg==" crossorigin="anonymous"></script>
+        
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/r.min.js" crossorigin="anonymous"></script>
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/latex.min.js" crossorigin="anonymous"></script>
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/agda.min.js" crossorigin="anonymous"></script>
+        
+      
+
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+      
+      <script id="search-hit-fuse-template" type="text/x-template">
+        <div class="search-hit" id="summary-{{key}}">
+          <div class="search-hit-content">
+            <div class="search-hit-name">
+              <a href="{{relpermalink}}">{{title}}</a>
+              <div class="article-metadata search-hit-type">{{type}}</div>
+              <p class="search-hit-description">{{snippet}}</p>
+            </div>
+          </div>
+        </div>
+      </script>
+      
+        <script src="https://cdn.jsdelivr.net/gh/krisk/Fuse@v3.2.1/dist/fuse.min.js" integrity="sha512-o38bmzBGX+hD3JHWUFCDA09btWaqrNmoJ3RXLlrysA7PP01Kgs4UlE4MhelE1v5dJR3+cxlR4qQlotsW7jKsnw==" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/gh/julmot/mark.js@8.11.1/dist/jquery.mark.min.js" integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg==" crossorigin="anonymous"></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+
+    
+    
+    
+    <script id="page-data" type="application/json">{"use_headroom":true}</script>
+
+    
+    
+      <script src="/js/wowchemy-headroom.c251366b4128fd5e6b046d4c97a62a51.js" type="module"></script>
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/en/js/wowchemy.min.ab2f2890dbe3e2e83579366d3d6e8fd9.js"></script>
+
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+
+</body>
+</html>
