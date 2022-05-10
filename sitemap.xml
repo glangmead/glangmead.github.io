@@ -350,4 +350,6 @@
   <url>
     <loc>https://greg.langmead.info/posts/1998-02-09-computer-geeks/</loc><lastmod>1998-02-09T07:51:29+00:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
-    <loc>https://greg.langmead.info/authors/admin/</loc><changefreq>weekly</changefreq></url></urlset>
+    <loc>https://greg.langmead.info/authors/admin/</loc><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>https://greg.langmead.info/cv/</loc><priority>0</priority></url></urlset>
