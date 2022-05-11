@@ -21,14 +21,6 @@
     </item>
     
     <item>
-      <title>Column fit document traversal for reader application</title>
-      <link>https://greg.langmead.info/publications/column-doc-traversal-2015/</link>
-      <pubDate>Thu, 30 Jul 2020 00:00:00 +0000</pubDate>
-      <guid>https://greg.langmead.info/publications/column-doc-traversal-2015/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Apparatus, system and method for string disambiguation and entity ranking</title>
       <link>https://greg.langmead.info/publications/entity-linking-2015/</link>
       <pubDate>Tue, 04 Dec 2018 00:00:00 +0000</pubDate>
@@ -69,10 +61,26 @@
     </item>
     
     <item>
+      <title>Adapter for allowing both online and offline training of a text to text system</title>
+      <link>https://greg.langmead.info/publications/adapter/</link>
+      <pubDate>Thu, 01 Jan 2009 00:00:00 +0000</pubDate>
+      <guid>https://greg.langmead.info/publications/adapter/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Cube pruning as heuristic search</title>
       <link>https://greg.langmead.info/publications/hopkins-cube-2009/</link>
       <pubDate>Thu, 01 Jan 2009 00:00:00 +0000</pubDate>
       <guid>https://greg.langmead.info/publications/hopkins-cube-2009/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Task parallelization in a text-to-text system</title>
+      <link>https://greg.langmead.info/publications/text-to-text-parallelization/</link>
+      <pubDate>Tue, 01 Jan 2008 00:00:00 +0000</pubDate>
+      <guid>https://greg.langmead.info/publications/text-to-text-parallelization/</guid>
       <description></description>
     </item>
     

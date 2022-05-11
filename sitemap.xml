@@ -40,18 +40,6 @@
   <url>
     <loc>https://greg.langmead.info/authors/venkatesh-venkataramanan/</loc><lastmod>2020-09-24T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
-    <loc>https://greg.langmead.info/authors/alastair-k.-fettes/</loc><lastmod>2020-07-30T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
-  <url>
-    <loc>https://greg.langmead.info/authors/allison-m.-styer/</loc><lastmod>2020-07-30T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
-  <url>
-    <loc>https://greg.langmead.info/authors/charles-j.-migos/</loc><lastmod>2020-07-30T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
-  <url>
-    <loc>https://greg.langmead.info/publications/column-doc-traversal-2015/</loc><lastmod>2020-07-30T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
-  <url>
-    <loc>https://greg.langmead.info/authors/jacob-refstrup/</loc><lastmod>2020-07-30T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
-  <url>
-    <loc>https://greg.langmead.info/authors/martin-j.-murrett/</loc><lastmod>2020-07-30T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
-  <url>
     <loc>https://greg.langmead.info/publications/entity-linking-2015/</loc><lastmod>2018-12-04T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
     <loc>https://greg.langmead.info/authors/daniel-ribeiro-silva/</loc><lastmod>2018-12-04T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
@@ -61,6 +49,8 @@
     <loc>https://greg.langmead.info/authors/kamal-m.-ali/</loc><lastmod>2018-12-04T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
     <loc>https://greg.langmead.info/authors/mark-a.-gingrich/</loc><lastmod>2018-12-04T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>https://greg.langmead.info/authors/martin-j.-murrett/</loc><lastmod>2018-12-04T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
     <loc>https://greg.langmead.info/authors/ravi-chandra-jammalamadaka/</loc><lastmod>2018-12-04T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
@@ -156,7 +146,15 @@
   <url>
     <loc>https://greg.langmead.info/posts/2009-01-12-vista-ick/</loc><lastmod>2009-01-12T03:22:02+00:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
+    <loc>https://greg.langmead.info/publications/adapter/</loc><lastmod>2009-01-01T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
+  <url>
     <loc>https://greg.langmead.info/publications/hopkins-cube-2009/</loc><lastmod>2009-01-01T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>https://greg.langmead.info/authors/g.-langmead/</loc><lastmod>2009-01-01T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>https://greg.langmead.info/authors/k.-knight/</loc><lastmod>2009-01-01T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>https://greg.langmead.info/authors/k.-yamada/</loc><lastmod>2009-01-01T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
     <loc>https://greg.langmead.info/posts/2008-10-08-freshness/</loc><lastmod>2008-10-08T20:06:03+00:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
@@ -179,6 +177,10 @@
     <loc>https://greg.langmead.info/posts/2008-03-16-alison-on-jumping-monkeys/</loc><lastmod>2008-03-16T17:30:43+00:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
     <loc>https://greg.langmead.info/posts/2008-03-16-how-old-is-the-term-bug/</loc><lastmod>2008-03-16T17:29:24+00:00</lastmod><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>https://greg.langmead.info/authors/d.-marcu/</loc><lastmod>2008-01-01T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>https://greg.langmead.info/publications/text-to-text-parallelization/</loc><lastmod>2008-01-01T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
     <loc>https://greg.langmead.info/posts/2007-12-30-panzer-tactics/</loc><lastmod>2007-12-30T22:36:16+00:00</lastmod><changefreq>weekly</changefreq></url>
   <url>

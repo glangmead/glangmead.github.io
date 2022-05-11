@@ -922,14 +922,6 @@ i}.&#34; display=&#34;inline&#34;&gt;&lt;mrow&gt;&lt;mi mathvariant=&#34;normal&
     </item>
     
     <item>
-      <title>Column fit document traversal for reader application</title>
-      <link>https://greg.langmead.info/publications/column-doc-traversal-2015/</link>
-      <pubDate>Thu, 30 Jul 2020 00:00:00 +0000</pubDate>
-      <guid>https://greg.langmead.info/publications/column-doc-traversal-2015/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Apparatus, system and method for string disambiguation and entity ranking</title>
       <link>https://greg.langmead.info/publications/entity-linking-2015/</link>
       <pubDate>Tue, 04 Dec 2018 00:00:00 +0000</pubDate>
@@ -1988,6 +1980,14 @@ I learned something new this weekend. First, I learned that one of my favorite c
     </item>
     
     <item>
+      <title>Adapter for allowing both online and offline training of a text to text system</title>
+      <link>https://greg.langmead.info/publications/adapter/</link>
+      <pubDate>Thu, 01 Jan 2009 00:00:00 +0000</pubDate>
+      <guid>https://greg.langmead.info/publications/adapter/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Cube pruning as heuristic search</title>
       <link>https://greg.langmead.info/publications/hopkins-cube-2009/</link>
       <pubDate>Thu, 01 Jan 2009 00:00:00 +0000</pubDate>
@@ -2193,6 +2193,14 @@ I bought an iPhone 3G this past weekend (and waited 4 1/2 hours for the privileg
 &lt;blockquote&gt;It turns out that &#34;bug&#34; was a common term for hardware glitches and dates back to the 19th century and possibly before. Edison used the term in a letter he wrote in 1878. This is no earthshaking news, of course, but simply reminds me how self-centered we are as an industry and there really isn&#39;t much that&#39;s truly new.&lt;/blockquote&gt;
 &lt;p&gt;&lt;a href=&#34;http://www.pbs.org/cringely/pulpit/2008/pulpit_20080314_004511.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Read the full article&lt;/a&gt;.&lt;/p&gt;
 </description>
+    </item>
+    
+    <item>
+      <title>Task parallelization in a text-to-text system</title>
+      <link>https://greg.langmead.info/publications/text-to-text-parallelization/</link>
+      <pubDate>Tue, 01 Jan 2008 00:00:00 +0000</pubDate>
+      <guid>https://greg.langmead.info/publications/text-to-text-parallelization/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -8600,7 +8608,152 @@ Polynomial Invariants&lt;/span&gt;&lt;/span&gt;,
       <link>https://greg.langmead.info/cv/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://greg.langmead.info/cv/</guid>
-      <description></description>
+      <description>&lt;h1 id=&#34;greg-langmead-phd&#34;&gt;Greg Langmead, Ph.D.&lt;/h1&gt;
+&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+&lt;p&gt;I am a teammate and leader, mathematician and engineer, researcher and
+developer of shipping products. I want to give back and have an impact.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Ph.D. in mathematics, in four-dimensional geometry and mathematical
+physics&lt;/li&gt;
+&lt;li&gt;Machine learning, natural language processing, Java, Python, Spark,
+Swift&lt;/li&gt;
+&lt;li&gt;Recent second mathematical career in homotopy type theory&lt;/li&gt;
+&lt;li&gt;Successful leader, individual contributor, and collaborator&lt;/li&gt;
+&lt;li&gt;Good listener, eager to teach and learn&lt;/li&gt;
+&lt;li&gt;Long and successful track record integrating research into products&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;experience&#34;&gt;Experience&lt;/h2&gt;
+&lt;h3 id=&#34;apple-inc-pittsburgh-pa-----2011--present&#34;&gt;&lt;strong&gt;Apple Inc., Pittsburgh, PA &amp;mdash; 2011&amp;ndash;Present&lt;/strong&gt;&lt;/h3&gt;
+&lt;h4 id=&#34;machine-learning-engineer-services-january-2014&#34;&gt;Machine Learning Engineer, Services, January 2014&lt;/h4&gt;
+&lt;p&gt;Founding member of Apple News algorithms team starting 2014. Designed
+and built entity linking and other algorithms to assign articles into
+topic feeds in reader app. Supervised bring-up of other algorithms such
+as clustering of articles and integration of heterogenous topic
+taxonomies into knowledge base. Collaborator and catalyst for other
+components including search and personalization. Continuous iteration on
+accuracy of algorithms, expanding to Stocks app (2018) and French
+(2019). Leader when assessing scope and deciding priorities. Good
+intuition for fitting work to schedules.&lt;/p&gt;
+&lt;p&gt;Influential in maintaining a culture of transparency and accountability
+via metrics and education. Advocate for demystifying our work and
+maintaining close partnership with nontechnical teams such as editorial
+and program management. Adapted ambient engineering culture to research
+team. Vocal advocate for process changes. Generous with onboarding and
+mentoring. Many positive comments in peer and manager feedback.&lt;/p&gt;
+&lt;h4 id=&#34;software-engineer-productivity-applications-july-2011&#34;&gt;Software Engineer, Productivity Applications, July 2011&lt;/h4&gt;
+&lt;p&gt;Developed iOS and OS X software for designing and reading multi-touch
+books. Wrote Objective-C code, performed code reviews, and collaborated
+with other internal groups through three release cycles including the
+initial release of multi-touch features in January 2012. Designed and
+pitched novel features and filed one patent application.&lt;/p&gt;
+&lt;h3 id=&#34;sdl-language-technologies-los-angeles-ca-----oct-2004--july-2011&#34;&gt;&lt;strong&gt;SDL Language Technologies, Los Angeles, CA &amp;mdash; OCT 2004&amp;ndash;July 2011&lt;/strong&gt;&lt;/h3&gt;
+&lt;h4 id=&#34;manager-dec-2010--july-2011&#34;&gt;Manager, Dec 2010&amp;ndash;July 2011&lt;/h4&gt;
+&lt;h4 id=&#34;senior-research-scientist-jan-2010--july-2011&#34;&gt;Senior Research Scientist, Jan 2010&amp;ndash;July 2011&lt;/h4&gt;
+&lt;h4 id=&#34;research-scientist-july-2005--jan-2010&#34;&gt;Research Scientist, July 2005&amp;ndash;Jan 2010&lt;/h4&gt;
+&lt;h4 id=&#34;senior-data-engineer-oct-2004--july-2005&#34;&gt;Senior Data Engineer, Oct 2004&amp;ndash;July 2005&lt;/h4&gt;
+&lt;p&gt;Led the development of the core learning workflows that underpinned
+SDL&amp;rsquo;s statistical machine translation product line.
+Provided leadership and vision for six years, transforming the workflow
+from an academic research project to an internally-facing product. Grew
+a team of five direct reports and several collaborators with an exciting
+and engaged group culture and consistently high achievement in an Agile
+development framework. Successfully implemented a strategy of continuous
+integration of new research, enabling rapid commercialization in the
+cutting-edge field of machine translation. Contributed key innovations
+to enable complete parallelization of every component. Created a novel
+meta-workflow platform to unify heterogeneous internal processes,
+increasing operational efficiency, and permitting rapid integration of
+new capabilities. Built and maintained a close relationship with IT to
+integrate decision-making concerning workflow software with the
+management of operating systems and capital investments in new hardware.&lt;/p&gt;
+&lt;p&gt;Made original contributions to the field of statistical machine
+translation in the areas of parallel processing, domain adaptation,
+decoding with synchronous context-free grammars and integrated language
+models, integration of statistical and rule-based components, and
+named-entity translation. Co-authored academic conference papers.&lt;/p&gt;
+&lt;p&gt;Managed and led Professional Services department through an important
+transition from manual, error-prone processes to repeatable, scalable
+and automated ones. Formed and maintained an interdepartmental
+collaboration to gather requirements from Services group and implement
+them rapidly in the workflow software.&lt;/p&gt;
+&lt;p&gt;Served as Principal Investigator for several government projects.&lt;/p&gt;
+&lt;h3 id=&#34;center-for-communications-research-princeton-nj-----june--aug-2004&#34;&gt;&lt;strong&gt;Center for Communications Research, Princeton, NJ &amp;mdash; June&amp;ndash;Aug 2004&lt;/strong&gt;&lt;/h3&gt;
+&lt;h4 id=&#34;adjunct-research-staff&#34;&gt;Adjunct Research Staff&lt;/h4&gt;
+&lt;p&gt;Invited to join the Summer Conference on Applied Mathematical Problems.
+Performed classified research in cryptology. Successfully combined
+mathematical research and software engineering in a highly collaborative
+environment.&lt;/p&gt;
+&lt;h3 id=&#34;design-science-inc-long-beach-ca-----june-2001--oct-2004&#34;&gt;&lt;strong&gt;Design Science, Inc., Long Beach, CA &amp;mdash; June 2001&amp;ndash;Oct 2004&lt;/strong&gt;&lt;/h3&gt;
+&lt;h4 id=&#34;product-manager&#34;&gt;Product Manager&lt;/h4&gt;
+&lt;p&gt;Managed the release of three mathematical expression typesetting
+products for Macintosh. Team included myself and three other developers.
+Served as liaison with the Microsoft Office for Mac team.&lt;/p&gt;
+&lt;p&gt;Collaborated with teammate Robert Miner on math-aware search engine.
+Modified Lucene open source document indexer with custom analyzer plugin
+to index normalized MathML expressions. Part of &lt;a href=&#34;https://www.sbir.gov/sbirsearch/detail/145099&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;[an NSF SBIR
+project]{.underline}&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;education&#34;&gt;Education&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Carnegie Mellon University, Pittsburgh, PA &amp;mdash; M.S. Philosophy, expected 2023.&lt;/li&gt;
+&lt;li&gt;Columbia University, New York, NY &amp;mdash; Ph.D Mathematics, 2001.&lt;/li&gt;
+&lt;li&gt;Columbia University, New York, NY &amp;mdash; B.A., Mathematics and Astrophysics, Magna cum Laude, 1994.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;publications&#34;&gt;Publications&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://aclanthology.org/D10-1063/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SCFG Decoding without
+Binarization&lt;/a&gt;, M.
+Hopkins, G. Langmead, Proceedings of the Conference on Empirical Methods
+in Natural Language Processing (EMNLP), Cambridge, MA, 2010&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://aclanthology.org/D09-1007/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Cube Pruning as Heuristic
+Search&lt;/a&gt;, M. Hopkins,
+G. Langmead, Proceedings of the Conference on Empirical Methods in
+Natural Language Processing (EMNLP), Singapore, 2009&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://aclanthology.org/W11-2166/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Extraction programs: a unified approach to translation rule
+extraction&lt;/a&gt;, Mark
+Hopkins, Greg Langmead, Tai Vo (2011). Proceedings of the Sixth Workshop
+on Statistical Machine Translation, 2011.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://arxiv.org/abs/hep-th/0210192&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;A Supersymmetric Quantum Field Theory Formulation of the Donaldson
+Polynomial
+Invariants&lt;/a&gt;, G.
+Langmead, Ph.D. dissertation. Self-published to arxiv.org.&lt;/p&gt;
+&lt;p&gt;Patents&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Task parallelization in a text-to-text system&lt;/em&gt;, G. Langmead, K. Yamada,
+K. Knight, D. Marcu, US patent
+&lt;a href=&#34;https://patents.google.com/patent/US7389222B1/en?oq=7,389,222&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;7,389,222&lt;/a&gt;,
+to Language Weaver, Inc., Patent and Trademark Office, 2008.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Adapter for allowing both online and offline training of a text to text
+system&lt;/em&gt;, K. Yamada, K. Knight, G. Langmead, US patent
+&lt;a href=&#34;https://patents.google.com/patent/US7624020B2/en?oq=7,624,020&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;7,624,020&lt;/a&gt;,
+to Language Weaver, Inc., Patent and Trademark Office, 2009.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;System and method for interacting with a displayed work space&lt;/em&gt;, Donald
+R. Beaver, Gregory C. Langmead, US patent
+&lt;a href=&#34;https://patents.google.com/patent/US9075519B2/en?oq=9,075,519&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;9,075,519&lt;/a&gt;,
+to Apple Inc., Patent and Trademark Office, 2015.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Personalization Aggregate Content Item Recommendations&lt;/em&gt;, Anil A.
+Sewani, Collin D. Ruffenach, Dominic J. Hughes, Ian J. Elseth, Pushkaraj
+Bhirud, Sidy Diop, Venkatesh Venkataramanan, Gregory C. Langmead,
+Gurumurthy D. Ramkumar, US patent pending
+&lt;a href=&#34;https://patents.google.com/patent/US20200301973A1/en?oq=16/821,832&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;16/821,832&lt;/a&gt;,
+to Apple Inc., Patent and Trademark Office.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Apparatus, system and method for string disambiguation and entity
+ranking&lt;/em&gt;, Gregory C. Langmead, Dominic J. Hughes, Mark A. Gingrich, Ravi
+Chandra Jammalamadaka, Donald R. Beaver, Shizhu Liu, Pushkaraj Bhirud,
+Kamal M. Ali, Daniel Ribeiro Silva, Martin J. Murrett, US patent
+&lt;a href=&#34;https://patents.google.com/patent/US10146775B2/en?oq=10,146,775&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;10,146,775&lt;/a&gt;,
+to Apple Inc., Patent and Trademark Office, 2018.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Reader application with a personalized feed and method of providing
+recommendations while maintaining user privacy&lt;/em&gt;, Martin J. Murrett, Ian
+J. Elseth, Guillermo Ortiz, Ravi Chandra Jammalamadaka, Dominic J.
+Hughes, Steve E. Marmon, Casey M. Dougherty, Gregory C. Langmead, Mark
+A. Gingrich, Donald R. Beaver, Amogh Mahapatra, Collin D. Ruffenach,
+Georgios Sofianatos, Justin W. Sung, Kang Tu, Jason A. Novak, US patent
+&lt;a href=&#34;https://patents.google.com/patent/US10268747B2/en?oq=10,268,747&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;10,268,747&lt;/a&gt;,
+to Apple Inc., Patent and Trademark Office, 2019.&lt;/p&gt;
+&lt;p&gt;CONTACT&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;mailto:glangmead@gmail.com&#34;&gt;glangmead@gmail.com&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;http://greg.langmead.info&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;greg.langmead.info&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;http://github.com/glangmead&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;github.com/glangmead&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;linkedin.com/in/glangmead&#34;&gt;linkedin.com/in/glangmead&lt;/a&gt;&lt;/p&gt;
+</description>
     </item>
     
   </channel>

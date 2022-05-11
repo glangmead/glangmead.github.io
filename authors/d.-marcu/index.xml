@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>D. Marcu | Long Head</title>
+    <link>https://greg.langmead.info/authors/d.-marcu/</link>
+      <atom:link href="https://greg.langmead.info/authors/d.-marcu/index.xml" rel="self" type="application/rss+xml" />
+    <description>D. Marcu</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 01 Jan 2008 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://greg.langmead.info/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
+      <title>D. Marcu</title>
+      <link>https://greg.langmead.info/authors/d.-marcu/</link>
+    </image>
+    
+    <item>
+      <title>Task parallelization in a text-to-text system</title>
+      <link>https://greg.langmead.info/publications/text-to-text-parallelization/</link>
+      <pubDate>Tue, 01 Jan 2008 00:00:00 +0000</pubDate>
+      <guid>https://greg.langmead.info/publications/text-to-text-parallelization/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
