@@ -1,0 +1,119 @@
+<opml version="1.0">
+    <head>
+        <title>Greg subscriptions in Google Reader</title>
+    </head>
+    <body>
+        <outline title="science" text="science">
+            <outline text="Astromart Articles"
+                title="Astromart Articles" type="rss"
+                xmlUrl="http://www.astromart.com/rss/articles.asp" htmlUrl="http://www.astromart.com/articles/"/>
+            <outline text="Astromart News" title="Astromart News"
+                type="rss"
+                xmlUrl="http://www.astromart.com/rss/news.asp" htmlUrl="http://www.astromart.com/news/"/>
+            <outline text="Not Even Wrong" title="Not Even Wrong"
+                type="rss"
+                xmlUrl="http://www.math.columbia.edu/~woit/wordpress/index.rdf" htmlUrl="http://www.math.columbia.edu/~woit/wordpress"/>
+            <outline text="Planetary Society Weblog"
+                title="Planetary Society Weblog" type="rss"
+                xmlUrl="http://www.planetary.org/rss/blog.xml" htmlUrl="http://planetary.org/blog/"/>
+        </outline>
+        <outline title="sc" text="sc">
+            <outline text="LibraryThing" title="LibraryThing" type="rss"
+                xmlUrl="http://www.librarything.com/atom.xml" htmlUrl="http://www.librarything.com/blog/index.php"/>
+            <outline text="Listal development"
+                title="Listal development" type="rss"
+                xmlUrl="http://www.listal.com/blog/?feed=rss2" htmlUrl="http://www.listal.com/blog"/>
+            <outline text="ShelfReferential" title="ShelfReferential"
+                type="rss"
+                xmlUrl="http://news.shelfcentered.com/?feed=rss2" htmlUrl="http://news.shelfcentered.com"/>
+            <outline text="Thing-ology (LibraryThing's ideas blog)"
+                title="Thing-ology (LibraryThing's ideas blog)"
+                type="rss"
+                xmlUrl="http://www.librarything.com/thingology/atom.xml" htmlUrl="http://www.librarything.com/thingology/index.php"/>
+        </outline>
+        <outline title="cs" text="cs">
+            <outline text="Machine Learning (Theory)"
+                title="Machine Learning (Theory)" type="rss"
+                xmlUrl="http://hunch.net/?feed=rss2" htmlUrl="http://hunch.net"/>
+        </outline>
+        <outline title="comics" text="comics">
+            <outline text="Dilbert" title="Dilbert" type="rss"
+                xmlUrl="http://feeds.feedburner.com/tapestrydilbert" htmlUrl="http://www.dilbert.com/"/>
+            <outline text="xkcd.com" title="xkcd.com" type="rss"
+                xmlUrl="http://www.xkcd.com/rss.xml" htmlUrl="http://www.xkcd.com"/>
+        </outline>
+        <outline text="AppleInsider" title="AppleInsider" type="rss"
+            xmlUrl="http://www.appleinsider.com/appleinsider.rss" htmlUrl="http://www.appleinsider.com/"/>
+        <outline text="Armchair General" title="Armchair General"
+            type="rss"
+            xmlUrl="http://www.armchairgeneral.com/wp-acg.php?feed=rss2&amp;cat=21,66,73" htmlUrl="http://www.armchairgeneral.com"/>
+        <outline text="Ars Technica" title="Ars Technica" type="rss"
+            xmlUrl="http://arstechnica.com/etc/rdf/ars.rdf" htmlUrl="http://arstechnica.com/index.ars"/>
+        <outline text="Battlestar Galactica"
+            title="Battlestar Galactica" type="rss"
+            xmlUrl="http://blog.scifi.com/battlestar/index.xml" htmlUrl="http://blog.scifi.com/battlestar/"/>
+        <outline text="Birthday 2007 (damiss)"
+            title="Birthday 2007 (damiss)" type="rss"
+            xmlUrl="http://www.shelfcentered.com/index.php?event=shelf_rss&amp;id=1473" htmlUrl="http://www.shelfcentered.com/index.php?event=user_shelf&amp;id=1473"/>
+        <outline text="Chalkhills: Headline News"
+            title="Chalkhills: Headline News" type="rss"
+            xmlUrl="http://chalkhills.org/headlines.xml" htmlUrl="http://chalkhills.org/news.html"/>
+        <outline text="Columbia Daily Spectator"
+            title="Columbia Daily Spectator" type="rss"
+            xmlUrl="http://www.columbiaspectator.com/home/index.cfm?event=getsectionrss&amp;section=News" htmlUrl="http://www.columbiaspectator.com"/>
+        <outline text="DreamHost Blog" title="DreamHost Blog" type="rss"
+            xmlUrl="http://blog.dreamhost.com/feed/" htmlUrl="http://blog.dreamhost.com"/>
+        <outline text="DreamHost Status" title="DreamHost Status"
+            type="rss" xmlUrl="http://www.dreamhoststatus.com/feed/" htmlUrl="http://www.dreamhoststatus.com"/>
+        <outline text="eeeCooks" title="eeeCooks" type="rss"
+            xmlUrl="http://www.eeecooks.com/main.rss" htmlUrl="http://www.eeecooks.com/"/>
+        <outline text="Engadget HD" title="Engadget HD" type="rss"
+            xmlUrl="http://www.engadgethd.com/rss.xml" htmlUrl="http://www.engadgethd.com"/>
+        <outline text="Flex's blog" title="Flex's blog" type="rss"
+            xmlUrl="http://felixlung.com/feed/" htmlUrl="http://felixlung.com"/>
+        <outline text="For my Birth (newlangmead)"
+            title="For my Birth (newlangmead)" type="rss"
+            xmlUrl="http://www.shelfcentered.com/index.php?event=shelf_rss&amp;id=1356" htmlUrl="http://www.shelfcentered.com/index.php?event=user_shelf&amp;id=1356"/>
+        <outline text="Gamespot Recent Updates [Reviews]"
+            title="Gamespot Recent Updates [Reviews]" type="rss"
+            xmlUrl="http://www.gamespot.com/misc/rss/gamespot_updates_reviews.xml" htmlUrl="http://www.gamespot.com"/>
+        <outline text="I, Cringely . The Pulpit"
+            title="I, Cringely . The Pulpit" type="rss"
+            xmlUrl="http://www.pbs.org/cringely/pulpit/rss2.xml" htmlUrl="http://www.pbs.org/cringely/pulpit/"/>
+        <outline text="JMLR" title="JMLR" type="rss"
+            xmlUrl="http://www.jmlr.org/jmlr.xml" htmlUrl="http://www.jmlr.org/"/>
+        <outline text="Kontrib Blog" title="Kontrib Blog" type="rss"
+            xmlUrl="http://www.kontrib.com/blog/?feed=rss2" htmlUrl="http://www.kontrib.com/blog"/>
+        <outline text="Long Head" title="Long Head" type="rss"
+            xmlUrl="http://greg.langmead.info/index.xml" htmlUrl="http://greg.langmead.info/"/>
+        <outline text="Mac Word Weblog" title="Mac Word Weblog"
+            type="rss"
+            xmlUrl="http://www.macworld.com/weblogs/macword/rss.xml" htmlUrl="http://www.macworld.com/weblogs/macword/"/>
+        <outline text="natural language processing blog"
+            title="natural language processing blog" type="rss"
+            xmlUrl="http://nlpers.blogspot.com/feeds/posts/default" htmlUrl="http://nlpers.blogspot.com/"/>
+        <outline text="nimrods" title="nimrods" type="rss"
+            xmlUrl="http://www.nimrods.blogspot.com/atom.xml" htmlUrl="http://nimrods.blogspot.com/"/>
+        <outline text="Official Google Reader Blog"
+            title="Official Google Reader Blog" type="rss"
+            xmlUrl="http://googlereader.blogspot.com/atom.xml" htmlUrl="http://googlereader.blogspot.com/"/>
+        <outline text="Official Google Research Blog"
+            title="Official Google Research Blog" type="rss"
+            xmlUrl="http://googleresearch.blogspot.com/atom.xml" htmlUrl="http://googleresearch.blogspot.com/"/>
+        <outline text="Penny Arcade Comics" title="Penny Arcade Comics"
+            type="rss"
+            xmlUrl="http://feeds.feedburner.com/PennyArcadeComics" htmlUrl="http://www.penny-arcade.com/view.php"/>
+        <outline text="Pogue's Posts" title="Pogue's Posts" type="rss"
+            xmlUrl="http://pogue.blogs.nytimes.com/?feed=rss2" htmlUrl="http://pogue.blogs.nytimes.com"/>
+        <outline text="slow music for fast times"
+            title="slow music for fast times" type="rss"
+            xmlUrl="http://heartsofspace.blogspot.com/atom.xml" htmlUrl="http://heartsofspace.blogspot.com/"/>
+        <outline text="Surfin' Safari" title="Surfin' Safari" type="rss"
+            xmlUrl="http://webkit.org/blog/?feed=rss2" htmlUrl="http://webkit.org/blog"/>
+        <outline text="TheWargamer News" title="TheWargamer News"
+            type="rss"
+            xmlUrl="http://www.wargamer.com/news/newsfeed.asp" htmlUrl="http://www.wargamer.com/news/"/>
+        <outline text="Wack!" title="Wack!" type="rss"
+            xmlUrl="http://www.jeffreylove.com/wack/wack.xml" htmlUrl="http://www.jeffreylove.com/wack/index.html"/>
+    </body>
+</opml>
