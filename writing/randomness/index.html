@@ -741,488 +741,374 @@
       <!DOCTYPE html><html>
 <head>
 <title>Randomness as Pointlessness</title>
-<!--Generated on Mon May  9 20:40:50 2022 by LaTeXML (version 0.8.5) http://dlmf.nist.gov/LaTeXML/.-->
-
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" href="LaTeXML.css" type="text/css">
-<!--link rel="stylesheet" href="ltx-article.css" type="text/css"-->
+<style type="text/css">
+p {
+    margin-bottom: 12px;
+}
+</style>
 </head>
 <body>
-<div class="ltx_page_main">
-<div class="ltx_page_content">
-<article class="ltx_document ltx_authors_1line">
-<!--h1 class="ltx_title ltx_title_document">Randomness as Pointlessness</h1-->
-<div class="ltx_authors">
-<span class="ltx_creator ltx_role_author">
-<span class="ltx_personname">Greg Langmead
-</span></span>
-</div>
+<article>
+<span>Greg Langmead</span>
 
-<section id="S1" class="ltx_section">
-<h2 class="ltx_title ltx_title_section">
-<span class="ltx_tag ltx_tag_section">1 </span>Introduction</h2>
+<section>
+<h2>
+<span>1 </span>Introduction</h2>
 
-<div id="S1.p1" class="ltx_para">
-<p class="ltx_p">Mathematicians have been exploring the advantages of locale theory for 60 or so years, along with its related disciplines of topos theory and type theory. When you tie one hand behind your back (such as avoiding the use of the existence of points, the axiom of choice, and/or the law of the excluded middle) then the constructions and proofs you invent can be more illuminating and deeper than before. I want to convince you that this may be true for algorithmic randomness notions. In <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib6" title="Measure, randomness and sublocales" class="ltx_ref">7</a>]</cite>, Alex Simpson has formulated a measure theory for locales and provided a new definition of randomness in this setting. I will describe this work, emphasizing the <em class="ltx_emph ltx_font_italic">point-free</em> interpretation.</p>
-</div>
-<div id="S1.p2" class="ltx_para">
-<p class="ltx_p">Random real numbers satisfy the following hand-waving characterizations.</p>
-<ol id="S1.I1" class="ltx_enumerate">
-<li id="S1.I1.i1" class="ltx_item" style="list-style-type:none;">
-<span class="ltx_tag ltx_tag_item">1.</span> 
-<div id="S1.I1.i1.p1" class="ltx_para">
-<p class="ltx_p">They cannot be obtained constructively.</p>
-</div>
+<p>Mathematicians have been exploring the advantages of locale theory for 60 or so years, along with its related disciplines of topos theory and type theory. When you tie one hand behind your back (such as avoiding the use of the existence of points, the axiom of choice, and/or the law of the excluded middle) then the constructions and proofs you invent can be more illuminating and deeper than before. I want to convince you that this may be true for algorithmic randomness notions. In <cite>[<a href="#bib.bib6" title="Measure, randomness and sublocales">7</a>]</cite>, Alex Simpson has formulated a measure theory for locales and provided a new definition of randomness in this setting. I will describe this work, emphasizing the <em>point-free</em> interpretation.</p>
+<p>Random real numbers satisfy the following hand-waving characterizations.</p>
+<ol>
+<li>
+<p>They cannot be obtained constructively.</p>
 </li>
-<li id="S1.I1.i2" class="ltx_item" style="list-style-type:none;">
-<span class="ltx_tag ltx_tag_item">2.</span> 
-<div id="S1.I1.i2.p1" class="ltx_para">
-<p class="ltx_p">They obey almost-everywhere properties.</p>
-</div>
+<li>
+<p>They obey almost-everywhere properties.</p>
 </li>
-<li id="S1.I1.i3" class="ltx_item" style="list-style-type:none;">
-<span class="ltx_tag ltx_tag_item">3.</span> 
-<div id="S1.I1.i3.p1" class="ltx_para">
-<p class="ltx_p">They appear tied to the foundations of mathematics.</p>
-</div>
+<li>
+<p>They appear tied to the foundations of mathematics.</p>
 </li>
 </ol>
-<p class="ltx_p">For a survey of these and other properties, see Rute <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib4" title="On the close interaction between algorithmic randomness and constructive/computable measure theory" class="ltx_ref">6</a>]</cite>. I will argue that defining random points in terms of locales is well suited to capturing or even explaining all three of these properties. First of all, locales provide a setting for topology that supports constructive arguments, and randomness is in some sense the opposite of constructivity. Secondly, locales provide a model of topological spaces and continuous functions, so we can connect with classical results in analysis including almost-everywhere theorems like Lebesgue’s theorem. And thirdly locales mediate a generalization from set theory to topos theory and type theory, modern constructive settings where mathematical foundations are being explored. Constructions like the effective topos and assemblies capture computability in this general context. It seems inevitable that randomness will find enhanced definitions in these new foundations.</p>
-</div>
-<section id="S1.SS1" class="ltx_subsection">
-<h3 class="ltx_title ltx_title_subsection">
-<span class="ltx_tag ltx_tag_subsection">1.1 </span>Randomness vs determinism: a confused debate</h3>
+<p>For a survey of these and other properties, see Rute <cite>[<a href="#bib.bib4" title="On the close interaction between algorithmic randomness and constructive/computable measure theory">6</a>]</cite>. I will argue that defining random points in terms of locales is well suited to capturing or even explaining all three of these properties. First of all, locales provide a setting for topology that supports constructive arguments, and randomness is in some sense the opposite of constructivity. Secondly, locales provide a model of topological spaces and continuous functions, so we can connect with classical results in analysis including almost-everywhere theorems like Lebesgue's theorem. And thirdly locales mediate a generalization from set theory to topos theory and type theory, modern constructive settings where mathematical foundations are being explored. Constructions like the effective topos and assemblies capture computability in this general context. It seems inevitable that randomness will find enhanced definitions in these new foundations.</p>
+<section>
+<h3>
+<span>1.1 </span>Randomness vs determinism: a confused debate</h3>
 
-<div id="S1.SS1.p1" class="ltx_para">
-<p class="ltx_p">In the Stanford Encyclopedia of Philosophy’s article on Chance and Randomness <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib8" title="Chance versus Randomness" class="ltx_ref">1</a>]</cite>, section 5.2 (”Chaotic Dynamics”), the authors describe an iterated transformation on the unit square, somewhat analogous to repeatedly folding dough. Given a starting point <math id="S1.SS1.p1.m1" class="ltx_Math" alttext="(p,q),0\leq p,q\leq 1" display="inline"><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mi>p</mi><mo>,</mo><mi>q</mi><mo stretchy="false">)</mo></mrow><mo>,</mo><mn>0</mn></mrow><mo>≤</mo><mi>p</mi></mrow><mo>,</mo><mrow><mi>q</mi><mo>≤</mo><mn>1</mn></mrow></mrow></math>, define a function
+<p>In the Stanford Encyclopedia of Philosophy's article on Chance and Randomness <cite>[<a href="#bib.bib8" title="Chance versus Randomness">1</a>]</cite>, section 5.2 (”Chaotic Dynamics”), the authors describe an iterated transformation on the unit square, somewhat analogous to repeatedly folding dough. Given a starting point <math alttext="(p,q),0\leq p,q\leq 1" display="inline"><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mi>p</mi><mo>,</mo><mi>q</mi><mo stretchy="false">)</mo></mrow><mo>,</mo><mn>0</mn></mrow><mo>≤</mo><mi>p</mi></mrow><mo>,</mo><mrow><mi>q</mi><mo>≤</mo><mn>1</mn></mrow></mrow></math>, define a function
 </p>
-<table id="S1.Ex1" class="ltx_equation ltx_eqn_table">
+<table>
 
-<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
-<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
-<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex1.m1" class="ltx_Math" alttext="\phi(p,q)=\begin{cases}(2p,q/2),&amp;\text{if }0\leq p\leq\frac{1}{2}\\
+<tr>
+<td></td>
+<td><math alttext="\phi(p,q)=\begin{cases}(2p,q/2),&amp;\text{if }0\leq p\leq\frac{1}{2}\\
 (2p-1,(1+q)/2),&amp;\text{if }\frac{1}{2}\leq p\leq 1\end{cases}" display="block"><mrow><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo>,</mo><mi>q</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>{</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="left"><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>⁢</mo><mi>p</mi></mrow><mo>,</mo><mrow><mi>q</mi><mo>/</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow><mo>,</mo></mrow></mtd><mtd columnalign="left"><mrow><mrow><mtext>if </mtext><mo>⁢</mo><mn>0</mn></mrow><mo>≤</mo><mi>p</mi><mo>≤</mo><mstyle displaystyle="false"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle></mrow></mtd></mtr><mtr><mtd columnalign="left"><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>p</mi></mrow><mo>-</mo><mn>1</mn></mrow><mo>,</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>+</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow><mo>/</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow><mo>,</mo></mrow></mtd><mtd columnalign="left"><mrow><mrow><mtext>if </mtext><mo>⁢</mo><mstyle displaystyle="false"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle></mrow><mo>≤</mo><mi>p</mi><mo>≤</mo><mn>1</mn></mrow></mtd></mtr></mtable></mrow></mrow></math></td>
-<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td></td>
 </tr>
 </table>
-<p class="ltx_p">As the authors say, “This corresponds to transforming the unit square to a rectangle twice as wide and half the height, chopping off the right half, and stacking it back on top to fill the unit square again.” So, needlessly more violent than folding, but close. If we represent <math id="S1.SS1.p1.m2" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> and <math id="S1.SS1.p1.m3" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> in their binary expansion, we have</p>
-<table id="S1.Ex2" class="ltx_equation ltx_eqn_table">
+<p>As the authors say, “This corresponds to transforming the unit square to a rectangle twice as wide and half the height, chopping off the right half, and stacking it back on top to fill the unit square again.” So, needlessly more violent than folding, but close. If we represent <math alttext="p" display="inline"><mi>p</mi></math> and <math alttext="q" display="inline"><mi>q</mi></math> in their binary expansion, we have</p>
+<table>
 
-<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
-<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
-<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex2.m1" class="ltx_Math" alttext="\phi(0.p_{1}p_{2}\ldots,0.q_{1}q_{2}\ldots)=(0.p_{2}p_{3}\ldots,0.p_{1}q_{1}q_%
+<tr>
+<td></td>
+<td><math alttext="\phi(0.p_{1}p_{2}\ldots,0.q_{1}q_{2}\ldots)=(0.p_{2}p_{3}\ldots,0.p_{1}q_{1}q_%
 {2}\ldots)." display="block"><mrow><mi>ϕ</mi><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>.</mo><msub><mi>p</mi><mn>1</mn></msub><msub><mi>p</mi><mn>2</mn></msub><mi mathvariant="normal">…</mi><mo>,</mo><mn>0</mn><mo>.</mo><msub><mi>q</mi><mn>1</mn></msub><msub><mi>q</mi><mn>2</mn></msub><mi mathvariant="normal">…</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>.</mo><msub><mi>p</mi><mn>2</mn></msub><msub><mi>p</mi><mn>3</mn></msub><mi mathvariant="normal">…</mi><mo>,</mo><mn>0</mn><mo>.</mo><msub><mi>p</mi><mn>1</mn></msub><msub><mi>q</mi><mn>1</mn></msub><msub><mi>q</mi><mn>2</mn></msub><mi mathvariant="normal">…</mi><mo stretchy="false">)</mo></mrow><mo>.</mo></mrow></math></td>
-<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td></td>
 </tr>
 </table>
-<p class="ltx_p">In the article this example is intended to convey a paradox. On the one hand, the system is ergodic and behaves like a random process. Points will wander throughout the space without any pattern. But on the other hand the system is deterministic. The bit shift formula shows how it works: this is an engine that uses the next bit of the binary expansion to determine where the point moves next.</p>
-</div>
-<div id="S1.SS1.p2" class="ltx_para">
-<p class="ltx_p">The resolution of the paradox, I believe, is to worry more about whether you can get your hands on <math id="S1.SS1.p2.m1" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> and <math id="S1.SS1.p2.m2" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> in the first place. Sure, once you have them, the machine behaves deterministically. But you can’t have them! They require an infinite amount of information to specify, and to have one is to provide its entire future path through the process. The problem with the paradox is therefore in one of its assumptions. The process is deterministic, but the randomness is in the input data.</p>
-</div>
-<div id="S1.SS1.p3" class="ltx_para">
-<p class="ltx_p">Indeed, the most important property of random numbers appears to be their infinite nature, which prevents us from ever having one fully specified for us, either in a machine, in our minds, or in our theories. They are not computable, and they are not constructible.</p>
-</div>
-<div id="S1.SS1.p4" class="ltx_para">
-<p class="ltx_p">Confusingly, there are several different definitions of algorithmic randomness. In fact there is a whole family (or if you’re in a teasing mood, a zoo) of them. They go by names such as Martin-Löf randomness, Schnorr randomness, weak-<math id="S1.SS1.p4.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-randomness, and computable randomness. They are not equivalent but they form a simple chain of inclusions, and smart people have worked out that the differences can be explained and parameterized by a family of choices that relate them. What I will present here is a consideration that is orthogonal to the flavor of randomness, namely the <em class="ltx_emph ltx_font_italic">packaging</em> of the random numbers inside the reals. The main ingredient is a shift from <em class="ltx_emph ltx_font_italic">set theory</em> to <em class="ltx_emph ltx_font_italic">locale theory</em>. A locale is a generalization of a topological space, and I will argue that it is very well suited to a philosophical interpretation of randomness.</p>
-</div>
+<p>In the article this example is intended to convey a paradox. On the one hand, the system is ergodic and behaves like a random process. Points will wander throughout the space without any pattern. But on the other hand the system is deterministic. The bit shift formula shows how it works: this is an engine that uses the next bit of the binary expansion to determine where the point moves next.</p>
+<p>The resolution of the paradox, I believe, is to worry more about whether you can get your hands on <math alttext="p" display="inline"><mi>p</mi></math> and <math alttext="q" display="inline"><mi>q</mi></math> in the first place. Sure, once you have them, the machine behaves deterministically. But you can't have them! They require an infinite amount of information to specify, and to have one is to provide its entire future path through the process. The problem with the paradox is therefore in one of its assumptions. The process is deterministic, but the randomness is in the input data.</p>
+<p>Indeed, the most important property of random numbers appears to be their infinite nature, which prevents us from ever having one fully specified for us, either in a machine, in our minds, or in our theories. They are not computable, and they are not constructible.</p>
+<p>Confusingly, there are several different definitions of algorithmic randomness. In fact there is a whole family (or if you're in a teasing mood, a zoo) of them. They go by names such as Martin-Löf randomness, Schnorr randomness, weak-<math alttext="n" display="inline"><mi>n</mi></math>-randomness, and computable randomness. They are not equivalent but they form a simple chain of inclusions, and smart people have worked out that the differences can be explained and parameterized by a family of choices that relate them. What I will present here is a consideration that is orthogonal to the flavor of randomness, namely the <em>packaging</em> of the random numbers inside the reals. The main ingredient is a shift from <em>set theory</em> to <em>locale theory</em>. A locale is a generalization of a topological space, and I will argue that it is very well suited to a philosophical interpretation of randomness.</p>
 </section>
 </section>
-<section id="S2" class="ltx_section">
-<h2 class="ltx_title ltx_title_section">
-<span class="ltx_tag ltx_tag_section">2 </span>Frames and Locales</h2>
+<section>
+<h2>
+<span>2 </span>Frames and Locales</h2>
 
-<div id="S2.p1" class="ltx_para">
-<p class="ltx_p">Locale theory is point-free topology. See Johnstone <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib5" title="The point of pointless topology" class="ltx_ref">2</a>]</cite> for an accessible survey, or Chapter IX of Mac Lane and Moerdijk <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib3" title="Sheaves in geometry and logic: a first introduction to topos theory" class="ltx_ref">5</a>]</cite> for a pleasantly breezy but more thorough introduction, or Johnstone <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib2" title="Sketches of an elephant: a topos theory compendium" class="ltx_ref">3</a>]</cite> chapter C1 for a detailed treatment. We can also call it <em class="ltx_emph ltx_font_italic">synthetic</em> topology in that it takes open sets as basic, undefined objects, instead of defining them as collections of points. Instead it is points that will become a derived concept. Topological spaces with their actual open sets of actual points provide examples of locales, but there are more general ones as well. This will give us a new point of view on randomness.</p>
-</div>
-<div id="S2.p2" class="ltx_para">
-<p class="ltx_p">A locale is a <em class="ltx_emph ltx_font_italic">frame</em>. A frame is a partially ordered set (poset) with finite meets <math id="S2.p2.m1" class="ltx_Math" alttext="\wedge" display="inline"><mo>∧</mo></math> and arbitrary joins <math id="S2.p2.m2" class="ltx_Math" alttext="\vee" display="inline"><mo>∨</mo></math>, with a maximal element <math id="S2.p2.m3" class="ltx_Math" alttext="\top" display="inline"><mo>⊤</mo></math> and minimal element <math id="S2.p2.m4" class="ltx_Math" alttext="\bot" display="inline"><mo>⊥</mo></math>, and where the infinite distributive law holds:</p>
-<table id="S2.Ex3" class="ltx_equation ltx_eqn_table">
+<p>Locale theory is point-free topology. See Johnstone <cite>[<a href="#bib.bib5" title="The point of pointless topology">2</a>]</cite> for an accessible survey, or Chapter IX of Mac Lane and Moerdijk <cite>[<a href="#bib.bib3" title="Sheaves in geometry and logic: a first introduction to topos theory">5</a>]</cite> for a pleasantly breezy but more thorough introduction, or Johnstone <cite>[<a href="#bib.bib2" title="Sketches of an elephant: a topos theory compendium">3</a>]</cite> chapter C1 for a detailed treatment. We can also call it <em>synthetic</em> topology in that it takes open sets as basic, undefined objects, instead of defining them as collections of points. Instead it is points that will become a derived concept. Topological spaces with their actual open sets of actual points provide examples of locales, but there are more general ones as well. This will give us a new point of view on randomness.</p>
+<p>A locale is a <em>frame</em>. A frame is a partially ordered set (poset) with finite meets <math alttext="\wedge" display="inline"><mo>∧</mo></math> and arbitrary joins <math alttext="\vee" display="inline"><mo>∨</mo></math>, with a maximal element <math alttext="\top" display="inline"><mo>⊤</mo></math> and minimal element <math alttext="\bot" display="inline"><mo>⊥</mo></math>, and where the infinite distributive law holds:</p>
+<table>
 
-<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
-<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
-<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex3.m1" class="ltx_Math" alttext="x\wedge(\bigvee_{i}y_{i})=\bigvee_{i}(x\wedge y_{i})." display="block"><mrow><mrow><mrow><mi>x</mi><mo>∧</mo><mrow><mo stretchy="false">(</mo><mrow><munder><mo largeop="true" mathsize="160%" movablelimits="false" stretchy="false" symmetric="true">⋁</mo><mi>i</mi></munder><msub><mi>y</mi><mi>i</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><munder><mo largeop="true" mathsize="160%" movablelimits="false" stretchy="false" symmetric="true">⋁</mo><mi>i</mi></munder><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>∧</mo><msub><mi>y</mi><mi>i</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
-<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<tr>
+<td></td>
+<td><math alttext="x\wedge(\bigvee_{i}y_{i})=\bigvee_{i}(x\wedge y_{i})." display="block"><mrow><mrow><mrow><mi>x</mi><mo>∧</mo><mrow><mo stretchy="false">(</mo><mrow><munder><mo largeop="true" mathsize="160%" movablelimits="false" stretchy="false" symmetric="true">⋁</mo><mi>i</mi></munder><msub><mi>y</mi><mi>i</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><munder><mo largeop="true" mathsize="160%" movablelimits="false" stretchy="false" symmetric="true">⋁</mo><mi>i</mi></munder><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>∧</mo><msub><mi>y</mi><mi>i</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td></td>
 </tr>
 </table>
-<p class="ltx_p">This definition is clearly abstracted from the axioms for a topology: we are to imagine the elements of the poset are open sets of a generalized space. If we require only countable joins then it is called a <math id="S2.p2.m5" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math>-frame. The open sets of a topological space form a frame (or a <math id="S2.p2.m6" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math>-frame). A frame map is a function that preserves finite meets and arbitrary joins. A <math id="S2.p2.m7" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math>-frame map preserves countable joins. We collect this data into the category <math id="S2.p2.m8" class="ltx_Math" alttext="\mathsf{Frm}" display="inline"><mi>𝖥𝗋𝗆</mi></math> of frames and <math id="S2.p2.m9" class="ltx_Math" alttext="\mathsf{\sigma Frm}" display="inline"><mrow><mi>σ</mi><mo>⁢</mo><mi>𝖥𝗋𝗆</mi></mrow></math> of <math id="S2.p2.m10" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math>-frames.</p>
-</div>
-<div id="S2.p3" class="ltx_para">
-<p class="ltx_p">A continuous map between topological spaces induces a frame map on the frames of open sets, but in the opposite direction because the <em class="ltx_emph ltx_font_italic">inverse</em> image of an open is open. This motivates the definition of the category <math id="S2.p3.m1" class="ltx_Math" alttext="\mathsf{Loc}" display="inline"><mi>𝖫𝗈𝖼</mi></math> of locales to be simply <math id="S2.p3.m2" class="ltx_Math" alttext="\mathsf{Frm}^{\textsf{op}}" display="inline"><msup><mi>𝖥𝗋𝗆</mi><mtext>𝗈𝗉</mtext></msup></math> and <math id="S2.p3.m3" class="ltx_Math" alttext="\mathsf{\sigma Loc}=\mathsf{\sigma Frm}^{\textsf{op}}" display="inline"><mrow><mrow><mi>σ</mi><mo>⁢</mo><mi>𝖫𝗈𝖼</mi></mrow><mo>=</mo><mrow><mi>σ</mi><mo>⁢</mo><msup><mi>𝖥𝗋𝗆</mi><mtext>𝗈𝗉</mtext></msup></mrow></mrow></math>. (Recall that the opposite of a category is a category with all the same objects and morphisms, but with the direction of all the morphism arrows reversed.) We can define a functor <math id="S2.p3.m4" class="ltx_Math" alttext="L:\mathsf{Top}\to\mathsf{Loc}" display="inline"><mrow><mi>L</mi><mo>:</mo><mrow><mi>𝖳𝗈𝗉</mi><mo>→</mo><mi>𝖫𝗈𝖼</mi></mrow></mrow></math> on objects by mapping a space <math id="S2.p3.m5" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> to its frame of open sets <math id="S2.p3.m6" class="ltx_Math" alttext="\mathcal{O}(X)" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒪</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math> (so on objects, <math id="S2.p3.m7" class="ltx_Math" alttext="L=\mathcal{O}" display="inline"><mrow><mi>L</mi><mo>=</mo><mi class="ltx_font_mathcaligraphic">𝒪</mi></mrow></math>), and on morphisms by mapping a function <math id="S2.p3.m8" class="ltx_Math" alttext="f:X\to Y" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>X</mi><mo>→</mo><mi>Y</mi></mrow></mrow></math> to the opposite arrow of the induced morphism on frames, so that’s two inversions giving us an arrow <math id="S2.p3.m9" class="ltx_Math" alttext="L(f):L(X)\to L(Y)" display="inline"><mrow><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:</mo><mrow><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>Y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>.</p>
-</div>
-<div id="S2.p4" class="ltx_para">
-<p class="ltx_p">We’ll use notation like <math id="S2.p4.m1" class="ltx_Math" alttext="X,Y,\ldots" display="inline"><mrow><mi>X</mi><mo>,</mo><mi>Y</mi><mo>,</mo><mi mathvariant="normal">…</mi></mrow></math> to denote locales, and <math id="S2.p4.m2" class="ltx_Math" alttext="\mathcal{O}(X),\mathcal{O}(Y),\ldots" display="inline"><mrow><mrow><mi class="ltx_font_mathcaligraphic">𝒪</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒪</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>Y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mi mathvariant="normal">…</mi></mrow></math> to denote frames of open sets.
+<p>This definition is clearly abstracted from the axioms for a topology: we are to imagine the elements of the poset are open sets of a generalized space. If we require only countable joins then it is called a <math alttext="\sigma" display="inline"><mi>σ</mi></math>-frame. The open sets of a topological space form a frame (or a <math alttext="\sigma" display="inline"><mi>σ</mi></math>-frame). A frame map is a function that preserves finite meets and arbitrary joins. A <math alttext="\sigma" display="inline"><mi>σ</mi></math>-frame map preserves countable joins. We collect this data into the category <math alttext="\mathsf{Frm}" display="inline"><mi>𝖥𝗋𝗆</mi></math> of frames and <math alttext="\mathsf{\sigma Frm}" display="inline"><mrow><mi>σ</mi><mo>⁢</mo><mi>𝖥𝗋𝗆</mi></mrow></math> of <math alttext="\sigma" display="inline"><mi>σ</mi></math>-frames.</p>
+<p>A continuous map between topological spaces induces a frame map on the frames of open sets, but in the opposite direction because the <em>inverse</em> image of an open is open. This motivates the definition of the category <math alttext="\mathsf{Loc}" display="inline"><mi>𝖫𝗈𝖼</mi></math> of locales to be simply <math alttext="\mathsf{Frm}^{\textsf{op}}" display="inline"><msup><mi>𝖥𝗋𝗆</mi><mtext>𝗈𝗉</mtext></msup></math> and <math alttext="\mathsf{\sigma Loc}=\mathsf{\sigma Frm}^{\textsf{op}}" display="inline"><mrow><mrow><mi>σ</mi><mo>⁢</mo><mi>𝖫𝗈𝖼</mi></mrow><mo>=</mo><mrow><mi>σ</mi><mo>⁢</mo><msup><mi>𝖥𝗋𝗆</mi><mtext>𝗈𝗉</mtext></msup></mrow></mrow></math>. (Recall that the opposite of a category is a category with all the same objects and morphisms, but with the direction of all the morphism arrows reversed.) We can define a functor <math alttext="L:\mathsf{Top}\to\mathsf{Loc}" display="inline"><mrow><mi>L</mi><mo>:</mo><mrow><mi>𝖳𝗈𝗉</mi><mo>→</mo><mi>𝖫𝗈𝖼</mi></mrow></mrow></math> on objects by mapping a space <math alttext="X" display="inline"><mi>X</mi></math> to its frame of open sets <math alttext="\mathcal{O}(X)" display="inline"><mrow><mi>𝒪</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math> (so on objects, <math alttext="L=\mathcal{O}" display="inline"><mrow><mi>L</mi><mo>=</mo><mi>𝒪</mi></mrow></math>), and on morphisms by mapping a function <math alttext="f:X\to Y" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>X</mi><mo>→</mo><mi>Y</mi></mrow></mrow></math> to the opposite arrow of the induced morphism on frames, so that's two inversions giving us an arrow <math alttext="L(f):L(X)\to L(Y)" display="inline"><mrow><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:</mo><mrow><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>Y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>.</p>
+<p>We'll use notation like <math alttext="X,Y,\ldots" display="inline"><mrow><mi>X</mi><mo>,</mo><mi>Y</mi><mo>,</mo><mi mathvariant="normal">…</mi></mrow></math> to denote locales, and <math alttext="\mathcal{O}(X),\mathcal{O}(Y),\ldots" display="inline"><mrow><mrow><mi>𝒪</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mi>𝒪</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>Y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mi mathvariant="normal">…</mi></mrow></math> to denote frames of open sets.
 </p>
-</div>
 </section>
-<section id="S3" class="ltx_section">
-<h2 class="ltx_title ltx_title_section">
-<span class="ltx_tag ltx_tag_section">3 </span>Points</h2>
+<section>
+<h2>
+<span>3 </span>Points</h2>
 
-<div id="S3.p1" class="ltx_para">
-<p class="ltx_p">Consider the topological space <math id="S3.p1.m1" class="ltx_Math" alttext="\star" display="inline"><mo>⋆</mo></math> consisting of a single point. Its topology is just the poset <math id="S3.p1.m2" class="ltx_Math" alttext="\{\bot\leq\top\}" display="inline"><mrow><mo stretchy="false">{</mo><mo>⊥</mo><mo>≤</mo><mo>⊤</mo><mo stretchy="false">}</mo></mrow></math> (the empty set and the whole space). To treat points as a derived concept, note that a point in a space <math id="S3.p1.m3" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is equivalent to a map <math id="S3.p1.m4" class="ltx_Math" alttext="\mathrm{pt}:\star\to X" display="inline"><mrow><mi>pt</mi><mo>:</mo><mo>⋆</mo><mo>→</mo><mi>X</mi></mrow></math>, which at the level of frames is a map <math id="S3.p1.m5" class="ltx_Math" alttext="\mathcal{O}(X)\to\{\top,\bot\}" display="inline"><mrow><mrow><mi class="ltx_font_mathcaligraphic">𝒪</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mrow><mo stretchy="false">{</mo><mo>⊤</mo><mo>,</mo><mo>⊥</mo><mo stretchy="false">}</mo></mrow></mrow></math>. The inverse image of <math id="S3.p1.m6" class="ltx_Math" alttext="\top" display="inline"><mo>⊤</mo></math> is the collection of all open sets that contain the point <math id="S3.p1.m7" class="ltx_Math" alttext="\mathrm{pt}(\star)" display="inline"><mrow><mi>pt</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mo>⋆</mo><mo stretchy="false">)</mo></mrow></mrow></math>. This forms what is known as a <em class="ltx_emph ltx_font_italic">completely prime filter</em> in the frame, which is a collection <math id="S3.p1.m8" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> of opens such that if <math id="S3.p1.m9" class="ltx_Math" alttext="x\vee y\in P" display="inline"><mrow><mrow><mi>x</mi><mo>∨</mo><mi>y</mi></mrow><mo>∈</mo><mi>P</mi></mrow></math> then <math id="S3.p1.m10" class="ltx_Math" alttext="x\in P" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>P</mi></mrow></math> or <math id="S3.p1.m11" class="ltx_Math" alttext="y\in P" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>P</mi></mrow></math>. (This is analogous to a prime ideal, or the ideal generated by a prime number.) We can then move forward with locales and completely prime filters instead of spaces and points!</p>
-</div>
-<div id="S3.p2" class="ltx_para">
-<p class="ltx_p">Note how compatible this is with a constructive point of view. To supply a point you must supply a function <math id="S3.p2.m1" class="ltx_Math" alttext="\star\to X" display="inline"><mrow><mo>⋆</mo><mo>→</mo><mi>X</mi></mrow></math>. The points aren’t given, you have to do work to produce one.</p>
-</div>
-<div id="S3.p3" class="ltx_para">
-<p class="ltx_p">Given a locale <math id="S3.p3.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>, the set of completely prime filters constitutes the <em class="ltx_emph ltx_font_italic">spatial part</em> of <math id="S3.p3.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>, and this set inherits a topology from the structure of <math id="S3.p3.m3" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>. Locale maps preserve prime filters so we obtain a set function between the spatial parts of the locales. We can package this as a functor <math id="S3.p3.m4" class="ltx_Math" alttext="S:\mathsf{Loc}\to\mathsf{Top}" display="inline"><mrow><mi>S</mi><mo>:</mo><mrow><mi>𝖫𝗈𝖼</mi><mo>→</mo><mi>𝖳𝗈𝗉</mi></mrow></mrow></math> which turns out to be right adjoint to <math id="S3.p3.m5" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math>. If we go back and forth with <math id="S3.p3.m6" class="ltx_Math" alttext="S\circ L" display="inline"><mrow><mi>S</mi><mo>∘</mo><mi>L</mi></mrow></math>, starting from an honest topological space, then we get back an equivalent space with an equivalent topology so long as the original space is <em class="ltx_emph ltx_font_italic">sober</em>, which is a definition that is almost circularly defined to meet this condition. Hausdorff spaces are sober. (The mathematicians who developed locale theory were very self-conscious about the names according to Peter Johnstone in <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib1" title="Elements of the history of locale theory" class="ltx_ref">4</a>]</cite> and it shows — they chose great names like “sober.”)</p>
-</div>
-<div id="S3.p4" class="ltx_para">
-<p class="ltx_p">We won’t make use of <math id="S3.p4.m1" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math>, but it’s important to know about it to have a global picture of how spaces are embedded in the larger category of locales.</p>
-</div>
+<p>Consider the topological space <math alttext="\star" display="inline"><mo>⋆</mo></math> consisting of a single point. Its topology is just the poset <math alttext="\{\bot\leq\top\}" display="inline"><mrow><mo stretchy="false">{</mo><mo>⊥</mo><mo>≤</mo><mo>⊤</mo><mo stretchy="false">}</mo></mrow></math> (the empty set and the whole space). To treat points as a derived concept, note that a point in a space <math alttext="X" display="inline"><mi>X</mi></math> is equivalent to a map <math alttext="\mathrm{pt}:\star\to X" display="inline"><mrow><mi>pt</mi><mo>:</mo><mo>⋆</mo><mo>→</mo><mi>X</mi></mrow></math>, which at the level of frames is a map <math alttext="\mathcal{O}(X)\to\{\top,\bot\}" display="inline"><mrow><mrow><mi>𝒪</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mrow><mo stretchy="false">{</mo><mo>⊤</mo><mo>,</mo><mo>⊥</mo><mo stretchy="false">}</mo></mrow></mrow></math>. The inverse image of <math alttext="\top" display="inline"><mo>⊤</mo></math> is the collection of all open sets that contain the point <math alttext="\mathrm{pt}(\star)" display="inline"><mrow><mi>pt</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mo>⋆</mo><mo stretchy="false">)</mo></mrow></mrow></math>. This forms what is known as a <em>completely prime filter</em> in the frame, which is a collection <math alttext="P" display="inline"><mi>P</mi></math> of opens such that if <math alttext="x\vee y\in P" display="inline"><mrow><mrow><mi>x</mi><mo>∨</mo><mi>y</mi></mrow><mo>∈</mo><mi>P</mi></mrow></math> then <math alttext="x\in P" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>P</mi></mrow></math> or <math alttext="y\in P" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>P</mi></mrow></math>. (This is analogous to a prime ideal, or the ideal generated by a prime number.) We can then move forward with locales and completely prime filters instead of spaces and points!</p>
+<p>Note how compatible this is with a constructive point of view. To supply a point you must supply a function <math alttext="\star\to X" display="inline"><mrow><mo>⋆</mo><mo>→</mo><mi>X</mi></mrow></math>. The points aren't given, you have to do work to produce one.</p>
+<p>Given a locale <math alttext="X" display="inline"><mi>X</mi></math>, the set of completely prime filters constitutes the <em>spatial part</em> of <math alttext="X" display="inline"><mi>X</mi></math>, and this set inherits a topology from the structure of <math alttext="X" display="inline"><mi>X</mi></math>. Locale maps preserve prime filters so we obtain a set function between the spatial parts of the locales. We can package this as a functor <math alttext="S:\mathsf{Loc}\to\mathsf{Top}" display="inline"><mrow><mi>S</mi><mo>:</mo><mrow><mi>𝖫𝗈𝖼</mi><mo>→</mo><mi>𝖳𝗈𝗉</mi></mrow></mrow></math> which turns out to be right adjoint to <math alttext="L" display="inline"><mi>L</mi></math>. If we go back and forth with <math alttext="S\circ L" display="inline"><mrow><mi>S</mi><mo>∘</mo><mi>L</mi></mrow></math>, starting from an honest topological space, then we get back an equivalent space with an equivalent topology so long as the original space is <em>sober</em>, which is a definition that is almost circularly defined to meet this condition. Hausdorff spaces are sober. (The mathematicians who developed locale theory were very self-conscious about the names according to Peter Johnstone in <cite>[<a href="#bib.bib1" title="Elements of the history of locale theory">4</a>]</cite> and it shows — they chose great names like “sober.”)</p>
+<p>We won't make use of <math alttext="S" display="inline"><mi>S</mi></math>, but it's important to know about it to have a global picture of how spaces are embedded in the larger category of locales.</p>
 </section>
-<section id="S4" class="ltx_section">
-<h2 class="ltx_title ltx_title_section">
-<span class="ltx_tag ltx_tag_section">4 </span>Sublocales</h2>
+<section>
+<h2>
+<span>4 </span>Sublocales</h2>
 
-<div id="S4.p1" class="ltx_para">
-<p class="ltx_p">Mathematicians have been careful to choose the correct notion of subspace in this context: the sublocale. There are three equivalent ways to define sublocales. Normally I’d expect two since we are bouncing between two opposite categories. But there is a super interesting third definition as well, and the interplay of all three sheds light on the application to randomness.</p>
-</div>
-<section id="S4.SS1" class="ltx_subsection">
-<h3 class="ltx_title ltx_title_subsection">
-<span class="ltx_tag ltx_tag_subsection">4.1 </span>Definition 1: Embedded subspaces</h3>
+<p>Mathematicians have been careful to choose the correct notion of subspace in this context: the sublocale. There are three equivalent ways to define sublocales. Normally I'd expect two since we are bouncing between two opposite categories. But there is a super interesting third definition as well, and the interplay of all three sheds light on the application to randomness.</p>
+<section>
+<h3>
+<span>4.1 </span>Definition 1: Embedded subspaces</h3>
 
-<div id="S4.SS1.p1" class="ltx_para">
-<p class="ltx_p">To me the most intuitive definition is the one that lets us think of a sublocale as being like an <em class="ltx_emph ltx_font_italic">embedded subspace</em>, i.e. a monomorphic map with the extra requirement that the subspace is embedded. In the category of topological spaces this means the domain is homeomorphic to its image. For example, for a map from <math id="S4.SS1.p1.m1" class="ltx_Math" alttext="[0,1]" display="inline"><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow></math> into a space <math id="S4.SS1.p1.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> to be an embedding the curve must not self-intersect or do anything pathological. In categorical terms embeddings and sublocales are <em class="ltx_emph ltx_font_italic">regular monomorphisms</em> and these have special factorization properties. You can maybe already tell that this is a less permissive notion of subspace than subspaces in <math id="S4.SS1.p1.m3" class="ltx_Math" alttext="\mathsf{Top}" display="inline"><mi>𝖳𝗈𝗉</mi></math>, where any old subset of a topological space (i.e. any monomorphism) can be equipped with the subspace topology and considered a subobject.</p>
-</div>
+<p>To me the most intuitive definition is the one that lets us think of a sublocale as being like an <em>embedded subspace</em>, i.e. a monomorphic map with the extra requirement that the subspace is embedded. In the category of topological spaces this means the domain is homeomorphic to its image. For example, for a map from <math alttext="[0,1]" display="inline"><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow></math> into a space <math alttext="X" display="inline"><mi>X</mi></math> to be an embedding the curve must not self-intersect or do anything pathological. In categorical terms embeddings and sublocales are <em>regular monomorphisms</em> and these have special factorization properties. You can maybe already tell that this is a less permissive notion of subspace than subspaces in <math alttext="\mathsf{Top}" display="inline"><mi>𝖳𝗈𝗉</mi></math>, where any old subset of a topological space (i.e. any monomorphism) can be equipped with the subspace topology and considered a subobject.</p>
 </section>
-<section id="S4.SS2" class="ltx_subsection">
-<h3 class="ltx_title ltx_title_subsection">
-<span class="ltx_tag ltx_tag_subsection">4.2 </span>Definition 2: Quotients of frames</h3>
+<section>
+<h3>
+<span>4.2 </span>Definition 2: Quotients of frames</h3>
 
-<div id="S4.SS2.p1" class="ltx_para">
-<p class="ltx_p">In the category of frames the arrows are reversed and so a sublocale is in fact a quotient frame, i.e. an equivalence relation. Intuitively, two open sets are equivalent if they agree on the sublocale. Precisely, a sublocale <math id="S4.SS2.p1.m1" class="ltx_Math" alttext="=_{Y}" display="inline"><msub><mo>=</mo><mi>Y</mi></msub></math> is an equivalence relation that preserves finite meets and arbitrary joins:</p>
-<table id="S6.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+<p>In the category of frames the arrows are reversed and so a sublocale is in fact a quotient frame, i.e. an equivalence relation. Intuitively, two open sets are equivalent if they agree on the sublocale. Precisely, a sublocale <math alttext="=_{Y}" display="inline"><msub><mo>=</mo><mi>Y</mi></msub></math> is an equivalence relation that preserves finite meets and arbitrary joins:</p>
+<table>
 
-<tbody id="S4.Ex4"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
-<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
-<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S4.Ex4.m1" class="ltx_Math" alttext="\displaystyle U=_{Y}V\mathrm{\ and\ }U^{\prime}=_{Y}V^{\prime}" display="inline"><mrow><mi>U</mi><msub><mo>=</mo><mi>Y</mi></msub><mrow><mpadded width="+5pt"><mi>V</mi></mpadded><mo>⁢</mo><mpadded width="+5pt"><mi>and</mi></mpadded><mo>⁢</mo><msup><mi>U</mi><mo>′</mo></msup></mrow><msub><mo>=</mo><mi>Y</mi></msub><msup><mi>V</mi><mo>′</mo></msup></mrow></math></td>
-<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S4.Ex4.m2" class="ltx_Math" alttext="\displaystyle\quad\implies\quad U\wedge U^{\prime}=_{Y}V\wedge V^{\prime}" display="inline"><mrow><mi mathvariant="normal"> </mi><mo>⟹</mo><mo mathvariant="italic" separator="true"> </mo><mi>U</mi><mo>∧</mo><msup><mi>U</mi><mo>′</mo></msup><msub><mo>=</mo><mi>Y</mi></msub><mi>V</mi><mo>∧</mo><msup><mi>V</mi><mo>′</mo></msup></mrow></math></td>
-<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<tbody><tr>
+<td></td>
+<td><math alttext="\displaystyle U=_{Y}V\mathrm{\ and\ }U^{\prime}=_{Y}V^{\prime}" display="inline"><mrow><mi>U</mi><msub><mo>=</mo><mi>Y</mi></msub><mrow><mpadded width="+5pt"><mi>V</mi></mpadded><mo>⁢</mo><mpadded width="+5pt"><mi>and</mi></mpadded><mo>⁢</mo><msup><mi>U</mi><mo>′</mo></msup></mrow><msub><mo>=</mo><mi>Y</mi></msub><msup><mi>V</mi><mo>′</mo></msup></mrow></math></td>
+<td><math alttext="\displaystyle\quad\implies\quad U\wedge U^{\prime}=_{Y}V\wedge V^{\prime}" display="inline"><mrow><mi mathvariant="normal"> </mi><mo>⟹</mo><mo mathvariant="italic" separator="true"> </mo><mi>U</mi><mo>∧</mo><msup><mi>U</mi><mo>′</mo></msup><msub><mo>=</mo><mi>Y</mi></msub><mi>V</mi><mo>∧</mo><msup><mi>V</mi><mo>′</mo></msup></mrow></math></td>
+<td></td>
 </tr></tbody>
-<tbody id="S4.Ex5"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
-<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
-<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S4.Ex5.m1" class="ltx_Math" alttext="\displaystyle U_{i}=_{Y}V_{i}\mathrm{\ for\ all\ }i\geq 0" display="inline"><mrow><msub><mi>U</mi><mi>i</mi></msub><msub><mo>=</mo><mi>Y</mi></msub><mrow><mpadded width="+5pt"><msub><mi>V</mi><mi>i</mi></msub></mpadded><mo>⁢</mo><mpadded width="+5pt"><mi>for</mi></mpadded><mo>⁢</mo><mpadded width="+5pt"><mi>all</mi></mpadded><mo>⁢</mo><mi>i</mi></mrow><mo>≥</mo><mn>0</mn></mrow></math></td>
-<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S4.Ex5.m2" class="ltx_Math" alttext="\displaystyle\quad\implies\quad\bigvee_{i\geq 0}U_{i}=_{Y}\bigvee_{i\geq 0}V_{%
+<tbody><tr>
+<td></td>
+<td><math alttext="\displaystyle U_{i}=_{Y}V_{i}\mathrm{\ for\ all\ }i\geq 0" display="inline"><mrow><msub><mi>U</mi><mi>i</mi></msub><msub><mo>=</mo><mi>Y</mi></msub><mrow><mpadded width="+5pt"><msub><mi>V</mi><mi>i</mi></msub></mpadded><mo>⁢</mo><mpadded width="+5pt"><mi>for</mi></mpadded><mo>⁢</mo><mpadded width="+5pt"><mi>all</mi></mpadded><mo>⁢</mo><mi>i</mi></mrow><mo>≥</mo><mn>0</mn></mrow></math></td>
+<td><math alttext="\displaystyle\quad\implies\quad\bigvee_{i\geq 0}U_{i}=_{Y}\bigvee_{i\geq 0}V_{%
 i}." display="inline"><mrow><mi mathvariant="normal"> </mi><mo>⟹</mo><mo mathvariant="italic" separator="true"> </mo><mstyle displaystyle="true"><munder><mo largeop="true" mathsize="160%" movablelimits="false" stretchy="false" symmetric="true">⋁</mo><mrow><mi>i</mi><mo>≥</mo><mn>0</mn></mrow></munder></mstyle><msub><mi>U</mi><mi>i</mi></msub><msub><mo>=</mo><mi>Y</mi></msub><mstyle displaystyle="true"><munder><mo largeop="true" mathsize="160%" movablelimits="false" stretchy="false" symmetric="true">⋁</mo><mrow><mi>i</mi><mo>≥</mo><mn>0</mn></mrow></munder></mstyle><msub><mi>V</mi><mi>i</mi></msub><mo>.</mo></mrow></math></td>
-<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td></td>
 </tr></tbody>
 </table>
-</div>
 </section>
-<section id="S4.SS3" class="ltx_subsection">
-<h3 class="ltx_title ltx_title_subsection">
-<span class="ltx_tag ltx_tag_subsection">4.3 </span>Definition 3: Nuclei</h3>
+<section>
+<h3>
+<span>4.3 </span>Definition 3: Nuclei</h3>
 
-<div id="S4.SS3.p1" class="ltx_para">
-<p class="ltx_p">The nucleus definition of a sublocale also takes place in the category of frames. It is just the surjective map corresponding to the quotient. A nucleus is a function <math id="S4.SS3.p1.m1" class="ltx_Math" alttext="j:\mathcal{O}(X)\to\mathcal{O}(X)" display="inline"><mrow><mi>j</mi><mo>:</mo><mrow><mrow><mi class="ltx_font_mathcaligraphic">𝒪</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒪</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math> satisfying</p>
-<table id="S6.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+<p>The nucleus definition of a sublocale also takes place in the category of frames. It is just the surjective map corresponding to the quotient. A nucleus is a function <math alttext="j:\mathcal{O}(X)\to\mathcal{O}(X)" display="inline"><mrow><mi>j</mi><mo>:</mo><mrow><mrow><mi>𝒪</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mrow><mi>𝒪</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math> satisfying</p>
+<table>
 
-<tbody id="S4.Ex6"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
-<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
-<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S4.Ex6.m1" class="ltx_Math" alttext="\displaystyle U" display="inline"><mi>U</mi></math></td>
-<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S4.Ex6.m2" class="ltx_Math" alttext="\displaystyle\leq jU" display="inline"><mrow><mi></mi><mo>≤</mo><mrow><mi>j</mi><mo>⁢</mo><mi>U</mi></mrow></mrow></math></td>
-<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<tbody><tr>
+<td></td>
+<td><math alttext="\displaystyle U" display="inline"><mi>U</mi></math></td>
+<td><math alttext="\displaystyle\leq jU" display="inline"><mrow><mi></mi><mo>≤</mo><mrow><mi>j</mi><mo>⁢</mo><mi>U</mi></mrow></mrow></math></td>
+<td></td>
 </tr></tbody>
-<tbody id="S4.Ex7"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
-<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
-<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S4.Ex7.m1" class="ltx_Math" alttext="\displaystyle jjU" display="inline"><mrow><mi>j</mi><mo>⁢</mo><mi>j</mi><mo>⁢</mo><mi>U</mi></mrow></math></td>
-<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S4.Ex7.m2" class="ltx_Math" alttext="\displaystyle=jU" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mi>j</mi><mo>⁢</mo><mi>U</mi></mrow></mrow></math></td>
-<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<tbody><tr>
+<td></td>
+<td><math alttext="\displaystyle jjU" display="inline"><mrow><mi>j</mi><mo>⁢</mo><mi>j</mi><mo>⁢</mo><mi>U</mi></mrow></math></td>
+<td><math alttext="\displaystyle=jU" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mi>j</mi><mo>⁢</mo><mi>U</mi></mrow></mrow></math></td>
+<td></td>
 </tr></tbody>
-<tbody id="S4.Ex8"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
-<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
-<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S4.Ex8.m1" class="ltx_Math" alttext="\displaystyle j(U\wedge V)" display="inline"><mrow><mi>j</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>U</mi><mo>∧</mo><mi>V</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
-<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S4.Ex8.m2" class="ltx_Math" alttext="\displaystyle=j(U)\wedge j(V)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mi>j</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>U</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∧</mo><mrow><mi>j</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
-<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<tbody><tr>
+<td></td>
+<td><math alttext="\displaystyle j(U\wedge V)" display="inline"><mrow><mi>j</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>U</mi><mo>∧</mo><mi>V</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td><math alttext="\displaystyle=j(U)\wedge j(V)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mi>j</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>U</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∧</mo><mrow><mi>j</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td></td>
 </tr></tbody>
 </table>
-<p class="ltx_p">The intuition is that <math id="S4.SS3.p1.m2" class="ltx_Math" alttext="j" display="inline"><mi>j</mi></math> takes an open set to some largest version of itself satisfying some property, which is why the first condition has the containment, and why the second condition is idempotence – doing the operation twice yields the same largest open. The third condition is that forming the “largest version” preserves finite intersection.</p>
-</div>
-<div id="S4.SS3.p2" class="ltx_para">
-<p class="ltx_p">Denote the fixed points of <math id="S4.SS3.p2.m1" class="ltx_Math" alttext="j" display="inline"><mi>j</mi></math> (i.e. the collection of largest sets) by <math id="S4.SS3.p2.m2" class="ltx_Math" alttext="\mathcal{O}_{j}(X)" display="inline"><mrow><msub><mi class="ltx_font_mathcaligraphic">𝒪</mi><mi>j</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math> and denote the dual object by <math id="S4.SS3.p2.m3" class="ltx_Math" alttext="X_{j}" display="inline"><msub><mi>X</mi><mi>j</mi></msub></math>. Then <math id="S4.SS3.p2.m4" class="ltx_Math" alttext="X_{j}" display="inline"><msub><mi>X</mi><mi>j</mi></msub></math> is the sublocale. The map <math id="S4.SS3.p2.m5" class="ltx_Math" alttext="j" display="inline"><mi>j</mi></math> is a surjective frame map onto the set of fixed points, and so gives an embedding <math id="S4.SS3.p2.m6" class="ltx_Math" alttext="i:X_{j}\hookrightarrow X" display="inline"><mrow><mi>i</mi><mo>:</mo><mrow><msub><mi>X</mi><mi>j</mi></msub><mo>↪</mo><mi>X</mi></mrow></mrow></math>. This is basically performing the quotient from the previous definition, mapping every open onto the largest representative in the equivalence class.</p>
-</div>
+<p>The intuition is that <math alttext="j" display="inline"><mi>j</mi></math> takes an open set to some largest version of itself satisfying some property, which is why the first condition has the containment, and why the second condition is idempotence – doing the operation twice yields the same largest open. The third condition is that forming the “largest version” preserves finite intersection.</p>
+<p>Denote the fixed points of <math alttext="j" display="inline"><mi>j</mi></math> (i.e. the collection of largest sets) by <math alttext="\mathcal{O}_{j}(X)" display="inline"><mrow><msub><mi>𝒪</mi><mi>j</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math> and denote the dual object by <math alttext="X_{j}" display="inline"><msub><mi>X</mi><mi>j</mi></msub></math>. Then <math alttext="X_{j}" display="inline"><msub><mi>X</mi><mi>j</mi></msub></math> is the sublocale. The map <math alttext="j" display="inline"><mi>j</mi></math> is a surjective frame map onto the set of fixed points, and so gives an embedding <math alttext="i:X_{j}\hookrightarrow X" display="inline"><mrow><mi>i</mi><mo>:</mo><mrow><msub><mi>X</mi><mi>j</mi></msub><mo>↪</mo><mi>X</mi></mrow></mrow></math>. This is basically performing the quotient from the previous definition, mapping every open onto the largest representative in the equivalence class.</p>
 </section>
-<section id="S4.SS4" class="ltx_subsection">
-<h3 class="ltx_title ltx_title_subsection">
-<span class="ltx_tag ltx_tag_subsection">4.4 </span>The collection of all sublocales</h3>
+<section>
+<h3>
+<span>4.4 </span>The collection of all sublocales</h3>
 
-<div id="S4.SS4.p1" class="ltx_para">
-<p class="ltx_p">The collection of all sublocales of a fixed locale <math id="S4.SS4.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is partially ordered by inclusion, just as we have in any category where we can define subobjects. It’s worth mentioning that even more is true: the collection of sublocales forms a <em class="ltx_emph ltx_font_italic">coframe</em>, which is duel to a frame, so is a poset with finite joins and arbitrary meets, and where the joins distribute over the meets. This collection is nowhere near as straightforward to contemplate as the collection of subsets of a set, but we will keep thinking through some of the consequences to find how it connects with randomness.</p>
-</div>
+<p>The collection of all sublocales of a fixed locale <math alttext="X" display="inline"><mi>X</mi></math> is partially ordered by inclusion, just as we have in any category where we can define subobjects. It's worth mentioning that even more is true: the collection of sublocales forms a <em>coframe</em>, which is duel to a frame, so is a poset with finite joins and arbitrary meets, and where the joins distribute over the meets. This collection is nowhere near as straightforward to contemplate as the collection of subsets of a set, but we will keep thinking through some of the consequences to find how it connects with randomness.</p>
 </section>
-<section id="S4.SS5" class="ltx_subsection">
-<h3 class="ltx_title ltx_title_subsection">
-<span class="ltx_tag ltx_tag_subsection">4.5 </span>A pointless sublocale</h3>
+<section>
+<h3>
+<span>4.5 </span>A pointless sublocale</h3>
 
-<div id="S4.SS5.p1" class="ltx_para">
-<p class="ltx_p">We’re ready to define a sublocale with no points! Let <math id="S4.SS5.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> be a Hausdorff topological space without isolated points and let <math id="S4.SS5.p1.m2" class="ltx_Math" alttext="\mathcal{O}(X)" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒪</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math> be the frame of its open sets. Consider the double-negation operation <math id="S4.SS5.p1.m3" class="ltx_Math" alttext="\neg\neg:\mathcal{O}(X)\to\mathcal{O}(X)" display="inline"><mrow><mrow><mi mathvariant="normal">¬</mi><mo>⁢</mo><mi mathvariant="normal">¬</mi></mrow><mo>:</mo><mrow><mrow><mi class="ltx_font_mathcaligraphic">𝒪</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒪</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>. What does this do? The negation of an open <math id="S4.SS5.p1.m4" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> is the largest open disjoint from <math id="S4.SS5.p1.m5" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> (or equivalently, the union of all opens disjoint from <math id="S4.SS5.p1.m6" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math>). In an actual space such as <math id="S4.SS5.p1.m7" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> this is the same as the interior of the complement, but in a locale we don’t have complements since they are not open. Repeating the operation, <math id="S4.SS5.p1.m8" class="ltx_Math" alttext="\neg\neg U" display="inline"><mrow><mi mathvariant="normal">¬</mi><mo>⁢</mo><mi mathvariant="normal">¬</mi><mo>⁢</mo><mi>U</mi></mrow></math> is thus the largest open disjoint from the largest open disjoint from <math id="S4.SS5.p1.m9" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math>. For a lot of sets this is just <math id="S4.SS5.p1.m10" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> again but sometimes it erases information. For any <math id="S4.SS5.p1.m11" class="ltx_Math" alttext="p\in X" display="inline"><mrow><mi>p</mi><mo>∈</mo><mi>X</mi></mrow></math> we have that <math id="S4.SS5.p1.m12" class="ltx_Math" alttext="\neg\neg(X-\{p\})=X" display="inline"><mrow><mrow><mi mathvariant="normal">¬</mi><mo>⁢</mo><mrow><mi mathvariant="normal">¬</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>X</mi><mo>-</mo><mrow><mo stretchy="false">{</mo><mi>p</mi><mo stretchy="false">}</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mi>X</mi></mrow></math>, because <math id="S4.SS5.p1.m13" class="ltx_Math" alttext="\neg(X-\{p\})=\emptyset" display="inline"><mrow><mrow><mi mathvariant="normal">¬</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>X</mi><mo>-</mo><mrow><mo stretchy="false">{</mo><mi>p</mi><mo stretchy="false">}</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi mathvariant="normal">∅</mi></mrow></math>. So this operation blurs out the points.</p>
-</div>
-<div id="S4.SS5.p2" class="ltx_para">
-<p class="ltx_p"><math id="S4.SS5.p2.m1" class="ltx_Math" alttext="\neg\neg" display="inline"><mrow><mi mathvariant="normal">¬</mi><mo>⁢</mo><mi mathvariant="normal">¬</mi></mrow></math> is idempotent, and in fact defines a nucleus hence an embedding <math id="S4.SS5.p2.m2" class="ltx_Math" alttext="nn:X_{\neg\neg}\hookrightarrow X" display="inline"><mrow><mrow><mi>n</mi><mo>⁢</mo><mi>n</mi></mrow><mo>:</mo><mrow><msub><mi>X</mi><mrow><mi mathvariant="normal">¬</mi><mo>⁢</mo><mi mathvariant="normal">¬</mi></mrow></msub><mo>↪</mo><mi>X</mi></mrow></mrow></math>, where <math id="S4.SS5.p2.m3" class="ltx_Math" alttext="nn^{-1}U=\neg\neg U" display="inline"><mrow><mrow><mi>n</mi><mo>⁢</mo><msup><mi>n</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>U</mi></mrow><mo>=</mo><mrow><mi mathvariant="normal">¬</mi><mo>⁢</mo><mi mathvariant="normal">¬</mi><mo>⁢</mo><mi>U</mi></mrow></mrow></math>. It’s this sublocale <math id="S4.SS5.p2.m4" class="ltx_Math" alttext="X_{\neg\neg}" display="inline"><msub><mi>X</mi><mrow><mi mathvariant="normal">¬</mi><mo>⁢</mo><mi mathvariant="normal">¬</mi></mrow></msub></math> that has no points. For suppose <math id="S4.SS5.p2.m5" class="ltx_Math" alttext="p:\star\to X_{\neg\neg}" display="inline"><mrow><mi>p</mi><mo>:</mo><mo>⋆</mo><mo>→</mo><msub><mi>X</mi><mrow><mi mathvariant="normal">¬</mi><mo>⁢</mo><mi mathvariant="normal">¬</mi></mrow></msub></mrow></math> is a point. The composition <math id="S4.SS5.p2.m6" class="ltx_Math" alttext="nn\circ p" display="inline"><mrow><mrow><mi>n</mi><mo>⁢</mo><mi>n</mi></mrow><mo>∘</mo><mi>p</mi></mrow></math> is thus a point of <math id="S4.SS5.p2.m7" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>. Consider the open set given by deleting this point from <math id="S4.SS5.p2.m8" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>, i.e. <math id="S4.SS5.p2.m9" class="ltx_Math" alttext="X-\{nn(p(\star))\}" display="inline"><mrow><mi>X</mi><mo>-</mo><mrow><mo stretchy="false">{</mo><mrow><mi>n</mi><mo>⁢</mo><mi>n</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mo>⋆</mo><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow></math>. Taking the inverse image in frames we have <math id="S4.SS5.p2.m10" class="ltx_Math" alttext="p^{-1}(\neg\neg(X-\{nn(p(\star))\}))=\bot" display="inline"><mrow><mrow><msup><mi>p</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">¬</mi><mo>⁢</mo><mrow><mi mathvariant="normal">¬</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>X</mi><mo>-</mo><mrow><mo stretchy="false">{</mo><mrow><mi>n</mi><mo>⁢</mo><mi>n</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mo>⋆</mo><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mo>⊥</mo></mrow></math> because only opens that contain the image of <math id="S4.SS5.p2.m11" class="ltx_Math" alttext="\star" display="inline"><mo>⋆</mo></math> map back to <math id="S4.SS5.p2.m12" class="ltx_Math" alttext="\top" display="inline"><mo>⊤</mo></math>. But as we saw in the previous paragraph <math id="S4.SS5.p2.m13" class="ltx_Math" alttext="\neg\neg(X-\{nn(p(\star))\})=X" display="inline"><mrow><mrow><mi mathvariant="normal">¬</mi><mo>⁢</mo><mrow><mi mathvariant="normal">¬</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>X</mi><mo>-</mo><mrow><mo stretchy="false">{</mo><mrow><mi>n</mi><mo>⁢</mo><mi>n</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mo>⋆</mo><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mi>X</mi></mrow></math>, so the above expression <math id="S4.SS5.p2.m14" class="ltx_Math" alttext="p^{-1}(\neg\neg(X-\{nn(p(\star))\})" display="inline"><mrow><msup><mi>p</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">¬</mi><mi mathvariant="normal">¬</mi><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>-</mo><mrow><mo stretchy="false">{</mo><mi>n</mi><mi>n</mi><mrow><mo stretchy="false">(</mo><mi>p</mi><mrow><mo stretchy="false">(</mo><mo>⋆</mo><mo stretchy="false">)</mo></mrow><mo stretchy="false">)</mo></mrow><mo stretchy="false">}</mo></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> becomes <math id="S4.SS5.p2.m15" class="ltx_Math" alttext="p^{-1}(X)" display="inline"><mrow><msup><mi>p</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math> which is <math id="S4.SS5.p2.m16" class="ltx_Math" alttext="\top" display="inline"><mo>⊤</mo></math>, a contradiction! You can’t have points if you blurred away the points.</p>
-</div>
-<div id="S4.SS5.p3" class="ltx_para">
-<p class="ltx_p">Furthermore, <math id="S4.SS5.p3.m1" class="ltx_Math" alttext="X_{\neg\neg}" display="inline"><msub><mi>X</mi><mrow><mi mathvariant="normal">¬</mi><mo>⁢</mo><mi mathvariant="normal">¬</mi></mrow></msub></math> is <em class="ltx_emph ltx_font_italic">dense</em> in <math id="S4.SS5.p3.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>. For a sublocale <math id="S4.SS5.p3.m3" class="ltx_Math" alttext="A\hookrightarrow X" display="inline"><mrow><mi>A</mi><mo>↪</mo><mi>X</mi></mrow></math> to be dense means that <math id="S4.SS5.p3.m4" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> intersects every open sublocale. (An open sublocale is one of the original open sets in <math id="S4.SS5.p3.m5" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>, promoted to a sublocale by embedding it in <math id="S4.SS5.p3.m6" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>.) This follows from being a nucleus: <math id="S4.SS5.p3.m7" class="ltx_Math" alttext="\neg\neg A\supseteq A" display="inline"><mrow><mrow><mi mathvariant="normal">¬</mi><mo>⁢</mo><mi mathvariant="normal">¬</mi><mo>⁢</mo><mi>A</mi></mrow><mo>⊇</mo><mi>A</mi></mrow></math>. The definitions are piling up, aren’t they?</p>
-</div>
+<p>We're ready to define a sublocale with no points! Let <math alttext="X" display="inline"><mi>X</mi></math> be a Hausdorff topological space without isolated points and let <math alttext="\mathcal{O}(X)" display="inline"><mrow><mi>𝒪</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math> be the frame of its open sets. Consider the double-negation operation <math alttext="\neg\neg:\mathcal{O}(X)\to\mathcal{O}(X)" display="inline"><mrow><mrow><mi mathvariant="normal">¬</mi><mo>⁢</mo><mi mathvariant="normal">¬</mi></mrow><mo>:</mo><mrow><mrow><mi>𝒪</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mrow><mi>𝒪</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>. What does this do? The negation of an open <math alttext="U" display="inline"><mi>U</mi></math> is the largest open disjoint from <math alttext="U" display="inline"><mi>U</mi></math> (or equivalently, the union of all opens disjoint from <math alttext="U" display="inline"><mi>U</mi></math>). In an actual space such as <math alttext="X" display="inline"><mi>X</mi></math> this is the same as the interior of the complement, but in a locale we don't have complements since they are not open. Repeating the operation, <math alttext="\neg\neg U" display="inline"><mrow><mi mathvariant="normal">¬</mi><mo>⁢</mo><mi mathvariant="normal">¬</mi><mo>⁢</mo><mi>U</mi></mrow></math> is thus the largest open disjoint from the largest open disjoint from <math alttext="U" display="inline"><mi>U</mi></math>. For a lot of sets this is just <math alttext="U" display="inline"><mi>U</mi></math> again but sometimes it erases information. For any <math alttext="p\in X" display="inline"><mrow><mi>p</mi><mo>∈</mo><mi>X</mi></mrow></math> we have that <math alttext="\neg\neg(X-\{p\})=X" display="inline"><mrow><mrow><mi mathvariant="normal">¬</mi><mo>⁢</mo><mrow><mi mathvariant="normal">¬</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>X</mi><mo>-</mo><mrow><mo stretchy="false">{</mo><mi>p</mi><mo stretchy="false">}</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mi>X</mi></mrow></math>, because <math alttext="\neg(X-\{p\})=\emptyset" display="inline"><mrow><mrow><mi mathvariant="normal">¬</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>X</mi><mo>-</mo><mrow><mo stretchy="false">{</mo><mi>p</mi><mo stretchy="false">}</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi mathvariant="normal">∅</mi></mrow></math>. So this operation blurs out the points.</p>
+<p><math alttext="\neg\neg" display="inline"><mrow><mi mathvariant="normal">¬</mi><mo>⁢</mo><mi mathvariant="normal">¬</mi></mrow></math> is idempotent, and in fact defines a nucleus hence an embedding <math alttext="nn:X_{\neg\neg}\hookrightarrow X" display="inline"><mrow><mrow><mi>n</mi><mo>⁢</mo><mi>n</mi></mrow><mo>:</mo><mrow><msub><mi>X</mi><mrow><mi mathvariant="normal">¬</mi><mo>⁢</mo><mi mathvariant="normal">¬</mi></mrow></msub><mo>↪</mo><mi>X</mi></mrow></mrow></math>, where <math alttext="nn^{-1}U=\neg\neg U" display="inline"><mrow><mrow><mi>n</mi><mo>⁢</mo><msup><mi>n</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>U</mi></mrow><mo>=</mo><mrow><mi mathvariant="normal">¬</mi><mo>⁢</mo><mi mathvariant="normal">¬</mi><mo>⁢</mo><mi>U</mi></mrow></mrow></math>. It's this sublocale <math alttext="X_{\neg\neg}" display="inline"><msub><mi>X</mi><mrow><mi mathvariant="normal">¬</mi><mo>⁢</mo><mi mathvariant="normal">¬</mi></mrow></msub></math> that has no points. For suppose <math alttext="p:\star\to X_{\neg\neg}" display="inline"><mrow><mi>p</mi><mo>:</mo><mo>⋆</mo><mo>→</mo><msub><mi>X</mi><mrow><mi mathvariant="normal">¬</mi><mo>⁢</mo><mi mathvariant="normal">¬</mi></mrow></msub></mrow></math> is a point. The composition <math alttext="nn\circ p" display="inline"><mrow><mrow><mi>n</mi><mo>⁢</mo><mi>n</mi></mrow><mo>∘</mo><mi>p</mi></mrow></math> is thus a point of <math alttext="X" display="inline"><mi>X</mi></math>. Consider the open set given by deleting this point from <math alttext="X" display="inline"><mi>X</mi></math>, i.e. <math alttext="X-\{nn(p(\star))\}" display="inline"><mrow><mi>X</mi><mo>-</mo><mrow><mo stretchy="false">{</mo><mrow><mi>n</mi><mo>⁢</mo><mi>n</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mo>⋆</mo><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow></math>. Taking the inverse image in frames we have <math alttext="p^{-1}(\neg\neg(X-\{nn(p(\star))\}))=\bot" display="inline"><mrow><mrow><msup><mi>p</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">¬</mi><mo>⁢</mo><mrow><mi mathvariant="normal">¬</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>X</mi><mo>-</mo><mrow><mo stretchy="false">{</mo><mrow><mi>n</mi><mo>⁢</mo><mi>n</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mo>⋆</mo><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mo>⊥</mo></mrow></math> because only opens that contain the image of <math alttext="\star" display="inline"><mo>⋆</mo></math> map back to <math alttext="\top" display="inline"><mo>⊤</mo></math>. But as we saw in the previous paragraph <math alttext="\neg\neg(X-\{nn(p(\star))\})=X" display="inline"><mrow><mrow><mi mathvariant="normal">¬</mi><mo>⁢</mo><mrow><mi mathvariant="normal">¬</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>X</mi><mo>-</mo><mrow><mo stretchy="false">{</mo><mrow><mi>n</mi><mo>⁢</mo><mi>n</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mo>⋆</mo><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mi>X</mi></mrow></math>, so the above expression <math alttext="p^{-1}(\neg\neg(X-\{nn(p(\star))\})" display="inline"><mrow><msup><mi>p</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">¬</mi><mi mathvariant="normal">¬</mi><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>-</mo><mrow><mo stretchy="false">{</mo><mi>n</mi><mi>n</mi><mrow><mo stretchy="false">(</mo><mi>p</mi><mrow><mo stretchy="false">(</mo><mo>⋆</mo><mo stretchy="false">)</mo></mrow><mo stretchy="false">)</mo></mrow><mo stretchy="false">}</mo></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> becomes <math alttext="p^{-1}(X)" display="inline"><mrow><msup><mi>p</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math> which is <math alttext="\top" display="inline"><mo>⊤</mo></math>, a contradiction! You can't have points if you blurred away the points.</p>
+<p>Furthermore, <math alttext="X_{\neg\neg}" display="inline"><msub><mi>X</mi><mrow><mi mathvariant="normal">¬</mi><mo>⁢</mo><mi mathvariant="normal">¬</mi></mrow></msub></math> is <em>dense</em> in <math alttext="X" display="inline"><mi>X</mi></math>. For a sublocale <math alttext="A\hookrightarrow X" display="inline"><mrow><mi>A</mi><mo>↪</mo><mi>X</mi></mrow></math> to be dense means that <math alttext="A" display="inline"><mi>A</mi></math> intersects every open sublocale. (An open sublocale is one of the original open sets in <math alttext="X" display="inline"><mi>X</mi></math>, promoted to a sublocale by embedding it in <math alttext="X" display="inline"><mi>X</mi></math>.) This follows from being a nucleus: <math alttext="\neg\neg A\supseteq A" display="inline"><mrow><mrow><mi mathvariant="normal">¬</mi><mo>⁢</mo><mi mathvariant="normal">¬</mi><mo>⁢</mo><mi>A</mi></mrow><mo>⊇</mo><mi>A</mi></mrow></math>. The definitions are piling up, aren't they?</p>
 </section>
-<section id="S4.SS6" class="ltx_subsection">
-<h3 class="ltx_title ltx_title_subsection">
-<span class="ltx_tag ltx_tag_subsection">4.6 </span>Locale morphisms</h3>
+<section>
+<h3>
+<span>4.6 </span>Locale morphisms</h3>
 
-<div id="S4.SS6.p1" class="ltx_para">
-<p class="ltx_p">A fact that makes the category of locales different from the category of spaces is that any two dense sublocales intersect to form another dense sublocale! If we intersect all dense sublocales we form a <em class="ltx_emph ltx_font_italic">smallest dense sublocale</em> of any locale <math id="S4.SS6.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> and it turns out to be exactly <math id="S4.SS6.p1.m2" class="ltx_Math" alttext="X_{\neg\neg}" display="inline"><msub><mi>X</mi><mrow><mi mathvariant="normal">¬</mi><mo>⁢</mo><mi mathvariant="normal">¬</mi></mrow></msub></math>. By smallest I mean inside the poset of sublocales. None of this is the case with topological spaces such as <math id="S4.SS6.p1.m3" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math> which can be decomposed into disjoint dense sub<em class="ltx_emph ltx_font_italic">sets</em> such as <math id="S4.SS6.p1.m4" class="ltx_Math" alttext="\mathbb{Q}" display="inline"><mi>ℚ</mi></math> and <math id="S4.SS6.p1.m5" class="ltx_Math" alttext="\mathbb{R}\backslash\mathbb{Q}" display="inline"><mrow><mi>ℝ</mi><mo>\</mo><mi>ℚ</mi></mrow></math>. This is confusing! What does the sublocale <math id="S4.SS6.p1.m6" class="ltx_Math" alttext="\mathbb{Q}\hookrightarrow\mathbb{R}" display="inline"><mrow><mi>ℚ</mi><mo>↪</mo><mi>ℝ</mi></mrow></math> look like then? The consequences for measure theory are significant, since defining measures on sets leads to some pathological examples involving cosets of the rationals.</p>
-</div>
-<div id="S4.SS6.p2" class="ltx_para">
-<p class="ltx_p">Let’s look at the <em class="ltx_emph ltx_font_italic">image</em> of a sublocale inclusion. For this we need the “push-forward” map <math id="S4.SS6.p2.m1" class="ltx_Math" alttext="f_{*}:\mathcal{O}(X)\to\mathcal{O}(Y)" display="inline"><mrow><msub><mi>f</mi><mo>*</mo></msub><mo>:</mo><mrow><mrow><mi class="ltx_font_mathcaligraphic">𝒪</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒪</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>Y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>, which is actually right adjoint to the inverse image map <math id="S4.SS6.p2.m2" class="ltx_Math" alttext="f^{-1}:\mathcal{O}(Y)\to\mathcal{O}(X)" display="inline"><mrow><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>:</mo><mrow><mrow><mi class="ltx_font_mathcaligraphic">𝒪</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>Y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒪</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>. It is defined as follows:</p>
-<table id="S4.Ex9" class="ltx_equation ltx_eqn_table">
+<p>A fact that makes the category of locales different from the category of spaces is that any two dense sublocales intersect to form another dense sublocale! If we intersect all dense sublocales we form a <em>smallest dense sublocale</em> of any locale <math alttext="X" display="inline"><mi>X</mi></math> and it turns out to be exactly <math alttext="X_{\neg\neg}" display="inline"><msub><mi>X</mi><mrow><mi mathvariant="normal">¬</mi><mo>⁢</mo><mi mathvariant="normal">¬</mi></mrow></msub></math>. By smallest I mean inside the poset of sublocales. None of this is the case with topological spaces such as <math alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math> which can be decomposed into disjoint dense sub<em>sets</em> such as <math alttext="\mathbb{Q}" display="inline"><mi>ℚ</mi></math> and <math alttext="\mathbb{R}\backslash\mathbb{Q}" display="inline"><mrow><mi>ℝ</mi><mo>\</mo><mi>ℚ</mi></mrow></math>. This is confusing! What does the sublocale <math alttext="\mathbb{Q}\hookrightarrow\mathbb{R}" display="inline"><mrow><mi>ℚ</mi><mo>↪</mo><mi>ℝ</mi></mrow></math> look like then? The consequences for measure theory are significant, since defining measures on sets leads to some pathological examples involving cosets of the rationals.</p>
+<p>Let's look at the <em>image</em> of a sublocale inclusion. For this we need the “push-forward” map <math alttext="f_{*}:\mathcal{O}(X)\to\mathcal{O}(Y)" display="inline"><mrow><msub><mi>f</mi><mo>*</mo></msub><mo>:</mo><mrow><mrow><mi>𝒪</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mrow><mi>𝒪</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>Y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>, which is actually right adjoint to the inverse image map <math alttext="f^{-1}:\mathcal{O}(Y)\to\mathcal{O}(X)" display="inline"><mrow><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>:</mo><mrow><mrow><mi>𝒪</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>Y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mrow><mi>𝒪</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>. It is defined as follows:</p>
+<table>
 
-<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
-<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
-<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex9.m1" class="ltx_Math" alttext="f_{*}(U)=\bigcup_{f^{-1}(V)\subseteq U}V." display="block"><mrow><mrow><mrow><msub><mi>f</mi><mo>*</mo></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>U</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><munder><mo largeop="true" mathsize="160%" movablelimits="false" stretchy="false" symmetric="true">⋃</mo><mrow><mrow><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⊆</mo><mi>U</mi></mrow></munder><mi>V</mi></mrow></mrow><mo>.</mo></mrow></math></td>
-<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<tr>
+<td></td>
+<td><math alttext="f_{*}(U)=\bigcup_{f^{-1}(V)\subseteq U}V." display="block"><mrow><mrow><mrow><msub><mi>f</mi><mo>*</mo></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>U</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><munder><mo largeop="true" mathsize="160%" movablelimits="false" stretchy="false" symmetric="true">⋃</mo><mrow><mrow><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⊆</mo><mi>U</mi></mrow></munder><mi>V</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td></td>
 </tr>
 </table>
-<p class="ltx_p">In other words, an open set <math id="S4.SS6.p2.m3" class="ltx_Math" alttext="U\subseteq X" display="inline"><mrow><mi>U</mi><mo>⊆</mo><mi>X</mi></mrow></math> maps under <math id="S4.SS6.p2.m4" class="ltx_Math" alttext="f_{*}" display="inline"><msub><mi>f</mi><mo>*</mo></msub></math> to the <em class="ltx_emph ltx_font_italic">largest</em> open set in <math id="S4.SS6.p2.m5" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> that pulls back to some subset of <math id="S4.SS6.p2.m6" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math>.</p>
-</div>
-<div id="S4.SS6.p3" class="ltx_para">
-<p class="ltx_p">This is an elementary operation but not one that comes up in a standard undergraduate topology course (at least a 20th century one!). Here’s an example that may help: imagine <math id="S4.SS6.p3.m1" class="ltx_Math" alttext="f:[0,1]\to\mathbb{R}^{2}" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow><mo>→</mo><msup><mi>ℝ</mi><mn>2</mn></msup></mrow></mrow></math> is some smooth curve in the plane. Given an open interval <math id="S4.SS6.p3.m2" class="ltx_Math" alttext="(a,b)\subseteq[0,1]" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>⊆</mo><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow></mrow></math>, its image in the plane is a one-dimensional subset, so won’t itself be open. Instead to compute <math id="S4.SS6.p3.m3" class="ltx_Math" alttext="f_{*}((a,b))" display="inline"><mrow><msub><mi>f</mi><mo>*</mo></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo stretchy="false">)</mo></mrow></mrow></math> we have to find the largest open set in the plane whose inverse image is <math id="S4.SS6.p3.m4" class="ltx_Math" alttext="(a,b)" display="inline"><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></math>, which will look like <em class="ltx_emph ltx_font_italic">all of <math id="S4.SS6.p3.m5" class="ltx_Math" alttext="\mathbb{R}^{2}" display="inline"><msup><mi>ℝ</mi><mn mathvariant="normal">2</mn></msup></math></em> minus two skinny pieces of the curve that are the images of <math id="S4.SS6.p3.m6" class="ltx_Math" alttext="[0,a]" display="inline"><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mi>a</mi><mo stretchy="false">]</mo></mrow></math> and <math id="S4.SS6.p3.m7" class="ltx_Math" alttext="[b,1]" display="inline"><mrow><mo stretchy="false">[</mo><mi>b</mi><mo>,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow></math>. So it has the image in it, plus all the rest of the plane that isn’t in the image of the rest of <math id="S4.SS6.p3.m8" class="ltx_Math" alttext="[0,1]" display="inline"><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow></math>.</p>
-</div>
-<div id="S4.SS6.p4" class="ltx_para">
-<p class="ltx_p">The requirement that <math id="S4.SS6.p4.m1" class="ltx_Math" alttext="f_{*}" display="inline"><msub><mi>f</mi><mo>*</mo></msub></math> give the <em class="ltx_emph ltx_font_italic">largest</em> open set such that some condition holds should remind us of a nucleus. In fact given a sublocale <math id="S4.SS6.p4.m2" class="ltx_Math" alttext="f:X\to Y" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>X</mi><mo>→</mo><mi>Y</mi></mrow></mrow></math> then <math id="S4.SS6.p4.m3" class="ltx_Math" alttext="f_{*}\circ f^{-1}" display="inline"><mrow><msub><mi>f</mi><mo>*</mo></msub><mo>∘</mo><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></math> is the nucleus for the sublocale! It maps an open set to the direct image of its inverse image, which will be the largest open that contains the one you started with, and which itself also maps back to the same open in <math id="S4.SS6.p4.m4" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>.</p>
-</div>
-<div id="S4.SS6.p5" class="ltx_para">
-<p class="ltx_p">Now let’s get back to considering the inclusion <math id="S4.SS6.p5.m1" class="ltx_Math" alttext="i:\mathbb{Q}\hookrightarrow\mathbb{R}" display="inline"><mrow><mi>i</mi><mo>:</mo><mrow><mi>ℚ</mi><mo>↪</mo><mi>ℝ</mi></mrow></mrow></math>. The push-forward map <math id="S4.SS6.p5.m2" class="ltx_Math" alttext="i_{*}" display="inline"><msub><mi>i</mi><mo>*</mo></msub></math> sends the open set “all of <math id="S4.SS6.p5.m3" class="ltx_Math" alttext="\mathbb{Q}" display="inline"><mi>ℚ</mi></math>” in <math id="S4.SS6.p5.m4" class="ltx_Math" alttext="\mathbb{Q}" display="inline"><mi>ℚ</mi></math> to the largest open in <math id="S4.SS6.p5.m5" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math> whose inverse image is contained in <math id="S4.SS6.p5.m6" class="ltx_Math" alttext="\mathbb{Q}" display="inline"><mi>ℚ</mi></math>. But <math id="S4.SS6.p5.m7" class="ltx_Math" alttext="\mathbb{Q}" display="inline"><mi>ℚ</mi></math> is dense so this is all of <math id="S4.SS6.p5.m8" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>! There’s no smaller open that contains the rationals! The requirement that this push-forward be an open set is forbidding us from carving out these pathological dense subsets in the category of locales. The topological glue of the real numbers is constraining what kind of subobjects we have access to.</p>
-</div>
+<p>In other words, an open set <math alttext="U\subseteq X" display="inline"><mrow><mi>U</mi><mo>⊆</mo><mi>X</mi></mrow></math> maps under <math alttext="f_{*}" display="inline"><msub><mi>f</mi><mo>*</mo></msub></math> to the <em>largest</em> open set in <math alttext="Y" display="inline"><mi>Y</mi></math> that pulls back to some subset of <math alttext="U" display="inline"><mi>U</mi></math>.</p>
+<p>This is an elementary operation but not one that comes up in a standard undergraduate topology course (at least a 20th century one!). Here's an example that may help: imagine <math alttext="f:[0,1]\to\mathbb{R}^{2}" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow><mo>→</mo><msup><mi>ℝ</mi><mn>2</mn></msup></mrow></mrow></math> is some smooth curve in the plane. Given an open interval <math alttext="(a,b)\subseteq[0,1]" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>⊆</mo><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow></mrow></math>, its image in the plane is a one-dimensional subset, so won't itself be open. Instead to compute <math alttext="f_{*}((a,b))" display="inline"><mrow><msub><mi>f</mi><mo>*</mo></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo stretchy="false">)</mo></mrow></mrow></math> we have to find the largest open set in the plane whose inverse image is <math alttext="(a,b)" display="inline"><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></math>, which will look like <em>all of <math alttext="\mathbb{R}^{2}" display="inline"><msup><mi>ℝ</mi><mn mathvariant="normal">2</mn></msup></math></em> minus two skinny pieces of the curve that are the images of <math alttext="[0,a]" display="inline"><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mi>a</mi><mo stretchy="false">]</mo></mrow></math> and <math alttext="[b,1]" display="inline"><mrow><mo stretchy="false">[</mo><mi>b</mi><mo>,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow></math>. So it has the image in it, plus all the rest of the plane that isn't in the image of the rest of <math alttext="[0,1]" display="inline"><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow></math>.</p>
+<p>The requirement that <math alttext="f_{*}" display="inline"><msub><mi>f</mi><mo>*</mo></msub></math> give the <em>largest</em> open set such that some condition holds should remind us of a nucleus. In fact given a sublocale <math alttext="f:X\to Y" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>X</mi><mo>→</mo><mi>Y</mi></mrow></mrow></math> then <math alttext="f_{*}\circ f^{-1}" display="inline"><mrow><msub><mi>f</mi><mo>*</mo></msub><mo>∘</mo><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></math> is the nucleus for the sublocale! It maps an open set to the direct image of its inverse image, which will be the largest open that contains the one you started with, and which itself also maps back to the same open in <math alttext="X" display="inline"><mi>X</mi></math>.</p>
+<p>Now let's get back to considering the inclusion <math alttext="i:\mathbb{Q}\hookrightarrow\mathbb{R}" display="inline"><mrow><mi>i</mi><mo>:</mo><mrow><mi>ℚ</mi><mo>↪</mo><mi>ℝ</mi></mrow></mrow></math>. The push-forward map <math alttext="i_{*}" display="inline"><msub><mi>i</mi><mo>*</mo></msub></math> sends the open set “all of <math alttext="\mathbb{Q}" display="inline"><mi>ℚ</mi></math>” in <math alttext="\mathbb{Q}" display="inline"><mi>ℚ</mi></math> to the largest open in <math alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math> whose inverse image is contained in <math alttext="\mathbb{Q}" display="inline"><mi>ℚ</mi></math>. But <math alttext="\mathbb{Q}" display="inline"><mi>ℚ</mi></math> is dense so this is all of <math alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>! There's no smaller open that contains the rationals! The requirement that this push-forward be an open set is forbidding us from carving out these pathological dense subsets in the category of locales. The topological glue of the real numbers is constraining what kind of subobjects we have access to.</p>
 </section>
 </section>
-<section id="S5" class="ltx_section">
-<h2 class="ltx_title ltx_title_section">
-<span class="ltx_tag ltx_tag_section">5 </span>Measure theory</h2>
+<section>
+<h2>
+<span>5 </span>Measure theory</h2>
 
-<div id="S5.p1" class="ltx_para">
-<p class="ltx_p">We have prepared all the abstract background. We have a new setting for topology called locale theory, which has broken away from the concept of a point. We have seen that the monomorphisms are different than in the category of topological spaces, and we have examples of sublocales that have no points. Let’s bring measure theory into the mix and define randomness in this setting.</p>
-</div>
-<div id="S5.p2" class="ltx_para">
-<p class="ltx_p">Technically we are back to requiring the “<math id="S5.p2.m1" class="ltx_Math" alttext="\sigma-" display="inline"><mrow><mi>σ</mi><mo>-</mo></mrow></math>” on the words “frame”, “locale” and “sublocale” so that we can reconnect with the countability requirements of measures. On the other hand many spaces we care about are “strongly Lindelöf” and we can drop the <math id="S5.p2.m2" class="ltx_Math" alttext="\sigma-" display="inline"><mrow><mi>σ</mi><mo>-</mo></mrow></math>. Simpson works out the details in <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib6" title="Measure, randomness and sublocales" class="ltx_ref">7</a>]</cite>. To be strongly Lindelöf means that for any collection of open sets, their union is contained in a <em class="ltx_emph ltx_font_italic">countable</em> union of open sets. This includes <math id="S5.p2.m3" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>. For the rest of the essay we’ll assume we are dealing with strongly Lindelöf spaces and we’ll drop the <math id="S5.p2.m4" class="ltx_Math" alttext="\sigma-" display="inline"><mrow><mi>σ</mi><mo>-</mo></mrow></math>, but of course the full theory can be more general if we want.</p>
-</div>
-<div id="S5.p3" class="ltx_para">
-<p class="ltx_p">We will define a measure on a locale/frame and then extend it to all the sublocales of the frame.</p>
-</div>
-<div id="S5.p4" class="ltx_para">
-<p class="ltx_p">A measure on a frame is a function <math id="S5.p4.m1" class="ltx_Math" alttext="\mu:F\to[0,\infty]" display="inline"><mrow><mi>μ</mi><mo>:</mo><mrow><mi>F</mi><mo>→</mo><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">]</mo></mrow></mrow></mrow></math> satisfying</p>
-<table id="S5.Ex10" class="ltx_equation ltx_eqn_table">
+<p>We have prepared all the abstract background. We have a new setting for topology called locale theory, which has broken away from the concept of a point. We have seen that the monomorphisms are different than in the category of topological spaces, and we have examples of sublocales that have no points. Let's bring measure theory into the mix and define randomness in this setting.</p>
+<p>Technically we are back to requiring the “<math alttext="\sigma-" display="inline"><mrow><mi>σ</mi><mo>-</mo></mrow></math>” on the words “frame”, “locale” and “sublocale” so that we can reconnect with the countability requirements of measures. On the other hand many spaces we care about are “strongly Lindelöf” and we can drop the <math alttext="\sigma-" display="inline"><mrow><mi>σ</mi><mo>-</mo></mrow></math>. Simpson works out the details in <cite>[<a href="#bib.bib6" title="Measure, randomness and sublocales">7</a>]</cite>. To be strongly Lindelöf means that for any collection of open sets, their union is contained in a <em>countable</em> union of open sets. This includes <math alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>. For the rest of the essay we'll assume we are dealing with strongly Lindelöf spaces and we'll drop the <math alttext="\sigma-" display="inline"><mrow><mi>σ</mi><mo>-</mo></mrow></math>, but of course the full theory can be more general if we want.</p>
+<p>We will define a measure on a locale/frame and then extend it to all the sublocales of the frame.</p>
+<p>A measure on a frame is a function <math alttext="\mu:F\to[0,\infty]" display="inline"><mrow><mi>μ</mi><mo>:</mo><mrow><mi>F</mi><mo>→</mo><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">]</mo></mrow></mrow></mrow></math> satisfying</p>
+<table>
 
-<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
-<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
-<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex10.m1" class="ltx_Math" alttext="\mu(\bot)=0" display="block"><mrow><mrow><mi>μ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mo>⊥</mo><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math></td>
-<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<tr>
+<td></td>
+<td><math alttext="\mu(\bot)=0" display="block"><mrow><mrow><mi>μ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mo>⊥</mo><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math></td>
+<td></td>
 </tr>
 </table>
-<table id="S5.Ex11" class="ltx_equation ltx_eqn_table">
+<table>
 
-<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
-<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
-<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex11.m1" class="ltx_Math" alttext="x\leq y\implies\mu(x)\leq\mu(y)" display="block"><mrow><mi>x</mi><mo>≤</mo><mi>y</mi><mo>⟹</mo><mrow><mi>μ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≤</mo><mrow><mi>μ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
-<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<tr>
+<td></td>
+<td><math alttext="x\leq y\implies\mu(x)\leq\mu(y)" display="block"><mrow><mi>x</mi><mo>≤</mo><mi>y</mi><mo>⟹</mo><mrow><mi>μ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≤</mo><mrow><mi>μ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td></td>
 </tr>
 </table>
-<table id="S5.Ex12" class="ltx_equation ltx_eqn_table">
+<table>
 
-<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
-<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
-<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex12.m1" class="ltx_Math" alttext='\mu(x)+\mu(y)=\mu(x\vee y)+\mu(x\wedge y)\quad\mathrm{("modularity")}' display="block"><mrow><mrow><mrow><mi>μ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>μ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mrow><mrow><mi>μ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>∨</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>μ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>∧</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo mathvariant="italic" separator="true"> </mo><mrow><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">"</mi><mo>⁢</mo><mi>modularity</mi><mo>⁢</mo><mi mathvariant="normal">"</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
-<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<tr>
+<td></td>
+<td><math alttext='\mu(x)+\mu(y)=\mu(x\vee y)+\mu(x\wedge y)\quad\mathrm{("modularity")}' display="block"><mrow><mrow><mrow><mi>μ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>μ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mrow><mrow><mi>μ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>∨</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>μ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>∧</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo mathvariant="italic" separator="true"> </mo><mrow><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">"</mi><mo>⁢</mo><mi>modularity</mi><mo>⁢</mo><mi mathvariant="normal">"</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td></td>
 </tr>
 </table>
-<table id="S5.Ex13" class="ltx_equation ltx_eqn_table">
+<table>
 
-<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
-<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
-<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex13.m1" class="ltx_Math" alttext='(x_{i})_{i\geq 0}\mathrm{\ ascending\ }\implies\mu(\bigvee_{i\geq 0}x_{i})=%
+<tr>
+<td></td>
+<td><math alttext='(x_{i})_{i\geq 0}\mathrm{\ ascending\ }\implies\mu(\bigvee_{i\geq 0}x_{i})=%
 \sup_{i\geq 0}\mu(x_{i})\quad\mathrm{("continuity")}.' display="block"><mrow><mrow><mrow><mrow><mpadded width="+5pt"><msub><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow><mrow><mi>i</mi><mo>≥</mo><mn>0</mn></mrow></msub></mpadded><mo>⁢</mo><mpadded width="+5pt"><mi>ascending</mi></mpadded></mrow><mo>⟹</mo><mrow><mi>μ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><munder><mo largeop="true" mathsize="160%" movablelimits="false" stretchy="false" symmetric="true">⋁</mo><mrow><mi>i</mi><mo>≥</mo><mn>0</mn></mrow></munder><msub><mi>x</mi><mi>i</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><munder><mo movablelimits="false">sup</mo><mrow><mi>i</mi><mo>≥</mo><mn>0</mn></mrow></munder><mo>⁡</mo><mrow><mi>μ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo mathvariant="italic" separator="true"> </mo><mrow><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">"</mi><mo>⁢</mo><mi>continuity</mi><mo>⁢</mo><mi mathvariant="normal">"</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>.</mo></mrow></math></td>
-<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td></td>
 </tr>
 </table>
-<p class="ltx_p">We say <math id="S5.p4.m2" class="ltx_Math" alttext="\mu" display="inline"><mi>μ</mi></math> is a probability measure if <math id="S5.p4.m3" class="ltx_Math" alttext="\mu(\top)=1" display="inline"><mrow><mrow><mi>μ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mo>⊤</mo><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>1</mn></mrow></math>. We will also call <math id="S5.p4.m4" class="ltx_Math" alttext="\mu" display="inline"><mi>μ</mi></math> a measure on a locale if it is a measure on the corresponding frame of opens.</p>
-</div>
-<div id="S5.p5" class="ltx_para">
-<p class="ltx_p">To bring the concept of measure to sublocales we will generalize the concept of outer measure. We say a locale is <em class="ltx_emph ltx_font_italic">fitted</em> if for every sublocale <math id="S5.p5.m1" class="ltx_Math" alttext="Y\subseteq X" display="inline"><mrow><mi>Y</mi><mo>⊆</mo><mi>X</mi></mrow></math> it holds that <math id="S5.p5.m2" class="ltx_Math" alttext="Y=\bigwedge\mathcal{N}(Y)" display="inline"><mrow><mi>Y</mi><mo>=</mo><mrow><mo largeop="true" mathsize="160%" stretchy="false" symmetric="true">⋀</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒩</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>Y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math> where <math id="S5.p5.m3" class="ltx_Math" alttext="\mathcal{N}(Y)=\{U\in\mathcal{O}(X)|Y\subseteq U\}" display="inline"><mrow><mrow><mi class="ltx_font_mathcaligraphic">𝒩</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>Y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>U</mi><mo>∈</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒪</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">|</mo><mrow><mi>Y</mi><mo>⊆</mo><mi>U</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math>, the family of opens containing <math id="S5.p5.m4" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math>. We extend the measure <math id="S5.p5.m5" class="ltx_Math" alttext="\mu" display="inline"><mi>μ</mi></math> to a measure <math id="S5.p5.m6" class="ltx_Math" alttext="\mu^{*}" display="inline"><msup><mi>μ</mi><mo>*</mo></msup></math> on any sublocale by <math id="S5.p5.m7" class="ltx_Math" alttext="\mu^{*}(Y)=\inf_{U\in\mathcal{N}(Y)}\mu(U)" display="inline"><mrow><mrow><msup><mi>μ</mi><mo>*</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>Y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mo>inf</mo><mrow><mi>U</mi><mo>∈</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒩</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>Y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></msub><mo>⁡</mo><mrow><mi>μ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>U</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>, i.e. the limit of the measure of the open sets that intersect to <math id="S5.p5.m8" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math>. There is work to show that spaces we care about are fitted, and that this definition really defines a measure (see section 5 of <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib6" title="Measure, randomness and sublocales" class="ltx_ref">7</a>]</cite>).</p>
-</div>
-<div id="S5.p6" class="ltx_para">
-<p class="ltx_p">We can now cash in the fact that we cannot decompose locales into two dense sublocales. Simpson <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib6" title="Measure, randomness and sublocales" class="ltx_ref">7</a>]</cite> proves in Example 4.7 that the standard measure on open subsets of <math id="S5.p6.m1" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math>, which extends to a measure on sublocales in the way we just defined, is preserved under Euclidean translations. This measure agrees with Lebesgue measure whenever the sublocale agrees with a measurable set. In standard measure theory there is no translation invariant measure on arbitrary subsets of <math id="S5.p6.m2" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math> due to pathological examples like cosets of rational numbers, which of course are automatically avoided in locale theory.</p>
-</div>
-<section id="S5.SS1" class="ltx_subsection">
-<h3 class="ltx_title ltx_title_subsection">
-<span class="ltx_tag ltx_tag_subsection">5.1 </span>The random sublocale</h3>
+<p>We say <math alttext="\mu" display="inline"><mi>μ</mi></math> is a probability measure if <math alttext="\mu(\top)=1" display="inline"><mrow><mrow><mi>μ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mo>⊤</mo><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>1</mn></mrow></math>. We will also call <math alttext="\mu" display="inline"><mi>μ</mi></math> a measure on a locale if it is a measure on the corresponding frame of opens.</p>
+<p>To bring the concept of measure to sublocales we will generalize the concept of outer measure. We say a locale is <em>fitted</em> if for every sublocale <math alttext="Y\subseteq X" display="inline"><mrow><mi>Y</mi><mo>⊆</mo><mi>X</mi></mrow></math> it holds that <math alttext="Y=\bigwedge\mathcal{N}(Y)" display="inline"><mrow><mi>Y</mi><mo>=</mo><mrow><mo largeop="true" mathsize="160%" stretchy="false" symmetric="true">⋀</mo><mrow><mi>𝒩</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>Y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math> where <math alttext="\mathcal{N}(Y)=\{U\in\mathcal{O}(X)|Y\subseteq U\}" display="inline"><mrow><mrow><mi>𝒩</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>Y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>U</mi><mo>∈</mo><mrow><mi>𝒪</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">|</mo><mrow><mi>Y</mi><mo>⊆</mo><mi>U</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math>, the family of opens containing <math alttext="Y" display="inline"><mi>Y</mi></math>. We extend the measure <math alttext="\mu" display="inline"><mi>μ</mi></math> to a measure <math alttext="\mu^{*}" display="inline"><msup><mi>μ</mi><mo>*</mo></msup></math> on any sublocale by <math alttext="\mu^{*}(Y)=\inf_{U\in\mathcal{N}(Y)}\mu(U)" display="inline"><mrow><mrow><msup><mi>μ</mi><mo>*</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>Y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mo>inf</mo><mrow><mi>U</mi><mo>∈</mo><mrow><mi>𝒩</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>Y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></msub><mo>⁡</mo><mrow><mi>μ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>U</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>, i.e. the limit of the measure of the open sets that intersect to <math alttext="Y" display="inline"><mi>Y</mi></math>. There is work to show that spaces we care about are fitted, and that this definition really defines a measure (see section 5 of <cite>[<a href="#bib.bib6" title="Measure, randomness and sublocales">7</a>]</cite>).</p>
+<p>We can now cash in the fact that we cannot decompose locales into two dense sublocales. Simpson <cite>[<a href="#bib.bib6" title="Measure, randomness and sublocales">7</a>]</cite> proves in Example 4.7 that the standard measure on open subsets of <math alttext="\mathbb{R}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math>, which extends to a measure on sublocales in the way we just defined, is preserved under Euclidean translations. This measure agrees with Lebesgue measure whenever the sublocale agrees with a measurable set. In standard measure theory there is no translation invariant measure on arbitrary subsets of <math alttext="\mathbb{R}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math> due to pathological examples like cosets of rational numbers, which of course are automatically avoided in locale theory.</p>
+<section>
+<h3>
+<span>5.1 </span>The random sublocale</h3>
 
-<div id="S5.SS1.p1" class="ltx_para">
-<p class="ltx_p">We are ready to define the random sublocale <math id="S5.SS1.p1.m1" class="ltx_Math" alttext="\mathrm{Ran}_{X}" display="inline"><msub><mi>Ran</mi><mi>X</mi></msub></math> of an arbitrary locale <math id="S5.SS1.p1.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> equipped with a probability measure <math id="S5.SS1.p1.m3" class="ltx_Math" alttext="\mu" display="inline"><mi>μ</mi></math>. We’ll do it three times, once for each definition of sublocale.</p>
-</div>
-<div id="S5.SS1.p2" class="ltx_para">
-<p class="ltx_p">The spatial definition of <math id="S5.SS1.p2.m1" class="ltx_Math" alttext="\mathrm{Ran}_{X}" display="inline"><msub><mi>Ran</mi><mi>X</mi></msub></math> is the smallest sublocale of measure 1, or equivalently the intersection of all sublocales of measure 1. This tracks exactly with the definition of Kurtz randomness seen in the algorithmic randomness literature. It’s morally similar to <math id="S5.SS1.p2.m2" class="ltx_Math" alttext="X_{\neg\neg}" display="inline"><msub><mi>X</mi><mrow><mi mathvariant="normal">¬</mi><mo>⁢</mo><mi mathvariant="normal">¬</mi></mrow></msub></math> but making use of measure. <math id="S5.SS1.p2.m3" class="ltx_Math" alttext="X_{\neg\neg}" display="inline"><msub><mi>X</mi><mrow><mi mathvariant="normal">¬</mi><mo>⁢</mo><mi mathvariant="normal">¬</mi></mrow></msub></math> is the smallest dense sublocale of <math id="S5.SS1.p2.m4" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>, whereas <math id="S5.SS1.p2.m5" class="ltx_Math" alttext="\mathrm{Ran}_{X}" display="inline"><msub><mi>Ran</mi><mi>X</mi></msub></math> is the smallest measure-1 sublocale.</p>
-</div>
-<div id="S5.SS1.p3" class="ltx_para">
-<p class="ltx_p">The quotient definition of <math id="S5.SS1.p3.m1" class="ltx_Math" alttext="\mathrm{Ran}_{X}" display="inline"><msub><mi>Ran</mi><mi>X</mi></msub></math> is the equivalence relation <math id="S5.SS1.p3.m2" class="ltx_Math" alttext="=_{\mathrm{Ran}_{X}}" display="inline"><msub><mo>=</mo><msub><mi>Ran</mi><mi>X</mi></msub></msub></math> given by <math id="S5.SS1.p3.m3" class="ltx_Math" alttext="U=_{\mathrm{Ran}_{X}}V\iff\mu(U)=\mu(U\cap V)=\mu(V)" display="inline"><mrow><mrow><mi>U</mi><msub><mo>=</mo><msub><mi>Ran</mi><mi>X</mi></msub></msub><mi>V</mi></mrow><mo>⇔</mo><mrow><mrow><mi>μ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>U</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>μ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>U</mi><mo>∩</mo><mi>V</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>μ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>. Opens are equivalent if they cover the same piece of space with equal measure.</p>
-</div>
-<div id="S5.SS1.p4" class="ltx_para">
-<p class="ltx_p">The nucleus definition is not mentioned by Simpson, but obviously it’s given by <math id="S5.SS1.p4.m1" class="ltx_Math" alttext="j_{\mathrm{Ran}_{X}}(U)=\bigcup_{V\supseteq U,\mu(U)=\mu(V)}V." display="inline"><mrow><mrow><mrow><msub><mi>j</mi><msub><mi>Ran</mi><mi>X</mi></msub></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>U</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mo largeop="true" mathsize="160%" stretchy="false" symmetric="true">⋃</mo><mrow><mrow><mi>V</mi><mo>⊇</mo><mi>U</mi></mrow><mo>,</mo><mrow><mrow><mi>μ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>U</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>μ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></msub><mi>V</mi></mrow></mrow><mo>.</mo></mrow></math> In other words, it maps <math id="S5.SS1.p4.m2" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> to the maximal open that contains <math id="S5.SS1.p4.m3" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> and has the same measure as <math id="S5.SS1.p4.m4" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math>.</p>
-</div>
-<div id="S5.SS1.p5" class="ltx_para">
-<p class="ltx_p">This sublocale has no points! Given a point <math id="S5.SS1.p5.m1" class="ltx_Math" alttext="p\in X" display="inline"><mrow><mi>p</mi><mo>∈</mo><mi>X</mi></mrow></math>, the set <math id="S5.SS1.p5.m2" class="ltx_Math" alttext="X-\{p\}" display="inline"><mrow><mi>X</mi><mo>-</mo><mrow><mo stretchy="false">{</mo><mi>p</mi><mo stretchy="false">}</mo></mrow></mrow></math> has measure 1 and so <math id="S5.SS1.p5.m3" class="ltx_Math" alttext="\mathrm{Ran}_{X}\subseteq X-\{p\}" display="inline"><mrow><msub><mi>Ran</mi><mi>X</mi></msub><mo>⊆</mo><mrow><mi>X</mi><mo>-</mo><mrow><mo stretchy="false">{</mo><mi>p</mi><mo stretchy="false">}</mo></mrow></mrow></mrow></math> and so <math id="S5.SS1.p5.m4" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> is not present in the random sublocale. Equating sets blurs away the points like <math id="S5.SS1.p5.m5" class="ltx_Math" alttext="\neg\neg" display="inline"><mrow><mi mathvariant="normal">¬</mi><mo>⁢</mo><mi mathvariant="normal">¬</mi></mrow></math> does.</p>
-</div>
+<p>We are ready to define the random sublocale <math alttext="\mathrm{Ran}_{X}" display="inline"><msub><mi>Ran</mi><mi>X</mi></msub></math> of an arbitrary locale <math alttext="X" display="inline"><mi>X</mi></math> equipped with a probability measure <math alttext="\mu" display="inline"><mi>μ</mi></math>. We'll do it three times, once for each definition of sublocale.</p>
+<p>The spatial definition of <math alttext="\mathrm{Ran}_{X}" display="inline"><msub><mi>Ran</mi><mi>X</mi></msub></math> is the smallest sublocale of measure 1, or equivalently the intersection of all sublocales of measure 1. This tracks exactly with the definition of Kurtz randomness seen in the algorithmic randomness literature. It's morally similar to <math alttext="X_{\neg\neg}" display="inline"><msub><mi>X</mi><mrow><mi mathvariant="normal">¬</mi><mo>⁢</mo><mi mathvariant="normal">¬</mi></mrow></msub></math> but making use of measure. <math alttext="X_{\neg\neg}" display="inline"><msub><mi>X</mi><mrow><mi mathvariant="normal">¬</mi><mo>⁢</mo><mi mathvariant="normal">¬</mi></mrow></msub></math> is the smallest dense sublocale of <math alttext="X" display="inline"><mi>X</mi></math>, whereas <math alttext="\mathrm{Ran}_{X}" display="inline"><msub><mi>Ran</mi><mi>X</mi></msub></math> is the smallest measure-1 sublocale.</p>
+<p>The quotient definition of <math alttext="\mathrm{Ran}_{X}" display="inline"><msub><mi>Ran</mi><mi>X</mi></msub></math> is the equivalence relation <math alttext="=_{\mathrm{Ran}_{X}}" display="inline"><msub><mo>=</mo><msub><mi>Ran</mi><mi>X</mi></msub></msub></math> given by <math alttext="U=_{\mathrm{Ran}_{X}}V\iff\mu(U)=\mu(U\cap V)=\mu(V)" display="inline"><mrow><mrow><mi>U</mi><msub><mo>=</mo><msub><mi>Ran</mi><mi>X</mi></msub></msub><mi>V</mi></mrow><mo>⇔</mo><mrow><mrow><mi>μ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>U</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>μ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>U</mi><mo>∩</mo><mi>V</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>μ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>. Opens are equivalent if they cover the same piece of space with equal measure.</p>
+<p>The nucleus definition is not mentioned by Simpson, but obviously it's given by <math alttext="j_{\mathrm{Ran}_{X}}(U)=\bigcup_{V\supseteq U,\mu(U)=\mu(V)}V." display="inline"><mrow><mrow><mrow><msub><mi>j</mi><msub><mi>Ran</mi><mi>X</mi></msub></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>U</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mo largeop="true" mathsize="160%" stretchy="false" symmetric="true">⋃</mo><mrow><mrow><mi>V</mi><mo>⊇</mo><mi>U</mi></mrow><mo>,</mo><mrow><mrow><mi>μ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>U</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>μ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></msub><mi>V</mi></mrow></mrow><mo>.</mo></mrow></math> In other words, it maps <math alttext="U" display="inline"><mi>U</mi></math> to the maximal open that contains <math alttext="U" display="inline"><mi>U</mi></math> and has the same measure as <math alttext="U" display="inline"><mi>U</mi></math>.</p>
+<p>This sublocale has no points! Given a point <math alttext="p\in X" display="inline"><mrow><mi>p</mi><mo>∈</mo><mi>X</mi></mrow></math>, the set <math alttext="X-\{p\}" display="inline"><mrow><mi>X</mi><mo>-</mo><mrow><mo stretchy="false">{</mo><mi>p</mi><mo stretchy="false">}</mo></mrow></mrow></math> has measure 1 and so <math alttext="\mathrm{Ran}_{X}\subseteq X-\{p\}" display="inline"><mrow><msub><mi>Ran</mi><mi>X</mi></msub><mo>⊆</mo><mrow><mi>X</mi><mo>-</mo><mrow><mo stretchy="false">{</mo><mi>p</mi><mo stretchy="false">}</mo></mrow></mrow></mrow></math> and so <math alttext="p" display="inline"><mi>p</mi></math> is not present in the random sublocale. Equating sets blurs away the points like <math alttext="\neg\neg" display="inline"><mrow><mi mathvariant="normal">¬</mi><mo>⁢</mo><mi mathvariant="normal">¬</mi></mrow></math> does.</p>
 </section>
 </section>
-<section id="S6" class="ltx_section">
-<h2 class="ltx_title ltx_title_section">
-<span class="ltx_tag ltx_tag_section">6 </span>Conclusion: open sets vs randomness</h2>
+<section>
+<h2>
+<span>6 </span>Conclusion: open sets vs randomness</h2>
 
-<div id="S6.p1" class="ltx_para">
-<p class="ltx_p">Topology is about open sets, and open sets correspond to semideciadable properties, i.e. properties that can be verified in finite time, but might need infinite time to refute. This is philosophically adjacent to being computable and constructive. In the Cantor space of binary sequences, the open sets are unions of cylinders, which are finite prefixes of sequences. We can verify propositions about infinite sequences just when we can do it in finite time. The finiteness is the openness and vice versa.</p>
-</div>
-<div id="S6.p2" class="ltx_para">
-<p class="ltx_p">Locales take just the open sets from topology and build from there, without allowing us to have points unless we can construct them.</p>
-</div>
-<div id="S6.p3" class="ltx_para">
-<p class="ltx_p">We’ve seen that locales behave very differently! There have smallest dense subsets so you can’t decompose the reals into a disjoint union of rational and irrational. The topological glue constrains you from doing this.</p>
-</div>
-<div id="S6.p4" class="ltx_para">
-<p class="ltx_p">Measure theory can be done on locales and it avoids some pathological problems that set theory causes. And we can form a smallest full-measure sublocale, “random sublocale.” This sublocale has no points.</p>
-</div>
-<div id="S6.p5" class="ltx_para">
-<p class="ltx_p">So if we revisit our set theoretic foundations and consider open sets to be primary, then we arrive at a definition of randomness where the randoms constitute a space with full measure but no points. This makes perfect sense once you appreciate that having points requires work to produce one, but random points can never be fully produced.
+<p>Topology is about open sets, and open sets correspond to semideciadable properties, i.e. properties that can be verified in finite time, but might need infinite time to refute. This is philosophically adjacent to being computable and constructive. In the Cantor space of binary sequences, the open sets are unions of cylinders, which are finite prefixes of sequences. We can verify propositions about infinite sequences just when we can do it in finite time. The finiteness is the openness and vice versa.</p>
+<p>Locales take just the open sets from topology and build from there, without allowing us to have points unless we can construct them.</p>
+<p>We've seen that locales behave very differently! There have smallest dense subsets so you can't decompose the reals into a disjoint union of rational and irrational. The topological glue constrains you from doing this.</p>
+<p>Measure theory can be done on locales and it avoids some pathological problems that set theory causes. And we can form a smallest full-measure sublocale, “random sublocale.” This sublocale has no points.</p>
+<p>So if we revisit our set theoretic foundations and consider open sets to be primary, then we arrive at a definition of randomness where the randoms constitute a space with full measure but no points. This makes perfect sense once you appreciate that having points requires work to produce one, but random points can never be fully produced.
 </p>
-</div>
-<div id="S6.p6" class="ltx_para">
-<p class="ltx_p">This simple presentation gives the appearance, at least to me, that locale theory permits only one definition of randomness, which if true would be a major disadvantage. Algorithmic randomness contains a few moving parts such as whether certain measures can be computably obtained, or whether convergence of a limit is computable or can be computably bounded. Can we gain control over analogous parts of the theory within locale theory? Or are we stuck with Kurtz randomness? There are indications that the Borel hierarchy of sets can be imported into locale theory
-(See <a href="https://ccc2017.loria.fr/slides/ccc_simpson.pdf">slides by Simpson</a>).</span></span></span> from which we could obtain weak <math id="S6.p6.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-randomness, so that would be the logical next step to flesh out.</p>
-</div>
-<div id="S6.p7" class="ltx_para">
-<p class="ltx_p">Perhaps there is another option, which is that locale theory may not by itself offer control over all the extra choices contained in the theory of algorithmic randomness, but that passing from locales to the theory of assemblies in a realizability topos may offer them instead. Topos theory is built on top of locale theory, so this would be like continuing the narrative. In such a case locales would offer the unified big picture of the origins of randomness, which are then exported to different implementations.</p>
-</div>
-<div id="S6.p8" class="ltx_para">
-<p class="ltx_p">Lastly let me speculate on the role of almost-everywhere properties in locale theory. I imagine we could replace statements like</p>
-<blockquote class="ltx_quote">
-<p class="ltx_p"><math id="S6.p8.m1" class="ltx_Math" alttext="x\in[0,1]" display="inline"><mrow><mi>x</mi><mo>∈</mo><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow></mrow></math> is Schnorr random if and only if every computable function <math id="S6.p8.m2" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> of bounded variation with effectively integrable derivative <math id="S6.p8.m3" class="ltx_Math" alttext="f^{\prime}" display="inline"><msup><mi>f</mi><mo>′</mo></msup></math> is differentiable at <math id="S6.p8.m4" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math></p>
+<p>This simple presentation gives the appearance, at least to me, that locale theory permits only one definition of randomness, which if true would be a major disadvantage. Algorithmic randomness contains a few moving parts such as whether certain measures can be computably obtained, or whether convergence of a limit is computable or can be computably bounded. Can we gain control over analogous parts of the theory within locale theory? Or are we stuck with Kurtz randomness? There are indications that the Borel hierarchy of sets can be imported into locale theory
+(See <a href="https://ccc2017.loria.fr/slides/ccc_simpson.pdf">slides by Simpson</a>).</span></span></span> from which we could obtain weak <math alttext="n" display="inline"><mi>n</mi></math>-randomness, so that would be the logical next step to flesh out.</p>
+<p>Perhaps there is another option, which is that locale theory may not by itself offer control over all the extra choices contained in the theory of algorithmic randomness, but that passing from locales to the theory of assemblies in a realizability topos may offer them instead. Topos theory is built on top of locale theory, so this would be like continuing the narrative. In such a case locales would offer the unified big picture of the origins of randomness, which are then exported to different implementations.</p>
+<p>Lastly let me speculate on the role of almost-everywhere properties in locale theory. I imagine we could replace statements like</p>
+<blockquote>
+<p><math alttext="x\in[0,1]" display="inline"><mrow><mi>x</mi><mo>∈</mo><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow></mrow></math> is Schnorr random if and only if every computable function <math alttext="f" display="inline"><mi>f</mi></math> of bounded variation with effectively integrable derivative <math alttext="f^{\prime}" display="inline"><msup><mi>f</mi><mo>′</mo></msup></math> is differentiable at <math alttext="x" display="inline"><mi>x</mi></math></p>
 </blockquote>
-<p class="ltx_p">with</p>
-<blockquote class="ltx_quote">
-<p class="ltx_p">If <math id="S6.p8.m5" class="ltx_Math" alttext="f:[0,1]\to\mathbb{R}" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow><mo>→</mo><mi>ℝ</mi></mrow></mrow></math> is a morphism in <math id="S6.p8.m6" class="ltx_Math" alttext="\mathsf{Loc}" display="inline"><mi>𝖫𝗈𝖼</mi></math>, then <math id="S6.p8.m7" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is differentiable on <math id="S6.p8.m8" class="ltx_Math" alttext="\mathrm{Ran}_{[0,1]}" display="inline"><msub><mi>Ran</mi><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow></msub></math>.</p>
+<p>with</p>
+<blockquote>
+<p>If <math alttext="f:[0,1]\to\mathbb{R}" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow><mo>→</mo><mi>ℝ</mi></mrow></mrow></math> is a morphism in <math alttext="\mathsf{Loc}" display="inline"><mi>𝖫𝗈𝖼</mi></math>, then <math alttext="f" display="inline"><mi>f</mi></math> is differentiable on <math alttext="\mathrm{Ran}_{[0,1]}" display="inline"><msub><mi>Ran</mi><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow></msub></math>.</p>
 </blockquote>
-</div>
-<div id="S6.p9" class="ltx_para">
-<p class="ltx_p">We could perhaps drop the explicit requirement of computability because we’d be in a constructive framework already, and instead of stating the result pointwise we’d have a global statement. It remains to properly define smoothness in the locale framework and to work out many details!</p>
-</div>
+<p>We could perhaps drop the explicit requirement of computability because we'd be in a constructive framework already, and instead of stating the result pointwise we'd have a global statement. It remains to properly define smoothness in the locale framework and to work out many details!</p>
 </section>
-<section id="bib" class="ltx_bibliography">
-<h2 class="ltx_title ltx_title_bibliography">References</h2>
+<section>
+<h2>References</h2>
 
-<ul id="bib.L1" class="ltx_biblist">
-<li id="bib.bib8" class="ltx_bibitem ltx_bib_incollection">
-<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[1]</span>
-<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">A. Eagle</span><span class="ltx_text ltx_bib_year"> (2019)</span>
+<ul>
+<li>
+<span>[1]</span>
+<span><span>A. Eagle</span><span> (2019)</span>
 </span>
-<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Chance versus Randomness</span>.
+<span><span>Chance versus Randomness</span>.
 </span>
-<span class="ltx_bibblock">In <span class="ltx_text ltx_bib_inbook">The Stanford Encyclopedia of Philosophy</span>,  <span class="ltx_text ltx_bib_editor">E. N. Zalta (Ed.)</span>,
+<span>In <span>The Stanford Encyclopedia of Philosophy</span>,  <span>E. N. Zalta (Ed.)</span>,
 </span>
-<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><a href="https://plato.stanford.edu/archives/spr2019/entries/chance-randomness" title="" class="ltx_ref ltx_bib_external">Link</a></span>
+<span>External Links: <span><a href="https://plato.stanford.edu/archives/spr2019/entries/chance-randomness" title="">Link</a></span>
 </span>
-<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S1.SS1.p1" title="1.1 Randomness vs determinism: a confused debate ‣ 1 Introduction ‣ Randomness as Pointlessness" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§1.1</span></a>.
-</span>
-</li>
-<li id="bib.bib5" class="ltx_bibitem ltx_bib_article">
-<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[2]</span>
-<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">P. T. Johnstone</span><span class="ltx_text ltx_bib_year"> (1983-01)</span>
-</span>
-<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">The point of pointless topology</span>.
-</span>
-<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Bull. Amer. Math. Soc. (N.S.)</span> <span class="ltx_text ltx_bib_volume">8</span> (<span class="ltx_text ltx_bib_number">1</span>), <span class="ltx_text ltx_bib_pages"> pp. 41–53</span>.
-</span>
-<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><a href="https://projecteuclid.org:443/euclid.bams/1183550014" title="" class="ltx_ref ltx_bib_external">Link</a></span>
-</span>
-<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S2.p1" title="2 Frames and Locales ‣ Randomness as Pointlessness" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§2</span></a>.
+<span>Cited by: <a href="#S1.SS1.p1" title="1.1 Randomness vs determinism: a confused debate ‣ 1 Introduction ‣ Randomness as Pointlessness"><span>§1.1</span></a>.
 </span>
 </li>
-<li id="bib.bib2" class="ltx_bibitem ltx_bib_book">
-<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[3]</span>
-<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">P. T. Johnstone</span><span class="ltx_text ltx_bib_year"> (2002)</span>
+<li>
+<span>[2]</span>
+<span><span>P. T. Johnstone</span><span> (1983-01)</span>
 </span>
-<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Sketches of an elephant: a topos theory compendium</span>.
+<span><span>The point of pointless topology</span>.
 </span>
-<span class="ltx_bibblock"><span class="ltx_text ltx_bib_series">Oxford logic guides</span>,  <span class="ltx_text ltx_bib_publisher">Oxford Univ. Press</span>, <span class="ltx_text ltx_bib_place">New York, NY</span>.
+<span><span>Bull. Amer. Math. Soc. (N.S.)</span> <span>8</span> (<span>1</span>), <span> pp. 41–53</span>.
 </span>
-<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S2.p1" title="2 Frames and Locales ‣ Randomness as Pointlessness" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§2</span></a>.
+<span>External Links: <span><a href="https://projecteuclid.org:443/euclid.bams/1183550014" title="">Link</a></span>
 </span>
-</li>
-<li id="bib.bib1" class="ltx_bibitem ltx_bib_book">
-<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[4]</span>
-<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">P. Johnstone</span><span class="ltx_text ltx_bib_editor">C. E. Aull and R. Lowen (Eds.)</span><span class="ltx_text ltx_bib_year"> (2001)</span>
-</span>
-<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Elements of the history of locale theory</span>.
-</span>
-<span class="ltx_bibblock"> <span class="ltx_text ltx_bib_publisher">Springer Netherlands</span>, <span class="ltx_text ltx_bib_place">Dordrecht</span>.
-</span>
-<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><span class="ltx_text isbn ltx_bib_external">ISBN 978-94-017-0470-0</span>,
-<a href="https://dx.doi.org/10.1007/978-94-017-0470-0%5F2" title="" class="ltx_ref doi ltx_bib_external">Document</a>,
-<a href="https://doi.org/10.1007/978-94-017-0470-0_2" title="" class="ltx_ref ltx_bib_external">Link</a></span>
-</span>
-<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S3.p3" title="3 Points ‣ Randomness as Pointlessness" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§3</span></a>.
+<span>Cited by: <a href="#S2.p1" title="2 Frames and Locales ‣ Randomness as Pointlessness"><span>§2</span></a>.
 </span>
 </li>
-<li id="bib.bib3" class="ltx_bibitem ltx_bib_book">
-<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[5]</span>
-<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">S. MacLane and I. Moerdijk</span><span class="ltx_text ltx_bib_year"> (1992)</span>
+<li>
+<span>[3]</span>
+<span><span>P. T. Johnstone</span><span> (2002)</span>
 </span>
-<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Sheaves in geometry and logic: a first introduction to topos theory</span>.
+<span><span>Sketches of an elephant: a topos theory compendium</span>.
 </span>
-<span class="ltx_bibblock"><span class="ltx_text ltx_bib_series">Universitext</span>,  <span class="ltx_text ltx_bib_publisher">Springer</span>, <span class="ltx_text ltx_bib_place">Berlin</span>.
+<span><span>Oxford logic guides</span>,  <span>Oxford Univ. Press</span>, <span>New York, NY</span>.
 </span>
-<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><a href="https://dx.doi.org/10.1007/978-1-4612-0927-0" title="" class="ltx_ref doi ltx_bib_external">Document</a></span>
-</span>
-<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S2.p1" title="2 Frames and Locales ‣ Randomness as Pointlessness" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§2</span></a>.
+<span>Cited by: <a href="#S2.p1" title="2 Frames and Locales ‣ Randomness as Pointlessness"><span>§2</span></a>.
 </span>
 </li>
-<li id="bib.bib4" class="ltx_bibitem ltx_bib_misc">
-<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[6]</span>
-<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">J. Rute</span><span class="ltx_text ltx_bib_year"> (2019)</span>
+<li>
+<span>[4]</span>
+<span><span>P. Johnstone</span><span>C. E. Aull and R. Lowen (Eds.)</span><span> (2001)</span>
 </span>
-<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">On the close interaction between algorithmic randomness and constructive/computable measure theory</span>.
+<span><span>Elements of the history of locale theory</span>.
 </span>
-<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><span class="ltx_text ltx_bib_external">1812.03375</span></span>
+<span> <span>Springer Netherlands</span>, <span>Dordrecht</span>.
 </span>
-<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S1.p2" title="1 Introduction ‣ Randomness as Pointlessness" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§1</span></a>.
+<span>External Links: <span><span>ISBN 978-94-017-0470-0</span>,
+<a href="https://dx.doi.org/10.1007/978-94-017-0470-0%5F2" title="">Document</a>,
+<a href="https://doi.org/10.1007/978-94-017-0470-0_2" title="">Link</a></span>
+</span>
+<span>Cited by: <a href="#S3.p3" title="3 Points ‣ Randomness as Pointlessness"><span>§3</span></a>.
 </span>
 </li>
-<li id="bib.bib6" class="ltx_bibitem ltx_bib_article">
-<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[7]</span>
-<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">A. Simpson</span><span class="ltx_text ltx_bib_year"> (2012)</span>
+<li>
+<span>[5]</span>
+<span><span>S. MacLane and I. Moerdijk</span><span> (1992)</span>
 </span>
-<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Measure, randomness and sublocales</span>.
+<span><span>Sheaves in geometry and logic: a first introduction to topos theory</span>.
 </span>
-<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Annals of Pure and Applied Logic</span> <span class="ltx_text ltx_bib_volume">163</span> (<span class="ltx_text ltx_bib_number">11</span>), <span class="ltx_text ltx_bib_pages"> pp. 1642 – 1659</span>.
+<span><span>Universitext</span>,  <span>Springer</span>, <span>Berlin</span>.
 </span>
-<span class="ltx_bibblock">Note: <span class="ltx_text ltx_bib_note">Kurt Goedel Research Prize Fellowships 2010</span>
+<span>External Links: <span><a href="https://dx.doi.org/10.1007/978-1-4612-0927-0" title="">Document</a></span>
 </span>
-<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><span class="ltx_text issn ltx_bib_external">ISSN 0168-0072</span>,
-<a href="https://dx.doi.org/https%3A//doi.org/10.1016/j.apal.2011.12.014" title="" class="ltx_ref doi ltx_bib_external">Document</a>,
-<a href="http://www.sciencedirect.com/science/article/pii/S0168007211001874" title="" class="ltx_ref ltx_bib_external">Link</a></span>
+<span>Cited by: <a href="#S2.p1" title="2 Frames and Locales ‣ Randomness as Pointlessness"><span>§2</span></a>.
 </span>
-<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S1.p1" title="1 Introduction ‣ Randomness as Pointlessness" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§1</span></a>,
-<a href="#S5.p2" title="5 Measure theory ‣ Randomness as Pointlessness" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§5</span></a>,
-<a href="#S5.p5" title="5 Measure theory ‣ Randomness as Pointlessness" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§5</span></a>,
-<a href="#S5.p6" title="5 Measure theory ‣ Randomness as Pointlessness" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§5</span></a>.
+</li>
+<li>
+<span>[6]</span>
+<span><span>J. Rute</span><span> (2019)</span>
+</span>
+<span><span>On the close interaction between algorithmic randomness and constructive/computable measure theory</span>.
+</span>
+<span>External Links: <span><span>1812.03375</span></span>
+</span>
+<span>Cited by: <a href="#S1.p2" title="1 Introduction ‣ Randomness as Pointlessness"><span>§1</span></a>.
+</span>
+</li>
+<li>
+<span>[7]</span>
+<span><span>A. Simpson</span><span> (2012)</span>
+</span>
+<span><span>Measure, randomness and sublocales</span>.
+</span>
+<span><span>Annals of Pure and Applied Logic</span> <span>163</span> (<span>11</span>), <span> pp. 1642 – 1659</span>.
+</span>
+<span>Note: <span>Kurt Goedel Research Prize Fellowships 2010</span>
+</span>
+<span>External Links: <span><span>ISSN 0168-0072</span>,
+<a href="https://dx.doi.org/https%3A//doi.org/10.1016/j.apal.2011.12.014" title="">Document</a>,
+<a href="http://www.sciencedirect.com/science/article/pii/S0168007211001874" title="">Link</a></span>
+</span>
+<span>Cited by: <a href="#S1.p1" title="1 Introduction ‣ Randomness as Pointlessness"><span>§1</span></a>,
+<a href="#S5.p2" title="5 Measure theory ‣ Randomness as Pointlessness"><span>§5</span></a>,
+<a href="#S5.p5" title="5 Measure theory ‣ Randomness as Pointlessness"><span>§5</span></a>,
+<a href="#S5.p6" title="5 Measure theory ‣ Randomness as Pointlessness"><span>§5</span></a>.
 </span>
 </li>
 </ul>
 </section>
-<div class="ltx_pagination ltx_role_newpage"></div>
-</article>
-</div>
-<footer class="ltx_page_footer">
-<div class="ltx_page_logo">Generated  on Mon May  9 20:40:50 2022 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+<div></article>
+<footer>
+<div>Generated  on Mon May  9 20:40:50 2022 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
 </div></footer>
-</div>
 </body>
 </html>
 
