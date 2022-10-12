@@ -8508,6 +8508,12 @@ Swift&lt;/li&gt;
 &lt;li&gt;Recent second mathematical career in homotopy type theory&lt;/li&gt;
 &lt;li&gt;Good listener, eager to teach and learn&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h2 id=&#34;education&#34;&gt;Education&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Carnegie Mellon University, Pittsburgh, PA &amp;mdash; M.S. Philosophy, expected 2023.&lt;/li&gt;
+&lt;li&gt;Columbia University, New York, NY &amp;mdash; Ph.D Mathematics, 2001.&lt;/li&gt;
+&lt;li&gt;Columbia University, New York, NY &amp;mdash; B.A., Mathematics and Astrophysics, Magna cum Laude, 1994.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;experience&#34;&gt;Experience&lt;/h2&gt;
 &lt;h3 id=&#34;apple-inc-pittsburgh-pa-----2011--present&#34;&gt;&lt;strong&gt;Apple Inc., Pittsburgh, PA &amp;mdash; 2011&amp;ndash;Present&lt;/strong&gt;&lt;/h3&gt;
 &lt;h4 id=&#34;machine-learning-engineer-services-january-2014&#34;&gt;Machine Learning Engineer, Services, January 2014&lt;/h4&gt;
@@ -8527,12 +8533,12 @@ and program management. Adapted ambient engineering culture to research
 team. Vocal advocate for process changes. Generous with onboarding and
 mentoring. Many positive comments in peer and manager feedback.&lt;/p&gt;
 &lt;h4 id=&#34;software-engineer-productivity-applications-july-2011&#34;&gt;Software Engineer, Productivity Applications, July 2011&lt;/h4&gt;
-&lt;p&gt;Developed iOS and OS X software for designing and reading multi-touch
+&lt;p&gt;Developed iOS and macOS iBooks Author software for authoring and reading multi-touch
 books. Wrote Objective-C code, performed code reviews, and collaborated
 with other internal groups through three release cycles including the
 initial release of multi-touch features in January 2012. Designed and
 pitched novel features and filed one patent application.&lt;/p&gt;
-&lt;h3 id=&#34;sdl-language-technologies-los-angeles-ca-----oct-2004--july-2011&#34;&gt;&lt;strong&gt;SDL Language Technologies, Los Angeles, CA &amp;mdash; OCT 2004&amp;ndash;July 2011&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;sdl-language-technologies-los-angeles-ca-----oct-2004--july-2011&#34;&gt;&lt;strong&gt;SDL Language Technologies, Los Angeles, CA &amp;mdash; Oct 2004&amp;ndash;July 2011&lt;/strong&gt;&lt;/h3&gt;
 &lt;h4 id=&#34;manager-dec-2010--july-2011&#34;&gt;Manager, Dec 2010&amp;ndash;July 2011&lt;/h4&gt;
 &lt;h4 id=&#34;senior-research-scientist-jan-2010--july-2011&#34;&gt;Senior Research Scientist, Jan 2010&amp;ndash;July 2011&lt;/h4&gt;
 &lt;h4 id=&#34;research-scientist-july-2005--jan-2010&#34;&gt;Research Scientist, July 2005&amp;ndash;Jan 2010&lt;/h4&gt;
@@ -8576,14 +8582,8 @@ products for Macintosh. Team included myself and three other developers.
 Served as liaison with the Microsoft Office for Mac team.&lt;/p&gt;
 &lt;p&gt;Collaborated with teammate Robert Miner on math-aware search engine.
 Modified Lucene open source document indexer with custom analyzer plugin
-to index normalized MathML expressions. Part of &lt;a href=&#34;https://www.sbir.gov/sbirsearch/detail/145099&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;[an NSF SBIR
-project]{.underline}&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;education&#34;&gt;Education&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Carnegie Mellon University, Pittsburgh, PA &amp;mdash; M.S. Philosophy, expected 2023.&lt;/li&gt;
-&lt;li&gt;Columbia University, New York, NY &amp;mdash; Ph.D Mathematics, 2001.&lt;/li&gt;
-&lt;li&gt;Columbia University, New York, NY &amp;mdash; B.A., Mathematics and Astrophysics, Magna cum Laude, 1994.&lt;/li&gt;
-&lt;/ul&gt;
+to index normalized MathML expressions. Part of &lt;a href=&#34;https://www.sbir.gov/sbirsearch/detail/145099&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;an NSF SBIR
+project&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;publications&#34;&gt;Publications&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://aclanthology.org/D10-1063/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SCFG Decoding without
 Binarization&lt;/a&gt;, M.
