@@ -5,12 +5,233 @@
     <link>https://greg.langmead.info/writing/</link>
       <atom:link href="https://greg.langmead.info/writing/index.xml" rel="self" type="application/rss+xml" />
     <description>Research and writing</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 15 Dec 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 24 Jun 2023 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://greg.langmead.info/media/icon_hu1bbe79ab3a4c16ae2bff36fb493a5b01_1012_512x512_fill_lanczos_center_3.png</url>
       <title>Research and writing</title>
       <link>https://greg.langmead.info/writing/</link>
     </image>
+    
+    <item>
+      <title>Towards Gauge Theory in Homotopy Type Theory</title>
+      <link>https://greg.langmead.info/writing/towards_gauge_theory_in_hott/</link>
+      <pubDate>Sat, 24 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>https://greg.langmead.info/writing/towards_gauge_theory_in_hott/</guid>
+      <description>&lt;!DOCTYPE html&gt;
+&lt;html xmlns=&#34;http://www.w3.org/1999/xhtml&#34; lang=&#34;&#34; xml:lang=&#34;&#34;&gt;
+&lt;head&gt;
+  &lt;meta charset=&#34;utf-8&#34; /&gt;
+  &lt;meta name=&#34;generator&#34; content=&#34;pandoc&#34; /&gt;
+  &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0, user-scalable=yes&#34; /&gt;
+  &lt;title&gt;group_extensions&lt;/title&gt;
+  &lt;style&gt;
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li &gt; ol, li &gt; ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, &#39;Lucida Console&#39;, Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC &gt; ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type=&#34;checkbox&#34;] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  &lt;/style&gt;
+  &lt;link rel=&#34;stylesheet&#34; href=&#34;Agda.css&#34; /&gt;
+  &lt;link rel=&#34;stylesheet&#34; href=&#34;https://fonts.googleapis.com/css2?family=Libre+Baskerville&amp;family=Belanosima&#34;&gt;
+  &lt;style&gt;
+  body {
+    font-family: &#39;Libre Baskerville&#39;, serif;
+  }
+  h2 {
+    font-family: Belanosima, sans-serif;
+  }
+  &lt;/style&gt;
+  &lt;!--[if lt IE 9]&gt;
+    &lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js&#34;&gt;&lt;/script&gt;
+  &lt;![endif]--&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;header id=&#34;title-block-header&#34;&gt;
+&lt;h1 class=&#34;title&#34;&gt;group_extensions&lt;/h1&gt;
+&lt;/header&gt;
+&lt;nav id=&#34;TOC&#34; role=&#34;doc-toc&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#abstract&#34; id=&#34;toc-abstract&#34;&gt;Abstract&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/nav&gt;
+&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
+&lt;p&gt;We will show how to formalize parts of differential geometry, gauge
+theory, and Chern-Weil theory in homotopy type theory.&lt;/p&gt;
+Test diagram
+&lt;p&gt;&lt;img src=&#34;4d0d79624ee63ff6de3dee35483ee1170f02cdf0.svg&#34;
+style=&#34;display: block; margin-left: auto; margin-right: auto;&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;Agda&#34;&gt;&lt;a id=&#34;879&#34; class=&#34;Symbol&#34;&gt;{-#&lt;/a&gt; &lt;a id=&#34;883&#34; class=&#34;Keyword&#34;&gt;OPTIONS&lt;/a&gt; &lt;a id=&#34;891&#34; class=&#34;Pragma&#34;&gt;--without-K&lt;/a&gt; &lt;a id=&#34;903&#34; class=&#34;Pragma&#34;&gt;--exact-split&lt;/a&gt; &lt;a id=&#34;917&#34; class=&#34;Symbol&#34;&gt;#-}&lt;/a&gt;
+
+&lt;a id=&#34;922&#34; class=&#34;Keyword&#34;&gt;module&lt;/a&gt; &lt;a id=&#34;929&#34; href=&#34;group_extensions.html&#34; class=&#34;Module Operator&#34;&gt;group_extensions&lt;/a&gt; &lt;a id=&#34;946&#34; class=&#34;Keyword&#34;&gt;where&lt;/a&gt;
+
+&lt;a id=&#34;953&#34; class=&#34;Keyword&#34;&gt;open&lt;/a&gt; &lt;a id=&#34;958&#34; class=&#34;Keyword&#34;&gt;import&lt;/a&gt; &lt;a id=&#34;965&#34; href=&#34;foundation-core.universe-levels.html&#34; class=&#34;Module&#34;&gt;foundation-core.universe-levels&lt;/a&gt;
+&lt;a id=&#34;997&#34; class=&#34;Keyword&#34;&gt;open&lt;/a&gt; &lt;a id=&#34;1002&#34; class=&#34;Keyword&#34;&gt;import&lt;/a&gt; &lt;a id=&#34;1009&#34; href=&#34;foundation-core.functions.html&#34; class=&#34;Module&#34;&gt;foundation-core.functions&lt;/a&gt;
+&lt;a id=&#34;1035&#34; class=&#34;Keyword&#34;&gt;open&lt;/a&gt; &lt;a id=&#34;1040&#34; class=&#34;Keyword&#34;&gt;import&lt;/a&gt; &lt;a id=&#34;1047&#34; href=&#34;foundation-core.identity-types.html&#34; class=&#34;Module&#34;&gt;foundation-core.identity-types&lt;/a&gt;
+
+&lt;a id=&#34;1079&#34; class=&#34;Comment&#34;&gt;-- What is the analogue in HoTT of the fact from group extensions that we classify an extension by &lt;/a&gt;
+&lt;a id=&#34;1179&#34; class=&#34;Comment&#34;&gt;-- taking a set-based section of the splitting, seeing that those elements act on the left hand group,&lt;/a&gt;
+&lt;a id=&#34;1282&#34; class=&#34;Comment&#34;&gt;-- noting that this map into Aut G is not a homomorphism. There is a 2-cell that we can conjugate with that makes&lt;/a&gt;
+&lt;a id=&#34;1396&#34; class=&#34;Comment&#34;&gt;-- it a homomorphism. So together, the extension (plus the arbitrary choice of splitting) yeilds a 2-map to the 2-group&lt;/a&gt;
+&lt;a id=&#34;1516&#34; class=&#34;Comment&#34;&gt;-- AUT(G).&lt;/a&gt;
+&lt;a id=&#34;1527&#34; class=&#34;Comment&#34;&gt;-- For us, a splitting will be a section of a type family. This acts on loops with apd.&lt;/a&gt;
+&lt;a id=&#34;1615&#34; class=&#34;Comment&#34;&gt;-- So we want to prove some facts about apd and to what extent it&amp;#39;s a homomorphism of loops.&lt;/a&gt;
+&lt;a id=&#34;1708&#34; class=&#34;Comment&#34;&gt;-- It doesn&amp;#39;t send loops to loops, because it sends the loop p to a loop from fx to ap p fx.&lt;/a&gt;
+&lt;a id=&#34;1801&#34; class=&#34;Comment&#34;&gt;-- apd-hom :&lt;/a&gt;
+&lt;a id=&#34;1814&#34; class=&#34;Comment&#34;&gt;--   {l1 l2 : Level} {A : UU l1} {B : A → UU l2} (f : (a : A) → B a) {x : A}&lt;/a&gt;
+&lt;a id=&#34;1891&#34; class=&#34;Comment&#34;&gt;--   (p q : x ＝ x) → (apd f (p ∙ q)) ＝ ((apd ((tr B p) ∘ f) q) ∙ (apd (f) p))&lt;/a&gt;
+&lt;a id=&#34;1969&#34; class=&#34;Comment&#34;&gt;-- apd-hom f refl q = ?&lt;/a&gt;
+
+&lt;/pre&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</description>
+    </item>
     
     <item>
       <title>Frege&#39;s Values</title>

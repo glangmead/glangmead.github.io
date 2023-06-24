@@ -56,10 +56,10 @@
   
     
   
-  <meta name="description" content="Muse You Can Use" />
+  <meta name="description" content="{-# OPTIONS --without-K --exact-split --safe --no-import-sorts #-} module foundation-core.universe-levels where open import Agda.Primitive using (Level; lzero; lsuc; _⊔_) renaming (Set to UU; Setω to UUω) public Idea We import Agda&rsquo;s built in mechanism of universe levels." />
 
   
-  <link rel="alternate" hreflang="en-us" href="https://greg.langmead.info/" />
+  <link rel="alternate" hreflang="en-us" href="https://greg.langmead.info/writing/towards_gauge_theory_in_hott/foundation-core.universe-levels/" />
 
   
   
@@ -90,38 +90,6 @@
     
     
       
-      
-      
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
       
     
     
@@ -280,11 +248,7 @@
   
   
   
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  
 
-  
-    <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Long Head" />
   
 
   
@@ -294,7 +258,7 @@
   <link rel="icon" type="image/png" href="/media/icon_hu1bbe79ab3a4c16ae2bff36fb493a5b01_1012_32x32_fill_lanczos_center_3.png" />
   <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu1bbe79ab3a4c16ae2bff36fb493a5b01_1012_180x180_fill_lanczos_center_3.png" />
 
-  <link rel="canonical" href="https://greg.langmead.info/" />
+  <link rel="canonical" href="https://greg.langmead.info/writing/towards_gauge_theory_in_hott/foundation-core.universe-levels/" />
 
   
   
@@ -320,30 +284,17 @@
     <meta property="twitter:creator" content="@@glangmead" />
   
   <meta property="og:site_name" content="Long Head" />
-  <meta property="og:url" content="https://greg.langmead.info/" />
-  <meta property="og:title" content="Long Head" />
-  <meta property="og:description" content="Muse You Can Use" /><meta property="og:image" content="https://greg.langmead.info/media/icon_hu1bbe79ab3a4c16ae2bff36fb493a5b01_1012_512x512_fill_lanczos_center_3.png" />
+  <meta property="og:url" content="https://greg.langmead.info/writing/towards_gauge_theory_in_hott/foundation-core.universe-levels/" />
+  <meta property="og:title" content="Universe levels | Long Head" />
+  <meta property="og:description" content="{-# OPTIONS --without-K --exact-split --safe --no-import-sorts #-} module foundation-core.universe-levels where open import Agda.Primitive using (Level; lzero; lsuc; _⊔_) renaming (Set to UU; Setω to UUω) public Idea We import Agda&rsquo;s built in mechanism of universe levels." /><meta property="og:image" content="https://greg.langmead.info/media/icon_hu1bbe79ab3a4c16ae2bff36fb493a5b01_1012_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="https://greg.langmead.info/media/icon_hu1bbe79ab3a4c16ae2bff36fb493a5b01_1012_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
   
     
-      <meta property="og:updated_time" content="2023-06-24T00:00:00&#43;00:00" />
     
   
 
   
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://greg.langmead.info/?q={search_term_string}",
-    "query-input": "required name=search_term_string"
-  },
-  "url": "https://greg.langmead.info/"
-}
-</script>
 
 
   
@@ -353,11 +304,11 @@
   <link rel="me" href="https://mathstodon.xyz/@glangmead" />
 
 
-  <title>Long Head</title>
+  <title>Universe levels | Long Head</title>
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#navbar-main" class="page-wrapper   "  >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="bfa0a380cd5b6e19e5de8e5da632ba60" >
 
   
   
@@ -488,7 +439,7 @@
           
 
           <li class="nav-item">
-            <a class="nav-link " href="/#about" data-target="#about"><span>Home</span></a>
+            <a class="nav-link " href="/#about"><span>Home</span></a>
           </li>
 
           
@@ -546,7 +497,7 @@
           
 
           <li class="nav-item">
-            <a class="nav-link " href="/writing"><span>Research</span></a>
+            <a class="nav-link  active" href="/writing"><span>Research</span></a>
           </li>
 
           
@@ -670,40 +621,48 @@
     
     
 
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Universe levels</h1>
+
+  
+
+  
     
 
 
-  
-
-
-
-
-
-
-
-
-
-  
-<span class="js-widget-page d-none"></span>
-
-
-
-
+<div class="article-metadata">
 
   
   
-  
-  
-
-
-
-
 
   
-
-  
-  
-  
+  <span class="article-date">
+    
+    
+      
+    
+    Jan 1, 0001
+  </span>
   
 
   
@@ -716,220 +675,128 @@
   
 
   
-
   
 
-  
-
-  
-  
-
-  
-
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-  
-  
-
-  
-  
-
-  
-
-  
-  
-
-  
-  
-
-  
-  <section id="about" class="home-section wg-about  "  >
-   <div class="home-section-bg " >
-     
-   </div>
-    <div class="container">
+</div>
 
     
 
-      
 
 
 
 
   
-
-
-
-
-
-
-
-
-
-
-<div class="row">
-  <div class="col-12 col-lg-4">
-    <div id="profile">
-
-      
-      <img class="avatar avatar-circle" src="https://s.gravatar.com/avatar/3b9a5c159ed5c3414cb78274f6058cc2?s=270')" alt="">
-      
-
-      <div class="portrait-title">
-
-        <h2></h2>
-
-        <h3>Machine Learning Engineer</h3>
-
-        
-        <h3>
-          
-          <span>Apple Inc., Carnegie Mellon University</span>
-          
-        </h3>
-        
-      </div>
-
-      <ul class="network-icon" aria-hidden="true">
-        
-        
-        
-        
-          
-        
-        
-        
-        
-        
-          
-        
-        <li>
-          <a href="https://twitter.com/glangmead" target="_blank" rel="noopener" aria-label="twitter">
-            <i class="fab fa-twitter big-icon"></i>
-          </a>
-        </li>
-        
-        
-        
-        
-        
-        
-        
-        
-          
-        
-        <li>
-          <a href="https://scholar.google.co.uk/citations?user=KFbBBPD_nAoJ" target="_blank" rel="noopener" aria-label="google-scholar">
-            <i class="ai ai-google-scholar big-icon"></i>
-          </a>
-        </li>
-        
-        
-        
-        
-          
-        
-        
-        
-        
-        
-          
-        
-        <li>
-          <a href="https://github.com/glangmead" target="_blank" rel="noopener" aria-label="github">
-            <i class="fab fa-github big-icon"></i>
-          </a>
-        </li>
-        
-        
-        
-        
-          
-        
-        
-        
-        
-        
-          
-        
-        <li>
-          <a href="https://www.linkedin.com/in/glangmead/" target="_blank" rel="noopener" aria-label="linkedin">
-            <i class="fab fa-linkedin big-icon"></i>
-          </a>
-        </li>
-        
-      </ul>
-
-    </div>
-  </div>
-  <div class="col-12 col-lg-8">
-
-    
-    <h1>About</h1>
-
-    <div class="article-style">
-      <p>My name is Greg Langmead. I am a machine learning engineer at <a href="https://machinelearning.apple.com" target="_blank" rel="noopener">Apple</a>, where I work on <a href="https://www.apple.com/news/" target="_blank" rel="noopener">Apple News</a> and Stocks.</p>
-<p>I am also a student in the <a href="https://www.cmu.edu/dietrich/philosophy" target="_blank" rel="noopener">Philosophy department</a> at Carnegie Mellon University. I study <a href="https://homotopytypetheory.org" target="_blank" rel="noopener">homotopy type theory</a> and differential geometry. I use theorem proving software such as <a href="https://en.wikipedia.org/wiki/Agda_%28programming_language%29" target="_blank" rel="noopener">Agda</a> and <a href="https://leanprover.github.io" target="_blank" rel="noopener">Lean</a>.</p>
-<p>I have a Ph.D. in mathematics from Columbia University (2001) where I studied gauge theory, supersymmetry, and four-dimensional topology. My dissertation was titled &ldquo;<a href="https://arxiv.org/abs/hep-th/0210192" target="_blank" rel="noopener">A Supersymmetric Gauge Theory Formulation of the Donaldson Polynomial Invariants</a>.&rdquo;</p>
-<p>Previously I worked at Design Science and SDL Language Weaver. I&rsquo;m all over the map.</p>
-<p>I&rsquo;m interested in music and try to find time to practice piano, guitar and sometimes the ukulele. I love learning about the chord progressions used in music and am a frequent visitor to <a href="https://www.hooktheory.com/theorytab" target="_blank" rel="noopener">Theorytab</a>.</p>
-<p>My interests include mathematics, physics, software, board games (including their iPad versions), and I pile up video games for iOS, Xbox, PC and Mac and never quite get around to playing them. I do the same with books and movies.</p>
-
-    </div>
-
-    <div class="row">
-
-      
-      <div class="col-md-5">
-        <div class="section-subheading">Interests</div>
-        <ul class="ul-interests mb-0">
-          
-          <li>Differential geometry and topology</li>
-          
-          <li>Homotopy type theory</li>
-          
-          <li>Higher category theory</li>
-          
-          <li>AI</li>
-          
-        </ul>
-      </div>
-      
-
-      
-      <div class="col-md-7">
-        <div class="section-subheading">Education</div>
-        <ul class="ul-edu fa-ul mb-0">
-          
-          <li>
-            <i class="fa-li fas fa-graduation-cap"></i>
-            <div class="description">
-              <p class="course">PhD in Mathematics, 2001</p>
-              <p class="institution">Columbia University</p>
-            </div>
-          </li>
-          
-        </ul>
-      </div>
-      
-
-    </div>
-  </div>
 </div>
 
 
-    
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <pre class="Agda"><a id="41" class="Symbol">{-#</a> <a id="45" class="Keyword">OPTIONS</a> <a id="53" class="Pragma">--without-K</a> <a id="65" class="Pragma">--exact-split</a> <a id="79" class="Pragma">--safe</a> <a id="86" class="Pragma">--no-import-sorts</a> <a id="104" class="Symbol">#-}</a>
+
+<a id="109" class="Keyword">module</a> <a id="116" href="foundation-core.universe-levels.html" class="Module">foundation-core.universe-levels</a> <a id="148" class="Keyword">where</a>
+
+<a id="155" class="Keyword">open</a> <a id="160" class="Keyword">import</a> <a id="167" href="Agda.Primitive.html" class="Module">Agda.Primitive</a>
+  <a id="184" class="Keyword">using</a> <a id="190" class="Symbol">(</a><a id="191" href="Agda.Primitive.html#591" class="Postulate">Level</a><a id="196" class="Symbol">;</a> <a id="198" href="Agda.Primitive.html#758" class="Primitive">lzero</a><a id="203" class="Symbol">;</a> <a id="205" href="Agda.Primitive.html#774" class="Primitive">lsuc</a><a id="209" class="Symbol">;</a> <a id="211" href="Agda.Primitive.html#804" class="Primitive Operator">_⊔_</a><a id="214" class="Symbol">)</a>
+  <a id="218" class="Keyword">renaming</a> <a id="227" class="Symbol">(</a><a id="228" href="Agda.Primitive.html#320" class="Primitive">Set</a> <a id="232" class="Symbol">to</a> <a id="235" class="Primitive">UU</a><a id="237" class="Symbol">;</a> <a id="239" href="Agda.Primitive.html#375" class="Primitive">Setω</a> <a id="244" class="Symbol">to</a> <a id="247" class="Primitive">UUω</a><a id="250" class="Symbol">)</a>
+  <a id="254" class="Keyword">public</a>
+</pre>
+<h2 id="idea">Idea</h2>
+<p>We import Agda&rsquo;s built in mechanism of universe levels. The universes are called <code>UU</code>, which stands for <code>univalent universe</code>, although we will not immediately assume that universes are univalent.</p>
 
     </div>
-  </section>
+
+    
+
+
+
+
+
+
+<div class="share-box">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://greg.langmead.info/writing/towards_gauge_theory_in_hott/foundation-core.universe-levels/&amp;text=Universe%20levels" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://greg.langmead.info/writing/towards_gauge_theory_in_hott/foundation-core.universe-levels/&amp;t=Universe%20levels" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook-f">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Universe%20levels&amp;body=https://greg.langmead.info/writing/towards_gauge_theory_in_hott/foundation-core.universe-levels/" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://greg.langmead.info/writing/towards_gauge_theory_in_hott/foundation-core.universe-levels/&amp;title=Universe%20levels" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=Universe%20levels%20https://greg.langmead.info/writing/towards_gauge_theory_in_hott/foundation-core.universe-levels/" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://greg.langmead.info/writing/towards_gauge_theory_in_hott/foundation-core.universe-levels/&amp;title=Universe%20levels" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
 
 
 
@@ -937,6 +804,123 @@
 
 
 
+
+
+
+
+  
+  
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      <a href="https://greg.langmead.info/"><img class="avatar mr-3 avatar-circle" src="https://s.gravatar.com/avatar/3b9a5c159ed5c3414cb78274f6058cc2?s=200" alt=""></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://greg.langmead.info/"></a></h5>
+      <h6 class="card-subtitle">Machine Learning Engineer</h6>
+      <p class="card-text">I am a software engineer and mathematician. I work on NLP algorithms for Apple News, and research homotopy type theory in CMU&rsquo;s philosophy department.</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/glangmead" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.co.uk/citations?user=KFbBBPD_nAoJ" target="_blank" rel="noopener">
+        <i class="ai ai-google-scholar"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/glangmead" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/in/glangmead/" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</article>
   </div>
 
   <div class="page-footer">
@@ -1087,10 +1071,11 @@
     
     
     
-    <script id="page-data" type="application/json">{"use_headroom":false}</script>
+    <script id="page-data" type="application/json">{"use_headroom":true}</script>
 
     
     
+      <script src="/js/wowchemy-headroom.c251366b4128fd5e6b046d4c97a62a51.js" type="module"></script>
     
     
     

@@ -56,10 +56,12 @@
   
     
   
-  <meta name="description" content="Muse You Can Use" />
+  <meta name="description" content="\newcommand{\ff}{\mathbb{F}} \newcommand{\rr}{\mathbb{R}} \newcommand{\BAut}{\mathsf{BAut}} \newcommand{\C}{\mathscr{C}} \newcommand{\E}{\mathscr{E}} \newcommand{\G}{\mathscr{G}}
+Abstract We will show how to formalize parts of differential geometry, gauge theory, and Chern-Weil theory in homotopy type theory.
+Test diagram \begin{tikzcd} {(x:X)\times (f(x)=f(x))} &amp;&amp; {(b:BG)\times (b=b)} \ X &amp;&amp; BG \arrow[&quot;{\mathrm{pr}_1}&quot;, from=1-3, to=2-3] \arrow[&quot;{\lambda(x, p)." />
 
   
-  <link rel="alternate" hreflang="en-us" href="https://greg.langmead.info/" />
+  <link rel="alternate" hreflang="en-us" href="https://greg.langmead.info/writing/towards_gauge_theory_in_hott/group_extensions/" />
 
   
   
@@ -90,38 +92,6 @@
     
     
       
-      
-      
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
       
     
     
@@ -280,11 +250,7 @@
   
   
   
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  
 
-  
-    <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Long Head" />
   
 
   
@@ -294,7 +260,7 @@
   <link rel="icon" type="image/png" href="/media/icon_hu1bbe79ab3a4c16ae2bff36fb493a5b01_1012_32x32_fill_lanczos_center_3.png" />
   <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu1bbe79ab3a4c16ae2bff36fb493a5b01_1012_180x180_fill_lanczos_center_3.png" />
 
-  <link rel="canonical" href="https://greg.langmead.info/" />
+  <link rel="canonical" href="https://greg.langmead.info/writing/towards_gauge_theory_in_hott/group_extensions/" />
 
   
   
@@ -320,30 +286,19 @@
     <meta property="twitter:creator" content="@@glangmead" />
   
   <meta property="og:site_name" content="Long Head" />
-  <meta property="og:url" content="https://greg.langmead.info/" />
+  <meta property="og:url" content="https://greg.langmead.info/writing/towards_gauge_theory_in_hott/group_extensions/" />
   <meta property="og:title" content="Long Head" />
-  <meta property="og:description" content="Muse You Can Use" /><meta property="og:image" content="https://greg.langmead.info/media/icon_hu1bbe79ab3a4c16ae2bff36fb493a5b01_1012_512x512_fill_lanczos_center_3.png" />
+  <meta property="og:description" content="\newcommand{\ff}{\mathbb{F}} \newcommand{\rr}{\mathbb{R}} \newcommand{\BAut}{\mathsf{BAut}} \newcommand{\C}{\mathscr{C}} \newcommand{\E}{\mathscr{E}} \newcommand{\G}{\mathscr{G}}
+Abstract We will show how to formalize parts of differential geometry, gauge theory, and Chern-Weil theory in homotopy type theory.
+Test diagram \begin{tikzcd} {(x:X)\times (f(x)=f(x))} &amp;&amp; {(b:BG)\times (b=b)} \ X &amp;&amp; BG \arrow[&quot;{\mathrm{pr}_1}&quot;, from=1-3, to=2-3] \arrow[&quot;{\lambda(x, p)." /><meta property="og:image" content="https://greg.langmead.info/media/icon_hu1bbe79ab3a4c16ae2bff36fb493a5b01_1012_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="https://greg.langmead.info/media/icon_hu1bbe79ab3a4c16ae2bff36fb493a5b01_1012_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
   
     
-      <meta property="og:updated_time" content="2023-06-24T00:00:00&#43;00:00" />
     
   
 
   
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://greg.langmead.info/?q={search_term_string}",
-    "query-input": "required name=search_term_string"
-  },
-  "url": "https://greg.langmead.info/"
-}
-</script>
 
 
   
@@ -357,7 +312,7 @@
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#navbar-main" class="page-wrapper   "  >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="93d95c3f935704f247cfd091823bc6f7" >
 
   
   
@@ -488,7 +443,7 @@
           
 
           <li class="nav-item">
-            <a class="nav-link " href="/#about" data-target="#about"><span>Home</span></a>
+            <a class="nav-link " href="/#about"><span>Home</span></a>
           </li>
 
           
@@ -546,7 +501,7 @@
           
 
           <li class="nav-item">
-            <a class="nav-link " href="/writing"><span>Research</span></a>
+            <a class="nav-link  active" href="/writing"><span>Research</span></a>
           </li>
 
           
@@ -670,40 +625,48 @@
     
     
 
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1></h1>
+
+  
+
+  
     
 
 
-  
-
-
-
-
-
-
-
-
-
-  
-<span class="js-widget-page d-none"></span>
-
-
-
-
+<div class="article-metadata">
 
   
   
-  
-  
-
-
-
-
 
   
-
-  
-  
-  
+  <span class="article-date">
+    
+    
+      
+    
+    Jan 1, 0001
+  </span>
   
 
   
@@ -716,220 +679,157 @@
   
 
   
-
   
 
-  
-
-  
-  
-
-  
-
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-  
-  
-
-  
-  
-
-  
-
-  
-  
-
-  
-  
-
-  
-  <section id="about" class="home-section wg-about  "  >
-   <div class="home-section-bg " >
-     
-   </div>
-    <div class="container">
+</div>
 
     
 
-      
 
 
 
 
   
-
-
-
-
-
-
-
-
-
-
-<div class="row">
-  <div class="col-12 col-lg-4">
-    <div id="profile">
-
-      
-      <img class="avatar avatar-circle" src="https://s.gravatar.com/avatar/3b9a5c159ed5c3414cb78274f6058cc2?s=270')" alt="">
-      
-
-      <div class="portrait-title">
-
-        <h2></h2>
-
-        <h3>Machine Learning Engineer</h3>
-
-        
-        <h3>
-          
-          <span>Apple Inc., Carnegie Mellon University</span>
-          
-        </h3>
-        
-      </div>
-
-      <ul class="network-icon" aria-hidden="true">
-        
-        
-        
-        
-          
-        
-        
-        
-        
-        
-          
-        
-        <li>
-          <a href="https://twitter.com/glangmead" target="_blank" rel="noopener" aria-label="twitter">
-            <i class="fab fa-twitter big-icon"></i>
-          </a>
-        </li>
-        
-        
-        
-        
-        
-        
-        
-        
-          
-        
-        <li>
-          <a href="https://scholar.google.co.uk/citations?user=KFbBBPD_nAoJ" target="_blank" rel="noopener" aria-label="google-scholar">
-            <i class="ai ai-google-scholar big-icon"></i>
-          </a>
-        </li>
-        
-        
-        
-        
-          
-        
-        
-        
-        
-        
-          
-        
-        <li>
-          <a href="https://github.com/glangmead" target="_blank" rel="noopener" aria-label="github">
-            <i class="fab fa-github big-icon"></i>
-          </a>
-        </li>
-        
-        
-        
-        
-          
-        
-        
-        
-        
-        
-          
-        
-        <li>
-          <a href="https://www.linkedin.com/in/glangmead/" target="_blank" rel="noopener" aria-label="linkedin">
-            <i class="fab fa-linkedin big-icon"></i>
-          </a>
-        </li>
-        
-      </ul>
-
-    </div>
-  </div>
-  <div class="col-12 col-lg-8">
-
-    
-    <h1>About</h1>
-
-    <div class="article-style">
-      <p>My name is Greg Langmead. I am a machine learning engineer at <a href="https://machinelearning.apple.com" target="_blank" rel="noopener">Apple</a>, where I work on <a href="https://www.apple.com/news/" target="_blank" rel="noopener">Apple News</a> and Stocks.</p>
-<p>I am also a student in the <a href="https://www.cmu.edu/dietrich/philosophy" target="_blank" rel="noopener">Philosophy department</a> at Carnegie Mellon University. I study <a href="https://homotopytypetheory.org" target="_blank" rel="noopener">homotopy type theory</a> and differential geometry. I use theorem proving software such as <a href="https://en.wikipedia.org/wiki/Agda_%28programming_language%29" target="_blank" rel="noopener">Agda</a> and <a href="https://leanprover.github.io" target="_blank" rel="noopener">Lean</a>.</p>
-<p>I have a Ph.D. in mathematics from Columbia University (2001) where I studied gauge theory, supersymmetry, and four-dimensional topology. My dissertation was titled &ldquo;<a href="https://arxiv.org/abs/hep-th/0210192" target="_blank" rel="noopener">A Supersymmetric Gauge Theory Formulation of the Donaldson Polynomial Invariants</a>.&rdquo;</p>
-<p>Previously I worked at Design Science and SDL Language Weaver. I&rsquo;m all over the map.</p>
-<p>I&rsquo;m interested in music and try to find time to practice piano, guitar and sometimes the ukulele. I love learning about the chord progressions used in music and am a frequent visitor to <a href="https://www.hooktheory.com/theorytab" target="_blank" rel="noopener">Theorytab</a>.</p>
-<p>My interests include mathematics, physics, software, board games (including their iPad versions), and I pile up video games for iOS, Xbox, PC and Mac and never quite get around to playing them. I do the same with books and movies.</p>
-
-    </div>
-
-    <div class="row">
-
-      
-      <div class="col-md-5">
-        <div class="section-subheading">Interests</div>
-        <ul class="ul-interests mb-0">
-          
-          <li>Differential geometry and topology</li>
-          
-          <li>Homotopy type theory</li>
-          
-          <li>Higher category theory</li>
-          
-          <li>AI</li>
-          
-        </ul>
-      </div>
-      
-
-      
-      <div class="col-md-7">
-        <div class="section-subheading">Education</div>
-        <ul class="ul-edu fa-ul mb-0">
-          
-          <li>
-            <i class="fa-li fas fa-graduation-cap"></i>
-            <div class="description">
-              <p class="course">PhD in Mathematics, 2001</p>
-              <p class="institution">Columbia University</p>
-            </div>
-          </li>
-          
-        </ul>
-      </div>
-      
-
-    </div>
-  </div>
 </div>
 
 
-    
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <p>\newcommand{\ff}{\mathbb{F}}
+\newcommand{\rr}{\mathbb{R}}
+\newcommand{\BAut}{\mathsf{BAut}}
+\newcommand{\C}{\mathscr{C}}
+\newcommand{\E}{\mathscr{E}}
+\newcommand{\G}{\mathscr{G}}</p>
+<h2 id="abstract">Abstract</h2>
+<p>We will show how to formalize parts of differential geometry, gauge theory, and Chern-Weil theory in homotopy type theory.</p>
+<p>Test diagram
+\begin{tikzcd}
+{(x:X)\times (f(x)=f(x))} &amp;&amp; {(b:BG)\times (b=b)} \
+X &amp;&amp; BG
+\arrow[&quot;{\mathrm{pr}_1}&quot;, from=1-3, to=2-3]
+\arrow[&quot;{\lambda(x, p).(f(x),p)}&quot;, from=1-1, to=1-3]
+\arrow[&ldquo;f&rdquo;&rsquo;, from=2-1, to=2-3]
+\arrow[&quot;{\mathrm{pr}_1}&quot;&rsquo;, from=1-1, to=2-1]
+\end{tikzcd}</p>
+<pre class="Agda"><a id="879" class="Symbol">{-#</a> <a id="883" class="Keyword">OPTIONS</a> <a id="891" class="Pragma">--without-K</a> <a id="903" class="Pragma">--exact-split</a> <a id="917" class="Symbol">#-}</a>
+
+<a id="922" class="Keyword">module</a> <a id="929" href="group_extensions.html" class="Module Operator">group_extensions</a> <a id="946" class="Keyword">where</a>
+
+<a id="953" class="Keyword">open</a> <a id="958" class="Keyword">import</a> <a id="965" href="foundation-core.universe-levels.html" class="Module">foundation-core.universe-levels</a>
+<a id="997" class="Keyword">open</a> <a id="1002" class="Keyword">import</a> <a id="1009" href="foundation-core.functions.html" class="Module">foundation-core.functions</a>
+<a id="1035" class="Keyword">open</a> <a id="1040" class="Keyword">import</a> <a id="1047" href="foundation-core.identity-types.html" class="Module">foundation-core.identity-types</a>
+
+<a id="1079" class="Comment">-- What is the analogue in HoTT of the fact from group extensions that we classify an extension by </a>
+<a id="1179" class="Comment">-- taking a set-based section of the splitting, seeing that those elements act on the left hand group,</a>
+<a id="1282" class="Comment">-- noting that this map into Aut G is not a homomorphism. There is a 2-cell that we can conjugate with that makes</a>
+<a id="1396" class="Comment">-- it a homomorphism. So together, the extension (plus the arbitrary choice of splitting) yeilds a 2-map to the 2-group</a>
+<a id="1516" class="Comment">-- AUT(G).</a>
+<a id="1527" class="Comment">-- For us, a splitting will be a section of a type family. This acts on loops with apd.</a>
+<a id="1615" class="Comment">-- So we want to prove some facts about apd and to what extent it&#39;s a homomorphism of loops.</a>
+<a id="1708" class="Comment">-- It doesn&#39;t send loops to loops, because it sends the loop p to a loop from fx to ap p fx.</a>
+<a id="1801" class="Comment">-- apd-hom :</a>
+<a id="1814" class="Comment">--   {l1 l2 : Level} {A : UU l1} {B : A → UU l2} (f : (a : A) → B a) {x : A}</a>
+<a id="1891" class="Comment">--   (p q : x ＝ x) → (apd f (p ∙ q)) ＝ ((apd ((tr B p) ∘ f) q) ∙ (apd (f) p))</a>
+<a id="1969" class="Comment">-- apd-hom f refl q = ?</a>
+
+</pre><blockquote>
+</blockquote>
 
     </div>
-  </section>
+
+    
+
+
+
+
+
+
+<div class="share-box">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://greg.langmead.info/writing/towards_gauge_theory_in_hott/group_extensions/&amp;text=" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://greg.langmead.info/writing/towards_gauge_theory_in_hott/group_extensions/&amp;t=" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook-f">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=&amp;body=https://greg.langmead.info/writing/towards_gauge_theory_in_hott/group_extensions/" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://greg.langmead.info/writing/towards_gauge_theory_in_hott/group_extensions/&amp;title=" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=%20https://greg.langmead.info/writing/towards_gauge_theory_in_hott/group_extensions/" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://greg.langmead.info/writing/towards_gauge_theory_in_hott/group_extensions/&amp;title=" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
 
 
 
@@ -937,6 +837,123 @@
 
 
 
+
+
+
+
+  
+  
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      <a href="https://greg.langmead.info/"><img class="avatar mr-3 avatar-circle" src="https://s.gravatar.com/avatar/3b9a5c159ed5c3414cb78274f6058cc2?s=200" alt=""></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://greg.langmead.info/"></a></h5>
+      <h6 class="card-subtitle">Machine Learning Engineer</h6>
+      <p class="card-text">I am a software engineer and mathematician. I work on NLP algorithms for Apple News, and research homotopy type theory in CMU&rsquo;s philosophy department.</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/glangmead" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.co.uk/citations?user=KFbBBPD_nAoJ" target="_blank" rel="noopener">
+        <i class="ai ai-google-scholar"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/glangmead" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/in/glangmead/" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</article>
   </div>
 
   <div class="page-footer">
@@ -1087,10 +1104,11 @@
     
     
     
-    <script id="page-data" type="application/json">{"use_headroom":false}</script>
+    <script id="page-data" type="application/json">{"use_headroom":true}</script>
 
     
     
+      <script src="/js/wowchemy-headroom.c251366b4128fd5e6b046d4c97a62a51.js" type="module"></script>
     
     
     
