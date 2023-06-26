@@ -5,7 +5,7 @@
     <link>https://greg.langmead.info/writing/</link>
       <atom:link href="https://greg.langmead.info/writing/index.xml" rel="self" type="application/rss+xml" />
     <description>Research and writing</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 24 Jun 2023 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 26 Jun 2023 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://greg.langmead.info/media/icon_hu1bbe79ab3a4c16ae2bff36fb493a5b01_1012_512x512_fill_lanczos_center_3.png</url>
       <title>Research and writing</title>
@@ -15,7 +15,7 @@
     <item>
       <title>Towards Gauge Theory in Homotopy Type Theory</title>
       <link>https://greg.langmead.info/writing/towards_gauge_theory_in_hott/</link>
-      <pubDate>Sat, 24 Jun 2023 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 26 Jun 2023 00:00:00 +0000</pubDate>
       <guid>https://greg.langmead.info/writing/towards_gauge_theory_in_hott/</guid>
       <description>&lt;!DOCTYPE html&gt;
 &lt;html xmlns=&#34;http://www.w3.org/1999/xhtml&#34; lang=&#34;&#34; xml:lang=&#34;&#34;&gt;
@@ -23,7 +23,7 @@
   &lt;meta charset=&#34;utf-8&#34; /&gt;
   &lt;meta name=&#34;generator&#34; content=&#34;pandoc&#34; /&gt;
   &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0, user-scalable=yes&#34; /&gt;
-  &lt;title&gt;group_extensions&lt;/title&gt;
+  &lt;title&gt;Towards Gauge Theory in Homotopy Type Theory&lt;/title&gt;
   &lt;style&gt;
     html {
       line-height: 1.5;
@@ -200,17 +200,23 @@
   &lt;link rel=&#34;stylesheet&#34; href=&#34;https://fonts.googleapis.com/css2?family=Libre+Baskerville&amp;family=Belanosima&#34;&gt;
   &lt;style&gt;
   body {
-    font-family: &#39;Libre Baskerville&#39;, serif;
+    font-family: Baskerville, &#39;Libre Baskerville&#39;, serif;
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: Belanosima, sans-serif;
   }
   &lt;/style&gt;
+  &lt;script
+  src=&#34;https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js&#34;
+  type=&#34;text/javascript&#34;&gt;&lt;/script&gt;
   &lt;!--[if lt IE 9]&gt;
     &lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js&#34;&gt;&lt;/script&gt;
   &lt;![endif]--&gt;
 &lt;/head&gt;
 &lt;body&gt;
+&lt;header id=&#34;title-block-header&#34;&gt;
+&lt;h1 class=&#34;title&#34;&gt;Towards Gauge Theory in Homotopy Type Theory&lt;/h1&gt;
+&lt;/header&gt;
 &lt;nav id=&#34;TOC&#34; role=&#34;doc-toc&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#abstract&#34; id=&#34;toc-abstract&#34;&gt;Abstract&lt;/a&gt;&lt;/li&gt;
@@ -226,12 +232,13 @@ maps&lt;/a&gt;&lt;/li&gt;
 bundles&lt;/a&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#bundles-over-bg&#34; id=&#34;toc-bundles-over-bg&#34;&gt;Bundles over
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;B&lt;/mi&gt;&lt;mi&gt;G&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;BG&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;span class=&#34;math inline&#34;&gt;\(BG\)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#mapping-into-bg&#34; id=&#34;toc-mapping-into-bg&#34;&gt;Mapping into
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;B&lt;/mi&gt;&lt;mi&gt;G&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;BG&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;span class=&#34;math inline&#34;&gt;\(BG\)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#bg-classifies-bundles-not-just-equivalence-classes&#34;
-id=&#34;toc-bg-classifies-bundles-not-just-equivalence-classes&#34;&gt;&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;B&lt;/mi&gt;&lt;mi&gt;G&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;BG&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-classifies bundles, not just equivalence classes&lt;/a&gt;&lt;/li&gt;
+id=&#34;toc-bg-classifies-bundles-not-just-equivalence-classes&#34;&gt;&lt;span
+class=&#34;math inline&#34;&gt;\(BG\)&lt;/span&gt; classifies bundles, not just
+equivalence classes&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#universes-versus-bundles&#34;
 id=&#34;toc-universes-versus-bundles&#34;&gt;Universes versus bundles&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#eilenberg-mac-lane-spaces&#34;
@@ -241,15 +248,16 @@ bundles&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#group-extensions&#34; id=&#34;toc-group-extensions&#34;&gt;Group
 extensions&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#cohomology-and-characteristic-classes&#34;
-id=&#34;toc-cohomology-and-characteristic-classes&#34;&gt;Cohomology and
-characteristic classes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#connections-and-chern-weil-theory&#34;
-id=&#34;toc-connections-and-chern-weil-theory&#34;&gt;Connections and Chern-Weil
-theory&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#appendix&#34; id=&#34;toc-appendix&#34;&gt;Appendix&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#group-extensions-1&#34; id=&#34;toc-group-extensions-1&#34;&gt;Group
+extensions&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#group-extensions-in-category-theory&#34;
+id=&#34;toc-group-extensions-in-category-theory&#34;&gt;Group extensions in
+category theory&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/nav&gt;
+&lt;!-- https://pandoc.org/MANUAL.html --&gt;
 &lt;h1 id=&#34;abstract&#34;&gt;Abstract&lt;/h1&gt;
 &lt;p&gt;We will show how to formalize parts of differential geometry, gauge
 theory, and Chern-Weil theory in homotopy type theory.&lt;/p&gt;
@@ -311,257 +319,170 @@ is done in &lt;em&gt;Symmetry&lt;/em&gt;. But in the case of higher groups we on
 have one definition: pointed connected types. This happens to be a
 lovely theory, and so we’ll be glad to run with that.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Definition&lt;/strong&gt;. A (higher) group is a pointed 1-type
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;B&lt;/mi&gt;&lt;mi&gt;G&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;BG&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-with basepoint
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mo&gt;*&lt;/mo&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;*&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;,
-which is connected, i.e. that we have a term of the type
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mo&gt;:&lt;/mo&gt;&lt;mi&gt;B&lt;/mi&gt;&lt;mi&gt;G&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mo&gt;→&lt;/mo&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;|&lt;/mo&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;|&lt;/mo&gt;&lt;/mrow&gt;&lt;mo&gt;*&lt;/mo&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;msub&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;|&lt;/mo&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;|&lt;/mo&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mo&gt;−&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;(a:BG)\to||*=a||_{-1}&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;.
-We denote the type
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mo&gt;*&lt;/mo&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mo&gt;*&lt;/mo&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;*=*&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-by
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mi&gt;G&lt;/mi&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;G&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;,
-and so if we have a particular group in mind then we think of that group
-as being installed as the identity type of the basepoint in a type we
-call
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;B&lt;/mi&gt;&lt;mi&gt;G&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;BG&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;.&lt;/p&gt;
-&lt;p&gt;This notation is fairly confusing, since we have stated that
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;B&lt;/mi&gt;&lt;mi&gt;G&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;BG&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-is a group, but that
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mi&gt;G&lt;/mi&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;G&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-is the group we really mean. Let’s see how much trouble it ends up
-causing.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Lemma&lt;/strong&gt; If
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mi&gt;X&lt;/mi&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;X&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-is a pointed, connected 1-type with basepoint
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mo&gt;*&lt;/mo&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;*&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;,&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo&gt;:&lt;/mo&gt;&lt;mi&gt;X&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;x:X&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-is any term, and
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;p&lt;/mi&gt;&lt;mo&gt;:&lt;/mo&gt;&lt;mo&gt;*&lt;/mo&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;p:*=x&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-any term, then the sets
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mo&gt;*&lt;/mo&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mo&gt;*&lt;/mo&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;*=*&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-and
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mo&gt;*&lt;/mo&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;*=x&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-are isomorphic. Furthermore,
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mo&gt;*&lt;/mo&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mo&gt;*&lt;/mo&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;*=*&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-acts on
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mo&gt;*&lt;/mo&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;*=x&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-freely and transitively, by concatenation.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Proof&lt;/strong&gt; For the first statement, define
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mo&gt;−&lt;/mo&gt;&lt;mo&gt;⋅&lt;/mo&gt;&lt;mi&gt;p&lt;/mi&gt;&lt;mo&gt;:&lt;/mo&gt;&lt;mo&gt;*&lt;/mo&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mo&gt;*&lt;/mo&gt;&lt;mo&gt;→&lt;/mo&gt;&lt;mo&gt;*&lt;/mo&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;-\cdot p:*=*\to *=x&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;,
-by concatenating with
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mi&gt;p&lt;/mi&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;p&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;.
-Then
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mo&gt;−&lt;/mo&gt;&lt;mo&gt;⋅&lt;/mo&gt;&lt;msup&gt;&lt;mi&gt;p&lt;/mi&gt;&lt;mrow&gt;&lt;mo&gt;−&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;/msup&gt;&lt;mo&gt;:&lt;/mo&gt;&lt;mo&gt;*&lt;/mo&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo&gt;→&lt;/mo&gt;&lt;mo&gt;*&lt;/mo&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mo&gt;*&lt;/mo&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;-\cdot p^{-1}:*=x\to *=*&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-is a two-sided inverse. For the second statement, if
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;g&lt;/mi&gt;&lt;mo&gt;:&lt;/mo&gt;&lt;mo&gt;*&lt;/mo&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mo&gt;*&lt;/mo&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;g:*=*&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-then
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;g&lt;/mi&gt;&lt;mo&gt;⋅&lt;/mo&gt;&lt;mi&gt;p&lt;/mi&gt;&lt;mo&gt;:&lt;/mo&gt;&lt;mo&gt;*&lt;/mo&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;g\cdot p:*=x&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;,
-giving an action. Transitivity can be seen by solving the equation
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;q&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mi&gt;g&lt;/mi&gt;&lt;mo&gt;⋅&lt;/mo&gt;&lt;mi&gt;p&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;q = g\cdot p&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-for
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mi&gt;g&lt;/mi&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;g&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-by concatenating both sides by
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;msup&gt;&lt;mi&gt;p&lt;/mi&gt;&lt;mrow&gt;&lt;mo&gt;−&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;/msup&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;p^{-1}&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-on the right. Freeness can be seen by observing that
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;g&lt;/mi&gt;&lt;mo&gt;⋅&lt;/mo&gt;&lt;mi&gt;p&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mi&gt;h&lt;/mi&gt;&lt;mo&gt;⋅&lt;/mo&gt;&lt;mi&gt;p&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;g\cdot p = h\cdot p&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-implies that
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;g&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mi&gt;h&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;g=h&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;.&lt;/p&gt;
-&lt;p&gt;So identity types with unequal endpoints like
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mo&gt;*&lt;/mo&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;*=x&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-are torsors, and it’s noteworthy to find torsors appearing to close to
-the foundations of HoTT.&lt;/p&gt;
+&lt;span class=&#34;math inline&#34;&gt;\(BG\)&lt;/span&gt; with basepoint &lt;span
+class=&#34;math inline&#34;&gt;\(*\)&lt;/span&gt;, which is connected, i.e. that we have
+a term of the type &lt;span
+class=&#34;math inline&#34;&gt;\((a:BG)\to||*=a||_{-1}\)&lt;/span&gt;. We denote the type
+&lt;span class=&#34;math inline&#34;&gt;\(*=*\)&lt;/span&gt; by &lt;span
+class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt;, and so if we have a particular group
+in mind then we think of that group as being installed as the identity
+type of the basepoint in a type we call &lt;span
+class=&#34;math inline&#34;&gt;\(BG\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;This notation is fairly confusing, since we have stated that &lt;span
+class=&#34;math inline&#34;&gt;\(BG\)&lt;/span&gt; is a group, but that &lt;span
+class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; is the group we really mean. Let’s see
+how much trouble it ends up causing.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Lemma&lt;/strong&gt; If &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; is a
+pointed, connected 1-type with basepoint &lt;span
+class=&#34;math inline&#34;&gt;\(*\)&lt;/span&gt;,&lt;span
+class=&#34;math inline&#34;&gt;\(x:X\)&lt;/span&gt; is any term, and &lt;span
+class=&#34;math inline&#34;&gt;\(p:*=x\)&lt;/span&gt; any term, then the sets &lt;span
+class=&#34;math inline&#34;&gt;\(*=*\)&lt;/span&gt; and &lt;span
+class=&#34;math inline&#34;&gt;\(*=x\)&lt;/span&gt; are isomorphic. Furthermore, &lt;span
+class=&#34;math inline&#34;&gt;\(*=*\)&lt;/span&gt; acts on &lt;span
+class=&#34;math inline&#34;&gt;\(*=x\)&lt;/span&gt; freely and transitively, by
+concatenation.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Proof&lt;/strong&gt; For the first statement, define &lt;span
+class=&#34;math inline&#34;&gt;\(-\cdot p:*=*\to *=x\)&lt;/span&gt;, by concatenating
+with &lt;span class=&#34;math inline&#34;&gt;\(p\)&lt;/span&gt;. Then &lt;span
+class=&#34;math inline&#34;&gt;\(-\cdot p^{-1}:*=x\to *=*\)&lt;/span&gt; is a two-sided
+inverse. For the second statement, if &lt;span
+class=&#34;math inline&#34;&gt;\(g:*=*\)&lt;/span&gt; then &lt;span
+class=&#34;math inline&#34;&gt;\(g\cdot p:*=x\)&lt;/span&gt;, giving an action.
+Transitivity can be seen by solving the equation &lt;span
+class=&#34;math inline&#34;&gt;\(q = g\cdot p\)&lt;/span&gt; for &lt;span
+class=&#34;math inline&#34;&gt;\(g\)&lt;/span&gt; by concatenating both sides by &lt;span
+class=&#34;math inline&#34;&gt;\(p^{-1}\)&lt;/span&gt; on the right. Freeness can be seen
+by observing that &lt;span class=&#34;math inline&#34;&gt;\(g\cdot p = h\cdot
+p\)&lt;/span&gt; implies that &lt;span class=&#34;math inline&#34;&gt;\(g=h\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;So identity types with unequal endpoints like &lt;span
+class=&#34;math inline&#34;&gt;\(*=x\)&lt;/span&gt; are torsors, and it’s noteworthy to
+find torsors appearing to close to the foundations of HoTT.&lt;/p&gt;
 &lt;h2 id=&#34;group-actions&#34;&gt;Group actions&lt;/h2&gt;
-&lt;p&gt;Given any pointed type
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mi&gt;X&lt;/mi&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;X&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-with basepoint
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;x&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-we can form the type
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mstyle mathvariant=&#34;sans-serif&#34;&gt;&lt;mi&gt;𝖡&lt;/mi&gt;&lt;mi&gt;𝖠&lt;/mi&gt;&lt;mi&gt;𝗎&lt;/mi&gt;&lt;mi&gt;𝗍&lt;/mi&gt;&lt;/mstyle&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;/msub&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;X&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;\mathsf{BAut}_x(X)&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-by taking the connected component of
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;x&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;.
-If we consider the terms of
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mi&gt;X&lt;/mi&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;X&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-to be at type-theoretic level 0, then
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;msub&gt;&lt;mstyle mathvariant=&#34;sans-serif&#34;&gt;&lt;mi&gt;𝖠&lt;/mi&gt;&lt;mi&gt;𝗎&lt;/mi&gt;&lt;mi&gt;𝗍&lt;/mi&gt;&lt;/mstyle&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;/msub&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;\mathsf{Aut}_x&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-brings one of the identity types from level 1 down to level 0 to look at
-it on its own. Then the B can be thought of as reinstalling the identity
-type at level 1 of the new type, which contains only the connected
-component of
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;x&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;.
-When we do this, though, we don’t forget the identity types of all the
-other terms in the connected component. That’s why there really isn’t a
-true B operator, just a notation that is meant to evoke the classical
-idea of a classifying space, since as we’ll see we really have captured
-that idea.&lt;/p&gt;
-&lt;p&gt;A homomorphism of groups is a pointed map
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;mo&gt;:&lt;/mo&gt;&lt;mi&gt;B&lt;/mi&gt;&lt;mi&gt;G&lt;/mi&gt;&lt;mo&gt;→&lt;/mo&gt;&lt;mi&gt;X&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;f:BG\to X&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;.
-The rules of type theory will ensure that this map contains a map
-between the identity types inside the types, forming a group
-homomorphism in the usual sense. We can think of
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mi&gt;G&lt;/mi&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;G&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-acting on
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;x&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-since the homomorphism is
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mo&gt;*&lt;/mo&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mo&gt;*&lt;/mo&gt;&lt;mo&gt;→&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;*=*\to x=x&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;.
-If we take
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;X&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mstyle mathvariant=&#34;script&#34;&gt;&lt;mi&gt;𝒰&lt;/mi&gt;&lt;/mstyle&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;X=\mathcal{U}&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-to be the universe, and if
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;mo&gt;*&lt;/mo&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mi&gt;H&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;f(*)=H&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;,
-then we can think of
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mi&gt;G&lt;/mi&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;G&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-acting on the type
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mi&gt;H&lt;/mi&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;H&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;.&lt;/p&gt;
+&lt;p&gt;Given any pointed type &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; with
+basepoint &lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt; we can form the type
+&lt;span class=&#34;math inline&#34;&gt;\(\mathsf{BAut}_x(X)\)&lt;/span&gt; by taking the
+connected component of &lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt;. If we
+consider the terms of &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; to be at
+type-theoretic level 0, then &lt;span
+class=&#34;math inline&#34;&gt;\(\mathsf{Aut}_x\)&lt;/span&gt; brings one of the identity
+types from level 1 down to level 0 to look at it on its own. Then the B
+can be thought of as reinstalling the identity type at level 1 of the
+new type, which contains only the connected component of &lt;span
+class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt;. When we do this, though, we don’t
+forget the identity types of all the other terms in the connected
+component. That’s why there really isn’t a true B operator, just a
+notation that is meant to evoke the classical idea of a classifying
+space, since as we’ll see we really have captured that idea.&lt;/p&gt;
+&lt;p&gt;A homomorphism of groups is a pointed map &lt;span
+class=&#34;math inline&#34;&gt;\(f:BG\to X\)&lt;/span&gt;. The rules of type theory will
+ensure that this map contains a map between the identity types inside
+the types, forming a group homomorphism in the usual sense. We can think
+of &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; acting on &lt;span
+class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt; since the homomorphism is &lt;span
+class=&#34;math inline&#34;&gt;\(*=*\to x=x\)&lt;/span&gt;. If we take &lt;span
+class=&#34;math inline&#34;&gt;\(X=\mathcal{U}\)&lt;/span&gt; to be the universe, and if
+&lt;span class=&#34;math inline&#34;&gt;\(f(*)=H\)&lt;/span&gt;, then we can think of &lt;span
+class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; acting on the type &lt;span
+class=&#34;math inline&#34;&gt;\(H\)&lt;/span&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;equivariant-maps&#34;&gt;Equivariant maps&lt;/h2&gt;
-&lt;p&gt;If
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;B&lt;/mi&gt;&lt;mi&gt;G&lt;/mi&gt;&lt;munderover&gt;&lt;mo&gt;→&lt;/mo&gt;&lt;mrow&gt;&lt;/mrow&gt;&lt;msub&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mi&gt;X&lt;/mi&gt;&lt;/msub&gt;&lt;/munderover&gt;&lt;msub&gt;&lt;mstyle mathvariant=&#34;sans-serif&#34;&gt;&lt;mi&gt;𝖡&lt;/mi&gt;&lt;mi&gt;𝖠&lt;/mi&gt;&lt;mi&gt;𝗎&lt;/mi&gt;&lt;mi&gt;𝗍&lt;/mi&gt;&lt;/mstyle&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;/msub&gt;&lt;mi&gt;X&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;BG\xrightarrow[]{r_X} \mathsf{BAut}_x X&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-and
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;B&lt;/mi&gt;&lt;mi&gt;G&lt;/mi&gt;&lt;munderover&gt;&lt;mo&gt;→&lt;/mo&gt;&lt;mrow&gt;&lt;/mrow&gt;&lt;msub&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mi&gt;Y&lt;/mi&gt;&lt;/msub&gt;&lt;/munderover&gt;&lt;msub&gt;&lt;mstyle mathvariant=&#34;sans-serif&#34;&gt;&lt;mi&gt;𝖡&lt;/mi&gt;&lt;mi&gt;𝖠&lt;/mi&gt;&lt;mi&gt;𝗎&lt;/mi&gt;&lt;mi&gt;𝗍&lt;/mi&gt;&lt;/mstyle&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;/msub&gt;&lt;mi&gt;Y&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;BG\xrightarrow[]{r_Y} \mathsf{BAut}_y Y&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-are two group actions&lt;/p&gt;
+&lt;p&gt;If &lt;span class=&#34;math inline&#34;&gt;\(BG\xrightarrow[]{r_X} \mathsf{BAut}_x
+X\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(BG\xrightarrow[]{r_Y}
+\mathsf{BAut}_y Y\)&lt;/span&gt; are two group actions&lt;/p&gt;
 &lt;h1 id=&#34;principal-bundles&#34;&gt;Principal bundles&lt;/h1&gt;
-&lt;h2 id=&#34;bundles-over-bg&#34;&gt;Bundles over
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;B&lt;/mi&gt;&lt;mi&gt;G&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;BG&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/h2&gt;
-&lt;p&gt;Pointed connected types
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;B&lt;/mi&gt;&lt;mi&gt;G&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;BG&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-come with three built-in type families by choosing identity types with
-different endpoints. There’s
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;L&lt;/mi&gt;&lt;mi&gt;G&lt;/mi&gt;&lt;mo&gt;:=&lt;/mo&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mo&gt;:&lt;/mo&gt;&lt;mi&gt;B&lt;/mi&gt;&lt;mi&gt;G&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mo&gt;×&lt;/mo&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;LG:=(a:BG)\times a=a&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-which is at each point the group of self-identifications of that point.
-There’s
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;E&lt;/mi&gt;&lt;mi&gt;G&lt;/mi&gt;&lt;mo&gt;:=&lt;/mo&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mo&gt;:&lt;/mo&gt;&lt;mi&gt;B&lt;/mi&gt;&lt;mi&gt;G&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mo&gt;×&lt;/mo&gt;&lt;mo&gt;*&lt;/mo&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;EG:=(a:BG)\times *=a&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-which aren’t groups, but which are similar to the self-identifications,
-and in fact are torsors over
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mi&gt;G&lt;/mi&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;G&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;!
-At each point
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mo&gt;:&lt;/mo&gt;&lt;mi&gt;B&lt;/mi&gt;&lt;mi&gt;G&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;a:BG&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-we can concatenate a term of
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;E&lt;/mi&gt;&lt;mi&gt;G&lt;/mi&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;EG(a)&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-with a term of
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;L&lt;/mi&gt;&lt;mi&gt;G&lt;/mi&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;LG(a)&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-by concatenating the latter to the
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;a&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-endpoint of
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;E&lt;/mi&gt;&lt;mi&gt;G&lt;/mi&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;EG(a)&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;.
-And lastly there’s the non-dependent type
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;B&lt;/mi&gt;&lt;mi&gt;G&lt;/mi&gt;&lt;mo&gt;×&lt;/mo&gt;&lt;mi&gt;G&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;BG\times G&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-which I’m mentioning because we can also concatenate a term of
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;E&lt;/mi&gt;&lt;mi&gt;G&lt;/mi&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;EG(a)&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-with a term of
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mi&gt;G&lt;/mi&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;G&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;,
-by attaching it to the
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mo&gt;*&lt;/mo&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;*&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-endpoint.&lt;/p&gt;
-&lt;p&gt;&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;E&lt;/mi&gt;&lt;mi&gt;G&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;EG&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-is contractible (Lemma 3.11.8 of The HoTT Book). It’s worth reflecting
-for a moment on the fact that
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;E&lt;/mi&gt;&lt;mi&gt;G&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;EG&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-is contractible but
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;B&lt;/mi&gt;&lt;mi&gt;G&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;BG&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-is not. After all,
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;B&lt;/mi&gt;&lt;mi&gt;G&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;BG&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-is connected and so all its terms are equal to the base point via some
-path. But we don’t select any specific paths as part of the data.
-Forming
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;E&lt;/mi&gt;&lt;mi&gt;G&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;EG&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-is simply to install all the solutions to this missing data as the
-fibers of a bundle over
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;B&lt;/mi&gt;&lt;mi&gt;G&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;BG&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;.&lt;/p&gt;
-&lt;p&gt;Example: for
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;G&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mstyle mathvariant=&#34;double-struck&#34;&gt;&lt;mi&gt;ℤ&lt;/mi&gt;&lt;/mstyle&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;msup&gt;&lt;mstyle mathvariant=&#34;double-struck&#34;&gt;&lt;mi&gt;ℤ&lt;/mi&gt;&lt;/mstyle&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;/msup&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;msub&gt;&lt;mstyle mathvariant=&#34;double-struck&#34;&gt;&lt;mi&gt;ℤ&lt;/mi&gt;&lt;/mstyle&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msub&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;G=\mathbb{Z}, \mathbb{Z}^n, \mathbb{Z}_2&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-provide
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;B&lt;/mi&gt;&lt;mi&gt;G&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;BG&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;,
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;E&lt;/mi&gt;&lt;mi&gt;G&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;EG&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;,
-and
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;L&lt;/mi&gt;&lt;mi&gt;G&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;LG&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;mapping-into-bg&#34;&gt;Mapping into
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;B&lt;/mi&gt;&lt;mi&gt;G&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;BG&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/h2&gt;
-&lt;p&gt;Pulling back
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;E&lt;/mi&gt;&lt;mi&gt;G&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;EG&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-via a map
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;X&lt;/mi&gt;&lt;mo&gt;→&lt;/mo&gt;&lt;mi&gt;B&lt;/mi&gt;&lt;mi&gt;G&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;X\to BG&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-deserves to be called a principal
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mi&gt;G&lt;/mi&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;G&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;-bundle
-over
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mi&gt;X&lt;/mi&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;X&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;,
-and pulling back
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;L&lt;/mi&gt;&lt;mi&gt;G&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;LG&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-via the same map deserves to be called a gauge transformation.&lt;/p&gt;
-&lt;p&gt;In HoTT given a map
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;mo&gt;:&lt;/mo&gt;&lt;mi&gt;A&lt;/mi&gt;&lt;mo&gt;→&lt;/mo&gt;&lt;mi&gt;B&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;f:A\to B&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-and a type family
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;P&lt;/mi&gt;&lt;mo&gt;:&lt;/mo&gt;&lt;mi&gt;B&lt;/mi&gt;&lt;mo&gt;→&lt;/mo&gt;&lt;mstyle mathvariant=&#34;script&#34;&gt;&lt;mi&gt;𝒰&lt;/mi&gt;&lt;/mstyle&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;P:B\to \mathcal{U}&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-we can form the following square and it will commute and be a
-pullback:&lt;/p&gt;
+&lt;h2 id=&#34;bundles-over-bg&#34;&gt;Bundles over &lt;span
+class=&#34;math inline&#34;&gt;\(BG\)&lt;/span&gt;&lt;/h2&gt;
+&lt;p&gt;Pointed connected types &lt;span class=&#34;math inline&#34;&gt;\(BG\)&lt;/span&gt; come
+with three built-in type families by choosing identity types with
+different endpoints. There’s &lt;span
+class=&#34;math inline&#34;&gt;\(LG:=(a:BG)\times a=a\)&lt;/span&gt; which is at each
+point the group of self-identifications of that point. There’s &lt;span
+class=&#34;math inline&#34;&gt;\(EG:=(a:BG)\times *=a\)&lt;/span&gt; which aren’t groups,
+but which are similar to the self-identifications, and in fact are
+torsors over &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt;! At each point &lt;span
+class=&#34;math inline&#34;&gt;\(a:BG\)&lt;/span&gt; we can concatenate a term of &lt;span
+class=&#34;math inline&#34;&gt;\(EG(a)\)&lt;/span&gt; with a term of &lt;span
+class=&#34;math inline&#34;&gt;\(LG(a)\)&lt;/span&gt; by concatenating the latter to the
+&lt;span class=&#34;math inline&#34;&gt;\(a\)&lt;/span&gt; endpoint of &lt;span
+class=&#34;math inline&#34;&gt;\(EG(a)\)&lt;/span&gt;. And lastly there’s the
+non-dependent type &lt;span class=&#34;math inline&#34;&gt;\(BG\times G\)&lt;/span&gt; which
+I’m mentioning because we can also concatenate a term of &lt;span
+class=&#34;math inline&#34;&gt;\(EG(a)\)&lt;/span&gt; with a term of &lt;span
+class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt;, by attaching it to the &lt;span
+class=&#34;math inline&#34;&gt;\(*\)&lt;/span&gt; endpoint.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(EG\)&lt;/span&gt; is contractible (Lemma 3.11.8
+of The HoTT Book). It’s worth reflecting for a moment on the fact that
+&lt;span class=&#34;math inline&#34;&gt;\(EG\)&lt;/span&gt; is contractible but &lt;span
+class=&#34;math inline&#34;&gt;\(BG\)&lt;/span&gt; is not. After all, &lt;span
+class=&#34;math inline&#34;&gt;\(BG\)&lt;/span&gt; is connected and so all its terms are
+equal to the base point via some path. But we don’t select any specific
+paths as part of the data. Forming &lt;span
+class=&#34;math inline&#34;&gt;\(EG\)&lt;/span&gt; is simply to install all the solutions
+to this missing data as the fibers of a bundle over &lt;span
+class=&#34;math inline&#34;&gt;\(BG\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Example: for &lt;span class=&#34;math inline&#34;&gt;\(G=\mathbb{Z}, \mathbb{Z}^n,
+\mathbb{Z}_2\)&lt;/span&gt; provide &lt;span class=&#34;math inline&#34;&gt;\(BG\)&lt;/span&gt;,
+&lt;span class=&#34;math inline&#34;&gt;\(EG\)&lt;/span&gt;, and &lt;span
+class=&#34;math inline&#34;&gt;\(LG\)&lt;/span&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;mapping-into-bg&#34;&gt;Mapping into &lt;span
+class=&#34;math inline&#34;&gt;\(BG\)&lt;/span&gt;&lt;/h2&gt;
+&lt;p&gt;Pulling back &lt;span class=&#34;math inline&#34;&gt;\(EG\)&lt;/span&gt; via a map &lt;span
+class=&#34;math inline&#34;&gt;\(X\to BG\)&lt;/span&gt; deserves to be called a principal
+&lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt;-bundle over &lt;span
+class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt;, and pulling back &lt;span
+class=&#34;math inline&#34;&gt;\(LG\)&lt;/span&gt; via the same map deserves to be called
+a gauge transformation.&lt;/p&gt;
+&lt;p&gt;In HoTT given a map &lt;span class=&#34;math inline&#34;&gt;\(f:A\to B\)&lt;/span&gt; and
+a type family &lt;span class=&#34;math inline&#34;&gt;\(P:B\to \mathcal{U}\)&lt;/span&gt; we
+can form the following square and it will commute and be a pullback:&lt;/p&gt;
+&lt;!-- https://q.uiver.app/?q=WzAsNCxbMiwwLCIoYjpCKVxcdGltZXMgUChiKVxccXVhZFxccXVhZCJdLFsyLDEsIkIiXSxbMCwwLCIoYTpBKVxcdGltZXMgUChmKGEpKSJdLFswLDEsIkEiXSxbMCwxLCJcXG1hdGhybXtwcn1fMSJdLFsyLDAsIlxcbGFtYmRhKGEsIHApLihmKGEpLHApIl0sWzMsMSwiZiIsMl0sWzIsMywiXFxtYXRocm17cHJ9XzEiLDJdXQ== --&gt;
 &lt;p&gt;&lt;img src=&#34;cd4a822b78ac014dc7a0ba88013e9ee36b829485.svg&#34;
 style=&#34;display: block; margin-left: auto; margin-right: auto;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;If we have an arbitrary type
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mi&gt;X&lt;/mi&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;X&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-and
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;mo&gt;:&lt;/mo&gt;&lt;mi&gt;X&lt;/mi&gt;&lt;mo&gt;→&lt;/mo&gt;&lt;mi&gt;B&lt;/mi&gt;&lt;mi&gt;G&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;f:X\to BG&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-then we can pull back
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;E&lt;/mi&gt;&lt;mi&gt;G&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;EG&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-this way:&lt;/p&gt;
+&lt;p&gt;If we have an arbitrary type &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt;
+and &lt;span class=&#34;math inline&#34;&gt;\(f:X\to BG\)&lt;/span&gt; then we can pull back
+&lt;span class=&#34;math inline&#34;&gt;\(EG\)&lt;/span&gt; this way:&lt;/p&gt;
+&lt;!-- https://q.uiver.app/?q=WzAsNCxbMiwwLCIoYjpCRylcXHRpbWVzICgqPWIpIl0sWzIsMSwiQkciXSxbMCwwLCIoeDpYKVxcdGltZXMgKCo9Zih4KSkiXSxbMCwxLCJYIl0sWzAsMSwiXFxtYXRocm17cHJ9XzEiXSxbMiwwLCJcXGxhbWJkYSh4LCBwKS4oZih4KSxwKSJdLFszLDEsImYiLDJdLFsyLDMsIlxcbWF0aHJte3ByfV8xIiwyXV0= --&gt;
 &lt;p&gt;&lt;img src=&#34;f75842ad3a6cc62cfedd8471a367bfca12bc03b8.svg&#34;
 style=&#34;display: block; margin-left: auto; margin-right: auto;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;or we can pull back
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;L&lt;/mi&gt;&lt;mi&gt;G&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;LG&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;:&lt;/p&gt;
+&lt;p&gt;or we can pull back &lt;span class=&#34;math inline&#34;&gt;\(LG\)&lt;/span&gt;:&lt;/p&gt;
+&lt;!-- https://q.uiver.app/?q=WzAsNCxbMiwwLCIoYjpCRylcXHRpbWVzIChiPWIpIl0sWzIsMSwiQkciXSxbMCwwLCIoeDpYKVxcdGltZXMgKGYoeCk9Zih4KSkiXSxbMCwxLCJYIl0sWzAsMSwiXFxtYXRocm17cHJ9XzEiXSxbMiwwLCJcXGxhbWJkYSh4LCBwKS4oZih4KSxwKSJdLFszLDEsImYiLDJdLFsyLDMsIlxcbWF0aHJte3ByfV8xIiwyXV0= --&gt;
 &lt;p&gt;&lt;img src=&#34;4d0d79624ee63ff6de3dee35483ee1170f02cdf0.svg&#34;
 style=&#34;display: block; margin-left: auto; margin-right: auto;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;Let’s name these pullbacks
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;E&lt;/mi&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;/msub&gt;&lt;mi&gt;X&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;E_fX&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-and
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;L&lt;/mi&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;/msub&gt;&lt;mi&gt;X&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;L_fX&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-respectively. We include the classifying map
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;f&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-in the notation but maybe we’ll leave it out sometimes. Terms of
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;E&lt;/mi&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;/msub&gt;&lt;mi&gt;X&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;E_fX&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-are a pair
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;p&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;(x, p)&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;:
-a term of
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mi&gt;X&lt;/mi&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;X&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-and a term of the torsor
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mo&gt;*&lt;/mo&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;*=f(x)&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;.
-Terms of
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;L&lt;/mi&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;/msub&gt;&lt;mi&gt;X&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;L_fX&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-are also a pair
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;l&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;(x, l)&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;:
-a term of
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mi&gt;X&lt;/mi&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;X&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-and a term of the loop space
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;f(x)=f(x)&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;.
-We can form
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;p&lt;/mi&gt;&lt;mo&gt;⋅&lt;/mo&gt;&lt;mi&gt;l&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;(x, p\cdot l)&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-and in fact we can act on all of
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;E&lt;/mi&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;/msub&gt;&lt;mi&gt;X&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;E_fX&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-with a section of
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;L&lt;/mi&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;/msub&gt;&lt;mi&gt;X&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;L_fX&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;:
-&lt;math display=&#34;block&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mstyle mathvariant=&#34;script&#34;&gt;&lt;mi&gt;𝒢&lt;/mi&gt;&lt;/mstyle&gt;&lt;mi&gt;X&lt;/mi&gt;&lt;mo&gt;:=&lt;/mo&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;l&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mo&gt;:&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;L&lt;/mi&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;/msub&gt;&lt;mi&gt;X&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mo&gt;→&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;E&lt;/mi&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;/msub&gt;&lt;mi&gt;X&lt;/mi&gt;&lt;mo&gt;→&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;E&lt;/mi&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;/msub&gt;&lt;mi&gt;X&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;\mathcal{G}X:=((x,l):L_fX)\to E_fX\to E_fX&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-which acts fiberwise by concatenating
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mi&gt;l&lt;/mi&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;l&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-to any torsor.&lt;/p&gt;
-&lt;p&gt;The bundle
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;E&lt;/mi&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;/msub&gt;&lt;mi&gt;X&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;E_fX&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-would classically be called something like
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mi&gt;P&lt;/mi&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;P&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;,
-a principal bundle with gauge group
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mi&gt;G&lt;/mi&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;G&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-over
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mi&gt;X&lt;/mi&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;X&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;.
-The bundle
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;L&lt;/mi&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;/msub&gt;&lt;mi&gt;X&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;L_fX&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-would then be referred to as
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mstyle mathvariant=&#34;normal&#34;&gt;&lt;mi&gt;A&lt;/mi&gt;&lt;mi&gt;d&lt;/mi&gt;&lt;/mstyle&gt;&lt;mi&gt;P&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;\mathrm{Ad}P&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;.
-Why is that?&lt;/p&gt;
+&lt;p&gt;Let’s name these pullbacks &lt;span class=&#34;math inline&#34;&gt;\(E_fX\)&lt;/span&gt;
+and &lt;span class=&#34;math inline&#34;&gt;\(L_fX\)&lt;/span&gt; respectively. We include
+the classifying map &lt;span class=&#34;math inline&#34;&gt;\(f\)&lt;/span&gt; in the
+notation but maybe we’ll leave it out sometimes. Terms of &lt;span
+class=&#34;math inline&#34;&gt;\(E_fX\)&lt;/span&gt; are a pair &lt;span
+class=&#34;math inline&#34;&gt;\((x, p)\)&lt;/span&gt;: a term of &lt;span
+class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; and a term of the torsor &lt;span
+class=&#34;math inline&#34;&gt;\(*=f(x)\)&lt;/span&gt;. Terms of &lt;span
+class=&#34;math inline&#34;&gt;\(L_fX\)&lt;/span&gt; are also a pair &lt;span
+class=&#34;math inline&#34;&gt;\((x, l)\)&lt;/span&gt;: a term of &lt;span
+class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; and a term of the loop space &lt;span
+class=&#34;math inline&#34;&gt;\(f(x)=f(x)\)&lt;/span&gt;. We can form &lt;span
+class=&#34;math inline&#34;&gt;\((x, p\cdot l)\)&lt;/span&gt; and in fact we can act on
+all of &lt;span class=&#34;math inline&#34;&gt;\(E_fX\)&lt;/span&gt; with a section of &lt;span
+class=&#34;math inline&#34;&gt;\(L_fX\)&lt;/span&gt;: &lt;span
+class=&#34;math display&#34;&gt;\[\mathcal{G}X:=((x,l):L_fX)\to E_fX\to
+E_fX\]&lt;/span&gt; which acts fiberwise by concatenating &lt;span
+class=&#34;math inline&#34;&gt;\(l\)&lt;/span&gt; to any torsor.&lt;/p&gt;
+&lt;p&gt;The bundle &lt;span class=&#34;math inline&#34;&gt;\(E_fX\)&lt;/span&gt; would
+classically be called something like &lt;span
+class=&#34;math inline&#34;&gt;\(P\)&lt;/span&gt;, a principal bundle with gauge group
+&lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; over &lt;span
+class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt;. The bundle &lt;span
+class=&#34;math inline&#34;&gt;\(L_fX\)&lt;/span&gt; would then be referred to as &lt;span
+class=&#34;math inline&#34;&gt;\(\mathrm{Ad}P\)&lt;/span&gt;. Why is that?&lt;/p&gt;
 
-&lt;h2
-id=&#34;bg-classifies-bundles-not-just-equivalence-classes&#34;&gt;&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;B&lt;/mi&gt;&lt;mi&gt;G&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;BG&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-classifies bundles, not just equivalence classes&lt;/h2&gt;
-&lt;p&gt;The classical theorems take the form: taking the pullback of
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;E&lt;/mi&gt;&lt;mi&gt;G&lt;/mi&gt;&lt;mo&gt;→&lt;/mo&gt;&lt;mi&gt;B&lt;/mi&gt;&lt;mi&gt;G&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;EG\to BG&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-forms a bijection between homotopy classes of maps
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;mo&gt;:&lt;/mo&gt;&lt;mi&gt;X&lt;/mi&gt;&lt;mo&gt;→&lt;/mo&gt;&lt;mi&gt;B&lt;/mi&gt;&lt;mi&gt;G&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;f:X\to BG&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-and equivalence classes of principal
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mi&gt;G&lt;/mi&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;G&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;-bundles
-over
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mi&gt;X&lt;/mi&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;X&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;bg-classifies-bundles-not-just-equivalence-classes&#34;&gt;&lt;span
+class=&#34;math inline&#34;&gt;\(BG\)&lt;/span&gt; classifies bundles, not just
+equivalence classes&lt;/h2&gt;
+&lt;p&gt;The classical theorems take the form: taking the pullback of &lt;span
+class=&#34;math inline&#34;&gt;\(EG\to BG\)&lt;/span&gt; forms a bijection between
+homotopy classes of maps &lt;span class=&#34;math inline&#34;&gt;\(f:X\to BG\)&lt;/span&gt;
+and equivalence classes of principal &lt;span
+class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt;-bundles over &lt;span
+class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;universes-versus-bundles&#34;&gt;Universes versus bundles&lt;/h2&gt;
 &lt;h2 id=&#34;eilenberg-mac-lane-spaces&#34;&gt;Eilenberg-Mac Lane spaces&lt;/h2&gt;
 &lt;p&gt;&lt;em&gt;Inductive types&lt;/em&gt; are collections of data and rules for
@@ -570,44 +491,155 @@ inductive type defining the natural numbers in Agda:&lt;/p&gt;
 &lt;p&gt;This theory can be extended to support data having values in the
 identity types of data that was specified earlier in the definition.
 Here is the circle defined as a HIT in Cubical Agda:&lt;/p&gt;
-&lt;p&gt;Given a group
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mi&gt;G&lt;/mi&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;G&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-(meaning, a 0-type) with identity
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;G&lt;/mi&gt;&lt;mn&gt;.1&lt;/mn&gt;&lt;mi&gt;g&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;G.1g&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
-and multiplication
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;G&lt;/mi&gt;&lt;mi&gt;.&lt;/mi&gt;&lt;mi&gt;m&lt;/mi&gt;&lt;mi&gt;u&lt;/mi&gt;&lt;mi&gt;l&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;G.mul&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;,
-we can form the Eilenberg-Mac Lane type
-&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;K&lt;/mi&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;G&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;K(G, 1)&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
+&lt;p&gt;Given a group &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; (meaning, a
+0-type) with identity &lt;span class=&#34;math inline&#34;&gt;\(G.1g\)&lt;/span&gt; and
+multiplication &lt;span class=&#34;math inline&#34;&gt;\(G.mul\)&lt;/span&gt;, we can form
+the Eilenberg-Mac Lane type &lt;span class=&#34;math inline&#34;&gt;\(K(G, 1)\)&lt;/span&gt;
 as the following HIT:&lt;/p&gt;
 &lt;h2 id=&#34;associated-bundles&#34;&gt;Associated bundles&lt;/h2&gt;
 &lt;h2 id=&#34;group-extensions&#34;&gt;Group extensions&lt;/h2&gt;
-&lt;pre class=&#34;Agda&#34;&gt;&lt;a id=&#34;11926&#34; class=&#34;Symbol&#34;&gt;{-#&lt;/a&gt; &lt;a id=&#34;11930&#34; class=&#34;Keyword&#34;&gt;OPTIONS&lt;/a&gt; &lt;a id=&#34;11938&#34; class=&#34;Pragma&#34;&gt;--without-K&lt;/a&gt; &lt;a id=&#34;11950&#34; class=&#34;Pragma&#34;&gt;--exact-split&lt;/a&gt; &lt;a id=&#34;11964&#34; class=&#34;Symbol&#34;&gt;#-}&lt;/a&gt;
+&lt;pre class=&#34;Agda&#34;&gt;&lt;a id=&#34;12017&#34; class=&#34;Symbol&#34;&gt;{-#&lt;/a&gt; &lt;a id=&#34;12021&#34; class=&#34;Keyword&#34;&gt;OPTIONS&lt;/a&gt; &lt;a id=&#34;12029&#34; class=&#34;Pragma&#34;&gt;--without-K&lt;/a&gt; &lt;a id=&#34;12041&#34; class=&#34;Pragma&#34;&gt;--exact-split&lt;/a&gt; &lt;a id=&#34;12055&#34; class=&#34;Symbol&#34;&gt;#-}&lt;/a&gt;
 
-&lt;a id=&#34;11969&#34; class=&#34;Keyword&#34;&gt;module&lt;/a&gt; &lt;a id=&#34;11976&#34; href=&#34;group_extensions.html&#34; class=&#34;Module Operator&#34;&gt;group_extensions&lt;/a&gt; &lt;a id=&#34;11993&#34; class=&#34;Keyword&#34;&gt;where&lt;/a&gt;
+&lt;a id=&#34;12060&#34; class=&#34;Keyword&#34;&gt;module&lt;/a&gt; &lt;a id=&#34;12067&#34; href=&#34;group_extensions.html&#34; class=&#34;Module Operator&#34;&gt;group_extensions&lt;/a&gt; &lt;a id=&#34;12084&#34; class=&#34;Keyword&#34;&gt;where&lt;/a&gt;
 
-&lt;a id=&#34;12000&#34; class=&#34;Keyword&#34;&gt;open&lt;/a&gt; &lt;a id=&#34;12005&#34; class=&#34;Keyword&#34;&gt;import&lt;/a&gt; &lt;a id=&#34;12012&#34; href=&#34;foundation-core.universe-levels.html&#34; class=&#34;Module&#34;&gt;foundation-core.universe-levels&lt;/a&gt;
-&lt;a id=&#34;12044&#34; class=&#34;Keyword&#34;&gt;open&lt;/a&gt; &lt;a id=&#34;12049&#34; class=&#34;Keyword&#34;&gt;import&lt;/a&gt; &lt;a id=&#34;12056&#34; href=&#34;foundation-core.functions.html&#34; class=&#34;Module&#34;&gt;foundation-core.functions&lt;/a&gt;
-&lt;a id=&#34;12082&#34; class=&#34;Keyword&#34;&gt;open&lt;/a&gt; &lt;a id=&#34;12087&#34; class=&#34;Keyword&#34;&gt;import&lt;/a&gt; &lt;a id=&#34;12094&#34; href=&#34;foundation-core.identity-types.html&#34; class=&#34;Module&#34;&gt;foundation-core.identity-types&lt;/a&gt;
+&lt;a id=&#34;12091&#34; class=&#34;Keyword&#34;&gt;open&lt;/a&gt; &lt;a id=&#34;12096&#34; class=&#34;Keyword&#34;&gt;import&lt;/a&gt; &lt;a id=&#34;12103&#34; href=&#34;foundation.universe-levels.html&#34; class=&#34;Module&#34;&gt;foundation.universe-levels&lt;/a&gt;
+&lt;a id=&#34;12130&#34; class=&#34;Keyword&#34;&gt;open&lt;/a&gt; &lt;a id=&#34;12135&#34; class=&#34;Keyword&#34;&gt;import&lt;/a&gt; &lt;a id=&#34;12142&#34; href=&#34;foundation.function-types.html&#34; class=&#34;Module&#34;&gt;foundation.function-types&lt;/a&gt;
+&lt;a id=&#34;12168&#34; class=&#34;Keyword&#34;&gt;open&lt;/a&gt; &lt;a id=&#34;12173&#34; class=&#34;Keyword&#34;&gt;import&lt;/a&gt; &lt;a id=&#34;12180&#34; href=&#34;foundation.identity-types.html&#34; class=&#34;Module&#34;&gt;foundation.identity-types&lt;/a&gt;
 
-&lt;a id=&#34;12126&#34; class=&#34;Comment&#34;&gt;-- What is the analogue in HoTT of the fact from group extensions that we classify an extension by &lt;/a&gt;
-&lt;a id=&#34;12226&#34; class=&#34;Comment&#34;&gt;-- taking a set-based section of the splitting, seeing that those elements act on the left hand group,&lt;/a&gt;
-&lt;a id=&#34;12329&#34; class=&#34;Comment&#34;&gt;-- noting that this map into Aut G is not a homomorphism. There is a 2-cell that we can conjugate with that makes&lt;/a&gt;
-&lt;a id=&#34;12443&#34; class=&#34;Comment&#34;&gt;-- it a homomorphism. So together, the extension (plus the arbitrary choice of splitting) yeilds a 2-map to the 2-group&lt;/a&gt;
-&lt;a id=&#34;12563&#34; class=&#34;Comment&#34;&gt;-- AUT(G).&lt;/a&gt;
-&lt;a id=&#34;12574&#34; class=&#34;Comment&#34;&gt;-- For us, a splitting will be a section of a type family. This acts on loops with apd.&lt;/a&gt;
-&lt;a id=&#34;12662&#34; class=&#34;Comment&#34;&gt;-- So we want to prove some facts about apd and to what extent it&amp;#39;s a homomorphism of loops.&lt;/a&gt;
-&lt;a id=&#34;12755&#34; class=&#34;Comment&#34;&gt;-- It doesn&amp;#39;t send loops to loops, because it sends the loop p to a loop from fx to ap p fx.&lt;/a&gt;
-&lt;a id=&#34;12848&#34; class=&#34;Comment&#34;&gt;-- apd-hom :&lt;/a&gt;
-&lt;a id=&#34;12861&#34; class=&#34;Comment&#34;&gt;--   {l1 l2 : Level} {A : UU l1} {B : A → UU l2} (f : (a : A) → B a) {x : A}&lt;/a&gt;
-&lt;a id=&#34;12938&#34; class=&#34;Comment&#34;&gt;--   (p q : x ＝ x) → (apd f (p ∙ q)) ＝ ((apd ((tr B p) ∘ f) q) ∙ (apd (f) p))&lt;/a&gt;
-&lt;a id=&#34;13016&#34; class=&#34;Comment&#34;&gt;-- apd-hom f refl q = ?&lt;/a&gt;
+&lt;a id=&#34;12207&#34; class=&#34;Comment&#34;&gt;-- What is the analogue in HoTT of the fact from group extensions that we classify an extension by &lt;/a&gt;
+&lt;a id=&#34;12307&#34; class=&#34;Comment&#34;&gt;-- taking a set-based section of the splitting, seeing that those elements act on the left hand group,&lt;/a&gt;
+&lt;a id=&#34;12410&#34; class=&#34;Comment&#34;&gt;-- noting that this map into Aut G is not a homomorphism. There is a 2-cell that we can conjugate with that makes&lt;/a&gt;
+&lt;a id=&#34;12524&#34; class=&#34;Comment&#34;&gt;-- it a homomorphism. So together, the extension (plus the arbitrary choice of splitting) yeilds a 2-map to the 2-group&lt;/a&gt;
+&lt;a id=&#34;12644&#34; class=&#34;Comment&#34;&gt;-- AUT(G).&lt;/a&gt;
+&lt;a id=&#34;12655&#34; class=&#34;Comment&#34;&gt;-- For us, a splitting will be a section of a type family. This acts on loops with apd.&lt;/a&gt;
+&lt;a id=&#34;12743&#34; class=&#34;Comment&#34;&gt;-- So we want to prove some facts about apd and to what extent it&amp;#39;s a homomorphism of loops.&lt;/a&gt;
+&lt;a id=&#34;12836&#34; class=&#34;Comment&#34;&gt;-- It doesn&amp;#39;t send loops to loops, because it sends the loop p to a loop from fx to ap p fx.&lt;/a&gt;
+&lt;a id=&#34;12929&#34; class=&#34;Comment&#34;&gt;-- apd-hom :&lt;/a&gt;
+&lt;a id=&#34;12942&#34; class=&#34;Comment&#34;&gt;--   {l1 l2 : Level} {A : UU l1} {B : A → UU l2} (f : (a : A) → B a) {x : A}&lt;/a&gt;
+&lt;a id=&#34;13019&#34; class=&#34;Comment&#34;&gt;--   (p q : x ＝ x) → (apd f (p ∙ q)) ＝ ((apd ((tr B p) ∘ f) q) ∙ (apd (f) p))&lt;/a&gt;
+&lt;a id=&#34;13097&#34; class=&#34;Comment&#34;&gt;-- apd-hom f refl q = ?&lt;/a&gt;
 
 &lt;/pre&gt;
-&lt;h1 id=&#34;cohomology-and-characteristic-classes&#34;&gt;Cohomology and
-characteristic classes&lt;/h1&gt;
-&lt;h1 id=&#34;connections-and-chern-weil-theory&#34;&gt;Connections and Chern-Weil
-theory&lt;/h1&gt;
-&lt;h1 class=&#34;unnumbered&#34; id=&#34;appendix&#34;&gt;Appendix&lt;/h1&gt;
+&lt;h1 id=&#34;group-extensions-1&#34;&gt;Group extensions&lt;/h1&gt;
+&lt;p&gt;Extensions of &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; by &lt;span
+class=&#34;math inline&#34;&gt;\(BG\)&lt;/span&gt; are equivalent to maps &lt;span
+class=&#34;math inline&#34;&gt;\(\mathscr{C}:X\to \mathsf{BAut}BG\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Let’s look in detail at &lt;span
+class=&#34;math inline&#34;&gt;\(\mathsf{BAut}BG\)&lt;/span&gt;. First of all it’s a
+2-type. Its terms are “&lt;span class=&#34;math inline&#34;&gt;\(BG\)&lt;/span&gt; clones”.
+The identity types are equivalences between &lt;span
+class=&#34;math inline&#34;&gt;\(BG\)&lt;/span&gt; clones. Those equivalences have
+identity types as well, which are homotopies between equivalences
+between &lt;span class=&#34;math inline&#34;&gt;\(BG\)&lt;/span&gt; clones.&lt;/p&gt;
+&lt;p&gt;Meanwhile each of the fibers &lt;span
+class=&#34;math inline&#34;&gt;\(\mathscr{C}(x)\)&lt;/span&gt; is a &lt;span
+class=&#34;math inline&#34;&gt;\(BG\)&lt;/span&gt;-clone. The union of all of these is
+the sigma-type &lt;span class=&#34;math inline&#34;&gt;\((x:X)\times
+\mathscr{C}(x)\)&lt;/span&gt;. But the 2-type structure of &lt;span
+class=&#34;math inline&#34;&gt;\(\mathsf{BAut}BG\)&lt;/span&gt; doesn’t apply inside a
+term of a &lt;span class=&#34;math inline&#34;&gt;\(BG\)&lt;/span&gt;-clone, they are
+identity types between types, whereas inside &lt;span
+class=&#34;math inline&#34;&gt;\(BG\)&lt;/span&gt; and its clones, we have terms, which
+are something like individual &lt;span
+class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt;-torsors.&lt;/p&gt;
+&lt;p&gt;Maybe we should look to the pi-type &lt;span
+class=&#34;math inline&#34;&gt;\((x:X)\to \mathscr{C}(x)\)&lt;/span&gt;. This should be
+something like a principal bundle, sinc this type is a generalization of
+the type &lt;span class=&#34;math inline&#34;&gt;\(X\to BG\)&lt;/span&gt;, which as we know
+is supposed to classify principal bundles. In the special case where
+&lt;span class=&#34;math inline&#34;&gt;\(\mathscr{C}\)&lt;/span&gt; is the constant map to
+&lt;span class=&#34;math inline&#34;&gt;\(BG\)&lt;/span&gt;, we indeed would have to
+consider the pi-type to have a type of principal bundles.&lt;/p&gt;
+&lt;p&gt;In the literature on Schreier theory, we can look for clues about how
+to proceed. Let’s move away from HoTT for a moment and look at group
+extensions from the point of view of groupoids and 2-groupoids, in
+classical category theory.&lt;/p&gt;
+&lt;h2 id=&#34;group-extensions-in-category-theory&#34;&gt;Group extensions in
+category theory&lt;/h2&gt;
+&lt;p&gt;See Blanco.&lt;/p&gt;
+&lt;p&gt;The study of group extensions is about constructing an equivalence
+between extensions of a group &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; by
+&lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt;, which is a surjection from the
+extension &lt;span class=&#34;math inline&#34;&gt;\(E\)&lt;/span&gt; to &lt;span
+class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt;, and a classifying map &lt;em&gt;out&lt;/em&gt; of
+&lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt;. Given the extension, which takes
+the form of an exact sequence &lt;span class=&#34;math display&#34;&gt;\[1\to
+G\xrightarrow[]{i} E\xrightarrow[]{p}X\to 1\]&lt;/span&gt; how do we construct
+a classifying map out of &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Baez sketch from &lt;a href=&#34;#fn5&#34; class=&#34;footnote-ref&#34; id=&#34;fnref5&#34;
+role=&#34;doc-noteref&#34;&gt;&lt;sup&gt;5&lt;/sup&gt;&lt;/a&gt;: since &lt;span
+class=&#34;math inline&#34;&gt;\(p\)&lt;/span&gt; is a surjection, start by choosing a
+set function &lt;span class=&#34;math inline&#34;&gt;\(s:X\to E\)&lt;/span&gt; that is a
+section of &lt;span class=&#34;math inline&#34;&gt;\(p\)&lt;/span&gt;. This induces a
+function &lt;span class=&#34;math inline&#34;&gt;\(\alpha:X\to \mathsf{Aut}G\)&lt;/span&gt;
+by taking &lt;span class=&#34;math inline&#34;&gt;\(\alpha(x)(g)=s(x)g
+s(x)^{-1}\)&lt;/span&gt;. In general &lt;span
+class=&#34;math inline&#34;&gt;\(\alpha\)&lt;/span&gt; is not a homomorphism, but it is
+up to a conjugation. If we view groups as 1-element categories and
+homomorphisms as functors, then &lt;span
+class=&#34;math inline&#34;&gt;\(\alpha\)&lt;/span&gt; is a weak functor.&lt;/p&gt;
+&lt;p&gt;Let’s compare &lt;span class=&#34;math inline&#34;&gt;\(\alpha(xy)\)&lt;/span&gt; to
+&lt;span class=&#34;math inline&#34;&gt;\(\alpha(x)\alpha(y)\)&lt;/span&gt;. &lt;span
+class=&#34;math display&#34;&gt;\[\alpha(xy)(g) = s(xy)gs(xy)^{-1}\]&lt;/span&gt; whereas
+&lt;span class=&#34;math display&#34;&gt;\[\alpha(x)(\alpha(y)(g)) =
+s(x)[s(y)gs(y)^{-1}]s(x)^{-1}\]&lt;/span&gt; which are equal if &lt;span
+class=&#34;math inline&#34;&gt;\(s\)&lt;/span&gt; is a homomorphism. But if &lt;span
+class=&#34;math inline&#34;&gt;\(s\)&lt;/span&gt; is not, we need a “homomorphinator” to
+relate these two formulas. The obvious thing to do is to form &lt;span
+class=&#34;math inline&#34;&gt;\(h(x, y) = s(xy)s(x)^{-1}s(y)^{-1}\)&lt;/span&gt;.
+Conjugating by &lt;span class=&#34;math inline&#34;&gt;\(h(x,y)\)&lt;/span&gt; cancels the
+&lt;span class=&#34;math inline&#34;&gt;\(s(x)s(y)\)&lt;/span&gt; factors and replaces them
+with &lt;span class=&#34;math inline&#34;&gt;\(s(xy)\)&lt;/span&gt;. So a map that isn’t a
+homomorphism can nonetheless behave like one if we have the freedom to
+introduce a homomorphinator.&lt;/p&gt;
+&lt;p&gt;What is weakness when we look at things in HoTT? (My current
+candidate: an unpointed map. The homomorphinator would then be a choice
+of path that restores pointedness.)&lt;/p&gt;
+&lt;p&gt;What are conjugations? (My current candidate: changes of
+basepoint.)&lt;/p&gt;
+&lt;p&gt;What is a map that isn’t a homorphism in HoTT but is a homomorphism
+up to a 2-morphism? Does this imply that &lt;span
+class=&#34;math inline&#34;&gt;\(E\)&lt;/span&gt; ends up having a natural 2-type
+structure? It’s a union of &lt;span class=&#34;math inline&#34;&gt;\(BG\)&lt;/span&gt;
+clones over the base &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; and so by
+the usual calculations it is only a 1-type.&lt;/p&gt;
+&lt;p&gt;Can we bring some of the 2-type structure from &lt;span
+class=&#34;math inline&#34;&gt;\(\mathsf{BAut}BG\)&lt;/span&gt; into &lt;span
+class=&#34;math inline&#34;&gt;\(BG\)&lt;/span&gt; itself? Some ideas:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;there is a map &lt;span class=&#34;math inline&#34;&gt;\(f:BG\to BG=BG\)&lt;/span&gt;
+where &lt;span class=&#34;math inline&#34;&gt;\(f(a)\)&lt;/span&gt; is an equivalence that
+moves the basepoint from &lt;span class=&#34;math inline&#34;&gt;\(*\)&lt;/span&gt; to &lt;span
+class=&#34;math inline&#34;&gt;\(a\)&lt;/span&gt;.&lt;/li&gt;
+&lt;li&gt;a path &lt;span class=&#34;math inline&#34;&gt;\(p:*=_{BG}a\)&lt;/span&gt; can be
+concatenated to any other path, providing an automorphism of the space
+of &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt;-torsors, sending the torsor
+&lt;span class=&#34;math inline&#34;&gt;\(*=b\)&lt;/span&gt; to the torsor &lt;span
+class=&#34;math inline&#34;&gt;\(a=b\)&lt;/span&gt; by concatenating all the paths in
+&lt;span class=&#34;math inline&#34;&gt;\(*=b\)&lt;/span&gt; with &lt;span
+class=&#34;math inline&#34;&gt;\(p\)&lt;/span&gt;. This may map the paths in &lt;span
+class=&#34;math inline&#34;&gt;\(BG\)&lt;/span&gt; to &lt;span
+class=&#34;math inline&#34;&gt;\(BG=BG\)&lt;/span&gt;.&lt;/li&gt;
+&lt;li&gt;so having a map from &lt;span class=&#34;math inline&#34;&gt;\(BG\)&lt;/span&gt; into
+&lt;span class=&#34;math inline&#34;&gt;\(BG=BG\)&lt;/span&gt; may let us&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Tying this together might be the intuition that higher paths are more
+and more microscopic structure inside &lt;span
+class=&#34;math inline&#34;&gt;\(BG\)&lt;/span&gt;, whereas the types &lt;span
+class=&#34;math inline&#34;&gt;\(BG=_{\mathsf{BAut}BG}BG\)&lt;/span&gt; and then &lt;span
+class=&#34;math inline&#34;&gt;\(\mathrm{id}=_{BG=BG}\mathrm{id}\)&lt;/span&gt; seem to
+go outward, or maybe more fruitfully, they go inward but inside &lt;span
+class=&#34;math inline&#34;&gt;\(\mathsf{BAut}BG\)&lt;/span&gt;. I seem to want to relate
+these in a way I haven’t seen, where we can bring more structure inside
+&lt;span class=&#34;math inline&#34;&gt;\(BG\)&lt;/span&gt; by looking in &lt;span
+class=&#34;math inline&#34;&gt;\(\mathsf{BAut}BG\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;I believe I can define maps &lt;span class=&#34;math inline&#34;&gt;\(BG\to
+BG=BG\)&lt;/span&gt; and from &lt;span class=&#34;math inline&#34;&gt;\(*=_{BG}a\to
+BG=BG\)&lt;/span&gt; which utilize the homogeneity of &lt;span
+class=&#34;math inline&#34;&gt;\(BG\)&lt;/span&gt;. Can this be clarified enough to see
+how we might introduce 2-paths in &lt;span
+class=&#34;math inline&#34;&gt;\(BG\)&lt;/span&gt; which let us translate the Schreier
+story from 2-groups to 2-types?&lt;/p&gt;
 &lt;div id=&#34;refs&#34; class=&#34;references csl-bib-body hanging-indent&#34;
 role=&#34;doc-bibliography&#34;&gt;
 &lt;div id=&#34;ref-atiyah1983yang&#34; class=&#34;csl-entry&#34; role=&#34;doc-biblioentry&#34;&gt;
@@ -674,6 +706,9 @@ href=&#34;#fnref3&#34; class=&#34;footnote-back&#34; role=&#34;doc-backlink&#34;
 &lt;li id=&#34;fn4&#34;&gt;&lt;p&gt;Urs Schreiber, “n-Transport and Higher Schreier Theory”:
 https://golem.ph.utexas.edu/category/2006/09/nconnections_and_higher_schrei.html&lt;a
 href=&#34;#fnref4&#34; class=&#34;footnote-back&#34; role=&#34;doc-backlink&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn5&#34;&gt;&lt;p&gt;John Baez, “Week 223”:
+https://math.ucr.edu/home/baez/week223.html&lt;a href=&#34;#fnref5&#34;
+class=&#34;footnote-back&#34; role=&#34;doc-backlink&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/section&gt;
 &lt;/body&gt;
