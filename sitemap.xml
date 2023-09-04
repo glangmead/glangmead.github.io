@@ -4,9 +4,13 @@
   
   
   <url>
+    <loc>https://greg.langmead.info/categories/</loc><lastmod>2023-08-28T17:33:15-04:00</lastmod><changefreq>weekly</changefreq></url>
+  <url>
     <loc>https://greg.langmead.info/</loc><lastmod>2023-08-28T17:33:15-04:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
     <loc>https://greg.langmead.info/posts/</loc><lastmod>2023-08-28T17:33:15-04:00</lastmod><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>https://greg.langmead.info/category/tech/</loc><lastmod>2023-08-28T17:33:15-04:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
     <loc>https://greg.langmead.info/posts/2023-08-28-talbott-review/</loc><lastmod>2023-08-28T17:33:15-04:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
@@ -63,8 +67,6 @@
     <loc>https://greg.langmead.info/authors/shizhu-liu/</loc><lastmod>2018-12-04T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
     <loc>https://greg.langmead.info/writing/smoothness/</loc><lastmod>2018-11-09T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
-  <url>
-    <loc>https://greg.langmead.info/categories/</loc><lastmod>2018-11-05T12:36:54+00:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
     <loc>https://greg.langmead.info/category/misc/</loc><lastmod>2018-11-05T12:36:54+00:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
@@ -133,8 +135,6 @@
     <loc>https://greg.langmead.info/posts/2009-11-30-iphone-hack-reading-strap/</loc><lastmod>2009-11-30T15:04:16+00:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
     <loc>https://greg.langmead.info/category/mac-stuff/</loc><lastmod>2009-11-30T15:04:16+00:00</lastmod><changefreq>weekly</changefreq></url>
-  <url>
-    <loc>https://greg.langmead.info/category/tech/</loc><lastmod>2009-11-30T15:04:16+00:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
     <loc>https://greg.langmead.info/writing/lord-of-the-rings-annotated-differences-from-the-peter-jackson-movies/</loc><lastmod>2009-08-11T20:21:41+00:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
