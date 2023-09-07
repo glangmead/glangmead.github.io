@@ -180,7 +180,7 @@
   &lt;meta charset=&#34;utf-8&#34; /&gt;
   &lt;meta name=&#34;generator&#34; content=&#34;pandoc&#34; /&gt;
   &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0, user-scalable=yes&#34; /&gt;
-  &lt;title&gt;Towards Gauge Theory in Homotopy Type Theory&lt;/title&gt;
+  &lt;meta name=&#34;dcterms.date&#34; content=&#34;2023-06-26&#34; /&gt;
   &lt;style&gt;
     html {
       line-height: 1.5;
@@ -371,9 +371,6 @@
   &lt;![endif]--&gt;
 &lt;/head&gt;
 &lt;body&gt;
-&lt;header id=&#34;title-block-header&#34;&gt;
-&lt;h1 class=&#34;title&#34;&gt;Towards Gauge Theory in Homotopy Type Theory&lt;/h1&gt;
-&lt;/header&gt;
 &lt;nav id=&#34;TOC&#34; role=&#34;doc-toc&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#abstract&#34; id=&#34;toc-abstract&#34;&gt;Abstract&lt;/a&gt;&lt;/li&gt;
@@ -415,7 +412,7 @@ category theory&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/nav&gt;
 &lt;!-- https://pandoc.org/MANUAL.html --&gt;
-&lt;h1 id=&#34;abstract&#34;&gt;Abstract&lt;/h1&gt;
+&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
 &lt;p&gt;We will show how to formalize parts of differential geometry, gauge
 theory, and Chern-Weil theory in homotopy type theory.&lt;/p&gt;
 &lt;p&gt;The background on group extensions are &lt;a href=&#34;#fn1&#34;
@@ -426,7 +423,7 @@ id=&#34;fnref3&#34; role=&#34;doc-noteref&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a
 &lt;p&gt;One way of thinking about bringing smooth manifolds into this group
 theoretic picture is in a post by Schreiber &lt;a href=&#34;#fn4&#34;
 class=&#34;footnote-ref&#34; id=&#34;fnref4&#34; role=&#34;doc-noteref&#34;&gt;&lt;sup&gt;4&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;Differential geometry &lt;span class=&#34;citation&#34;
 data-cites=&#34;kobayashinomizu&#34;&gt;(Kobayashi and Nomizu 1963)&lt;/span&gt; &lt;span
 class=&#34;citation&#34; data-cites=&#34;baez1994gauge&#34;&gt;(Baez and Muniain
@@ -456,7 +453,7 @@ like being locally cartesian closed, or having homotopical model
 structures. Such categories have internal languages, which are syntactic
 structures much like programming languages, which allow us to reason
 about the objects in a generic way.&lt;/p&gt;
-&lt;h1 id=&#34;groups&#34;&gt;Groups&lt;/h1&gt;
+&lt;h2 id=&#34;groups&#34;&gt;Groups&lt;/h2&gt;
 &lt;p&gt;Group theory including the theory of higher groups is built directly
 into HoTT, via the identity types. A thorough introductory treatment of
 group theory that adopts this philosophy can be found in the book
@@ -515,7 +512,7 @@ p\)&lt;/span&gt; implies that &lt;span class=&#34;math inline&#34;&gt;\(g=h\)&lt
 &lt;p&gt;So identity types with unequal endpoints like &lt;span
 class=&#34;math inline&#34;&gt;\(*=x\)&lt;/span&gt; are torsors, and it’s noteworthy to
 find torsors appearing to close to the foundations of HoTT.&lt;/p&gt;
-&lt;h2 id=&#34;group-actions&#34;&gt;Group actions&lt;/h2&gt;
+&lt;h3 id=&#34;group-actions&#34;&gt;Group actions&lt;/h3&gt;
 &lt;p&gt;Given any pointed type &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; with
 basepoint &lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt; we can form the type
 &lt;span class=&#34;math inline&#34;&gt;\(\mathsf{BAut}_x(X)\)&lt;/span&gt; by taking the
@@ -542,13 +539,13 @@ class=&#34;math inline&#34;&gt;\(X=\mathcal{U}\)&lt;/span&gt; to be the universe
 &lt;span class=&#34;math inline&#34;&gt;\(f(*)=H\)&lt;/span&gt;, then we can think of &lt;span
 class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; acting on the type &lt;span
 class=&#34;math inline&#34;&gt;\(H\)&lt;/span&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;equivariant-maps&#34;&gt;Equivariant maps&lt;/h2&gt;
+&lt;h3 id=&#34;equivariant-maps&#34;&gt;Equivariant maps&lt;/h3&gt;
 &lt;p&gt;If &lt;span class=&#34;math inline&#34;&gt;\(BG\xrightarrow[]{r_X} \mathsf{BAut}_x
 X\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(BG\xrightarrow[]{r_Y}
 \mathsf{BAut}_y Y\)&lt;/span&gt; are two group actions&lt;/p&gt;
-&lt;h1 id=&#34;principal-bundles&#34;&gt;Principal bundles&lt;/h1&gt;
-&lt;h2 id=&#34;bundles-over-bg&#34;&gt;Bundles over &lt;span
-class=&#34;math inline&#34;&gt;\(BG\)&lt;/span&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;principal-bundles&#34;&gt;Principal bundles&lt;/h2&gt;
+&lt;h3 id=&#34;bundles-over-bg&#34;&gt;Bundles over &lt;span
+class=&#34;math inline&#34;&gt;\(BG\)&lt;/span&gt;&lt;/h3&gt;
 &lt;p&gt;Pointed connected types &lt;span class=&#34;math inline&#34;&gt;\(BG\)&lt;/span&gt; come
 with three built-in type families by choosing identity types with
 different endpoints. There’s &lt;span
@@ -581,8 +578,8 @@ class=&#34;math inline&#34;&gt;\(BG\)&lt;/span&gt;.&lt;/p&gt;
 \mathbb{Z}_2\)&lt;/span&gt; provide &lt;span class=&#34;math inline&#34;&gt;\(BG\)&lt;/span&gt;,
 &lt;span class=&#34;math inline&#34;&gt;\(EG\)&lt;/span&gt;, and &lt;span
 class=&#34;math inline&#34;&gt;\(LG\)&lt;/span&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;mapping-into-bg&#34;&gt;Mapping into &lt;span
-class=&#34;math inline&#34;&gt;\(BG\)&lt;/span&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;mapping-into-bg&#34;&gt;Mapping into &lt;span
+class=&#34;math inline&#34;&gt;\(BG\)&lt;/span&gt;&lt;/h3&gt;
 &lt;p&gt;Pulling back &lt;span class=&#34;math inline&#34;&gt;\(EG\)&lt;/span&gt; via a map &lt;span
 class=&#34;math inline&#34;&gt;\(X\to BG\)&lt;/span&gt; deserves to be called a principal
 &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt;-bundle over &lt;span
@@ -594,17 +591,17 @@ a type family &lt;span class=&#34;math inline&#34;&gt;\(P:B\to \mathcal{U}\)&lt;
 can form the following square and it will commute and be a pullback:&lt;/p&gt;
 &lt;!-- https://q.uiver.app/?q=WzAsNCxbMiwwLCIoYjpCKVxcdGltZXMgUChiKVxccXVhZFxccXVhZCJdLFsyLDEsIkIiXSxbMCwwLCIoYTpBKVxcdGltZXMgUChmKGEpKSJdLFswLDEsIkEiXSxbMCwxLCJcXG1hdGhybXtwcn1fMSJdLFsyLDAsIlxcbGFtYmRhKGEsIHApLihmKGEpLHApIl0sWzMsMSwiZiIsMl0sWzIsMywiXFxtYXRocm17cHJ9XzEiLDJdXQ== --&gt;
 &lt;p&gt;&lt;img src=&#34;cd4a822b78ac014dc7a0ba88013e9ee36b829485.svg&#34;
-style=&#34;display: block; margin-left: auto; margin-right: auto;&#34; /&gt;&lt;/p&gt;
+style=&#34;transform: scale(1.4); display: block; margin-left: auto; margin-right: auto;&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;If we have an arbitrary type &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt;
 and &lt;span class=&#34;math inline&#34;&gt;\(f:X\to BG\)&lt;/span&gt; then we can pull back
 &lt;span class=&#34;math inline&#34;&gt;\(EG\)&lt;/span&gt; this way:&lt;/p&gt;
 &lt;!-- https://q.uiver.app/?q=WzAsNCxbMiwwLCIoYjpCRylcXHRpbWVzICgqPWIpIl0sWzIsMSwiQkciXSxbMCwwLCIoeDpYKVxcdGltZXMgKCo9Zih4KSkiXSxbMCwxLCJYIl0sWzAsMSwiXFxtYXRocm17cHJ9XzEiXSxbMiwwLCJcXGxhbWJkYSh4LCBwKS4oZih4KSxwKSJdLFszLDEsImYiLDJdLFsyLDMsIlxcbWF0aHJte3ByfV8xIiwyXV0= --&gt;
 &lt;p&gt;&lt;img src=&#34;f75842ad3a6cc62cfedd8471a367bfca12bc03b8.svg&#34;
-style=&#34;display: block; margin-left: auto; margin-right: auto;&#34; /&gt;&lt;/p&gt;
+style=&#34;transform: scale(1.4); display: block; margin-left: auto; margin-right: auto;&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;or we can pull back &lt;span class=&#34;math inline&#34;&gt;\(LG\)&lt;/span&gt;:&lt;/p&gt;
 &lt;!-- https://q.uiver.app/?q=WzAsNCxbMiwwLCIoYjpCRylcXHRpbWVzIChiPWIpIl0sWzIsMSwiQkciXSxbMCwwLCIoeDpYKVxcdGltZXMgKGYoeCk9Zih4KSkiXSxbMCwxLCJYIl0sWzAsMSwiXFxtYXRocm17cHJ9XzEiXSxbMiwwLCJcXGxhbWJkYSh4LCBwKS4oZih4KSxwKSJdLFszLDEsImYiLDJdLFsyLDMsIlxcbWF0aHJte3ByfV8xIiwyXV0= --&gt;
 &lt;p&gt;&lt;img src=&#34;4d0d79624ee63ff6de3dee35483ee1170f02cdf0.svg&#34;
-style=&#34;display: block; margin-left: auto; margin-right: auto;&#34; /&gt;&lt;/p&gt;
+style=&#34;transform: scale(1.4); display: block; margin-left: auto; margin-right: auto;&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Let’s name these pullbacks &lt;span class=&#34;math inline&#34;&gt;\(E_fX\)&lt;/span&gt;
 and &lt;span class=&#34;math inline&#34;&gt;\(L_fX\)&lt;/span&gt; respectively. We include
 the classifying map &lt;span class=&#34;math inline&#34;&gt;\(f\)&lt;/span&gt; in the
@@ -631,17 +628,17 @@ class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt;. The bundle &lt;span
 class=&#34;math inline&#34;&gt;\(L_fX\)&lt;/span&gt; would then be referred to as &lt;span
 class=&#34;math inline&#34;&gt;\(\mathrm{Ad}P\)&lt;/span&gt;. Why is that?&lt;/p&gt;
 
-&lt;h2 id=&#34;bg-classifies-bundles-not-just-equivalence-classes&#34;&gt;&lt;span
+&lt;h3 id=&#34;bg-classifies-bundles-not-just-equivalence-classes&#34;&gt;&lt;span
 class=&#34;math inline&#34;&gt;\(BG\)&lt;/span&gt; classifies bundles, not just
-equivalence classes&lt;/h2&gt;
+equivalence classes&lt;/h3&gt;
 &lt;p&gt;The classical theorems take the form: taking the pullback of &lt;span
 class=&#34;math inline&#34;&gt;\(EG\to BG\)&lt;/span&gt; forms a bijection between
 homotopy classes of maps &lt;span class=&#34;math inline&#34;&gt;\(f:X\to BG\)&lt;/span&gt;
 and equivalence classes of principal &lt;span
 class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt;-bundles over &lt;span
 class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;universes-versus-bundles&#34;&gt;Universes versus bundles&lt;/h2&gt;
-&lt;h2 id=&#34;eilenberg-mac-lane-spaces&#34;&gt;Eilenberg-Mac Lane spaces&lt;/h2&gt;
+&lt;h3 id=&#34;universes-versus-bundles&#34;&gt;Universes versus bundles&lt;/h3&gt;
+&lt;h3 id=&#34;eilenberg-mac-lane-spaces&#34;&gt;Eilenberg-Mac Lane spaces&lt;/h3&gt;
 &lt;p&gt;&lt;em&gt;Inductive types&lt;/em&gt; are collections of data and rules for
 mapping out of instances of the collection. For example here is an
 inductive type defining the natural numbers in Agda:&lt;/p&gt;
@@ -653,31 +650,31 @@ Here is the circle defined as a HIT in Cubical Agda:&lt;/p&gt;
 multiplication &lt;span class=&#34;math inline&#34;&gt;\(G.mul\)&lt;/span&gt;, we can form
 the Eilenberg-Mac Lane type &lt;span class=&#34;math inline&#34;&gt;\(K(G, 1)\)&lt;/span&gt;
 as the following HIT:&lt;/p&gt;
-&lt;h2 id=&#34;associated-bundles&#34;&gt;Associated bundles&lt;/h2&gt;
-&lt;h2 id=&#34;group-extensions&#34;&gt;Group extensions&lt;/h2&gt;
-&lt;pre class=&#34;Agda&#34;&gt;&lt;a id=&#34;12017&#34; class=&#34;Symbol&#34;&gt;{-#&lt;/a&gt; &lt;a id=&#34;12021&#34; class=&#34;Keyword&#34;&gt;OPTIONS&lt;/a&gt; &lt;a id=&#34;12029&#34; class=&#34;Pragma&#34;&gt;--without-K&lt;/a&gt; &lt;a id=&#34;12041&#34; class=&#34;Pragma&#34;&gt;--exact-split&lt;/a&gt; &lt;a id=&#34;12055&#34; class=&#34;Symbol&#34;&gt;#-}&lt;/a&gt;
+&lt;h3 id=&#34;associated-bundles&#34;&gt;Associated bundles&lt;/h3&gt;
+&lt;h3 id=&#34;group-extensions&#34;&gt;Group extensions&lt;/h3&gt;
+&lt;pre class=&#34;Agda&#34;&gt;&lt;a id=&#34;12141&#34; class=&#34;Symbol&#34;&gt;{-#&lt;/a&gt; &lt;a id=&#34;12145&#34; class=&#34;Keyword&#34;&gt;OPTIONS&lt;/a&gt; &lt;a id=&#34;12153&#34; class=&#34;Pragma&#34;&gt;--without-K&lt;/a&gt; &lt;a id=&#34;12165&#34; class=&#34;Pragma&#34;&gt;--exact-split&lt;/a&gt; &lt;a id=&#34;12179&#34; class=&#34;Symbol&#34;&gt;#-}&lt;/a&gt;
 
-&lt;a id=&#34;12060&#34; class=&#34;Keyword&#34;&gt;module&lt;/a&gt; &lt;a id=&#34;12067&#34; href=&#34;group_extensions.html&#34; class=&#34;Module Operator&#34;&gt;group_extensions&lt;/a&gt; &lt;a id=&#34;12084&#34; class=&#34;Keyword&#34;&gt;where&lt;/a&gt;
+&lt;a id=&#34;12184&#34; class=&#34;Keyword&#34;&gt;module&lt;/a&gt; &lt;a id=&#34;12191&#34; href=&#34;group_extensions.html&#34; class=&#34;Module Operator&#34;&gt;group_extensions&lt;/a&gt; &lt;a id=&#34;12208&#34; class=&#34;Keyword&#34;&gt;where&lt;/a&gt;
 
-&lt;a id=&#34;12091&#34; class=&#34;Keyword&#34;&gt;open&lt;/a&gt; &lt;a id=&#34;12096&#34; class=&#34;Keyword&#34;&gt;import&lt;/a&gt; &lt;a id=&#34;12103&#34; href=&#34;foundation.universe-levels.html&#34; class=&#34;Module&#34;&gt;foundation.universe-levels&lt;/a&gt;
-&lt;a id=&#34;12130&#34; class=&#34;Keyword&#34;&gt;open&lt;/a&gt; &lt;a id=&#34;12135&#34; class=&#34;Keyword&#34;&gt;import&lt;/a&gt; &lt;a id=&#34;12142&#34; href=&#34;foundation.function-types.html&#34; class=&#34;Module&#34;&gt;foundation.function-types&lt;/a&gt;
-&lt;a id=&#34;12168&#34; class=&#34;Keyword&#34;&gt;open&lt;/a&gt; &lt;a id=&#34;12173&#34; class=&#34;Keyword&#34;&gt;import&lt;/a&gt; &lt;a id=&#34;12180&#34; href=&#34;foundation.identity-types.html&#34; class=&#34;Module&#34;&gt;foundation.identity-types&lt;/a&gt;
+&lt;a id=&#34;12215&#34; class=&#34;Keyword&#34;&gt;open&lt;/a&gt; &lt;a id=&#34;12220&#34; class=&#34;Keyword&#34;&gt;import&lt;/a&gt; &lt;a id=&#34;12227&#34; href=&#34;foundation.universe-levels.html&#34; class=&#34;Module&#34;&gt;foundation.universe-levels&lt;/a&gt;
+&lt;a id=&#34;12254&#34; class=&#34;Keyword&#34;&gt;open&lt;/a&gt; &lt;a id=&#34;12259&#34; class=&#34;Keyword&#34;&gt;import&lt;/a&gt; &lt;a id=&#34;12266&#34; href=&#34;foundation.function-types.html&#34; class=&#34;Module&#34;&gt;foundation.function-types&lt;/a&gt;
+&lt;a id=&#34;12292&#34; class=&#34;Keyword&#34;&gt;open&lt;/a&gt; &lt;a id=&#34;12297&#34; class=&#34;Keyword&#34;&gt;import&lt;/a&gt; &lt;a id=&#34;12304&#34; href=&#34;foundation.identity-types.html&#34; class=&#34;Module&#34;&gt;foundation.identity-types&lt;/a&gt;
 
-&lt;a id=&#34;12207&#34; class=&#34;Comment&#34;&gt;-- What is the analogue in HoTT of the fact from group extensions that we classify an extension by &lt;/a&gt;
-&lt;a id=&#34;12307&#34; class=&#34;Comment&#34;&gt;-- taking a set-based section of the splitting, seeing that those elements act on the left hand group,&lt;/a&gt;
-&lt;a id=&#34;12410&#34; class=&#34;Comment&#34;&gt;-- noting that this map into Aut G is not a homomorphism. There is a 2-cell that we can conjugate with that makes&lt;/a&gt;
-&lt;a id=&#34;12524&#34; class=&#34;Comment&#34;&gt;-- it a homomorphism. So together, the extension (plus the arbitrary choice of splitting) yeilds a 2-map to the 2-group&lt;/a&gt;
-&lt;a id=&#34;12644&#34; class=&#34;Comment&#34;&gt;-- AUT(G).&lt;/a&gt;
-&lt;a id=&#34;12655&#34; class=&#34;Comment&#34;&gt;-- For us, a splitting will be a section of a type family. This acts on loops with apd.&lt;/a&gt;
-&lt;a id=&#34;12743&#34; class=&#34;Comment&#34;&gt;-- So we want to prove some facts about apd and to what extent it&amp;#39;s a homomorphism of loops.&lt;/a&gt;
-&lt;a id=&#34;12836&#34; class=&#34;Comment&#34;&gt;-- It doesn&amp;#39;t send loops to loops, because it sends the loop p to a loop from fx to ap p fx.&lt;/a&gt;
-&lt;a id=&#34;12929&#34; class=&#34;Comment&#34;&gt;-- apd-hom :&lt;/a&gt;
-&lt;a id=&#34;12942&#34; class=&#34;Comment&#34;&gt;--   {l1 l2 : Level} {A : UU l1} {B : A → UU l2} (f : (a : A) → B a) {x : A}&lt;/a&gt;
-&lt;a id=&#34;13019&#34; class=&#34;Comment&#34;&gt;--   (p q : x ＝ x) → (apd f (p ∙ q)) ＝ ((apd ((tr B p) ∘ f) q) ∙ (apd (f) p))&lt;/a&gt;
-&lt;a id=&#34;13097&#34; class=&#34;Comment&#34;&gt;-- apd-hom f refl q = ?&lt;/a&gt;
+&lt;a id=&#34;12331&#34; class=&#34;Comment&#34;&gt;-- What is the analogue in HoTT of the fact from group extensions that we classify an extension by &lt;/a&gt;
+&lt;a id=&#34;12431&#34; class=&#34;Comment&#34;&gt;-- taking a set-based section of the splitting, seeing that those elements act on the left hand group,&lt;/a&gt;
+&lt;a id=&#34;12534&#34; class=&#34;Comment&#34;&gt;-- noting that this map into Aut G is not a homomorphism. There is a 2-cell that we can conjugate with that makes&lt;/a&gt;
+&lt;a id=&#34;12648&#34; class=&#34;Comment&#34;&gt;-- it a homomorphism. So together, the extension (plus the arbitrary choice of splitting) yeilds a 2-map to the 2-group&lt;/a&gt;
+&lt;a id=&#34;12768&#34; class=&#34;Comment&#34;&gt;-- AUT(G).&lt;/a&gt;
+&lt;a id=&#34;12779&#34; class=&#34;Comment&#34;&gt;-- For us, a splitting will be a section of a type family. This acts on loops with apd.&lt;/a&gt;
+&lt;a id=&#34;12867&#34; class=&#34;Comment&#34;&gt;-- So we want to prove some facts about apd and to what extent it&amp;#39;s a homomorphism of loops.&lt;/a&gt;
+&lt;a id=&#34;12960&#34; class=&#34;Comment&#34;&gt;-- It doesn&amp;#39;t send loops to loops, because it sends the loop p to a loop from fx to ap p fx.&lt;/a&gt;
+&lt;a id=&#34;13053&#34; class=&#34;Comment&#34;&gt;-- apd-hom :&lt;/a&gt;
+&lt;a id=&#34;13066&#34; class=&#34;Comment&#34;&gt;--   {l1 l2 : Level} {A : UU l1} {B : A → UU l2} (f : (a : A) → B a) {x : A}&lt;/a&gt;
+&lt;a id=&#34;13143&#34; class=&#34;Comment&#34;&gt;--   (p q : x ＝ x) → (apd f (p ∙ q)) ＝ ((apd ((tr B p) ∘ f) q) ∙ (apd (f) p))&lt;/a&gt;
+&lt;a id=&#34;13221&#34; class=&#34;Comment&#34;&gt;-- apd-hom f refl q = ?&lt;/a&gt;
 
 &lt;/pre&gt;
-&lt;h1 id=&#34;group-extensions-1&#34;&gt;Group extensions&lt;/h1&gt;
+&lt;h2 id=&#34;group-extensions-1&#34;&gt;Group extensions&lt;/h2&gt;
 &lt;p&gt;Extensions of &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; by &lt;span
 class=&#34;math inline&#34;&gt;\(BG\)&lt;/span&gt; are equivalent to maps &lt;span
 class=&#34;math inline&#34;&gt;\(\mathscr{C}:X\to \mathsf{BAut}BG\)&lt;/span&gt;.&lt;/p&gt;
@@ -711,8 +708,8 @@ consider the pi-type to have a type of principal bundles.&lt;/p&gt;
 to proceed. Let’s move away from HoTT for a moment and look at group
 extensions from the point of view of groupoids and 2-groupoids, in
 classical category theory.&lt;/p&gt;
-&lt;h2 id=&#34;group-extensions-in-category-theory&#34;&gt;Group extensions in
-category theory&lt;/h2&gt;
+&lt;h3 id=&#34;group-extensions-in-category-theory&#34;&gt;Group extensions in
+category theory&lt;/h3&gt;
 &lt;p&gt;See Blanco.&lt;/p&gt;
 &lt;p&gt;The study of group extensions is about constructing an equivalence
 between extensions of a group &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; by

@@ -4,7 +4,8 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>Towards Gauge Theory in Homotopy Type Theory</title>
+  <meta name="dcterms.date" content="2023-06-26" />
+  <title>group_extensions</title>
   <style>
     html {
       line-height: 1.5;
@@ -195,9 +196,6 @@
   <![endif]-->
 </head>
 <body>
-<header id="title-block-header">
-<h1 class="title">Towards Gauge Theory in Homotopy Type Theory</h1>
-</header>
 <nav id="TOC" role="doc-toc">
 <ul>
 <li><a href="#abstract" id="toc-abstract">Abstract</a></li>
@@ -239,7 +237,7 @@ category theory</a></li>
 </ul>
 </nav>
 <!-- https://pandoc.org/MANUAL.html -->
-<h1 id="abstract">Abstract</h1>
+<h2 id="abstract">Abstract</h2>
 <p>We will show how to formalize parts of differential geometry, gauge
 theory, and Chern-Weil theory in homotopy type theory.</p>
 <p>The background on group extensions are <a href="#fn1"
@@ -250,7 +248,7 @@ id="fnref3" role="doc-noteref"><sup>3</sup></a>.</p>
 <p>One way of thinking about bringing smooth manifolds into this group
 theoretic picture is in a post by Schreiber <a href="#fn4"
 class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
-<h1 id="introduction">Introduction</h1>
+<h2 id="introduction">Introduction</h2>
 <p>Differential geometry <span class="citation"
 data-cites="kobayashinomizu">(Kobayashi and Nomizu 1963)</span> <span
 class="citation" data-cites="baez1994gauge">(Baez and Muniain
@@ -280,7 +278,7 @@ like being locally cartesian closed, or having homotopical model
 structures. Such categories have internal languages, which are syntactic
 structures much like programming languages, which allow us to reason
 about the objects in a generic way.</p>
-<h1 id="groups">Groups</h1>
+<h2 id="groups">Groups</h2>
 <p>Group theory including the theory of higher groups is built directly
 into HoTT, via the identity types. A thorough introductory treatment of
 group theory that adopts this philosophy can be found in the book
@@ -339,7 +337,7 @@ p\)</span> implies that <span class="math inline">\(g=h\)</span>.</p>
 <p>So identity types with unequal endpoints like <span
 class="math inline">\(*=x\)</span> are torsors, and it’s noteworthy to
 find torsors appearing to close to the foundations of HoTT.</p>
-<h2 id="group-actions">Group actions</h2>
+<h3 id="group-actions">Group actions</h3>
 <p>Given any pointed type <span class="math inline">\(X\)</span> with
 basepoint <span class="math inline">\(x\)</span> we can form the type
 <span class="math inline">\(\mathsf{BAut}_x(X)\)</span> by taking the
@@ -366,13 +364,13 @@ class="math inline">\(X=\mathcal{U}\)</span> to be the universe, and if
 <span class="math inline">\(f(*)=H\)</span>, then we can think of <span
 class="math inline">\(G\)</span> acting on the type <span
 class="math inline">\(H\)</span>.</p>
-<h2 id="equivariant-maps">Equivariant maps</h2>
+<h3 id="equivariant-maps">Equivariant maps</h3>
 <p>If <span class="math inline">\(BG\xrightarrow[]{r_X} \mathsf{BAut}_x
 X\)</span> and <span class="math inline">\(BG\xrightarrow[]{r_Y}
 \mathsf{BAut}_y Y\)</span> are two group actions</p>
-<h1 id="principal-bundles">Principal bundles</h1>
-<h2 id="bundles-over-bg">Bundles over <span
-class="math inline">\(BG\)</span></h2>
+<h2 id="principal-bundles">Principal bundles</h2>
+<h3 id="bundles-over-bg">Bundles over <span
+class="math inline">\(BG\)</span></h3>
 <p>Pointed connected types <span class="math inline">\(BG\)</span> come
 with three built-in type families by choosing identity types with
 different endpoints. There’s <span
@@ -405,8 +403,8 @@ class="math inline">\(BG\)</span>.</p>
 \mathbb{Z}_2\)</span> provide <span class="math inline">\(BG\)</span>,
 <span class="math inline">\(EG\)</span>, and <span
 class="math inline">\(LG\)</span>.</p>
-<h2 id="mapping-into-bg">Mapping into <span
-class="math inline">\(BG\)</span></h2>
+<h3 id="mapping-into-bg">Mapping into <span
+class="math inline">\(BG\)</span></h3>
 <p>Pulling back <span class="math inline">\(EG\)</span> via a map <span
 class="math inline">\(X\to BG\)</span> deserves to be called a principal
 <span class="math inline">\(G\)</span>-bundle over <span
@@ -418,17 +416,17 @@ a type family <span class="math inline">\(P:B\to \mathcal{U}\)</span> we
 can form the following square and it will commute and be a pullback:</p>
 <!-- https://q.uiver.app/?q=WzAsNCxbMiwwLCIoYjpCKVxcdGltZXMgUChiKVxccXVhZFxccXVhZCJdLFsyLDEsIkIiXSxbMCwwLCIoYTpBKVxcdGltZXMgUChmKGEpKSJdLFswLDEsIkEiXSxbMCwxLCJcXG1hdGhybXtwcn1fMSJdLFsyLDAsIlxcbGFtYmRhKGEsIHApLihmKGEpLHApIl0sWzMsMSwiZiIsMl0sWzIsMywiXFxtYXRocm17cHJ9XzEiLDJdXQ== -->
 <p><img src="cd4a822b78ac014dc7a0ba88013e9ee36b829485.svg"
-style="display: block; margin-left: auto; margin-right: auto;" /></p>
+style="transform: scale(1.4); display: block; margin-left: auto; margin-right: auto;" /></p>
 <p>If we have an arbitrary type <span class="math inline">\(X\)</span>
 and <span class="math inline">\(f:X\to BG\)</span> then we can pull back
 <span class="math inline">\(EG\)</span> this way:</p>
 <!-- https://q.uiver.app/?q=WzAsNCxbMiwwLCIoYjpCRylcXHRpbWVzICgqPWIpIl0sWzIsMSwiQkciXSxbMCwwLCIoeDpYKVxcdGltZXMgKCo9Zih4KSkiXSxbMCwxLCJYIl0sWzAsMSwiXFxtYXRocm17cHJ9XzEiXSxbMiwwLCJcXGxhbWJkYSh4LCBwKS4oZih4KSxwKSJdLFszLDEsImYiLDJdLFsyLDMsIlxcbWF0aHJte3ByfV8xIiwyXV0= -->
 <p><img src="f75842ad3a6cc62cfedd8471a367bfca12bc03b8.svg"
-style="display: block; margin-left: auto; margin-right: auto;" /></p>
+style="transform: scale(1.4); display: block; margin-left: auto; margin-right: auto;" /></p>
 <p>or we can pull back <span class="math inline">\(LG\)</span>:</p>
 <!-- https://q.uiver.app/?q=WzAsNCxbMiwwLCIoYjpCRylcXHRpbWVzIChiPWIpIl0sWzIsMSwiQkciXSxbMCwwLCIoeDpYKVxcdGltZXMgKGYoeCk9Zih4KSkiXSxbMCwxLCJYIl0sWzAsMSwiXFxtYXRocm17cHJ9XzEiXSxbMiwwLCJcXGxhbWJkYSh4LCBwKS4oZih4KSxwKSJdLFszLDEsImYiLDJdLFsyLDMsIlxcbWF0aHJte3ByfV8xIiwyXV0= -->
 <p><img src="4d0d79624ee63ff6de3dee35483ee1170f02cdf0.svg"
-style="display: block; margin-left: auto; margin-right: auto;" /></p>
+style="transform: scale(1.4); display: block; margin-left: auto; margin-right: auto;" /></p>
 <p>Let’s name these pullbacks <span class="math inline">\(E_fX\)</span>
 and <span class="math inline">\(L_fX\)</span> respectively. We include
 the classifying map <span class="math inline">\(f\)</span> in the
@@ -455,17 +453,17 @@ class="math inline">\(X\)</span>. The bundle <span
 class="math inline">\(L_fX\)</span> would then be referred to as <span
 class="math inline">\(\mathrm{Ad}P\)</span>. Why is that?</p>
 
-<h2 id="bg-classifies-bundles-not-just-equivalence-classes"><span
+<h3 id="bg-classifies-bundles-not-just-equivalence-classes"><span
 class="math inline">\(BG\)</span> classifies bundles, not just
-equivalence classes</h2>
+equivalence classes</h3>
 <p>The classical theorems take the form: taking the pullback of <span
 class="math inline">\(EG\to BG\)</span> forms a bijection between
 homotopy classes of maps <span class="math inline">\(f:X\to BG\)</span>
 and equivalence classes of principal <span
 class="math inline">\(G\)</span>-bundles over <span
 class="math inline">\(X\)</span>.</p>
-<h2 id="universes-versus-bundles">Universes versus bundles</h2>
-<h2 id="eilenberg-mac-lane-spaces">Eilenberg-Mac Lane spaces</h2>
+<h3 id="universes-versus-bundles">Universes versus bundles</h3>
+<h3 id="eilenberg-mac-lane-spaces">Eilenberg-Mac Lane spaces</h3>
 <p><em>Inductive types</em> are collections of data and rules for
 mapping out of instances of the collection. For example here is an
 inductive type defining the natural numbers in Agda:</p>
@@ -477,31 +475,31 @@ Here is the circle defined as a HIT in Cubical Agda:</p>
 multiplication <span class="math inline">\(G.mul\)</span>, we can form
 the Eilenberg-Mac Lane type <span class="math inline">\(K(G, 1)\)</span>
 as the following HIT:</p>
-<h2 id="associated-bundles">Associated bundles</h2>
-<h2 id="group-extensions">Group extensions</h2>
-<pre class="Agda"><a id="12017" class="Symbol">{-#</a> <a id="12021" class="Keyword">OPTIONS</a> <a id="12029" class="Pragma">--without-K</a> <a id="12041" class="Pragma">--exact-split</a> <a id="12055" class="Symbol">#-}</a>
+<h3 id="associated-bundles">Associated bundles</h3>
+<h3 id="group-extensions">Group extensions</h3>
+<pre class="Agda"><a id="12141" class="Symbol">{-#</a> <a id="12145" class="Keyword">OPTIONS</a> <a id="12153" class="Pragma">--without-K</a> <a id="12165" class="Pragma">--exact-split</a> <a id="12179" class="Symbol">#-}</a>
 
-<a id="12060" class="Keyword">module</a> <a id="12067" href="group_extensions.html" class="Module Operator">group_extensions</a> <a id="12084" class="Keyword">where</a>
+<a id="12184" class="Keyword">module</a> <a id="12191" href="group_extensions.html" class="Module Operator">group_extensions</a> <a id="12208" class="Keyword">where</a>
 
-<a id="12091" class="Keyword">open</a> <a id="12096" class="Keyword">import</a> <a id="12103" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a>
-<a id="12130" class="Keyword">open</a> <a id="12135" class="Keyword">import</a> <a id="12142" href="foundation.function-types.html" class="Module">foundation.function-types</a>
-<a id="12168" class="Keyword">open</a> <a id="12173" class="Keyword">import</a> <a id="12180" href="foundation.identity-types.html" class="Module">foundation.identity-types</a>
+<a id="12215" class="Keyword">open</a> <a id="12220" class="Keyword">import</a> <a id="12227" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a>
+<a id="12254" class="Keyword">open</a> <a id="12259" class="Keyword">import</a> <a id="12266" href="foundation.function-types.html" class="Module">foundation.function-types</a>
+<a id="12292" class="Keyword">open</a> <a id="12297" class="Keyword">import</a> <a id="12304" href="foundation.identity-types.html" class="Module">foundation.identity-types</a>
 
-<a id="12207" class="Comment">-- What is the analogue in HoTT of the fact from group extensions that we classify an extension by </a>
-<a id="12307" class="Comment">-- taking a set-based section of the splitting, seeing that those elements act on the left hand group,</a>
-<a id="12410" class="Comment">-- noting that this map into Aut G is not a homomorphism. There is a 2-cell that we can conjugate with that makes</a>
-<a id="12524" class="Comment">-- it a homomorphism. So together, the extension (plus the arbitrary choice of splitting) yeilds a 2-map to the 2-group</a>
-<a id="12644" class="Comment">-- AUT(G).</a>
-<a id="12655" class="Comment">-- For us, a splitting will be a section of a type family. This acts on loops with apd.</a>
-<a id="12743" class="Comment">-- So we want to prove some facts about apd and to what extent it&#39;s a homomorphism of loops.</a>
-<a id="12836" class="Comment">-- It doesn&#39;t send loops to loops, because it sends the loop p to a loop from fx to ap p fx.</a>
-<a id="12929" class="Comment">-- apd-hom :</a>
-<a id="12942" class="Comment">--   {l1 l2 : Level} {A : UU l1} {B : A → UU l2} (f : (a : A) → B a) {x : A}</a>
-<a id="13019" class="Comment">--   (p q : x ＝ x) → (apd f (p ∙ q)) ＝ ((apd ((tr B p) ∘ f) q) ∙ (apd (f) p))</a>
-<a id="13097" class="Comment">-- apd-hom f refl q = ?</a>
+<a id="12331" class="Comment">-- What is the analogue in HoTT of the fact from group extensions that we classify an extension by </a>
+<a id="12431" class="Comment">-- taking a set-based section of the splitting, seeing that those elements act on the left hand group,</a>
+<a id="12534" class="Comment">-- noting that this map into Aut G is not a homomorphism. There is a 2-cell that we can conjugate with that makes</a>
+<a id="12648" class="Comment">-- it a homomorphism. So together, the extension (plus the arbitrary choice of splitting) yeilds a 2-map to the 2-group</a>
+<a id="12768" class="Comment">-- AUT(G).</a>
+<a id="12779" class="Comment">-- For us, a splitting will be a section of a type family. This acts on loops with apd.</a>
+<a id="12867" class="Comment">-- So we want to prove some facts about apd and to what extent it&#39;s a homomorphism of loops.</a>
+<a id="12960" class="Comment">-- It doesn&#39;t send loops to loops, because it sends the loop p to a loop from fx to ap p fx.</a>
+<a id="13053" class="Comment">-- apd-hom :</a>
+<a id="13066" class="Comment">--   {l1 l2 : Level} {A : UU l1} {B : A → UU l2} (f : (a : A) → B a) {x : A}</a>
+<a id="13143" class="Comment">--   (p q : x ＝ x) → (apd f (p ∙ q)) ＝ ((apd ((tr B p) ∘ f) q) ∙ (apd (f) p))</a>
+<a id="13221" class="Comment">-- apd-hom f refl q = ?</a>
 
 </pre>
-<h1 id="group-extensions-1">Group extensions</h1>
+<h2 id="group-extensions-1">Group extensions</h2>
 <p>Extensions of <span class="math inline">\(X\)</span> by <span
 class="math inline">\(BG\)</span> are equivalent to maps <span
 class="math inline">\(\mathscr{C}:X\to \mathsf{BAut}BG\)</span>.</p>
@@ -535,8 +533,8 @@ consider the pi-type to have a type of principal bundles.</p>
 to proceed. Let’s move away from HoTT for a moment and look at group
 extensions from the point of view of groupoids and 2-groupoids, in
 classical category theory.</p>
-<h2 id="group-extensions-in-category-theory">Group extensions in
-category theory</h2>
+<h3 id="group-extensions-in-category-theory">Group extensions in
+category theory</h3>
 <p>See Blanco.</p>
 <p>The study of group extensions is about constructing an equivalence
 between extensions of a group <span class="math inline">\(X\)</span> by
