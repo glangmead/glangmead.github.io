@@ -99,6 +99,10 @@ category theory</a></li>
 </ul>
 </nav>
 <!-- https://pandoc.org/MANUAL.html -->
+<center>
+<img src="geb-logo.png"
+title="Image of the book cover of Godel Escher Bach" width="500" />
+</center>
 <h2 id="abstract">Abstract</h2>
 <p>We will show how to formalize parts of differential geometry, gauge
 theory, and Chern-Weil theory in homotopy type theory.</p>
@@ -339,26 +343,26 @@ the Eilenberg-Mac Lane type <span class="math inline">\(K(G, 1)\)</span>
 as the following HIT:</p>
 <h3 id="associated-bundles">Associated bundles</h3>
 <h3 id="group-extensions">Group extensions</h3>
-<pre class="Agda"><a id="12201" class="Symbol">{-#</a> <a id="12205" class="Keyword">OPTIONS</a> <a id="12213" class="Pragma">--without-K</a> <a id="12225" class="Pragma">--exact-split</a> <a id="12239" class="Symbol">#-}</a>
+<pre class="Agda"><a id="12299" class="Symbol">{-#</a> <a id="12303" class="Keyword">OPTIONS</a> <a id="12311" class="Pragma">--without-K</a> <a id="12323" class="Pragma">--exact-split</a> <a id="12337" class="Symbol">#-}</a>
 
-<a id="12244" class="Keyword">module</a> <a id="12251" href="group_extensions.html" class="Module Operator">group_extensions</a> <a id="12268" class="Keyword">where</a>
+<a id="12342" class="Keyword">module</a> <a id="12349" href="group_extensions.html" class="Module Operator">group_extensions</a> <a id="12366" class="Keyword">where</a>
 
-<a id="12275" class="Keyword">open</a> <a id="12280" class="Keyword">import</a> <a id="12287" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a>
-<a id="12314" class="Keyword">open</a> <a id="12319" class="Keyword">import</a> <a id="12326" href="foundation.function-types.html" class="Module">foundation.function-types</a>
-<a id="12352" class="Keyword">open</a> <a id="12357" class="Keyword">import</a> <a id="12364" href="foundation.identity-types.html" class="Module">foundation.identity-types</a>
+<a id="12373" class="Keyword">open</a> <a id="12378" class="Keyword">import</a> <a id="12385" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a>
+<a id="12412" class="Keyword">open</a> <a id="12417" class="Keyword">import</a> <a id="12424" href="foundation.function-types.html" class="Module">foundation.function-types</a>
+<a id="12450" class="Keyword">open</a> <a id="12455" class="Keyword">import</a> <a id="12462" href="foundation.identity-types.html" class="Module">foundation.identity-types</a>
 
-<a id="12391" class="Comment">-- What is the analogue in HoTT of the fact from group extensions that we classify an extension by </a>
-<a id="12491" class="Comment">-- taking a set-based section of the splitting, seeing that those elements act on the left hand group,</a>
-<a id="12594" class="Comment">-- noting that this map into Aut G is not a homomorphism. There is a 2-cell that we can conjugate with that makes</a>
-<a id="12708" class="Comment">-- it a homomorphism. So together, the extension (plus the arbitrary choice of splitting) yeilds a 2-map to the 2-group</a>
-<a id="12828" class="Comment">-- AUT(G).</a>
-<a id="12839" class="Comment">-- For us, a splitting will be a section of a type family. This acts on loops with apd.</a>
-<a id="12927" class="Comment">-- So we want to prove some facts about apd and to what extent it&#39;s a homomorphism of loops.</a>
-<a id="13020" class="Comment">-- It doesn&#39;t send loops to loops, because it sends the loop p to a loop from fx to ap p fx.</a>
-<a id="13113" class="Comment">-- apd-hom :</a>
-<a id="13126" class="Comment">--   {l1 l2 : Level} {A : UU l1} {B : A → UU l2} (f : (a : A) → B a) {x : A}</a>
-<a id="13203" class="Comment">--   (p q : x ＝ x) → (apd f (p ∙ q)) ＝ ((apd ((tr B p) ∘ f) q) ∙ (apd (f) p))</a>
-<a id="13281" class="Comment">-- apd-hom f refl q = ?</a>
+<a id="12489" class="Comment">-- What is the analogue in HoTT of the fact from group extensions that we classify an extension by </a>
+<a id="12589" class="Comment">-- taking a set-based section of the splitting, seeing that those elements act on the left hand group,</a>
+<a id="12692" class="Comment">-- noting that this map into Aut G is not a homomorphism. There is a 2-cell that we can conjugate with that makes</a>
+<a id="12806" class="Comment">-- it a homomorphism. So together, the extension (plus the arbitrary choice of splitting) yeilds a 2-map to the 2-group</a>
+<a id="12926" class="Comment">-- AUT(G).</a>
+<a id="12937" class="Comment">-- For us, a splitting will be a section of a type family. This acts on loops with apd.</a>
+<a id="13025" class="Comment">-- So we want to prove some facts about apd and to what extent it&#39;s a homomorphism of loops.</a>
+<a id="13118" class="Comment">-- It doesn&#39;t send loops to loops, because it sends the loop p to a loop from fx to ap p fx.</a>
+<a id="13211" class="Comment">-- apd-hom :</a>
+<a id="13224" class="Comment">--   {l1 l2 : Level} {A : UU l1} {B : A → UU l2} (f : (a : A) → B a) {x : A}</a>
+<a id="13301" class="Comment">--   (p q : x ＝ x) → (apd f (p ∙ q)) ＝ ((apd ((tr B p) ∘ f) q) ∙ (apd (f) p))</a>
+<a id="13379" class="Comment">-- apd-hom f refl q = ?</a>
 
 </pre>
 <h2 id="group-extensions-1">Group extensions</h2>
