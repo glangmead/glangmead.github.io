@@ -214,7 +214,7 @@
     }
   &lt;/style&gt;
   &lt;link rel=&#34;stylesheet&#34; href=&#34;Agda.css&#34; /&gt;
-  &lt;link rel=&#34;stylesheet&#34; href=&#34;https://fonts.googleapis.com/css2?family=Libre+Baskerville&amp;family=Quattrocento&#34;&gt;
+  &lt;link rel=&#34;stylesheet&#34; href=&#34;https://fonts.googleapis.com/css2?family=Libre+Baskerville&amp;family=Quattrocento:wght@700&#34;&gt;
   &lt;style&gt;
   body {
     font-family: Baskerville, &#39;Libre Baskerville&#39;, serif;
@@ -514,26 +514,26 @@ the Eilenberg-Mac Lane type &lt;span class=&#34;math inline&#34;&gt;\(K(G, 1)\)&
 as the following HIT:&lt;/p&gt;
 &lt;h3 id=&#34;associated-bundles&#34;&gt;Associated bundles&lt;/h3&gt;
 &lt;h3 id=&#34;group-extensions&#34;&gt;Group extensions&lt;/h3&gt;
-&lt;pre class=&#34;Agda&#34;&gt;&lt;a id=&#34;12192&#34; class=&#34;Symbol&#34;&gt;{-#&lt;/a&gt; &lt;a id=&#34;12196&#34; class=&#34;Keyword&#34;&gt;OPTIONS&lt;/a&gt; &lt;a id=&#34;12204&#34; class=&#34;Pragma&#34;&gt;--without-K&lt;/a&gt; &lt;a id=&#34;12216&#34; class=&#34;Pragma&#34;&gt;--exact-split&lt;/a&gt; &lt;a id=&#34;12230&#34; class=&#34;Symbol&#34;&gt;#-}&lt;/a&gt;
+&lt;pre class=&#34;Agda&#34;&gt;&lt;a id=&#34;12201&#34; class=&#34;Symbol&#34;&gt;{-#&lt;/a&gt; &lt;a id=&#34;12205&#34; class=&#34;Keyword&#34;&gt;OPTIONS&lt;/a&gt; &lt;a id=&#34;12213&#34; class=&#34;Pragma&#34;&gt;--without-K&lt;/a&gt; &lt;a id=&#34;12225&#34; class=&#34;Pragma&#34;&gt;--exact-split&lt;/a&gt; &lt;a id=&#34;12239&#34; class=&#34;Symbol&#34;&gt;#-}&lt;/a&gt;
 
-&lt;a id=&#34;12235&#34; class=&#34;Keyword&#34;&gt;module&lt;/a&gt; &lt;a id=&#34;12242&#34; href=&#34;group_extensions.html&#34; class=&#34;Module Operator&#34;&gt;group_extensions&lt;/a&gt; &lt;a id=&#34;12259&#34; class=&#34;Keyword&#34;&gt;where&lt;/a&gt;
+&lt;a id=&#34;12244&#34; class=&#34;Keyword&#34;&gt;module&lt;/a&gt; &lt;a id=&#34;12251&#34; href=&#34;group_extensions.html&#34; class=&#34;Module Operator&#34;&gt;group_extensions&lt;/a&gt; &lt;a id=&#34;12268&#34; class=&#34;Keyword&#34;&gt;where&lt;/a&gt;
 
-&lt;a id=&#34;12266&#34; class=&#34;Keyword&#34;&gt;open&lt;/a&gt; &lt;a id=&#34;12271&#34; class=&#34;Keyword&#34;&gt;import&lt;/a&gt; &lt;a id=&#34;12278&#34; href=&#34;foundation.universe-levels.html&#34; class=&#34;Module&#34;&gt;foundation.universe-levels&lt;/a&gt;
-&lt;a id=&#34;12305&#34; class=&#34;Keyword&#34;&gt;open&lt;/a&gt; &lt;a id=&#34;12310&#34; class=&#34;Keyword&#34;&gt;import&lt;/a&gt; &lt;a id=&#34;12317&#34; href=&#34;foundation.function-types.html&#34; class=&#34;Module&#34;&gt;foundation.function-types&lt;/a&gt;
-&lt;a id=&#34;12343&#34; class=&#34;Keyword&#34;&gt;open&lt;/a&gt; &lt;a id=&#34;12348&#34; class=&#34;Keyword&#34;&gt;import&lt;/a&gt; &lt;a id=&#34;12355&#34; href=&#34;foundation.identity-types.html&#34; class=&#34;Module&#34;&gt;foundation.identity-types&lt;/a&gt;
+&lt;a id=&#34;12275&#34; class=&#34;Keyword&#34;&gt;open&lt;/a&gt; &lt;a id=&#34;12280&#34; class=&#34;Keyword&#34;&gt;import&lt;/a&gt; &lt;a id=&#34;12287&#34; href=&#34;foundation.universe-levels.html&#34; class=&#34;Module&#34;&gt;foundation.universe-levels&lt;/a&gt;
+&lt;a id=&#34;12314&#34; class=&#34;Keyword&#34;&gt;open&lt;/a&gt; &lt;a id=&#34;12319&#34; class=&#34;Keyword&#34;&gt;import&lt;/a&gt; &lt;a id=&#34;12326&#34; href=&#34;foundation.function-types.html&#34; class=&#34;Module&#34;&gt;foundation.function-types&lt;/a&gt;
+&lt;a id=&#34;12352&#34; class=&#34;Keyword&#34;&gt;open&lt;/a&gt; &lt;a id=&#34;12357&#34; class=&#34;Keyword&#34;&gt;import&lt;/a&gt; &lt;a id=&#34;12364&#34; href=&#34;foundation.identity-types.html&#34; class=&#34;Module&#34;&gt;foundation.identity-types&lt;/a&gt;
 
-&lt;a id=&#34;12382&#34; class=&#34;Comment&#34;&gt;-- What is the analogue in HoTT of the fact from group extensions that we classify an extension by &lt;/a&gt;
-&lt;a id=&#34;12482&#34; class=&#34;Comment&#34;&gt;-- taking a set-based section of the splitting, seeing that those elements act on the left hand group,&lt;/a&gt;
-&lt;a id=&#34;12585&#34; class=&#34;Comment&#34;&gt;-- noting that this map into Aut G is not a homomorphism. There is a 2-cell that we can conjugate with that makes&lt;/a&gt;
-&lt;a id=&#34;12699&#34; class=&#34;Comment&#34;&gt;-- it a homomorphism. So together, the extension (plus the arbitrary choice of splitting) yeilds a 2-map to the 2-group&lt;/a&gt;
-&lt;a id=&#34;12819&#34; class=&#34;Comment&#34;&gt;-- AUT(G).&lt;/a&gt;
-&lt;a id=&#34;12830&#34; class=&#34;Comment&#34;&gt;-- For us, a splitting will be a section of a type family. This acts on loops with apd.&lt;/a&gt;
-&lt;a id=&#34;12918&#34; class=&#34;Comment&#34;&gt;-- So we want to prove some facts about apd and to what extent it&amp;#39;s a homomorphism of loops.&lt;/a&gt;
-&lt;a id=&#34;13011&#34; class=&#34;Comment&#34;&gt;-- It doesn&amp;#39;t send loops to loops, because it sends the loop p to a loop from fx to ap p fx.&lt;/a&gt;
-&lt;a id=&#34;13104&#34; class=&#34;Comment&#34;&gt;-- apd-hom :&lt;/a&gt;
-&lt;a id=&#34;13117&#34; class=&#34;Comment&#34;&gt;--   {l1 l2 : Level} {A : UU l1} {B : A → UU l2} (f : (a : A) → B a) {x : A}&lt;/a&gt;
-&lt;a id=&#34;13194&#34; class=&#34;Comment&#34;&gt;--   (p q : x ＝ x) → (apd f (p ∙ q)) ＝ ((apd ((tr B p) ∘ f) q) ∙ (apd (f) p))&lt;/a&gt;
-&lt;a id=&#34;13272&#34; class=&#34;Comment&#34;&gt;-- apd-hom f refl q = ?&lt;/a&gt;
+&lt;a id=&#34;12391&#34; class=&#34;Comment&#34;&gt;-- What is the analogue in HoTT of the fact from group extensions that we classify an extension by &lt;/a&gt;
+&lt;a id=&#34;12491&#34; class=&#34;Comment&#34;&gt;-- taking a set-based section of the splitting, seeing that those elements act on the left hand group,&lt;/a&gt;
+&lt;a id=&#34;12594&#34; class=&#34;Comment&#34;&gt;-- noting that this map into Aut G is not a homomorphism. There is a 2-cell that we can conjugate with that makes&lt;/a&gt;
+&lt;a id=&#34;12708&#34; class=&#34;Comment&#34;&gt;-- it a homomorphism. So together, the extension (plus the arbitrary choice of splitting) yeilds a 2-map to the 2-group&lt;/a&gt;
+&lt;a id=&#34;12828&#34; class=&#34;Comment&#34;&gt;-- AUT(G).&lt;/a&gt;
+&lt;a id=&#34;12839&#34; class=&#34;Comment&#34;&gt;-- For us, a splitting will be a section of a type family. This acts on loops with apd.&lt;/a&gt;
+&lt;a id=&#34;12927&#34; class=&#34;Comment&#34;&gt;-- So we want to prove some facts about apd and to what extent it&amp;#39;s a homomorphism of loops.&lt;/a&gt;
+&lt;a id=&#34;13020&#34; class=&#34;Comment&#34;&gt;-- It doesn&amp;#39;t send loops to loops, because it sends the loop p to a loop from fx to ap p fx.&lt;/a&gt;
+&lt;a id=&#34;13113&#34; class=&#34;Comment&#34;&gt;-- apd-hom :&lt;/a&gt;
+&lt;a id=&#34;13126&#34; class=&#34;Comment&#34;&gt;--   {l1 l2 : Level} {A : UU l1} {B : A → UU l2} (f : (a : A) → B a) {x : A}&lt;/a&gt;
+&lt;a id=&#34;13203&#34; class=&#34;Comment&#34;&gt;--   (p q : x ＝ x) → (apd f (p ∙ q)) ＝ ((apd ((tr B p) ∘ f) q) ∙ (apd (f) p))&lt;/a&gt;
+&lt;a id=&#34;13281&#34; class=&#34;Comment&#34;&gt;-- apd-hom f refl q = ?&lt;/a&gt;
 
 &lt;/pre&gt;
 &lt;h2 id=&#34;group-extensions-1&#34;&gt;Group extensions&lt;/h2&gt;
