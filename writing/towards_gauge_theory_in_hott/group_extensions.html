@@ -61,41 +61,11 @@
 <nav id="TOC" role="doc-toc">
 <ul>
 <li><a href="#abstract" id="toc-abstract">Abstract</a></li>
-<li><a href="#introduction" id="toc-introduction">Introduction</a></li>
-<li><a href="#groups" id="toc-groups">Groups</a>
-<ul>
-<li><a href="#group-actions" id="toc-group-actions">Group
-actions</a></li>
-<li><a href="#equivariant-maps" id="toc-equivariant-maps">Equivariant
-maps</a></li>
-</ul></li>
-<li><a href="#principal-bundles" id="toc-principal-bundles">Principal
-bundles</a>
-<ul>
-<li><a href="#bundles-over-bg" id="toc-bundles-over-bg">Bundles over
-<span class="math inline">\(BG\)</span></a></li>
-<li><a href="#mapping-into-bg" id="toc-mapping-into-bg">Mapping into
-<span class="math inline">\(BG\)</span></a></li>
-<li><a href="#bg-classifies-bundles-not-just-equivalence-classes"
-id="toc-bg-classifies-bundles-not-just-equivalence-classes"><span
-class="math inline">\(BG\)</span> classifies bundles, not just
-equivalence classes</a></li>
-<li><a href="#universes-versus-bundles"
-id="toc-universes-versus-bundles">Universes versus bundles</a></li>
-<li><a href="#eilenberg-mac-lane-spaces"
-id="toc-eilenberg-mac-lane-spaces">Eilenberg-Mac Lane spaces</a></li>
-<li><a href="#associated-bundles" id="toc-associated-bundles">Associated
-bundles</a></li>
-<li><a href="#group-extensions" id="toc-group-extensions">Group
-extensions</a></li>
-</ul></li>
-<li><a href="#group-extensions-1" id="toc-group-extensions-1">Group
-extensions</a>
-<ul>
-<li><a href="#group-extensions-in-category-theory"
-id="toc-group-extensions-in-category-theory">Group extensions in
-category theory</a></li>
-</ul></li>
+<li><a href="#agda" id="toc-agda">Agda</a></li>
+<li><a href="#extensions-vertical-and-horizontal"
+id="toc-extensions-vertical-and-horizontal">Extensions: vertical and
+horizontal</a></li>
+<li><a href="#groups" id="toc-groups">Groups</a></li>
 </ul>
 </nav>
 <!-- https://pandoc.org/MANUAL.html -->
@@ -104,457 +74,108 @@ category theory</a></li>
 title="Image of the book cover of Godel Escher Bach" width="500" />
 </center>
 <h2 id="abstract">Abstract</h2>
-<p>We will show how to formalize parts of differential geometry, gauge
-theory, and Chern-Weil theory in homotopy type theory.</p>
-<p>The background on group extensions are <a href="#fn1"
-class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, <a
-href="#fn2" class="footnote-ref" id="fnref2"
-role="doc-noteref"><sup>2</sup></a>, <a href="#fn3" class="footnote-ref"
-id="fnref3" role="doc-noteref"><sup>3</sup></a>.</p>
-<p>One way of thinking about bringing smooth manifolds into this group
-theoretic picture is in a post by Schreiber <a href="#fn4"
-class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
-<h2 id="introduction">Introduction</h2>
-<p>Differential geometry <span class="citation"
-data-cites="kobayashinomizu">(Kobayashi and Nomizu 1963)</span> <span
-class="citation" data-cites="baez1994gauge">(Baez and Muniain
-1994)</span>, gauge theory <span class="citation"
-data-cites="hamilton2017">(Hamilton 2017)</span> <span class="citation"
-data-cites="atiyah1983yang">(Atiyah and Bott 1983)</span>, and
-Chern-Weil theory<span class="citation"
-data-cites="freed2013chernweil">(Freed and Hopkins 2013)</span> lie at
-the intersection of mathematics and physics. The theory of general
-relativity is expressed as formulas relating the curvature of spacetime
-to the distribution of energy and matter. The standard model of particle
-physics is expressed as a collection of principal bundles and associated
-vector bundles, sections of which represent the fields of matter and
-forces. And in the latter decades of the 20th century the tools of the
-standard model were applied back into mathematics to make discoveries
-about the geometry of 3- and 4-dimensional manifolds<span
-class="citation" data-cites="scorpan_wild_2005">(Scorpan
-2005)</span>.</p>
-<p>Homotopy type theory<span class="citation"
-data-cites="hottbook">(Univalent Foundations Program 2013)</span> seems
-at first like it’s from a different universe entirely. It grew out of
-questions of a foundational nature inside mathematics and computer
-science. It brings a synthetic stance, where we are invited to stop
-thinking of mathematical objects as sets with structure, and instead to
-assemble the objects into higher categories with collective properties
-like being locally cartesian closed, or having homotopical model
-structures. Such categories have internal languages, which are syntactic
-structures much like programming languages, which allow us to reason
-about the objects in a generic way.</p>
+<p>Homotopy type theory offers simplified access to several
+constructions that were harder to understand in classical mathematics.
+We want to leverage those and extend them into the fields of
+differential geometry and gauge theory. Building on homotopy type theory
+and the <em>Symmetry</em> book, we will define the type of extensions of
+a type by a group. Then we will look inside an extension to find types
+that correspond to principal bundles with connection and curvature.</p>
+<h2 id="agda">Agda</h2>
+<p>This document is a literate Agda file which contains a formalization
+of all the concepts and results. It is written with the intent that you
+can skip all the Agda if you like. But as an author, requiring a
+parallel formalization has been an invaluable tool to solidify my own
+understanding and increase my confidence and self-sufficiency.</p>
+<p>I am grateful for the <code>agda-unimath</code> library <span
+class="citation" data-cites="agda-unimath">(Rijke et al., n.d.)</span>
+which this library is built on top of.</p>
+<h2 id="extensions-vertical-and-horizontal">Extensions: vertical and
+horizontal</h2>
+<p>As Jon Sterling has recently emphasized <span class="citation"
+data-cites="sterling2023geometry">(Sterling 2023)</span>, homotopy type
+theory allows us to seamlessly move between objects <em>over</em> a type
+<span class="math inline">\(B\)</span> and maps from <span
+class="math inline">\(B\)</span> into a universal (classifying) type,
+and that this facility simplifies our access to Grothendieck’s
+<em>relative point of view</em>. If we have a morphism <span
+class="math inline">\(E \to B\)</span> then we can view it as a type
+family of fibers. And if we have a morphism <span
+class="math inline">\(f:B\to \mathcal{U}\)</span> into a type of types,
+we can form the type <span
+class="math inline">\(E\stackrel{\textup{def}}{=}\sum_{x:B}f(x)\)</span>
+and the projection map <span class="math inline">\(E\to B\)</span>.</p>
+<p>Fix a connected 1-type <span class="math inline">\(BG\)</span> with
+chosen point <span class="math inline">\(*:BG\)</span> (i.e. a group
+<span class="math inline">\(G\)</span>) and a connected 2-type <span
+class="math inline">\(B\)</span> with a chosen point <span
+class="math inline">\(x:B\)</span>.</p>
+<p>Following Myers, we define the type of extensions of <span
+class="math inline">\(B\)</span> by <span
+class="math inline">\(G\)</span> to consist of</p>
+<ul>
+<li>a type <span class="math inline">\(E\)</span> with point <span
+class="math inline">\(e:E\)</span></li>
+<li>a map <span class="math inline">\(p:E\to B\)</span> and a proof of
+pointedness, i.e. a term <span class="math inline">\(p(e)=_B
+x\)</span></li>
+<li>a term <span
+class="math inline">\(F:\prod_{y:B}||\mathrm{fib}_p(y)=BG||_{-1}\)</span>
+that all the fibers of <span class="math inline">\(p\)</span> are merely
+equivalent to <span class="math inline">\(BG\)</span>.</li>
+</ul>
+<p>We can then form the <em>fiber sequence</em> <span
+class="math display">\[BG\stackrel{i}{\,\cdot\!\to}
+E\stackrel{p}{\,\cdot\!\to} B\]</span> where <span
+class="math inline">\(i\)</span> is a specified equivalence of <span
+class="math inline">\(BG\)</span> with the fiber over <span
+class="math inline">\(x\)</span>.</p>
 <h2 id="groups">Groups</h2>
-<p>Group theory including the theory of higher groups is built directly
-into HoTT, via the identity types. A thorough introductory treatment of
-group theory that adopts this philosophy can be found in the book
-<em>Symmetry</em> <span class="citation" data-cites="Symmetry">(Bezem et
-al. 2023)</span>. We will build on this synthetic framework to explore
-gauge theory. But it’s important to be clear that this is a choice, and
-there is an alternate approach. Namely we could define a group to be a
-type together with some extra structure: an identity, a multiplication
-operation, and an inverse operation, satisfying some properties. We
-would do the same for higher groups, and we’d prove an equivalence
-between the type of higher groups and the type of pointed, connected
-types. Such a project has been undertaken in the context of higher topos
-theory, but at the time of this writing it hasn’t been done inside HoTT.
-We certainly can define the type of groups which are sets, and prove
-that this type of 0-groups is equivalent to connected 1-types, and this
-is done in <em>Symmetry</em>. But in the case of higher groups we only
-have one definition: pointed connected types. This happens to be a
-lovely theory, and so we’ll be glad to run with that.</p>
-<p><strong>Definition</strong>. A (higher) group is a pointed 1-type
-<span class="math inline">\(BG\)</span> with basepoint <span
-class="math inline">\(*\)</span>, which is connected, i.e. that we have
-a term of the type <span
-class="math inline">\((a:BG)\to||*=a||_{-1}\)</span>. We denote the type
-<span class="math inline">\(*=*\)</span> by <span
-class="math inline">\(G\)</span>, and so if we have a particular group
-in mind then we think of that group as being installed as the identity
-type of the basepoint in a type we call <span
-class="math inline">\(BG\)</span>.</p>
-<p>This notation is fairly confusing, since we have stated that <span
-class="math inline">\(BG\)</span> is a group, but that <span
-class="math inline">\(G\)</span> is the group we really mean. Let’s see
-how much trouble it ends up causing.</p>
-<p><strong>Lemma</strong> If <span class="math inline">\(X\)</span> is a
-pointed, connected 1-type with basepoint <span
-class="math inline">\(*\)</span>,<span
-class="math inline">\(x:X\)</span> is any term, and <span
-class="math inline">\(p:*=x\)</span> any term, then the sets <span
-class="math inline">\(*=*\)</span> and <span
-class="math inline">\(*=x\)</span> are isomorphic. Furthermore, <span
-class="math inline">\(*=*\)</span> acts on <span
-class="math inline">\(*=x\)</span> freely and transitively, by
-concatenation.</p>
-<p><strong>Proof</strong> For the first statement, define <span
-class="math inline">\(-\cdot p:*=*\to *=x\)</span>, by concatenating
-with <span class="math inline">\(p\)</span>. Then <span
-class="math inline">\(-\cdot p^{-1}:*=x\to *=*\)</span> is a two-sided
-inverse. For the second statement, if <span
-class="math inline">\(g:*=*\)</span> then <span
-class="math inline">\(g\cdot p:*=x\)</span>, giving an action.
-Transitivity can be seen by solving the equation <span
-class="math inline">\(q = g\cdot p\)</span> for <span
-class="math inline">\(g\)</span> by concatenating both sides by <span
-class="math inline">\(p^{-1}\)</span> on the right. Freeness can be seen
-by observing that <span class="math inline">\(g\cdot p = h\cdot
-p\)</span> implies that <span class="math inline">\(g=h\)</span>.</p>
-<p>So identity types with unequal endpoints like <span
-class="math inline">\(*=x\)</span> are torsors, and it’s noteworthy to
-find torsors appearing to close to the foundations of HoTT.</p>
-<h3 id="group-actions">Group actions</h3>
-<p>Given any pointed type <span class="math inline">\(X\)</span> with
-basepoint <span class="math inline">\(x\)</span> we can form the type
-<span class="math inline">\(\mathsf{BAut}_x(X)\)</span> by taking the
-connected component of <span class="math inline">\(x\)</span>. If we
-consider the terms of <span class="math inline">\(X\)</span> to be at
-type-theoretic level 0, then <span
-class="math inline">\(\mathsf{Aut}_x\)</span> brings one of the identity
-types from level 1 down to level 0 to look at it on its own. Then the B
-can be thought of as reinstalling the identity type at level 1 of the
-new type, which contains only the connected component of <span
-class="math inline">\(x\)</span>. When we do this, though, we don’t
-forget the identity types of all the other terms in the connected
-component. That’s why there really isn’t a true B operator, just a
-notation that is meant to evoke the classical idea of a classifying
-space, since as we’ll see we really have captured that idea.</p>
-<p>A homomorphism of groups is a pointed map <span
-class="math inline">\(f:BG\to X\)</span>. The rules of type theory will
-ensure that this map contains a map between the identity types inside
-the types, forming a group homomorphism in the usual sense. We can think
-of <span class="math inline">\(G\)</span> acting on <span
-class="math inline">\(x\)</span> since the homomorphism is <span
-class="math inline">\(*=*\to x=x\)</span>. If we take <span
-class="math inline">\(X=\mathcal{U}\)</span> to be the universe, and if
-<span class="math inline">\(f(*)=H\)</span>, then we can think of <span
-class="math inline">\(G\)</span> acting on the type <span
-class="math inline">\(H\)</span>.</p>
-<h3 id="equivariant-maps">Equivariant maps</h3>
-<p>If <span class="math inline">\(BG\xrightarrow[]{r_X} \mathsf{BAut}_x
-X\)</span> and <span class="math inline">\(BG\xrightarrow[]{r_Y}
-\mathsf{BAut}_y Y\)</span> are two group actions</p>
-<h2 id="principal-bundles">Principal bundles</h2>
-<h3 id="bundles-over-bg">Bundles over <span
-class="math inline">\(BG\)</span></h3>
-<p>Pointed connected types <span class="math inline">\(BG\)</span> come
-with three built-in type families by choosing identity types with
-different endpoints. There’s <span
-class="math inline">\(LG:=(a:BG)\times a=a\)</span> which is at each
-point the group of self-identifications of that point. There’s <span
-class="math inline">\(EG:=(a:BG)\times *=a\)</span> which aren’t groups,
-but which are similar to the self-identifications, and in fact are
-torsors over <span class="math inline">\(G\)</span>! At each point <span
-class="math inline">\(a:BG\)</span> we can concatenate a term of <span
-class="math inline">\(EG(a)\)</span> with a term of <span
-class="math inline">\(LG(a)\)</span> by concatenating the latter to the
-<span class="math inline">\(a\)</span> endpoint of <span
-class="math inline">\(EG(a)\)</span>. And lastly there’s the
-non-dependent type <span class="math inline">\(BG\times G\)</span> which
-I’m mentioning because we can also concatenate a term of <span
-class="math inline">\(EG(a)\)</span> with a term of <span
-class="math inline">\(G\)</span>, by attaching it to the <span
-class="math inline">\(*\)</span> endpoint.</p>
-<p><span class="math inline">\(EG\)</span> is contractible (Lemma 3.11.8
-of The HoTT Book). It’s worth reflecting for a moment on the fact that
-<span class="math inline">\(EG\)</span> is contractible but <span
-class="math inline">\(BG\)</span> is not. After all, <span
-class="math inline">\(BG\)</span> is connected and so all its terms are
-equal to the base point via some path. But we don’t select any specific
-paths as part of the data. Forming <span
-class="math inline">\(EG\)</span> is simply to install all the solutions
-to this missing data as the fibers of a bundle over <span
-class="math inline">\(BG\)</span>.</p>
-<p>Example: for <span class="math inline">\(G=\mathbb{Z}, \mathbb{Z}^n,
-\mathbb{Z}_2\)</span> provide <span class="math inline">\(BG\)</span>,
-<span class="math inline">\(EG\)</span>, and <span
-class="math inline">\(LG\)</span>.</p>
-<h3 id="mapping-into-bg">Mapping into <span
-class="math inline">\(BG\)</span></h3>
-<p>Pulling back <span class="math inline">\(EG\)</span> via a map <span
-class="math inline">\(X\to BG\)</span> deserves to be called a principal
-<span class="math inline">\(G\)</span>-bundle over <span
-class="math inline">\(X\)</span>, and pulling back <span
-class="math inline">\(LG\)</span> via the same map deserves to be called
-a gauge transformation.</p>
-<p>In HoTT given a map <span class="math inline">\(f:A\to B\)</span> and
-a type family <span class="math inline">\(P:B\to \mathcal{U}\)</span> we
-can form the following square and it will commute and be a pullback:</p>
 <!-- https://q.uiver.app/?q=WzAsNCxbMiwwLCIoYjpCKVxcdGltZXMgUChiKVxccXVhZFxccXVhZCJdLFsyLDEsIkIiXSxbMCwwLCIoYTpBKVxcdGltZXMgUChmKGEpKSJdLFswLDEsIkEiXSxbMCwxLCJcXG1hdGhybXtwcn1fMSJdLFsyLDAsIlxcbGFtYmRhKGEsIHApLihmKGEpLHApIl0sWzMsMSwiZiIsMl0sWzIsMywiXFxtYXRocm17cHJ9XzEiLDJdXQ== -->
 <p><img src="cd4a822b78ac014dc7a0ba88013e9ee36b829485.svg"
 style="transform: scale(1.4); display: block; margin-left: auto; margin-right: auto;" /></p>
-<p>If we have an arbitrary type <span class="math inline">\(X\)</span>
-and <span class="math inline">\(f:X\to BG\)</span> then we can pull back
-<span class="math inline">\(EG\)</span> this way:</p>
-<!-- https://q.uiver.app/?q=WzAsNCxbMiwwLCIoYjpCRylcXHRpbWVzICgqPWIpIl0sWzIsMSwiQkciXSxbMCwwLCIoeDpYKVxcdGltZXMgKCo9Zih4KSkiXSxbMCwxLCJYIl0sWzAsMSwiXFxtYXRocm17cHJ9XzEiXSxbMiwwLCJcXGxhbWJkYSh4LCBwKS4oZih4KSxwKSJdLFszLDEsImYiLDJdLFsyLDMsIlxcbWF0aHJte3ByfV8xIiwyXV0= -->
-<p><img src="f75842ad3a6cc62cfedd8471a367bfca12bc03b8.svg"
-style="transform: scale(1.4); display: block; margin-left: auto; margin-right: auto;" /></p>
-<p>or we can pull back <span class="math inline">\(LG\)</span>:</p>
-<!-- https://q.uiver.app/?q=WzAsNCxbMiwwLCIoYjpCRylcXHRpbWVzIChiPWIpIl0sWzIsMSwiQkciXSxbMCwwLCIoeDpYKVxcdGltZXMgKGYoeCk9Zih4KSkiXSxbMCwxLCJYIl0sWzAsMSwiXFxtYXRocm17cHJ9XzEiXSxbMiwwLCJcXGxhbWJkYSh4LCBwKS4oZih4KSxwKSJdLFszLDEsImYiLDJdLFsyLDMsIlxcbWF0aHJte3ByfV8xIiwyXV0= -->
-<p><img src="4d0d79624ee63ff6de3dee35483ee1170f02cdf0.svg"
-style="transform: scale(1.4); display: block; margin-left: auto; margin-right: auto;" /></p>
-<p>Let’s name these pullbacks <span class="math inline">\(E_fX\)</span>
-and <span class="math inline">\(L_fX\)</span> respectively. We include
-the classifying map <span class="math inline">\(f\)</span> in the
-notation but maybe we’ll leave it out sometimes. Terms of <span
-class="math inline">\(E_fX\)</span> are a pair <span
-class="math inline">\((x, p)\)</span>: a term of <span
-class="math inline">\(X\)</span> and a term of the torsor <span
-class="math inline">\(*=f(x)\)</span>. Terms of <span
-class="math inline">\(L_fX\)</span> are also a pair <span
-class="math inline">\((x, l)\)</span>: a term of <span
-class="math inline">\(X\)</span> and a term of the loop space <span
-class="math inline">\(f(x)=f(x)\)</span>. We can form <span
-class="math inline">\((x, p\cdot l)\)</span> and in fact we can act on
-all of <span class="math inline">\(E_fX\)</span> with a section of <span
-class="math inline">\(L_fX\)</span>: <span
-class="math display">\[\mathcal{G}X:=((x,l):L_fX)\to E_fX\to
-E_fX\]</span> which acts fiberwise by concatenating <span
-class="math inline">\(l\)</span> to any torsor.</p>
-<p>The bundle <span class="math inline">\(E_fX\)</span> would
-classically be called something like <span
-class="math inline">\(P\)</span>, a principal bundle with gauge group
-<span class="math inline">\(G\)</span> over <span
-class="math inline">\(X\)</span>. The bundle <span
-class="math inline">\(L_fX\)</span> would then be referred to as <span
-class="math inline">\(\mathrm{Ad}P\)</span>. Why is that?</p>
+<pre class="Agda"><a id="5048" class="Symbol">{-#</a> <a id="5052" class="Keyword">OPTIONS</a> <a id="5060" class="Pragma">--without-K</a> <a id="5072" class="Pragma">--exact-split</a> <a id="5086" class="Symbol">#-}</a>
 
-<h3 id="bg-classifies-bundles-not-just-equivalence-classes"><span
-class="math inline">\(BG\)</span> classifies bundles, not just
-equivalence classes</h3>
-<p>The classical theorems take the form: taking the pullback of <span
-class="math inline">\(EG\to BG\)</span> forms a bijection between
-homotopy classes of maps <span class="math inline">\(f:X\to BG\)</span>
-and equivalence classes of principal <span
-class="math inline">\(G\)</span>-bundles over <span
-class="math inline">\(X\)</span>.</p>
-<h3 id="universes-versus-bundles">Universes versus bundles</h3>
-<h3 id="eilenberg-mac-lane-spaces">Eilenberg-Mac Lane spaces</h3>
-<p><em>Inductive types</em> are collections of data and rules for
-mapping out of instances of the collection. For example here is an
-inductive type defining the natural numbers in Agda:</p>
-<p>This theory can be extended to support data having values in the
-identity types of data that was specified earlier in the definition.
-Here is the circle defined as a HIT in Cubical Agda:</p>
-<p>Given a group <span class="math inline">\(G\)</span> (meaning, a
-0-type) with identity <span class="math inline">\(G.1g\)</span> and
-multiplication <span class="math inline">\(G.mul\)</span>, we can form
-the Eilenberg-Mac Lane type <span class="math inline">\(K(G, 1)\)</span>
-as the following HIT:</p>
-<h3 id="associated-bundles">Associated bundles</h3>
-<h3 id="group-extensions">Group extensions</h3>
-<pre class="Agda"><a id="12299" class="Symbol">{-#</a> <a id="12303" class="Keyword">OPTIONS</a> <a id="12311" class="Pragma">--without-K</a> <a id="12323" class="Pragma">--exact-split</a> <a id="12337" class="Symbol">#-}</a>
+<a id="5091" class="Keyword">module</a> <a id="5098" href="group_extensions.html" class="Module Operator">group_extensions</a> <a id="5115" class="Keyword">where</a>
 
-<a id="12342" class="Keyword">module</a> <a id="12349" href="group_extensions.html" class="Module Operator">group_extensions</a> <a id="12366" class="Keyword">where</a>
+<a id="5122" class="Keyword">open</a> <a id="5127" class="Keyword">import</a> <a id="5134" href="foundation.dependent-identifications.html" class="Module">foundation.dependent-identifications</a> <a id="5171" class="Keyword">public</a>
+<a id="5178" class="Keyword">open</a> <a id="5183" class="Keyword">import</a> <a id="5190" href="foundation.action-on-identifications-functions.html" class="Module">foundation.action-on-identifications-functions</a>
+<a id="5237" class="Keyword">open</a> <a id="5242" class="Keyword">import</a> <a id="5249" href="foundation.dependent-pair-types.html" class="Module">foundation.dependent-pair-types</a>
+<a id="5281" class="Keyword">open</a> <a id="5286" class="Keyword">import</a> <a id="5293" href="foundation.transport-along-higher-identifications.html" class="Module">foundation.transport-along-higher-identifications</a>
+<a id="5343" class="Keyword">open</a> <a id="5348" class="Keyword">import</a> <a id="5355" href="foundation.transport-along-identifications.html" class="Module">foundation.transport-along-identifications</a>
+<a id="5398" class="Keyword">open</a> <a id="5403" class="Keyword">import</a> <a id="5410" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a>
 
-<a id="12373" class="Keyword">open</a> <a id="12378" class="Keyword">import</a> <a id="12385" href="foundation.universe-levels.html" class="Module">foundation.universe-levels</a>
-<a id="12412" class="Keyword">open</a> <a id="12417" class="Keyword">import</a> <a id="12424" href="foundation.function-types.html" class="Module">foundation.function-types</a>
-<a id="12450" class="Keyword">open</a> <a id="12455" class="Keyword">import</a> <a id="12462" href="foundation.identity-types.html" class="Module">foundation.identity-types</a>
+<a id="5438" class="Keyword">open</a> <a id="5443" class="Keyword">import</a> <a id="5450" href="foundation-core.equivalences.html" class="Module">foundation-core.equivalences</a>
+<a id="5479" class="Keyword">open</a> <a id="5484" class="Keyword">import</a> <a id="5491" href="foundation-core.function-types.html" class="Module">foundation-core.function-types</a>
+<a id="5522" class="Keyword">open</a> <a id="5527" class="Keyword">import</a> <a id="5534" href="foundation-core.homotopies.html" class="Module">foundation-core.homotopies</a>
+<a id="5561" class="Keyword">open</a> <a id="5566" class="Keyword">import</a> <a id="5573" href="foundation-core.identity-types.html" class="Module">foundation-core.identity-types</a>
 
-<a id="12489" class="Comment">-- What is the analogue in HoTT of the fact from group extensions that we classify an extension by </a>
-<a id="12589" class="Comment">-- taking a set-based section of the splitting, seeing that those elements act on the left hand group,</a>
-<a id="12692" class="Comment">-- noting that this map into Aut G is not a homomorphism. There is a 2-cell that we can conjugate with that makes</a>
-<a id="12806" class="Comment">-- it a homomorphism. So together, the extension (plus the arbitrary choice of splitting) yeilds a 2-map to the 2-group</a>
-<a id="12926" class="Comment">-- AUT(G).</a>
-<a id="12937" class="Comment">-- For us, a splitting will be a section of a type family. This acts on loops with apd.</a>
-<a id="13025" class="Comment">-- So we want to prove some facts about apd and to what extent it&#39;s a homomorphism of loops.</a>
-<a id="13118" class="Comment">-- It doesn&#39;t send loops to loops, because it sends the loop p to a loop from fx to ap p fx.</a>
-<a id="13211" class="Comment">-- apd-hom :</a>
-<a id="13224" class="Comment">--   {l1 l2 : Level} {A : UU l1} {B : A → UU l2} (f : (a : A) → B a) {x : A}</a>
-<a id="13301" class="Comment">--   (p q : x ＝ x) → (apd f (p ∙ q)) ＝ ((apd ((tr B p) ∘ f) q) ∙ (apd (f) p))</a>
-<a id="13379" class="Comment">-- apd-hom f refl q = ?</a>
+<a id="5605" class="Keyword">module</a> <a id="5612" href="group_extensions.html#5612" class="Module">_</a>
+  <a id="5616" class="Symbol">{</a><a id="5617" href="group_extensions.html#5617" class="Bound">l1</a> <a id="5620" href="group_extensions.html#5620" class="Bound">l2</a> <a id="5623" class="Symbol">:</a> <a id="5625" href="Agda.Primitive.html#591" class="Postulate">Level</a><a id="5630" class="Symbol">}</a> <a id="5632" class="Symbol">{</a><a id="5633" href="group_extensions.html#5633" class="Bound">A</a> <a id="5635" class="Symbol">:</a> <a id="5637" href="Agda.Primitive.html#320" class="Primitive">UU</a> <a id="5640" href="group_extensions.html#5617" class="Bound">l1</a><a id="5642" class="Symbol">}</a> <a id="5644" class="Symbol">(</a><a id="5645" href="group_extensions.html#5645" class="Bound">B</a> <a id="5647" class="Symbol">:</a> <a id="5649" href="group_extensions.html#5633" class="Bound">A</a> <a id="5651" class="Symbol">→</a> <a id="5653" href="Agda.Primitive.html#320" class="Primitive">UU</a> <a id="5656" href="group_extensions.html#5620" class="Bound">l2</a><a id="5658" class="Symbol">)</a>
+  <a id="5662" class="Keyword">where</a>
+
+  <a id="5671" href="group_extensions.html#5671" class="Function">compute-concat-dependent-identification-refl-greg</a> <a id="5721" class="Symbol">:</a>
+    <a id="5727" class="Symbol">{</a> <a id="5729" href="group_extensions.html#5729" class="Bound">y</a> <a id="5731" href="group_extensions.html#5731" class="Bound">z</a> <a id="5733" class="Symbol">:</a> <a id="5735" href="group_extensions.html#5633" class="Bound">A</a> <a id="5737" class="Symbol">}</a> <a id="5739" class="Symbol">(</a><a id="5740" href="group_extensions.html#5740" class="Bound">q</a> <a id="5742" class="Symbol">:</a> <a id="5744" href="group_extensions.html#5729" class="Bound">y</a> <a id="5746" href="foundation-core.identity-types.html#5999" class="Function Operator">＝</a> <a id="5748" href="group_extensions.html#5731" class="Bound">z</a><a id="5749" class="Symbol">)</a> <a id="5751" class="Symbol">→</a> 
+    <a id="5758" class="Symbol">{</a> <a id="5760" href="group_extensions.html#5760" class="Bound">x&#39;</a> <a id="5763" href="group_extensions.html#5763" class="Bound">y&#39;</a> <a id="5766" class="Symbol">:</a> <a id="5768" href="group_extensions.html#5645" class="Bound">B</a> <a id="5770" href="group_extensions.html#5729" class="Bound">y</a><a id="5771" class="Symbol">}</a> <a id="5773" class="Symbol">{</a><a id="5774" href="group_extensions.html#5774" class="Bound">z&#39;</a> <a id="5777" class="Symbol">:</a> <a id="5779" href="group_extensions.html#5645" class="Bound">B</a> <a id="5781" href="group_extensions.html#5731" class="Bound">z</a><a id="5782" class="Symbol">}</a> <a id="5784" class="Symbol">(</a><a id="5785" href="group_extensions.html#5785" class="Bound">p&#39;</a> <a id="5788" class="Symbol">:</a> <a id="5790" href="group_extensions.html#5760" class="Bound">x&#39;</a> <a id="5793" href="foundation-core.identity-types.html#5999" class="Function Operator">＝</a> <a id="5795" href="group_extensions.html#5763" class="Bound">y&#39;</a><a id="5797" class="Symbol">)</a> <a id="5799" class="Symbol">→</a> 
+    <a id="5806" class="Symbol">(</a> <a id="5808" href="group_extensions.html#5808" class="Bound">q&#39;</a> <a id="5811" class="Symbol">:</a> <a id="5813" href="foundation-core.dependent-identifications.html#964" class="Function">dependent-identification</a> <a id="5838" href="group_extensions.html#5645" class="Bound">B</a> <a id="5840" href="group_extensions.html#5740" class="Bound">q</a> <a id="5842" href="group_extensions.html#5763" class="Bound">y&#39;</a> <a id="5845" href="group_extensions.html#5774" class="Bound">z&#39;</a><a id="5847" class="Symbol">)</a> <a id="5849" class="Symbol">→</a> 
+    <a id="5856" class="Symbol">(</a> <a id="5858" href="foundation.dependent-identifications.html#3934" class="Function">concat-dependent-identification</a> <a id="5890" class="Symbol">{</a><a id="5891" href="group_extensions.html#5617" class="Bound">l1</a><a id="5893" class="Symbol">}</a> <a id="5895" class="Symbol">{</a><a id="5896" href="group_extensions.html#5620" class="Bound">l2</a><a id="5898" class="Symbol">}</a> <a id="5900" class="Symbol">{</a><a id="5901" href="group_extensions.html#5633" class="Bound">A</a><a id="5902" class="Symbol">}</a> <a id="5904" href="group_extensions.html#5645" class="Bound">B</a> <a id="5906" class="Symbol">{</a><a id="5907" href="group_extensions.html#5729" class="Bound">y</a><a id="5908" class="Symbol">}</a> <a id="5910" class="Symbol">{</a><a id="5911" href="group_extensions.html#5729" class="Bound">y</a><a id="5912" class="Symbol">}</a> <a id="5914" class="Symbol">{</a><a id="5915" href="group_extensions.html#5731" class="Bound">z</a><a id="5916" class="Symbol">}</a> <a id="5918" href="foundation-core.identity-types.html#5968" class="InductiveConstructor">refl</a> <a id="5923" href="group_extensions.html#5740" class="Bound">q</a> <a id="5925" class="Symbol">{</a><a id="5926" href="group_extensions.html#5760" class="Bound">x&#39;</a><a id="5928" class="Symbol">}</a> <a id="5930" class="Symbol">{</a><a id="5931" href="group_extensions.html#5763" class="Bound">y&#39;</a><a id="5933" class="Symbol">}</a> <a id="5935" class="Symbol">{</a><a id="5936" href="group_extensions.html#5774" class="Bound">z&#39;</a><a id="5938" class="Symbol">}</a> <a id="5940" href="group_extensions.html#5785" class="Bound">p&#39;</a> <a id="5943" href="group_extensions.html#5808" class="Bound">q&#39;</a><a id="5945" class="Symbol">)</a> <a id="5947" href="foundation-core.identity-types.html#5999" class="Function Operator">＝</a> <a id="5949" href="foundation.action-on-identifications-functions.html#790" class="Function">ap</a> <a id="5952" class="Symbol">(</a><a id="5953" href="foundation-core.transport-along-identifications.html#729" class="Function">tr</a> <a id="5956" href="group_extensions.html#5645" class="Bound">B</a> <a id="5958" href="group_extensions.html#5740" class="Bound">q</a><a id="5959" class="Symbol">)</a> <a id="5961" href="group_extensions.html#5785" class="Bound">p&#39;</a> <a id="5964" href="foundation-core.identity-types.html#6948" class="Function Operator">∙</a> <a id="5966" href="group_extensions.html#5808" class="Bound">q&#39;</a>
+  <a id="5971" href="group_extensions.html#5671" class="Function">compute-concat-dependent-identification-refl-greg</a> <a id="6021" href="foundation-core.identity-types.html#5968" class="InductiveConstructor">refl</a> <a id="6026" href="foundation-core.identity-types.html#5968" class="InductiveConstructor">refl</a> <a id="6031" href="group_extensions.html#6031" class="Bound">q&#39;</a> <a id="6034" class="Symbol">=</a> <a id="6036" href="foundation-core.identity-types.html#5968" class="InductiveConstructor">refl</a>
 
 </pre>
-<h2 id="group-extensions-1">Group extensions</h2>
-<p>Extensions of <span class="math inline">\(X\)</span> by <span
-class="math inline">\(BG\)</span> are equivalent to maps <span
-class="math inline">\(\mathscr{C}:X\to \mathsf{BAut}BG\)</span>.</p>
-<p>Let’s look in detail at <span
-class="math inline">\(\mathsf{BAut}BG\)</span>. First of all it’s a
-2-type. Its terms are “<span class="math inline">\(BG\)</span> clones”.
-The identity types are equivalences between <span
-class="math inline">\(BG\)</span> clones. Those equivalences have
-identity types as well, which are homotopies between equivalences
-between <span class="math inline">\(BG\)</span> clones.</p>
-<p>Meanwhile each of the fibers <span
-class="math inline">\(\mathscr{C}(x)\)</span> is a <span
-class="math inline">\(BG\)</span>-clone. The union of all of these is
-the sigma-type <span class="math inline">\((x:X)\times
-\mathscr{C}(x)\)</span>. But the 2-type structure of <span
-class="math inline">\(\mathsf{BAut}BG\)</span> doesn’t apply inside a
-term of a <span class="math inline">\(BG\)</span>-clone, they are
-identity types between types, whereas inside <span
-class="math inline">\(BG\)</span> and its clones, we have terms, which
-are something like individual <span
-class="math inline">\(G\)</span>-torsors.</p>
-<p>Maybe we should look to the pi-type <span
-class="math inline">\((x:X)\to \mathscr{C}(x)\)</span>. This should be
-something like a principal bundle, sinc this type is a generalization of
-the type <span class="math inline">\(X\to BG\)</span>, which as we know
-is supposed to classify principal bundles. In the special case where
-<span class="math inline">\(\mathscr{C}\)</span> is the constant map to
-<span class="math inline">\(BG\)</span>, we indeed would have to
-consider the pi-type to have a type of principal bundles.</p>
-<p>In the literature on Schreier theory, we can look for clues about how
-to proceed. Let’s move away from HoTT for a moment and look at group
-extensions from the point of view of groupoids and 2-groupoids, in
-classical category theory.</p>
-<h3 id="group-extensions-in-category-theory">Group extensions in
-category theory</h3>
-<p>See Blanco.</p>
-<p>The study of group extensions is about constructing an equivalence
-between extensions of a group <span class="math inline">\(X\)</span> by
-<span class="math inline">\(G\)</span>, which is a surjection from the
-extension <span class="math inline">\(E\)</span> to <span
-class="math inline">\(X\)</span>, and a classifying map <em>out</em> of
-<span class="math inline">\(X\)</span>. Given the extension, which takes
-the form of an exact sequence <span class="math display">\[1\to
-G\xrightarrow[]{i} E\xrightarrow[]{p}X\to 1\]</span> how do we construct
-a classifying map out of <span class="math inline">\(X\)</span>.</p>
-<p>Baez sketch from <a href="#fn5" class="footnote-ref" id="fnref5"
-role="doc-noteref"><sup>5</sup></a>: since <span
-class="math inline">\(p\)</span> is a surjection, start by choosing a
-set function <span class="math inline">\(s:X\to E\)</span> that is a
-section of <span class="math inline">\(p\)</span>. This induces a
-function <span class="math inline">\(\alpha:X\to \mathsf{Aut}G\)</span>
-by taking <span class="math inline">\(\alpha(x)(g)=s(x)g
-s(x)^{-1}\)</span>. In general <span
-class="math inline">\(\alpha\)</span> is not a homomorphism, but it is
-up to a conjugation. If we view groups as 1-element categories and
-homomorphisms as functors, then <span
-class="math inline">\(\alpha\)</span> is a weak functor.</p>
-<p>Let’s compare <span class="math inline">\(\alpha(xy)\)</span> to
-<span class="math inline">\(\alpha(x)\alpha(y)\)</span>. <span
-class="math display">\[\alpha(xy)(g) = s(xy)gs(xy)^{-1}\]</span> whereas
-<span class="math display">\[\alpha(x)(\alpha(y)(g)) =
-s(x)[s(y)gs(y)^{-1}]s(x)^{-1}\]</span> which are equal if <span
-class="math inline">\(s\)</span> is a homomorphism. But if <span
-class="math inline">\(s\)</span> is not, we need a “homomorphinator” to
-relate these two formulas. The obvious thing to do is to form <span
-class="math inline">\(h(x, y) = s(xy)s(x)^{-1}s(y)^{-1}\)</span>.
-Conjugating by <span class="math inline">\(h(x,y)\)</span> cancels the
-<span class="math inline">\(s(x)s(y)\)</span> factors and replaces them
-with <span class="math inline">\(s(xy)\)</span>. So a map that isn’t a
-homomorphism can nonetheless behave like one if we have the freedom to
-introduce a homomorphinator.</p>
-<p>What is weakness when we look at things in HoTT? (My current
-candidate: an unpointed map. The homomorphinator would then be a choice
-of path that restores pointedness.)</p>
-<p>What are conjugations? (My current candidate: changes of
-basepoint.)</p>
-<p>What is a map that isn’t a homorphism in HoTT but is a homomorphism
-up to a 2-morphism? Does this imply that <span
-class="math inline">\(E\)</span> ends up having a natural 2-type
-structure? It’s a union of <span class="math inline">\(BG\)</span>
-clones over the base <span class="math inline">\(X\)</span> and so by
-the usual calculations it is only a 1-type.</p>
-<p>Can we bring some of the 2-type structure from <span
-class="math inline">\(\mathsf{BAut}BG\)</span> into <span
-class="math inline">\(BG\)</span> itself? Some ideas:</p>
-<ul>
-<li>there is a map <span class="math inline">\(f:BG\to BG=BG\)</span>
-where <span class="math inline">\(f(a)\)</span> is an equivalence that
-moves the basepoint from <span class="math inline">\(*\)</span> to <span
-class="math inline">\(a\)</span>.</li>
-<li>a path <span class="math inline">\(p:*=_{BG}a\)</span> can be
-concatenated to any other path, providing an automorphism of the space
-of <span class="math inline">\(G\)</span>-torsors, sending the torsor
-<span class="math inline">\(*=b\)</span> to the torsor <span
-class="math inline">\(a=b\)</span> by concatenating all the paths in
-<span class="math inline">\(*=b\)</span> with <span
-class="math inline">\(p\)</span>. This may map the paths in <span
-class="math inline">\(BG\)</span> to <span
-class="math inline">\(BG=BG\)</span>.</li>
-<li>so having a map from <span class="math inline">\(BG\)</span> into
-<span class="math inline">\(BG=BG\)</span> may let us</li>
-</ul>
-<p>Tying this together might be the intuition that higher paths are more
-and more microscopic structure inside <span
-class="math inline">\(BG\)</span>, whereas the types <span
-class="math inline">\(BG=_{\mathsf{BAut}BG}BG\)</span> and then <span
-class="math inline">\(\mathrm{id}=_{BG=BG}\mathrm{id}\)</span> seem to
-go outward, or maybe more fruitfully, they go inward but inside <span
-class="math inline">\(\mathsf{BAut}BG\)</span>. I seem to want to relate
-these in a way I haven’t seen, where we can bring more structure inside
-<span class="math inline">\(BG\)</span> by looking in <span
-class="math inline">\(\mathsf{BAut}BG\)</span>.</p>
-<p>I believe I can define maps <span class="math inline">\(BG\to
-BG=BG\)</span> and from <span class="math inline">\(*=_{BG}a\to
-BG=BG\)</span> which utilize the homogeneity of <span
-class="math inline">\(BG\)</span>. Can this be clarified enough to see
-how we might introduce 2-paths in <span
-class="math inline">\(BG\)</span> which let us translate the Schreier
-story from 2-groups to 2-types?</p>
 <div id="refs" class="references csl-bib-body hanging-indent"
 role="doc-bibliography">
-<div id="ref-atiyah1983yang" class="csl-entry" role="doc-biblioentry">
-Atiyah, Michael Francis, and Raoul Bott. 1983. <span>“The Yang-Mills
-Equations over Riemann Surfaces.”</span> <em>Philosophical Transactions
-of the Royal Society of London. Series A, Mathematical and Physical
-Sciences</em> 308 (1505): 523–615.
+<div id="ref-agda-unimath" class="csl-entry" role="doc-biblioentry">
+Rijke, Egbert, Elisabeth Bonnevier, Jonathan Prieto-Cubides, Fredrik
+Bakke, et al. n.d. <em><span class="nocase">The agda-unimath
+library</span></em>. <a
+href="https://github.com/UniMath/agda-unimath/">https://github.com/UniMath/agda-unimath/</a>.
 </div>
-<div id="ref-baez1994gauge" class="csl-entry" role="doc-biblioentry">
-Baez, J. C., and J. P. Muniain. 1994. <em>Gauge Fields, Knots and
-Gravity</em>. Series on Knots and Everything. World Scientific
-Publishing Company. <a
-href="https://books.google.com/books?id=qvw7DQAAQBAJ">https://books.google.com/books?id=qvw7DQAAQBAJ</a>.
-</div>
-<div id="ref-Symmetry" class="csl-entry" role="doc-biblioentry">
-Bezem, Marc, Ulrik Buchholtz, Pierre Cagne, Bjørn Ian Dundas, and Daniel
-R. Grayson. 2023. <span>“Symmetry.”</span> <a
-href="https://github.com/UniMath/SymmetryBook"
-class="uri">https://github.com/UniMath/SymmetryBook</a>.
-</div>
-<div id="ref-freed2013chernweil" class="csl-entry"
+<div id="ref-sterling2023geometry" class="csl-entry"
 role="doc-biblioentry">
-Freed, Daniel S., and Michael J. Hopkins. 2013. <span>“Chern-Weil Forms
-and Abstract Homotopy Theory.”</span> <a
-href="https://arxiv.org/abs/1301.5959">https://arxiv.org/abs/1301.5959</a>.
-</div>
-<div id="ref-hamilton2017" class="csl-entry" role="doc-biblioentry">
-Hamilton, M. J. D. 2017. <em>Mathematical Gauge Theory: With
-Applications to the Standard Model of Particle Physics</em>.
-Universitext. Springer International Publishing. <a
-href="https://books.google.com/books?id=8zVCDwAAQBAJ">https://books.google.com/books?id=8zVCDwAAQBAJ</a>.
-</div>
-<div id="ref-kobayashinomizu" class="csl-entry" role="doc-biblioentry">
-Kobayashi, S., and K. Nomizu. 1963. <em>Foundations of Differential
-Geometry</em>. Foundations of Differential Geometry, v. 1. Interscience
-Publishers. <a
-href="https://books.google.com/books?id=wn4pAQAAMAAJ">https://books.google.com/books?id=wn4pAQAAMAAJ</a>.
-</div>
-<div id="ref-scorpan_wild_2005" class="csl-entry"
-role="doc-biblioentry">
-Scorpan, Alexandru. 2005. <em>The <span>Wild</span> <span>World</span>
-of 4-<span>Manifolds</span></em>. Providence, R.I: American Mathematical
-Society.
-</div>
-<div id="ref-hottbook" class="csl-entry" role="doc-biblioentry">
-Univalent Foundations Program, The. 2013. <em>Homotopy Type Theory:
-Univalent Foundations of Mathematics</em>. Institute for Advanced Study:
-<a href="https://homotopytypetheory.org/book"
-class="uri">https://homotopytypetheory.org/book</a>.
+Sterling, Jonathan. 2023. <span>“Towards a Geometry for Syntax.”</span>
+<a
+href="https://arxiv.org/abs/2307.09497">https://arxiv.org/abs/2307.09497</a>.
 </div>
 </div>
-<section id="footnotes" class="footnotes footnotes-end-of-document"
-role="doc-endnotes">
-<hr />
-<ol>
-<li id="fn1"><p>John Baez, “Week 223”:
-https://math.ucr.edu/home/baez/week223.html<a href="#fnref1"
-class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>David Jaz Myers, Dissertation:
-https://jscholarship.library.jhu.edu/handle/1774.2/67618<a
-href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn3"><p>https://ncatlab.org/nlab/show/group+extension<a
-href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn4"><p>Urs Schreiber, “n-Transport and Higher Schreier Theory”:
-https://golem.ph.utexas.edu/category/2006/09/nconnections_and_higher_schrei.html<a
-href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn5"><p>John Baez, “Week 223”:
-https://math.ucr.edu/home/baez/week223.html<a href="#fnref5"
-class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section>
 </body>
 </html>
