@@ -236,11 +236,15 @@
 &lt;nav id=&#34;TOC&#34; role=&#34;doc-toc&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#abstract&#34; id=&#34;toc-abstract&#34;&gt;Abstract&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#very-quick-version&#34; id=&#34;toc-very-quick-version&#34;&gt;Very Quick
+Version&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#agda&#34; id=&#34;toc-agda&#34;&gt;Agda&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#extensions-vertical-and-horizontal&#34;
 id=&#34;toc-extensions-vertical-and-horizontal&#34;&gt;Extensions: vertical and
 horizontal&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#groups&#34; id=&#34;toc-groups&#34;&gt;Groups&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#group-extensions-classically&#34;
+id=&#34;toc-group-extensions-classically&#34;&gt;Group extensions,
+classically&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/nav&gt;
 &lt;!-- https://pandoc.org/MANUAL.html --&gt;
@@ -255,22 +259,118 @@ We want to leverage those and extend them into the fields of
 differential geometry and gauge theory. Building on homotopy type theory
 and the &lt;em&gt;Symmetry&lt;/em&gt; book, we will define the type of extensions of
 a type by a group. Then we will look inside an extension to find types
-that correspond to principal bundles with connection and curvature.&lt;/p&gt;
+that correspond to principal bundles with connection and curvature. We
+can conclude that a principal bundle with connection is a group
+extension, an intertwining of the path groupoid structure of a smooth
+manifold with that of a group. To be clear, we don’t offer a method for
+mapping a smooth manifold in the classical sense (which is a 0-type)
+into the universe of 2-types in a way that captures the &lt;a
+href=&#34;https://ncatlab.org/nlab/show/path+n-groupoid&#34;&gt;&lt;em&gt;path
+groupoid&lt;/em&gt;&lt;/a&gt;, the collection of paths up to reparameterization.&lt;/p&gt;
+&lt;h2 id=&#34;very-quick-version&#34;&gt;Very Quick Version&lt;/h2&gt;
+&lt;p&gt;The theory of group extensions is, and contains, the theory of
+principal bundles with connection! This was surprising to me. Moreover,
+homotopy type theory offers an exciting new framework for formalizing
+groups and group theory, and hence bundles with connection.&lt;/p&gt;
+&lt;p&gt;Before now, (my) efforts to bring geometry into type theory got stuck
+when trying to import smooth manifolds. Real cohesion and infinitesimal
+cohesion seemed to have limitations when trying to define the path
+groupoid of a space, where the 1-dimensional curves need to be unequal
+to each other. Modalities seemed to always land us in a world of flat
+connections only.&lt;/p&gt;
+&lt;p&gt;So let’s factor the overall project (bring gauge theory into type
+theory) into two parts. We will leave unaddressed the questions about
+converting smooth manifolds, which are 0-types, into path groupoids at
+level 2. Instead we will suppose we have a pointed 2-type and want to
+extend it with a 1-group. Inside this picture will emerge a principal
+bundle with connection and curvature.&lt;/p&gt;
+&lt;p&gt;If &lt;span class=&#34;math inline&#34;&gt;\(B\)&lt;/span&gt; is a pointed, connected
+2-type and &lt;span class=&#34;math inline&#34;&gt;\(\mathsf{B}G\)&lt;/span&gt; is a
+pointed, connected 1-type hosting the group &lt;span
+class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt;, then an extension of &lt;span
+class=&#34;math inline&#34;&gt;\(B\)&lt;/span&gt; by &lt;span
+class=&#34;math inline&#34;&gt;\(\mathsf{B}G\)&lt;/span&gt; is by definition a fiber
+sequence &lt;span
+class=&#34;math display&#34;&gt;\[\mathsf{B}G\stackrel{i}{\,\cdot\!\to}
+E\stackrel{p}{\,\cdot\!\to} B\]&lt;/span&gt; where the maps are pointed, and
+the fibers of &lt;span class=&#34;math inline&#34;&gt;\(p\)&lt;/span&gt; are all merely
+equivalent to &lt;span class=&#34;math inline&#34;&gt;\(\mathsf{B}G\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;This is a definition by mapping into &lt;span
+class=&#34;math inline&#34;&gt;\(B\)&lt;/span&gt;. As usual, there is an equivalent map
+out of &lt;span class=&#34;math inline&#34;&gt;\(B\)&lt;/span&gt; into a classifying space,
+which is &lt;span
+class=&#34;math inline&#34;&gt;\(\mathsf{BAut}\mathsf{B}G\stackrel{\textup{def}}{=}\mathcal{U}_{\mathsf{B}G}\)&lt;/span&gt;,
+the connected component of &lt;span
+class=&#34;math inline&#34;&gt;\(\mathsf{B}G\)&lt;/span&gt; in the universe. &lt;span
+class=&#34;math inline&#34;&gt;\(\mathsf{BAut}\mathsf{B}G\)&lt;/span&gt; is a 2-type.
+Denote the classifying map by &lt;span class=&#34;math inline&#34;&gt;\(f:B\to
+\mathsf{BAut}\mathsf{B}G\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;A section &lt;span class=&#34;math inline&#34;&gt;\(s:\Pi_{x:B}f(x)\)&lt;/span&gt; of the
+map &lt;span class=&#34;math inline&#34;&gt;\(p\)&lt;/span&gt; would then be a choice of a
+term in a “&lt;span class=&#34;math inline&#34;&gt;\(\mathsf{B}G\)&lt;/span&gt;-clone” &lt;span
+class=&#34;math inline&#34;&gt;\(f(x)\)&lt;/span&gt; for each point &lt;span
+class=&#34;math inline&#34;&gt;\(x:B\)&lt;/span&gt;. This is a dependent version of a map
+&lt;span class=&#34;math inline&#34;&gt;\(B\to\mathsf{B}G\)&lt;/span&gt;, so we can justify
+calling such a section a principal bundle!&lt;/p&gt;
+&lt;p&gt;All told then, we have this equivalent picture of the extension:&lt;span
+class=&#34;math display&#34;&gt;\[E:=\sum_{x:B}f(x)
+\mathrel{\mathop{\rightleftarrows}^{\mathrm{pr}_1}_{s}} B
+\xrightarrow[]{f} \mathsf{BAut}\mathsf{B}G.\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;This setup is slightly enriched compared to the type &lt;span
+class=&#34;math inline&#34;&gt;\(B\to \mathsf{B}G\)&lt;/span&gt; because the fibers &lt;span
+class=&#34;math inline&#34;&gt;\(f(x)\)&lt;/span&gt; are 1-types, and hence have terms
+and paths on the “interior”. But each &lt;span
+class=&#34;math inline&#34;&gt;\(f(x)\)&lt;/span&gt; is also a term in &lt;span
+class=&#34;math inline&#34;&gt;\(\mathsf{BAut}\mathsf{B}G\)&lt;/span&gt; and so has
+self-identifications on the “exterior”, and even identifications between
+these at level 2.&lt;/p&gt;
+&lt;p&gt;Continuing with the use of elementary tools of homotopy type theory,
+consider &lt;span class=&#34;math inline&#34;&gt;\(\mathrm{apd}(s)\)&lt;/span&gt;, the
+dependent action on paths. This function maps paths &lt;span
+class=&#34;math inline&#34;&gt;\(p:x=_B y\)&lt;/span&gt; to paths in &lt;span
+class=&#34;math inline&#34;&gt;\(E\)&lt;/span&gt;. A path lying over &lt;span
+class=&#34;math inline&#34;&gt;\(p\)&lt;/span&gt; has a few names in the literature: a
+&lt;em&gt;path over&lt;/em&gt;, a &lt;em&gt;dependent identification&lt;/em&gt;, and a
+&lt;em&gt;lift&lt;/em&gt;. The &lt;code&gt;agda-unimath&lt;/code&gt; library uses the term
+“dependent identification,” for example. So in particular, &lt;span
+class=&#34;math inline&#34;&gt;\(\mathrm{apd}(s)(p):\mathrm{tr}(p)(s(x))=s(y)\)&lt;/span&gt;,
+which provides by univalence an equivalence from &lt;span
+class=&#34;math inline&#34;&gt;\(s(x)\)&lt;/span&gt;, through &lt;span
+class=&#34;math inline&#34;&gt;\(\mathrm{tr}(p)\)&lt;/span&gt;, through &lt;span
+class=&#34;math inline&#34;&gt;\(\mathrm{apd}(s)(p)\)&lt;/span&gt;, to &lt;span
+class=&#34;math inline&#34;&gt;\(s(y)\)&lt;/span&gt;. Thinking of &lt;span
+class=&#34;math inline&#34;&gt;\(s(x)\)&lt;/span&gt; and &lt;span
+class=&#34;math inline&#34;&gt;\(s(y)\)&lt;/span&gt; as two torsors, this equivalence is
+a connection on the principal bundle. So &lt;span
+class=&#34;math inline&#34;&gt;\(s\)&lt;/span&gt; packages the bundle aspect at the level
+of terms, and a connection at level 1. This is as it should be: the
+resuse of the term “transport” in homotopy type theory was apparently
+inspired by this analogy that is more than an analogy.&lt;/p&gt;
+&lt;p&gt;If we have two paths &lt;span class=&#34;math inline&#34;&gt;\(p,q:x=_B y\)&lt;/span&gt;
+and a 2-path &lt;span class=&#34;math inline&#34;&gt;\(H:p=q\)&lt;/span&gt;, then &lt;span
+class=&#34;math inline&#34;&gt;\(s\)&lt;/span&gt; can also apply to &lt;span
+class=&#34;math inline&#34;&gt;\(H\)&lt;/span&gt;, giving us a path between dependent
+identifications.&lt;/p&gt;
 &lt;h2 id=&#34;agda&#34;&gt;Agda&lt;/h2&gt;
 &lt;p&gt;This document is a literate Agda file which contains a formalization
-of all the concepts and results. It is written with the intent that you
-can skip all the Agda if you like. But as an author, requiring a
-parallel formalization has been an invaluable tool to solidify my own
+of all the concepts and results. It is written such that the reader can
+skip all the Agda if they like. But as an author, requiring a parallel
+formalization has been an invaluable tool to solidify my own
 understanding and increase my confidence and self-sufficiency.&lt;/p&gt;
-&lt;p&gt;I am grateful for the &lt;code&gt;agda-unimath&lt;/code&gt; library &lt;span
-class=&#34;citation&#34; data-cites=&#34;agda-unimath&#34;&gt;(Rijke et al., n.d.)&lt;/span&gt;
-which this library is built on top of.&lt;/p&gt;
+&lt;p&gt;I am grateful for the maintainers of the &lt;a
+href=&#34;https://unimath.github.io/agda-unimath/&#34;&gt;&lt;code&gt;agda-unimath&lt;/code&gt;
+library&lt;/a&gt; &lt;span class=&#34;citation&#34; data-cites=&#34;agda-unimath&#34;&gt;(&lt;a
+href=&#34;#ref-agda-unimath&#34; role=&#34;doc-biblioref&#34;&gt;Rijke &lt;em&gt;et al.&lt;/em&gt;,
+n.d.&lt;/a&gt;)&lt;/span&gt; which this library is built on top of. The code is
+hyperlinked and many of those links lead back to the web interface for
+&lt;code&gt;agda-unimath&lt;/code&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;extensions-vertical-and-horizontal&#34;&gt;Extensions: vertical and
 horizontal&lt;/h2&gt;
 &lt;p&gt;As Jon Sterling has recently emphasized &lt;span class=&#34;citation&#34;
-data-cites=&#34;sterling2023geometry&#34;&gt;(Sterling 2023)&lt;/span&gt;, homotopy type
-theory allows us to seamlessly move between objects &lt;em&gt;over&lt;/em&gt; a type
-&lt;span class=&#34;math inline&#34;&gt;\(B\)&lt;/span&gt; and maps from &lt;span
+data-cites=&#34;sterling2023geometry&#34;&gt;(&lt;a href=&#34;#ref-sterling2023geometry&#34;
+role=&#34;doc-biblioref&#34;&gt;Sterling, 2023&lt;/a&gt;)&lt;/span&gt;, homotopy type theory
+allows us to seamlessly move between objects &lt;em&gt;over&lt;/em&gt; a type &lt;span
+class=&#34;math inline&#34;&gt;\(B\)&lt;/span&gt; and maps from &lt;span
 class=&#34;math inline&#34;&gt;\(B\)&lt;/span&gt; into a universal (classifying) type,
 and that this facility simplifies our access to Grothendieck’s
 &lt;em&gt;relative point of view&lt;/em&gt;. If we have a morphism &lt;span
@@ -280,14 +380,22 @@ class=&#34;math inline&#34;&gt;\(f:B\to \mathcal{U}\)&lt;/span&gt; into a type o
 we can form the type &lt;span
 class=&#34;math inline&#34;&gt;\(E\stackrel{\textup{def}}{=}\sum_{x:B}f(x)\)&lt;/span&gt;
 and the projection map &lt;span class=&#34;math inline&#34;&gt;\(E\to B\)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;Fix a connected 1-type &lt;span class=&#34;math inline&#34;&gt;\(BG\)&lt;/span&gt; with
-chosen point &lt;span class=&#34;math inline&#34;&gt;\(*:BG\)&lt;/span&gt; (i.e. a group
-&lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt;) and a connected 2-type &lt;span
+&lt;p&gt;Fix a connected 1-type &lt;span
+class=&#34;math inline&#34;&gt;\(\mathsf{B}G\)&lt;/span&gt; with chosen point &lt;span
+class=&#34;math inline&#34;&gt;\(*:\mathsf{B}G\)&lt;/span&gt; (i.e. a group &lt;span
+class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt;) and a connected 2-type &lt;span
 class=&#34;math inline&#34;&gt;\(B\)&lt;/span&gt; with a chosen point &lt;span
-class=&#34;math inline&#34;&gt;\(x:B\)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;Following Myers, we define the type of extensions of &lt;span
-class=&#34;math inline&#34;&gt;\(B\)&lt;/span&gt; by &lt;span
-class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; to consist of&lt;/p&gt;
+class=&#34;math inline&#34;&gt;\(x:B\)&lt;/span&gt;. We will need help to avoid confusion
+about whether some variable has a basepoint. So let me clarify that
+&lt;span class=&#34;math inline&#34;&gt;\(\mathsf{B}G, E, B:\mathsf{Type}_*\)&lt;/span&gt;,
+the type of pointed types. If we need to refer to the underlying types
+we will follow the &lt;em&gt;Symmetry&lt;/em&gt; book by using &lt;span
+class=&#34;math inline&#34;&gt;\(\mathsf{B}G_\div, E_\div\)&lt;/span&gt;, and &lt;span
+class=&#34;math inline&#34;&gt;\(B_\div\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Following Myers &lt;span class=&#34;citation&#34; data-cites=&#34;myersthesis&#34;&gt;(&lt;a
+href=&#34;#ref-myersthesis&#34; role=&#34;doc-biblioref&#34;&gt;Myers, 2022&lt;/a&gt;)&lt;/span&gt;, we
+define the type of extensions of &lt;span class=&#34;math inline&#34;&gt;\(B\)&lt;/span&gt;
+by &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; to consist of&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;a type &lt;span class=&#34;math inline&#34;&gt;\(E\)&lt;/span&gt; with point &lt;span
 class=&#34;math inline&#34;&gt;\(e:E\)&lt;/span&gt;&lt;/li&gt;
@@ -295,61 +403,113 @@ class=&#34;math inline&#34;&gt;\(e:E\)&lt;/span&gt;&lt;/li&gt;
 pointedness, i.e. a term &lt;span class=&#34;math inline&#34;&gt;\(p(e)=_B
 x\)&lt;/span&gt;&lt;/li&gt;
 &lt;li&gt;a term &lt;span
-class=&#34;math inline&#34;&gt;\(F:\prod_{y:B}||\mathrm{fib}_p(y)=BG||_{-1}\)&lt;/span&gt;
+class=&#34;math inline&#34;&gt;\(F:\prod_{y:B}||\mathrm{fib}_p(y)=\mathsf{B}G||_{-1}\)&lt;/span&gt;
 that all the fibers of &lt;span class=&#34;math inline&#34;&gt;\(p\)&lt;/span&gt; are merely
-equivalent to &lt;span class=&#34;math inline&#34;&gt;\(BG\)&lt;/span&gt;.&lt;/li&gt;
+equivalent to &lt;span class=&#34;math inline&#34;&gt;\(\mathsf{B}G\)&lt;/span&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;We can then form the &lt;em&gt;fiber sequence&lt;/em&gt; &lt;span
-class=&#34;math display&#34;&gt;\[BG\stackrel{i}{\,\cdot\!\to}
+class=&#34;math display&#34;&gt;\[\mathsf{B}G\stackrel{i}{\,\cdot\!\to}
 E\stackrel{p}{\,\cdot\!\to} B\]&lt;/span&gt; where &lt;span
 class=&#34;math inline&#34;&gt;\(i\)&lt;/span&gt; is a specified equivalence of &lt;span
-class=&#34;math inline&#34;&gt;\(BG\)&lt;/span&gt; with the fiber over &lt;span
+class=&#34;math inline&#34;&gt;\(\mathsf{B}G\)&lt;/span&gt; with the fiber over &lt;span
 class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;groups&#34;&gt;Groups&lt;/h2&gt;
+&lt;p&gt;The fiber sequence is the relative point of view because it consists
+entirely of the map &lt;span
+class=&#34;math inline&#34;&gt;\(E\stackrel{B}{\,\cdot\!\to}\)&lt;/span&gt; (and the
+proof that the fibers are &lt;span
+class=&#34;math inline&#34;&gt;\(\mathsf{B}G\)&lt;/span&gt;). Type theory makes it easy
+to compute the appropriate classifying map out of &lt;span
+class=&#34;math inline&#34;&gt;\(B\)&lt;/span&gt;.&lt;/p&gt;
 &lt;!-- https://q.uiver.app/?q=WzAsNCxbMiwwLCIoYjpCKVxcdGltZXMgUChiKVxccXVhZFxccXVhZCJdLFsyLDEsIkIiXSxbMCwwLCIoYTpBKVxcdGltZXMgUChmKGEpKSJdLFswLDEsIkEiXSxbMCwxLCJcXG1hdGhybXtwcn1fMSJdLFsyLDAsIlxcbGFtYmRhKGEsIHApLihmKGEpLHApIl0sWzMsMSwiZiIsMl0sWzIsMywiXFxtYXRocm17cHJ9XzEiLDJdXQ== --&gt;
 &lt;p&gt;&lt;img src=&#34;cd4a822b78ac014dc7a0ba88013e9ee36b829485.svg&#34;
 style=&#34;transform: scale(1.4); display: block; margin-left: auto; margin-right: auto;&#34; /&gt;&lt;/p&gt;
-&lt;pre class=&#34;Agda&#34;&gt;&lt;a id=&#34;5048&#34; class=&#34;Symbol&#34;&gt;{-#&lt;/a&gt; &lt;a id=&#34;5052&#34; class=&#34;Keyword&#34;&gt;OPTIONS&lt;/a&gt; &lt;a id=&#34;5060&#34; class=&#34;Pragma&#34;&gt;--without-K&lt;/a&gt; &lt;a id=&#34;5072&#34; class=&#34;Pragma&#34;&gt;--exact-split&lt;/a&gt; &lt;a id=&#34;5086&#34; class=&#34;Symbol&#34;&gt;#-}&lt;/a&gt;
+&lt;pre class=&#34;Agda&#34;&gt;&lt;a id=&#34;9542&#34; class=&#34;Symbol&#34;&gt;{-#&lt;/a&gt; &lt;a id=&#34;9546&#34; class=&#34;Keyword&#34;&gt;OPTIONS&lt;/a&gt; &lt;a id=&#34;9554&#34; class=&#34;Pragma&#34;&gt;--without-K&lt;/a&gt; &lt;a id=&#34;9566&#34; class=&#34;Pragma&#34;&gt;--exact-split&lt;/a&gt; &lt;a id=&#34;9580&#34; class=&#34;Symbol&#34;&gt;#-}&lt;/a&gt;
 
-&lt;a id=&#34;5091&#34; class=&#34;Keyword&#34;&gt;module&lt;/a&gt; &lt;a id=&#34;5098&#34; href=&#34;group_extensions.html&#34; class=&#34;Module Operator&#34;&gt;group_extensions&lt;/a&gt; &lt;a id=&#34;5115&#34; class=&#34;Keyword&#34;&gt;where&lt;/a&gt;
+&lt;a id=&#34;9585&#34; class=&#34;Keyword&#34;&gt;module&lt;/a&gt; &lt;a id=&#34;9592&#34; href=&#34;group_extensions.html&#34; class=&#34;Module Operator&#34;&gt;group_extensions&lt;/a&gt; &lt;a id=&#34;9609&#34; class=&#34;Keyword&#34;&gt;where&lt;/a&gt;
 
-&lt;a id=&#34;5122&#34; class=&#34;Keyword&#34;&gt;open&lt;/a&gt; &lt;a id=&#34;5127&#34; class=&#34;Keyword&#34;&gt;import&lt;/a&gt; &lt;a id=&#34;5134&#34; href=&#34;foundation.dependent-identifications.html&#34; class=&#34;Module&#34;&gt;foundation.dependent-identifications&lt;/a&gt; &lt;a id=&#34;5171&#34; class=&#34;Keyword&#34;&gt;public&lt;/a&gt;
-&lt;a id=&#34;5178&#34; class=&#34;Keyword&#34;&gt;open&lt;/a&gt; &lt;a id=&#34;5183&#34; class=&#34;Keyword&#34;&gt;import&lt;/a&gt; &lt;a id=&#34;5190&#34; href=&#34;foundation.action-on-identifications-functions.html&#34; class=&#34;Module&#34;&gt;foundation.action-on-identifications-functions&lt;/a&gt;
-&lt;a id=&#34;5237&#34; class=&#34;Keyword&#34;&gt;open&lt;/a&gt; &lt;a id=&#34;5242&#34; class=&#34;Keyword&#34;&gt;import&lt;/a&gt; &lt;a id=&#34;5249&#34; href=&#34;foundation.dependent-pair-types.html&#34; class=&#34;Module&#34;&gt;foundation.dependent-pair-types&lt;/a&gt;
-&lt;a id=&#34;5281&#34; class=&#34;Keyword&#34;&gt;open&lt;/a&gt; &lt;a id=&#34;5286&#34; class=&#34;Keyword&#34;&gt;import&lt;/a&gt; &lt;a id=&#34;5293&#34; href=&#34;foundation.transport-along-higher-identifications.html&#34; class=&#34;Module&#34;&gt;foundation.transport-along-higher-identifications&lt;/a&gt;
-&lt;a id=&#34;5343&#34; class=&#34;Keyword&#34;&gt;open&lt;/a&gt; &lt;a id=&#34;5348&#34; class=&#34;Keyword&#34;&gt;import&lt;/a&gt; &lt;a id=&#34;5355&#34; href=&#34;foundation.transport-along-identifications.html&#34; class=&#34;Module&#34;&gt;foundation.transport-along-identifications&lt;/a&gt;
-&lt;a id=&#34;5398&#34; class=&#34;Keyword&#34;&gt;open&lt;/a&gt; &lt;a id=&#34;5403&#34; class=&#34;Keyword&#34;&gt;import&lt;/a&gt; &lt;a id=&#34;5410&#34; href=&#34;foundation.universe-levels.html&#34; class=&#34;Module&#34;&gt;foundation.universe-levels&lt;/a&gt;
+&lt;a id=&#34;9616&#34; class=&#34;Keyword&#34;&gt;open&lt;/a&gt; &lt;a id=&#34;9621&#34; class=&#34;Keyword&#34;&gt;import&lt;/a&gt; &lt;a id=&#34;9628&#34; href=&#34;https://unimath.github.io/agda-unimath/foundation-core.equivalences.html&#34; class=&#34;Module&#34;&gt;foundation-core.equivalences&lt;/a&gt;
+&lt;a id=&#34;9657&#34; class=&#34;Keyword&#34;&gt;open&lt;/a&gt; &lt;a id=&#34;9662&#34; class=&#34;Keyword&#34;&gt;import&lt;/a&gt; &lt;a id=&#34;9669&#34; href=&#34;https://unimath.github.io/agda-unimath/foundation-core.function-types.html&#34; class=&#34;Module&#34;&gt;foundation-core.function-types&lt;/a&gt;
+&lt;a id=&#34;9700&#34; class=&#34;Keyword&#34;&gt;open&lt;/a&gt; &lt;a id=&#34;9705&#34; class=&#34;Keyword&#34;&gt;import&lt;/a&gt; &lt;a id=&#34;9712&#34; href=&#34;https://unimath.github.io/agda-unimath/foundation-core.homotopies.html&#34; class=&#34;Module&#34;&gt;foundation-core.homotopies&lt;/a&gt;
+&lt;a id=&#34;9739&#34; class=&#34;Keyword&#34;&gt;open&lt;/a&gt; &lt;a id=&#34;9744&#34; class=&#34;Keyword&#34;&gt;import&lt;/a&gt; &lt;a id=&#34;9751&#34; href=&#34;https://unimath.github.io/agda-unimath/foundation-core.identity-types.html&#34; class=&#34;Module&#34;&gt;foundation-core.identity-types&lt;/a&gt;
 
-&lt;a id=&#34;5438&#34; class=&#34;Keyword&#34;&gt;open&lt;/a&gt; &lt;a id=&#34;5443&#34; class=&#34;Keyword&#34;&gt;import&lt;/a&gt; &lt;a id=&#34;5450&#34; href=&#34;foundation-core.equivalences.html&#34; class=&#34;Module&#34;&gt;foundation-core.equivalences&lt;/a&gt;
-&lt;a id=&#34;5479&#34; class=&#34;Keyword&#34;&gt;open&lt;/a&gt; &lt;a id=&#34;5484&#34; class=&#34;Keyword&#34;&gt;import&lt;/a&gt; &lt;a id=&#34;5491&#34; href=&#34;foundation-core.function-types.html&#34; class=&#34;Module&#34;&gt;foundation-core.function-types&lt;/a&gt;
-&lt;a id=&#34;5522&#34; class=&#34;Keyword&#34;&gt;open&lt;/a&gt; &lt;a id=&#34;5527&#34; class=&#34;Keyword&#34;&gt;import&lt;/a&gt; &lt;a id=&#34;5534&#34; href=&#34;foundation-core.homotopies.html&#34; class=&#34;Module&#34;&gt;foundation-core.homotopies&lt;/a&gt;
-&lt;a id=&#34;5561&#34; class=&#34;Keyword&#34;&gt;open&lt;/a&gt; &lt;a id=&#34;5566&#34; class=&#34;Keyword&#34;&gt;import&lt;/a&gt; &lt;a id=&#34;5573&#34; href=&#34;foundation-core.identity-types.html&#34; class=&#34;Module&#34;&gt;foundation-core.identity-types&lt;/a&gt;
+&lt;a id=&#34;9783&#34; class=&#34;Keyword&#34;&gt;open&lt;/a&gt; &lt;a id=&#34;9788&#34; class=&#34;Keyword&#34;&gt;import&lt;/a&gt; &lt;a id=&#34;9795&#34; href=&#34;https://unimath.github.io/agda-unimath/foundation.dependent-identifications.html&#34; class=&#34;Module&#34;&gt;foundation.dependent-identifications&lt;/a&gt;
+&lt;a id=&#34;9832&#34; class=&#34;Keyword&#34;&gt;open&lt;/a&gt; &lt;a id=&#34;9837&#34; class=&#34;Keyword&#34;&gt;import&lt;/a&gt; &lt;a id=&#34;9844&#34; href=&#34;https://unimath.github.io/agda-unimath/foundation.action-on-identifications-functions.html&#34; class=&#34;Module&#34;&gt;foundation.action-on-identifications-functions&lt;/a&gt;
+&lt;a id=&#34;9891&#34; class=&#34;Keyword&#34;&gt;open&lt;/a&gt; &lt;a id=&#34;9896&#34; class=&#34;Keyword&#34;&gt;import&lt;/a&gt; &lt;a id=&#34;9903&#34; href=&#34;https://unimath.github.io/agda-unimath/foundation.dependent-pair-types.html&#34; class=&#34;Module&#34;&gt;foundation.dependent-pair-types&lt;/a&gt;
+&lt;a id=&#34;9935&#34; class=&#34;Keyword&#34;&gt;open&lt;/a&gt; &lt;a id=&#34;9940&#34; class=&#34;Keyword&#34;&gt;import&lt;/a&gt; &lt;a id=&#34;9947&#34; href=&#34;https://unimath.github.io/agda-unimath/foundation.transport-along-higher-identifications.html&#34; class=&#34;Module&#34;&gt;foundation.transport-along-higher-identifications&lt;/a&gt;
+&lt;a id=&#34;9997&#34; class=&#34;Keyword&#34;&gt;open&lt;/a&gt; &lt;a id=&#34;10002&#34; class=&#34;Keyword&#34;&gt;import&lt;/a&gt; &lt;a id=&#34;10009&#34; href=&#34;https://unimath.github.io/agda-unimath/foundation.transport-along-identifications.html&#34; class=&#34;Module&#34;&gt;foundation.transport-along-identifications&lt;/a&gt;
+&lt;a id=&#34;10052&#34; class=&#34;Keyword&#34;&gt;open&lt;/a&gt; &lt;a id=&#34;10057&#34; class=&#34;Keyword&#34;&gt;import&lt;/a&gt; &lt;a id=&#34;10064&#34; href=&#34;https://unimath.github.io/agda-unimath/foundation.universe-levels.html&#34; class=&#34;Module&#34;&gt;foundation.universe-levels&lt;/a&gt;
 
-&lt;a id=&#34;5605&#34; class=&#34;Keyword&#34;&gt;module&lt;/a&gt; &lt;a id=&#34;5612&#34; href=&#34;group_extensions.html#5612&#34; class=&#34;Module&#34;&gt;_&lt;/a&gt;
-  &lt;a id=&#34;5616&#34; class=&#34;Symbol&#34;&gt;{&lt;/a&gt;&lt;a id=&#34;5617&#34; href=&#34;group_extensions.html#5617&#34; class=&#34;Bound&#34;&gt;l1&lt;/a&gt; &lt;a id=&#34;5620&#34; href=&#34;group_extensions.html#5620&#34; class=&#34;Bound&#34;&gt;l2&lt;/a&gt; &lt;a id=&#34;5623&#34; class=&#34;Symbol&#34;&gt;:&lt;/a&gt; &lt;a id=&#34;5625&#34; href=&#34;Agda.Primitive.html#591&#34; class=&#34;Postulate&#34;&gt;Level&lt;/a&gt;&lt;a id=&#34;5630&#34; class=&#34;Symbol&#34;&gt;}&lt;/a&gt; &lt;a id=&#34;5632&#34; class=&#34;Symbol&#34;&gt;{&lt;/a&gt;&lt;a id=&#34;5633&#34; href=&#34;group_extensions.html#5633&#34; class=&#34;Bound&#34;&gt;A&lt;/a&gt; &lt;a id=&#34;5635&#34; class=&#34;Symbol&#34;&gt;:&lt;/a&gt; &lt;a id=&#34;5637&#34; href=&#34;Agda.Primitive.html#320&#34; class=&#34;Primitive&#34;&gt;UU&lt;/a&gt; &lt;a id=&#34;5640&#34; href=&#34;group_extensions.html#5617&#34; class=&#34;Bound&#34;&gt;l1&lt;/a&gt;&lt;a id=&#34;5642&#34; class=&#34;Symbol&#34;&gt;}&lt;/a&gt; &lt;a id=&#34;5644&#34; class=&#34;Symbol&#34;&gt;(&lt;/a&gt;&lt;a id=&#34;5645&#34; href=&#34;group_extensions.html#5645&#34; class=&#34;Bound&#34;&gt;B&lt;/a&gt; &lt;a id=&#34;5647&#34; class=&#34;Symbol&#34;&gt;:&lt;/a&gt; &lt;a id=&#34;5649&#34; href=&#34;group_extensions.html#5633&#34; class=&#34;Bound&#34;&gt;A&lt;/a&gt; &lt;a id=&#34;5651&#34; class=&#34;Symbol&#34;&gt;→&lt;/a&gt; &lt;a id=&#34;5653&#34; href=&#34;Agda.Primitive.html#320&#34; class=&#34;Primitive&#34;&gt;UU&lt;/a&gt; &lt;a id=&#34;5656&#34; href=&#34;group_extensions.html#5620&#34; class=&#34;Bound&#34;&gt;l2&lt;/a&gt;&lt;a id=&#34;5658&#34; class=&#34;Symbol&#34;&gt;)&lt;/a&gt;
-  &lt;a id=&#34;5662&#34; class=&#34;Keyword&#34;&gt;where&lt;/a&gt;
+&lt;a id=&#34;10092&#34; class=&#34;Keyword&#34;&gt;open&lt;/a&gt; &lt;a id=&#34;10097&#34; class=&#34;Keyword&#34;&gt;import&lt;/a&gt; &lt;a id=&#34;10104&#34; href=&#34;https://unimath.github.io/agda-unimath/structured-types.pointed-types.html&#34; class=&#34;Module&#34;&gt;structured-types.pointed-types&lt;/a&gt;
+&lt;a id=&#34;10135&#34; class=&#34;Keyword&#34;&gt;open&lt;/a&gt; &lt;a id=&#34;10140&#34; class=&#34;Keyword&#34;&gt;import&lt;/a&gt; &lt;a id=&#34;10147&#34; href=&#34;https://unimath.github.io/agda-unimath/structured-types.pointed-maps.html&#34; class=&#34;Module&#34;&gt;structured-types.pointed-maps&lt;/a&gt;
+&lt;a id=&#34;10177&#34; class=&#34;Keyword&#34;&gt;open&lt;/a&gt; &lt;a id=&#34;10182&#34; class=&#34;Keyword&#34;&gt;import&lt;/a&gt; &lt;a id=&#34;10189&#34; href=&#34;https://unimath.github.io/agda-unimath/structured-types.pointed-families-of-types.html&#34; class=&#34;Module&#34;&gt;structured-types.pointed-families-of-types&lt;/a&gt;
+&lt;a id=&#34;10232&#34; class=&#34;Keyword&#34;&gt;open&lt;/a&gt; &lt;a id=&#34;10237&#34; class=&#34;Keyword&#34;&gt;import&lt;/a&gt; &lt;a id=&#34;10244&#34; href=&#34;https://unimath.github.io/agda-unimath/structured-types.pointed-sections.html&#34; class=&#34;Module&#34;&gt;structured-types.pointed-sections&lt;/a&gt;
 
-  &lt;a id=&#34;5671&#34; href=&#34;group_extensions.html#5671&#34; class=&#34;Function&#34;&gt;compute-concat-dependent-identification-refl-greg&lt;/a&gt; &lt;a id=&#34;5721&#34; class=&#34;Symbol&#34;&gt;:&lt;/a&gt;
-    &lt;a id=&#34;5727&#34; class=&#34;Symbol&#34;&gt;{&lt;/a&gt; &lt;a id=&#34;5729&#34; href=&#34;group_extensions.html#5729&#34; class=&#34;Bound&#34;&gt;y&lt;/a&gt; &lt;a id=&#34;5731&#34; href=&#34;group_extensions.html#5731&#34; class=&#34;Bound&#34;&gt;z&lt;/a&gt; &lt;a id=&#34;5733&#34; class=&#34;Symbol&#34;&gt;:&lt;/a&gt; &lt;a id=&#34;5735&#34; href=&#34;group_extensions.html#5633&#34; class=&#34;Bound&#34;&gt;A&lt;/a&gt; &lt;a id=&#34;5737&#34; class=&#34;Symbol&#34;&gt;}&lt;/a&gt; &lt;a id=&#34;5739&#34; class=&#34;Symbol&#34;&gt;(&lt;/a&gt;&lt;a id=&#34;5740&#34; href=&#34;group_extensions.html#5740&#34; class=&#34;Bound&#34;&gt;q&lt;/a&gt; &lt;a id=&#34;5742&#34; class=&#34;Symbol&#34;&gt;:&lt;/a&gt; &lt;a id=&#34;5744&#34; href=&#34;group_extensions.html#5729&#34; class=&#34;Bound&#34;&gt;y&lt;/a&gt; &lt;a id=&#34;5746&#34; href=&#34;foundation-core.identity-types.html#5999&#34; class=&#34;Function Operator&#34;&gt;＝&lt;/a&gt; &lt;a id=&#34;5748&#34; href=&#34;group_extensions.html#5731&#34; class=&#34;Bound&#34;&gt;z&lt;/a&gt;&lt;a id=&#34;5749&#34; class=&#34;Symbol&#34;&gt;)&lt;/a&gt; &lt;a id=&#34;5751&#34; class=&#34;Symbol&#34;&gt;→&lt;/a&gt; 
-    &lt;a id=&#34;5758&#34; class=&#34;Symbol&#34;&gt;{&lt;/a&gt; &lt;a id=&#34;5760&#34; href=&#34;group_extensions.html#5760&#34; class=&#34;Bound&#34;&gt;x&amp;#39;&lt;/a&gt; &lt;a id=&#34;5763&#34; href=&#34;group_extensions.html#5763&#34; class=&#34;Bound&#34;&gt;y&amp;#39;&lt;/a&gt; &lt;a id=&#34;5766&#34; class=&#34;Symbol&#34;&gt;:&lt;/a&gt; &lt;a id=&#34;5768&#34; href=&#34;group_extensions.html#5645&#34; class=&#34;Bound&#34;&gt;B&lt;/a&gt; &lt;a id=&#34;5770&#34; href=&#34;group_extensions.html#5729&#34; class=&#34;Bound&#34;&gt;y&lt;/a&gt;&lt;a id=&#34;5771&#34; class=&#34;Symbol&#34;&gt;}&lt;/a&gt; &lt;a id=&#34;5773&#34; class=&#34;Symbol&#34;&gt;{&lt;/a&gt;&lt;a id=&#34;5774&#34; href=&#34;group_extensions.html#5774&#34; class=&#34;Bound&#34;&gt;z&amp;#39;&lt;/a&gt; &lt;a id=&#34;5777&#34; class=&#34;Symbol&#34;&gt;:&lt;/a&gt; &lt;a id=&#34;5779&#34; href=&#34;group_extensions.html#5645&#34; class=&#34;Bound&#34;&gt;B&lt;/a&gt; &lt;a id=&#34;5781&#34; href=&#34;group_extensions.html#5731&#34; class=&#34;Bound&#34;&gt;z&lt;/a&gt;&lt;a id=&#34;5782&#34; class=&#34;Symbol&#34;&gt;}&lt;/a&gt; &lt;a id=&#34;5784&#34; class=&#34;Symbol&#34;&gt;(&lt;/a&gt;&lt;a id=&#34;5785&#34; href=&#34;group_extensions.html#5785&#34; class=&#34;Bound&#34;&gt;p&amp;#39;&lt;/a&gt; &lt;a id=&#34;5788&#34; class=&#34;Symbol&#34;&gt;:&lt;/a&gt; &lt;a id=&#34;5790&#34; href=&#34;group_extensions.html#5760&#34; class=&#34;Bound&#34;&gt;x&amp;#39;&lt;/a&gt; &lt;a id=&#34;5793&#34; href=&#34;foundation-core.identity-types.html#5999&#34; class=&#34;Function Operator&#34;&gt;＝&lt;/a&gt; &lt;a id=&#34;5795&#34; href=&#34;group_extensions.html#5763&#34; class=&#34;Bound&#34;&gt;y&amp;#39;&lt;/a&gt;&lt;a id=&#34;5797&#34; class=&#34;Symbol&#34;&gt;)&lt;/a&gt; &lt;a id=&#34;5799&#34; class=&#34;Symbol&#34;&gt;→&lt;/a&gt; 
-    &lt;a id=&#34;5806&#34; class=&#34;Symbol&#34;&gt;(&lt;/a&gt; &lt;a id=&#34;5808&#34; href=&#34;group_extensions.html#5808&#34; class=&#34;Bound&#34;&gt;q&amp;#39;&lt;/a&gt; &lt;a id=&#34;5811&#34; class=&#34;Symbol&#34;&gt;:&lt;/a&gt; &lt;a id=&#34;5813&#34; href=&#34;foundation-core.dependent-identifications.html#964&#34; class=&#34;Function&#34;&gt;dependent-identification&lt;/a&gt; &lt;a id=&#34;5838&#34; href=&#34;group_extensions.html#5645&#34; class=&#34;Bound&#34;&gt;B&lt;/a&gt; &lt;a id=&#34;5840&#34; href=&#34;group_extensions.html#5740&#34; class=&#34;Bound&#34;&gt;q&lt;/a&gt; &lt;a id=&#34;5842&#34; href=&#34;group_extensions.html#5763&#34; class=&#34;Bound&#34;&gt;y&amp;#39;&lt;/a&gt; &lt;a id=&#34;5845&#34; href=&#34;group_extensions.html#5774&#34; class=&#34;Bound&#34;&gt;z&amp;#39;&lt;/a&gt;&lt;a id=&#34;5847&#34; class=&#34;Symbol&#34;&gt;)&lt;/a&gt; &lt;a id=&#34;5849&#34; class=&#34;Symbol&#34;&gt;→&lt;/a&gt; 
-    &lt;a id=&#34;5856&#34; class=&#34;Symbol&#34;&gt;(&lt;/a&gt; &lt;a id=&#34;5858&#34; href=&#34;foundation.dependent-identifications.html#3934&#34; class=&#34;Function&#34;&gt;concat-dependent-identification&lt;/a&gt; &lt;a id=&#34;5890&#34; class=&#34;Symbol&#34;&gt;{&lt;/a&gt;&lt;a id=&#34;5891&#34; href=&#34;group_extensions.html#5617&#34; class=&#34;Bound&#34;&gt;l1&lt;/a&gt;&lt;a id=&#34;5893&#34; class=&#34;Symbol&#34;&gt;}&lt;/a&gt; &lt;a id=&#34;5895&#34; class=&#34;Symbol&#34;&gt;{&lt;/a&gt;&lt;a id=&#34;5896&#34; href=&#34;group_extensions.html#5620&#34; class=&#34;Bound&#34;&gt;l2&lt;/a&gt;&lt;a id=&#34;5898&#34; class=&#34;Symbol&#34;&gt;}&lt;/a&gt; &lt;a id=&#34;5900&#34; class=&#34;Symbol&#34;&gt;{&lt;/a&gt;&lt;a id=&#34;5901&#34; href=&#34;group_extensions.html#5633&#34; class=&#34;Bound&#34;&gt;A&lt;/a&gt;&lt;a id=&#34;5902&#34; class=&#34;Symbol&#34;&gt;}&lt;/a&gt; &lt;a id=&#34;5904&#34; href=&#34;group_extensions.html#5645&#34; class=&#34;Bound&#34;&gt;B&lt;/a&gt; &lt;a id=&#34;5906&#34; class=&#34;Symbol&#34;&gt;{&lt;/a&gt;&lt;a id=&#34;5907&#34; href=&#34;group_extensions.html#5729&#34; class=&#34;Bound&#34;&gt;y&lt;/a&gt;&lt;a id=&#34;5908&#34; class=&#34;Symbol&#34;&gt;}&lt;/a&gt; &lt;a id=&#34;5910&#34; class=&#34;Symbol&#34;&gt;{&lt;/a&gt;&lt;a id=&#34;5911&#34; href=&#34;group_extensions.html#5729&#34; class=&#34;Bound&#34;&gt;y&lt;/a&gt;&lt;a id=&#34;5912&#34; class=&#34;Symbol&#34;&gt;}&lt;/a&gt; &lt;a id=&#34;5914&#34; class=&#34;Symbol&#34;&gt;{&lt;/a&gt;&lt;a id=&#34;5915&#34; href=&#34;group_extensions.html#5731&#34; class=&#34;Bound&#34;&gt;z&lt;/a&gt;&lt;a id=&#34;5916&#34; class=&#34;Symbol&#34;&gt;}&lt;/a&gt; &lt;a id=&#34;5918&#34; href=&#34;foundation-core.identity-types.html#5968&#34; class=&#34;InductiveConstructor&#34;&gt;refl&lt;/a&gt; &lt;a id=&#34;5923&#34; href=&#34;group_extensions.html#5740&#34; class=&#34;Bound&#34;&gt;q&lt;/a&gt; &lt;a id=&#34;5925&#34; class=&#34;Symbol&#34;&gt;{&lt;/a&gt;&lt;a id=&#34;5926&#34; href=&#34;group_extensions.html#5760&#34; class=&#34;Bound&#34;&gt;x&amp;#39;&lt;/a&gt;&lt;a id=&#34;5928&#34; class=&#34;Symbol&#34;&gt;}&lt;/a&gt; &lt;a id=&#34;5930&#34; class=&#34;Symbol&#34;&gt;{&lt;/a&gt;&lt;a id=&#34;5931&#34; href=&#34;group_extensions.html#5763&#34; class=&#34;Bound&#34;&gt;y&amp;#39;&lt;/a&gt;&lt;a id=&#34;5933&#34; class=&#34;Symbol&#34;&gt;}&lt;/a&gt; &lt;a id=&#34;5935&#34; class=&#34;Symbol&#34;&gt;{&lt;/a&gt;&lt;a id=&#34;5936&#34; href=&#34;group_extensions.html#5774&#34; class=&#34;Bound&#34;&gt;z&amp;#39;&lt;/a&gt;&lt;a id=&#34;5938&#34; class=&#34;Symbol&#34;&gt;}&lt;/a&gt; &lt;a id=&#34;5940&#34; href=&#34;group_extensions.html#5785&#34; class=&#34;Bound&#34;&gt;p&amp;#39;&lt;/a&gt; &lt;a id=&#34;5943&#34; href=&#34;group_extensions.html#5808&#34; class=&#34;Bound&#34;&gt;q&amp;#39;&lt;/a&gt;&lt;a id=&#34;5945&#34; class=&#34;Symbol&#34;&gt;)&lt;/a&gt; &lt;a id=&#34;5947&#34; href=&#34;foundation-core.identity-types.html#5999&#34; class=&#34;Function Operator&#34;&gt;＝&lt;/a&gt; &lt;a id=&#34;5949&#34; href=&#34;foundation.action-on-identifications-functions.html#790&#34; class=&#34;Function&#34;&gt;ap&lt;/a&gt; &lt;a id=&#34;5952&#34; class=&#34;Symbol&#34;&gt;(&lt;/a&gt;&lt;a id=&#34;5953&#34; href=&#34;foundation-core.transport-along-identifications.html#729&#34; class=&#34;Function&#34;&gt;tr&lt;/a&gt; &lt;a id=&#34;5956&#34; href=&#34;group_extensions.html#5645&#34; class=&#34;Bound&#34;&gt;B&lt;/a&gt; &lt;a id=&#34;5958&#34; href=&#34;group_extensions.html#5740&#34; class=&#34;Bound&#34;&gt;q&lt;/a&gt;&lt;a id=&#34;5959&#34; class=&#34;Symbol&#34;&gt;)&lt;/a&gt; &lt;a id=&#34;5961&#34; href=&#34;group_extensions.html#5785&#34; class=&#34;Bound&#34;&gt;p&amp;#39;&lt;/a&gt; &lt;a id=&#34;5964&#34; href=&#34;foundation-core.identity-types.html#6948&#34; class=&#34;Function Operator&#34;&gt;∙&lt;/a&gt; &lt;a id=&#34;5966&#34; href=&#34;group_extensions.html#5808&#34; class=&#34;Bound&#34;&gt;q&amp;#39;&lt;/a&gt;
-  &lt;a id=&#34;5971&#34; href=&#34;group_extensions.html#5671&#34; class=&#34;Function&#34;&gt;compute-concat-dependent-identification-refl-greg&lt;/a&gt; &lt;a id=&#34;6021&#34; href=&#34;foundation-core.identity-types.html#5968&#34; class=&#34;InductiveConstructor&#34;&gt;refl&lt;/a&gt; &lt;a id=&#34;6026&#34; href=&#34;foundation-core.identity-types.html#5968&#34; class=&#34;InductiveConstructor&#34;&gt;refl&lt;/a&gt; &lt;a id=&#34;6031&#34; href=&#34;group_extensions.html#6031&#34; class=&#34;Bound&#34;&gt;q&amp;#39;&lt;/a&gt; &lt;a id=&#34;6034&#34; class=&#34;Symbol&#34;&gt;=&lt;/a&gt; &lt;a id=&#34;6036&#34; href=&#34;foundation-core.identity-types.html#5968&#34; class=&#34;InductiveConstructor&#34;&gt;refl&lt;/a&gt;
+&lt;a id=&#34;10279&#34; class=&#34;Keyword&#34;&gt;module&lt;/a&gt; &lt;a id=&#34;10286&#34; href=&#34;group_extensions.html#10286&#34; class=&#34;Module&#34;&gt;_&lt;/a&gt;
+  &lt;a id=&#34;10290&#34; class=&#34;Keyword&#34;&gt;where&lt;/a&gt;
+  &lt;a id=&#34;10298&#34; class=&#34;Comment&#34;&gt;-- point-Pointed-Type B will return the point&lt;/a&gt;
+  &lt;a id=&#34;10346&#34; class=&#34;Comment&#34;&gt;-- type-Pointed-Type B will return the type without its point&lt;/a&gt;
+  &lt;a id=&#34;10410&#34; class=&#34;Comment&#34;&gt;-- hit C-x C-= to see how a symbol was typed&lt;/a&gt;
+  &lt;a id=&#34;10457&#34; class=&#34;Comment&#34;&gt;-- https://marketplace.visualstudio.com/items?itemName=banacorn.agda-mode&lt;/a&gt;
+  &lt;a id=&#34;10533&#34; class=&#34;Comment&#34;&gt;-- p : E →∗ B // \to\ast&lt;/a&gt;
+  &lt;a id=&#34;10560&#34; class=&#34;Comment&#34;&gt;-- compare to Π-Pointed-Type which is the type of dependent functions, with base point the function that selects all the base points&lt;/a&gt;
+  &lt;a id=&#34;10695&#34; class=&#34;Comment&#34;&gt;-- pointed-Π aka Π∗&lt;/a&gt;
+  
+  &lt;a id=&#34;10720&#34; class=&#34;Comment&#34;&gt;-- DJM lemma 2.5.4: pointed families over B are equivalent to pointed maps into B&lt;/a&gt;
+  &lt;a id=&#34;10804&#34; class=&#34;Comment&#34;&gt;-- map-pointed-map-pointed-fam :&lt;/a&gt;
+  &lt;a id=&#34;10839&#34; class=&#34;Comment&#34;&gt;--   {l : Level} {E B : Pointed-Type l} → (E →∗ B) → (Pointed-Fam l B)&lt;/a&gt;
+  &lt;a id=&#34;10912&#34; class=&#34;Comment&#34;&gt;-- map-pointed-map-pointed-fam p = {!   !}&lt;/a&gt;
+
+  &lt;a id=&#34;10958&#34; class=&#34;Comment&#34;&gt;-- then prove is-equiv-map-pointed-map-pointed-fam&lt;/a&gt;
+  
 
 &lt;/pre&gt;
+&lt;pre class=&#34;Agda&#34;&gt;&lt;a id=&#34;11026&#34; class=&#34;Keyword&#34;&gt;module&lt;/a&gt; &lt;a id=&#34;11033&#34; href=&#34;group_extensions.html#11033&#34; class=&#34;Module&#34;&gt;_&lt;/a&gt;
+  &lt;a id=&#34;11037&#34; class=&#34;Symbol&#34;&gt;{&lt;/a&gt;&lt;a id=&#34;11038&#34; href=&#34;group_extensions.html#11038&#34; class=&#34;Bound&#34;&gt;l1&lt;/a&gt; &lt;a id=&#34;11041&#34; href=&#34;group_extensions.html#11041&#34; class=&#34;Bound&#34;&gt;l2&lt;/a&gt; &lt;a id=&#34;11044&#34; class=&#34;Symbol&#34;&gt;:&lt;/a&gt; &lt;a id=&#34;11046&#34; href=&#34;Agda.Primitive.html#591&#34; class=&#34;Postulate&#34;&gt;Level&lt;/a&gt;&lt;a id=&#34;11051&#34; class=&#34;Symbol&#34;&gt;}&lt;/a&gt; &lt;a id=&#34;11053&#34; class=&#34;Symbol&#34;&gt;{&lt;/a&gt;&lt;a id=&#34;11054&#34; href=&#34;group_extensions.html#11054&#34; class=&#34;Bound&#34;&gt;A&lt;/a&gt; &lt;a id=&#34;11056&#34; class=&#34;Symbol&#34;&gt;:&lt;/a&gt; &lt;a id=&#34;11058&#34; href=&#34;Agda.Primitive.html#320&#34; class=&#34;Primitive&#34;&gt;UU&lt;/a&gt; &lt;a id=&#34;11061&#34; href=&#34;group_extensions.html#11038&#34; class=&#34;Bound&#34;&gt;l1&lt;/a&gt;&lt;a id=&#34;11063&#34; class=&#34;Symbol&#34;&gt;}&lt;/a&gt; &lt;a id=&#34;11065&#34; class=&#34;Symbol&#34;&gt;(&lt;/a&gt;&lt;a id=&#34;11066&#34; href=&#34;group_extensions.html#11066&#34; class=&#34;Bound&#34;&gt;B&lt;/a&gt; &lt;a id=&#34;11068&#34; class=&#34;Symbol&#34;&gt;:&lt;/a&gt; &lt;a id=&#34;11070&#34; href=&#34;group_extensions.html#11054&#34; class=&#34;Bound&#34;&gt;A&lt;/a&gt; &lt;a id=&#34;11072&#34; class=&#34;Symbol&#34;&gt;→&lt;/a&gt; &lt;a id=&#34;11074&#34; href=&#34;Agda.Primitive.html#320&#34; class=&#34;Primitive&#34;&gt;UU&lt;/a&gt; &lt;a id=&#34;11077&#34; href=&#34;group_extensions.html#11041&#34; class=&#34;Bound&#34;&gt;l2&lt;/a&gt;&lt;a id=&#34;11079&#34; class=&#34;Symbol&#34;&gt;)&lt;/a&gt;
+  &lt;a id=&#34;11083&#34; class=&#34;Keyword&#34;&gt;where&lt;/a&gt;
+
+  &lt;a id=&#34;11092&#34; href=&#34;group_extensions.html#11092&#34; class=&#34;Function&#34;&gt;compute-concat-dependent-identification-refl-greg&lt;/a&gt; &lt;a id=&#34;11142&#34; class=&#34;Symbol&#34;&gt;:&lt;/a&gt;
+    &lt;a id=&#34;11148&#34; class=&#34;Symbol&#34;&gt;{&lt;/a&gt; &lt;a id=&#34;11150&#34; href=&#34;group_extensions.html#11150&#34; class=&#34;Bound&#34;&gt;y&lt;/a&gt; &lt;a id=&#34;11152&#34; href=&#34;group_extensions.html#11152&#34; class=&#34;Bound&#34;&gt;z&lt;/a&gt; &lt;a id=&#34;11154&#34; class=&#34;Symbol&#34;&gt;:&lt;/a&gt; &lt;a id=&#34;11156&#34; href=&#34;group_extensions.html#11054&#34; class=&#34;Bound&#34;&gt;A&lt;/a&gt; &lt;a id=&#34;11158&#34; class=&#34;Symbol&#34;&gt;}&lt;/a&gt; &lt;a id=&#34;11160&#34; class=&#34;Symbol&#34;&gt;(&lt;/a&gt;&lt;a id=&#34;11161&#34; href=&#34;group_extensions.html#11161&#34; class=&#34;Bound&#34;&gt;q&lt;/a&gt; &lt;a id=&#34;11163&#34; class=&#34;Symbol&#34;&gt;:&lt;/a&gt; &lt;a id=&#34;11165&#34; href=&#34;group_extensions.html#11150&#34; class=&#34;Bound&#34;&gt;y&lt;/a&gt; &lt;a id=&#34;11167&#34; href=&#34;https://unimath.github.io/agda-unimath/foundation-core.identity-types.html#5999&#34; class=&#34;Function Operator&#34;&gt;＝&lt;/a&gt; &lt;a id=&#34;11169&#34; href=&#34;group_extensions.html#11152&#34; class=&#34;Bound&#34;&gt;z&lt;/a&gt;&lt;a id=&#34;11170&#34; class=&#34;Symbol&#34;&gt;)&lt;/a&gt; &lt;a id=&#34;11172&#34; class=&#34;Symbol&#34;&gt;→&lt;/a&gt; 
+    &lt;a id=&#34;11179&#34; class=&#34;Symbol&#34;&gt;{&lt;/a&gt; &lt;a id=&#34;11181&#34; href=&#34;group_extensions.html#11181&#34; class=&#34;Bound&#34;&gt;x&amp;#39;&lt;/a&gt; &lt;a id=&#34;11184&#34; href=&#34;group_extensions.html#11184&#34; class=&#34;Bound&#34;&gt;y&amp;#39;&lt;/a&gt; &lt;a id=&#34;11187&#34; class=&#34;Symbol&#34;&gt;:&lt;/a&gt; &lt;a id=&#34;11189&#34; href=&#34;group_extensions.html#11066&#34; class=&#34;Bound&#34;&gt;B&lt;/a&gt; &lt;a id=&#34;11191&#34; href=&#34;group_extensions.html#11150&#34; class=&#34;Bound&#34;&gt;y&lt;/a&gt;&lt;a id=&#34;11192&#34; class=&#34;Symbol&#34;&gt;}&lt;/a&gt; &lt;a id=&#34;11194&#34; class=&#34;Symbol&#34;&gt;{&lt;/a&gt;&lt;a id=&#34;11195&#34; href=&#34;group_extensions.html#11195&#34; class=&#34;Bound&#34;&gt;z&amp;#39;&lt;/a&gt; &lt;a id=&#34;11198&#34; class=&#34;Symbol&#34;&gt;:&lt;/a&gt; &lt;a id=&#34;11200&#34; href=&#34;group_extensions.html#11066&#34; class=&#34;Bound&#34;&gt;B&lt;/a&gt; &lt;a id=&#34;11202&#34; href=&#34;group_extensions.html#11152&#34; class=&#34;Bound&#34;&gt;z&lt;/a&gt;&lt;a id=&#34;11203&#34; class=&#34;Symbol&#34;&gt;}&lt;/a&gt; &lt;a id=&#34;11205&#34; class=&#34;Symbol&#34;&gt;(&lt;/a&gt;&lt;a id=&#34;11206&#34; href=&#34;group_extensions.html#11206&#34; class=&#34;Bound&#34;&gt;p&amp;#39;&lt;/a&gt; &lt;a id=&#34;11209&#34; class=&#34;Symbol&#34;&gt;:&lt;/a&gt; &lt;a id=&#34;11211&#34; href=&#34;group_extensions.html#11181&#34; class=&#34;Bound&#34;&gt;x&amp;#39;&lt;/a&gt; &lt;a id=&#34;11214&#34; href=&#34;https://unimath.github.io/agda-unimath/foundation-core.identity-types.html#5999&#34; class=&#34;Function Operator&#34;&gt;＝&lt;/a&gt; &lt;a id=&#34;11216&#34; href=&#34;group_extensions.html#11184&#34; class=&#34;Bound&#34;&gt;y&amp;#39;&lt;/a&gt;&lt;a id=&#34;11218&#34; class=&#34;Symbol&#34;&gt;)&lt;/a&gt; &lt;a id=&#34;11220&#34; class=&#34;Symbol&#34;&gt;→&lt;/a&gt; 
+    &lt;a id=&#34;11227&#34; class=&#34;Symbol&#34;&gt;(&lt;/a&gt; &lt;a id=&#34;11229&#34; href=&#34;group_extensions.html#11229&#34; class=&#34;Bound&#34;&gt;q&amp;#39;&lt;/a&gt; &lt;a id=&#34;11232&#34; class=&#34;Symbol&#34;&gt;:&lt;/a&gt; &lt;a id=&#34;11234&#34; href=&#34;https://unimath.github.io/agda-unimath/foundation-core.dependent-identifications.html#964&#34; class=&#34;Function&#34;&gt;dependent-identification&lt;/a&gt; &lt;a id=&#34;11259&#34; href=&#34;group_extensions.html#11066&#34; class=&#34;Bound&#34;&gt;B&lt;/a&gt; &lt;a id=&#34;11261&#34; href=&#34;group_extensions.html#11161&#34; class=&#34;Bound&#34;&gt;q&lt;/a&gt; &lt;a id=&#34;11263&#34; href=&#34;group_extensions.html#11184&#34; class=&#34;Bound&#34;&gt;y&amp;#39;&lt;/a&gt; &lt;a id=&#34;11266&#34; href=&#34;group_extensions.html#11195&#34; class=&#34;Bound&#34;&gt;z&amp;#39;&lt;/a&gt;&lt;a id=&#34;11268&#34; class=&#34;Symbol&#34;&gt;)&lt;/a&gt; &lt;a id=&#34;11270&#34; class=&#34;Symbol&#34;&gt;→&lt;/a&gt; 
+    &lt;a id=&#34;11277&#34; class=&#34;Symbol&#34;&gt;(&lt;/a&gt; &lt;a id=&#34;11279&#34; href=&#34;https://unimath.github.io/agda-unimath/foundation.dependent-identifications.html#3934&#34; class=&#34;Function&#34;&gt;concat-dependent-identification&lt;/a&gt; &lt;a id=&#34;11311&#34; class=&#34;Symbol&#34;&gt;{&lt;/a&gt;&lt;a id=&#34;11312&#34; href=&#34;group_extensions.html#11038&#34; class=&#34;Bound&#34;&gt;l1&lt;/a&gt;&lt;a id=&#34;11314&#34; class=&#34;Symbol&#34;&gt;}&lt;/a&gt; &lt;a id=&#34;11316&#34; class=&#34;Symbol&#34;&gt;{&lt;/a&gt;&lt;a id=&#34;11317&#34; href=&#34;group_extensions.html#11041&#34; class=&#34;Bound&#34;&gt;l2&lt;/a&gt;&lt;a id=&#34;11319&#34; class=&#34;Symbol&#34;&gt;}&lt;/a&gt; &lt;a id=&#34;11321&#34; class=&#34;Symbol&#34;&gt;{&lt;/a&gt;&lt;a id=&#34;11322&#34; href=&#34;group_extensions.html#11054&#34; class=&#34;Bound&#34;&gt;A&lt;/a&gt;&lt;a id=&#34;11323&#34; class=&#34;Symbol&#34;&gt;}&lt;/a&gt; &lt;a id=&#34;11325&#34; href=&#34;group_extensions.html#11066&#34; class=&#34;Bound&#34;&gt;B&lt;/a&gt; &lt;a id=&#34;11327&#34; class=&#34;Symbol&#34;&gt;{&lt;/a&gt;&lt;a id=&#34;11328&#34; href=&#34;group_extensions.html#11150&#34; class=&#34;Bound&#34;&gt;y&lt;/a&gt;&lt;a id=&#34;11329&#34; class=&#34;Symbol&#34;&gt;}&lt;/a&gt; &lt;a id=&#34;11331&#34; class=&#34;Symbol&#34;&gt;{&lt;/a&gt;&lt;a id=&#34;11332&#34; href=&#34;group_extensions.html#11150&#34; class=&#34;Bound&#34;&gt;y&lt;/a&gt;&lt;a id=&#34;11333&#34; class=&#34;Symbol&#34;&gt;}&lt;/a&gt; &lt;a id=&#34;11335&#34; class=&#34;Symbol&#34;&gt;{&lt;/a&gt;&lt;a id=&#34;11336&#34; href=&#34;group_extensions.html#11152&#34; class=&#34;Bound&#34;&gt;z&lt;/a&gt;&lt;a id=&#34;11337&#34; class=&#34;Symbol&#34;&gt;}&lt;/a&gt; &lt;a id=&#34;11339&#34; href=&#34;https://unimath.github.io/agda-unimath/foundation-core.identity-types.html#5968&#34; class=&#34;InductiveConstructor&#34;&gt;refl&lt;/a&gt; &lt;a id=&#34;11344&#34; href=&#34;group_extensions.html#11161&#34; class=&#34;Bound&#34;&gt;q&lt;/a&gt; &lt;a id=&#34;11346&#34; class=&#34;Symbol&#34;&gt;{&lt;/a&gt;&lt;a id=&#34;11347&#34; href=&#34;group_extensions.html#11181&#34; class=&#34;Bound&#34;&gt;x&amp;#39;&lt;/a&gt;&lt;a id=&#34;11349&#34; class=&#34;Symbol&#34;&gt;}&lt;/a&gt; &lt;a id=&#34;11351&#34; class=&#34;Symbol&#34;&gt;{&lt;/a&gt;&lt;a id=&#34;11352&#34; href=&#34;group_extensions.html#11184&#34; class=&#34;Bound&#34;&gt;y&amp;#39;&lt;/a&gt;&lt;a id=&#34;11354&#34; class=&#34;Symbol&#34;&gt;}&lt;/a&gt; &lt;a id=&#34;11356&#34; class=&#34;Symbol&#34;&gt;{&lt;/a&gt;&lt;a id=&#34;11357&#34; href=&#34;group_extensions.html#11195&#34; class=&#34;Bound&#34;&gt;z&amp;#39;&lt;/a&gt;&lt;a id=&#34;11359&#34; class=&#34;Symbol&#34;&gt;}&lt;/a&gt; &lt;a id=&#34;11361&#34; href=&#34;group_extensions.html#11206&#34; class=&#34;Bound&#34;&gt;p&amp;#39;&lt;/a&gt; &lt;a id=&#34;11364&#34; href=&#34;group_extensions.html#11229&#34; class=&#34;Bound&#34;&gt;q&amp;#39;&lt;/a&gt;&lt;a id=&#34;11366&#34; class=&#34;Symbol&#34;&gt;)&lt;/a&gt; &lt;a id=&#34;11368&#34; href=&#34;https://unimath.github.io/agda-unimath/foundation-core.identity-types.html#5999&#34; class=&#34;Function Operator&#34;&gt;＝&lt;/a&gt; &lt;a id=&#34;11370&#34; href=&#34;https://unimath.github.io/agda-unimath/foundation.action-on-identifications-functions.html#790&#34; class=&#34;Function&#34;&gt;ap&lt;/a&gt; &lt;a id=&#34;11373&#34; class=&#34;Symbol&#34;&gt;(&lt;/a&gt;&lt;a id=&#34;11374&#34; href=&#34;https://unimath.github.io/agda-unimath/foundation-core.transport-along-identifications.html#729&#34; class=&#34;Function&#34;&gt;tr&lt;/a&gt; &lt;a id=&#34;11377&#34; href=&#34;group_extensions.html#11066&#34; class=&#34;Bound&#34;&gt;B&lt;/a&gt; &lt;a id=&#34;11379&#34; href=&#34;group_extensions.html#11161&#34; class=&#34;Bound&#34;&gt;q&lt;/a&gt;&lt;a id=&#34;11380&#34; class=&#34;Symbol&#34;&gt;)&lt;/a&gt; &lt;a id=&#34;11382&#34; href=&#34;group_extensions.html#11206&#34; class=&#34;Bound&#34;&gt;p&amp;#39;&lt;/a&gt; &lt;a id=&#34;11385&#34; href=&#34;https://unimath.github.io/agda-unimath/foundation-core.identity-types.html#6948&#34; class=&#34;Function Operator&#34;&gt;∙&lt;/a&gt; &lt;a id=&#34;11387&#34; href=&#34;group_extensions.html#11229&#34; class=&#34;Bound&#34;&gt;q&amp;#39;&lt;/a&gt;
+  &lt;a id=&#34;11392&#34; href=&#34;group_extensions.html#11092&#34; class=&#34;Function&#34;&gt;compute-concat-dependent-identification-refl-greg&lt;/a&gt; &lt;a id=&#34;11442&#34; href=&#34;https://unimath.github.io/agda-unimath/foundation-core.identity-types.html#5968&#34; class=&#34;InductiveConstructor&#34;&gt;refl&lt;/a&gt; &lt;a id=&#34;11447&#34; href=&#34;https://unimath.github.io/agda-unimath/foundation-core.identity-types.html#5968&#34; class=&#34;InductiveConstructor&#34;&gt;refl&lt;/a&gt; &lt;a id=&#34;11452&#34; href=&#34;group_extensions.html#11452&#34; class=&#34;Bound&#34;&gt;q&amp;#39;&lt;/a&gt; &lt;a id=&#34;11455&#34; class=&#34;Symbol&#34;&gt;=&lt;/a&gt; &lt;a id=&#34;11457&#34; href=&#34;https://unimath.github.io/agda-unimath/foundation-core.identity-types.html#5968&#34; class=&#34;InductiveConstructor&#34;&gt;refl&lt;/a&gt;
+
+&lt;/pre&gt;
+&lt;h2 id=&#34;group-extensions-classically&#34;&gt;Group extensions, classically&lt;/h2&gt;
+&lt;p&gt;Let’s take a look at &lt;a
+href=&#34;https://math.ucr.edu/home/baez/week223.html&#34;&gt;this informal
+overview of classical Schreier theory by John Baez&lt;/a&gt; &lt;span
+class=&#34;citation&#34; data-cites=&#34;baez_schreier_week223&#34;&gt;(&lt;a
+href=&#34;#ref-baez_schreier_week223&#34; role=&#34;doc-biblioref&#34;&gt;Baez,
+2005&lt;/a&gt;)&lt;/span&gt; and see how things line up with the univalent
+picture.&lt;/p&gt;
 &lt;div id=&#34;refs&#34; class=&#34;references csl-bib-body hanging-indent&#34;
 role=&#34;doc-bibliography&#34;&gt;
+&lt;div id=&#34;ref-baez_schreier_week223&#34; class=&#34;csl-entry&#34;
+role=&#34;doc-biblioentry&#34;&gt;
+&lt;span class=&#34;smallcaps&#34;&gt;Baez&lt;/span&gt;, J. (2005) This week’s finds in
+mathematical physics (week 223). URL &lt;a
+href=&#34;https://math.ucr.edu/home/baez/week223.html&#34;&gt;https://math.ucr.edu/home/baez/week223.html&lt;/a&gt;.
+&lt;/div&gt;
+&lt;div id=&#34;ref-myersthesis&#34; class=&#34;csl-entry&#34; role=&#34;doc-biblioentry&#34;&gt;
+&lt;span class=&#34;smallcaps&#34;&gt;Myers&lt;/span&gt;, D.J. (2022) &lt;a
+href=&#34;http://jhir.library.jhu.edu/handle/1774.2/67618&#34;&gt;Symmetry,
+geometry, modality&lt;/a&gt; (PhD thesis).
+&lt;/div&gt;
 &lt;div id=&#34;ref-agda-unimath&#34; class=&#34;csl-entry&#34; role=&#34;doc-biblioentry&#34;&gt;
-Rijke, Egbert, Elisabeth Bonnevier, Jonathan Prieto-Cubides, Fredrik
-Bakke, et al. n.d. &lt;em&gt;&lt;span class=&#34;nocase&#34;&gt;The agda-unimath
-library&lt;/span&gt;&lt;/em&gt;. &lt;a
-href=&#34;https://github.com/UniMath/agda-unimath/&#34;&gt;https://github.com/UniMath/agda-unimath/&lt;/a&gt;.
+&lt;span class=&#34;smallcaps&#34;&gt;Rijke&lt;/span&gt;, E., &lt;span
+class=&#34;smallcaps&#34;&gt;Bonnevier&lt;/span&gt;, E., &lt;span
+class=&#34;smallcaps&#34;&gt;Prieto-Cubides&lt;/span&gt;, J., &lt;span
+class=&#34;smallcaps&#34;&gt;Bakke&lt;/span&gt;, F., &amp;amp; &lt;span
+class=&#34;smallcaps&#34;&gt;others&lt;/span&gt; (n.d.) &lt;em&gt;&lt;a
+href=&#34;https://github.com/UniMath/agda-unimath/&#34;&gt;&lt;span class=&#34;nocase&#34;&gt;The
+agda-unimath library&lt;/span&gt;&lt;/a&gt;&lt;/em&gt;.
 &lt;/div&gt;
 &lt;div id=&#34;ref-sterling2023geometry&#34; class=&#34;csl-entry&#34;
 role=&#34;doc-biblioentry&#34;&gt;
-Sterling, Jonathan. 2023. &lt;span&gt;“Towards a Geometry for Syntax.”&lt;/span&gt;
-&lt;a
-href=&#34;https://arxiv.org/abs/2307.09497&#34;&gt;https://arxiv.org/abs/2307.09497&lt;/a&gt;.
+&lt;span class=&#34;smallcaps&#34;&gt;Sterling&lt;/span&gt;, J. (2023) &lt;a
+href=&#34;https://arxiv.org/abs/2307.09497&#34;&gt;Towards a geometry for
+syntax&lt;/a&gt;.
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/body&gt;
