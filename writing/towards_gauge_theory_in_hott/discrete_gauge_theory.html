@@ -18,6 +18,25 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+    }
+    .hanging div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }
   </style>
   <link rel="stylesheet" href="Agda.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Quattrocento:wght@700">
@@ -50,6 +69,8 @@ results</a></li>
 <li><a href="#not-the-fundamental-groupoid-not-the-path-groupoid"
 id="toc-not-the-fundamental-groupoid-not-the-path-groupoid">Not the
 fundamental groupoid, not the path groupoid</a></li>
+<li><a href="#combinatorial-manifolds"
+id="toc-combinatorial-manifolds">Combinatorial manifolds</a></li>
 </ul>
 </nav>
 <!-- https://pandoc.org/MANUAL.html -->
@@ -129,6 +150,187 @@ access to in HoTT.</p>
 <h2 id="not-the-fundamental-groupoid-not-the-path-groupoid">Not the
 fundamental groupoid, not the path groupoid</h2>
 <p>There are other avenues one could pursue to treat the theory of
-connections in category theory or homotopy type theory.</p>
+connections in category theory or homotopy type theory. John Baez and
+collaborators <span class="citation"
+data-cites="baez_schreiber_higher_gauge">(<a
+href="#ref-baez_schreiber_higher_gauge" role="doc-biblioref">Baez &amp;
+Schreiber, 2006</a>)</span> <span class="citation"
+data-cites="baez_huerta_higher_gauge">(<a
+href="#ref-baez_huerta_higher_gauge" role="doc-biblioref">Baez &amp;
+Huerta, 2010</a>)</span> have emphasized the <em>path groupoid</em>
+<span class="math inline">\(\mathcal{P}_1(X)\)</span> of a manifold
+<span class="math inline">\(X\)</span>, which is a sort of infinitary
+higher inductive type whose points are the points of <span
+class="math inline">\(X\)</span>, whose paths are so-called <em>thin
+homotopy</em> classes of smooth paths (paths up to a homotopy that is
+1-dimensional, for example a reparameterization of the path that simply
+changes speed), and where composition of paths is carefully defined so
+that compositions are always smooth. A connection is then simply a
+functor <span class="math inline">\(\mathcal{P}_1(X)\to BG\)</span>
+where <span class="math inline">\(BG\)</span> is a one-object groupoid
+whose paths are a given group <span
+class="math inline">\(G\)</span>.</p>
+<p>The path groupoid construction has not been defined in HoTT, and it’s
+not clear that it can be done, or whether it’s worthwhile to do so. A
+related object which does exist in HoTT is the <em>fundamental
+groupoid</em> of <span class="math inline">\(X\)</span>, whose points
+are the points of <span class="math inline">\(X\)</span> and whose paths
+are homotopy classes of paths. This is the 1-truncation of the full
+<em>fundamental <span
+class="math inline">\(\infty\)</span>-groupoid</em> of <span
+class="math inline">\(X\)</span> which does not take equivalence classes
+but retains all the paths and adds higher equalities for the homotopies.
+Mike Shulman <span class="citation" data-cites="shulman_cohesion">(<a
+href="#ref-shulman_cohesion" role="doc-biblioref">Shulman,
+2017</a>)</span> and others have developed and extended a system of
+functions and higher inductive types that act as <em>modal
+operators</em> inside HoTT, with a corresponding topos-theoretic
+interpretation that extends ideas of Lawvere known as <em>cohesion</em>.
+One of the higher inductive types is called <em>shape</em> and when
+applied to a 0-type such as a manifold, constructs its fundamental <span
+class="math inline">\(\infty\)</span>-groupoid as a higher type. This
+offers a pathway for classical objects to be imported into type theory,
+and for us to then define type-theoretic versions of classical
+constructions such as bundles and connections.</p>
+<p>But the fundamental <span
+class="math inline">\(\infty\)</span>-groupoid of a space is a
+relatively impoverished object, since paths that are homotopic are made
+equal. Connections that agree on homotopy-equivalent paths are called
+<em>flat</em> and are so special that we cannot build gauge theory with
+them! We need non-flat connections.</p>
+<h2 id="combinatorial-manifolds">Combinatorial manifolds</h2>
+<p>Per Hatcher <span class="citation" data-cites="hatcher_at">(<a
+href="#ref-hatcher_at" role="doc-biblioref">Hatcher, 2002</a>)</span> a
+<em>CW complex</em> is a space <span class="math inline">\(X\)</span>
+constructed through the following recursive procedure. Start with a set
+<span class="math inline">\(X_0\)</span>, the 0-cells of <span
+class="math inline">\(X\)</span>. Then inductively form the <span
+class="math inline">\(n\)</span>-skeleton from the <span
+class="math inline">\(n-1\)</span>-skeleton by attaching a set of disks
+via attaching maps of the boundary spheres. If <span
+class="math inline">\(I_{n}\)</span> is the indexing set at stage <span
+class="math inline">\(n\)</span>, this means forming the pushout <span
+class="math display">\[\begin{CD}
+\coprod_{I_n} S^{n-1} @&gt;\mathrm{attach}&gt;&gt; X_{n-1} \\
+@V\mathrm{incl}VV @VVV \\
+\coprod_{I_n} D^{n} @&gt;\phi_{I_n}&gt;&gt; X_{n}
+\end{CD}
+\]</span> We require each map in the set <span
+class="math inline">\(\phi_{I_n}\)</span> to be a homeomorphism on the
+interior of the disk. We will assume we stop at a finite dimension. We
+will be left with maps <span class="math inline">\(X_0\hookrightarrow
+X_1\hookrightarrow\cdots\hookrightarrow X_n\)</span> for some finite
+dimension <span class="math inline">\(n\)</span>.</p>
+<p>What spaces are equivalent to a CW complex, and which CW complexes
+have other structures such as a piecewise linear structure or a smooth
+structure? Here’s a quick rundown. <span
+class="math inline">\(\textbf{[TODO: {Get some clarity and present
+it.}]}\)</span></p>
+<p>It’s easy to see how to take the data of a classical CW complex and
+convert it into a higher inductive type. Just replace the pushout with
+the homotopy pushout, and we have constructed a type that has <span
+class="math inline">\(n\)</span>-cells living in path level <span
+class="math inline">\(n\)</span>. Of course we may end up obtaining more
+paths than we put in the constructor, since even simple spaces like
+spheres have nontrivial higher homotopy. And on the other hand our space
+may turn out to be equivalent to a type with lower truncation level than
+<span class="math inline">\(n\)</span>, for example if we create an
+interval with two points and a path between them, which nominally is a
+1-type but is equivalent to a single point. But the situation should
+mirror the classical picture, so these are all features and not
+bugs.</p>
+<p>But even a CW complex is not obviously amenable to defining discrete
+forms or connections. Why? Because the “bulk” of the manifold, the
+top-dimensional cells, have been thrust up to level <span
+class="math inline">\(n\)</span> in the type theory.</p>
+<p>Imagine trying to approximate a function <span
+class="math inline">\(f:X\to \mathbb{R}\)</span> on a manifold with some
+sort of sampling or averaging. Start by forming a fine triangulation on
+the manifold (i.e. using lots of triangles). To construct a discrete
+approximation <span class="math inline">\(f_d\)</span> it seems natural
+to assign to each triangle a value that approximates <span
+class="math inline">\(f\)</span> in that region, say by taking the
+average of <span class="math inline">\(f\)</span> over the triangle.
+What would play the role of the differential <span
+class="math inline">\(df\)</span>? It makes sense to look at two
+triangles <span class="math inline">\(t_1\)</span> and <span
+class="math inline">\(t_2\)</span> that share an edge <span
+class="math inline">\(e_{12}\)</span> and look at the difference <span
+class="math inline">\(f_d(t_2)-f_d(t_1)\)</span> and assign that to the
+edge <span class="math inline">\(e_{12}\)</span>. This is a
+<em>dual</em> edge to the triangulation, and the two vertices that it
+joins are <span class="math inline">\(t_1\)</span> and <span
+class="math inline">\(t_2\)</span> considered as single points,
+i.e. <em>dual</em> vertices.</p>
+<p>In HoTT terms we would like the top-dimensional classical information
+to live at level 0 in the type theory, and the connectivity to live at
+level 1 and so on. So instead of forming a triangulation or CW structure
+for our manifold, we want to form a <em>Cech nerve of an open
+cover</em>.</p>
+<p><span class="math inline">\(\textbf{[TODO: {define this, and cite
+theorems about its homotopy type, focusing on the niceness or other
+special conditions}]}\)</span></p>
+<p>So let’s form HITs whose points correspond to the bulk, that is to
+open sets in <span class="math inline">\(X\)</span>, so as to capture
+combinatorially structures that are samples or averages of their
+classical counterparts.</p>
+<p>This is calculus without infinitesimals and without tangent spaces.
+Paths and higher paths have finite length. There is no de Rham
+cohomology, only cellular cohomology.</p>
+<p>Consider the surface of a Rubik’s cube as a stand-in for a 2-sphere.
+Let’s call the face that has a white center the white face, even if the
+cube is scrambled. If the white face is on top and the green face is
+facing you, then yellow is on the bottom, blue is at the back, red is to
+the right and orange is to the left. Form an open cover whose open sets
+are faces plus a little spillover to the four neighboring faces. The
+nerve of this cover is an octahedron with vertices colored white, green
+and so on, with edges that correspond to adjacent faces, and with
+2-cells for the 3-way intersections taking place at the original
+corners. We can define a non-flat connection on this space, one that
+captures the intrinsic curvature of the embedding into 3-dimensional
+space, in the following way.</p>
+<p>Imagine a closed path on the original cube that starts at the white
+center square, moves along the top face and then the red face to the red
+center square, then comes around to the front green square, then back up
+to the white north pole. This path traverses three faces. In the dual
+octahedron this path picks out the white-red edge, then the red-green
+edge, then green-white. So it’s also a closed path in the dual space. We
+will assign to this curve a point in <span
+class="math inline">\(SO(2)\)</span>, which is the structure group of
+the tangent bundle of the sphere. In particular we assign the value
+“clockwise rotation by 90 degrees”. That’s what happens to an imaginary
+tangent vector as it is transported around this curve. I haven’t defined
+tangent vectors, but I don’t need to, they are just to help us
+understand why we made this choice of group element.</p>
+<p>Classically a connection is usually defined to be a 1-form with
+values in the Lie algebra of the structure group. That’s just the
+infinitesimal version of what we did, which is the assignment of group
+elements to paths.</p>
+<div id="refs" class="references csl-bib-body hanging-indent"
+role="doc-bibliography">
+<div id="ref-baez_huerta_higher_gauge" class="csl-entry"
+role="doc-biblioentry">
+<span class="smallcaps">Baez</span>, J.C. &amp; <span
+class="smallcaps">Huerta</span>, J. (2010) <a
+href="https://doi.org/10.1007/s10714-010-1070-9">An invitation to higher
+gauge theory</a>. <em>General Relativity and Gravitation</em>,
+<strong>43</strong>, 2335–2392.
+</div>
+<div id="ref-baez_schreiber_higher_gauge" class="csl-entry"
+role="doc-biblioentry">
+<span class="smallcaps">Baez</span>, J.C. &amp; <span
+class="smallcaps">Schreiber</span>, U. (2006) <a
+href="https://arxiv.org/abs/math/0511710">Higher gauge theory</a>.
+</div>
+<div id="ref-hatcher_at" class="csl-entry" role="doc-biblioentry">
+<span class="smallcaps">Hatcher</span>, A. (2002) <em>Algebraic
+topology</em>. Cambridge University Press.
+</div>
+<div id="ref-shulman_cohesion" class="csl-entry" role="doc-biblioentry">
+<span class="smallcaps">Shulman</span>, M. (2017) <a
+href="https://arxiv.org/abs/1509.07584">Brouwer’s fixed-point theorem in
+real-cohesive homotopy type theory</a>.
+</div>
+</div>
 </body>
 </html>
