@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="dcterms.date" content="2023-12-20" />
+  <title>discrete_gauge_theory</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="Agda.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Quattrocento:wght@700">
+  <style>
+  body {
+    font-family: Baskerville, 'Libre Baskerville', serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: Quattrocento, sans-serif;
+    font-weight: bold;
+    text-align: center;
+  }
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#outline" id="toc-outline">Outline</a></li>
+<li><a href="#abstract" id="toc-abstract">Abstract</a></li>
+<li><a href="#introduction" id="toc-introduction">Introduction</a></li>
+<li><a href="#section" id="toc-section"></a></li>
+</ul>
+</nav>
+<!-- https://pandoc.org/MANUAL.html -->
+<center>
+<img src="geb-logo.png"
+title="Image of the book cover of Godel Escher Bach" width="500" />
+</center>
+<h2 id="outline">Outline</h2>
+<ol type="1">
+<li>Combinatorial topology
+<ol type="1">
+<li>Cech, PL, CW</li>
+<li>Contrast with the path groupoid narratives</li>
+</ol></li>
+<li>We’ll use the k-skeleton inclusions to control maps</li>
+<li>Torsors, deloopings, BAut</li>
+<li>Where is the principal bundle, where is the connection, where is the
+curvature?</li>
+<li>Arriving at the gauge group and its delooping without using the
+“space of connections for a fixed bundle”</li>
+<li>Using the homotopy type of the gauge group
+<ol type="1">
+<li>characteristic classes</li>
+<li>seeing Chern-Weil in characteristic classes</li>
+</ol></li>
+<li>Examples, including with maximal tori</li>
+</ol>
+<h2 id="abstract">Abstract</h2>
+<p>We introduce discrete gauge theory.</p>
+<h2 id="introduction">Introduction</h2>
+<p><a href="https://en.wikipedia.org/wiki/Gauge_theory">Gauge theory</a>
+is a general methodology for defining invariants of spaces, whether
+those be invariants of the homotopy type, the homomorphism class, or the
+diffeomorphism class. We make use of mediating objects such as principal
+bundles over the space, connections on the bundles, and morphisms of
+these. These additional objects provide access to information beyond the
+homology and homotopy groups of the space, but they are also of direct
+interest as well. In physics, the fields that model matter particles are
+sections of bundles, and those that model force fields are connections.
+The laws of nature are postulated to be invariant under automorphisms of
+all the underlying principal bundles, and so all the objects we need to
+study topology are relevant in physics as well!</p>
+<p>The standard introductions to differential geometry and gauge theory
+work at the infinitesimal level. Connections are differential forms with
+values in the Lie algebra of a Lie group, forms are sections of a skew
+symmetric product of cotangent spaces. This fine local structure is so
+far inaccessible to homotopy type theory, even with modalities such as
+those offered by differential cohesion. These modalities are intriguing
+but very alien to classical intuitions. We won’t be saying more about
+that line of investigation.</p>
+<p>There is another approach, which is to draw inspiration from discrete
+and combinatorial methods. <a
+href="https://en.wikipedia.org/wiki/Discrete_differential_geometry">Discrete
+differential geometry</a> is an active field of applied mathematics and
+computer science, which has reused or created definitions of vector
+field, differential form, connection and curvature, that apply to a
+triangulated surface embedded in 3-dimensional space (as might be used
+in a computer graphics engine).</p>
+<p>Algebraic topology of course has always had a train of thought
+devoted to combinatorial approximations to smooth or continuous spaces,
+a major example of which is the notion of a CW complex. The theory of
+piecewise linear (PL) manifolds is another important example where a
+finite structure is used to capture important properties of a space.</p>
+<p>Such complexes are easy to define in homotopy type theory, as <a
+href="https://en.wikipedia.org/wiki/Homotopy_type_theory#The_univalence_axiom,_synthetic_homotopy_theory,_and_higher_inductive_types">higher
+inductive types</a>. We will see a lot of examples shortly. Can we
+define bundles, forms and connections on these?</p>
+<h2 id="section"></h2>
+</body>
+</html>
