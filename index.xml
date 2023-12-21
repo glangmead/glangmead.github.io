@@ -49,6 +49,9 @@
     text-align: center;
   }
   &lt;/style&gt;
+  &lt;script
+  src=&#34;https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js&#34;
+  type=&#34;text/javascript&#34;&gt;&lt;/script&gt;
   &lt;!--[if lt IE 9]&gt;
     &lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js&#34;&gt;&lt;/script&gt;
   &lt;![endif]--&gt;
@@ -59,7 +62,12 @@
 &lt;li&gt;&lt;a href=&#34;#outline&#34; id=&#34;toc-outline&#34;&gt;Outline&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#abstract&#34; id=&#34;toc-abstract&#34;&gt;Abstract&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#introduction&#34; id=&#34;toc-introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#section&#34; id=&#34;toc-section&#34;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#survey-of-classical-results&#34;
+id=&#34;toc-survey-of-classical-results&#34;&gt;Survey of classical
+results&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#not-the-fundamental-groupoid-not-the-path-groupoid&#34;
+id=&#34;toc-not-the-fundamental-groupoid-not-the-path-groupoid&#34;&gt;Not the
+fundamental groupoid, not the path groupoid&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/nav&gt;
 &lt;!-- https://pandoc.org/MANUAL.html --&gt;
@@ -127,7 +135,19 @@ finite structure is used to capture important properties of a space.&lt;/p&gt;
 href=&#34;https://en.wikipedia.org/wiki/Homotopy_type_theory#The_univalence_axiom,_synthetic_homotopy_theory,_and_higher_inductive_types&#34;&gt;higher
 inductive types&lt;/a&gt;. We will see a lot of examples shortly. Can we
 define bundles, forms and connections on these?&lt;/p&gt;
-&lt;h2 id=&#34;section&#34;&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;survey-of-classical-results&#34;&gt;Survey of classical results&lt;/h2&gt;
+&lt;p&gt;Here is a brief overview of the kinds of results we want to gain
+access to in HoTT.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Freed-Hopkins&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(B\mathscr{G}\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;hairy ball theorem&lt;/li&gt;
+&lt;li&gt;characteristic classes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;not-the-fundamental-groupoid-not-the-path-groupoid&#34;&gt;Not the
+fundamental groupoid, not the path groupoid&lt;/h2&gt;
+&lt;p&gt;There are other avenues one could pursue to treat the theory of
+connections in category theory or homotopy type theory.&lt;/p&gt;
 &lt;/body&gt;
 &lt;/html&gt;
 </description>
