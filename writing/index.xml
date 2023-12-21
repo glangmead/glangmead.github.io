@@ -89,6 +89,10 @@ id=&#34;toc-not-the-fundamental-groupoid-not-the-path-groupoid&#34;&gt;Not the
 fundamental groupoid, not the path groupoid&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#combinatorial-manifolds&#34;
 id=&#34;toc-combinatorial-manifolds&#34;&gt;Combinatorial manifolds&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#bg-and-mathsfbautbg&#34; id=&#34;toc-bg-and-mathsfbautbg&#34;&gt;&lt;span
+class=&#34;math inline&#34;&gt;\(BG\)&lt;/span&gt; and &lt;span
+class=&#34;math inline&#34;&gt;\(\mathsf{BAut}BG\)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#torus-groups&#34; id=&#34;toc-torus-groups&#34;&gt;Torus groups&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/nav&gt;
 &lt;!-- https://pandoc.org/MANUAL.html --&gt;
@@ -283,7 +287,7 @@ i.e. &lt;em&gt;dual&lt;/em&gt; vertices.&lt;/p&gt;
 &lt;p&gt;In HoTT terms we would like the top-dimensional classical information
 to live at level 0 in the type theory, and the connectivity to live at
 level 1 and so on. So instead of forming a triangulation or CW structure
-for our manifold, we want to form a &lt;em&gt;Cech nerve of an open
+for our manifold, we want to form a &lt;em&gt;Čech nerve of an open
 cover&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\textbf{[TODO: {define this, and cite
 theorems about its homotopy type, focusing on the niceness or other
@@ -296,17 +300,17 @@ classical counterparts.&lt;/p&gt;
 Paths and higher paths have finite length. There is no de Rham
 cohomology, only cellular cohomology.&lt;/p&gt;
 &lt;p&gt;Consider the surface of a Rubik’s cube as a stand-in for a 2-sphere.
-Let’s call the face that has a white center the white face, even if the
-cube is scrambled. If the white face is on top and the green face is
-facing you, then yellow is on the bottom, blue is at the back, red is to
-the right and orange is to the left. Form an open cover whose open sets
-are faces plus a little spillover to the four neighboring faces. The
-nerve of this cover is an octahedron with vertices colored white, green
-and so on, with edges that correspond to adjacent faces, and with
-2-cells for the 3-way intersections taking place at the original
-corners. We can define a non-flat connection on this space, one that
-captures the intrinsic curvature of the embedding into 3-dimensional
-space, in the following way.&lt;/p&gt;
+Let’s call the face that has a white center the white face. If the white
+face is on top and the green face is facing you, then yellow is on the
+bottom, blue is at the back, red is to the right and orange is to the
+left. (This works even if the cube is scrambled.) Form an open cover
+whose open sets are faces plus a little spillover to the four
+neighboring faces. The nerve of this cover is an octahedron with
+vertices colored white, green and so on, with edges that correspond to
+adjacent faces, and with 2-cells for the 3-way intersections taking
+place at the original corners. We can define a non-flat connection on
+this space, one that captures the intrinsic curvature of the embedding
+into 3-dimensional space, in the following way.&lt;/p&gt;
 &lt;p&gt;Imagine a closed path on the original cube that starts at the white
 center square, moves along the top face and then the red face to the red
 center square, then comes around to the front green square, then back up
@@ -324,6 +328,47 @@ understand why we made this choice of group element.&lt;/p&gt;
 values in the Lie algebra of the structure group. That’s just the
 infinitesimal version of what we did, which is the assignment of group
 elements to paths.&lt;/p&gt;
+&lt;pre class=&#34;Agda&#34;&gt;&lt;a id=&#34;13497&#34; class=&#34;Symbol&#34;&gt;{-#&lt;/a&gt; &lt;a id=&#34;13501&#34; class=&#34;Keyword&#34;&gt;OPTIONS&lt;/a&gt; &lt;a id=&#34;13509&#34; class=&#34;Pragma&#34;&gt;--without-K&lt;/a&gt; &lt;a id=&#34;13521&#34; class=&#34;Pragma&#34;&gt;--cohesion&lt;/a&gt; &lt;a id=&#34;13532&#34; class=&#34;Pragma&#34;&gt;--flat-split&lt;/a&gt; &lt;a id=&#34;13545&#34; class=&#34;Symbol&#34;&gt;#-}&lt;/a&gt;
+
+&lt;a id=&#34;13550&#34; class=&#34;Keyword&#34;&gt;module&lt;/a&gt; &lt;a id=&#34;13557&#34; href=&#34;discrete_gauge_theory.html&#34; class=&#34;Module Operator&#34;&gt;discrete_gauge_theory&lt;/a&gt; &lt;a id=&#34;13579&#34; class=&#34;Keyword&#34;&gt;where&lt;/a&gt;
+
+&lt;a id=&#34;13586&#34; class=&#34;Comment&#34;&gt;-- octahedron&lt;/a&gt;
+&lt;/pre&gt;
+&lt;h2 id=&#34;bg-and-mathsfbautbg&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(BG\)&lt;/span&gt; and
+&lt;span class=&#34;math inline&#34;&gt;\(\mathsf{BAut}BG\)&lt;/span&gt;&lt;/h2&gt;
+&lt;p&gt;Let &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; be a group which is a
+0-type. Then we can deloop &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; by
+forming the pointed type of &lt;span
+class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt;-torsors, called &lt;span
+class=&#34;math inline&#34;&gt;\(BG_+\)&lt;/span&gt;, where the &lt;span
+class=&#34;math inline&#34;&gt;\(+\)&lt;/span&gt; denotes that the space has a base
+point. We will refer to base points as &lt;span
+class=&#34;math inline&#34;&gt;\(*\)&lt;/span&gt;, or when there are multiple basepoints
+using &lt;span class=&#34;math inline&#34;&gt;\(*_{BG}\)&lt;/span&gt;. The underlying type
+of &lt;span class=&#34;math inline&#34;&gt;\(BG_+\)&lt;/span&gt; will be denoted &lt;span
+class=&#34;math inline&#34;&gt;\(BG_-\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Given any type &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt;, we can form
+&lt;span class=&#34;math inline&#34;&gt;\(\mathsf{BAut}X\)&lt;/span&gt; which is the pointed
+type of types merely equivalent to &lt;span
+class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt;, pointed by &lt;span
+class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt;. You can think of this as collapsing
+&lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; to a point, a term in &lt;span
+class=&#34;math inline&#34;&gt;\(\mathsf{BAut}X\)&lt;/span&gt;. The duality between
+“&lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; is a type and has points of its
+own” and “&lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; is a point in a type of
+types” will keep coming up.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{CD}
+X_0 @&amp;gt;&amp;gt;&amp;gt; X_1 @&amp;gt;&amp;gt;&amp;gt; X \\
+@VVV @VVV @VVV \\
+X_0 @&amp;gt;&amp;gt;&amp;gt; BG @&amp;gt;&amp;gt;&amp;gt; \mathsf{BAut}BG
+\end{CD}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;h2 id=&#34;torus-groups&#34;&gt;Torus groups&lt;/h2&gt;
+&lt;p&gt;We can get partway towards a theory of principal bundles over
+arbitrary Lie groups by using the &lt;a
+href=&#34;https://ncatlab.org/nlab/show/splitting+principle&#34;&gt;maximal
+torus&lt;/a&gt;.&lt;/p&gt;
 &lt;div id=&#34;refs&#34; class=&#34;references csl-bib-body hanging-indent&#34;
 role=&#34;doc-bibliography&#34;&gt;
 &lt;div id=&#34;ref-baez_huerta_higher_gauge&#34; class=&#34;csl-entry&#34;

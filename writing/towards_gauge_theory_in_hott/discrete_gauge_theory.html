@@ -71,6 +71,10 @@ id="toc-not-the-fundamental-groupoid-not-the-path-groupoid">Not the
 fundamental groupoid, not the path groupoid</a></li>
 <li><a href="#combinatorial-manifolds"
 id="toc-combinatorial-manifolds">Combinatorial manifolds</a></li>
+<li><a href="#bg-and-mathsfbautbg" id="toc-bg-and-mathsfbautbg"><span
+class="math inline">\(BG\)</span> and <span
+class="math inline">\(\mathsf{BAut}BG\)</span></a></li>
+<li><a href="#torus-groups" id="toc-torus-groups">Torus groups</a></li>
 </ul>
 </nav>
 <!-- https://pandoc.org/MANUAL.html -->
@@ -265,7 +269,7 @@ i.e. <em>dual</em> vertices.</p>
 <p>In HoTT terms we would like the top-dimensional classical information
 to live at level 0 in the type theory, and the connectivity to live at
 level 1 and so on. So instead of forming a triangulation or CW structure
-for our manifold, we want to form a <em>Cech nerve of an open
+for our manifold, we want to form a <em>Čech nerve of an open
 cover</em>.</p>
 <p><span class="math inline">\(\textbf{[TODO: {define this, and cite
 theorems about its homotopy type, focusing on the niceness or other
@@ -278,17 +282,17 @@ classical counterparts.</p>
 Paths and higher paths have finite length. There is no de Rham
 cohomology, only cellular cohomology.</p>
 <p>Consider the surface of a Rubik’s cube as a stand-in for a 2-sphere.
-Let’s call the face that has a white center the white face, even if the
-cube is scrambled. If the white face is on top and the green face is
-facing you, then yellow is on the bottom, blue is at the back, red is to
-the right and orange is to the left. Form an open cover whose open sets
-are faces plus a little spillover to the four neighboring faces. The
-nerve of this cover is an octahedron with vertices colored white, green
-and so on, with edges that correspond to adjacent faces, and with
-2-cells for the 3-way intersections taking place at the original
-corners. We can define a non-flat connection on this space, one that
-captures the intrinsic curvature of the embedding into 3-dimensional
-space, in the following way.</p>
+Let’s call the face that has a white center the white face. If the white
+face is on top and the green face is facing you, then yellow is on the
+bottom, blue is at the back, red is to the right and orange is to the
+left. (This works even if the cube is scrambled.) Form an open cover
+whose open sets are faces plus a little spillover to the four
+neighboring faces. The nerve of this cover is an octahedron with
+vertices colored white, green and so on, with edges that correspond to
+adjacent faces, and with 2-cells for the 3-way intersections taking
+place at the original corners. We can define a non-flat connection on
+this space, one that captures the intrinsic curvature of the embedding
+into 3-dimensional space, in the following way.</p>
 <p>Imagine a closed path on the original cube that starts at the white
 center square, moves along the top face and then the red face to the red
 center square, then comes around to the front green square, then back up
@@ -306,6 +310,47 @@ understand why we made this choice of group element.</p>
 values in the Lie algebra of the structure group. That’s just the
 infinitesimal version of what we did, which is the assignment of group
 elements to paths.</p>
+<pre class="Agda"><a id="13497" class="Symbol">{-#</a> <a id="13501" class="Keyword">OPTIONS</a> <a id="13509" class="Pragma">--without-K</a> <a id="13521" class="Pragma">--cohesion</a> <a id="13532" class="Pragma">--flat-split</a> <a id="13545" class="Symbol">#-}</a>
+
+<a id="13550" class="Keyword">module</a> <a id="13557" href="discrete_gauge_theory.html" class="Module Operator">discrete_gauge_theory</a> <a id="13579" class="Keyword">where</a>
+
+<a id="13586" class="Comment">-- octahedron</a>
+</pre>
+<h2 id="bg-and-mathsfbautbg"><span class="math inline">\(BG\)</span> and
+<span class="math inline">\(\mathsf{BAut}BG\)</span></h2>
+<p>Let <span class="math inline">\(G\)</span> be a group which is a
+0-type. Then we can deloop <span class="math inline">\(G\)</span> by
+forming the pointed type of <span
+class="math inline">\(G\)</span>-torsors, called <span
+class="math inline">\(BG_+\)</span>, where the <span
+class="math inline">\(+\)</span> denotes that the space has a base
+point. We will refer to base points as <span
+class="math inline">\(*\)</span>, or when there are multiple basepoints
+using <span class="math inline">\(*_{BG}\)</span>. The underlying type
+of <span class="math inline">\(BG_+\)</span> will be denoted <span
+class="math inline">\(BG_-\)</span>.</p>
+<p>Given any type <span class="math inline">\(X\)</span>, we can form
+<span class="math inline">\(\mathsf{BAut}X\)</span> which is the pointed
+type of types merely equivalent to <span
+class="math inline">\(X\)</span>, pointed by <span
+class="math inline">\(X\)</span>. You can think of this as collapsing
+<span class="math inline">\(X\)</span> to a point, a term in <span
+class="math inline">\(\mathsf{BAut}X\)</span>. The duality between
+“<span class="math inline">\(X\)</span> is a type and has points of its
+own” and “<span class="math inline">\(X\)</span> is a point in a type of
+types” will keep coming up.</p>
+<p><span class="math display">\[
+\begin{CD}
+X_0 @&gt;&gt;&gt; X_1 @&gt;&gt;&gt; X \\
+@VVV @VVV @VVV \\
+X_0 @&gt;&gt;&gt; BG @&gt;&gt;&gt; \mathsf{BAut}BG
+\end{CD}
+\]</span></p>
+<h2 id="torus-groups">Torus groups</h2>
+<p>We can get partway towards a theory of principal bundles over
+arbitrary Lie groups by using the <a
+href="https://ncatlab.org/nlab/show/splitting+principle">maximal
+torus</a>.</p>
 <div id="refs" class="references csl-bib-body hanging-indent"
 role="doc-bibliography">
 <div id="ref-baez_huerta_higher_gauge" class="csl-entry"
