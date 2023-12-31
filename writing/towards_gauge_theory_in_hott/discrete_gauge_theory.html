@@ -71,10 +71,12 @@ id="toc-not-the-fundamental-groupoid-not-the-path-groupoid">Not the
 fundamental groupoid, not the path groupoid</a></li>
 <li><a href="#combinatorial-manifolds"
 id="toc-combinatorial-manifolds">Combinatorial manifolds</a></li>
-<li><a href="#bg-and-mathsfbautbg" id="toc-bg-and-mathsfbautbg"><span
-class="math inline">\(BG\)</span> and <span
-class="math inline">\(\mathsf{BAut}BG\)</span></a></li>
+<li><a href="#bundles-with-connection"
+id="toc-bundles-with-connection">Bundles with connection</a></li>
+<li><a href="#gauge-transformations"
+id="toc-gauge-transformations">Gauge transformations</a></li>
 <li><a href="#torus-groups" id="toc-torus-groups">Torus groups</a></li>
+<li><a href="#follow-ups" id="toc-follow-ups">Follow-ups</a></li>
 </ul>
 </nav>
 <!-- https://pandoc.org/MANUAL.html -->
@@ -314,43 +316,99 @@ elements to paths.</p>
 
 <a id="13550" class="Keyword">module</a> <a id="13557" href="discrete_gauge_theory.html" class="Module Operator">discrete_gauge_theory</a> <a id="13579" class="Keyword">where</a>
 
-<a id="13586" class="Comment">-- octahedron</a>
+<a id="13586" class="Keyword">open</a> <a id="13591" class="Keyword">import</a> <a id="13598" href="https://unimath.github.io/agda-unimath/foundation.universe-levels.html" class="Module">foundation.universe-levels</a>
+<a id="13625" class="Keyword">open</a> <a id="13630" class="Keyword">import</a> <a id="13637" href="https://unimath.github.io/agda-unimath/foundation-core.identity-types.html" class="Module">foundation-core.identity-types</a>
 </pre>
-<h2 id="bg-and-mathsfbautbg"><span class="math inline">\(BG\)</span> and
-<span class="math inline">\(\mathsf{BAut}BG\)</span></h2>
-<p>Let <span class="math inline">\(G\)</span> be a group which is a
-0-type. Then we can deloop <span class="math inline">\(G\)</span> by
-forming the pointed type of <span
-class="math inline">\(G\)</span>-torsors, called <span
-class="math inline">\(BG_+\)</span>, where the <span
-class="math inline">\(+\)</span> denotes that the space has a base
-point. We will refer to base points as <span
-class="math inline">\(*\)</span>, or when there are multiple basepoints
-using <span class="math inline">\(*_{BG}\)</span>. The underlying type
-of <span class="math inline">\(BG_+\)</span> will be denoted <span
-class="math inline">\(BG_-\)</span>.</p>
-<p>Given any type <span class="math inline">\(X\)</span>, we can form
-<span class="math inline">\(\mathsf{BAut}X\)</span> which is the pointed
-type of types merely equivalent to <span
-class="math inline">\(X\)</span>, pointed by <span
-class="math inline">\(X\)</span>. You can think of this as collapsing
-<span class="math inline">\(X\)</span> to a point, a term in <span
-class="math inline">\(\mathsf{BAut}X\)</span>. The duality between
-“<span class="math inline">\(X\)</span> is a type and has points of its
-own” and “<span class="math inline">\(X\)</span> is a point in a type of
-types” will keep coming up.</p>
-<p><span class="math display">\[
-\begin{CD}
-X_0 @&gt;&gt;&gt; X_1 @&gt;&gt;&gt; X \\
-@VVV @VVV @VVV \\
-X_0 @&gt;&gt;&gt; BG @&gt;&gt;&gt; \mathsf{BAut}BG
-\end{CD}
-\]</span></p>
+<h2 id="bundles-with-connection">Bundles with connection</h2>
+<p>We take as our starting point the delooping framework of <span
+class="citation" data-cites="buchholtz2023central">(<a
+href="#ref-buchholtz2023central" role="doc-biblioref">Buchholtz <em>et
+al.</em>, 2023</a>)</span>. Consider the central type <span
+class="math inline">\(S^1\)</span>, given as the higher inductive
+type:</p>
+<pre class="Agda"><a id="13862" class="Keyword">postulate</a>
+  <a id="𝕊¹"></a><a id="13874" href="discrete_gauge_theory.html#13874" class="Postulate">𝕊¹</a> <a id="13877" class="Symbol">:</a> <a id="13879" href="Agda.Primitive.html#388" class="Primitive">UU</a> <a id="13882" href="Agda.Primitive.html#915" class="Primitive">lzero</a>
+
+<a id="13889" class="Keyword">postulate</a>
+  <a id="base-𝕊¹"></a><a id="13901" href="discrete_gauge_theory.html#13901" class="Postulate">base-𝕊¹</a> <a id="13909" class="Symbol">:</a> <a id="13911" href="discrete_gauge_theory.html#13874" class="Postulate">𝕊¹</a>
+
+<a id="13915" class="Keyword">postulate</a>
+  <a id="loop-𝕊¹"></a><a id="13927" href="discrete_gauge_theory.html#13927" class="Postulate">loop-𝕊¹</a> <a id="13935" class="Symbol">:</a> <a id="13937" href="https://unimath.github.io/agda-unimath/foundation-core.identity-types.html#5936" class="Datatype">Id</a> <a id="13940" href="discrete_gauge_theory.html#13901" class="Postulate">base-𝕊¹</a> <a id="13948" href="discrete_gauge_theory.html#13901" class="Postulate">base-𝕊¹</a>
+</pre>
+<p>Given a nerve <span class="math inline">\(X\)</span>, the type of
+principal <span class="math inline">\(S^1\)</span> bundles over <span
+class="math inline">\(X\)</span> is the function type <span
+class="math inline">\(X\to \mathsf{BAut}_1 S^1\)</span>.</p>
+<p>Given a particular function <span class="math inline">\(f:X\to
+\mathsf{BAut}_1 S^1\)</span>, what does this function do at the various
+levels of <span class="math inline">\(X\)</span>? On terms <span
+class="math inline">\(x_0:X\)</span> it assigns a particular <span
+class="math inline">\(S^1\)</span>-torsor <span
+class="math inline">\(f(x_0):\mathsf{BAut}_1 S^1\)</span>. On paths
+<span class="math inline">\(p:x_1=_X x_2\)</span> it assigns an
+isomorphism of torsors <span
+class="math inline">\(f(p):f(x_0)=f(x_1)\)</span>.</p>
+<p>Next we will form the total space <span
+class="math inline">\((x:X)\times f(x)\)</span> and look at the what we
+know about <em>dependent paths</em>, also known as <em>pathovers</em>.
+We claim that we can lift paths uniquely to dependent paths in a way
+that corresponds to a connection on this bundle.</p>
+<p>Can this connection be curved, or is it necessarily flat? It can be
+curved! Consider a path in the Rubik’s cube nerve (the octahedron)
+starting from the top (white) point (which stands in for the whole white
+face of the cube) and moving to the red point, then green, then back to
+the white point. Applying <span class="math inline">\(f\)</span> to this
+loop gives an automorphism of the torsor <span
+class="math inline">\(f(white)\)</span>. This is a group element of the
+central type <span class="math inline">\(S^1\)</span> which we will name
+<span class="math inline">\(f(wrgw)\)</span>. This can be a non-identity
+element. But since this path bounds a 2-cell <span
+class="math inline">\(wrg\)</span> in <span
+class="math inline">\(X\)</span>, there is a path from this loop to
+<span class="math inline">\(\mathrm{refl}_w\)</span>. Is there a path
+from <span class="math inline">\(f(wrgw)\)</span> to <span
+class="math inline">\(1_{S^1}\)</span>? Yes, the central type <span
+class="math inline">\(S^1\)</span> is connected so there are various
+paths we could choose, which differ by winding number. The 2-face will
+map to this path.</p>
+<p>The lifting of paths is a connection, and the assignment of paths
+<span class="math inline">\(1=_{S^1}g\)</span> to 2-cells is curvature.
+Classically these are defined infinitesimally as a 1-form and a 2-form,
+so it’s all making sense.</p>
+<p>Classically we have that hiccup that connections aren’t actually
+1-forms, they are points in an affine space modeled on 1-forms. But
+curvature is an honest 2-form. Can we detect that hiccup here?</p>
+<h2 id="gauge-transformations">Gauge transformations</h2>
+<p>Physicists call automorphisms of the principal bundle <em>gauge
+transformations</em>. <span class="math inline">\(\textbf{[TODO:
+{explain about torsors and gauges and such}]}\)</span>. This means
+homotopies of the given bundle <span class="math inline">\(f:X\to
+\mathsf{BAut}_1 S^1\)</span>, i.e. functions of type <span
+class="math inline">\((x:X)\to f(x)=f(x)\)</span>.</p>
+<p>Donaldson-Kronheimer: “The non-triviality of the orbit space is a
+reflection of the impossibility of finding a uniform, global procedure
+by which to pick out a preferred gauge for each equivalence class of
+connections;” (<a
+href="zotero://select/library/items/6SNR3CNY">Donaldson and Kronheimer,
+1997, p. 185</a>) (<a
+href="zotero://open-pdf/library/items/CIC23ZVM?page=185&amp;annotation=2KPBLMAP">pdf</a>)</p>
+<p>The action of <span class="math inline">\(\mathscr{G}\)</span> on
+<span class="math inline">\(\mathscr{A}\)</span> is not free, even when
+a connection <span class="math inline">\(A\)</span> is irreducible. The
+stabilizer of <span class="math inline">\(A\)</span> coincides with the
+center of <span class="math inline">\(G\)</span>. This leads to framed
+connections.</p>
 <h2 id="torus-groups">Torus groups</h2>
 <p>We can get partway towards a theory of principal bundles over
 arbitrary Lie groups by using the <a
 href="https://ncatlab.org/nlab/show/splitting+principle">maximal
-torus</a>.</p>
+torus</a> (aka “splitting principle”).</p>
+<p>Leray-Hirsch theorem.</p>
+<h2 id="follow-ups">Follow-ups</h2>
+<p><a href="zotero://select/items/1_E7IEEMRP">Scoccola 05/2020 -
+Nilpotent Types and Fracture Squares in Homotopy Type Theory</a></p>
+<p><a href="zotero://select/items/1_TX88MRXW">Cohen - The Topology of
+Fiber Bundles Lecture Notes</a></p>
 <div id="refs" class="references csl-bib-body hanging-indent"
 role="doc-bibliography">
 <div id="ref-baez_huerta_higher_gauge" class="csl-entry"
@@ -366,6 +424,15 @@ role="doc-biblioentry">
 <span class="smallcaps">Baez</span>, J.C. &amp; <span
 class="smallcaps">Schreiber</span>, U. (2006) <a
 href="https://arxiv.org/abs/math/0511710">Higher gauge theory</a>.
+</div>
+<div id="ref-buchholtz2023central" class="csl-entry"
+role="doc-biblioentry">
+<span class="smallcaps">Buchholtz</span>, U., <span
+class="smallcaps">Christensen</span>, J.D., <span
+class="smallcaps">Flaten</span>, J.G.T., &amp; <span
+class="smallcaps">Rijke</span>, E. (2023) <a
+href="https://arxiv.org/abs/2301.02636">Central h-spaces and banded
+types</a>.
 </div>
 <div id="ref-hatcher_at" class="csl-entry" role="doc-biblioentry">
 <span class="smallcaps">Hatcher</span>, A. (2002) <em>Algebraic

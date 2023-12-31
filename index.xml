@@ -89,10 +89,12 @@ id=&#34;toc-not-the-fundamental-groupoid-not-the-path-groupoid&#34;&gt;Not the
 fundamental groupoid, not the path groupoid&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#combinatorial-manifolds&#34;
 id=&#34;toc-combinatorial-manifolds&#34;&gt;Combinatorial manifolds&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#bg-and-mathsfbautbg&#34; id=&#34;toc-bg-and-mathsfbautbg&#34;&gt;&lt;span
-class=&#34;math inline&#34;&gt;\(BG\)&lt;/span&gt; and &lt;span
-class=&#34;math inline&#34;&gt;\(\mathsf{BAut}BG\)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#bundles-with-connection&#34;
+id=&#34;toc-bundles-with-connection&#34;&gt;Bundles with connection&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#gauge-transformations&#34;
+id=&#34;toc-gauge-transformations&#34;&gt;Gauge transformations&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#torus-groups&#34; id=&#34;toc-torus-groups&#34;&gt;Torus groups&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#follow-ups&#34; id=&#34;toc-follow-ups&#34;&gt;Follow-ups&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/nav&gt;
 &lt;!-- https://pandoc.org/MANUAL.html --&gt;
@@ -332,43 +334,99 @@ elements to paths.&lt;/p&gt;
 
 &lt;a id=&#34;13550&#34; class=&#34;Keyword&#34;&gt;module&lt;/a&gt; &lt;a id=&#34;13557&#34; href=&#34;discrete_gauge_theory.html&#34; class=&#34;Module Operator&#34;&gt;discrete_gauge_theory&lt;/a&gt; &lt;a id=&#34;13579&#34; class=&#34;Keyword&#34;&gt;where&lt;/a&gt;
 
-&lt;a id=&#34;13586&#34; class=&#34;Comment&#34;&gt;-- octahedron&lt;/a&gt;
+&lt;a id=&#34;13586&#34; class=&#34;Keyword&#34;&gt;open&lt;/a&gt; &lt;a id=&#34;13591&#34; class=&#34;Keyword&#34;&gt;import&lt;/a&gt; &lt;a id=&#34;13598&#34; href=&#34;https://unimath.github.io/agda-unimath/foundation.universe-levels.html&#34; class=&#34;Module&#34;&gt;foundation.universe-levels&lt;/a&gt;
+&lt;a id=&#34;13625&#34; class=&#34;Keyword&#34;&gt;open&lt;/a&gt; &lt;a id=&#34;13630&#34; class=&#34;Keyword&#34;&gt;import&lt;/a&gt; &lt;a id=&#34;13637&#34; href=&#34;https://unimath.github.io/agda-unimath/foundation-core.identity-types.html&#34; class=&#34;Module&#34;&gt;foundation-core.identity-types&lt;/a&gt;
 &lt;/pre&gt;
-&lt;h2 id=&#34;bg-and-mathsfbautbg&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(BG\)&lt;/span&gt; and
-&lt;span class=&#34;math inline&#34;&gt;\(\mathsf{BAut}BG\)&lt;/span&gt;&lt;/h2&gt;
-&lt;p&gt;Let &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; be a group which is a
-0-type. Then we can deloop &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; by
-forming the pointed type of &lt;span
-class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt;-torsors, called &lt;span
-class=&#34;math inline&#34;&gt;\(BG_+\)&lt;/span&gt;, where the &lt;span
-class=&#34;math inline&#34;&gt;\(+\)&lt;/span&gt; denotes that the space has a base
-point. We will refer to base points as &lt;span
-class=&#34;math inline&#34;&gt;\(*\)&lt;/span&gt;, or when there are multiple basepoints
-using &lt;span class=&#34;math inline&#34;&gt;\(*_{BG}\)&lt;/span&gt;. The underlying type
-of &lt;span class=&#34;math inline&#34;&gt;\(BG_+\)&lt;/span&gt; will be denoted &lt;span
-class=&#34;math inline&#34;&gt;\(BG_-\)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;Given any type &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt;, we can form
-&lt;span class=&#34;math inline&#34;&gt;\(\mathsf{BAut}X\)&lt;/span&gt; which is the pointed
-type of types merely equivalent to &lt;span
-class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt;, pointed by &lt;span
-class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt;. You can think of this as collapsing
-&lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; to a point, a term in &lt;span
-class=&#34;math inline&#34;&gt;\(\mathsf{BAut}X\)&lt;/span&gt;. The duality between
-“&lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; is a type and has points of its
-own” and “&lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; is a point in a type of
-types” will keep coming up.&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
-\begin{CD}
-X_0 @&amp;gt;&amp;gt;&amp;gt; X_1 @&amp;gt;&amp;gt;&amp;gt; X \\
-@VVV @VVV @VVV \\
-X_0 @&amp;gt;&amp;gt;&amp;gt; BG @&amp;gt;&amp;gt;&amp;gt; \mathsf{BAut}BG
-\end{CD}
-\]&lt;/span&gt;&lt;/p&gt;
+&lt;h2 id=&#34;bundles-with-connection&#34;&gt;Bundles with connection&lt;/h2&gt;
+&lt;p&gt;We take as our starting point the delooping framework of &lt;span
+class=&#34;citation&#34; data-cites=&#34;buchholtz2023central&#34;&gt;(&lt;a
+href=&#34;#ref-buchholtz2023central&#34; role=&#34;doc-biblioref&#34;&gt;Buchholtz &lt;em&gt;et
+al.&lt;/em&gt;, 2023&lt;/a&gt;)&lt;/span&gt;. Consider the central type &lt;span
+class=&#34;math inline&#34;&gt;\(S^1\)&lt;/span&gt;, given as the higher inductive
+type:&lt;/p&gt;
+&lt;pre class=&#34;Agda&#34;&gt;&lt;a id=&#34;13862&#34; class=&#34;Keyword&#34;&gt;postulate&lt;/a&gt;
+  &lt;a id=&#34;𝕊¹&#34;&gt;&lt;/a&gt;&lt;a id=&#34;13874&#34; href=&#34;discrete_gauge_theory.html#13874&#34; class=&#34;Postulate&#34;&gt;𝕊¹&lt;/a&gt; &lt;a id=&#34;13877&#34; class=&#34;Symbol&#34;&gt;:&lt;/a&gt; &lt;a id=&#34;13879&#34; href=&#34;Agda.Primitive.html#388&#34; class=&#34;Primitive&#34;&gt;UU&lt;/a&gt; &lt;a id=&#34;13882&#34; href=&#34;Agda.Primitive.html#915&#34; class=&#34;Primitive&#34;&gt;lzero&lt;/a&gt;
+
+&lt;a id=&#34;13889&#34; class=&#34;Keyword&#34;&gt;postulate&lt;/a&gt;
+  &lt;a id=&#34;base-𝕊¹&#34;&gt;&lt;/a&gt;&lt;a id=&#34;13901&#34; href=&#34;discrete_gauge_theory.html#13901&#34; class=&#34;Postulate&#34;&gt;base-𝕊¹&lt;/a&gt; &lt;a id=&#34;13909&#34; class=&#34;Symbol&#34;&gt;:&lt;/a&gt; &lt;a id=&#34;13911&#34; href=&#34;discrete_gauge_theory.html#13874&#34; class=&#34;Postulate&#34;&gt;𝕊¹&lt;/a&gt;
+
+&lt;a id=&#34;13915&#34; class=&#34;Keyword&#34;&gt;postulate&lt;/a&gt;
+  &lt;a id=&#34;loop-𝕊¹&#34;&gt;&lt;/a&gt;&lt;a id=&#34;13927&#34; href=&#34;discrete_gauge_theory.html#13927&#34; class=&#34;Postulate&#34;&gt;loop-𝕊¹&lt;/a&gt; &lt;a id=&#34;13935&#34; class=&#34;Symbol&#34;&gt;:&lt;/a&gt; &lt;a id=&#34;13937&#34; href=&#34;https://unimath.github.io/agda-unimath/foundation-core.identity-types.html#5936&#34; class=&#34;Datatype&#34;&gt;Id&lt;/a&gt; &lt;a id=&#34;13940&#34; href=&#34;discrete_gauge_theory.html#13901&#34; class=&#34;Postulate&#34;&gt;base-𝕊¹&lt;/a&gt; &lt;a id=&#34;13948&#34; href=&#34;discrete_gauge_theory.html#13901&#34; class=&#34;Postulate&#34;&gt;base-𝕊¹&lt;/a&gt;
+&lt;/pre&gt;
+&lt;p&gt;Given a nerve &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt;, the type of
+principal &lt;span class=&#34;math inline&#34;&gt;\(S^1\)&lt;/span&gt; bundles over &lt;span
+class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; is the function type &lt;span
+class=&#34;math inline&#34;&gt;\(X\to \mathsf{BAut}_1 S^1\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Given a particular function &lt;span class=&#34;math inline&#34;&gt;\(f:X\to
+\mathsf{BAut}_1 S^1\)&lt;/span&gt;, what does this function do at the various
+levels of &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt;? On terms &lt;span
+class=&#34;math inline&#34;&gt;\(x_0:X\)&lt;/span&gt; it assigns a particular &lt;span
+class=&#34;math inline&#34;&gt;\(S^1\)&lt;/span&gt;-torsor &lt;span
+class=&#34;math inline&#34;&gt;\(f(x_0):\mathsf{BAut}_1 S^1\)&lt;/span&gt;. On paths
+&lt;span class=&#34;math inline&#34;&gt;\(p:x_1=_X x_2\)&lt;/span&gt; it assigns an
+isomorphism of torsors &lt;span
+class=&#34;math inline&#34;&gt;\(f(p):f(x_0)=f(x_1)\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Next we will form the total space &lt;span
+class=&#34;math inline&#34;&gt;\((x:X)\times f(x)\)&lt;/span&gt; and look at the what we
+know about &lt;em&gt;dependent paths&lt;/em&gt;, also known as &lt;em&gt;pathovers&lt;/em&gt;.
+We claim that we can lift paths uniquely to dependent paths in a way
+that corresponds to a connection on this bundle.&lt;/p&gt;
+&lt;p&gt;Can this connection be curved, or is it necessarily flat? It can be
+curved! Consider a path in the Rubik’s cube nerve (the octahedron)
+starting from the top (white) point (which stands in for the whole white
+face of the cube) and moving to the red point, then green, then back to
+the white point. Applying &lt;span class=&#34;math inline&#34;&gt;\(f\)&lt;/span&gt; to this
+loop gives an automorphism of the torsor &lt;span
+class=&#34;math inline&#34;&gt;\(f(white)\)&lt;/span&gt;. This is a group element of the
+central type &lt;span class=&#34;math inline&#34;&gt;\(S^1\)&lt;/span&gt; which we will name
+&lt;span class=&#34;math inline&#34;&gt;\(f(wrgw)\)&lt;/span&gt;. This can be a non-identity
+element. But since this path bounds a 2-cell &lt;span
+class=&#34;math inline&#34;&gt;\(wrg\)&lt;/span&gt; in &lt;span
+class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt;, there is a path from this loop to
+&lt;span class=&#34;math inline&#34;&gt;\(\mathrm{refl}_w\)&lt;/span&gt;. Is there a path
+from &lt;span class=&#34;math inline&#34;&gt;\(f(wrgw)\)&lt;/span&gt; to &lt;span
+class=&#34;math inline&#34;&gt;\(1_{S^1}\)&lt;/span&gt;? Yes, the central type &lt;span
+class=&#34;math inline&#34;&gt;\(S^1\)&lt;/span&gt; is connected so there are various
+paths we could choose, which differ by winding number. The 2-face will
+map to this path.&lt;/p&gt;
+&lt;p&gt;The lifting of paths is a connection, and the assignment of paths
+&lt;span class=&#34;math inline&#34;&gt;\(1=_{S^1}g\)&lt;/span&gt; to 2-cells is curvature.
+Classically these are defined infinitesimally as a 1-form and a 2-form,
+so it’s all making sense.&lt;/p&gt;
+&lt;p&gt;Classically we have that hiccup that connections aren’t actually
+1-forms, they are points in an affine space modeled on 1-forms. But
+curvature is an honest 2-form. Can we detect that hiccup here?&lt;/p&gt;
+&lt;h2 id=&#34;gauge-transformations&#34;&gt;Gauge transformations&lt;/h2&gt;
+&lt;p&gt;Physicists call automorphisms of the principal bundle &lt;em&gt;gauge
+transformations&lt;/em&gt;. &lt;span class=&#34;math inline&#34;&gt;\(\textbf{[TODO:
+{explain about torsors and gauges and such}]}\)&lt;/span&gt;. This means
+homotopies of the given bundle &lt;span class=&#34;math inline&#34;&gt;\(f:X\to
+\mathsf{BAut}_1 S^1\)&lt;/span&gt;, i.e. functions of type &lt;span
+class=&#34;math inline&#34;&gt;\((x:X)\to f(x)=f(x)\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Donaldson-Kronheimer: “The non-triviality of the orbit space is a
+reflection of the impossibility of finding a uniform, global procedure
+by which to pick out a preferred gauge for each equivalence class of
+connections;” (&lt;a
+href=&#34;zotero://select/library/items/6SNR3CNY&#34;&gt;Donaldson and Kronheimer,
+1997, p. 185&lt;/a&gt;) (&lt;a
+href=&#34;zotero://open-pdf/library/items/CIC23ZVM?page=185&amp;amp;annotation=2KPBLMAP&#34;&gt;pdf&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;The action of &lt;span class=&#34;math inline&#34;&gt;\(\mathscr{G}\)&lt;/span&gt; on
+&lt;span class=&#34;math inline&#34;&gt;\(\mathscr{A}\)&lt;/span&gt; is not free, even when
+a connection &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; is irreducible. The
+stabilizer of &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; coincides with the
+center of &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt;. This leads to framed
+connections.&lt;/p&gt;
 &lt;h2 id=&#34;torus-groups&#34;&gt;Torus groups&lt;/h2&gt;
 &lt;p&gt;We can get partway towards a theory of principal bundles over
 arbitrary Lie groups by using the &lt;a
 href=&#34;https://ncatlab.org/nlab/show/splitting+principle&#34;&gt;maximal
-torus&lt;/a&gt;.&lt;/p&gt;
+torus&lt;/a&gt; (aka “splitting principle”).&lt;/p&gt;
+&lt;p&gt;Leray-Hirsch theorem.&lt;/p&gt;
+&lt;h2 id=&#34;follow-ups&#34;&gt;Follow-ups&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;zotero://select/items/1_E7IEEMRP&#34;&gt;Scoccola 05/2020 -
+Nilpotent Types and Fracture Squares in Homotopy Type Theory&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;zotero://select/items/1_TX88MRXW&#34;&gt;Cohen - The Topology of
+Fiber Bundles Lecture Notes&lt;/a&gt;&lt;/p&gt;
 &lt;div id=&#34;refs&#34; class=&#34;references csl-bib-body hanging-indent&#34;
 role=&#34;doc-bibliography&#34;&gt;
 &lt;div id=&#34;ref-baez_huerta_higher_gauge&#34; class=&#34;csl-entry&#34;
@@ -384,6 +442,15 @@ role=&#34;doc-biblioentry&#34;&gt;
 &lt;span class=&#34;smallcaps&#34;&gt;Baez&lt;/span&gt;, J.C. &amp;amp; &lt;span
 class=&#34;smallcaps&#34;&gt;Schreiber&lt;/span&gt;, U. (2006) &lt;a
 href=&#34;https://arxiv.org/abs/math/0511710&#34;&gt;Higher gauge theory&lt;/a&gt;.
+&lt;/div&gt;
+&lt;div id=&#34;ref-buchholtz2023central&#34; class=&#34;csl-entry&#34;
+role=&#34;doc-biblioentry&#34;&gt;
+&lt;span class=&#34;smallcaps&#34;&gt;Buchholtz&lt;/span&gt;, U., &lt;span
+class=&#34;smallcaps&#34;&gt;Christensen&lt;/span&gt;, J.D., &lt;span
+class=&#34;smallcaps&#34;&gt;Flaten&lt;/span&gt;, J.G.T., &amp;amp; &lt;span
+class=&#34;smallcaps&#34;&gt;Rijke&lt;/span&gt;, E. (2023) &lt;a
+href=&#34;https://arxiv.org/abs/2301.02636&#34;&gt;Central h-spaces and banded
+types&lt;/a&gt;.
 &lt;/div&gt;
 &lt;div id=&#34;ref-hatcher_at&#34; class=&#34;csl-entry&#34; role=&#34;doc-biblioentry&#34;&gt;
 &lt;span class=&#34;smallcaps&#34;&gt;Hatcher&lt;/span&gt;, A. (2002) &lt;em&gt;Algebraic
