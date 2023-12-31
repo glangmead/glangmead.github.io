@@ -73,6 +73,9 @@ fundamental groupoid, not the path groupoid</a></li>
 id="toc-combinatorial-manifolds">Combinatorial manifolds</a></li>
 <li><a href="#bundles-with-connection"
 id="toc-bundles-with-connection">Bundles with connection</a></li>
+<li><a href="#pathovers-as-horizontal-vertical"
+id="toc-pathovers-as-horizontal-vertical">Pathovers as horizontal
+vertical</a></li>
 <li><a href="#gauge-transformations"
 id="toc-gauge-transformations">Gauge transformations</a></li>
 <li><a href="#torus-groups" id="toc-torus-groups">Torus groups</a></li>
@@ -312,12 +315,12 @@ understand why we made this choice of group element.</p>
 values in the Lie algebra of the structure group. That’s just the
 infinitesimal version of what we did, which is the assignment of group
 elements to paths.</p>
-<pre class="Agda"><a id="13497" class="Symbol">{-#</a> <a id="13501" class="Keyword">OPTIONS</a> <a id="13509" class="Pragma">--without-K</a> <a id="13521" class="Pragma">--cohesion</a> <a id="13532" class="Pragma">--flat-split</a> <a id="13545" class="Symbol">#-}</a>
+<pre class="Agda"><a id="13545" class="Symbol">{-#</a> <a id="13549" class="Keyword">OPTIONS</a> <a id="13557" class="Pragma">--without-K</a> <a id="13569" class="Pragma">--cohesion</a> <a id="13580" class="Pragma">--flat-split</a> <a id="13593" class="Symbol">#-}</a>
 
-<a id="13550" class="Keyword">module</a> <a id="13557" href="discrete_gauge_theory.html" class="Module Operator">discrete_gauge_theory</a> <a id="13579" class="Keyword">where</a>
+<a id="13598" class="Keyword">module</a> <a id="13605" href="discrete_gauge_theory.html" class="Module Operator">discrete_gauge_theory</a> <a id="13627" class="Keyword">where</a>
 
-<a id="13586" class="Keyword">open</a> <a id="13591" class="Keyword">import</a> <a id="13598" href="https://unimath.github.io/agda-unimath/foundation.universe-levels.html" class="Module">foundation.universe-levels</a>
-<a id="13625" class="Keyword">open</a> <a id="13630" class="Keyword">import</a> <a id="13637" href="https://unimath.github.io/agda-unimath/foundation-core.identity-types.html" class="Module">foundation-core.identity-types</a>
+<a id="13634" class="Keyword">open</a> <a id="13639" class="Keyword">import</a> <a id="13646" href="https://unimath.github.io/agda-unimath/foundation.universe-levels.html" class="Module">foundation.universe-levels</a>
+<a id="13673" class="Keyword">open</a> <a id="13678" class="Keyword">import</a> <a id="13685" href="https://unimath.github.io/agda-unimath/foundation-core.identity-types.html" class="Module">foundation-core.identity-types</a>
 </pre>
 <h2 id="bundles-with-connection">Bundles with connection</h2>
 <p>We take as our starting point the delooping framework of <span
@@ -326,14 +329,14 @@ href="#ref-buchholtz2023central" role="doc-biblioref">Buchholtz <em>et
 al.</em>, 2023</a>)</span>. Consider the central type <span
 class="math inline">\(S^1\)</span>, given as the higher inductive
 type:</p>
-<pre class="Agda"><a id="13862" class="Keyword">postulate</a>
-  <a id="𝕊¹"></a><a id="13874" href="discrete_gauge_theory.html#13874" class="Postulate">𝕊¹</a> <a id="13877" class="Symbol">:</a> <a id="13879" href="Agda.Primitive.html#388" class="Primitive">UU</a> <a id="13882" href="Agda.Primitive.html#915" class="Primitive">lzero</a>
+<pre class="Agda"><a id="13910" class="Keyword">postulate</a>
+  <a id="𝕊¹"></a><a id="13922" href="discrete_gauge_theory.html#13922" class="Postulate">𝕊¹</a> <a id="13925" class="Symbol">:</a> <a id="13927" href="Agda.Primitive.html#388" class="Primitive">UU</a> <a id="13930" href="Agda.Primitive.html#915" class="Primitive">lzero</a>
 
-<a id="13889" class="Keyword">postulate</a>
-  <a id="base-𝕊¹"></a><a id="13901" href="discrete_gauge_theory.html#13901" class="Postulate">base-𝕊¹</a> <a id="13909" class="Symbol">:</a> <a id="13911" href="discrete_gauge_theory.html#13874" class="Postulate">𝕊¹</a>
+<a id="13937" class="Keyword">postulate</a>
+  <a id="base-𝕊¹"></a><a id="13949" href="discrete_gauge_theory.html#13949" class="Postulate">base-𝕊¹</a> <a id="13957" class="Symbol">:</a> <a id="13959" href="discrete_gauge_theory.html#13922" class="Postulate">𝕊¹</a>
 
-<a id="13915" class="Keyword">postulate</a>
-  <a id="loop-𝕊¹"></a><a id="13927" href="discrete_gauge_theory.html#13927" class="Postulate">loop-𝕊¹</a> <a id="13935" class="Symbol">:</a> <a id="13937" href="https://unimath.github.io/agda-unimath/foundation-core.identity-types.html#5936" class="Datatype">Id</a> <a id="13940" href="discrete_gauge_theory.html#13901" class="Postulate">base-𝕊¹</a> <a id="13948" href="discrete_gauge_theory.html#13901" class="Postulate">base-𝕊¹</a>
+<a id="13963" class="Keyword">postulate</a>
+  <a id="loop-𝕊¹"></a><a id="13975" href="discrete_gauge_theory.html#13975" class="Postulate">loop-𝕊¹</a> <a id="13983" class="Symbol">:</a> <a id="13985" href="https://unimath.github.io/agda-unimath/foundation-core.identity-types.html#5936" class="Datatype">Id</a> <a id="13988" href="discrete_gauge_theory.html#13949" class="Postulate">base-𝕊¹</a> <a id="13996" href="discrete_gauge_theory.html#13949" class="Postulate">base-𝕊¹</a>
 </pre>
 <p>Given a nerve <span class="math inline">\(X\)</span>, the type of
 principal <span class="math inline">\(S^1\)</span> bundles over <span
@@ -392,6 +395,25 @@ space of torsors have the same group as the loop space at that point,
 but they are conjugate to each other. In fact they are merely conjugate,
 as there are many conjugations (paths between two points) we can choose.
 A whole torsor’s worth!</p>
+<h2 id="pathovers-as-horizontal-vertical">Pathovers as horizontal
+vertical</h2>
+<p>Symmetry Lemma 4.14.1: Fix a section <span
+class="math inline">\(s:(x:B)\to f(x)\)</span> (or just the two
+endpoints of the lift). Given <span class="math inline">\(f\)</span> and
+<span class="math inline">\(s\)</span>, we have <span
+class="math inline">\(\underline{\underline{(x, s(x))} =_{E}
+\underline{(x&#39;, s(x&#39;))}} \simeq \underline{\underline{(x=_B
+x&#39;)}\times \underline{s(x)=_{f(x)}s(x&#39;)}}\)</span>.</p>
+<p>the type on the left are paths over <span
+class="math inline">\(x=x&#39;\)</span> anchored on the section (the
+ones that are <span class="math inline">\(s(x)\xrightarrow[{p}]{=}
+s(x&#39;)\)</span> for some <span
+class="math inline">\(p:x=x&#39;\)</span>)</p>
+<p>This mirrors exactly the classical picture where a connection is
+exactly the data of a decomposition of tangent vectors in the total
+space into a horizontal component and a vertical component. The
+horizontal component is isomorphic to something in the base space, and
+the vertical component is tangent to a fiber, i.e. a torsor.</p>
 <h2 id="gauge-transformations">Gauge transformations</h2>
 <p>Physicists call automorphisms of the principal bundle <em>gauge
 transformations</em>. <span class="math inline">\(\textbf{[TODO:
