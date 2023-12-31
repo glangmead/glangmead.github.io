@@ -367,10 +367,10 @@ class=&#34;math inline&#34;&gt;\(f(x_0):\mathsf{BAut}_1 S^1\)&lt;/span&gt;. On p
 isomorphism of torsors &lt;span
 class=&#34;math inline&#34;&gt;\(f(p):f(x_0)=f(x_1)\)&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;Next we will form the total space &lt;span
-class=&#34;math inline&#34;&gt;\((x:X)\times f(x)\)&lt;/span&gt; and look at the what we
-know about &lt;em&gt;dependent paths&lt;/em&gt;, also known as &lt;em&gt;pathovers&lt;/em&gt;.
-We claim that we can lift paths uniquely to dependent paths in a way
-that corresponds to a connection on this bundle.&lt;/p&gt;
+class=&#34;math inline&#34;&gt;\((x:X)\times f(x)\)&lt;/span&gt; and look at what we know
+about &lt;em&gt;dependent paths&lt;/em&gt;, also known as &lt;em&gt;pathovers&lt;/em&gt;. We
+claim that we can lift paths uniquely to dependent paths in a way that
+corresponds to a connection on this bundle.&lt;/p&gt;
 &lt;p&gt;Can this connection be curved, or is it necessarily flat? It can be
 curved! Consider a path in the Rubik’s cube nerve (the octahedron)
 starting from the top (white) point (which stands in for the whole white
@@ -382,20 +382,34 @@ central type &lt;span class=&#34;math inline&#34;&gt;\(S^1\)&lt;/span&gt; which 
 &lt;span class=&#34;math inline&#34;&gt;\(f(wrgw)\)&lt;/span&gt;. This can be a non-identity
 element. But since this path bounds a 2-cell &lt;span
 class=&#34;math inline&#34;&gt;\(wrg\)&lt;/span&gt; in &lt;span
-class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt;, there is a path from this loop to
+class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt;, there is a 2-path from this loop to
 &lt;span class=&#34;math inline&#34;&gt;\(\mathrm{refl}_w\)&lt;/span&gt;. Is there a path
 from &lt;span class=&#34;math inline&#34;&gt;\(f(wrgw)\)&lt;/span&gt; to &lt;span
 class=&#34;math inline&#34;&gt;\(1_{S^1}\)&lt;/span&gt;? Yes, the central type &lt;span
 class=&#34;math inline&#34;&gt;\(S^1\)&lt;/span&gt; is connected so there are various
 paths we could choose, which differ by winding number. The 2-face will
-map to this path.&lt;/p&gt;
+map to this path. &lt;span class=&#34;math inline&#34;&gt;\(\textbf{[TODO: {detail the
+2-type structure of \(\mathsf{BAut}_1 S^1\)}]}\)&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;The lifting of paths is a connection, and the assignment of paths
 &lt;span class=&#34;math inline&#34;&gt;\(1=_{S^1}g\)&lt;/span&gt; to 2-cells is curvature.
 Classically these are defined infinitesimally as a 1-form and a 2-form,
 so it’s all making sense.&lt;/p&gt;
 &lt;p&gt;Classically we have that hiccup that connections aren’t actually
 1-forms, they are points in an affine space modeled on 1-forms. But
-curvature is an honest 2-form. Can we detect that hiccup here?&lt;/p&gt;
+curvature is an honest 2-form. Can we detect that hiccup here? Yes, in
+this context we made an arbitrary choice when we assigned &lt;span
+class=&#34;math inline&#34;&gt;\(f(white)\)&lt;/span&gt;. We could slide the whole image
+of &lt;span class=&#34;math inline&#34;&gt;\(f\)&lt;/span&gt; around in &lt;span
+class=&#34;math inline&#34;&gt;\(\mathsf{BAut}_1 S^1\)&lt;/span&gt; and get an equivalent
+bundle and connection. But no matter where we place the octahedron, the
+curvature assignment is the same, because the choices of torsors cancel
+out. But do they entirely? If you read classical material very carefully
+you might notice fine print like this: curvature is defined only up to
+conjugation! We could have told you that, since all the points in a
+space of torsors have the same group as the loop space at that point,
+but they are conjugate to each other. In fact they are merely conjugate,
+as there are many conjugations (paths between two points) we can choose.
+A whole torsor’s worth!&lt;/p&gt;
 &lt;h2 id=&#34;gauge-transformations&#34;&gt;Gauge transformations&lt;/h2&gt;
 &lt;p&gt;Physicists call automorphisms of the principal bundle &lt;em&gt;gauge
 transformations&lt;/em&gt;. &lt;span class=&#34;math inline&#34;&gt;\(\textbf{[TODO:

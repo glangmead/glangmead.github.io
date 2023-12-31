@@ -349,10 +349,10 @@ class="math inline">\(f(x_0):\mathsf{BAut}_1 S^1\)</span>. On paths
 isomorphism of torsors <span
 class="math inline">\(f(p):f(x_0)=f(x_1)\)</span>.</p>
 <p>Next we will form the total space <span
-class="math inline">\((x:X)\times f(x)\)</span> and look at the what we
-know about <em>dependent paths</em>, also known as <em>pathovers</em>.
-We claim that we can lift paths uniquely to dependent paths in a way
-that corresponds to a connection on this bundle.</p>
+class="math inline">\((x:X)\times f(x)\)</span> and look at what we know
+about <em>dependent paths</em>, also known as <em>pathovers</em>. We
+claim that we can lift paths uniquely to dependent paths in a way that
+corresponds to a connection on this bundle.</p>
 <p>Can this connection be curved, or is it necessarily flat? It can be
 curved! Consider a path in the Rubik’s cube nerve (the octahedron)
 starting from the top (white) point (which stands in for the whole white
@@ -364,20 +364,34 @@ central type <span class="math inline">\(S^1\)</span> which we will name
 <span class="math inline">\(f(wrgw)\)</span>. This can be a non-identity
 element. But since this path bounds a 2-cell <span
 class="math inline">\(wrg\)</span> in <span
-class="math inline">\(X\)</span>, there is a path from this loop to
+class="math inline">\(X\)</span>, there is a 2-path from this loop to
 <span class="math inline">\(\mathrm{refl}_w\)</span>. Is there a path
 from <span class="math inline">\(f(wrgw)\)</span> to <span
 class="math inline">\(1_{S^1}\)</span>? Yes, the central type <span
 class="math inline">\(S^1\)</span> is connected so there are various
 paths we could choose, which differ by winding number. The 2-face will
-map to this path.</p>
+map to this path. <span class="math inline">\(\textbf{[TODO: {detail the
+2-type structure of \(\mathsf{BAut}_1 S^1\)}]}\)</span></p>
 <p>The lifting of paths is a connection, and the assignment of paths
 <span class="math inline">\(1=_{S^1}g\)</span> to 2-cells is curvature.
 Classically these are defined infinitesimally as a 1-form and a 2-form,
 so it’s all making sense.</p>
 <p>Classically we have that hiccup that connections aren’t actually
 1-forms, they are points in an affine space modeled on 1-forms. But
-curvature is an honest 2-form. Can we detect that hiccup here?</p>
+curvature is an honest 2-form. Can we detect that hiccup here? Yes, in
+this context we made an arbitrary choice when we assigned <span
+class="math inline">\(f(white)\)</span>. We could slide the whole image
+of <span class="math inline">\(f\)</span> around in <span
+class="math inline">\(\mathsf{BAut}_1 S^1\)</span> and get an equivalent
+bundle and connection. But no matter where we place the octahedron, the
+curvature assignment is the same, because the choices of torsors cancel
+out. But do they entirely? If you read classical material very carefully
+you might notice fine print like this: curvature is defined only up to
+conjugation! We could have told you that, since all the points in a
+space of torsors have the same group as the loop space at that point,
+but they are conjugate to each other. In fact they are merely conjugate,
+as there are many conjugations (paths between two points) we can choose.
+A whole torsor’s worth!</p>
 <h2 id="gauge-transformations">Gauge transformations</h2>
 <p>Physicists call automorphisms of the principal bundle <em>gauge
 transformations</em>. <span class="math inline">\(\textbf{[TODO:
