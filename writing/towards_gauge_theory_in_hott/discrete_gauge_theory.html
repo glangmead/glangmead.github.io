@@ -63,9 +63,6 @@
 <li><a href="#outline" id="toc-outline">Outline</a></li>
 <li><a href="#abstract" id="toc-abstract">Abstract</a></li>
 <li><a href="#introduction" id="toc-introduction">Introduction</a></li>
-<li><a href="#survey-of-classical-results"
-id="toc-survey-of-classical-results">Survey of classical
-results</a></li>
 <li><a href="#not-the-fundamental-groupoid-not-the-path-groupoid"
 id="toc-not-the-fundamental-groupoid-not-the-path-groupoid">Not the
 fundamental groupoid, not the path groupoid</a></li>
@@ -80,6 +77,7 @@ vertical</a></li>
 id="toc-gauge-transformations">Gauge transformations</a></li>
 <li><a href="#torus-groups" id="toc-torus-groups">Torus groups</a></li>
 <li><a href="#follow-ups" id="toc-follow-ups">Follow-ups</a></li>
+<li><a href="#references" id="toc-references">References</a></li>
 </ul>
 </nav>
 <!-- https://pandoc.org/MANUAL.html -->
@@ -89,53 +87,47 @@ title="Image of the book cover of Godel Escher Bach" width="500" />
 </center>
 <h2 id="outline">Outline</h2>
 <ol type="1">
-<li>Combinatorial topology
+<li>Combinatorial types</li>
+<li>Classifying spaces of principal bundles</li>
+<li>Observing connections and curvature</li>
+<li>Gauge transformations</li>
+<li>Characteristic classes
 <ol type="1">
-<li>Cech, PL, CW</li>
-<li>Contrast with the path groupoid narratives</li>
+<li>Splitting principle</li>
 </ol></li>
-<li>We’ll use the k-skeleton inclusions to control maps</li>
-<li>Torsors, deloopings, BAut</li>
-<li>Where is the principal bundle, where is the connection, where is the
-curvature?</li>
-<li>Arriving at the gauge group and its delooping without using the
-“space of connections for a fixed bundle”</li>
-<li>Using the homotopy type of the gauge group
-<ol type="1">
-<li>characteristic classes</li>
-<li>seeing Chern-Weil in characteristic classes</li>
-</ol></li>
-<li>Examples, including with maximal tori</li>
+<li>Tori 3. Relationship with curvature (Chern-Weil theory)</li>
 </ol>
 <h2 id="abstract">Abstract</h2>
-<p>We introduce discrete gauge theory.</p>
+<p>What can we import into homotopy type theory from gauge theory using
+combinatorial spaces and principal torus bundles?</p>
 <h2 id="introduction">Introduction</h2>
 <p><a href="https://en.wikipedia.org/wiki/Gauge_theory">Gauge theory</a>
-is a general methodology for defining invariants of spaces, whether
-those be invariants of the homotopy type, the homomorphism class, or the
+is a general methodology for defining invariants of spaces, including
+invariants of the homotopy type, the homomorphism class, or the
 diffeomorphism class. We make use of mediating objects such as principal
 bundles over the space, connections on the bundles, and morphisms of
 these. These additional objects provide access to information beyond the
 homology and homotopy groups of the space, but they are also of direct
-interest as well. In physics, the fields that model matter particles are
-sections of bundles, and those that model force fields are connections.
-The laws of nature are postulated to be invariant under automorphisms of
-all the underlying principal bundles, and so all the objects we need to
-study topology are relevant in physics as well!</p>
-<p>The standard introductions to differential geometry and gauge theory
+interest as well. In physics the fields that model force fields are
+connections, and the fields that model matter particles are sections of
+associated vector bundles. The laws of nature are postulated to be
+invariant under automorphisms of all the underlying principal bundles,
+and so all the objects we need to study topology are relevant in physics
+as well!</p>
+<p>The standard treatments of differential geometry and gauge theory
 work at the infinitesimal level. Connections are differential forms with
-values in the Lie algebra of a Lie group, forms are sections of a skew
-symmetric product of cotangent spaces. This fine local structure is so
-far inaccessible to homotopy type theory, even with modalities such as
-those offered by differential cohesion. These modalities are intriguing
-but very alien to classical intuitions. We won’t be saying more about
-that line of investigation.</p>
+values in the Lie algebra of a Lie group, rather than functions from
+finite-length paths directly into the Lie group. This fine local
+structure is so far inaccessible to homotopy type theory, even with
+modalities such as those offered by differential cohesion. These
+modalities are intriguing but very alien to classical intuitions. We
+won’t be saying more about that line of investigation.</p>
 <p>There is another approach, which is to draw inspiration from discrete
 and combinatorial methods. <a
 href="https://en.wikipedia.org/wiki/Discrete_differential_geometry">Discrete
 differential geometry</a> is an active field of applied mathematics and
-computer science, which has reused or created definitions of vector
-field, differential form, connection and curvature, that apply to a
+computer science which has combinatorial versions of vector fields,
+differential forms, connections and curvature, which apply to a
 triangulated surface embedded in 3-dimensional space (as might be used
 in a computer graphics engine).</p>
 <p>Algebraic topology of course has always had a train of thought
@@ -145,20 +137,11 @@ piecewise linear (PL) manifolds is another important example where a
 finite structure is used to capture important properties of a space.</p>
 <p>Such complexes are easy to define in homotopy type theory, as <a
 href="https://en.wikipedia.org/wiki/Homotopy_type_theory#The_univalence_axiom,_synthetic_homotopy_theory,_and_higher_inductive_types">higher
-inductive types</a>. We will see a lot of examples shortly. Can we
-define bundles, forms and connections on these?</p>
-<h2 id="survey-of-classical-results">Survey of classical results</h2>
-<p>Here is a brief overview of the kinds of results we want to gain
-access to in HoTT.</p>
-<ul>
-<li>Freed-Hopkins</li>
-<li><span class="math inline">\(B\mathscr{G}\)</span></li>
-<li>hairy ball theorem</li>
-<li>characteristic classes</li>
-</ul>
+inductive types</a>. We will see a lot of examples shortly. How much of
+gauge theory can we define with these?</p>
 <h2 id="not-the-fundamental-groupoid-not-the-path-groupoid">Not the
 fundamental groupoid, not the path groupoid</h2>
-<p>There are other avenues one could pursue to treat the theory of
+<p>There are a few avenues folks have pursued to treat the theory of
 connections in category theory or homotopy type theory. John Baez and
 collaborators <span class="citation"
 data-cites="baez_schreiber_higher_gauge">(<a
@@ -170,18 +153,18 @@ Huerta, 2010</a>)</span> have emphasized the <em>path groupoid</em>
 <span class="math inline">\(\mathcal{P}_1(X)\)</span> of a manifold
 <span class="math inline">\(X\)</span>, which is a sort of infinitary
 higher inductive type whose points are the points of <span
-class="math inline">\(X\)</span>, whose paths are so-called <em>thin
+class="math inline">\(X\)</span>, whose morphisms are so-called <em>thin
 homotopy</em> classes of smooth paths (paths up to a homotopy that is
 1-dimensional, for example a reparameterization of the path that simply
-changes speed), and where composition of paths is carefully defined so
-that compositions are always smooth. A connection is then simply a
-functor <span class="math inline">\(\mathcal{P}_1(X)\to BG\)</span>
-where <span class="math inline">\(BG\)</span> is a one-object groupoid
-whose paths are a given group <span
-class="math inline">\(G\)</span>.</p>
+changes speed but has the same image and orientation), and where
+composition of paths is carefully defined so that compositions are
+always smooth. A connection is then simply a functor <span
+class="math inline">\(\mathcal{P}_1(X)\to BG\)</span> where <span
+class="math inline">\(BG\)</span> is a one-object groupoid whose
+morphisms form the group <span class="math inline">\(G\)</span>.</p>
 <p>The path groupoid construction has not been defined in HoTT, and it’s
-not clear that it can be done, or whether it’s worthwhile to do so. A
-related object which does exist in HoTT is the <em>fundamental
+not clear that it can be done or whether it’s worthwhile to do so. A
+related object which has been defined in HoTT is the <em>fundamental
 groupoid</em> of <span class="math inline">\(X\)</span>, whose points
 are the points of <span class="math inline">\(X\)</span> and whose paths
 are homotopy classes of paths. This is the 1-truncation of the full
@@ -195,8 +178,10 @@ href="#ref-shulman_cohesion" role="doc-biblioref">Shulman,
 functions and higher inductive types that act as <em>modal
 operators</em> inside HoTT, with a corresponding topos-theoretic
 interpretation that extends ideas of Lawvere known as <em>cohesion</em>.
-One of the higher inductive types is called <em>shape</em> and when
-applied to a 0-type such as a manifold, constructs its fundamental <span
+One of the higher inductive types is called <a
+href="https://ncatlab.org/nlab/show/shape+modality"><em>shape</em></a>
+and when this operator is applied to a 0-type such as a manifold the
+output is its fundamental <span
 class="math inline">\(\infty\)</span>-groupoid as a higher type. This
 offers a pathway for classical objects to be imported into type theory,
 and for us to then define type-theoretic versions of classical
@@ -205,8 +190,8 @@ constructions such as bundles and connections.</p>
 class="math inline">\(\infty\)</span>-groupoid of a space is a
 relatively impoverished object, since paths that are homotopic are made
 equal. Connections that agree on homotopy-equivalent paths are called
-<em>flat</em> and are so special that we cannot build gauge theory with
-them! We need non-flat connections.</p>
+<em>flat</em> and are so special that we cannot build gauge theory just
+with them. We seek a fuller picture of connections.</p>
 <h2 id="combinatorial-manifolds">Combinatorial manifolds</h2>
 <p>Per Hatcher <span class="citation" data-cites="hatcher_at">(<a
 href="#ref-hatcher_at" role="doc-biblioref">Hatcher, 2002</a>)</span> a
@@ -315,12 +300,12 @@ understand why we made this choice of group element.</p>
 values in the Lie algebra of the structure group. That’s just the
 infinitesimal version of what we did, which is the assignment of group
 elements to paths.</p>
-<pre class="Agda"><a id="13545" class="Symbol">{-#</a> <a id="13549" class="Keyword">OPTIONS</a> <a id="13557" class="Pragma">--without-K</a> <a id="13569" class="Pragma">--cohesion</a> <a id="13580" class="Pragma">--flat-split</a> <a id="13593" class="Symbol">#-}</a>
+<pre class="Agda"><a id="13298" class="Symbol">{-#</a> <a id="13302" class="Keyword">OPTIONS</a> <a id="13310" class="Pragma">--without-K</a> <a id="13322" class="Pragma">--cohesion</a> <a id="13333" class="Pragma">--flat-split</a> <a id="13346" class="Symbol">#-}</a>
 
-<a id="13598" class="Keyword">module</a> <a id="13605" href="discrete_gauge_theory.html" class="Module Operator">discrete_gauge_theory</a> <a id="13627" class="Keyword">where</a>
+<a id="13351" class="Keyword">module</a> <a id="13358" href="discrete_gauge_theory.html" class="Module Operator">discrete_gauge_theory</a> <a id="13380" class="Keyword">where</a>
 
-<a id="13634" class="Keyword">open</a> <a id="13639" class="Keyword">import</a> <a id="13646" href="https://unimath.github.io/agda-unimath/foundation.universe-levels.html" class="Module">foundation.universe-levels</a>
-<a id="13673" class="Keyword">open</a> <a id="13678" class="Keyword">import</a> <a id="13685" href="https://unimath.github.io/agda-unimath/foundation-core.identity-types.html" class="Module">foundation-core.identity-types</a>
+<a id="13387" class="Keyword">open</a> <a id="13392" class="Keyword">import</a> <a id="13399" href="https://unimath.github.io/agda-unimath/foundation.universe-levels.html" class="Module">foundation.universe-levels</a>
+<a id="13426" class="Keyword">open</a> <a id="13431" class="Keyword">import</a> <a id="13438" href="https://unimath.github.io/agda-unimath/foundation-core.identity-types.html" class="Module">foundation-core.identity-types</a>
 </pre>
 <h2 id="bundles-with-connection">Bundles with connection</h2>
 <p>We take as our starting point the delooping framework of <span
@@ -329,14 +314,14 @@ href="#ref-buchholtz2023central" role="doc-biblioref">Buchholtz <em>et
 al.</em>, 2023</a>)</span>. Consider the central type <span
 class="math inline">\(S^1\)</span>, given as the higher inductive
 type:</p>
-<pre class="Agda"><a id="13910" class="Keyword">postulate</a>
-  <a id="𝕊¹"></a><a id="13922" href="discrete_gauge_theory.html#13922" class="Postulate">𝕊¹</a> <a id="13925" class="Symbol">:</a> <a id="13927" href="Agda.Primitive.html#388" class="Primitive">UU</a> <a id="13930" href="Agda.Primitive.html#915" class="Primitive">lzero</a>
+<pre class="Agda"><a id="13663" class="Keyword">postulate</a>
+  <a id="𝕊¹"></a><a id="13675" href="discrete_gauge_theory.html#13675" class="Postulate">𝕊¹</a> <a id="13678" class="Symbol">:</a> <a id="13680" href="Agda.Primitive.html#388" class="Primitive">UU</a> <a id="13683" href="Agda.Primitive.html#915" class="Primitive">lzero</a>
 
-<a id="13937" class="Keyword">postulate</a>
-  <a id="base-𝕊¹"></a><a id="13949" href="discrete_gauge_theory.html#13949" class="Postulate">base-𝕊¹</a> <a id="13957" class="Symbol">:</a> <a id="13959" href="discrete_gauge_theory.html#13922" class="Postulate">𝕊¹</a>
+<a id="13690" class="Keyword">postulate</a>
+  <a id="base-𝕊¹"></a><a id="13702" href="discrete_gauge_theory.html#13702" class="Postulate">base-𝕊¹</a> <a id="13710" class="Symbol">:</a> <a id="13712" href="discrete_gauge_theory.html#13675" class="Postulate">𝕊¹</a>
 
-<a id="13963" class="Keyword">postulate</a>
-  <a id="loop-𝕊¹"></a><a id="13975" href="discrete_gauge_theory.html#13975" class="Postulate">loop-𝕊¹</a> <a id="13983" class="Symbol">:</a> <a id="13985" href="https://unimath.github.io/agda-unimath/foundation-core.identity-types.html#5936" class="Datatype">Id</a> <a id="13988" href="discrete_gauge_theory.html#13949" class="Postulate">base-𝕊¹</a> <a id="13996" href="discrete_gauge_theory.html#13949" class="Postulate">base-𝕊¹</a>
+<a id="13716" class="Keyword">postulate</a>
+  <a id="loop-𝕊¹"></a><a id="13728" href="discrete_gauge_theory.html#13728" class="Postulate">loop-𝕊¹</a> <a id="13736" class="Symbol">:</a> <a id="13738" href="https://unimath.github.io/agda-unimath/foundation-core.identity-types.html#5936" class="Datatype">Id</a> <a id="13741" href="discrete_gauge_theory.html#13702" class="Postulate">base-𝕊¹</a> <a id="13749" href="discrete_gauge_theory.html#13702" class="Postulate">base-𝕊¹</a>
 </pre>
 <p>Given a nerve <span class="math inline">\(X\)</span>, the type of
 principal <span class="math inline">\(S^1\)</span> bundles over <span
@@ -445,6 +430,7 @@ torus</a> (aka “splitting principle”).</p>
 Nilpotent Types and Fracture Squares in Homotopy Type Theory</a></p>
 <p><a href="zotero://select/items/1_TX88MRXW">Cohen - The Topology of
 Fiber Bundles Lecture Notes</a></p>
+<h2 class="unnumbered" id="references">References</h2>
 <div id="refs" class="references csl-bib-body hanging-indent"
 role="doc-bibliography">
 <div id="ref-baez_huerta_higher_gauge" class="csl-entry"
