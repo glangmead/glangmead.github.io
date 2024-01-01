@@ -75,6 +75,13 @@ id="toc-pathovers-as-horizontal-vertical">Pathovers as horizontal
 vertical</a></li>
 <li><a href="#gauge-transformations"
 id="toc-gauge-transformations">Gauge transformations</a></li>
+<li><a href="#classical-theorems" id="toc-classical-theorems">Classical
+theorems</a></li>
+<li><a href="#chern-weil-theory" id="toc-chern-weil-theory">Chern-Weil
+theory</a></li>
+<li><a href="#cohomology-as-obstructions-to-lifts-obstruction-theory"
+id="toc-cohomology-as-obstructions-to-lifts-obstruction-theory">Cohomology
+as obstructions to lifts (obstruction theory)</a></li>
 <li><a href="#torus-groups" id="toc-torus-groups">Torus groups</a></li>
 <li><a href="#follow-ups" id="toc-follow-ups">Follow-ups</a></li>
 <li><a href="#references" id="toc-references">References</a></li>
@@ -94,8 +101,9 @@ title="Image of the book cover of Godel Escher Bach" width="500" />
 <li>Characteristic classes
 <ol type="1">
 <li>Splitting principle</li>
+<li>Tori</li>
+<li>Relationship with curvature (Chern-Weil theory)</li>
 </ol></li>
-<li>Tori 3. Relationship with curvature (Chern-Weil theory)</li>
 </ol>
 <h2 id="abstract">Abstract</h2>
 <p>What can we import into homotopy type theory from gauge theory using
@@ -300,12 +308,12 @@ understand why we made this choice of group element.</p>
 values in the Lie algebra of the structure group. That’s just the
 infinitesimal version of what we did, which is the assignment of group
 elements to paths.</p>
-<pre class="Agda"><a id="13298" class="Symbol">{-#</a> <a id="13302" class="Keyword">OPTIONS</a> <a id="13310" class="Pragma">--without-K</a> <a id="13322" class="Pragma">--cohesion</a> <a id="13333" class="Pragma">--flat-split</a> <a id="13346" class="Symbol">#-}</a>
+<pre class="Agda"><a id="13306" class="Symbol">{-#</a> <a id="13310" class="Keyword">OPTIONS</a> <a id="13318" class="Pragma">--without-K</a> <a id="13330" class="Pragma">--cohesion</a> <a id="13341" class="Pragma">--flat-split</a> <a id="13354" class="Symbol">#-}</a>
 
-<a id="13351" class="Keyword">module</a> <a id="13358" href="discrete_gauge_theory.html" class="Module Operator">discrete_gauge_theory</a> <a id="13380" class="Keyword">where</a>
+<a id="13359" class="Keyword">module</a> <a id="13366" href="discrete_gauge_theory.html" class="Module Operator">discrete_gauge_theory</a> <a id="13388" class="Keyword">where</a>
 
-<a id="13387" class="Keyword">open</a> <a id="13392" class="Keyword">import</a> <a id="13399" href="https://unimath.github.io/agda-unimath/foundation.universe-levels.html" class="Module">foundation.universe-levels</a>
-<a id="13426" class="Keyword">open</a> <a id="13431" class="Keyword">import</a> <a id="13438" href="https://unimath.github.io/agda-unimath/foundation-core.identity-types.html" class="Module">foundation-core.identity-types</a>
+<a id="13395" class="Keyword">open</a> <a id="13400" class="Keyword">import</a> <a id="13407" href="https://unimath.github.io/agda-unimath/foundation.universe-levels.html" class="Module">foundation.universe-levels</a>
+<a id="13434" class="Keyword">open</a> <a id="13439" class="Keyword">import</a> <a id="13446" href="https://unimath.github.io/agda-unimath/foundation-core.identity-types.html" class="Module">foundation-core.identity-types</a>
 </pre>
 <h2 id="bundles-with-connection">Bundles with connection</h2>
 <p>We take as our starting point the delooping framework of <span
@@ -314,14 +322,14 @@ href="#ref-buchholtz2023central" role="doc-biblioref">Buchholtz <em>et
 al.</em>, 2023</a>)</span>. Consider the central type <span
 class="math inline">\(S^1\)</span>, given as the higher inductive
 type:</p>
-<pre class="Agda"><a id="13663" class="Keyword">postulate</a>
-  <a id="𝕊¹"></a><a id="13675" href="discrete_gauge_theory.html#13675" class="Postulate">𝕊¹</a> <a id="13678" class="Symbol">:</a> <a id="13680" href="Agda.Primitive.html#388" class="Primitive">UU</a> <a id="13683" href="Agda.Primitive.html#915" class="Primitive">lzero</a>
+<pre class="Agda"><a id="13671" class="Keyword">postulate</a>
+  <a id="𝕊¹"></a><a id="13683" href="discrete_gauge_theory.html#13683" class="Postulate">𝕊¹</a> <a id="13686" class="Symbol">:</a> <a id="13688" href="Agda.Primitive.html#388" class="Primitive">UU</a> <a id="13691" href="Agda.Primitive.html#915" class="Primitive">lzero</a>
 
-<a id="13690" class="Keyword">postulate</a>
-  <a id="base-𝕊¹"></a><a id="13702" href="discrete_gauge_theory.html#13702" class="Postulate">base-𝕊¹</a> <a id="13710" class="Symbol">:</a> <a id="13712" href="discrete_gauge_theory.html#13675" class="Postulate">𝕊¹</a>
+<a id="13698" class="Keyword">postulate</a>
+  <a id="base-𝕊¹"></a><a id="13710" href="discrete_gauge_theory.html#13710" class="Postulate">base-𝕊¹</a> <a id="13718" class="Symbol">:</a> <a id="13720" href="discrete_gauge_theory.html#13683" class="Postulate">𝕊¹</a>
 
-<a id="13716" class="Keyword">postulate</a>
-  <a id="loop-𝕊¹"></a><a id="13728" href="discrete_gauge_theory.html#13728" class="Postulate">loop-𝕊¹</a> <a id="13736" class="Symbol">:</a> <a id="13738" href="https://unimath.github.io/agda-unimath/foundation-core.identity-types.html#5936" class="Datatype">Id</a> <a id="13741" href="discrete_gauge_theory.html#13702" class="Postulate">base-𝕊¹</a> <a id="13749" href="discrete_gauge_theory.html#13702" class="Postulate">base-𝕊¹</a>
+<a id="13724" class="Keyword">postulate</a>
+  <a id="loop-𝕊¹"></a><a id="13736" href="discrete_gauge_theory.html#13736" class="Postulate">loop-𝕊¹</a> <a id="13744" class="Symbol">:</a> <a id="13746" href="https://unimath.github.io/agda-unimath/foundation-core.identity-types.html#5936" class="Datatype">Id</a> <a id="13749" href="discrete_gauge_theory.html#13710" class="Postulate">base-𝕊¹</a> <a id="13757" href="discrete_gauge_theory.html#13710" class="Postulate">base-𝕊¹</a>
 </pre>
 <p>Given a nerve <span class="math inline">\(X\)</span>, the type of
 principal <span class="math inline">\(S^1\)</span> bundles over <span
@@ -364,6 +372,9 @@ map to this path. <span class="math inline">\(\textbf{[TODO: {detail the
 <span class="math inline">\(1=_{S^1}g\)</span> to 2-cells is curvature.
 Classically these are defined infinitesimally as a 1-form and a 2-form,
 so it’s all making sense.</p>
+<p>If the map is more than just “the bundle” and contains the data of a
+curved connection automatically, can we recover the underlying bundle
+without its connection?</p>
 <p>Classically we have that hiccup that connections aren’t actually
 1-forms, they are points in an affine space modeled on 1-forms. But
 curvature is an honest 2-form. Can we detect that hiccup here? Yes, in
@@ -419,6 +430,33 @@ a connection <span class="math inline">\(A\)</span> is irreducible. The
 stabilizer of <span class="math inline">\(A\)</span> coincides with the
 center of <span class="math inline">\(G\)</span>. This leads to framed
 connections.</p>
+<h2 id="classical-theorems">Classical theorems</h2>
+<p>Cohen Theorem 2.24 p. 73: Complex line bundles over CPn are the
+integers, and for n&gt;=0 the bundle is the n-fold tensor power of the
+universal line bundle.</p>
+<p>Cohen Theorem 2.25: The only nontriv real line bundle over RPn is the
+canonical line bundle.</p>
+<p>Cohen Theorem 2.27: A bundle has a nontriv section iff the
+classifying map factor through one dimension lower.</p>
+<p>Covering spaces have a unique connection and it’s flat.</p>
+<p>A characteristic class is a natural transformation between the
+functor PrinG and the functor H^*.</p>
+<p>The first Chern class is a complete invariant of complex line
+bundles. The first S-W class is a complete invariant of real line
+bundles.</p>
+<p>c1 is zero iff the bundle has an SU(n) structure. w1 is zero iff the
+bundle has an SO(n) structure.</p>
+<p>The cohomology of BU(n) is a polynomial algebra on n generators over
+Z with ci in H^2i, and similarly for BO(n) over Z2 with wi in H^i.</p>
+<p>Whitney sum formula for c and w.</p>
+<p>The splitting principle.</p>
+<p>The w classes for the tangent bundles of spheres are 0 starting with
+S1.</p>
+<p>The w classes for the tangent bundles of RPn and CPn.</p>
+<h2 id="chern-weil-theory">Chern-Weil theory</h2>
+<h2
+id="cohomology-as-obstructions-to-lifts-obstruction-theory">Cohomology
+as obstructions to lifts (obstruction theory)</h2>
 <h2 id="torus-groups">Torus groups</h2>
 <p>We can get partway towards a theory of principal bundles over
 arbitrary Lie groups by using the <a
@@ -426,10 +464,29 @@ href="https://ncatlab.org/nlab/show/splitting+principle">maximal
 torus</a> (aka “splitting principle”).</p>
 <p>Leray-Hirsch theorem.</p>
 <h2 id="follow-ups">Follow-ups</h2>
-<p><a href="zotero://select/items/1_E7IEEMRP">Scoccola 05/2020 -
-Nilpotent Types and Fracture Squares in Homotopy Type Theory</a></p>
-<p><a href="zotero://select/items/1_TX88MRXW">Cohen - The Topology of
-Fiber Bundles Lecture Notes</a></p>
+<ul>
+<li><a href="zotero://select/items/1_E7IEEMRP">Scoccola 05/2020 -
+Nilpotent Types and Fracture Squares in Homotopy Type Theory</a></li>
+<li><a href="zotero://select/items/1_TX88MRXW">Cohen - The Topology of
+Fiber Bundles Lecture Notes</a></li>
+<li>intersection forms</li>
+<li>examples of nontrivial manifolds</li>
+<li>a situation where classically there’s an obstruction to a
+distribution; Lie bracket remaining in subbundle</li>
+<li>Baez Galois theory formulations</li>
+<li>locating the classical formulas for curvature (<span
+class="math inline">\(F=dA+\frac{1}{2}A\wedge A\)</span>); Bianchi
+identity</li>
+<li>locating the classical formula for the action of the gauge group on
+a connection/curvature</li>
+<li>locating the Leibniz rule</li>
+<li>if <span class="math inline">\(\mathrm{ap}\)</span> “is”
+differentiation, then is <span
+class="math inline">\(d^2=0\)</span>?</li>
+<li>which map from the Rubik’s cube is the Hopf bundle?</li>
+<li>Hodge star</li>
+<li>orientation of a bundle</li>
+</ul>
 <h2 class="unnumbered" id="references">References</h2>
 <div id="refs" class="references csl-bib-body hanging-indent"
 role="doc-bibliography">

@@ -93,6 +93,13 @@ id=&#34;toc-pathovers-as-horizontal-vertical&#34;&gt;Pathovers as horizontal
 vertical&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#gauge-transformations&#34;
 id=&#34;toc-gauge-transformations&#34;&gt;Gauge transformations&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#classical-theorems&#34; id=&#34;toc-classical-theorems&#34;&gt;Classical
+theorems&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#chern-weil-theory&#34; id=&#34;toc-chern-weil-theory&#34;&gt;Chern-Weil
+theory&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#cohomology-as-obstructions-to-lifts-obstruction-theory&#34;
+id=&#34;toc-cohomology-as-obstructions-to-lifts-obstruction-theory&#34;&gt;Cohomology
+as obstructions to lifts (obstruction theory)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#torus-groups&#34; id=&#34;toc-torus-groups&#34;&gt;Torus groups&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#follow-ups&#34; id=&#34;toc-follow-ups&#34;&gt;Follow-ups&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#references&#34; id=&#34;toc-references&#34;&gt;References&lt;/a&gt;&lt;/li&gt;
@@ -112,8 +119,9 @@ title=&#34;Image of the book cover of Godel Escher Bach&#34; width=&#34;500&#34;
 &lt;li&gt;Characteristic classes
 &lt;ol type=&#34;1&#34;&gt;
 &lt;li&gt;Splitting principle&lt;/li&gt;
+&lt;li&gt;Tori&lt;/li&gt;
+&lt;li&gt;Relationship with curvature (Chern-Weil theory)&lt;/li&gt;
 &lt;/ol&gt;&lt;/li&gt;
-&lt;li&gt;Tori 3. Relationship with curvature (Chern-Weil theory)&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
 &lt;p&gt;What can we import into homotopy type theory from gauge theory using
@@ -318,12 +326,12 @@ understand why we made this choice of group element.&lt;/p&gt;
 values in the Lie algebra of the structure group. That’s just the
 infinitesimal version of what we did, which is the assignment of group
 elements to paths.&lt;/p&gt;
-&lt;pre class=&#34;Agda&#34;&gt;&lt;a id=&#34;13298&#34; class=&#34;Symbol&#34;&gt;{-#&lt;/a&gt; &lt;a id=&#34;13302&#34; class=&#34;Keyword&#34;&gt;OPTIONS&lt;/a&gt; &lt;a id=&#34;13310&#34; class=&#34;Pragma&#34;&gt;--without-K&lt;/a&gt; &lt;a id=&#34;13322&#34; class=&#34;Pragma&#34;&gt;--cohesion&lt;/a&gt; &lt;a id=&#34;13333&#34; class=&#34;Pragma&#34;&gt;--flat-split&lt;/a&gt; &lt;a id=&#34;13346&#34; class=&#34;Symbol&#34;&gt;#-}&lt;/a&gt;
+&lt;pre class=&#34;Agda&#34;&gt;&lt;a id=&#34;13306&#34; class=&#34;Symbol&#34;&gt;{-#&lt;/a&gt; &lt;a id=&#34;13310&#34; class=&#34;Keyword&#34;&gt;OPTIONS&lt;/a&gt; &lt;a id=&#34;13318&#34; class=&#34;Pragma&#34;&gt;--without-K&lt;/a&gt; &lt;a id=&#34;13330&#34; class=&#34;Pragma&#34;&gt;--cohesion&lt;/a&gt; &lt;a id=&#34;13341&#34; class=&#34;Pragma&#34;&gt;--flat-split&lt;/a&gt; &lt;a id=&#34;13354&#34; class=&#34;Symbol&#34;&gt;#-}&lt;/a&gt;
 
-&lt;a id=&#34;13351&#34; class=&#34;Keyword&#34;&gt;module&lt;/a&gt; &lt;a id=&#34;13358&#34; href=&#34;discrete_gauge_theory.html&#34; class=&#34;Module Operator&#34;&gt;discrete_gauge_theory&lt;/a&gt; &lt;a id=&#34;13380&#34; class=&#34;Keyword&#34;&gt;where&lt;/a&gt;
+&lt;a id=&#34;13359&#34; class=&#34;Keyword&#34;&gt;module&lt;/a&gt; &lt;a id=&#34;13366&#34; href=&#34;discrete_gauge_theory.html&#34; class=&#34;Module Operator&#34;&gt;discrete_gauge_theory&lt;/a&gt; &lt;a id=&#34;13388&#34; class=&#34;Keyword&#34;&gt;where&lt;/a&gt;
 
-&lt;a id=&#34;13387&#34; class=&#34;Keyword&#34;&gt;open&lt;/a&gt; &lt;a id=&#34;13392&#34; class=&#34;Keyword&#34;&gt;import&lt;/a&gt; &lt;a id=&#34;13399&#34; href=&#34;https://unimath.github.io/agda-unimath/foundation.universe-levels.html&#34; class=&#34;Module&#34;&gt;foundation.universe-levels&lt;/a&gt;
-&lt;a id=&#34;13426&#34; class=&#34;Keyword&#34;&gt;open&lt;/a&gt; &lt;a id=&#34;13431&#34; class=&#34;Keyword&#34;&gt;import&lt;/a&gt; &lt;a id=&#34;13438&#34; href=&#34;https://unimath.github.io/agda-unimath/foundation-core.identity-types.html&#34; class=&#34;Module&#34;&gt;foundation-core.identity-types&lt;/a&gt;
+&lt;a id=&#34;13395&#34; class=&#34;Keyword&#34;&gt;open&lt;/a&gt; &lt;a id=&#34;13400&#34; class=&#34;Keyword&#34;&gt;import&lt;/a&gt; &lt;a id=&#34;13407&#34; href=&#34;https://unimath.github.io/agda-unimath/foundation.universe-levels.html&#34; class=&#34;Module&#34;&gt;foundation.universe-levels&lt;/a&gt;
+&lt;a id=&#34;13434&#34; class=&#34;Keyword&#34;&gt;open&lt;/a&gt; &lt;a id=&#34;13439&#34; class=&#34;Keyword&#34;&gt;import&lt;/a&gt; &lt;a id=&#34;13446&#34; href=&#34;https://unimath.github.io/agda-unimath/foundation-core.identity-types.html&#34; class=&#34;Module&#34;&gt;foundation-core.identity-types&lt;/a&gt;
 &lt;/pre&gt;
 &lt;h2 id=&#34;bundles-with-connection&#34;&gt;Bundles with connection&lt;/h2&gt;
 &lt;p&gt;We take as our starting point the delooping framework of &lt;span
@@ -332,14 +340,14 @@ href=&#34;#ref-buchholtz2023central&#34; role=&#34;doc-biblioref&#34;&gt;Buchhol
 al.&lt;/em&gt;, 2023&lt;/a&gt;)&lt;/span&gt;. Consider the central type &lt;span
 class=&#34;math inline&#34;&gt;\(S^1\)&lt;/span&gt;, given as the higher inductive
 type:&lt;/p&gt;
-&lt;pre class=&#34;Agda&#34;&gt;&lt;a id=&#34;13663&#34; class=&#34;Keyword&#34;&gt;postulate&lt;/a&gt;
-  &lt;a id=&#34;𝕊¹&#34;&gt;&lt;/a&gt;&lt;a id=&#34;13675&#34; href=&#34;discrete_gauge_theory.html#13675&#34; class=&#34;Postulate&#34;&gt;𝕊¹&lt;/a&gt; &lt;a id=&#34;13678&#34; class=&#34;Symbol&#34;&gt;:&lt;/a&gt; &lt;a id=&#34;13680&#34; href=&#34;Agda.Primitive.html#388&#34; class=&#34;Primitive&#34;&gt;UU&lt;/a&gt; &lt;a id=&#34;13683&#34; href=&#34;Agda.Primitive.html#915&#34; class=&#34;Primitive&#34;&gt;lzero&lt;/a&gt;
+&lt;pre class=&#34;Agda&#34;&gt;&lt;a id=&#34;13671&#34; class=&#34;Keyword&#34;&gt;postulate&lt;/a&gt;
+  &lt;a id=&#34;𝕊¹&#34;&gt;&lt;/a&gt;&lt;a id=&#34;13683&#34; href=&#34;discrete_gauge_theory.html#13683&#34; class=&#34;Postulate&#34;&gt;𝕊¹&lt;/a&gt; &lt;a id=&#34;13686&#34; class=&#34;Symbol&#34;&gt;:&lt;/a&gt; &lt;a id=&#34;13688&#34; href=&#34;Agda.Primitive.html#388&#34; class=&#34;Primitive&#34;&gt;UU&lt;/a&gt; &lt;a id=&#34;13691&#34; href=&#34;Agda.Primitive.html#915&#34; class=&#34;Primitive&#34;&gt;lzero&lt;/a&gt;
 
-&lt;a id=&#34;13690&#34; class=&#34;Keyword&#34;&gt;postulate&lt;/a&gt;
-  &lt;a id=&#34;base-𝕊¹&#34;&gt;&lt;/a&gt;&lt;a id=&#34;13702&#34; href=&#34;discrete_gauge_theory.html#13702&#34; class=&#34;Postulate&#34;&gt;base-𝕊¹&lt;/a&gt; &lt;a id=&#34;13710&#34; class=&#34;Symbol&#34;&gt;:&lt;/a&gt; &lt;a id=&#34;13712&#34; href=&#34;discrete_gauge_theory.html#13675&#34; class=&#34;Postulate&#34;&gt;𝕊¹&lt;/a&gt;
+&lt;a id=&#34;13698&#34; class=&#34;Keyword&#34;&gt;postulate&lt;/a&gt;
+  &lt;a id=&#34;base-𝕊¹&#34;&gt;&lt;/a&gt;&lt;a id=&#34;13710&#34; href=&#34;discrete_gauge_theory.html#13710&#34; class=&#34;Postulate&#34;&gt;base-𝕊¹&lt;/a&gt; &lt;a id=&#34;13718&#34; class=&#34;Symbol&#34;&gt;:&lt;/a&gt; &lt;a id=&#34;13720&#34; href=&#34;discrete_gauge_theory.html#13683&#34; class=&#34;Postulate&#34;&gt;𝕊¹&lt;/a&gt;
 
-&lt;a id=&#34;13716&#34; class=&#34;Keyword&#34;&gt;postulate&lt;/a&gt;
-  &lt;a id=&#34;loop-𝕊¹&#34;&gt;&lt;/a&gt;&lt;a id=&#34;13728&#34; href=&#34;discrete_gauge_theory.html#13728&#34; class=&#34;Postulate&#34;&gt;loop-𝕊¹&lt;/a&gt; &lt;a id=&#34;13736&#34; class=&#34;Symbol&#34;&gt;:&lt;/a&gt; &lt;a id=&#34;13738&#34; href=&#34;https://unimath.github.io/agda-unimath/foundation-core.identity-types.html#5936&#34; class=&#34;Datatype&#34;&gt;Id&lt;/a&gt; &lt;a id=&#34;13741&#34; href=&#34;discrete_gauge_theory.html#13702&#34; class=&#34;Postulate&#34;&gt;base-𝕊¹&lt;/a&gt; &lt;a id=&#34;13749&#34; href=&#34;discrete_gauge_theory.html#13702&#34; class=&#34;Postulate&#34;&gt;base-𝕊¹&lt;/a&gt;
+&lt;a id=&#34;13724&#34; class=&#34;Keyword&#34;&gt;postulate&lt;/a&gt;
+  &lt;a id=&#34;loop-𝕊¹&#34;&gt;&lt;/a&gt;&lt;a id=&#34;13736&#34; href=&#34;discrete_gauge_theory.html#13736&#34; class=&#34;Postulate&#34;&gt;loop-𝕊¹&lt;/a&gt; &lt;a id=&#34;13744&#34; class=&#34;Symbol&#34;&gt;:&lt;/a&gt; &lt;a id=&#34;13746&#34; href=&#34;https://unimath.github.io/agda-unimath/foundation-core.identity-types.html#5936&#34; class=&#34;Datatype&#34;&gt;Id&lt;/a&gt; &lt;a id=&#34;13749&#34; href=&#34;discrete_gauge_theory.html#13710&#34; class=&#34;Postulate&#34;&gt;base-𝕊¹&lt;/a&gt; &lt;a id=&#34;13757&#34; href=&#34;discrete_gauge_theory.html#13710&#34; class=&#34;Postulate&#34;&gt;base-𝕊¹&lt;/a&gt;
 &lt;/pre&gt;
 &lt;p&gt;Given a nerve &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt;, the type of
 principal &lt;span class=&#34;math inline&#34;&gt;\(S^1\)&lt;/span&gt; bundles over &lt;span
@@ -382,6 +390,9 @@ map to this path. &lt;span class=&#34;math inline&#34;&gt;\(\textbf{[TODO: {deta
 &lt;span class=&#34;math inline&#34;&gt;\(1=_{S^1}g\)&lt;/span&gt; to 2-cells is curvature.
 Classically these are defined infinitesimally as a 1-form and a 2-form,
 so it’s all making sense.&lt;/p&gt;
+&lt;p&gt;If the map is more than just “the bundle” and contains the data of a
+curved connection automatically, can we recover the underlying bundle
+without its connection?&lt;/p&gt;
 &lt;p&gt;Classically we have that hiccup that connections aren’t actually
 1-forms, they are points in an affine space modeled on 1-forms. But
 curvature is an honest 2-form. Can we detect that hiccup here? Yes, in
@@ -437,6 +448,33 @@ a connection &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; is irred
 stabilizer of &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; coincides with the
 center of &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt;. This leads to framed
 connections.&lt;/p&gt;
+&lt;h2 id=&#34;classical-theorems&#34;&gt;Classical theorems&lt;/h2&gt;
+&lt;p&gt;Cohen Theorem 2.24 p. 73: Complex line bundles over CPn are the
+integers, and for n&amp;gt;=0 the bundle is the n-fold tensor power of the
+universal line bundle.&lt;/p&gt;
+&lt;p&gt;Cohen Theorem 2.25: The only nontriv real line bundle over RPn is the
+canonical line bundle.&lt;/p&gt;
+&lt;p&gt;Cohen Theorem 2.27: A bundle has a nontriv section iff the
+classifying map factor through one dimension lower.&lt;/p&gt;
+&lt;p&gt;Covering spaces have a unique connection and it’s flat.&lt;/p&gt;
+&lt;p&gt;A characteristic class is a natural transformation between the
+functor PrinG and the functor H^*.&lt;/p&gt;
+&lt;p&gt;The first Chern class is a complete invariant of complex line
+bundles. The first S-W class is a complete invariant of real line
+bundles.&lt;/p&gt;
+&lt;p&gt;c1 is zero iff the bundle has an SU(n) structure. w1 is zero iff the
+bundle has an SO(n) structure.&lt;/p&gt;
+&lt;p&gt;The cohomology of BU(n) is a polynomial algebra on n generators over
+Z with ci in H^2i, and similarly for BO(n) over Z2 with wi in H^i.&lt;/p&gt;
+&lt;p&gt;Whitney sum formula for c and w.&lt;/p&gt;
+&lt;p&gt;The splitting principle.&lt;/p&gt;
+&lt;p&gt;The w classes for the tangent bundles of spheres are 0 starting with
+S1.&lt;/p&gt;
+&lt;p&gt;The w classes for the tangent bundles of RPn and CPn.&lt;/p&gt;
+&lt;h2 id=&#34;chern-weil-theory&#34;&gt;Chern-Weil theory&lt;/h2&gt;
+&lt;h2
+id=&#34;cohomology-as-obstructions-to-lifts-obstruction-theory&#34;&gt;Cohomology
+as obstructions to lifts (obstruction theory)&lt;/h2&gt;
 &lt;h2 id=&#34;torus-groups&#34;&gt;Torus groups&lt;/h2&gt;
 &lt;p&gt;We can get partway towards a theory of principal bundles over
 arbitrary Lie groups by using the &lt;a
@@ -444,10 +482,29 @@ href=&#34;https://ncatlab.org/nlab/show/splitting+principle&#34;&gt;maximal
 torus&lt;/a&gt; (aka “splitting principle”).&lt;/p&gt;
 &lt;p&gt;Leray-Hirsch theorem.&lt;/p&gt;
 &lt;h2 id=&#34;follow-ups&#34;&gt;Follow-ups&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;zotero://select/items/1_E7IEEMRP&#34;&gt;Scoccola 05/2020 -
-Nilpotent Types and Fracture Squares in Homotopy Type Theory&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;zotero://select/items/1_TX88MRXW&#34;&gt;Cohen - The Topology of
-Fiber Bundles Lecture Notes&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;zotero://select/items/1_E7IEEMRP&#34;&gt;Scoccola 05/2020 -
+Nilpotent Types and Fracture Squares in Homotopy Type Theory&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;zotero://select/items/1_TX88MRXW&#34;&gt;Cohen - The Topology of
+Fiber Bundles Lecture Notes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;intersection forms&lt;/li&gt;
+&lt;li&gt;examples of nontrivial manifolds&lt;/li&gt;
+&lt;li&gt;a situation where classically there’s an obstruction to a
+distribution; Lie bracket remaining in subbundle&lt;/li&gt;
+&lt;li&gt;Baez Galois theory formulations&lt;/li&gt;
+&lt;li&gt;locating the classical formulas for curvature (&lt;span
+class=&#34;math inline&#34;&gt;\(F=dA+\frac{1}{2}A\wedge A\)&lt;/span&gt;); Bianchi
+identity&lt;/li&gt;
+&lt;li&gt;locating the classical formula for the action of the gauge group on
+a connection/curvature&lt;/li&gt;
+&lt;li&gt;locating the Leibniz rule&lt;/li&gt;
+&lt;li&gt;if &lt;span class=&#34;math inline&#34;&gt;\(\mathrm{ap}\)&lt;/span&gt; “is”
+differentiation, then is &lt;span
+class=&#34;math inline&#34;&gt;\(d^2=0\)&lt;/span&gt;?&lt;/li&gt;
+&lt;li&gt;which map from the Rubik’s cube is the Hopf bundle?&lt;/li&gt;
+&lt;li&gt;Hodge star&lt;/li&gt;
+&lt;li&gt;orientation of a bundle&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 class=&#34;unnumbered&#34; id=&#34;references&#34;&gt;References&lt;/h2&gt;
 &lt;div id=&#34;refs&#34; class=&#34;references csl-bib-body hanging-indent&#34;
 role=&#34;doc-bibliography&#34;&gt;
