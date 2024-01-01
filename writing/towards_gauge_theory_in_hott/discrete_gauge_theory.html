@@ -223,11 +223,33 @@ interior of the disk. We will assume we stop at a finite dimension. We
 will be left with maps <span class="math inline">\(X_0\hookrightarrow
 X_1\hookrightarrow\cdots\hookrightarrow X_n\)</span> for some finite
 dimension <span class="math inline">\(n\)</span>.</p>
-<p>What spaces are equivalent to a CW complex, and which CW complexes
-have other structures such as a piecewise linear structure or a smooth
-structure? Here’s a quick rundown. <span
-class="math inline">\(\textbf{[TODO: {Get some clarity and present
-it.}]}\)</span></p>
+<p>What topological manifolds are equivalent to a CW complex? The answer
+is the composition of a few results summarized <a
+href="https://mathoverflow.net/questions/201944/topological-n-manifolds-have-the-homotopy-type-of-n-dimensional-cw-complexes">by
+Allen Hatcher</a> (citing <span class="citation"
+data-cites="kirby_siebenmann">(<a href="#ref-kirby_siebenmann"
+role="doc-biblioref">Kirby &amp; Siebenmann, 1977</a>)</span> and <span
+class="citation" data-cites="freedman_quinn">(<a
+href="#ref-freedman_quinn" role="doc-biblioref">Freedman &amp; Quinn,
+1990</a>)</span>):</p>
+<blockquote>
+<p>Every topological manifold has a handlebody structure except in
+dimension 4, where a 4-manifold has a handlebody structure if and only
+if it is smoothable. This is a theorem on page 136 of Freedman and
+Quinn’s book “Topology of 4-Manifolds”, with a reference given to the
+Kirby-Siebenmann book for the higher-dimensional case. It is then an
+elementary fact that an <span class="math inline">\(n\)</span>-manifold
+with a handlebody structure is homotopy equivalent to a CW complex with
+one <span class="math inline">\(k\)</span>-cell for each <span
+class="math inline">\(k\)</span>-handle, so in particular there are no
+cells of dimension greater than <span class="math inline">\(n\)</span>.
+At least in the compact case a manifold with a handlebody structure is
+in fact homeomorphic to a CW complex with <span
+class="math inline">\(k\)</span>-cells corresponding to <span
+class="math inline">\(k\)</span>-handles; see page 107 of
+Kirby-Siebenmann. This probably holds in the noncompact case as well,
+though I don’t know a reference.</p>
+</blockquote>
 <p>It’s easy to see how to take the data of a classical CW complex and
 convert it into a higher inductive type. Just replace the pushout with
 the homotopy pushout, and we have constructed a type that has <span
@@ -267,11 +289,11 @@ i.e. <em>dual</em> vertices.</p>
 <p>In HoTT terms we would like the top-dimensional classical information
 to live at level 0 in the type theory, and the connectivity to live at
 level 1 and so on. So instead of forming a triangulation or CW structure
-for our manifold, we want to form a <em>Čech nerve of an open
-cover</em>.</p>
-<p><span class="math inline">\(\textbf{[TODO: {define this, and cite
-theorems about its homotopy type, focusing on the niceness or other
-special conditions}]}\)</span></p>
+for our manifold, we want to form a <em>Čech nerve of a good open
+cover</em>. The nLab <a
+href="https://ncatlab.org/nlab/show/good+open+cover">states that every
+CW complex admits a good open cover</a><strong>[TODO: try to do
+better]</strong>.</p>
 <p>So let’s form HITs whose points correspond to the bulk, that is to
 open sets in <span class="math inline">\(X\)</span>, so as to capture
 combinatorially structures that are samples or averages of their
@@ -308,12 +330,12 @@ understand why we made this choice of group element.</p>
 values in the Lie algebra of the structure group. That’s just the
 infinitesimal version of what we did, which is the assignment of group
 elements to paths.</p>
-<pre class="Agda"><a id="13306" class="Symbol">{-#</a> <a id="13310" class="Keyword">OPTIONS</a> <a id="13318" class="Pragma">--without-K</a> <a id="13330" class="Pragma">--cohesion</a> <a id="13341" class="Pragma">--flat-split</a> <a id="13354" class="Symbol">#-}</a>
+<pre class="Agda"><a id="14206" class="Symbol">{-#</a> <a id="14210" class="Keyword">OPTIONS</a> <a id="14218" class="Pragma">--without-K</a> <a id="14230" class="Pragma">--cohesion</a> <a id="14241" class="Pragma">--flat-split</a> <a id="14254" class="Symbol">#-}</a>
 
-<a id="13359" class="Keyword">module</a> <a id="13366" href="discrete_gauge_theory.html" class="Module Operator">discrete_gauge_theory</a> <a id="13388" class="Keyword">where</a>
+<a id="14259" class="Keyword">module</a> <a id="14266" href="discrete_gauge_theory.html" class="Module Operator">discrete_gauge_theory</a> <a id="14288" class="Keyword">where</a>
 
-<a id="13395" class="Keyword">open</a> <a id="13400" class="Keyword">import</a> <a id="13407" href="https://unimath.github.io/agda-unimath/foundation.universe-levels.html" class="Module">foundation.universe-levels</a>
-<a id="13434" class="Keyword">open</a> <a id="13439" class="Keyword">import</a> <a id="13446" href="https://unimath.github.io/agda-unimath/foundation-core.identity-types.html" class="Module">foundation-core.identity-types</a>
+<a id="14295" class="Keyword">open</a> <a id="14300" class="Keyword">import</a> <a id="14307" href="https://unimath.github.io/agda-unimath/foundation.universe-levels.html" class="Module">foundation.universe-levels</a>
+<a id="14334" class="Keyword">open</a> <a id="14339" class="Keyword">import</a> <a id="14346" href="https://unimath.github.io/agda-unimath/foundation-core.identity-types.html" class="Module">foundation-core.identity-types</a>
 </pre>
 <h2 id="bundles-with-connection">Bundles with connection</h2>
 <p>We take as our starting point the delooping framework of <span
@@ -322,14 +344,14 @@ href="#ref-buchholtz2023central" role="doc-biblioref">Buchholtz <em>et
 al.</em>, 2023</a>)</span>. Consider the central type <span
 class="math inline">\(S^1\)</span>, given as the higher inductive
 type:</p>
-<pre class="Agda"><a id="13671" class="Keyword">postulate</a>
-  <a id="𝕊¹"></a><a id="13683" href="discrete_gauge_theory.html#13683" class="Postulate">𝕊¹</a> <a id="13686" class="Symbol">:</a> <a id="13688" href="Agda.Primitive.html#388" class="Primitive">UU</a> <a id="13691" href="Agda.Primitive.html#915" class="Primitive">lzero</a>
+<pre class="Agda"><a id="14571" class="Keyword">postulate</a>
+  <a id="𝕊¹"></a><a id="14583" href="discrete_gauge_theory.html#14583" class="Postulate">𝕊¹</a> <a id="14586" class="Symbol">:</a> <a id="14588" href="Agda.Primitive.html#388" class="Primitive">UU</a> <a id="14591" href="Agda.Primitive.html#915" class="Primitive">lzero</a>
 
-<a id="13698" class="Keyword">postulate</a>
-  <a id="base-𝕊¹"></a><a id="13710" href="discrete_gauge_theory.html#13710" class="Postulate">base-𝕊¹</a> <a id="13718" class="Symbol">:</a> <a id="13720" href="discrete_gauge_theory.html#13683" class="Postulate">𝕊¹</a>
+<a id="14598" class="Keyword">postulate</a>
+  <a id="base-𝕊¹"></a><a id="14610" href="discrete_gauge_theory.html#14610" class="Postulate">base-𝕊¹</a> <a id="14618" class="Symbol">:</a> <a id="14620" href="discrete_gauge_theory.html#14583" class="Postulate">𝕊¹</a>
 
-<a id="13724" class="Keyword">postulate</a>
-  <a id="loop-𝕊¹"></a><a id="13736" href="discrete_gauge_theory.html#13736" class="Postulate">loop-𝕊¹</a> <a id="13744" class="Symbol">:</a> <a id="13746" href="https://unimath.github.io/agda-unimath/foundation-core.identity-types.html#5936" class="Datatype">Id</a> <a id="13749" href="discrete_gauge_theory.html#13710" class="Postulate">base-𝕊¹</a> <a id="13757" href="discrete_gauge_theory.html#13710" class="Postulate">base-𝕊¹</a>
+<a id="14624" class="Keyword">postulate</a>
+  <a id="loop-𝕊¹"></a><a id="14636" href="discrete_gauge_theory.html#14636" class="Postulate">loop-𝕊¹</a> <a id="14644" class="Symbol">:</a> <a id="14646" href="https://unimath.github.io/agda-unimath/foundation-core.identity-types.html#5936" class="Datatype">Id</a> <a id="14649" href="discrete_gauge_theory.html#14610" class="Postulate">base-𝕊¹</a> <a id="14657" href="discrete_gauge_theory.html#14610" class="Postulate">base-𝕊¹</a>
 </pre>
 <p>Given a nerve <span class="math inline">\(X\)</span>, the type of
 principal <span class="math inline">\(S^1\)</span> bundles over <span
@@ -366,8 +388,8 @@ from <span class="math inline">\(f(wrgw)\)</span> to <span
 class="math inline">\(1_{S^1}\)</span>? Yes, the central type <span
 class="math inline">\(S^1\)</span> is connected so there are various
 paths we could choose, which differ by winding number. The 2-face will
-map to this path. <span class="math inline">\(\textbf{[TODO: {detail the
-2-type structure of \(\mathsf{BAut}_1 S^1\)}]}\)</span></p>
+map to this path. <strong>[TODO: detail the 2-type structure of <span
+class="math inline">\(\mathsf{BAut}_1 S^1\)</span>]</strong></p>
 <p>The lifting of paths is a connection, and the assignment of paths
 <span class="math inline">\(1=_{S^1}g\)</span> to 2-cells is curvature.
 Classically these are defined infinitesimally as a 1-form and a 2-form,
@@ -412,11 +434,11 @@ horizontal component is isomorphic to something in the base space, and
 the vertical component is tangent to a fiber, i.e. a torsor.</p>
 <h2 id="gauge-transformations">Gauge transformations</h2>
 <p>Physicists call automorphisms of the principal bundle <em>gauge
-transformations</em>. <span class="math inline">\(\textbf{[TODO:
-{explain about torsors and gauges and such}]}\)</span>. This means
-homotopies of the given bundle <span class="math inline">\(f:X\to
-\mathsf{BAut}_1 S^1\)</span>, i.e. functions of type <span
-class="math inline">\((x:X)\to f(x)=f(x)\)</span>.</p>
+transformations</em>. <strong>[TODO: explain about torsors and gauges
+and such]</strong>. This means homotopies of the given bundle <span
+class="math inline">\(f:X\to \mathsf{BAut}_1 S^1\)</span>,
+i.e. functions of type <span class="math inline">\((x:X)\to
+f(x)=f(x)\)</span>.</p>
 <p>Donaldson-Kronheimer: “The non-triviality of the orbit space is a
 reflection of the impossibility of finding a uniform, global procedure
 by which to pick out a preferred gauge for each equivalence class of
@@ -513,9 +535,21 @@ class="smallcaps">Rijke</span>, E. (2023) <a
 href="https://arxiv.org/abs/2301.02636">Central h-spaces and banded
 types</a>.
 </div>
+<div id="ref-freedman_quinn" class="csl-entry" role="doc-biblioentry">
+<span class="smallcaps">Freedman</span>, M.H. &amp; <span
+class="smallcaps">Quinn</span>, F. (1990) <em><a
+href="http://www.jstor.org/stable/j.ctt7ztz2d">Topology of 4-manifolds
+(PMS-39)</a></em>. Princeton University Press.
+</div>
 <div id="ref-hatcher_at" class="csl-entry" role="doc-biblioentry">
 <span class="smallcaps">Hatcher</span>, A. (2002) <em>Algebraic
 topology</em>. Cambridge University Press.
+</div>
+<div id="ref-kirby_siebenmann" class="csl-entry" role="doc-biblioentry">
+<span class="smallcaps">Kirby</span>, R.C. &amp; <span
+class="smallcaps">Siebenmann</span>, L.C. (1977) <em>Foundational essays
+on topological manifolds, smoothings, and triangulations</em>, Annals of
+mathematics studies. Princeton University Press.
 </div>
 <div id="ref-shulman_cohesion" class="csl-entry" role="doc-biblioentry">
 <span class="smallcaps">Shulman</span>, M. (2017) <a
