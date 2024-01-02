@@ -93,8 +93,7 @@ title="Image of the book cover of Godel Escher Bach" width="500" />
 </center>
 <h2 id="abstract">Abstract</h2>
 <p>We use combinatorial manifolds and torus groups to bring the study of
-connections on principal bundles into homotopy type theory. <span
-style="display:inline-block; width:1ex; height:1ex; background-color:red"></span></p>
+connections on principal bundles into homotopy type theory.</p>
 <h2 id="introduction">Introduction</h2>
 <p><a href="https://en.wikipedia.org/wiki/Gauge_theory">Gauge theory</a>
 is a general methodology for defining invariants of spaces, including
@@ -317,12 +316,12 @@ understand why we made this choice of group element.</p>
 values in the Lie algebra of the structure group. That’s just the
 infinitesimal version of what we did, which is the assignment of group
 elements to paths.</p>
-<pre class="Agda"><a id="14043" class="Symbol">{-#</a> <a id="14047" class="Keyword">OPTIONS</a> <a id="14055" class="Pragma">--without-K</a> <a id="14067" class="Pragma">--cohesion</a> <a id="14078" class="Pragma">--flat-split</a> <a id="14091" class="Symbol">#-}</a>
+<pre class="Agda"><a id="13955" class="Symbol">{-#</a> <a id="13959" class="Keyword">OPTIONS</a> <a id="13967" class="Pragma">--without-K</a> <a id="13979" class="Pragma">--cohesion</a> <a id="13990" class="Pragma">--flat-split</a> <a id="14003" class="Symbol">#-}</a>
 
-<a id="14096" class="Keyword">module</a> <a id="14103" href="discrete_gauge_theory.html" class="Module Operator">discrete_gauge_theory</a> <a id="14125" class="Keyword">where</a>
+<a id="14008" class="Keyword">module</a> <a id="14015" href="discrete_gauge_theory.html" class="Module Operator">discrete_gauge_theory</a> <a id="14037" class="Keyword">where</a>
 
-<a id="14132" class="Keyword">open</a> <a id="14137" class="Keyword">import</a> <a id="14144" href="https://unimath.github.io/agda-unimath/foundation.universe-levels.html" class="Module">foundation.universe-levels</a>
-<a id="14171" class="Keyword">open</a> <a id="14176" class="Keyword">import</a> <a id="14183" href="https://unimath.github.io/agda-unimath/foundation-core.identity-types.html" class="Module">foundation-core.identity-types</a>
+<a id="14044" class="Keyword">open</a> <a id="14049" class="Keyword">import</a> <a id="14056" href="https://unimath.github.io/agda-unimath/foundation.universe-levels.html" class="Module">foundation.universe-levels</a>
+<a id="14083" class="Keyword">open</a> <a id="14088" class="Keyword">import</a> <a id="14095" href="https://unimath.github.io/agda-unimath/foundation-core.identity-types.html" class="Module">foundation-core.identity-types</a>
 </pre>
 <h2 id="bundles-with-connection">Bundles with connection</h2>
 <p>We take as our starting point the delooping framework of <span
@@ -331,14 +330,14 @@ href="#ref-buchholtz2023central" role="doc-biblioref">Buchholtz <em>et
 al.</em>, 2023</a>)</span>. Consider the central type <span
 class="math inline">\(S^1\)</span>, given as the higher inductive
 type:</p>
-<pre class="Agda"><a id="14408" class="Keyword">postulate</a>
-  <a id="𝕊¹"></a><a id="14420" href="discrete_gauge_theory.html#14420" class="Postulate">𝕊¹</a> <a id="14423" class="Symbol">:</a> <a id="14425" href="Agda.Primitive.html#388" class="Primitive">UU</a> <a id="14428" href="Agda.Primitive.html#915" class="Primitive">lzero</a>
+<pre class="Agda"><a id="14320" class="Keyword">postulate</a>
+  <a id="𝕊¹"></a><a id="14332" href="discrete_gauge_theory.html#14332" class="Postulate">𝕊¹</a> <a id="14335" class="Symbol">:</a> <a id="14337" href="Agda.Primitive.html#388" class="Primitive">UU</a> <a id="14340" href="Agda.Primitive.html#915" class="Primitive">lzero</a>
 
-<a id="14435" class="Keyword">postulate</a>
-  <a id="base-𝕊¹"></a><a id="14447" href="discrete_gauge_theory.html#14447" class="Postulate">base-𝕊¹</a> <a id="14455" class="Symbol">:</a> <a id="14457" href="discrete_gauge_theory.html#14420" class="Postulate">𝕊¹</a>
+<a id="14347" class="Keyword">postulate</a>
+  <a id="base-𝕊¹"></a><a id="14359" href="discrete_gauge_theory.html#14359" class="Postulate">base-𝕊¹</a> <a id="14367" class="Symbol">:</a> <a id="14369" href="discrete_gauge_theory.html#14332" class="Postulate">𝕊¹</a>
 
-<a id="14461" class="Keyword">postulate</a>
-  <a id="loop-𝕊¹"></a><a id="14473" href="discrete_gauge_theory.html#14473" class="Postulate">loop-𝕊¹</a> <a id="14481" class="Symbol">:</a> <a id="14483" href="https://unimath.github.io/agda-unimath/foundation-core.identity-types.html#5936" class="Datatype">Id</a> <a id="14486" href="discrete_gauge_theory.html#14447" class="Postulate">base-𝕊¹</a> <a id="14494" href="discrete_gauge_theory.html#14447" class="Postulate">base-𝕊¹</a>
+<a id="14373" class="Keyword">postulate</a>
+  <a id="loop-𝕊¹"></a><a id="14385" href="discrete_gauge_theory.html#14385" class="Postulate">loop-𝕊¹</a> <a id="14393" class="Symbol">:</a> <a id="14395" href="https://unimath.github.io/agda-unimath/foundation-core.identity-types.html#5936" class="Datatype">Id</a> <a id="14398" href="discrete_gauge_theory.html#14359" class="Postulate">base-𝕊¹</a> <a id="14406" href="discrete_gauge_theory.html#14359" class="Postulate">base-𝕊¹</a>
 </pre>
 <p>Given a nerve <span class="math inline">\(X\)</span>, the type of
 principal <span class="math inline">\(S^1\)</span> bundles over <span
