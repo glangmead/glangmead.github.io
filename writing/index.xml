@@ -57,10 +57,10 @@
     }
   &lt;/style&gt;
   &lt;link rel=&#34;stylesheet&#34; href=&#34;Agda.css&#34; /&gt;
-  &lt;link rel=&#34;stylesheet&#34; href=&#34;https://fonts.googleapis.com/css2?family=Libre+Baskerville&amp;family=Quattrocento:wght@700&#34;&gt;
+  &lt;link rel=&#34;stylesheet&#34; href=&#34;https://fonts.googleapis.com/css2?family=Libre+Baskerville&amp;family=Quattrocento:wght@400&#34;&gt;
   &lt;style&gt;
   body {
-    font-family: &#39;Libre Baskerville&#39;, Baskerville, serif;
+    font-family: Baskerville, &#39;Libre Baskerville&#39;, serif;
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: Quattrocento, sans-serif;
