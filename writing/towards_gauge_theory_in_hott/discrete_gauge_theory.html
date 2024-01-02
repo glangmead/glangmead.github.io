@@ -69,9 +69,9 @@ fundamental groupoid, not the path groupoid</a></li>
 id="toc-combinatorial-manifolds">Combinatorial manifolds</a></li>
 <li><a href="#bundles-with-connection"
 id="toc-bundles-with-connection">Bundles with connection</a></li>
-<li><a href="#pathovers-as-horizontal-vertical"
-id="toc-pathovers-as-horizontal-vertical">Pathovers as horizontal
-vertical</a></li>
+<li><a href="#pathovers-as-horizontal-times-vertical"
+id="toc-pathovers-as-horizontal-times-vertical">Pathovers as horizontal
+<span class="math inline">\(\times\)</span> vertical</a></li>
 <li><a href="#gauge-transformations"
 id="toc-gauge-transformations">Gauge transformations</a></li>
 <li><a href="#classical-theorems" id="toc-classical-theorems">Classical
@@ -399,25 +399,20 @@ space of torsors have the same group as the loop space at that point,
 but they are conjugate to each other. In fact they are merely conjugate,
 as there are many conjugations (paths between two points) we can choose.
 A whole torsor’s worth!</p>
-<h2 id="pathovers-as-horizontal-vertical">Pathovers as horizontal
-vertical</h2>
-<p>Symmetry Lemma 4.14.1: Fix a section <span
-class="math inline">\(s:(x:B)\to f(x)\)</span> (or just the two
-endpoints of the lift). Given <span class="math inline">\(f\)</span> and
-<span class="math inline">\(s\)</span>, we have <span
-class="math inline">\(\underline{\underline{(x, s(x))} =_{E}
-\underline{(x&#39;, s(x&#39;))}} \simeq \underline{\underline{(x=_B
-x&#39;)}\times \underline{s(x)=_{f(x)}s(x&#39;)}}\)</span>.</p>
-<p>the type on the left are paths over <span
-class="math inline">\(x=x&#39;\)</span> anchored on the section (the
-ones that are <span class="math inline">\(s(x)\xrightarrow[{p}]{=}
-s(x&#39;)\)</span> for some <span
-class="math inline">\(p:x=x&#39;\)</span>)</p>
-<p>This mirrors exactly the classical picture where a connection is
-exactly the data of a decomposition of tangent vectors in the total
-space into a horizontal component and a vertical component. The
-horizontal component is isomorphic to something in the base space, and
-the vertical component is tangent to a fiber, i.e. a torsor.</p>
+<h2 id="pathovers-as-horizontal-times-vertical">Pathovers as horizontal
+<span class="math inline">\(\times\)</span> vertical</h2>
+<p><strong>Lemma</strong> If <span class="math inline">\(X\)</span> is a
+type and <span class="math inline">\(f:X\to \mathcal{U}\)</span> is a
+type family, and <span class="math inline">\(x, x&#39;:X\)</span>, and
+<span class="math inline">\(y:f(x), y&#39;:f(x&#39;)\)</span>, then we
+have an equivalence <span class="math inline">\((x, y)
+\xrightarrow[{}]{=} (x&#39;, y&#39;) \simeq
+(x=x&#39;)\times(y=y)\)</span> of the type of paths over paths in <span
+class="math inline">\(x=x&#39;\)</span> to the indicated
+product.<strong>[TODO: prove this generalization of Symmetry Lemma
+4.14.1.]</strong></p>
+<p>We can think of the two factors of the equivalence as providing
+horizontal and vertical components of the path in the total space.</p>
 <h2 id="gauge-transformations">Gauge transformations</h2>
 <p>Physicists call automorphisms of the principal bundle <em>gauge
 transformations</em>. <strong>[TODO: explain about torsors and gauges

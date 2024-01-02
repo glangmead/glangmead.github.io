@@ -87,9 +87,9 @@ fundamental groupoid, not the path groupoid&lt;/a&gt;&lt;/li&gt;
 id=&#34;toc-combinatorial-manifolds&#34;&gt;Combinatorial manifolds&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#bundles-with-connection&#34;
 id=&#34;toc-bundles-with-connection&#34;&gt;Bundles with connection&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#pathovers-as-horizontal-vertical&#34;
-id=&#34;toc-pathovers-as-horizontal-vertical&#34;&gt;Pathovers as horizontal
-vertical&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#pathovers-as-horizontal-times-vertical&#34;
+id=&#34;toc-pathovers-as-horizontal-times-vertical&#34;&gt;Pathovers as horizontal
+&lt;span class=&#34;math inline&#34;&gt;\(\times\)&lt;/span&gt; vertical&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#gauge-transformations&#34;
 id=&#34;toc-gauge-transformations&#34;&gt;Gauge transformations&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#classical-theorems&#34; id=&#34;toc-classical-theorems&#34;&gt;Classical
@@ -417,25 +417,20 @@ space of torsors have the same group as the loop space at that point,
 but they are conjugate to each other. In fact they are merely conjugate,
 as there are many conjugations (paths between two points) we can choose.
 A whole torsor’s worth!&lt;/p&gt;
-&lt;h2 id=&#34;pathovers-as-horizontal-vertical&#34;&gt;Pathovers as horizontal
-vertical&lt;/h2&gt;
-&lt;p&gt;Symmetry Lemma 4.14.1: Fix a section &lt;span
-class=&#34;math inline&#34;&gt;\(s:(x:B)\to f(x)\)&lt;/span&gt; (or just the two
-endpoints of the lift). Given &lt;span class=&#34;math inline&#34;&gt;\(f\)&lt;/span&gt; and
-&lt;span class=&#34;math inline&#34;&gt;\(s\)&lt;/span&gt;, we have &lt;span
-class=&#34;math inline&#34;&gt;\(\underline{\underline{(x, s(x))} =_{E}
-\underline{(x&amp;#39;, s(x&amp;#39;))}} \simeq \underline{\underline{(x=_B
-x&amp;#39;)}\times \underline{s(x)=_{f(x)}s(x&amp;#39;)}}\)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;the type on the left are paths over &lt;span
-class=&#34;math inline&#34;&gt;\(x=x&amp;#39;\)&lt;/span&gt; anchored on the section (the
-ones that are &lt;span class=&#34;math inline&#34;&gt;\(s(x)\xrightarrow[{p}]{=}
-s(x&amp;#39;)\)&lt;/span&gt; for some &lt;span
-class=&#34;math inline&#34;&gt;\(p:x=x&amp;#39;\)&lt;/span&gt;)&lt;/p&gt;
-&lt;p&gt;This mirrors exactly the classical picture where a connection is
-exactly the data of a decomposition of tangent vectors in the total
-space into a horizontal component and a vertical component. The
-horizontal component is isomorphic to something in the base space, and
-the vertical component is tangent to a fiber, i.e. a torsor.&lt;/p&gt;
+&lt;h2 id=&#34;pathovers-as-horizontal-times-vertical&#34;&gt;Pathovers as horizontal
+&lt;span class=&#34;math inline&#34;&gt;\(\times\)&lt;/span&gt; vertical&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Lemma&lt;/strong&gt; If &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; is a
+type and &lt;span class=&#34;math inline&#34;&gt;\(f:X\to \mathcal{U}\)&lt;/span&gt; is a
+type family, and &lt;span class=&#34;math inline&#34;&gt;\(x, x&amp;#39;:X\)&lt;/span&gt;, and
+&lt;span class=&#34;math inline&#34;&gt;\(y:f(x), y&amp;#39;:f(x&amp;#39;)\)&lt;/span&gt;, then we
+have an equivalence &lt;span class=&#34;math inline&#34;&gt;\((x, y)
+\xrightarrow[{}]{=} (x&amp;#39;, y&amp;#39;) \simeq
+(x=x&amp;#39;)\times(y=y)\)&lt;/span&gt; of the type of paths over paths in &lt;span
+class=&#34;math inline&#34;&gt;\(x=x&amp;#39;\)&lt;/span&gt; to the indicated
+product.&lt;strong&gt;[TODO: prove this generalization of Symmetry Lemma
+4.14.1.]&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;We can think of the two factors of the equivalence as providing
+horizontal and vertical components of the path in the total space.&lt;/p&gt;
 &lt;h2 id=&#34;gauge-transformations&#34;&gt;Gauge transformations&lt;/h2&gt;
 &lt;p&gt;Physicists call automorphisms of the principal bundle &lt;em&gt;gauge
 transformations&lt;/em&gt;. &lt;strong&gt;[TODO: explain about torsors and gauges
