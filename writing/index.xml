@@ -101,6 +101,15 @@ id=&#34;toc-cohomology-as-obstructions-to-lifts-obstruction-theory&#34;&gt;Cohom
 as obstructions to lifts (obstruction theory)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#torus-groups&#34; id=&#34;toc-torus-groups&#34;&gt;Torus groups&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#follow-ups&#34; id=&#34;toc-follow-ups&#34;&gt;Follow-ups&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#baez-muniain-outline-i-iii&#34;
+id=&#34;toc-baez-muniain-outline-i-iii&#34;&gt;Baez-Muniain outline
+(I-III)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#kobayashi-nomizu-outline-i-iii&#34;
+id=&#34;toc-kobayashi-nomizu-outline-i-iii&#34;&gt;Kobayashi-Nomizu outline
+(I-III)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#kolar-michor-slovak-outline-i-iv&#34;
+id=&#34;toc-kolar-michor-slovak-outline-i-iv&#34;&gt;Kolar-Michor-Slovak outline
+(I-IV)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#references&#34; id=&#34;toc-references&#34;&gt;References&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/nav&gt;
@@ -111,8 +120,14 @@ title=&#34;Image of the book cover of Godel Escher Bach&#34; width=&#34;500&#34;
 &lt;/center&gt;
 &lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
 &lt;p&gt;We use combinatorial manifolds and torus groups to bring the study of
-connections on principal bundles into homotopy type theory.&lt;/p&gt;
+connections on principal bundles into homotopy type theory. We intend
+this document to be an introduction to modern geometry and gauge theory
+for anyone familiar with homotopy type theory. The hope is that it works
+vice-versa as well.&lt;/p&gt;
 &lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;A literate Markdown+Agda version of this document &lt;a
+href=&#34;https://github.com/glangmead/writing/blob/master/differential_geometry_in_hott/agda/discrete_gauge_theory.lagda.md&#34;&gt;is
+available as well&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Gauge_theory&#34;&gt;Gauge theory&lt;/a&gt;
 is a general methodology for defining invariants of spaces, including
 invariants of the homotopy type, the homomorphism class, or the
@@ -334,12 +349,12 @@ understand why we made this choice of group element.&lt;/p&gt;
 values in the Lie algebra of the structure group. That’s just the
 infinitesimal version of what we did, which is the assignment of group
 elements to paths.&lt;/p&gt;
-&lt;pre class=&#34;Agda&#34;&gt;&lt;a id=&#34;13955&#34; class=&#34;Symbol&#34;&gt;{-#&lt;/a&gt; &lt;a id=&#34;13959&#34; class=&#34;Keyword&#34;&gt;OPTIONS&lt;/a&gt; &lt;a id=&#34;13967&#34; class=&#34;Pragma&#34;&gt;--without-K&lt;/a&gt; &lt;a id=&#34;13979&#34; class=&#34;Pragma&#34;&gt;--cohesion&lt;/a&gt; &lt;a id=&#34;13990&#34; class=&#34;Pragma&#34;&gt;--flat-split&lt;/a&gt; &lt;a id=&#34;14003&#34; class=&#34;Symbol&#34;&gt;#-}&lt;/a&gt;
+&lt;pre class=&#34;Agda&#34;&gt;&lt;a id=&#34;14321&#34; class=&#34;Symbol&#34;&gt;{-#&lt;/a&gt; &lt;a id=&#34;14325&#34; class=&#34;Keyword&#34;&gt;OPTIONS&lt;/a&gt; &lt;a id=&#34;14333&#34; class=&#34;Pragma&#34;&gt;--without-K&lt;/a&gt; &lt;a id=&#34;14345&#34; class=&#34;Pragma&#34;&gt;--cohesion&lt;/a&gt; &lt;a id=&#34;14356&#34; class=&#34;Pragma&#34;&gt;--flat-split&lt;/a&gt; &lt;a id=&#34;14369&#34; class=&#34;Symbol&#34;&gt;#-}&lt;/a&gt;
 
-&lt;a id=&#34;14008&#34; class=&#34;Keyword&#34;&gt;module&lt;/a&gt; &lt;a id=&#34;14015&#34; href=&#34;discrete_gauge_theory.html&#34; class=&#34;Module Operator&#34;&gt;discrete_gauge_theory&lt;/a&gt; &lt;a id=&#34;14037&#34; class=&#34;Keyword&#34;&gt;where&lt;/a&gt;
+&lt;a id=&#34;14374&#34; class=&#34;Keyword&#34;&gt;module&lt;/a&gt; &lt;a id=&#34;14381&#34; href=&#34;discrete_gauge_theory.html&#34; class=&#34;Module Operator&#34;&gt;discrete_gauge_theory&lt;/a&gt; &lt;a id=&#34;14403&#34; class=&#34;Keyword&#34;&gt;where&lt;/a&gt;
 
-&lt;a id=&#34;14044&#34; class=&#34;Keyword&#34;&gt;open&lt;/a&gt; &lt;a id=&#34;14049&#34; class=&#34;Keyword&#34;&gt;import&lt;/a&gt; &lt;a id=&#34;14056&#34; href=&#34;https://unimath.github.io/agda-unimath/foundation.universe-levels.html&#34; class=&#34;Module&#34;&gt;foundation.universe-levels&lt;/a&gt;
-&lt;a id=&#34;14083&#34; class=&#34;Keyword&#34;&gt;open&lt;/a&gt; &lt;a id=&#34;14088&#34; class=&#34;Keyword&#34;&gt;import&lt;/a&gt; &lt;a id=&#34;14095&#34; href=&#34;https://unimath.github.io/agda-unimath/foundation-core.identity-types.html&#34; class=&#34;Module&#34;&gt;foundation-core.identity-types&lt;/a&gt;
+&lt;a id=&#34;14410&#34; class=&#34;Keyword&#34;&gt;open&lt;/a&gt; &lt;a id=&#34;14415&#34; class=&#34;Keyword&#34;&gt;import&lt;/a&gt; &lt;a id=&#34;14422&#34; href=&#34;https://unimath.github.io/agda-unimath/foundation.universe-levels.html&#34; class=&#34;Module&#34;&gt;foundation.universe-levels&lt;/a&gt;
+&lt;a id=&#34;14449&#34; class=&#34;Keyword&#34;&gt;open&lt;/a&gt; &lt;a id=&#34;14454&#34; class=&#34;Keyword&#34;&gt;import&lt;/a&gt; &lt;a id=&#34;14461&#34; href=&#34;https://unimath.github.io/agda-unimath/foundation-core.identity-types.html&#34; class=&#34;Module&#34;&gt;foundation-core.identity-types&lt;/a&gt;
 &lt;/pre&gt;
 &lt;h2 id=&#34;bundles-with-connection&#34;&gt;Bundles with connection&lt;/h2&gt;
 &lt;p&gt;We take as our starting point the delooping framework of &lt;span
@@ -348,14 +363,14 @@ href=&#34;#ref-buchholtz2023central&#34; role=&#34;doc-biblioref&#34;&gt;Buchhol
 al.&lt;/em&gt;, 2023&lt;/a&gt;)&lt;/span&gt;. Consider the central type &lt;span
 class=&#34;math inline&#34;&gt;\(S^1\)&lt;/span&gt;, given as the higher inductive
 type:&lt;/p&gt;
-&lt;pre class=&#34;Agda&#34;&gt;&lt;a id=&#34;14320&#34; class=&#34;Keyword&#34;&gt;postulate&lt;/a&gt;
-  &lt;a id=&#34;𝕊¹&#34;&gt;&lt;/a&gt;&lt;a id=&#34;14332&#34; href=&#34;discrete_gauge_theory.html#14332&#34; class=&#34;Postulate&#34;&gt;𝕊¹&lt;/a&gt; &lt;a id=&#34;14335&#34; class=&#34;Symbol&#34;&gt;:&lt;/a&gt; &lt;a id=&#34;14337&#34; href=&#34;Agda.Primitive.html#388&#34; class=&#34;Primitive&#34;&gt;UU&lt;/a&gt; &lt;a id=&#34;14340&#34; href=&#34;Agda.Primitive.html#915&#34; class=&#34;Primitive&#34;&gt;lzero&lt;/a&gt;
+&lt;pre class=&#34;Agda&#34;&gt;&lt;a id=&#34;14686&#34; class=&#34;Keyword&#34;&gt;postulate&lt;/a&gt;
+  &lt;a id=&#34;𝕊¹&#34;&gt;&lt;/a&gt;&lt;a id=&#34;14698&#34; href=&#34;discrete_gauge_theory.html#14698&#34; class=&#34;Postulate&#34;&gt;𝕊¹&lt;/a&gt; &lt;a id=&#34;14701&#34; class=&#34;Symbol&#34;&gt;:&lt;/a&gt; &lt;a id=&#34;14703&#34; href=&#34;Agda.Primitive.html#388&#34; class=&#34;Primitive&#34;&gt;UU&lt;/a&gt; &lt;a id=&#34;14706&#34; href=&#34;Agda.Primitive.html#915&#34; class=&#34;Primitive&#34;&gt;lzero&lt;/a&gt;
 
-&lt;a id=&#34;14347&#34; class=&#34;Keyword&#34;&gt;postulate&lt;/a&gt;
-  &lt;a id=&#34;base-𝕊¹&#34;&gt;&lt;/a&gt;&lt;a id=&#34;14359&#34; href=&#34;discrete_gauge_theory.html#14359&#34; class=&#34;Postulate&#34;&gt;base-𝕊¹&lt;/a&gt; &lt;a id=&#34;14367&#34; class=&#34;Symbol&#34;&gt;:&lt;/a&gt; &lt;a id=&#34;14369&#34; href=&#34;discrete_gauge_theory.html#14332&#34; class=&#34;Postulate&#34;&gt;𝕊¹&lt;/a&gt;
+&lt;a id=&#34;14713&#34; class=&#34;Keyword&#34;&gt;postulate&lt;/a&gt;
+  &lt;a id=&#34;base-𝕊¹&#34;&gt;&lt;/a&gt;&lt;a id=&#34;14725&#34; href=&#34;discrete_gauge_theory.html#14725&#34; class=&#34;Postulate&#34;&gt;base-𝕊¹&lt;/a&gt; &lt;a id=&#34;14733&#34; class=&#34;Symbol&#34;&gt;:&lt;/a&gt; &lt;a id=&#34;14735&#34; href=&#34;discrete_gauge_theory.html#14698&#34; class=&#34;Postulate&#34;&gt;𝕊¹&lt;/a&gt;
 
-&lt;a id=&#34;14373&#34; class=&#34;Keyword&#34;&gt;postulate&lt;/a&gt;
-  &lt;a id=&#34;loop-𝕊¹&#34;&gt;&lt;/a&gt;&lt;a id=&#34;14385&#34; href=&#34;discrete_gauge_theory.html#14385&#34; class=&#34;Postulate&#34;&gt;loop-𝕊¹&lt;/a&gt; &lt;a id=&#34;14393&#34; class=&#34;Symbol&#34;&gt;:&lt;/a&gt; &lt;a id=&#34;14395&#34; href=&#34;https://unimath.github.io/agda-unimath/foundation-core.identity-types.html#5936&#34; class=&#34;Datatype&#34;&gt;Id&lt;/a&gt; &lt;a id=&#34;14398&#34; href=&#34;discrete_gauge_theory.html#14359&#34; class=&#34;Postulate&#34;&gt;base-𝕊¹&lt;/a&gt; &lt;a id=&#34;14406&#34; href=&#34;discrete_gauge_theory.html#14359&#34; class=&#34;Postulate&#34;&gt;base-𝕊¹&lt;/a&gt;
+&lt;a id=&#34;14739&#34; class=&#34;Keyword&#34;&gt;postulate&lt;/a&gt;
+  &lt;a id=&#34;loop-𝕊¹&#34;&gt;&lt;/a&gt;&lt;a id=&#34;14751&#34; href=&#34;discrete_gauge_theory.html#14751&#34; class=&#34;Postulate&#34;&gt;loop-𝕊¹&lt;/a&gt; &lt;a id=&#34;14759&#34; class=&#34;Symbol&#34;&gt;:&lt;/a&gt; &lt;a id=&#34;14761&#34; href=&#34;https://unimath.github.io/agda-unimath/foundation-core.identity-types.html#5936&#34; class=&#34;Datatype&#34;&gt;Id&lt;/a&gt; &lt;a id=&#34;14764&#34; href=&#34;discrete_gauge_theory.html#14725&#34; class=&#34;Postulate&#34;&gt;base-𝕊¹&lt;/a&gt; &lt;a id=&#34;14772&#34; href=&#34;discrete_gauge_theory.html#14725&#34; class=&#34;Postulate&#34;&gt;base-𝕊¹&lt;/a&gt;
 &lt;/pre&gt;
 &lt;p&gt;Given a nerve &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt;, the type of
 principal &lt;span class=&#34;math inline&#34;&gt;\(S^1\)&lt;/span&gt; bundles over &lt;span
@@ -507,6 +522,77 @@ class=&#34;math inline&#34;&gt;\(d^2=0\)&lt;/span&gt;?&lt;/li&gt;
 &lt;li&gt;which map from the Rubik’s cube is the Hopf bundle?&lt;/li&gt;
 &lt;li&gt;Hodge star&lt;/li&gt;
 &lt;li&gt;orientation of a bundle&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;baez-muniain-outline-i-iii&#34;&gt;Baez-Muniain outline (I-III)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Maxwell’s equations&lt;/li&gt;
+&lt;li&gt;Manifolds&lt;/li&gt;
+&lt;li&gt;Vector fields&lt;/li&gt;
+&lt;li&gt;Differential forms&lt;/li&gt;
+&lt;li&gt;Rewriting Maxwell’s equations&lt;/li&gt;
+&lt;li&gt;DeRham theory in electromagnetism&lt;/li&gt;
+&lt;li&gt;Symmetry&lt;/li&gt;
+&lt;li&gt;Bundles and connections&lt;/li&gt;
+&lt;li&gt;Curvature and the Yang-Mills equation&lt;/li&gt;
+&lt;li&gt;Chern-Simons theory&lt;/li&gt;
+&lt;li&gt;Link invariants from gauge theory&lt;/li&gt;
+&lt;li&gt;Semi-Riemannian geometry&lt;/li&gt;
+&lt;li&gt;Einstein’s equation&lt;/li&gt;
+&lt;li&gt;Lagrangians for general relativity&lt;/li&gt;
+&lt;li&gt;The ADM formalism&lt;/li&gt;
+&lt;li&gt;The new variables&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;kobayashi-nomizu-outline-i-iii&#34;&gt;Kobayashi-Nomizu outline
+(I-III)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Differentiable manifolds&lt;/li&gt;
+&lt;li&gt;Tensor algebras&lt;/li&gt;
+&lt;li&gt;Tensor fields&lt;/li&gt;
+&lt;li&gt;Lie groups&lt;/li&gt;
+&lt;li&gt;Fibre bundles&lt;/li&gt;
+&lt;li&gt;Connections in a principal fibre bundle&lt;/li&gt;
+&lt;li&gt;Existence and extension of connections&lt;/li&gt;
+&lt;li&gt;Parallelism&lt;/li&gt;
+&lt;li&gt;Holonomy groups&lt;/li&gt;
+&lt;li&gt;Curvature form and structure equation&lt;/li&gt;
+&lt;li&gt;Mappings of connections&lt;/li&gt;
+&lt;li&gt;Reduction theorem&lt;/li&gt;
+&lt;li&gt;Holonomy theorem&lt;/li&gt;
+&lt;li&gt;Flat connections&lt;/li&gt;
+&lt;li&gt;Local and infinitesimal holonomy groups&lt;/li&gt;
+&lt;li&gt;Invariant connections&lt;/li&gt;
+&lt;li&gt;Connections in a vector bundle&lt;/li&gt;
+&lt;li&gt;Linear connections&lt;/li&gt;
+&lt;li&gt;Affine connections&lt;/li&gt;
+&lt;li&gt;Developments&lt;/li&gt;
+&lt;li&gt;Curvature and torsion tensors&lt;/li&gt;
+&lt;li&gt;Geodesics&lt;/li&gt;
+&lt;li&gt;Expressions in local coordinate systems&lt;/li&gt;
+&lt;li&gt;Normal coordinates&lt;/li&gt;
+&lt;li&gt;Linear infinitesimal holonomy groups&lt;/li&gt;
+&lt;li&gt;…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;kolar-michor-slovak-outline-i-iv&#34;&gt;Kolar-Michor-Slovak outline
+(I-IV)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Differentiable manifolds&lt;/li&gt;
+&lt;li&gt;Submersions and immersions&lt;/li&gt;
+&lt;li&gt;Vector fields and flows&lt;/li&gt;
+&lt;li&gt;Lie groups&lt;/li&gt;
+&lt;li&gt;Lie subgroups and homogeneous spaces&lt;/li&gt;
+&lt;li&gt;Vector bundles&lt;/li&gt;
+&lt;li&gt;Differential forms&lt;/li&gt;
+&lt;li&gt;Derivations on the algebra of differential forms and the
+Frölicher-Nijenhuis bracket&lt;/li&gt;
+&lt;li&gt;General fiber bundles and connections&lt;/li&gt;
+&lt;li&gt;Principal fiber bundles and G-bundles&lt;/li&gt;
+&lt;li&gt;Principal and induced connections&lt;/li&gt;
+&lt;li&gt;Jets&lt;/li&gt;
+&lt;li&gt;Jet groups&lt;/li&gt;
+&lt;li&gt;Natural bundles and operators&lt;/li&gt;
+&lt;li&gt;Prolongations of principal fiber bundles&lt;/li&gt;
+&lt;li&gt;Canonical differential forms&lt;/li&gt;
+&lt;li&gt;Connections and the absolute differentiation&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 class=&#34;unnumbered&#34; id=&#34;references&#34;&gt;References&lt;/h2&gt;
 &lt;div id=&#34;refs&#34; class=&#34;references csl-bib-body hanging-indent&#34;
