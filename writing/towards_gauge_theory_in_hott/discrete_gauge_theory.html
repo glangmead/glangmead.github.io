@@ -313,6 +313,10 @@ which approach will be preferable in which applications.)</p>
 <p>We can define a non-flat connection on this space, one that captures
 the intrinsic curvature of the embedding into 3-dimensional space, in
 the following way.</p>
+<p><img src="curved_cube.gif"
+title="Animation of the transport of an oriented shape along a cube, visiting three faces, coming back rotated by 90 degrees"
+width="600" />
+<!-- Exportimage("filename", "curved_cube.gif", "type", "gif", "slider", tt, "loop", false, "time", 50, "width", 600) --></p>
 <p>Imagine a closed path on the original cube that starts at the white
 center square, moves along the top face and then the red face to the red
 center square, then comes around to the front green square, then back up
@@ -330,12 +334,12 @@ understand why we made this choice of group element.</p>
 values in the Lie algebra of the structure group. That’s just the
 infinitesimal version of what we did, which is the assignment of group
 elements to paths.</p>
-<pre class="Agda"><a id="14333" class="Symbol">{-#</a> <a id="14337" class="Keyword">OPTIONS</a> <a id="14345" class="Pragma">--without-K</a> <a id="14357" class="Pragma">--cohesion</a> <a id="14368" class="Pragma">--flat-split</a> <a id="14381" class="Symbol">#-}</a>
+<pre class="Agda"><a id="14609" class="Symbol">{-#</a> <a id="14613" class="Keyword">OPTIONS</a> <a id="14621" class="Pragma">--without-K</a> <a id="14633" class="Pragma">--cohesion</a> <a id="14644" class="Pragma">--flat-split</a> <a id="14657" class="Symbol">#-}</a>
 
-<a id="14386" class="Keyword">module</a> <a id="14393" href="discrete_gauge_theory.html" class="Module Operator">discrete_gauge_theory</a> <a id="14415" class="Keyword">where</a>
+<a id="14662" class="Keyword">module</a> <a id="14669" href="discrete_gauge_theory.html" class="Module Operator">discrete_gauge_theory</a> <a id="14691" class="Keyword">where</a>
 
-<a id="14422" class="Keyword">open</a> <a id="14427" class="Keyword">import</a> <a id="14434" href="https://unimath.github.io/agda-unimath/foundation.universe-levels.html" class="Module">foundation.universe-levels</a>
-<a id="14461" class="Keyword">open</a> <a id="14466" class="Keyword">import</a> <a id="14473" href="https://unimath.github.io/agda-unimath/foundation-core.identity-types.html" class="Module">foundation-core.identity-types</a>
+<a id="14698" class="Keyword">open</a> <a id="14703" class="Keyword">import</a> <a id="14710" href="https://unimath.github.io/agda-unimath/foundation.universe-levels.html" class="Module">foundation.universe-levels</a>
+<a id="14737" class="Keyword">open</a> <a id="14742" class="Keyword">import</a> <a id="14749" href="https://unimath.github.io/agda-unimath/foundation-core.identity-types.html" class="Module">foundation-core.identity-types</a>
 </pre>
 <h2 id="bundles-with-connection">Bundles with connection</h2>
 <p>We take as our starting point the delooping framework of <span
@@ -344,14 +348,14 @@ href="#ref-buchholtz2023central" role="doc-biblioref">Buchholtz <em>et
 al.</em>, 2023</a>)</span>. Consider the central type <span
 class="math inline">\(S^1\)</span>, given as the higher inductive
 type:</p>
-<pre class="Agda"><a id="14698" class="Keyword">postulate</a>
-  <a id="𝕊¹"></a><a id="14710" href="discrete_gauge_theory.html#14710" class="Postulate">𝕊¹</a> <a id="14713" class="Symbol">:</a> <a id="14715" href="Agda.Primitive.html#388" class="Primitive">UU</a> <a id="14718" href="Agda.Primitive.html#915" class="Primitive">lzero</a>
+<pre class="Agda"><a id="14974" class="Keyword">postulate</a>
+  <a id="𝕊¹"></a><a id="14986" href="discrete_gauge_theory.html#14986" class="Postulate">𝕊¹</a> <a id="14989" class="Symbol">:</a> <a id="14991" href="Agda.Primitive.html#388" class="Primitive">UU</a> <a id="14994" href="Agda.Primitive.html#915" class="Primitive">lzero</a>
 
-<a id="14725" class="Keyword">postulate</a>
-  <a id="base-𝕊¹"></a><a id="14737" href="discrete_gauge_theory.html#14737" class="Postulate">base-𝕊¹</a> <a id="14745" class="Symbol">:</a> <a id="14747" href="discrete_gauge_theory.html#14710" class="Postulate">𝕊¹</a>
+<a id="15001" class="Keyword">postulate</a>
+  <a id="base-𝕊¹"></a><a id="15013" href="discrete_gauge_theory.html#15013" class="Postulate">base-𝕊¹</a> <a id="15021" class="Symbol">:</a> <a id="15023" href="discrete_gauge_theory.html#14986" class="Postulate">𝕊¹</a>
 
-<a id="14751" class="Keyword">postulate</a>
-  <a id="loop-𝕊¹"></a><a id="14763" href="discrete_gauge_theory.html#14763" class="Postulate">loop-𝕊¹</a> <a id="14771" class="Symbol">:</a> <a id="14773" href="https://unimath.github.io/agda-unimath/foundation-core.identity-types.html#5936" class="Datatype">Id</a> <a id="14776" href="discrete_gauge_theory.html#14737" class="Postulate">base-𝕊¹</a> <a id="14784" href="discrete_gauge_theory.html#14737" class="Postulate">base-𝕊¹</a>
+<a id="15027" class="Keyword">postulate</a>
+  <a id="loop-𝕊¹"></a><a id="15039" href="discrete_gauge_theory.html#15039" class="Postulate">loop-𝕊¹</a> <a id="15047" class="Symbol">:</a> <a id="15049" href="https://unimath.github.io/agda-unimath/foundation-core.identity-types.html#5936" class="Datatype">Id</a> <a id="15052" href="discrete_gauge_theory.html#15013" class="Postulate">base-𝕊¹</a> <a id="15060" href="discrete_gauge_theory.html#15013" class="Postulate">base-𝕊¹</a>
 </pre>
 <p>Given a nerve <span class="math inline">\(X\)</span>, the type of
 principal <span class="math inline">\(S^1\)</span> bundles over <span
