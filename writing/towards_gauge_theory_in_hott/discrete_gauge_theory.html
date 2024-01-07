@@ -135,8 +135,8 @@ won’t be saying more about that line of investigation.</p>
 and combinatorial methods. <a
 href="https://en.wikipedia.org/wiki/Discrete_differential_geometry">Discrete
 differential geometry</a> is an active field of applied mathematics and
-computer science which has combinatorial versions of vector fields,
-differential forms, connections and curvature, which apply to a
+computer science which has developed combinatorial versions of vector
+fields, differential forms, connections and curvature, defined on a
 triangulated surface embedded in 3-dimensional space (as might be used
 in a computer graphics engine).</p>
 <p>Algebraic topology of course has always had a train of thought
@@ -251,22 +251,13 @@ class="math inline">\(k\)</span>-handles; see page 107 of
 Kirby-Siebenmann. This probably holds in the noncompact case as well,
 though I don’t know a reference.</p>
 </blockquote>
-<p>It’s easy to see how to take the data of a classical CW complex and
-convert it into a higher inductive type. Just replace the pushout with
-the homotopy pushout, and we have constructed a type that has <span
+<p>Could we take the data of a classical CW complex and convert it into
+a higher inductive type? We could try replacing the pushout with the
+homotopy pushout, and we have constructed a type that has <span
 class="math inline">\(n\)</span>-cells living in path level <span
-class="math inline">\(n\)</span>. Of course we may end up obtaining more
-paths than we put in the constructor, since even simple spaces like
-spheres have nontrivial higher homotopy. And on the other hand our space
-may turn out to be equivalent to a type with lower truncation level than
-<span class="math inline">\(n\)</span>, for example if we create an
-interval with two points and a path between them, which nominally is a
-1-type but is equivalent to a single point. But the situation should
-mirror the classical picture, so these are all features and not
-bugs.</p>
-<p>But even a CW complex is not obviously amenable to defining discrete
-forms or connections. Why? Because the “bulk” of the manifold, the
-top-dimensional cells, have been thrust up to level <span
+class="math inline">\(n\)</span>. But this is not obviously amenable to
+defining discrete forms or connections. Why? Because the “bulk” of the
+manifold, the top-dimensional cells, have been thrust up to level <span
 class="math inline">\(n\)</span> in the type theory.</p>
 <p>Imagine trying to approximate a function <span
 class="math inline">\(f:X\to \mathbb{R}\)</span> on a manifold with some
@@ -293,8 +284,9 @@ level 1 and so on. So instead of forming a triangulation or CW structure
 for our manifold, we want to form a <em>Čech nerve of a good open
 cover</em>. The nLab <a
 href="https://ncatlab.org/nlab/show/good+open+cover">states that every
-CW complex admits a good open cover</a><strong>[TODO: try to do
-better]</strong>.</p>
+CW complex admits a good open cover</a> because every CW complex is
+homotopy equivalent to a simplicial complex, which admit good open
+covers.<strong>[TODO: try to do better]</strong></p>
 <p>So let’s form HITs whose points correspond to the bulk, that is to
 open sets in <span class="math inline">\(X\)</span>, so as to capture
 combinatorially structures that are samples or averages of their
@@ -311,9 +303,16 @@ whose open sets are faces plus a little spillover to the four
 neighboring faces. The nerve of this cover is an octahedron with
 vertices colored white, green and so on, with edges that correspond to
 adjacent faces, and with 2-cells for the 3-way intersections taking
-place at the original corners. We can define a non-flat connection on
-this space, one that captures the intrinsic curvature of the embedding
-into 3-dimensional space, in the following way.</p>
+place at the original corners.</p>
+<p>(Alternatively, we could form the open cover by taking a neighborhood
+of each vertex, e.g. the interiors of all cells of all dimensions that
+contain that vertex. In this way the points at level 0 of the nerve are
+associated with the vertices of the complex. This will be a dual complex
+to the one that works with top-dimensional faces. I’m not currently sure
+which approach will be preferable in which applications.)</p>
+<p>We can define a non-flat connection on this space, one that captures
+the intrinsic curvature of the embedding into 3-dimensional space, in
+the following way.</p>
 <p>Imagine a closed path on the original cube that starts at the white
 center square, moves along the top face and then the red face to the red
 center square, then comes around to the front green square, then back up
@@ -331,12 +330,12 @@ understand why we made this choice of group element.</p>
 values in the Lie algebra of the structure group. That’s just the
 infinitesimal version of what we did, which is the assignment of group
 elements to paths.</p>
-<pre class="Agda"><a id="14321" class="Symbol">{-#</a> <a id="14325" class="Keyword">OPTIONS</a> <a id="14333" class="Pragma">--without-K</a> <a id="14345" class="Pragma">--cohesion</a> <a id="14356" class="Pragma">--flat-split</a> <a id="14369" class="Symbol">#-}</a>
+<pre class="Agda"><a id="14333" class="Symbol">{-#</a> <a id="14337" class="Keyword">OPTIONS</a> <a id="14345" class="Pragma">--without-K</a> <a id="14357" class="Pragma">--cohesion</a> <a id="14368" class="Pragma">--flat-split</a> <a id="14381" class="Symbol">#-}</a>
 
-<a id="14374" class="Keyword">module</a> <a id="14381" href="discrete_gauge_theory.html" class="Module Operator">discrete_gauge_theory</a> <a id="14403" class="Keyword">where</a>
+<a id="14386" class="Keyword">module</a> <a id="14393" href="discrete_gauge_theory.html" class="Module Operator">discrete_gauge_theory</a> <a id="14415" class="Keyword">where</a>
 
-<a id="14410" class="Keyword">open</a> <a id="14415" class="Keyword">import</a> <a id="14422" href="https://unimath.github.io/agda-unimath/foundation.universe-levels.html" class="Module">foundation.universe-levels</a>
-<a id="14449" class="Keyword">open</a> <a id="14454" class="Keyword">import</a> <a id="14461" href="https://unimath.github.io/agda-unimath/foundation-core.identity-types.html" class="Module">foundation-core.identity-types</a>
+<a id="14422" class="Keyword">open</a> <a id="14427" class="Keyword">import</a> <a id="14434" href="https://unimath.github.io/agda-unimath/foundation.universe-levels.html" class="Module">foundation.universe-levels</a>
+<a id="14461" class="Keyword">open</a> <a id="14466" class="Keyword">import</a> <a id="14473" href="https://unimath.github.io/agda-unimath/foundation-core.identity-types.html" class="Module">foundation-core.identity-types</a>
 </pre>
 <h2 id="bundles-with-connection">Bundles with connection</h2>
 <p>We take as our starting point the delooping framework of <span
@@ -345,14 +344,14 @@ href="#ref-buchholtz2023central" role="doc-biblioref">Buchholtz <em>et
 al.</em>, 2023</a>)</span>. Consider the central type <span
 class="math inline">\(S^1\)</span>, given as the higher inductive
 type:</p>
-<pre class="Agda"><a id="14686" class="Keyword">postulate</a>
-  <a id="𝕊¹"></a><a id="14698" href="discrete_gauge_theory.html#14698" class="Postulate">𝕊¹</a> <a id="14701" class="Symbol">:</a> <a id="14703" href="Agda.Primitive.html#388" class="Primitive">UU</a> <a id="14706" href="Agda.Primitive.html#915" class="Primitive">lzero</a>
+<pre class="Agda"><a id="14698" class="Keyword">postulate</a>
+  <a id="𝕊¹"></a><a id="14710" href="discrete_gauge_theory.html#14710" class="Postulate">𝕊¹</a> <a id="14713" class="Symbol">:</a> <a id="14715" href="Agda.Primitive.html#388" class="Primitive">UU</a> <a id="14718" href="Agda.Primitive.html#915" class="Primitive">lzero</a>
 
-<a id="14713" class="Keyword">postulate</a>
-  <a id="base-𝕊¹"></a><a id="14725" href="discrete_gauge_theory.html#14725" class="Postulate">base-𝕊¹</a> <a id="14733" class="Symbol">:</a> <a id="14735" href="discrete_gauge_theory.html#14698" class="Postulate">𝕊¹</a>
+<a id="14725" class="Keyword">postulate</a>
+  <a id="base-𝕊¹"></a><a id="14737" href="discrete_gauge_theory.html#14737" class="Postulate">base-𝕊¹</a> <a id="14745" class="Symbol">:</a> <a id="14747" href="discrete_gauge_theory.html#14710" class="Postulate">𝕊¹</a>
 
-<a id="14739" class="Keyword">postulate</a>
-  <a id="loop-𝕊¹"></a><a id="14751" href="discrete_gauge_theory.html#14751" class="Postulate">loop-𝕊¹</a> <a id="14759" class="Symbol">:</a> <a id="14761" href="https://unimath.github.io/agda-unimath/foundation-core.identity-types.html#5936" class="Datatype">Id</a> <a id="14764" href="discrete_gauge_theory.html#14725" class="Postulate">base-𝕊¹</a> <a id="14772" href="discrete_gauge_theory.html#14725" class="Postulate">base-𝕊¹</a>
+<a id="14751" class="Keyword">postulate</a>
+  <a id="loop-𝕊¹"></a><a id="14763" href="discrete_gauge_theory.html#14763" class="Postulate">loop-𝕊¹</a> <a id="14771" class="Symbol">:</a> <a id="14773" href="https://unimath.github.io/agda-unimath/foundation-core.identity-types.html#5936" class="Datatype">Id</a> <a id="14776" href="discrete_gauge_theory.html#14737" class="Postulate">base-𝕊¹</a> <a id="14784" href="discrete_gauge_theory.html#14737" class="Postulate">base-𝕊¹</a>
 </pre>
 <p>Given a nerve <span class="math inline">\(X\)</span>, the type of
 principal <span class="math inline">\(S^1\)</span> bundles over <span
@@ -449,6 +448,8 @@ stabilizer of <span class="math inline">\(A\)</span> coincides with the
 center of <span class="math inline">\(G\)</span>. This leads to framed
 connections.</p>
 <h2 id="classical-theorems">Classical theorems</h2>
+<p>Example HITs: spheres, RPn (RP2 is in Brunerie at al “Synthetic
+integral coho”), tori</p>
 <p>Cohen Theorem 2.24 p. 73: Complex line bundles over CPn are the
 integers, and for n&gt;=0 the bundle is the n-fold tensor power of the
 universal line bundle.</p>
@@ -480,6 +481,12 @@ as obstructions to lifts (obstruction theory)</h2>
 arbitrary Lie groups by using the <a
 href="https://ncatlab.org/nlab/show/splitting+principle">maximal
 torus</a> (aka “splitting principle”).</p>
+<p>This theory is specific to compact Lie groups, which have a theory
+relating the group to its maximal torus plus a Weyl group. All maximal
+tori are conjugate to each other. The maximal torus of <span
+class="math inline">\(U(n)\)</span> is the diagonal subgroup which is
+<span class="math inline">\(U(1)^n\)</span>. Every element of a compact
+Lie group is conjugate to an element of the maximal torus.</p>
 <p>Leray-Hirsch theorem.</p>
 <h2 id="follow-ups">Follow-ups</h2>
 <ul>
