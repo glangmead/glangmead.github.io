@@ -239,6 +239,62 @@ href="#ref-hamilton2017" role="doc-biblioref">Hamilton,
 <li>Lagrangians</li>
 <li>Appendix: tensors and forms</li>
 </ul>
+<p>Outline of <span class="citation"
+data-cites="milnor1974characteristic">(<a
+href="#ref-milnor1974characteristic" role="doc-biblioref">Milnor &amp;
+Stasheff, 1974</a>)</span></p>
+<ul>
+<li>Smooth manifolds</li>
+<li>Vector bundles</li>
+<li>Stiefel-Whitney classes</li>
+<li>Grassmann manifold and universal bundles</li>
+<li>A cell structure for Grassmann manifolds</li>
+<li>The cohomology ring <span class="math inline">\(H^{\bullet}
+(\mathrm{Gr}_n, \mathbb{Z}/2)\)</span></li>
+<li>Existence of Stiefel-Whitney classes</li>
+<li>Oriented bundles and the Euler class</li>
+<li>The Thom isomorphism theorem</li>
+<li>Computations in a smooth manifold</li>
+<li>Obstructions</li>
+<li>Complex vector spaces and complex manifolds</li>
+<li>Chern classes</li>
+<li>Pontrjagin classes</li>
+<li>Chern numbers and Pontrjagin numbers</li>
+<li>The oriented cobordism ring <span
+class="math inline">\(\Omega_*\)</span></li>
+<li>Thom spaces and transitivity</li>
+<li>Multiplicative sequences and the signature theorem</li>
+<li>Combinatorial Pontrjagin classes</li>
+</ul>
+<p>Outline of <span class="citation" data-cites="bott_tu">(<a
+href="#ref-bott_tu" role="doc-biblioref">Bott &amp; Tu,
+1982</a>)</span></p>
+<ul>
+<li>de Rham complex on <span
+class="math inline">\(\mathbb{R}^n\)</span></li>
+<li>The Mayer-Vietoris sequence</li>
+<li>Orientation and integration</li>
+<li>Poincaré lemma</li>
+<li>The Mayer-Vietoris argument</li>
+<li>The Thom isomorphism</li>
+<li>The nonorientable case</li>
+<li>The generalized Mayer-Vietoris principle</li>
+<li>More examples and applications of the Mayer-Vietoris principle</li>
+<li>Presheaves and Cech cohomology</li>
+<li>Sphere bundles</li>
+<li>The Thom isomorphism and Poincaré duality revisited</li>
+<li>Monodromy</li>
+<li>The spectral sequence of a filtered complex</li>
+<li>Cohomology with integer coefficients</li>
+<li>The path fibration</li>
+<li>Review of homotopy theory</li>
+<li>Applications to homotopy theory</li>
+<li>Rational homotopy theory</li>
+<li>Chern classes of a complex vector bundle</li>
+<li>The splitting principle and flag manifolds</li>
+<li>Pontrjagin classes</li>
+<li>The search for the universal bundle</li>
+</ul>
 <h3 data-number="1.2.2" id="our-objects-1-combinatorial-manifolds"><span
 class="header-section-number">1.2.2</span> Our objects 1: combinatorial
 manifolds</h3>
@@ -274,15 +330,8 @@ class="math inline">\(BS^1\)</span></h3>
 <h3 data-number="1.2.5" id="other-topics"><span
 class="header-section-number">1.2.5</span> Other topics</h3>
 <ul>
-<li><a href="zotero://select/items/1_E7IEEMRP">Scoccola 05/2020 -
-Nilpotent Types and Fracture Squares in Homotopy Type Theory</a></li>
-<li><a href="zotero://select/items/1_TX88MRXW">Cohen - The Topology of
-Fiber Bundles Lecture Notes</a></li>
-<li>intersection forms</li>
 <li>examples of nontrivial manifolds</li>
-<li>a situation where classically there’s an obstruction to a
-distribution; Lie bracket remaining in subbundle</li>
-<li>Baez Galois theory formulations</li>
+<li>integration</li>
 <li>locating the classical formulas for curvature (<span
 class="math inline">\(F=dA+\frac{1}{2}A\wedge A\)</span>); Bianchi
 identity</li>
@@ -295,6 +344,14 @@ class="math inline">\(d^2=0\)</span>?</li>
 <li>which map from the Rubik’s cube is the Hopf bundle?</li>
 <li>Hodge star</li>
 <li>orientation of a bundle</li>
+<li><a href="zotero://select/items/1_E7IEEMRP">Scoccola 05/2020 -
+Nilpotent Types and Fracture Squares in Homotopy Type Theory</a></li>
+<li><a href="zotero://select/items/1_TX88MRXW">Cohen - The Topology of
+Fiber Bundles Lecture Notes</a></li>
+<li>intersection forms</li>
+<li>a situation where classically there’s an obstruction to a
+distribution; Lie bracket remaining in subbundle</li>
+<li>Baez Galois theory formulations</li>
 <li>Cohomology as obstructions to lifts (obstruction theory)</li>
 <li>Maximal tori, <a
 href="https://ncatlab.org/nlab/show/splitting+principle">splitting
@@ -527,12 +584,12 @@ understand why we made this choice of group element.</p>
 values in the Lie algebra of the structure group. That’s just the
 infinitesimal version of what we did, which is the assignment of group
 elements to paths.</p>
-<pre class="Agda"><a id="18043" class="Symbol">{-#</a> <a id="18047" class="Keyword">OPTIONS</a> <a id="18055" class="Pragma">--without-K</a> <a id="18067" class="Pragma">--cohesion</a> <a id="18078" class="Pragma">--flat-split</a> <a id="18091" class="Symbol">#-}</a>
+<pre class="Agda"><a id="19521" class="Symbol">{-#</a> <a id="19525" class="Keyword">OPTIONS</a> <a id="19533" class="Pragma">--without-K</a> <a id="19545" class="Pragma">--cohesion</a> <a id="19556" class="Pragma">--flat-split</a> <a id="19569" class="Symbol">#-}</a>
 
-<a id="18096" class="Keyword">module</a> <a id="18103" href="discrete_gauge_theory.html" class="Module Operator">discrete_gauge_theory</a> <a id="18125" class="Keyword">where</a>
+<a id="19574" class="Keyword">module</a> <a id="19581" href="discrete_gauge_theory.html" class="Module Operator">discrete_gauge_theory</a> <a id="19603" class="Keyword">where</a>
 
-<a id="18132" class="Keyword">open</a> <a id="18137" class="Keyword">import</a> <a id="18144" href="https://unimath.github.io/agda-unimath/foundation.universe-levels.html" class="Module">foundation.universe-levels</a>
-<a id="18171" class="Keyword">open</a> <a id="18176" class="Keyword">import</a> <a id="18183" href="https://unimath.github.io/agda-unimath/foundation-core.identity-types.html" class="Module">foundation-core.identity-types</a>
+<a id="19610" class="Keyword">open</a> <a id="19615" class="Keyword">import</a> <a id="19622" href="https://unimath.github.io/agda-unimath/foundation.universe-levels.html" class="Module">foundation.universe-levels</a>
+<a id="19649" class="Keyword">open</a> <a id="19654" class="Keyword">import</a> <a id="19661" href="https://unimath.github.io/agda-unimath/foundation-core.identity-types.html" class="Module">foundation-core.identity-types</a>
 </pre>
 <h2 data-number="1.5" id="our-objects-2-groups-1"><span
 class="header-section-number">1.5</span> Our objects 2: groups</h2>
@@ -542,14 +599,14 @@ href="#ref-buchholtz2023central" role="doc-biblioref">Buchholtz <em>et
 al.</em>, 2023</a>)</span>. Consider the central type <span
 class="math inline">\(S^1\)</span>, given as the higher inductive
 type:</p>
-<pre class="Agda"><a id="18406" class="Keyword">postulate</a>
-  <a id="𝕊¹"></a><a id="18418" href="discrete_gauge_theory.html#18418" class="Postulate">𝕊¹</a> <a id="18421" class="Symbol">:</a> <a id="18423" href="Agda.Primitive.html#388" class="Primitive">UU</a> <a id="18426" href="Agda.Primitive.html#915" class="Primitive">lzero</a>
+<pre class="Agda"><a id="19884" class="Keyword">postulate</a>
+  <a id="𝕊¹"></a><a id="19896" href="discrete_gauge_theory.html#19896" class="Postulate">𝕊¹</a> <a id="19899" class="Symbol">:</a> <a id="19901" href="Agda.Primitive.html#388" class="Primitive">UU</a> <a id="19904" href="Agda.Primitive.html#915" class="Primitive">lzero</a>
 
-<a id="18433" class="Keyword">postulate</a>
-  <a id="base-𝕊¹"></a><a id="18445" href="discrete_gauge_theory.html#18445" class="Postulate">base-𝕊¹</a> <a id="18453" class="Symbol">:</a> <a id="18455" href="discrete_gauge_theory.html#18418" class="Postulate">𝕊¹</a>
+<a id="19911" class="Keyword">postulate</a>
+  <a id="base-𝕊¹"></a><a id="19923" href="discrete_gauge_theory.html#19923" class="Postulate">base-𝕊¹</a> <a id="19931" class="Symbol">:</a> <a id="19933" href="discrete_gauge_theory.html#19896" class="Postulate">𝕊¹</a>
 
-<a id="18459" class="Keyword">postulate</a>
-  <a id="loop-𝕊¹"></a><a id="18471" href="discrete_gauge_theory.html#18471" class="Postulate">loop-𝕊¹</a> <a id="18479" class="Symbol">:</a> <a id="18481" href="https://unimath.github.io/agda-unimath/foundation-core.identity-types.html#5936" class="Datatype">Id</a> <a id="18484" href="discrete_gauge_theory.html#18445" class="Postulate">base-𝕊¹</a> <a id="18492" href="discrete_gauge_theory.html#18445" class="Postulate">base-𝕊¹</a>
+<a id="19937" class="Keyword">postulate</a>
+  <a id="loop-𝕊¹"></a><a id="19949" href="discrete_gauge_theory.html#19949" class="Postulate">loop-𝕊¹</a> <a id="19957" class="Symbol">:</a> <a id="19959" href="https://unimath.github.io/agda-unimath/foundation-core.identity-types.html#5936" class="Datatype">Id</a> <a id="19962" href="discrete_gauge_theory.html#19923" class="Postulate">base-𝕊¹</a> <a id="19970" href="discrete_gauge_theory.html#19923" class="Postulate">base-𝕊¹</a>
 </pre>
 <h2 data-number="1.6" id="polytopes-in-bs1-1"><span
 class="header-section-number">1.6</span> Polytopes in <span
@@ -682,6 +739,12 @@ class="smallcaps">Cagne</span>, P., <span
 class="smallcaps">Dundas</span>, B.I., &amp; <span
 class="smallcaps">Grayson</span>, D.R. (2023) Symmetry.
 </div>
+<div id="ref-bott_tu" class="csl-entry" role="doc-biblioentry">
+<span class="smallcaps">Bott</span>, R. &amp; <span
+class="smallcaps">Tu</span>, L.W. (1982) <em>Differential forms in
+algebraic topology</em>, Graduate texts in mathematics. Springer New
+York.
+</div>
 <div id="ref-buchholtz2023central" class="csl-entry"
 role="doc-biblioentry">
 <span class="smallcaps">Buchholtz</span>, U., <span
@@ -735,6 +798,12 @@ class="smallcaps">Slovák</span>, J. (1993) <em>Natural
 <span>Operations</span> in <span>Differential</span>
 <span>Geometry</span></em>, 1993rd edition ed. Berlin ; New York:
 Springer.
+</div>
+<div id="ref-milnor1974characteristic" class="csl-entry"
+role="doc-biblioentry">
+<span class="smallcaps">Milnor</span>, J.W. &amp; <span
+class="smallcaps">Stasheff</span>, J.D. (1974) <em>Characteristic
+classes</em>, Annals of mathematics studies. Princeton University Press.
 </div>
 <div id="ref-shulman_cohesion" class="csl-entry" role="doc-biblioentry">
 <span class="smallcaps">Shulman</span>, M. (2017) <a
