@@ -78,38 +78,58 @@
 &lt;body&gt;
 &lt;nav id=&#34;TOC&#34; role=&#34;doc-toc&#34;&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#abstract&#34; id=&#34;toc-abstract&#34;&gt;Abstract&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#introduction&#34; id=&#34;toc-introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#not-the-fundamental-groupoid-not-the-path-groupoid&#34;
-id=&#34;toc-not-the-fundamental-groupoid-not-the-path-groupoid&#34;&gt;Not the
-fundamental groupoid, not the path groupoid&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#combinatorial-manifolds&#34;
-id=&#34;toc-combinatorial-manifolds&#34;&gt;Combinatorial manifolds&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#bundles-with-connection&#34;
-id=&#34;toc-bundles-with-connection&#34;&gt;Bundles with connection&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#abstract&#34; id=&#34;toc-abstract&#34;&gt;&lt;span
+class=&#34;toc-section-number&#34;&gt;1.1&lt;/span&gt; Abstract&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#outline-version&#34; id=&#34;toc-outline-version&#34;&gt;&lt;span
+class=&#34;toc-section-number&#34;&gt;1.2&lt;/span&gt; Outline version&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a
+href=&#34;#summary-of-differential-geometry-gauge-theory-and-our-crown-jewel-chern-weil-theory&#34;
+id=&#34;toc-summary-of-differential-geometry-gauge-theory-and-our-crown-jewel-chern-weil-theory&#34;&gt;&lt;span
+class=&#34;toc-section-number&#34;&gt;1.2.1&lt;/span&gt; Summary of differential
+geometry, gauge theory, and our crown jewel: Chern-Weil theory&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#our-objects-1-combinatorial-manifolds&#34;
+id=&#34;toc-our-objects-1-combinatorial-manifolds&#34;&gt;&lt;span
+class=&#34;toc-section-number&#34;&gt;1.2.2&lt;/span&gt; Our objects 1: combinatorial
+manifolds&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#our-objects-2-groups&#34; id=&#34;toc-our-objects-2-groups&#34;&gt;&lt;span
+class=&#34;toc-section-number&#34;&gt;1.2.3&lt;/span&gt; Our objects 2: groups&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#polytopes-in-bs1&#34; id=&#34;toc-polytopes-in-bs1&#34;&gt;&lt;span
+class=&#34;toc-section-number&#34;&gt;1.2.4&lt;/span&gt; Polytopes in &lt;span
+class=&#34;math inline&#34;&gt;\(BS^1\)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#other-topics&#34; id=&#34;toc-other-topics&#34;&gt;&lt;span
+class=&#34;toc-section-number&#34;&gt;1.2.5&lt;/span&gt; Other topics&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a
+href=&#34;#summary-of-differential-geometry-gauge-theory-and-our-crown-jewel-chern-weil-theory-1&#34;
+id=&#34;toc-summary-of-differential-geometry-gauge-theory-and-our-crown-jewel-chern-weil-theory-1&#34;&gt;&lt;span
+class=&#34;toc-section-number&#34;&gt;1.3&lt;/span&gt; Summary of differential geometry,
+gauge theory, and our crown jewel: Chern-Weil theory&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#previous-work-on-gauge-theory-in-higher-categories&#34;
+id=&#34;toc-previous-work-on-gauge-theory-in-higher-categories&#34;&gt;&lt;span
+class=&#34;toc-section-number&#34;&gt;1.3.1&lt;/span&gt; Previous work on gauge theory in
+higher categories&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#our-objects-1-combinatorial-manifolds-1&#34;
+id=&#34;toc-our-objects-1-combinatorial-manifolds-1&#34;&gt;&lt;span
+class=&#34;toc-section-number&#34;&gt;1.4&lt;/span&gt; Our objects 1: combinatorial
+manifolds&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#our-objects-2-groups-1&#34;
+id=&#34;toc-our-objects-2-groups-1&#34;&gt;&lt;span
+class=&#34;toc-section-number&#34;&gt;1.5&lt;/span&gt; Our objects 2: groups&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#polytopes-in-bs1-1&#34; id=&#34;toc-polytopes-in-bs1-1&#34;&gt;&lt;span
+class=&#34;toc-section-number&#34;&gt;1.6&lt;/span&gt; Polytopes in &lt;span
+class=&#34;math inline&#34;&gt;\(BS^1\)&lt;/span&gt;&lt;/a&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#pathovers-as-horizontal-times-vertical&#34;
-id=&#34;toc-pathovers-as-horizontal-times-vertical&#34;&gt;Pathovers as horizontal
-&lt;span class=&#34;math inline&#34;&gt;\(\times\)&lt;/span&gt; vertical&lt;/a&gt;&lt;/li&gt;
+id=&#34;toc-pathovers-as-horizontal-times-vertical&#34;&gt;&lt;span
+class=&#34;toc-section-number&#34;&gt;1.6.1&lt;/span&gt; Pathovers as horizontal &lt;span
+class=&#34;math inline&#34;&gt;\(\times\)&lt;/span&gt; vertical&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#gauge-transformations&#34;
-id=&#34;toc-gauge-transformations&#34;&gt;Gauge transformations&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#classical-theorems&#34; id=&#34;toc-classical-theorems&#34;&gt;Classical
-theorems&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#chern-weil-theory&#34; id=&#34;toc-chern-weil-theory&#34;&gt;Chern-Weil
-theory&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#cohomology-as-obstructions-to-lifts-obstruction-theory&#34;
-id=&#34;toc-cohomology-as-obstructions-to-lifts-obstruction-theory&#34;&gt;Cohomology
-as obstructions to lifts (obstruction theory)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#torus-groups&#34; id=&#34;toc-torus-groups&#34;&gt;Torus groups&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#follow-ups&#34; id=&#34;toc-follow-ups&#34;&gt;Follow-ups&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#baez-muniain-outline-i-iii&#34;
-id=&#34;toc-baez-muniain-outline-i-iii&#34;&gt;Baez-Muniain outline
-(I-III)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#kobayashi-nomizu-outline-i-iii&#34;
-id=&#34;toc-kobayashi-nomizu-outline-i-iii&#34;&gt;Kobayashi-Nomizu outline
-(I-III)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#kolar-michor-slovak-outline-i-iv&#34;
-id=&#34;toc-kolar-michor-slovak-outline-i-iv&#34;&gt;Kolar-Michor-Slovak outline
-(I-IV)&lt;/a&gt;&lt;/li&gt;
+id=&#34;toc-gauge-transformations&#34;&gt;&lt;span
+class=&#34;toc-section-number&#34;&gt;1.6.2&lt;/span&gt; Gauge transformations&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#references&#34; id=&#34;toc-references&#34;&gt;References&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/nav&gt;
@@ -118,16 +138,186 @@ id=&#34;toc-kolar-michor-slovak-outline-i-iv&#34;&gt;Kolar-Michor-Slovak outline
 &lt;img src=&#34;geb-logo.png&#34;
 title=&#34;Image of the book cover of Godel Escher Bach&#34; width=&#34;500&#34; /&gt;
 &lt;/center&gt;
-&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
+&lt;h2 data-number=&#34;1.1&#34; id=&#34;abstract&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;1.1&lt;/span&gt; Abstract&lt;/h2&gt;
 &lt;p&gt;We use combinatorial manifolds and torus groups to bring the study of
 connections on principal bundles into homotopy type theory. We intend
 this document to be an introduction to modern geometry and gauge theory
 for anyone familiar with homotopy type theory. The hope is that it works
 vice-versa as well.&lt;/p&gt;
-&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;A literate Markdown+Agda version of this document &lt;a
 href=&#34;https://github.com/glangmead/writing/blob/master/differential_geometry_in_hott/agda/discrete_gauge_theory.lagda.md&#34;&gt;is
 available as well&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 data-number=&#34;1.2&#34; id=&#34;outline-version&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;1.2&lt;/span&gt; Outline version&lt;/h2&gt;
+&lt;h3 data-number=&#34;1.2.1&#34;
+id=&#34;summary-of-differential-geometry-gauge-theory-and-our-crown-jewel-chern-weil-theory&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;1.2.1&lt;/span&gt; Summary of differential
+geometry, gauge theory, and our crown jewel: Chern-Weil theory&lt;/h3&gt;
+&lt;p&gt;Items that students need to know, that might be especially helpful to
+see first in this settings:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;tensors and forms&lt;/li&gt;
+&lt;li&gt;connections and transport&lt;/li&gt;
+&lt;li&gt;classifying spaces and “horizontal vs vertical”&lt;/li&gt;
+&lt;li&gt;Chern-Weil theory&lt;/li&gt;
+&lt;li&gt;gauge transformations&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;citation&#34; data-cites=&#34;freed2013chernweil&#34;&gt;(&lt;a
+href=&#34;#ref-freed2013chernweil&#34; role=&#34;doc-biblioref&#34;&gt;Freed &amp;amp; Hopkins,
+2013&lt;/a&gt;)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;space!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;It might be good to follow the narrative of some good books:&lt;/p&gt;
+&lt;p&gt;Outline of &lt;span class=&#34;citation&#34; data-cites=&#34;baez1994gauge&#34;&gt;(&lt;a
+href=&#34;#ref-baez1994gauge&#34; role=&#34;doc-biblioref&#34;&gt;Baez &amp;amp; Muniain,
+1994&lt;/a&gt;)&lt;/span&gt; I-III&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Maxwell’s equations&lt;/li&gt;
+&lt;li&gt;Manifolds&lt;/li&gt;
+&lt;li&gt;Vector fields&lt;/li&gt;
+&lt;li&gt;Differential forms&lt;/li&gt;
+&lt;li&gt;Rewriting Maxwell’s equations&lt;/li&gt;
+&lt;li&gt;DeRham theory in electromagnetism&lt;/li&gt;
+&lt;li&gt;Symmetry&lt;/li&gt;
+&lt;li&gt;Bundles and connections&lt;/li&gt;
+&lt;li&gt;Curvature and the Yang-Mills equation&lt;/li&gt;
+&lt;li&gt;Chern-Simons theory&lt;/li&gt;
+&lt;li&gt;Link invariants from gauge theory&lt;/li&gt;
+&lt;li&gt;Semi-Riemannian geometry&lt;/li&gt;
+&lt;li&gt;Einstein’s equation&lt;/li&gt;
+&lt;li&gt;Lagrangians for general relativity&lt;/li&gt;
+&lt;li&gt;The ADM formalism&lt;/li&gt;
+&lt;li&gt;The new variables&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Outline of &lt;span class=&#34;citation&#34; data-cites=&#34;kobayashinomizu&#34;&gt;(&lt;a
+href=&#34;#ref-kobayashinomizu&#34; role=&#34;doc-biblioref&#34;&gt;Kobayashi &amp;amp; Nomizu,
+1963&lt;/a&gt;)&lt;/span&gt; I-III&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Differentiable manifolds&lt;/li&gt;
+&lt;li&gt;Tensor algebras&lt;/li&gt;
+&lt;li&gt;Tensor fields&lt;/li&gt;
+&lt;li&gt;Lie groups&lt;/li&gt;
+&lt;li&gt;Fibre bundles&lt;/li&gt;
+&lt;li&gt;Connections in a principal fibre bundle&lt;/li&gt;
+&lt;li&gt;Existence and extension of connections&lt;/li&gt;
+&lt;li&gt;Parallelism&lt;/li&gt;
+&lt;li&gt;Holonomy groups&lt;/li&gt;
+&lt;li&gt;Curvature form and structure equation&lt;/li&gt;
+&lt;li&gt;Mappings of connections&lt;/li&gt;
+&lt;li&gt;Reduction theorem&lt;/li&gt;
+&lt;li&gt;Holonomy theorem&lt;/li&gt;
+&lt;li&gt;Flat connections&lt;/li&gt;
+&lt;li&gt;Local and infinitesimal holonomy groups&lt;/li&gt;
+&lt;li&gt;Invariant connections&lt;/li&gt;
+&lt;li&gt;Connections in a vector bundle&lt;/li&gt;
+&lt;li&gt;Linear connections&lt;/li&gt;
+&lt;li&gt;Affine connections&lt;/li&gt;
+&lt;li&gt;Developments&lt;/li&gt;
+&lt;li&gt;Curvature and torsion tensors&lt;/li&gt;
+&lt;li&gt;Geodesics&lt;/li&gt;
+&lt;li&gt;Expressions in local coordinate systems&lt;/li&gt;
+&lt;li&gt;Normal coordinates&lt;/li&gt;
+&lt;li&gt;Linear infinitesimal holonomy groups&lt;/li&gt;
+&lt;li&gt;…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Outline of &lt;span class=&#34;citation&#34; data-cites=&#34;kolar_natural_1993&#34;&gt;(&lt;a
+href=&#34;#ref-kolar_natural_1993&#34; role=&#34;doc-biblioref&#34;&gt;Kolář &lt;em&gt;et
+al.&lt;/em&gt;, 1993&lt;/a&gt;)&lt;/span&gt; I-IV&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Differentiable manifolds&lt;/li&gt;
+&lt;li&gt;Submersions and immersions&lt;/li&gt;
+&lt;li&gt;Vector fields and flows&lt;/li&gt;
+&lt;li&gt;Lie groups&lt;/li&gt;
+&lt;li&gt;Lie subgroups and homogeneous spaces&lt;/li&gt;
+&lt;li&gt;Vector bundles&lt;/li&gt;
+&lt;li&gt;Differential forms&lt;/li&gt;
+&lt;li&gt;Derivations on the algebra of differential forms and the
+Frölicher-Nijenhuis bracket&lt;/li&gt;
+&lt;li&gt;General fiber bundles and connections&lt;/li&gt;
+&lt;li&gt;Principal fiber bundles and G-bundles&lt;/li&gt;
+&lt;li&gt;Principal and induced connections&lt;/li&gt;
+&lt;li&gt;Jets&lt;/li&gt;
+&lt;li&gt;Jet groups&lt;/li&gt;
+&lt;li&gt;Natural bundles and operators&lt;/li&gt;
+&lt;li&gt;Prolongations of principal fiber bundles&lt;/li&gt;
+&lt;li&gt;Canonical differential forms&lt;/li&gt;
+&lt;li&gt;Connections and the absolute differentiation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Outline of [hamilton2017]&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Lie groups and Lie algebras&lt;/li&gt;
+&lt;li&gt;Group actions&lt;/li&gt;
+&lt;li&gt;Fibre bundles&lt;/li&gt;
+&lt;li&gt;Connections and curvature&lt;/li&gt;
+&lt;li&gt;Spinors&lt;/li&gt;
+&lt;li&gt;Lagrangians&lt;/li&gt;
+&lt;li&gt;Appendix: tensors and forms&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 data-number=&#34;1.2.2&#34; id=&#34;our-objects-1-combinatorial-manifolds&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;1.2.2&lt;/span&gt; Our objects 1: combinatorial
+manifolds&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;kinds
+&lt;ul&gt;
+&lt;li&gt;CW complexes&lt;/li&gt;
+&lt;li&gt;simplicial complexes&lt;/li&gt;
+&lt;li&gt;nerves of good open covers&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;data structures
+&lt;ul&gt;
+&lt;li&gt;polytopes&lt;/li&gt;
+&lt;li&gt;graded poset point of view&lt;/li&gt;
+&lt;li&gt;pushouts thereof&lt;/li&gt;
+&lt;li&gt;homotopy pushouts thereof&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 data-number=&#34;1.2.3&#34; id=&#34;our-objects-2-groups&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;1.2.3&lt;/span&gt; Our objects 2: groups&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;(the Symmetry book approach: torsors, deloopings, &lt;span
+class=&#34;math inline&#34;&gt;\(\mathsf{BAut}\)&lt;/span&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 data-number=&#34;1.2.4&#34; id=&#34;polytopes-in-bs1&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;1.2.4&lt;/span&gt; Polytopes in &lt;span
+class=&#34;math inline&#34;&gt;\(BS^1\)&lt;/span&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;why these are principal bundles&lt;/li&gt;
+&lt;li&gt;why these have connections&lt;/li&gt;
+&lt;li&gt;why these have curvature&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 data-number=&#34;1.2.5&#34; id=&#34;other-topics&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;1.2.5&lt;/span&gt; Other topics&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;zotero://select/items/1_E7IEEMRP&#34;&gt;Scoccola 05/2020 -
+Nilpotent Types and Fracture Squares in Homotopy Type Theory&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;zotero://select/items/1_TX88MRXW&#34;&gt;Cohen - The Topology of
+Fiber Bundles Lecture Notes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;intersection forms&lt;/li&gt;
+&lt;li&gt;examples of nontrivial manifolds&lt;/li&gt;
+&lt;li&gt;a situation where classically there’s an obstruction to a
+distribution; Lie bracket remaining in subbundle&lt;/li&gt;
+&lt;li&gt;Baez Galois theory formulations&lt;/li&gt;
+&lt;li&gt;locating the classical formulas for curvature (&lt;span
+class=&#34;math inline&#34;&gt;\(F=dA+\frac{1}{2}A\wedge A\)&lt;/span&gt;); Bianchi
+identity&lt;/li&gt;
+&lt;li&gt;locating the classical formula for the action of the gauge group on
+a connection/curvature&lt;/li&gt;
+&lt;li&gt;locating the Leibniz rule&lt;/li&gt;
+&lt;li&gt;if &lt;span class=&#34;math inline&#34;&gt;\(\mathrm{ap}\)&lt;/span&gt; “is”
+differentiation, then is &lt;span
+class=&#34;math inline&#34;&gt;\(d^2=0\)&lt;/span&gt;?&lt;/li&gt;
+&lt;li&gt;which map from the Rubik’s cube is the Hopf bundle?&lt;/li&gt;
+&lt;li&gt;Hodge star&lt;/li&gt;
+&lt;li&gt;orientation of a bundle&lt;/li&gt;
+&lt;li&gt;Cohomology as obstructions to lifts (obstruction theory)&lt;/li&gt;
+&lt;li&gt;Maximal tori, &lt;a
+href=&#34;https://ncatlab.org/nlab/show/splitting+principle&#34;&gt;splitting
+principle&lt;/a&gt;, Leray-Hirsch theorem&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 data-number=&#34;1.3&#34;
+id=&#34;summary-of-differential-geometry-gauge-theory-and-our-crown-jewel-chern-weil-theory-1&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;1.3&lt;/span&gt; Summary of differential
+geometry, gauge theory, and our crown jewel: Chern-Weil theory&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Gauge_theory&#34;&gt;Gauge theory&lt;/a&gt;
 is a general methodology for defining invariants of spaces, including
 invariants of the homotopy type, the homomorphism class, or the
@@ -157,17 +347,10 @@ computer science which has developed combinatorial versions of vector
 fields, differential forms, connections and curvature, defined on a
 triangulated surface embedded in 3-dimensional space (as might be used
 in a computer graphics engine).&lt;/p&gt;
-&lt;p&gt;Algebraic topology of course has always had a train of thought
-devoted to combinatorial approximations to smooth or continuous spaces,
-a major example of which is the notion of a CW complex. The theory of
-piecewise linear (PL) manifolds is another important example where a
-finite structure is used to capture important properties of a space.&lt;/p&gt;
-&lt;p&gt;Such complexes are easy to define in homotopy type theory, as &lt;a
-href=&#34;https://en.wikipedia.org/wiki/Homotopy_type_theory#The_univalence_axiom,_synthetic_homotopy_theory,_and_higher_inductive_types&#34;&gt;higher
-inductive types&lt;/a&gt;. We will see a lot of examples shortly. How much of
-gauge theory can we define with these?&lt;/p&gt;
-&lt;h2 id=&#34;not-the-fundamental-groupoid-not-the-path-groupoid&#34;&gt;Not the
-fundamental groupoid, not the path groupoid&lt;/h2&gt;
+&lt;h3 data-number=&#34;1.3.1&#34;
+id=&#34;previous-work-on-gauge-theory-in-higher-categories&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;1.3.1&lt;/span&gt; Previous work on gauge theory
+in higher categories&lt;/h3&gt;
 &lt;p&gt;There are a few avenues folks have pursued to treat the theory of
 connections in category theory or homotopy type theory. John Baez and
 collaborators &lt;span class=&#34;citation&#34;
@@ -213,13 +396,19 @@ class=&#34;math inline&#34;&gt;\(\infty\)&lt;/span&gt;-groupoid as a higher type
 offers a pathway for classical objects to be imported into type theory,
 and for us to then define type-theoretic versions of classical
 constructions such as bundles and connections.&lt;/p&gt;
-&lt;p&gt;But the fundamental &lt;span
-class=&#34;math inline&#34;&gt;\(\infty\)&lt;/span&gt;-groupoid of a space is a
-relatively impoverished object, since paths that are homotopic are made
-equal. Connections that agree on homotopy-equivalent paths are called
-&lt;em&gt;flat&lt;/em&gt; and are so special that we cannot build gauge theory just
-with them. We seek a fuller picture of connections.&lt;/p&gt;
-&lt;h2 id=&#34;combinatorial-manifolds&#34;&gt;Combinatorial manifolds&lt;/h2&gt;
+&lt;p&gt;But the functions from the shape of a space to a classifying space is
+a relatively impoverished object, since paths that are homotopic are
+made equal. Connections that agree on homotopy-equivalent paths are
+called &lt;em&gt;flat&lt;/em&gt; and are so special that we cannot build gauge
+theory just with them. We seek a fuller picture of connections.&lt;/p&gt;
+&lt;h2 data-number=&#34;1.4&#34; id=&#34;our-objects-1-combinatorial-manifolds-1&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;1.4&lt;/span&gt; Our objects 1: combinatorial
+manifolds&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;[TODO]&lt;/strong&gt; Definitions and relations between: * CW
+complexes * simplicial complexes * polytopes * PL manifolds&lt;/p&gt;
+&lt;p&gt;Theorems: * relationship with homotopy, homeomorphism, smooth
+structures, depending on dimension * can we form homotopy pushouts of
+dyadic posets?&lt;/p&gt;
 &lt;p&gt;Per Hatcher &lt;span class=&#34;citation&#34; data-cites=&#34;hatcher_at&#34;&gt;(&lt;a
 href=&#34;#ref-hatcher_at&#34; role=&#34;doc-biblioref&#34;&gt;Hatcher, 2002&lt;/a&gt;)&lt;/span&gt; a
 &lt;em&gt;CW complex&lt;/em&gt; is a space &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt;
@@ -334,7 +523,7 @@ the following way.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;curved_cube.gif&#34;
 title=&#34;Animation of the transport of an oriented shape along a cube, visiting three faces, coming back rotated by 90 degrees&#34;
 width=&#34;600&#34; /&gt;
-&lt;!-- Exportimage(&#34;filename&#34;, &#34;curved_cube.gif&#34;, &#34;type&#34;, &#34;gif&#34;, &#34;slider&#34;, tt, &#34;loop&#34;, false, &#34;time&#34;, 50, &#34;width&#34;, 600) --&gt;&lt;/p&gt;
+&lt;!-- Exportimage(&#34;filename&#34;, &#34;curved_cube2.gif&#34;, &#34;type&#34;, &#34;gif&#34;, &#34;slider&#34;, tt, &#34;loop&#34;, false, &#34;time&#34;, 10, &#34;width&#34;, 600) --&gt;&lt;/p&gt;
 &lt;p&gt;Imagine a closed path on the original cube that starts at the white
 center square, moves along the top face and then the red face to the red
 center square, then comes around to the front green square, then back up
@@ -352,29 +541,33 @@ understand why we made this choice of group element.&lt;/p&gt;
 values in the Lie algebra of the structure group. That’s just the
 infinitesimal version of what we did, which is the assignment of group
 elements to paths.&lt;/p&gt;
-&lt;pre class=&#34;Agda&#34;&gt;&lt;a id=&#34;14609&#34; class=&#34;Symbol&#34;&gt;{-#&lt;/a&gt; &lt;a id=&#34;14613&#34; class=&#34;Keyword&#34;&gt;OPTIONS&lt;/a&gt; &lt;a id=&#34;14621&#34; class=&#34;Pragma&#34;&gt;--without-K&lt;/a&gt; &lt;a id=&#34;14633&#34; class=&#34;Pragma&#34;&gt;--cohesion&lt;/a&gt; &lt;a id=&#34;14644&#34; class=&#34;Pragma&#34;&gt;--flat-split&lt;/a&gt; &lt;a id=&#34;14657&#34; class=&#34;Symbol&#34;&gt;#-}&lt;/a&gt;
+&lt;pre class=&#34;Agda&#34;&gt;&lt;a id=&#34;18047&#34; class=&#34;Symbol&#34;&gt;{-#&lt;/a&gt; &lt;a id=&#34;18051&#34; class=&#34;Keyword&#34;&gt;OPTIONS&lt;/a&gt; &lt;a id=&#34;18059&#34; class=&#34;Pragma&#34;&gt;--without-K&lt;/a&gt; &lt;a id=&#34;18071&#34; class=&#34;Pragma&#34;&gt;--cohesion&lt;/a&gt; &lt;a id=&#34;18082&#34; class=&#34;Pragma&#34;&gt;--flat-split&lt;/a&gt; &lt;a id=&#34;18095&#34; class=&#34;Symbol&#34;&gt;#-}&lt;/a&gt;
 
-&lt;a id=&#34;14662&#34; class=&#34;Keyword&#34;&gt;module&lt;/a&gt; &lt;a id=&#34;14669&#34; href=&#34;discrete_gauge_theory.html&#34; class=&#34;Module Operator&#34;&gt;discrete_gauge_theory&lt;/a&gt; &lt;a id=&#34;14691&#34; class=&#34;Keyword&#34;&gt;where&lt;/a&gt;
+&lt;a id=&#34;18100&#34; class=&#34;Keyword&#34;&gt;module&lt;/a&gt; &lt;a id=&#34;18107&#34; href=&#34;discrete_gauge_theory.html&#34; class=&#34;Module Operator&#34;&gt;discrete_gauge_theory&lt;/a&gt; &lt;a id=&#34;18129&#34; class=&#34;Keyword&#34;&gt;where&lt;/a&gt;
 
-&lt;a id=&#34;14698&#34; class=&#34;Keyword&#34;&gt;open&lt;/a&gt; &lt;a id=&#34;14703&#34; class=&#34;Keyword&#34;&gt;import&lt;/a&gt; &lt;a id=&#34;14710&#34; href=&#34;https://unimath.github.io/agda-unimath/foundation.universe-levels.html&#34; class=&#34;Module&#34;&gt;foundation.universe-levels&lt;/a&gt;
-&lt;a id=&#34;14737&#34; class=&#34;Keyword&#34;&gt;open&lt;/a&gt; &lt;a id=&#34;14742&#34; class=&#34;Keyword&#34;&gt;import&lt;/a&gt; &lt;a id=&#34;14749&#34; href=&#34;https://unimath.github.io/agda-unimath/foundation-core.identity-types.html&#34; class=&#34;Module&#34;&gt;foundation-core.identity-types&lt;/a&gt;
+&lt;a id=&#34;18136&#34; class=&#34;Keyword&#34;&gt;open&lt;/a&gt; &lt;a id=&#34;18141&#34; class=&#34;Keyword&#34;&gt;import&lt;/a&gt; &lt;a id=&#34;18148&#34; href=&#34;https://unimath.github.io/agda-unimath/foundation.universe-levels.html&#34; class=&#34;Module&#34;&gt;foundation.universe-levels&lt;/a&gt;
+&lt;a id=&#34;18175&#34; class=&#34;Keyword&#34;&gt;open&lt;/a&gt; &lt;a id=&#34;18180&#34; class=&#34;Keyword&#34;&gt;import&lt;/a&gt; &lt;a id=&#34;18187&#34; href=&#34;https://unimath.github.io/agda-unimath/foundation-core.identity-types.html&#34; class=&#34;Module&#34;&gt;foundation-core.identity-types&lt;/a&gt;
 &lt;/pre&gt;
-&lt;h2 id=&#34;bundles-with-connection&#34;&gt;Bundles with connection&lt;/h2&gt;
+&lt;h2 data-number=&#34;1.5&#34; id=&#34;our-objects-2-groups-1&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;1.5&lt;/span&gt; Our objects 2: groups&lt;/h2&gt;
 &lt;p&gt;We take as our starting point the delooping framework of &lt;span
 class=&#34;citation&#34; data-cites=&#34;buchholtz2023central&#34;&gt;(&lt;a
 href=&#34;#ref-buchholtz2023central&#34; role=&#34;doc-biblioref&#34;&gt;Buchholtz &lt;em&gt;et
 al.&lt;/em&gt;, 2023&lt;/a&gt;)&lt;/span&gt;. Consider the central type &lt;span
 class=&#34;math inline&#34;&gt;\(S^1\)&lt;/span&gt;, given as the higher inductive
 type:&lt;/p&gt;
-&lt;pre class=&#34;Agda&#34;&gt;&lt;a id=&#34;14974&#34; class=&#34;Keyword&#34;&gt;postulate&lt;/a&gt;
-  &lt;a id=&#34;𝕊¹&#34;&gt;&lt;/a&gt;&lt;a id=&#34;14986&#34; href=&#34;discrete_gauge_theory.html#14986&#34; class=&#34;Postulate&#34;&gt;𝕊¹&lt;/a&gt; &lt;a id=&#34;14989&#34; class=&#34;Symbol&#34;&gt;:&lt;/a&gt; &lt;a id=&#34;14991&#34; href=&#34;Agda.Primitive.html#388&#34; class=&#34;Primitive&#34;&gt;UU&lt;/a&gt; &lt;a id=&#34;14994&#34; href=&#34;Agda.Primitive.html#915&#34; class=&#34;Primitive&#34;&gt;lzero&lt;/a&gt;
+&lt;pre class=&#34;Agda&#34;&gt;&lt;a id=&#34;18410&#34; class=&#34;Keyword&#34;&gt;postulate&lt;/a&gt;
+  &lt;a id=&#34;𝕊¹&#34;&gt;&lt;/a&gt;&lt;a id=&#34;18422&#34; href=&#34;discrete_gauge_theory.html#18422&#34; class=&#34;Postulate&#34;&gt;𝕊¹&lt;/a&gt; &lt;a id=&#34;18425&#34; class=&#34;Symbol&#34;&gt;:&lt;/a&gt; &lt;a id=&#34;18427&#34; href=&#34;Agda.Primitive.html#388&#34; class=&#34;Primitive&#34;&gt;UU&lt;/a&gt; &lt;a id=&#34;18430&#34; href=&#34;Agda.Primitive.html#915&#34; class=&#34;Primitive&#34;&gt;lzero&lt;/a&gt;
 
-&lt;a id=&#34;15001&#34; class=&#34;Keyword&#34;&gt;postulate&lt;/a&gt;
-  &lt;a id=&#34;base-𝕊¹&#34;&gt;&lt;/a&gt;&lt;a id=&#34;15013&#34; href=&#34;discrete_gauge_theory.html#15013&#34; class=&#34;Postulate&#34;&gt;base-𝕊¹&lt;/a&gt; &lt;a id=&#34;15021&#34; class=&#34;Symbol&#34;&gt;:&lt;/a&gt; &lt;a id=&#34;15023&#34; href=&#34;discrete_gauge_theory.html#14986&#34; class=&#34;Postulate&#34;&gt;𝕊¹&lt;/a&gt;
+&lt;a id=&#34;18437&#34; class=&#34;Keyword&#34;&gt;postulate&lt;/a&gt;
+  &lt;a id=&#34;base-𝕊¹&#34;&gt;&lt;/a&gt;&lt;a id=&#34;18449&#34; href=&#34;discrete_gauge_theory.html#18449&#34; class=&#34;Postulate&#34;&gt;base-𝕊¹&lt;/a&gt; &lt;a id=&#34;18457&#34; class=&#34;Symbol&#34;&gt;:&lt;/a&gt; &lt;a id=&#34;18459&#34; href=&#34;discrete_gauge_theory.html#18422&#34; class=&#34;Postulate&#34;&gt;𝕊¹&lt;/a&gt;
 
-&lt;a id=&#34;15027&#34; class=&#34;Keyword&#34;&gt;postulate&lt;/a&gt;
-  &lt;a id=&#34;loop-𝕊¹&#34;&gt;&lt;/a&gt;&lt;a id=&#34;15039&#34; href=&#34;discrete_gauge_theory.html#15039&#34; class=&#34;Postulate&#34;&gt;loop-𝕊¹&lt;/a&gt; &lt;a id=&#34;15047&#34; class=&#34;Symbol&#34;&gt;:&lt;/a&gt; &lt;a id=&#34;15049&#34; href=&#34;https://unimath.github.io/agda-unimath/foundation-core.identity-types.html#5936&#34; class=&#34;Datatype&#34;&gt;Id&lt;/a&gt; &lt;a id=&#34;15052&#34; href=&#34;discrete_gauge_theory.html#15013&#34; class=&#34;Postulate&#34;&gt;base-𝕊¹&lt;/a&gt; &lt;a id=&#34;15060&#34; href=&#34;discrete_gauge_theory.html#15013&#34; class=&#34;Postulate&#34;&gt;base-𝕊¹&lt;/a&gt;
+&lt;a id=&#34;18463&#34; class=&#34;Keyword&#34;&gt;postulate&lt;/a&gt;
+  &lt;a id=&#34;loop-𝕊¹&#34;&gt;&lt;/a&gt;&lt;a id=&#34;18475&#34; href=&#34;discrete_gauge_theory.html#18475&#34; class=&#34;Postulate&#34;&gt;loop-𝕊¹&lt;/a&gt; &lt;a id=&#34;18483&#34; class=&#34;Symbol&#34;&gt;:&lt;/a&gt; &lt;a id=&#34;18485&#34; href=&#34;https://unimath.github.io/agda-unimath/foundation-core.identity-types.html#5936&#34; class=&#34;Datatype&#34;&gt;Id&lt;/a&gt; &lt;a id=&#34;18488&#34; href=&#34;discrete_gauge_theory.html#18449&#34; class=&#34;Postulate&#34;&gt;base-𝕊¹&lt;/a&gt; &lt;a id=&#34;18496&#34; href=&#34;discrete_gauge_theory.html#18449&#34; class=&#34;Postulate&#34;&gt;base-𝕊¹&lt;/a&gt;
 &lt;/pre&gt;
+&lt;h2 data-number=&#34;1.6&#34; id=&#34;polytopes-in-bs1-1&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;1.6&lt;/span&gt; Polytopes in &lt;span
+class=&#34;math inline&#34;&gt;\(BS^1\)&lt;/span&gt;&lt;/h2&gt;
 &lt;p&gt;Given a nerve &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt;, the type of
 principal &lt;span class=&#34;math inline&#34;&gt;\(S^1\)&lt;/span&gt; bundles over &lt;span
 class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; is the function type &lt;span
@@ -435,8 +628,10 @@ space of torsors have the same group as the loop space at that point,
 but they are conjugate to each other. In fact they are merely conjugate,
 as there are many conjugations (paths between two points) we can choose.
 A whole torsor’s worth!&lt;/p&gt;
-&lt;h2 id=&#34;pathovers-as-horizontal-times-vertical&#34;&gt;Pathovers as horizontal
-&lt;span class=&#34;math inline&#34;&gt;\(\times\)&lt;/span&gt; vertical&lt;/h2&gt;
+&lt;h3 data-number=&#34;1.6.1&#34;
+id=&#34;pathovers-as-horizontal-times-vertical&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;1.6.1&lt;/span&gt; Pathovers as horizontal &lt;span
+class=&#34;math inline&#34;&gt;\(\times\)&lt;/span&gt; vertical&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Lemma&lt;/strong&gt; If &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; is a
 type and &lt;span class=&#34;math inline&#34;&gt;\(f:X\to \mathcal{U}\)&lt;/span&gt; is a
 type family, and &lt;span class=&#34;math inline&#34;&gt;\(x, x&amp;#39;:X\)&lt;/span&gt;, and
@@ -449,7 +644,8 @@ product.&lt;strong&gt;[TODO: prove this generalization of Symmetry Lemma
 4.14.1.]&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;We can think of the two factors of the equivalence as providing
 horizontal and vertical components of the path in the total space.&lt;/p&gt;
-&lt;h2 id=&#34;gauge-transformations&#34;&gt;Gauge transformations&lt;/h2&gt;
+&lt;h3 data-number=&#34;1.6.2&#34; id=&#34;gauge-transformations&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;1.6.2&lt;/span&gt; Gauge transformations&lt;/h3&gt;
 &lt;p&gt;Physicists call automorphisms of the principal bundle &lt;em&gt;gauge
 transformations&lt;/em&gt;. &lt;strong&gt;[TODO: explain about torsors and gauges
 and such]&lt;/strong&gt;. This means homotopies of the given bundle &lt;span
@@ -469,142 +665,6 @@ a connection &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; is irred
 stabilizer of &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; coincides with the
 center of &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt;. This leads to framed
 connections.&lt;/p&gt;
-&lt;h2 id=&#34;classical-theorems&#34;&gt;Classical theorems&lt;/h2&gt;
-&lt;p&gt;Example HITs: spheres, RPn (RP2 is in Brunerie at al “Synthetic
-integral coho”), tori&lt;/p&gt;
-&lt;p&gt;Cohen Theorem 2.24 p. 73: Complex line bundles over CPn are the
-integers, and for n&amp;gt;=0 the bundle is the n-fold tensor power of the
-universal line bundle.&lt;/p&gt;
-&lt;p&gt;Cohen Theorem 2.25: The only nontriv real line bundle over RPn is the
-canonical line bundle.&lt;/p&gt;
-&lt;p&gt;Cohen Theorem 2.27: A bundle has a nontriv section iff the
-classifying map factor through one dimension lower.&lt;/p&gt;
-&lt;p&gt;Covering spaces have a unique connection and it’s flat.&lt;/p&gt;
-&lt;p&gt;A characteristic class is a natural transformation between the
-functor PrinG and the functor H^*.&lt;/p&gt;
-&lt;p&gt;The first Chern class is a complete invariant of complex line
-bundles. The first S-W class is a complete invariant of real line
-bundles.&lt;/p&gt;
-&lt;p&gt;c1 is zero iff the bundle has an SU(n) structure. w1 is zero iff the
-bundle has an SO(n) structure.&lt;/p&gt;
-&lt;p&gt;The cohomology of BU(n) is a polynomial algebra on n generators over
-Z with ci in H^2i, and similarly for BO(n) over Z2 with wi in H^i.&lt;/p&gt;
-&lt;p&gt;Whitney sum formula for c and w.&lt;/p&gt;
-&lt;p&gt;The splitting principle.&lt;/p&gt;
-&lt;p&gt;The w classes for the tangent bundles of spheres are 0 starting with
-S1.&lt;/p&gt;
-&lt;p&gt;The w classes for the tangent bundles of RPn and CPn.&lt;/p&gt;
-&lt;h2 id=&#34;chern-weil-theory&#34;&gt;Chern-Weil theory&lt;/h2&gt;
-&lt;h2
-id=&#34;cohomology-as-obstructions-to-lifts-obstruction-theory&#34;&gt;Cohomology
-as obstructions to lifts (obstruction theory)&lt;/h2&gt;
-&lt;h2 id=&#34;torus-groups&#34;&gt;Torus groups&lt;/h2&gt;
-&lt;p&gt;We can get partway towards a theory of principal bundles over
-arbitrary Lie groups by using the &lt;a
-href=&#34;https://ncatlab.org/nlab/show/splitting+principle&#34;&gt;maximal
-torus&lt;/a&gt; (aka “splitting principle”).&lt;/p&gt;
-&lt;p&gt;This theory is specific to compact Lie groups, which have a theory
-relating the group to its maximal torus plus a Weyl group. All maximal
-tori are conjugate to each other. The maximal torus of &lt;span
-class=&#34;math inline&#34;&gt;\(U(n)\)&lt;/span&gt; is the diagonal subgroup which is
-&lt;span class=&#34;math inline&#34;&gt;\(U(1)^n\)&lt;/span&gt;. Every element of a compact
-Lie group is conjugate to an element of the maximal torus.&lt;/p&gt;
-&lt;p&gt;Leray-Hirsch theorem.&lt;/p&gt;
-&lt;h2 id=&#34;follow-ups&#34;&gt;Follow-ups&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;zotero://select/items/1_E7IEEMRP&#34;&gt;Scoccola 05/2020 -
-Nilpotent Types and Fracture Squares in Homotopy Type Theory&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;zotero://select/items/1_TX88MRXW&#34;&gt;Cohen - The Topology of
-Fiber Bundles Lecture Notes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;intersection forms&lt;/li&gt;
-&lt;li&gt;examples of nontrivial manifolds&lt;/li&gt;
-&lt;li&gt;a situation where classically there’s an obstruction to a
-distribution; Lie bracket remaining in subbundle&lt;/li&gt;
-&lt;li&gt;Baez Galois theory formulations&lt;/li&gt;
-&lt;li&gt;locating the classical formulas for curvature (&lt;span
-class=&#34;math inline&#34;&gt;\(F=dA+\frac{1}{2}A\wedge A\)&lt;/span&gt;); Bianchi
-identity&lt;/li&gt;
-&lt;li&gt;locating the classical formula for the action of the gauge group on
-a connection/curvature&lt;/li&gt;
-&lt;li&gt;locating the Leibniz rule&lt;/li&gt;
-&lt;li&gt;if &lt;span class=&#34;math inline&#34;&gt;\(\mathrm{ap}\)&lt;/span&gt; “is”
-differentiation, then is &lt;span
-class=&#34;math inline&#34;&gt;\(d^2=0\)&lt;/span&gt;?&lt;/li&gt;
-&lt;li&gt;which map from the Rubik’s cube is the Hopf bundle?&lt;/li&gt;
-&lt;li&gt;Hodge star&lt;/li&gt;
-&lt;li&gt;orientation of a bundle&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;baez-muniain-outline-i-iii&#34;&gt;Baez-Muniain outline (I-III)&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Maxwell’s equations&lt;/li&gt;
-&lt;li&gt;Manifolds&lt;/li&gt;
-&lt;li&gt;Vector fields&lt;/li&gt;
-&lt;li&gt;Differential forms&lt;/li&gt;
-&lt;li&gt;Rewriting Maxwell’s equations&lt;/li&gt;
-&lt;li&gt;DeRham theory in electromagnetism&lt;/li&gt;
-&lt;li&gt;Symmetry&lt;/li&gt;
-&lt;li&gt;Bundles and connections&lt;/li&gt;
-&lt;li&gt;Curvature and the Yang-Mills equation&lt;/li&gt;
-&lt;li&gt;Chern-Simons theory&lt;/li&gt;
-&lt;li&gt;Link invariants from gauge theory&lt;/li&gt;
-&lt;li&gt;Semi-Riemannian geometry&lt;/li&gt;
-&lt;li&gt;Einstein’s equation&lt;/li&gt;
-&lt;li&gt;Lagrangians for general relativity&lt;/li&gt;
-&lt;li&gt;The ADM formalism&lt;/li&gt;
-&lt;li&gt;The new variables&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;kobayashi-nomizu-outline-i-iii&#34;&gt;Kobayashi-Nomizu outline
-(I-III)&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Differentiable manifolds&lt;/li&gt;
-&lt;li&gt;Tensor algebras&lt;/li&gt;
-&lt;li&gt;Tensor fields&lt;/li&gt;
-&lt;li&gt;Lie groups&lt;/li&gt;
-&lt;li&gt;Fibre bundles&lt;/li&gt;
-&lt;li&gt;Connections in a principal fibre bundle&lt;/li&gt;
-&lt;li&gt;Existence and extension of connections&lt;/li&gt;
-&lt;li&gt;Parallelism&lt;/li&gt;
-&lt;li&gt;Holonomy groups&lt;/li&gt;
-&lt;li&gt;Curvature form and structure equation&lt;/li&gt;
-&lt;li&gt;Mappings of connections&lt;/li&gt;
-&lt;li&gt;Reduction theorem&lt;/li&gt;
-&lt;li&gt;Holonomy theorem&lt;/li&gt;
-&lt;li&gt;Flat connections&lt;/li&gt;
-&lt;li&gt;Local and infinitesimal holonomy groups&lt;/li&gt;
-&lt;li&gt;Invariant connections&lt;/li&gt;
-&lt;li&gt;Connections in a vector bundle&lt;/li&gt;
-&lt;li&gt;Linear connections&lt;/li&gt;
-&lt;li&gt;Affine connections&lt;/li&gt;
-&lt;li&gt;Developments&lt;/li&gt;
-&lt;li&gt;Curvature and torsion tensors&lt;/li&gt;
-&lt;li&gt;Geodesics&lt;/li&gt;
-&lt;li&gt;Expressions in local coordinate systems&lt;/li&gt;
-&lt;li&gt;Normal coordinates&lt;/li&gt;
-&lt;li&gt;Linear infinitesimal holonomy groups&lt;/li&gt;
-&lt;li&gt;…&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;kolar-michor-slovak-outline-i-iv&#34;&gt;Kolar-Michor-Slovak outline
-(I-IV)&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Differentiable manifolds&lt;/li&gt;
-&lt;li&gt;Submersions and immersions&lt;/li&gt;
-&lt;li&gt;Vector fields and flows&lt;/li&gt;
-&lt;li&gt;Lie groups&lt;/li&gt;
-&lt;li&gt;Lie subgroups and homogeneous spaces&lt;/li&gt;
-&lt;li&gt;Vector bundles&lt;/li&gt;
-&lt;li&gt;Differential forms&lt;/li&gt;
-&lt;li&gt;Derivations on the algebra of differential forms and the
-Frölicher-Nijenhuis bracket&lt;/li&gt;
-&lt;li&gt;General fiber bundles and connections&lt;/li&gt;
-&lt;li&gt;Principal fiber bundles and G-bundles&lt;/li&gt;
-&lt;li&gt;Principal and induced connections&lt;/li&gt;
-&lt;li&gt;Jets&lt;/li&gt;
-&lt;li&gt;Jet groups&lt;/li&gt;
-&lt;li&gt;Natural bundles and operators&lt;/li&gt;
-&lt;li&gt;Prolongations of principal fiber bundles&lt;/li&gt;
-&lt;li&gt;Canonical differential forms&lt;/li&gt;
-&lt;li&gt;Connections and the absolute differentiation&lt;/li&gt;
-&lt;/ul&gt;
 &lt;h2 class=&#34;unnumbered&#34; id=&#34;references&#34;&gt;References&lt;/h2&gt;
 &lt;div id=&#34;refs&#34; class=&#34;references csl-bib-body hanging-indent&#34;
 role=&#34;doc-bibliography&#34;&gt;
@@ -615,6 +675,13 @@ class=&#34;smallcaps&#34;&gt;Huerta&lt;/span&gt;, J. (2010) &lt;a
 href=&#34;https://doi.org/10.1007/s10714-010-1070-9&#34;&gt;An invitation to higher
 gauge theory&lt;/a&gt;. &lt;em&gt;General Relativity and Gravitation&lt;/em&gt;,
 &lt;strong&gt;43&lt;/strong&gt;, 2335–2392.
+&lt;/div&gt;
+&lt;div id=&#34;ref-baez1994gauge&#34; class=&#34;csl-entry&#34; role=&#34;doc-biblioentry&#34;&gt;
+&lt;span class=&#34;smallcaps&#34;&gt;Baez&lt;/span&gt;, J.C. &amp;amp; &lt;span
+class=&#34;smallcaps&#34;&gt;Muniain&lt;/span&gt;, J.P. (1994) &lt;em&gt;&lt;a
+href=&#34;https://books.google.com/books?id=qvw7DQAAQBAJ&#34;&gt;Gauge fields,
+knots and gravity&lt;/a&gt;&lt;/em&gt;, Series on knots and everything. World
+Scientific Publishing Company.
 &lt;/div&gt;
 &lt;div id=&#34;ref-baez_schreiber_higher_gauge&#34; class=&#34;csl-entry&#34;
 role=&#34;doc-biblioentry&#34;&gt;
@@ -631,6 +698,13 @@ class=&#34;smallcaps&#34;&gt;Rijke&lt;/span&gt;, E. (2023) &lt;a
 href=&#34;https://arxiv.org/abs/2301.02636&#34;&gt;Central h-spaces and banded
 types&lt;/a&gt;.
 &lt;/div&gt;
+&lt;div id=&#34;ref-freed2013chernweil&#34; class=&#34;csl-entry&#34;
+role=&#34;doc-biblioentry&#34;&gt;
+&lt;span class=&#34;smallcaps&#34;&gt;Freed&lt;/span&gt;, D.S. &amp;amp; &lt;span
+class=&#34;smallcaps&#34;&gt;Hopkins&lt;/span&gt;, M.J. (2013) &lt;a
+href=&#34;https://arxiv.org/abs/1301.5959&#34;&gt;Chern-weil forms and abstract
+homotopy theory&lt;/a&gt;.
+&lt;/div&gt;
 &lt;div id=&#34;ref-freedman_quinn&#34; class=&#34;csl-entry&#34; role=&#34;doc-biblioentry&#34;&gt;
 &lt;span class=&#34;smallcaps&#34;&gt;Freedman&lt;/span&gt;, M.H. &amp;amp; &lt;span
 class=&#34;smallcaps&#34;&gt;Quinn&lt;/span&gt;, F. (1990) &lt;em&gt;&lt;a
@@ -646,6 +720,22 @@ topology&lt;/em&gt;. Cambridge University Press.
 class=&#34;smallcaps&#34;&gt;Siebenmann&lt;/span&gt;, L.C. (1977) &lt;em&gt;Foundational essays
 on topological manifolds, smoothings, and triangulations&lt;/em&gt;, Annals of
 mathematics studies. Princeton University Press.
+&lt;/div&gt;
+&lt;div id=&#34;ref-kobayashinomizu&#34; class=&#34;csl-entry&#34; role=&#34;doc-biblioentry&#34;&gt;
+&lt;span class=&#34;smallcaps&#34;&gt;Kobayashi&lt;/span&gt;, S. &amp;amp; &lt;span
+class=&#34;smallcaps&#34;&gt;Nomizu&lt;/span&gt;, K. (1963) &lt;em&gt;&lt;a
+href=&#34;https://books.google.com/books?id=wn4pAQAAMAAJ&#34;&gt;Foundations of
+differential geometry&lt;/a&gt;&lt;/em&gt;, Foundations of differential geometry.
+Interscience Publishers.
+&lt;/div&gt;
+&lt;div id=&#34;ref-kolar_natural_1993&#34; class=&#34;csl-entry&#34;
+role=&#34;doc-biblioentry&#34;&gt;
+&lt;span class=&#34;smallcaps&#34;&gt;Kolář&lt;/span&gt;, I., &lt;span
+class=&#34;smallcaps&#34;&gt;Michor&lt;/span&gt;, P.W., &amp;amp; &lt;span
+class=&#34;smallcaps&#34;&gt;Slovák&lt;/span&gt;, J. (1993) &lt;em&gt;Natural
+&lt;span&gt;Operations&lt;/span&gt; in &lt;span&gt;Differential&lt;/span&gt;
+&lt;span&gt;Geometry&lt;/span&gt;&lt;/em&gt;, 1993rd edition ed. Berlin ; New York:
+Springer.
 &lt;/div&gt;
 &lt;div id=&#34;ref-shulman_cohesion&#34; class=&#34;csl-entry&#34; role=&#34;doc-biblioentry&#34;&gt;
 &lt;span class=&#34;smallcaps&#34;&gt;Shulman&lt;/span&gt;, M. (2017) &lt;a
