@@ -143,8 +143,10 @@ class=&#34;header-section-number&#34;&gt;1.1&lt;/span&gt; Abstract&lt;/h2&gt;
 &lt;p&gt;We use combinatorial manifolds and torus groups to bring the study of
 connections on principal bundles into homotopy type theory. We intend
 this document to be an introduction to modern geometry and gauge theory
-for anyone familiar with homotopy type theory. The hope is that it works
-vice-versa as well.&lt;/p&gt;
+for anyone familiar with homotopy type theory. Familiarity with &lt;span
+class=&#34;citation&#34; data-cites=&#34;Symmetry&#34;&gt;(&lt;a href=&#34;#ref-Symmetry&#34;
+role=&#34;doc-biblioref&#34;&gt;Bezem &lt;em&gt;et al.&lt;/em&gt;, 2023&lt;/a&gt;)&lt;/span&gt; is
+helpful.&lt;/p&gt;
 &lt;p&gt;A literate Markdown+Agda version of this document &lt;a
 href=&#34;https://github.com/glangmead/writing/blob/master/differential_geometry_in_hott/agda/discrete_gauge_theory.lagda.md&#34;&gt;is
 available as well&lt;/a&gt;.&lt;/p&gt;
@@ -541,12 +543,12 @@ understand why we made this choice of group element.&lt;/p&gt;
 values in the Lie algebra of the structure group. That’s just the
 infinitesimal version of what we did, which is the assignment of group
 elements to paths.&lt;/p&gt;
-&lt;pre class=&#34;Agda&#34;&gt;&lt;a id=&#34;18047&#34; class=&#34;Symbol&#34;&gt;{-#&lt;/a&gt; &lt;a id=&#34;18051&#34; class=&#34;Keyword&#34;&gt;OPTIONS&lt;/a&gt; &lt;a id=&#34;18059&#34; class=&#34;Pragma&#34;&gt;--without-K&lt;/a&gt; &lt;a id=&#34;18071&#34; class=&#34;Pragma&#34;&gt;--cohesion&lt;/a&gt; &lt;a id=&#34;18082&#34; class=&#34;Pragma&#34;&gt;--flat-split&lt;/a&gt; &lt;a id=&#34;18095&#34; class=&#34;Symbol&#34;&gt;#-}&lt;/a&gt;
+&lt;pre class=&#34;Agda&#34;&gt;&lt;a id=&#34;18042&#34; class=&#34;Symbol&#34;&gt;{-#&lt;/a&gt; &lt;a id=&#34;18046&#34; class=&#34;Keyword&#34;&gt;OPTIONS&lt;/a&gt; &lt;a id=&#34;18054&#34; class=&#34;Pragma&#34;&gt;--without-K&lt;/a&gt; &lt;a id=&#34;18066&#34; class=&#34;Pragma&#34;&gt;--cohesion&lt;/a&gt; &lt;a id=&#34;18077&#34; class=&#34;Pragma&#34;&gt;--flat-split&lt;/a&gt; &lt;a id=&#34;18090&#34; class=&#34;Symbol&#34;&gt;#-}&lt;/a&gt;
 
-&lt;a id=&#34;18100&#34; class=&#34;Keyword&#34;&gt;module&lt;/a&gt; &lt;a id=&#34;18107&#34; href=&#34;discrete_gauge_theory.html&#34; class=&#34;Module Operator&#34;&gt;discrete_gauge_theory&lt;/a&gt; &lt;a id=&#34;18129&#34; class=&#34;Keyword&#34;&gt;where&lt;/a&gt;
+&lt;a id=&#34;18095&#34; class=&#34;Keyword&#34;&gt;module&lt;/a&gt; &lt;a id=&#34;18102&#34; href=&#34;discrete_gauge_theory.html&#34; class=&#34;Module Operator&#34;&gt;discrete_gauge_theory&lt;/a&gt; &lt;a id=&#34;18124&#34; class=&#34;Keyword&#34;&gt;where&lt;/a&gt;
 
-&lt;a id=&#34;18136&#34; class=&#34;Keyword&#34;&gt;open&lt;/a&gt; &lt;a id=&#34;18141&#34; class=&#34;Keyword&#34;&gt;import&lt;/a&gt; &lt;a id=&#34;18148&#34; href=&#34;https://unimath.github.io/agda-unimath/foundation.universe-levels.html&#34; class=&#34;Module&#34;&gt;foundation.universe-levels&lt;/a&gt;
-&lt;a id=&#34;18175&#34; class=&#34;Keyword&#34;&gt;open&lt;/a&gt; &lt;a id=&#34;18180&#34; class=&#34;Keyword&#34;&gt;import&lt;/a&gt; &lt;a id=&#34;18187&#34; href=&#34;https://unimath.github.io/agda-unimath/foundation-core.identity-types.html&#34; class=&#34;Module&#34;&gt;foundation-core.identity-types&lt;/a&gt;
+&lt;a id=&#34;18131&#34; class=&#34;Keyword&#34;&gt;open&lt;/a&gt; &lt;a id=&#34;18136&#34; class=&#34;Keyword&#34;&gt;import&lt;/a&gt; &lt;a id=&#34;18143&#34; href=&#34;https://unimath.github.io/agda-unimath/foundation.universe-levels.html&#34; class=&#34;Module&#34;&gt;foundation.universe-levels&lt;/a&gt;
+&lt;a id=&#34;18170&#34; class=&#34;Keyword&#34;&gt;open&lt;/a&gt; &lt;a id=&#34;18175&#34; class=&#34;Keyword&#34;&gt;import&lt;/a&gt; &lt;a id=&#34;18182&#34; href=&#34;https://unimath.github.io/agda-unimath/foundation-core.identity-types.html&#34; class=&#34;Module&#34;&gt;foundation-core.identity-types&lt;/a&gt;
 &lt;/pre&gt;
 &lt;h2 data-number=&#34;1.5&#34; id=&#34;our-objects-2-groups-1&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;1.5&lt;/span&gt; Our objects 2: groups&lt;/h2&gt;
@@ -556,14 +558,14 @@ href=&#34;#ref-buchholtz2023central&#34; role=&#34;doc-biblioref&#34;&gt;Buchhol
 al.&lt;/em&gt;, 2023&lt;/a&gt;)&lt;/span&gt;. Consider the central type &lt;span
 class=&#34;math inline&#34;&gt;\(S^1\)&lt;/span&gt;, given as the higher inductive
 type:&lt;/p&gt;
-&lt;pre class=&#34;Agda&#34;&gt;&lt;a id=&#34;18410&#34; class=&#34;Keyword&#34;&gt;postulate&lt;/a&gt;
-  &lt;a id=&#34;𝕊¹&#34;&gt;&lt;/a&gt;&lt;a id=&#34;18422&#34; href=&#34;discrete_gauge_theory.html#18422&#34; class=&#34;Postulate&#34;&gt;𝕊¹&lt;/a&gt; &lt;a id=&#34;18425&#34; class=&#34;Symbol&#34;&gt;:&lt;/a&gt; &lt;a id=&#34;18427&#34; href=&#34;Agda.Primitive.html#388&#34; class=&#34;Primitive&#34;&gt;UU&lt;/a&gt; &lt;a id=&#34;18430&#34; href=&#34;Agda.Primitive.html#915&#34; class=&#34;Primitive&#34;&gt;lzero&lt;/a&gt;
+&lt;pre class=&#34;Agda&#34;&gt;&lt;a id=&#34;18405&#34; class=&#34;Keyword&#34;&gt;postulate&lt;/a&gt;
+  &lt;a id=&#34;𝕊¹&#34;&gt;&lt;/a&gt;&lt;a id=&#34;18417&#34; href=&#34;discrete_gauge_theory.html#18417&#34; class=&#34;Postulate&#34;&gt;𝕊¹&lt;/a&gt; &lt;a id=&#34;18420&#34; class=&#34;Symbol&#34;&gt;:&lt;/a&gt; &lt;a id=&#34;18422&#34; href=&#34;Agda.Primitive.html#388&#34; class=&#34;Primitive&#34;&gt;UU&lt;/a&gt; &lt;a id=&#34;18425&#34; href=&#34;Agda.Primitive.html#915&#34; class=&#34;Primitive&#34;&gt;lzero&lt;/a&gt;
 
-&lt;a id=&#34;18437&#34; class=&#34;Keyword&#34;&gt;postulate&lt;/a&gt;
-  &lt;a id=&#34;base-𝕊¹&#34;&gt;&lt;/a&gt;&lt;a id=&#34;18449&#34; href=&#34;discrete_gauge_theory.html#18449&#34; class=&#34;Postulate&#34;&gt;base-𝕊¹&lt;/a&gt; &lt;a id=&#34;18457&#34; class=&#34;Symbol&#34;&gt;:&lt;/a&gt; &lt;a id=&#34;18459&#34; href=&#34;discrete_gauge_theory.html#18422&#34; class=&#34;Postulate&#34;&gt;𝕊¹&lt;/a&gt;
+&lt;a id=&#34;18432&#34; class=&#34;Keyword&#34;&gt;postulate&lt;/a&gt;
+  &lt;a id=&#34;base-𝕊¹&#34;&gt;&lt;/a&gt;&lt;a id=&#34;18444&#34; href=&#34;discrete_gauge_theory.html#18444&#34; class=&#34;Postulate&#34;&gt;base-𝕊¹&lt;/a&gt; &lt;a id=&#34;18452&#34; class=&#34;Symbol&#34;&gt;:&lt;/a&gt; &lt;a id=&#34;18454&#34; href=&#34;discrete_gauge_theory.html#18417&#34; class=&#34;Postulate&#34;&gt;𝕊¹&lt;/a&gt;
 
-&lt;a id=&#34;18463&#34; class=&#34;Keyword&#34;&gt;postulate&lt;/a&gt;
-  &lt;a id=&#34;loop-𝕊¹&#34;&gt;&lt;/a&gt;&lt;a id=&#34;18475&#34; href=&#34;discrete_gauge_theory.html#18475&#34; class=&#34;Postulate&#34;&gt;loop-𝕊¹&lt;/a&gt; &lt;a id=&#34;18483&#34; class=&#34;Symbol&#34;&gt;:&lt;/a&gt; &lt;a id=&#34;18485&#34; href=&#34;https://unimath.github.io/agda-unimath/foundation-core.identity-types.html#5936&#34; class=&#34;Datatype&#34;&gt;Id&lt;/a&gt; &lt;a id=&#34;18488&#34; href=&#34;discrete_gauge_theory.html#18449&#34; class=&#34;Postulate&#34;&gt;base-𝕊¹&lt;/a&gt; &lt;a id=&#34;18496&#34; href=&#34;discrete_gauge_theory.html#18449&#34; class=&#34;Postulate&#34;&gt;base-𝕊¹&lt;/a&gt;
+&lt;a id=&#34;18458&#34; class=&#34;Keyword&#34;&gt;postulate&lt;/a&gt;
+  &lt;a id=&#34;loop-𝕊¹&#34;&gt;&lt;/a&gt;&lt;a id=&#34;18470&#34; href=&#34;discrete_gauge_theory.html#18470&#34; class=&#34;Postulate&#34;&gt;loop-𝕊¹&lt;/a&gt; &lt;a id=&#34;18478&#34; class=&#34;Symbol&#34;&gt;:&lt;/a&gt; &lt;a id=&#34;18480&#34; href=&#34;https://unimath.github.io/agda-unimath/foundation-core.identity-types.html#5936&#34; class=&#34;Datatype&#34;&gt;Id&lt;/a&gt; &lt;a id=&#34;18483&#34; href=&#34;discrete_gauge_theory.html#18444&#34; class=&#34;Postulate&#34;&gt;base-𝕊¹&lt;/a&gt; &lt;a id=&#34;18491&#34; href=&#34;discrete_gauge_theory.html#18444&#34; class=&#34;Postulate&#34;&gt;base-𝕊¹&lt;/a&gt;
 &lt;/pre&gt;
 &lt;h2 data-number=&#34;1.6&#34; id=&#34;polytopes-in-bs1-1&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;1.6&lt;/span&gt; Polytopes in &lt;span
@@ -688,6 +690,13 @@ role=&#34;doc-biblioentry&#34;&gt;
 &lt;span class=&#34;smallcaps&#34;&gt;Baez&lt;/span&gt;, J.C. &amp;amp; &lt;span
 class=&#34;smallcaps&#34;&gt;Schreiber&lt;/span&gt;, U. (2006) &lt;a
 href=&#34;https://arxiv.org/abs/math/0511710&#34;&gt;Higher gauge theory&lt;/a&gt;.
+&lt;/div&gt;
+&lt;div id=&#34;ref-Symmetry&#34; class=&#34;csl-entry&#34; role=&#34;doc-biblioentry&#34;&gt;
+&lt;span class=&#34;smallcaps&#34;&gt;Bezem&lt;/span&gt;, M., &lt;span
+class=&#34;smallcaps&#34;&gt;Buchholtz&lt;/span&gt;, U., &lt;span
+class=&#34;smallcaps&#34;&gt;Cagne&lt;/span&gt;, P., &lt;span
+class=&#34;smallcaps&#34;&gt;Dundas&lt;/span&gt;, B.I., &amp;amp; &lt;span
+class=&#34;smallcaps&#34;&gt;Grayson&lt;/span&gt;, D.R. (2023) Symmetry.
 &lt;/div&gt;
 &lt;div id=&#34;ref-buchholtz2023central&#34; class=&#34;csl-entry&#34;
 role=&#34;doc-biblioentry&#34;&gt;
