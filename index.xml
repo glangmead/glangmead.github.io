@@ -245,7 +245,9 @@ Frölicher-Nijenhuis bracket&lt;/li&gt;
 &lt;li&gt;Canonical differential forms&lt;/li&gt;
 &lt;li&gt;Connections and the absolute differentiation&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Outline of [hamilton2017]&lt;/p&gt;
+&lt;p&gt;Outline of &lt;span class=&#34;citation&#34; data-cites=&#34;hamilton2017&#34;&gt;(&lt;a
+href=&#34;#ref-hamilton2017&#34; role=&#34;doc-biblioref&#34;&gt;Hamilton,
+2017&lt;/a&gt;)&lt;/span&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Lie groups and Lie algebras&lt;/li&gt;
 &lt;li&gt;Group actions&lt;/li&gt;
@@ -543,12 +545,12 @@ understand why we made this choice of group element.&lt;/p&gt;
 values in the Lie algebra of the structure group. That’s just the
 infinitesimal version of what we did, which is the assignment of group
 elements to paths.&lt;/p&gt;
-&lt;pre class=&#34;Agda&#34;&gt;&lt;a id=&#34;18042&#34; class=&#34;Symbol&#34;&gt;{-#&lt;/a&gt; &lt;a id=&#34;18046&#34; class=&#34;Keyword&#34;&gt;OPTIONS&lt;/a&gt; &lt;a id=&#34;18054&#34; class=&#34;Pragma&#34;&gt;--without-K&lt;/a&gt; &lt;a id=&#34;18066&#34; class=&#34;Pragma&#34;&gt;--cohesion&lt;/a&gt; &lt;a id=&#34;18077&#34; class=&#34;Pragma&#34;&gt;--flat-split&lt;/a&gt; &lt;a id=&#34;18090&#34; class=&#34;Symbol&#34;&gt;#-}&lt;/a&gt;
+&lt;pre class=&#34;Agda&#34;&gt;&lt;a id=&#34;18043&#34; class=&#34;Symbol&#34;&gt;{-#&lt;/a&gt; &lt;a id=&#34;18047&#34; class=&#34;Keyword&#34;&gt;OPTIONS&lt;/a&gt; &lt;a id=&#34;18055&#34; class=&#34;Pragma&#34;&gt;--without-K&lt;/a&gt; &lt;a id=&#34;18067&#34; class=&#34;Pragma&#34;&gt;--cohesion&lt;/a&gt; &lt;a id=&#34;18078&#34; class=&#34;Pragma&#34;&gt;--flat-split&lt;/a&gt; &lt;a id=&#34;18091&#34; class=&#34;Symbol&#34;&gt;#-}&lt;/a&gt;
 
-&lt;a id=&#34;18095&#34; class=&#34;Keyword&#34;&gt;module&lt;/a&gt; &lt;a id=&#34;18102&#34; href=&#34;discrete_gauge_theory.html&#34; class=&#34;Module Operator&#34;&gt;discrete_gauge_theory&lt;/a&gt; &lt;a id=&#34;18124&#34; class=&#34;Keyword&#34;&gt;where&lt;/a&gt;
+&lt;a id=&#34;18096&#34; class=&#34;Keyword&#34;&gt;module&lt;/a&gt; &lt;a id=&#34;18103&#34; href=&#34;discrete_gauge_theory.html&#34; class=&#34;Module Operator&#34;&gt;discrete_gauge_theory&lt;/a&gt; &lt;a id=&#34;18125&#34; class=&#34;Keyword&#34;&gt;where&lt;/a&gt;
 
-&lt;a id=&#34;18131&#34; class=&#34;Keyword&#34;&gt;open&lt;/a&gt; &lt;a id=&#34;18136&#34; class=&#34;Keyword&#34;&gt;import&lt;/a&gt; &lt;a id=&#34;18143&#34; href=&#34;https://unimath.github.io/agda-unimath/foundation.universe-levels.html&#34; class=&#34;Module&#34;&gt;foundation.universe-levels&lt;/a&gt;
-&lt;a id=&#34;18170&#34; class=&#34;Keyword&#34;&gt;open&lt;/a&gt; &lt;a id=&#34;18175&#34; class=&#34;Keyword&#34;&gt;import&lt;/a&gt; &lt;a id=&#34;18182&#34; href=&#34;https://unimath.github.io/agda-unimath/foundation-core.identity-types.html&#34; class=&#34;Module&#34;&gt;foundation-core.identity-types&lt;/a&gt;
+&lt;a id=&#34;18132&#34; class=&#34;Keyword&#34;&gt;open&lt;/a&gt; &lt;a id=&#34;18137&#34; class=&#34;Keyword&#34;&gt;import&lt;/a&gt; &lt;a id=&#34;18144&#34; href=&#34;https://unimath.github.io/agda-unimath/foundation.universe-levels.html&#34; class=&#34;Module&#34;&gt;foundation.universe-levels&lt;/a&gt;
+&lt;a id=&#34;18171&#34; class=&#34;Keyword&#34;&gt;open&lt;/a&gt; &lt;a id=&#34;18176&#34; class=&#34;Keyword&#34;&gt;import&lt;/a&gt; &lt;a id=&#34;18183&#34; href=&#34;https://unimath.github.io/agda-unimath/foundation-core.identity-types.html&#34; class=&#34;Module&#34;&gt;foundation-core.identity-types&lt;/a&gt;
 &lt;/pre&gt;
 &lt;h2 data-number=&#34;1.5&#34; id=&#34;our-objects-2-groups-1&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;1.5&lt;/span&gt; Our objects 2: groups&lt;/h2&gt;
@@ -558,14 +560,14 @@ href=&#34;#ref-buchholtz2023central&#34; role=&#34;doc-biblioref&#34;&gt;Buchhol
 al.&lt;/em&gt;, 2023&lt;/a&gt;)&lt;/span&gt;. Consider the central type &lt;span
 class=&#34;math inline&#34;&gt;\(S^1\)&lt;/span&gt;, given as the higher inductive
 type:&lt;/p&gt;
-&lt;pre class=&#34;Agda&#34;&gt;&lt;a id=&#34;18405&#34; class=&#34;Keyword&#34;&gt;postulate&lt;/a&gt;
-  &lt;a id=&#34;𝕊¹&#34;&gt;&lt;/a&gt;&lt;a id=&#34;18417&#34; href=&#34;discrete_gauge_theory.html#18417&#34; class=&#34;Postulate&#34;&gt;𝕊¹&lt;/a&gt; &lt;a id=&#34;18420&#34; class=&#34;Symbol&#34;&gt;:&lt;/a&gt; &lt;a id=&#34;18422&#34; href=&#34;Agda.Primitive.html#388&#34; class=&#34;Primitive&#34;&gt;UU&lt;/a&gt; &lt;a id=&#34;18425&#34; href=&#34;Agda.Primitive.html#915&#34; class=&#34;Primitive&#34;&gt;lzero&lt;/a&gt;
+&lt;pre class=&#34;Agda&#34;&gt;&lt;a id=&#34;18406&#34; class=&#34;Keyword&#34;&gt;postulate&lt;/a&gt;
+  &lt;a id=&#34;𝕊¹&#34;&gt;&lt;/a&gt;&lt;a id=&#34;18418&#34; href=&#34;discrete_gauge_theory.html#18418&#34; class=&#34;Postulate&#34;&gt;𝕊¹&lt;/a&gt; &lt;a id=&#34;18421&#34; class=&#34;Symbol&#34;&gt;:&lt;/a&gt; &lt;a id=&#34;18423&#34; href=&#34;Agda.Primitive.html#388&#34; class=&#34;Primitive&#34;&gt;UU&lt;/a&gt; &lt;a id=&#34;18426&#34; href=&#34;Agda.Primitive.html#915&#34; class=&#34;Primitive&#34;&gt;lzero&lt;/a&gt;
 
-&lt;a id=&#34;18432&#34; class=&#34;Keyword&#34;&gt;postulate&lt;/a&gt;
-  &lt;a id=&#34;base-𝕊¹&#34;&gt;&lt;/a&gt;&lt;a id=&#34;18444&#34; href=&#34;discrete_gauge_theory.html#18444&#34; class=&#34;Postulate&#34;&gt;base-𝕊¹&lt;/a&gt; &lt;a id=&#34;18452&#34; class=&#34;Symbol&#34;&gt;:&lt;/a&gt; &lt;a id=&#34;18454&#34; href=&#34;discrete_gauge_theory.html#18417&#34; class=&#34;Postulate&#34;&gt;𝕊¹&lt;/a&gt;
+&lt;a id=&#34;18433&#34; class=&#34;Keyword&#34;&gt;postulate&lt;/a&gt;
+  &lt;a id=&#34;base-𝕊¹&#34;&gt;&lt;/a&gt;&lt;a id=&#34;18445&#34; href=&#34;discrete_gauge_theory.html#18445&#34; class=&#34;Postulate&#34;&gt;base-𝕊¹&lt;/a&gt; &lt;a id=&#34;18453&#34; class=&#34;Symbol&#34;&gt;:&lt;/a&gt; &lt;a id=&#34;18455&#34; href=&#34;discrete_gauge_theory.html#18418&#34; class=&#34;Postulate&#34;&gt;𝕊¹&lt;/a&gt;
 
-&lt;a id=&#34;18458&#34; class=&#34;Keyword&#34;&gt;postulate&lt;/a&gt;
-  &lt;a id=&#34;loop-𝕊¹&#34;&gt;&lt;/a&gt;&lt;a id=&#34;18470&#34; href=&#34;discrete_gauge_theory.html#18470&#34; class=&#34;Postulate&#34;&gt;loop-𝕊¹&lt;/a&gt; &lt;a id=&#34;18478&#34; class=&#34;Symbol&#34;&gt;:&lt;/a&gt; &lt;a id=&#34;18480&#34; href=&#34;https://unimath.github.io/agda-unimath/foundation-core.identity-types.html#5936&#34; class=&#34;Datatype&#34;&gt;Id&lt;/a&gt; &lt;a id=&#34;18483&#34; href=&#34;discrete_gauge_theory.html#18444&#34; class=&#34;Postulate&#34;&gt;base-𝕊¹&lt;/a&gt; &lt;a id=&#34;18491&#34; href=&#34;discrete_gauge_theory.html#18444&#34; class=&#34;Postulate&#34;&gt;base-𝕊¹&lt;/a&gt;
+&lt;a id=&#34;18459&#34; class=&#34;Keyword&#34;&gt;postulate&lt;/a&gt;
+  &lt;a id=&#34;loop-𝕊¹&#34;&gt;&lt;/a&gt;&lt;a id=&#34;18471&#34; href=&#34;discrete_gauge_theory.html#18471&#34; class=&#34;Postulate&#34;&gt;loop-𝕊¹&lt;/a&gt; &lt;a id=&#34;18479&#34; class=&#34;Symbol&#34;&gt;:&lt;/a&gt; &lt;a id=&#34;18481&#34; href=&#34;https://unimath.github.io/agda-unimath/foundation-core.identity-types.html#5936&#34; class=&#34;Datatype&#34;&gt;Id&lt;/a&gt; &lt;a id=&#34;18484&#34; href=&#34;discrete_gauge_theory.html#18445&#34; class=&#34;Postulate&#34;&gt;base-𝕊¹&lt;/a&gt; &lt;a id=&#34;18492&#34; href=&#34;discrete_gauge_theory.html#18445&#34; class=&#34;Postulate&#34;&gt;base-𝕊¹&lt;/a&gt;
 &lt;/pre&gt;
 &lt;h2 data-number=&#34;1.6&#34; id=&#34;polytopes-in-bs1-1&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;1.6&lt;/span&gt; Polytopes in &lt;span
@@ -719,6 +721,12 @@ homotopy theory&lt;/a&gt;.
 class=&#34;smallcaps&#34;&gt;Quinn&lt;/span&gt;, F. (1990) &lt;em&gt;&lt;a
 href=&#34;http://www.jstor.org/stable/j.ctt7ztz2d&#34;&gt;Topology of 4-manifolds
 (PMS-39)&lt;/a&gt;&lt;/em&gt;. Princeton University Press.
+&lt;/div&gt;
+&lt;div id=&#34;ref-hamilton2017&#34; class=&#34;csl-entry&#34; role=&#34;doc-biblioentry&#34;&gt;
+&lt;span class=&#34;smallcaps&#34;&gt;Hamilton&lt;/span&gt;, M.J.D. (2017) &lt;em&gt;&lt;a
+href=&#34;https://books.google.com/books?id=8zVCDwAAQBAJ&#34;&gt;Mathematical gauge
+theory: With applications to the standard model of particle
+physics&lt;/a&gt;&lt;/em&gt;, Universitext. Springer International Publishing.
 &lt;/div&gt;
 &lt;div id=&#34;ref-hatcher_at&#34; class=&#34;csl-entry&#34; role=&#34;doc-biblioentry&#34;&gt;
 &lt;span class=&#34;smallcaps&#34;&gt;Hatcher&lt;/span&gt;, A. (2002) &lt;em&gt;Algebraic
