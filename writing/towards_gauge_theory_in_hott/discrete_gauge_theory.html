@@ -70,17 +70,11 @@ href="#summary-of-differential-geometry-gauge-theory-and-our-crown-jewel-chern-w
 id="toc-summary-of-differential-geometry-gauge-theory-and-our-crown-jewel-chern-weil-theory"><span
 class="toc-section-number">1.2.1</span> Summary of differential
 geometry, gauge theory, and our crown jewel: Chern-Weil theory</a></li>
-<li><a href="#our-objects-1-combinatorial-manifolds"
-id="toc-our-objects-1-combinatorial-manifolds"><span
-class="toc-section-number">1.2.2</span> Our objects 1: combinatorial
-manifolds</a></li>
-<li><a href="#our-objects-2-groups" id="toc-our-objects-2-groups"><span
-class="toc-section-number">1.2.3</span> Our objects 2: groups</a></li>
-<li><a href="#polytopes-in-bs1" id="toc-polytopes-in-bs1"><span
-class="toc-section-number">1.2.4</span> Polytopes in <span
-class="math inline">\(BS^1\)</span></a></li>
-<li><a href="#other-topics" id="toc-other-topics"><span
-class="toc-section-number">1.2.5</span> Other topics</a></li>
+<li><a
+href="#differential-geometry-topics-to-treat-in-homotopy-type-theory-todo-list"
+id="toc-differential-geometry-topics-to-treat-in-homotopy-type-theory-todo-list"><span
+class="toc-section-number">1.2.2</span> Differential geometry topics to
+treat in homotopy type theory (todo list)</a></li>
 </ul></li>
 <li><a
 href="#summary-of-differential-geometry-gauge-theory-and-our-crown-jewel-chern-weil-theory-1"
@@ -93,14 +87,13 @@ id="toc-previous-work-on-gauge-theory-in-higher-categories"><span
 class="toc-section-number">1.3.1</span> Previous work on gauge theory in
 higher categories</a></li>
 </ul></li>
-<li><a href="#our-objects-1-combinatorial-manifolds-1"
-id="toc-our-objects-1-combinatorial-manifolds-1"><span
+<li><a href="#our-objects-1-combinatorial-manifolds"
+id="toc-our-objects-1-combinatorial-manifolds"><span
 class="toc-section-number">1.4</span> Our objects 1: combinatorial
 manifolds</a></li>
-<li><a href="#our-objects-2-groups-1"
-id="toc-our-objects-2-groups-1"><span
+<li><a href="#our-objects-2-groups" id="toc-our-objects-2-groups"><span
 class="toc-section-number">1.5</span> Our objects 2: groups</a></li>
-<li><a href="#polytopes-in-bs1-1" id="toc-polytopes-in-bs1-1"><span
+<li><a href="#polytopes-in-bs1" id="toc-polytopes-in-bs1"><span
 class="toc-section-number">1.6</span> Polytopes in <span
 class="math inline">\(BS^1\)</span></a>
 <ul>
@@ -295,43 +288,17 @@ class="math inline">\(\mathbb{R}^n\)</span></li>
 <li>Pontrjagin classes</li>
 <li>The search for the universal bundle</li>
 </ul>
-<h3 data-number="1.2.2" id="our-objects-1-combinatorial-manifolds"><span
-class="header-section-number">1.2.2</span> Our objects 1: combinatorial
-manifolds</h3>
+<h3 data-number="1.2.2"
+id="differential-geometry-topics-to-treat-in-homotopy-type-theory-todo-list"><span
+class="header-section-number">1.2.2</span> Differential geometry topics
+to treat in homotopy type theory (todo list)</h3>
 <ul>
-<li>kinds
-<ul>
-<li>CW complexes</li>
-<li>simplicial complexes</li>
-<li>nerves of good open covers</li>
-</ul></li>
-<li>data structures
-<ul>
-<li>polytopes</li>
-<li>graded poset point of view</li>
-<li>pushouts thereof</li>
-<li>homotopy pushouts thereof</li>
-</ul></li>
-</ul>
-<h3 data-number="1.2.3" id="our-objects-2-groups"><span
-class="header-section-number">1.2.3</span> Our objects 2: groups</h3>
-<ul>
-<li>(the Symmetry book approach: torsors, deloopings, <span
-class="math inline">\(\mathsf{BAut}\)</span>)</li>
-</ul>
-<h3 data-number="1.2.4" id="polytopes-in-bs1"><span
-class="header-section-number">1.2.4</span> Polytopes in <span
-class="math inline">\(BS^1\)</span></h3>
-<ul>
-<li>why these are principal bundles</li>
-<li>why these have connections</li>
-<li>why these have curvature</li>
-</ul>
-<h3 data-number="1.2.5" id="other-topics"><span
-class="header-section-number">1.2.5</span> Other topics</h3>
-<ul>
-<li>examples of nontrivial manifolds</li>
-<li>integration</li>
+<li>classifying spaces and “horizontal vs vertical”</li>
+<li>gauge transformations</li>
+<li>(Freed &amp; Hopkins, 2013)</li>
+<li>locating connections and curvature</li>
+<li>justifying these names</li>
+<li>Chern-Weil theory</li>
 <li>locating the classical formulas for curvature (<span
 class="math inline">\(F=dA+\frac{1}{2}A\wedge A\)</span>); Bianchi
 identity</li>
@@ -439,12 +406,7 @@ class="math inline">\(\infty\)</span>-groupoid as a higher type. This
 offers a pathway for classical objects to be imported into type theory,
 and for us to then define type-theoretic versions of classical
 constructions such as bundles and connections.</p>
-<p>But the functions from the shape of a space to a classifying space is
-a relatively impoverished object, since paths that are homotopic are
-made equal. Connections that agree on homotopy-equivalent paths are
-called <em>flat</em> and are so special that we cannot build gauge
-theory just with them. We seek a fuller picture of connections.</p>
-<h2 data-number="1.4" id="our-objects-1-combinatorial-manifolds-1"><span
+<h2 data-number="1.4" id="our-objects-1-combinatorial-manifolds"><span
 class="header-section-number">1.4</span> Our objects 1: combinatorial
 manifolds</h2>
 <center>
@@ -459,11 +421,19 @@ href="https://polytope.miraheze.org/wiki/Polytope">the polytope
 wiki</a></figcaption>
 </figure>
 </center>
-<p><strong>[TODO]</strong> Definitions and relations between: * CW
-complexes * simplicial complexes * polytopes * PL manifolds</p>
-<p>Theorems: * relationship with homotopy, homeomorphism, smooth
-structures, depending on dimension * can we form homotopy pushouts of
-dyadic posets?</p>
+<p><strong>[TODO]</strong> Definitions and relations between:</p>
+<ul>
+<li>CW complexes</li>
+<li>simplicial complexes</li>
+<li>polytopes</li>
+<li>PL manifolds</li>
+</ul>
+<p>Theorems:</p>
+<ul>
+<li>relationship with homotopy, homeomorphism, smooth structures,
+depending on dimension</li>
+<li>can we form homotopy pushouts of dyadic posets?</li>
+</ul>
 <p>Per Hatcher <span class="citation" data-cites="hatcher_at">(<a
 href="#ref-hatcher_at" role="doc-biblioref">Hatcher, 2002</a>)</span> a
 <em>CW complex</em> is a space <span class="math inline">\(X\)</span>
@@ -596,14 +566,14 @@ understand why we made this choice of group element.</p>
 values in the Lie algebra of the structure group. That’s just the
 infinitesimal version of what we did, which is the assignment of group
 elements to paths.</p>
-<pre class="Agda"><a id="19780" class="Symbol">{-#</a> <a id="19784" class="Keyword">OPTIONS</a> <a id="19792" class="Pragma">--without-K</a> <a id="19804" class="Pragma">--cohesion</a> <a id="19815" class="Pragma">--flat-split</a> <a id="19828" class="Symbol">#-}</a>
+<pre class="Agda"><a id="19200" class="Symbol">{-#</a> <a id="19204" class="Keyword">OPTIONS</a> <a id="19212" class="Pragma">--without-K</a> <a id="19224" class="Pragma">--cohesion</a> <a id="19235" class="Pragma">--flat-split</a> <a id="19248" class="Symbol">#-}</a>
 
-<a id="19833" class="Keyword">module</a> <a id="19840" href="discrete_gauge_theory.html" class="Module Operator">discrete_gauge_theory</a> <a id="19862" class="Keyword">where</a>
+<a id="19253" class="Keyword">module</a> <a id="19260" href="discrete_gauge_theory.html" class="Module Operator">discrete_gauge_theory</a> <a id="19282" class="Keyword">where</a>
 
-<a id="19869" class="Keyword">open</a> <a id="19874" class="Keyword">import</a> <a id="19881" href="https://unimath.github.io/agda-unimath/foundation.universe-levels.html" class="Module">foundation.universe-levels</a>
-<a id="19908" class="Keyword">open</a> <a id="19913" class="Keyword">import</a> <a id="19920" href="https://unimath.github.io/agda-unimath/foundation-core.identity-types.html" class="Module">foundation-core.identity-types</a>
+<a id="19289" class="Keyword">open</a> <a id="19294" class="Keyword">import</a> <a id="19301" href="https://unimath.github.io/agda-unimath/foundation.universe-levels.html" class="Module">foundation.universe-levels</a>
+<a id="19328" class="Keyword">open</a> <a id="19333" class="Keyword">import</a> <a id="19340" href="https://unimath.github.io/agda-unimath/foundation-core.identity-types.html" class="Module">foundation-core.identity-types</a>
 </pre>
-<h2 data-number="1.5" id="our-objects-2-groups-1"><span
+<h2 data-number="1.5" id="our-objects-2-groups"><span
 class="header-section-number">1.5</span> Our objects 2: groups</h2>
 <p>We take as our starting point the delooping framework of <span
 class="citation" data-cites="buchholtz2023central">(<a
@@ -611,16 +581,16 @@ href="#ref-buchholtz2023central" role="doc-biblioref">Buchholtz <em>et
 al.</em>, 2023</a>)</span>. Consider the central type <span
 class="math inline">\(S^1\)</span>, given as the higher inductive
 type:</p>
-<pre class="Agda"><a id="20143" class="Keyword">postulate</a>
-  <a id="𝕊¹"></a><a id="20155" href="discrete_gauge_theory.html#20155" class="Postulate">𝕊¹</a> <a id="20158" class="Symbol">:</a> <a id="20160" href="Agda.Primitive.html#388" class="Primitive">UU</a> <a id="20163" href="Agda.Primitive.html#915" class="Primitive">lzero</a>
+<pre class="Agda"><a id="19563" class="Keyword">postulate</a>
+  <a id="𝕊¹"></a><a id="19575" href="discrete_gauge_theory.html#19575" class="Postulate">𝕊¹</a> <a id="19578" class="Symbol">:</a> <a id="19580" href="Agda.Primitive.html#388" class="Primitive">UU</a> <a id="19583" href="Agda.Primitive.html#915" class="Primitive">lzero</a>
 
-<a id="20170" class="Keyword">postulate</a>
-  <a id="base-𝕊¹"></a><a id="20182" href="discrete_gauge_theory.html#20182" class="Postulate">base-𝕊¹</a> <a id="20190" class="Symbol">:</a> <a id="20192" href="discrete_gauge_theory.html#20155" class="Postulate">𝕊¹</a>
+<a id="19590" class="Keyword">postulate</a>
+  <a id="base-𝕊¹"></a><a id="19602" href="discrete_gauge_theory.html#19602" class="Postulate">base-𝕊¹</a> <a id="19610" class="Symbol">:</a> <a id="19612" href="discrete_gauge_theory.html#19575" class="Postulate">𝕊¹</a>
 
-<a id="20196" class="Keyword">postulate</a>
-  <a id="loop-𝕊¹"></a><a id="20208" href="discrete_gauge_theory.html#20208" class="Postulate">loop-𝕊¹</a> <a id="20216" class="Symbol">:</a> <a id="20218" href="https://unimath.github.io/agda-unimath/foundation-core.identity-types.html#5936" class="Datatype">Id</a> <a id="20221" href="discrete_gauge_theory.html#20182" class="Postulate">base-𝕊¹</a> <a id="20229" href="discrete_gauge_theory.html#20182" class="Postulate">base-𝕊¹</a>
+<a id="19616" class="Keyword">postulate</a>
+  <a id="loop-𝕊¹"></a><a id="19628" href="discrete_gauge_theory.html#19628" class="Postulate">loop-𝕊¹</a> <a id="19636" class="Symbol">:</a> <a id="19638" href="https://unimath.github.io/agda-unimath/foundation-core.identity-types.html#5936" class="Datatype">Id</a> <a id="19641" href="discrete_gauge_theory.html#19602" class="Postulate">base-𝕊¹</a> <a id="19649" href="discrete_gauge_theory.html#19602" class="Postulate">base-𝕊¹</a>
 </pre>
-<h2 data-number="1.6" id="polytopes-in-bs1-1"><span
+<h2 data-number="1.6" id="polytopes-in-bs1"><span
 class="header-section-number">1.6</span> Polytopes in <span
 class="math inline">\(BS^1\)</span></h2>
 <p>Given a nerve <span class="math inline">\(X\)</span>, the type of

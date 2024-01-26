@@ -88,17 +88,11 @@ href=&#34;#summary-of-differential-geometry-gauge-theory-and-our-crown-jewel-che
 id=&#34;toc-summary-of-differential-geometry-gauge-theory-and-our-crown-jewel-chern-weil-theory&#34;&gt;&lt;span
 class=&#34;toc-section-number&#34;&gt;1.2.1&lt;/span&gt; Summary of differential
 geometry, gauge theory, and our crown jewel: Chern-Weil theory&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#our-objects-1-combinatorial-manifolds&#34;
-id=&#34;toc-our-objects-1-combinatorial-manifolds&#34;&gt;&lt;span
-class=&#34;toc-section-number&#34;&gt;1.2.2&lt;/span&gt; Our objects 1: combinatorial
-manifolds&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#our-objects-2-groups&#34; id=&#34;toc-our-objects-2-groups&#34;&gt;&lt;span
-class=&#34;toc-section-number&#34;&gt;1.2.3&lt;/span&gt; Our objects 2: groups&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#polytopes-in-bs1&#34; id=&#34;toc-polytopes-in-bs1&#34;&gt;&lt;span
-class=&#34;toc-section-number&#34;&gt;1.2.4&lt;/span&gt; Polytopes in &lt;span
-class=&#34;math inline&#34;&gt;\(BS^1\)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#other-topics&#34; id=&#34;toc-other-topics&#34;&gt;&lt;span
-class=&#34;toc-section-number&#34;&gt;1.2.5&lt;/span&gt; Other topics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a
+href=&#34;#differential-geometry-topics-to-treat-in-homotopy-type-theory-todo-list&#34;
+id=&#34;toc-differential-geometry-topics-to-treat-in-homotopy-type-theory-todo-list&#34;&gt;&lt;span
+class=&#34;toc-section-number&#34;&gt;1.2.2&lt;/span&gt; Differential geometry topics to
+treat in homotopy type theory (todo list)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a
 href=&#34;#summary-of-differential-geometry-gauge-theory-and-our-crown-jewel-chern-weil-theory-1&#34;
@@ -111,14 +105,13 @@ id=&#34;toc-previous-work-on-gauge-theory-in-higher-categories&#34;&gt;&lt;span
 class=&#34;toc-section-number&#34;&gt;1.3.1&lt;/span&gt; Previous work on gauge theory in
 higher categories&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#our-objects-1-combinatorial-manifolds-1&#34;
-id=&#34;toc-our-objects-1-combinatorial-manifolds-1&#34;&gt;&lt;span
+&lt;li&gt;&lt;a href=&#34;#our-objects-1-combinatorial-manifolds&#34;
+id=&#34;toc-our-objects-1-combinatorial-manifolds&#34;&gt;&lt;span
 class=&#34;toc-section-number&#34;&gt;1.4&lt;/span&gt; Our objects 1: combinatorial
 manifolds&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#our-objects-2-groups-1&#34;
-id=&#34;toc-our-objects-2-groups-1&#34;&gt;&lt;span
+&lt;li&gt;&lt;a href=&#34;#our-objects-2-groups&#34; id=&#34;toc-our-objects-2-groups&#34;&gt;&lt;span
 class=&#34;toc-section-number&#34;&gt;1.5&lt;/span&gt; Our objects 2: groups&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#polytopes-in-bs1-1&#34; id=&#34;toc-polytopes-in-bs1-1&#34;&gt;&lt;span
+&lt;li&gt;&lt;a href=&#34;#polytopes-in-bs1&#34; id=&#34;toc-polytopes-in-bs1&#34;&gt;&lt;span
 class=&#34;toc-section-number&#34;&gt;1.6&lt;/span&gt; Polytopes in &lt;span
 class=&#34;math inline&#34;&gt;\(BS^1\)&lt;/span&gt;&lt;/a&gt;
 &lt;ul&gt;
@@ -313,43 +306,17 @@ class=&#34;math inline&#34;&gt;\(\mathbb{R}^n\)&lt;/span&gt;&lt;/li&gt;
 &lt;li&gt;Pontrjagin classes&lt;/li&gt;
 &lt;li&gt;The search for the universal bundle&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 data-number=&#34;1.2.2&#34; id=&#34;our-objects-1-combinatorial-manifolds&#34;&gt;&lt;span
-class=&#34;header-section-number&#34;&gt;1.2.2&lt;/span&gt; Our objects 1: combinatorial
-manifolds&lt;/h3&gt;
+&lt;h3 data-number=&#34;1.2.2&#34;
+id=&#34;differential-geometry-topics-to-treat-in-homotopy-type-theory-todo-list&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;1.2.2&lt;/span&gt; Differential geometry topics
+to treat in homotopy type theory (todo list)&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;kinds
-&lt;ul&gt;
-&lt;li&gt;CW complexes&lt;/li&gt;
-&lt;li&gt;simplicial complexes&lt;/li&gt;
-&lt;li&gt;nerves of good open covers&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;data structures
-&lt;ul&gt;
-&lt;li&gt;polytopes&lt;/li&gt;
-&lt;li&gt;graded poset point of view&lt;/li&gt;
-&lt;li&gt;pushouts thereof&lt;/li&gt;
-&lt;li&gt;homotopy pushouts thereof&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 data-number=&#34;1.2.3&#34; id=&#34;our-objects-2-groups&#34;&gt;&lt;span
-class=&#34;header-section-number&#34;&gt;1.2.3&lt;/span&gt; Our objects 2: groups&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;(the Symmetry book approach: torsors, deloopings, &lt;span
-class=&#34;math inline&#34;&gt;\(\mathsf{BAut}\)&lt;/span&gt;)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 data-number=&#34;1.2.4&#34; id=&#34;polytopes-in-bs1&#34;&gt;&lt;span
-class=&#34;header-section-number&#34;&gt;1.2.4&lt;/span&gt; Polytopes in &lt;span
-class=&#34;math inline&#34;&gt;\(BS^1\)&lt;/span&gt;&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;why these are principal bundles&lt;/li&gt;
-&lt;li&gt;why these have connections&lt;/li&gt;
-&lt;li&gt;why these have curvature&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 data-number=&#34;1.2.5&#34; id=&#34;other-topics&#34;&gt;&lt;span
-class=&#34;header-section-number&#34;&gt;1.2.5&lt;/span&gt; Other topics&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;examples of nontrivial manifolds&lt;/li&gt;
-&lt;li&gt;integration&lt;/li&gt;
+&lt;li&gt;classifying spaces and “horizontal vs vertical”&lt;/li&gt;
+&lt;li&gt;gauge transformations&lt;/li&gt;
+&lt;li&gt;(Freed &amp;amp; Hopkins, 2013)&lt;/li&gt;
+&lt;li&gt;locating connections and curvature&lt;/li&gt;
+&lt;li&gt;justifying these names&lt;/li&gt;
+&lt;li&gt;Chern-Weil theory&lt;/li&gt;
 &lt;li&gt;locating the classical formulas for curvature (&lt;span
 class=&#34;math inline&#34;&gt;\(F=dA+\frac{1}{2}A\wedge A\)&lt;/span&gt;); Bianchi
 identity&lt;/li&gt;
@@ -457,12 +424,7 @@ class=&#34;math inline&#34;&gt;\(\infty\)&lt;/span&gt;-groupoid as a higher type
 offers a pathway for classical objects to be imported into type theory,
 and for us to then define type-theoretic versions of classical
 constructions such as bundles and connections.&lt;/p&gt;
-&lt;p&gt;But the functions from the shape of a space to a classifying space is
-a relatively impoverished object, since paths that are homotopic are
-made equal. Connections that agree on homotopy-equivalent paths are
-called &lt;em&gt;flat&lt;/em&gt; and are so special that we cannot build gauge
-theory just with them. We seek a fuller picture of connections.&lt;/p&gt;
-&lt;h2 data-number=&#34;1.4&#34; id=&#34;our-objects-1-combinatorial-manifolds-1&#34;&gt;&lt;span
+&lt;h2 data-number=&#34;1.4&#34; id=&#34;our-objects-1-combinatorial-manifolds&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;1.4&lt;/span&gt; Our objects 1: combinatorial
 manifolds&lt;/h2&gt;
 &lt;center&gt;
@@ -477,11 +439,19 @@ href=&#34;https://polytope.miraheze.org/wiki/Polytope&#34;&gt;the polytope
 wiki&lt;/a&gt;&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;/center&gt;
-&lt;p&gt;&lt;strong&gt;[TODO]&lt;/strong&gt; Definitions and relations between: * CW
-complexes * simplicial complexes * polytopes * PL manifolds&lt;/p&gt;
-&lt;p&gt;Theorems: * relationship with homotopy, homeomorphism, smooth
-structures, depending on dimension * can we form homotopy pushouts of
-dyadic posets?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;[TODO]&lt;/strong&gt; Definitions and relations between:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;CW complexes&lt;/li&gt;
+&lt;li&gt;simplicial complexes&lt;/li&gt;
+&lt;li&gt;polytopes&lt;/li&gt;
+&lt;li&gt;PL manifolds&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Theorems:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;relationship with homotopy, homeomorphism, smooth structures,
+depending on dimension&lt;/li&gt;
+&lt;li&gt;can we form homotopy pushouts of dyadic posets?&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;Per Hatcher &lt;span class=&#34;citation&#34; data-cites=&#34;hatcher_at&#34;&gt;(&lt;a
 href=&#34;#ref-hatcher_at&#34; role=&#34;doc-biblioref&#34;&gt;Hatcher, 2002&lt;/a&gt;)&lt;/span&gt; a
 &lt;em&gt;CW complex&lt;/em&gt; is a space &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt;
@@ -614,14 +584,14 @@ understand why we made this choice of group element.&lt;/p&gt;
 values in the Lie algebra of the structure group. That’s just the
 infinitesimal version of what we did, which is the assignment of group
 elements to paths.&lt;/p&gt;
-&lt;pre class=&#34;Agda&#34;&gt;&lt;a id=&#34;19780&#34; class=&#34;Symbol&#34;&gt;{-#&lt;/a&gt; &lt;a id=&#34;19784&#34; class=&#34;Keyword&#34;&gt;OPTIONS&lt;/a&gt; &lt;a id=&#34;19792&#34; class=&#34;Pragma&#34;&gt;--without-K&lt;/a&gt; &lt;a id=&#34;19804&#34; class=&#34;Pragma&#34;&gt;--cohesion&lt;/a&gt; &lt;a id=&#34;19815&#34; class=&#34;Pragma&#34;&gt;--flat-split&lt;/a&gt; &lt;a id=&#34;19828&#34; class=&#34;Symbol&#34;&gt;#-}&lt;/a&gt;
+&lt;pre class=&#34;Agda&#34;&gt;&lt;a id=&#34;19200&#34; class=&#34;Symbol&#34;&gt;{-#&lt;/a&gt; &lt;a id=&#34;19204&#34; class=&#34;Keyword&#34;&gt;OPTIONS&lt;/a&gt; &lt;a id=&#34;19212&#34; class=&#34;Pragma&#34;&gt;--without-K&lt;/a&gt; &lt;a id=&#34;19224&#34; class=&#34;Pragma&#34;&gt;--cohesion&lt;/a&gt; &lt;a id=&#34;19235&#34; class=&#34;Pragma&#34;&gt;--flat-split&lt;/a&gt; &lt;a id=&#34;19248&#34; class=&#34;Symbol&#34;&gt;#-}&lt;/a&gt;
 
-&lt;a id=&#34;19833&#34; class=&#34;Keyword&#34;&gt;module&lt;/a&gt; &lt;a id=&#34;19840&#34; href=&#34;discrete_gauge_theory.html&#34; class=&#34;Module Operator&#34;&gt;discrete_gauge_theory&lt;/a&gt; &lt;a id=&#34;19862&#34; class=&#34;Keyword&#34;&gt;where&lt;/a&gt;
+&lt;a id=&#34;19253&#34; class=&#34;Keyword&#34;&gt;module&lt;/a&gt; &lt;a id=&#34;19260&#34; href=&#34;discrete_gauge_theory.html&#34; class=&#34;Module Operator&#34;&gt;discrete_gauge_theory&lt;/a&gt; &lt;a id=&#34;19282&#34; class=&#34;Keyword&#34;&gt;where&lt;/a&gt;
 
-&lt;a id=&#34;19869&#34; class=&#34;Keyword&#34;&gt;open&lt;/a&gt; &lt;a id=&#34;19874&#34; class=&#34;Keyword&#34;&gt;import&lt;/a&gt; &lt;a id=&#34;19881&#34; href=&#34;https://unimath.github.io/agda-unimath/foundation.universe-levels.html&#34; class=&#34;Module&#34;&gt;foundation.universe-levels&lt;/a&gt;
-&lt;a id=&#34;19908&#34; class=&#34;Keyword&#34;&gt;open&lt;/a&gt; &lt;a id=&#34;19913&#34; class=&#34;Keyword&#34;&gt;import&lt;/a&gt; &lt;a id=&#34;19920&#34; href=&#34;https://unimath.github.io/agda-unimath/foundation-core.identity-types.html&#34; class=&#34;Module&#34;&gt;foundation-core.identity-types&lt;/a&gt;
+&lt;a id=&#34;19289&#34; class=&#34;Keyword&#34;&gt;open&lt;/a&gt; &lt;a id=&#34;19294&#34; class=&#34;Keyword&#34;&gt;import&lt;/a&gt; &lt;a id=&#34;19301&#34; href=&#34;https://unimath.github.io/agda-unimath/foundation.universe-levels.html&#34; class=&#34;Module&#34;&gt;foundation.universe-levels&lt;/a&gt;
+&lt;a id=&#34;19328&#34; class=&#34;Keyword&#34;&gt;open&lt;/a&gt; &lt;a id=&#34;19333&#34; class=&#34;Keyword&#34;&gt;import&lt;/a&gt; &lt;a id=&#34;19340&#34; href=&#34;https://unimath.github.io/agda-unimath/foundation-core.identity-types.html&#34; class=&#34;Module&#34;&gt;foundation-core.identity-types&lt;/a&gt;
 &lt;/pre&gt;
-&lt;h2 data-number=&#34;1.5&#34; id=&#34;our-objects-2-groups-1&#34;&gt;&lt;span
+&lt;h2 data-number=&#34;1.5&#34; id=&#34;our-objects-2-groups&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;1.5&lt;/span&gt; Our objects 2: groups&lt;/h2&gt;
 &lt;p&gt;We take as our starting point the delooping framework of &lt;span
 class=&#34;citation&#34; data-cites=&#34;buchholtz2023central&#34;&gt;(&lt;a
@@ -629,16 +599,16 @@ href=&#34;#ref-buchholtz2023central&#34; role=&#34;doc-biblioref&#34;&gt;Buchhol
 al.&lt;/em&gt;, 2023&lt;/a&gt;)&lt;/span&gt;. Consider the central type &lt;span
 class=&#34;math inline&#34;&gt;\(S^1\)&lt;/span&gt;, given as the higher inductive
 type:&lt;/p&gt;
-&lt;pre class=&#34;Agda&#34;&gt;&lt;a id=&#34;20143&#34; class=&#34;Keyword&#34;&gt;postulate&lt;/a&gt;
-  &lt;a id=&#34;𝕊¹&#34;&gt;&lt;/a&gt;&lt;a id=&#34;20155&#34; href=&#34;discrete_gauge_theory.html#20155&#34; class=&#34;Postulate&#34;&gt;𝕊¹&lt;/a&gt; &lt;a id=&#34;20158&#34; class=&#34;Symbol&#34;&gt;:&lt;/a&gt; &lt;a id=&#34;20160&#34; href=&#34;Agda.Primitive.html#388&#34; class=&#34;Primitive&#34;&gt;UU&lt;/a&gt; &lt;a id=&#34;20163&#34; href=&#34;Agda.Primitive.html#915&#34; class=&#34;Primitive&#34;&gt;lzero&lt;/a&gt;
+&lt;pre class=&#34;Agda&#34;&gt;&lt;a id=&#34;19563&#34; class=&#34;Keyword&#34;&gt;postulate&lt;/a&gt;
+  &lt;a id=&#34;𝕊¹&#34;&gt;&lt;/a&gt;&lt;a id=&#34;19575&#34; href=&#34;discrete_gauge_theory.html#19575&#34; class=&#34;Postulate&#34;&gt;𝕊¹&lt;/a&gt; &lt;a id=&#34;19578&#34; class=&#34;Symbol&#34;&gt;:&lt;/a&gt; &lt;a id=&#34;19580&#34; href=&#34;Agda.Primitive.html#388&#34; class=&#34;Primitive&#34;&gt;UU&lt;/a&gt; &lt;a id=&#34;19583&#34; href=&#34;Agda.Primitive.html#915&#34; class=&#34;Primitive&#34;&gt;lzero&lt;/a&gt;
 
-&lt;a id=&#34;20170&#34; class=&#34;Keyword&#34;&gt;postulate&lt;/a&gt;
-  &lt;a id=&#34;base-𝕊¹&#34;&gt;&lt;/a&gt;&lt;a id=&#34;20182&#34; href=&#34;discrete_gauge_theory.html#20182&#34; class=&#34;Postulate&#34;&gt;base-𝕊¹&lt;/a&gt; &lt;a id=&#34;20190&#34; class=&#34;Symbol&#34;&gt;:&lt;/a&gt; &lt;a id=&#34;20192&#34; href=&#34;discrete_gauge_theory.html#20155&#34; class=&#34;Postulate&#34;&gt;𝕊¹&lt;/a&gt;
+&lt;a id=&#34;19590&#34; class=&#34;Keyword&#34;&gt;postulate&lt;/a&gt;
+  &lt;a id=&#34;base-𝕊¹&#34;&gt;&lt;/a&gt;&lt;a id=&#34;19602&#34; href=&#34;discrete_gauge_theory.html#19602&#34; class=&#34;Postulate&#34;&gt;base-𝕊¹&lt;/a&gt; &lt;a id=&#34;19610&#34; class=&#34;Symbol&#34;&gt;:&lt;/a&gt; &lt;a id=&#34;19612&#34; href=&#34;discrete_gauge_theory.html#19575&#34; class=&#34;Postulate&#34;&gt;𝕊¹&lt;/a&gt;
 
-&lt;a id=&#34;20196&#34; class=&#34;Keyword&#34;&gt;postulate&lt;/a&gt;
-  &lt;a id=&#34;loop-𝕊¹&#34;&gt;&lt;/a&gt;&lt;a id=&#34;20208&#34; href=&#34;discrete_gauge_theory.html#20208&#34; class=&#34;Postulate&#34;&gt;loop-𝕊¹&lt;/a&gt; &lt;a id=&#34;20216&#34; class=&#34;Symbol&#34;&gt;:&lt;/a&gt; &lt;a id=&#34;20218&#34; href=&#34;https://unimath.github.io/agda-unimath/foundation-core.identity-types.html#5936&#34; class=&#34;Datatype&#34;&gt;Id&lt;/a&gt; &lt;a id=&#34;20221&#34; href=&#34;discrete_gauge_theory.html#20182&#34; class=&#34;Postulate&#34;&gt;base-𝕊¹&lt;/a&gt; &lt;a id=&#34;20229&#34; href=&#34;discrete_gauge_theory.html#20182&#34; class=&#34;Postulate&#34;&gt;base-𝕊¹&lt;/a&gt;
+&lt;a id=&#34;19616&#34; class=&#34;Keyword&#34;&gt;postulate&lt;/a&gt;
+  &lt;a id=&#34;loop-𝕊¹&#34;&gt;&lt;/a&gt;&lt;a id=&#34;19628&#34; href=&#34;discrete_gauge_theory.html#19628&#34; class=&#34;Postulate&#34;&gt;loop-𝕊¹&lt;/a&gt; &lt;a id=&#34;19636&#34; class=&#34;Symbol&#34;&gt;:&lt;/a&gt; &lt;a id=&#34;19638&#34; href=&#34;https://unimath.github.io/agda-unimath/foundation-core.identity-types.html#5936&#34; class=&#34;Datatype&#34;&gt;Id&lt;/a&gt; &lt;a id=&#34;19641&#34; href=&#34;discrete_gauge_theory.html#19602&#34; class=&#34;Postulate&#34;&gt;base-𝕊¹&lt;/a&gt; &lt;a id=&#34;19649&#34; href=&#34;discrete_gauge_theory.html#19602&#34; class=&#34;Postulate&#34;&gt;base-𝕊¹&lt;/a&gt;
 &lt;/pre&gt;
-&lt;h2 data-number=&#34;1.6&#34; id=&#34;polytopes-in-bs1-1&#34;&gt;&lt;span
+&lt;h2 data-number=&#34;1.6&#34; id=&#34;polytopes-in-bs1&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;1.6&lt;/span&gt; Polytopes in &lt;span
 class=&#34;math inline&#34;&gt;\(BS^1\)&lt;/span&gt;&lt;/h2&gt;
 &lt;p&gt;Given a nerve &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt;, the type of
