@@ -130,7 +130,33 @@ class=&#34;math inline&#34;&gt;\(f:\text{\textesh}{}_{1}B \to
 \mathsf{Type}_{\text{\textesh}{}_{0}}\)&lt;/span&gt; is an action of the
 fundamental groupoid &lt;span
 class=&#34;math inline&#34;&gt;\(\text{\textesh}{}_{1}B\)&lt;/span&gt; on the set &lt;span
-class=&#34;math inline&#34;&gt;\(f(*_B)\)&lt;/span&gt;.&lt;/p&gt;
+class=&#34;math inline&#34;&gt;\(f(*_B)\)&lt;/span&gt;, which is the fiber over &lt;span
+class=&#34;math inline&#34;&gt;\(*_B\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Next, consider the type of 2-covers:&lt;/p&gt;
+&lt;div class=&#34;mydef&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Definition 1.2&lt;/strong&gt;. &lt;em&gt;A map &lt;span
+class=&#34;math inline&#34;&gt;\(\pi:E\to B\)&lt;/span&gt; is a &lt;em&gt;2-cover&lt;/em&gt; if it is
+&lt;span class=&#34;math inline&#34;&gt;\(\text{\textesh}{}_{2}\)&lt;/span&gt;-étale and its
+fibers are groupoids.&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;mylemma&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Lemma 1.2&lt;/strong&gt;. &lt;em&gt;The type of 2-covers over &lt;span
+class=&#34;math inline&#34;&gt;\(B\)&lt;/span&gt; is equivalent to &lt;span
+class=&#34;math inline&#34;&gt;\(\text{\textesh}{}_{2}B \to
+\mathsf{Type}_{\text{\textesh}{}_{1}}\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Consider the following classical story:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Covering spaces are like principal bundles where the group is
+topologically discrete. Loops in the base space lift to paths in the
+covering space, but contractible loops lift to contractible loops. And
+in general, elements of &lt;span class=&#34;math inline&#34;&gt;\(\pi_1(B)\)&lt;/span&gt;
+lift to paths in the covering space that connect different elements of
+the fiber. But if the group &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; is a
+Lie group, then even contractible paths in &lt;span
+class=&#34;math inline&#34;&gt;\(B\)&lt;/span&gt; can lift to nontrivial automorphisms of
+&lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;div id=&#34;refs&#34; class=&#34;references csl-bib-body hanging-indent&#34;
 data-entry-spacing=&#34;0&#34; role=&#34;list&#34;&gt;
 &lt;div id=&#34;ref-myersgood&#34; class=&#34;csl-entry&#34; role=&#34;listitem&#34;&gt;
