@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content="Greg Langmead" />
   <meta name="dcterms.date" content="2023-12-20" />
-  <title>discrete_gauge_theory</title>
+  <title>Discrete gauge theory in homotopy type theory</title>
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -48,35 +48,51 @@
   body {
     font-family: Baskerville, 'Libre Baskerville', serif;
   }
-  h1, h2, h3, h4, h5, h6 {
+  h1, h2, h3, h4, h5, h6, .abstract-title {
     font-family: Quattrocento, sans-serif;
     font-weight: bold;
     text-align: center;
   }
   </style>
-  <p><span class="math inline">\(\newcommand{\textesh}{∫}\)</span></p>
+  <p><span class="math inline">\(\newcommand{\textesh}{∫}\)</span> <span
+  class="math inline">\(\newcommand{\ensuremath}{}\)</span></p>
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
   type="text/javascript"></script>
 </head>
 <body>
+<header id="title-block-header">
+<h1 class="title">Discrete gauge theory in homotopy type theory</h1>
+<p class="author">Greg Langmead</p>
+<p class="date">2023-12-20</p>
+<div class="abstract">
+<div class="abstract-title">Abstract</div>
+<p>We identify connections, curvature, and gauge transformations within
+the standard basic foundations of homotopy type theory. Whereas the
+standard treatment of these topics uses infinitesimal structures, there
+is an equivalent discrete story of which the infinitesimal version is a
+limit, analogous to the relationship between vectors and finite paths,
+or between Čech and de Rham cohomology. We will show how to find
+discrete differential geometry, provide some evidence that this is what
+we have found, and use it to prove some results from the 20th century
+mathematics of gauge theory that depend only on homotopy types.</p>
+</div>
+</header>
 <nav id="TOC" role="doc-toc">
 <ul>
-<li><a href="#abstract" id="toc-abstract">Abstract</a></li>
 <li><a href="#introduction" id="toc-introduction"><span
-class="toc-section-number">2</span> Introduction</a></li>
+class="toc-section-number">1</span> Introduction</a></li>
 </ul>
 </nav>
-<h1 class="unnumbered" id="abstract">Abstract</h1>
-<h1 data-number="2" id="introduction"><span
-class="header-section-number">2</span> Introduction</h1>
+<h1 data-number="1" id="introduction"><span
+class="header-section-number">1</span> Introduction</h1>
 <p>Following David Jaz Myers in <span class="citation"
 data-cites="myersgood">(<a href="#ref-myersgood"
 role="doc-biblioref">Myers, 2022</a>)</span>, we define a cover as
 follows:</p>
 <div class="mydef">
-<p><strong>Definition 1.1</strong>. <em>A map <span
+<p><strong>Definition 1</strong>. <em>A map <span
 class="math inline">\(\pi:E\to B\)</span> is a <em>cover</em> if it is
 <span class="math inline">\(\text{\textesh}{}_{1}\)</span>-étale and its
 fibers are sets.</em></p>
@@ -95,56 +111,103 @@ type of <span class="math inline">\(\text{\textesh}{}_{1}\)</span>-étale
 maps into <span class="math inline">\(B\)</span> is equivalent to the
 function type <span class="math inline">\(\text{\textesh}{}_{1}B \to
 \mathsf{Type}_{\text{\textesh}{}_{1}}\)</span>. Since a cover has the
-further condition that the fibers are sets, this means:</p>
+further condition that the fibers are sets this implies</p>
 <div class="mylemma">
-<p><strong>Lemma 1.1</strong>. <em>The type of covers over <span
+<p><strong>Lemma 1</strong>. <em>The type of covers over <span
 class="math inline">\(B\)</span> is equivalent to <span
 class="math inline">\(\text{\textesh}{}_{1}B \to
 \mathsf{Type}_{\text{\textesh}{}_{0}}\)</span>.</em></p>
 </div>
 <p>In homotopy type theory we pass easily between the vertical picture
-(covers of <span class="math inline">\(B\)</span>) and the horizontal
-picture (classifying maps into some type of types). But when we unpack
-this a little bit we find important classical stories. If we equip <span
+(maps into <span class="math inline">\(B\)</span>) and the horizontal
+picture (classifying maps of <span class="math inline">\(B\)</span> into
+some type of fibers). But when we unpack this a little bit we find
+important classical stories. If we equip <span
 class="math inline">\(B\)</span> with a basepoint <span
 class="math inline">\(*_B\)</span> then a map <span
-class="math inline">\(f:\text{\textesh}{}_{1}B \to
-\mathsf{Type}_{\text{\textesh}{}_{0}}\)</span> is an action of the
-fundamental groupoid <span
-class="math inline">\(\text{\textesh}{}_{1}B\)</span> on the set <span
-class="math inline">\(f(*_B)\)</span>, which is the fiber over <span
-class="math inline">\(*_B\)</span>.</p>
-<p>Next, consider the type of 2-covers:</p>
+class="math inline">\(f:\text{\textesh}{}_{1}B
+\,\cdot\!\to\mathsf{Type}_{\text{\textesh}{}_{0}}\)</span> is an action
+of the group <span class="math inline">\(\text{\textesh}{}_{1}B\)</span>
+on the set <span class="math inline">\(f(*_B)\)</span>, which is the
+fiber over <span class="math inline">\(*_B\)</span>.</p>
+<p>Let us move up a dimension:</p>
 <div class="mydef">
-<p><strong>Definition 1.2</strong>. <em>A map <span
+<p><strong>Definition 2</strong>. <em>A map <span
 class="math inline">\(\pi:E\to B\)</span> is a <em>2-cover</em> if it is
 <span class="math inline">\(\text{\textesh}{}_{2}\)</span>-étale and its
 fibers are groupoids.</em></p>
 </div>
 <div class="mylemma">
-<p><strong>Lemma 1.2</strong>. <em>The type of 2-covers over <span
+<p><strong>Lemma 2</strong>. <em>The type of 2-covers over <span
 class="math inline">\(B\)</span> is equivalent to <span
 class="math inline">\(\text{\textesh}{}_{2}B \to
+\mathsf{Type}_{\text{\textesh}{}_{1}}\)</span>. Further, since <span
+class="math inline">\(\mathsf{Type}_{\text{\textesh}{}_{1}}\)</span> is
+2-truncated, the type of 2-covers of <span
+class="math inline">\(B\)</span> is equivalent to <span
+class="math inline">\(\text{\textesh}B\to
 \mathsf{Type}_{\text{\textesh}{}_{1}}\)</span>.</em></p>
 </div>
-<p>Consider the following classical story:</p>
-<blockquote>
-<p>Covering spaces are like principal bundles where the group is
-topologically discrete. Loops in the base space lift to paths in the
-covering space, but contractible loops lift to contractible loops. And
-in general, elements of <span class="math inline">\(\pi_1(B)\)</span>
-lift to paths in the covering space that connect different elements of
-the fiber. But if the group <span class="math inline">\(G\)</span> is a
-Lie group, then even contractible paths in <span
-class="math inline">\(B\)</span> can lift to nontrivial automorphisms of
-<span class="math inline">\(G\)</span>.</p>
-</blockquote>
+<p>This is the type we will examine.</p>
+<p>Let <span class="math inline">\(S^1\)</span> be the homotopical
+circle. This is a 1-type and its loop space is <span
+class="math inline">\(\ensuremath{\mathbb{Z}}\)</span>. We can deloop
+<span class="math inline">\(S^1\)</span> by forming its type of torsors.
+This is equivalent to <span class="math inline">\(\mathrm{BAut}_1
+S^1\stackrel{\textup{def}}{=}\sum_{(X:\mathsf{Type})}||X=S^1||_0\)</span>.
+<span class="math inline">\(\mathrm{BAut}_1(S^1)\)</span> is a 2-type.
+(see <span class="citation" data-cites="buchholtz2023central">(<a
+href="#ref-buchholtz2023central" role="doc-biblioref">Buchholtz <em>et
+al.</em>, 2023</a>)</span>).</p>
+<p>Since <span
+class="math inline">\(S^1:\mathsf{Type}_{\text{\textesh}{}_{1}}\)</span>
+we see that <span class="math inline">\(\mathrm{BAut}_1(S^1)\)</span> is
+a subtype of <span
+class="math inline">\(\mathsf{Type}_{\text{\textesh}{}_{1}}\)</span>.
+Which is to say, among the type of 2-covers of <span
+class="math inline">\(B\)</span> are those whose fibers are all <span
+class="math inline">\(S^1\)</span>-torsors.</p>
+<p>If we believe in the shape operator, then we can design our own
+discrete types that implement known combinatorial versions of spaces,
+and discard the original smooth and continuous spaces completely. Mike
+Shulman proves in <span class="citation"
+data-cites="shulman_cohesion">(<a href="#ref-shulman_cohesion"
+role="doc-biblioref">Shulman, 2017</a>)</span> that the shapes of the
+smooth circle and sphere are <span class="math inline">\(S^1\)</span>
+and <span class="math inline">\(S^2\)</span> respectively.</p>
+<p>One compelling candidate for a general type of combinatorial spaces
+are <em>higher polytopes</em>. Polytopes are simply posets satisfying
+some extra conditions that make them a generalization of polyhedrons to
+arbitrary dimension. The poset is just the information about the set of
+vertices, edges, faces, and higher faces and their containment. By using
+the higher-dimensional constructors of higher inductive types, we can
+import a polytope into homotopy type theory as a discrete type that
+intuitively captures the homotopy type of any manifolds we are
+interested in!</p>
+<p>The usual homotopical circle and sphere are not polytopes because the
+edges don’t have enough endpoints... [make the cube and square
+example].</p>
+<p>If <span class="math inline">\(f\)</span> then <span
+class="math display">\[F\]</span></p>
 <div id="refs" class="references csl-bib-body hanging-indent"
 data-entry-spacing="0" role="list">
+<div id="ref-buchholtz2023central" class="csl-entry" role="listitem">
+<span class="smallcaps">Buchholtz</span>, U., <span
+class="smallcaps">Christensen</span>, J.D., <span
+class="smallcaps">Flaten</span>, J.G.T., &amp; <span
+class="smallcaps">Rijke</span>, E. (2023) <a
+href="https://arxiv.org/abs/2301.02636">Central h-spaces and banded
+types</a>.
+</div>
 <div id="ref-myersgood" class="csl-entry" role="listitem">
 <span class="smallcaps">Myers</span>, D.J. (2022) <a
 href="https://arxiv.org/abs/1908.08034">Good fibrations through the
 modal prism</a>.
+</div>
+<div id="ref-shulman_cohesion" class="csl-entry" role="listitem">
+<span class="smallcaps">Shulman</span>, M. (2017) <a
+href="https://arxiv.org/abs/1509.07584">Brouwer’s fixed-point theorem in
+real-cohesive homotopy type theory</a>.
 </div>
 </div>
 </body>
