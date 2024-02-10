@@ -84,14 +84,15 @@
 &lt;div class=&#34;abstract&#34;&gt;
 &lt;div class=&#34;abstract-title&#34;&gt;Abstract&lt;/div&gt;
 &lt;p&gt;We identify connections, curvature, and gauge transformations within
-the standard basic foundations of homotopy type theory. Whereas the
-standard treatment of these topics uses infinitesimal structures, there
-is an equivalent discrete story of which the infinitesimal version is a
-limit, analogous to the relationship between vectors and finite paths,
-or between Čech and de Rham cohomology. We will show how to find
-discrete differential geometry, provide some evidence that this is what
-we have found, and use it to prove some results from the 20th century
-mathematics of gauge theory that depend only on homotopy types.&lt;/p&gt;
+the structures of homotopy type theory. Whereas most classical
+treatments of these structures rely entirely on infinitesimal
+definitions, there is an equivalent discrete story of which the
+infinitesimal version is a limit, analogous to the relationship between
+smooth paths and tangent vectors, or between de Rham and Čech
+cohomology. We will show how to identify the elements of discrete gauge
+theory, provide some evidence that this is what we have found, and use
+it to prove some results from the 20th century mathematics of gauge
+theory that depend only on homotopy types.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/header&gt;
 &lt;nav id=&#34;TOC&#34; role=&#34;doc-toc&#34;&gt;
