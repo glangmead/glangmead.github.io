@@ -286,6 +286,11 @@ class=&#34;math inline&#34;&gt;\(\mathrm{BAut}_1(S^1)\)&lt;/span&gt; are discret
 &lt;div class=&#34;proof&#34;&gt;
 &lt;p&gt;&lt;em&gt;Proof.&lt;/em&gt; TBD. ◻&lt;/p&gt;
 &lt;/div&gt;
+&lt;h1 data-number=&#34;3&#34; id=&#34;evidence-that-we-found-curved-connections&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;3&lt;/span&gt; Evidence that we found curved
+connections&lt;/h1&gt;
+&lt;h2 data-number=&#34;3.1&#34; id=&#34;the-hopf-fibration&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;3.1&lt;/span&gt; The Hopf fibration&lt;/h2&gt;
 &lt;p&gt;Consider a generalization of &lt;span
 class=&#34;math inline&#34;&gt;\(S^1\)&lt;/span&gt;, an &lt;em&gt;&lt;span
 class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;-gon&lt;/em&gt; &lt;span
@@ -331,20 +336,43 @@ class=&#34;math inline&#34;&gt;\(\mathrm{BAut}_1(S^1)_{\div}\)&lt;/span&gt; you 
 the Symmetry book &lt;span class=&#34;citation&#34; data-cites=&#34;Symmetry&#34;&gt;(&lt;a
 href=&#34;#ref-Symmetry&#34; role=&#34;doc-biblioref&#34;&gt;Bezem &lt;em&gt;et al.&lt;/em&gt;,
 2023&lt;/a&gt;)&lt;/span&gt;.&lt;/p&gt;
-&lt;h1 data-number=&#34;3&#34; id=&#34;evidence-that-we-found-curved-connections&#34;&gt;&lt;span
-class=&#34;header-section-number&#34;&gt;3&lt;/span&gt; Evidence that we found curved
-connections&lt;/h1&gt;
-&lt;h2 data-number=&#34;3.1&#34; id=&#34;the-hopf-fibration&#34;&gt;&lt;span
-class=&#34;header-section-number&#34;&gt;3.1&lt;/span&gt; The Hopf fibration&lt;/h2&gt;
 &lt;h2 data-number=&#34;3.2&#34; id=&#34;the-hairy-ball-theorem&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;3.2&lt;/span&gt; The hairy ball theorem&lt;/h2&gt;
 &lt;h2 data-number=&#34;3.3&#34; id=&#34;the-atiyah-sequence&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;3.3&lt;/span&gt; The Atiyah sequence&lt;/h2&gt;
+&lt;p&gt;This is an exact sequence of bundles. Converting them to paths gives
+us the lemmas about pathovers.&lt;/p&gt;
 &lt;h2 data-number=&#34;3.4&#34; id=&#34;freed-and-hopkins&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;3.4&lt;/span&gt; Freed and Hopkins&lt;/h2&gt;
-&lt;p&gt;Summarize Freed-Hopkins &lt;span class=&#34;citation&#34;
+&lt;p&gt;Any claim to define connections in higher toposes must contend with
+Freed and Hopkins &lt;span class=&#34;citation&#34;
 data-cites=&#34;freed2013chernweil&#34;&gt;(&lt;a href=&#34;#ref-freed2013chernweil&#34;
-role=&#34;doc-biblioref&#34;&gt;Freed &amp;amp; Hopkins, 2013&lt;/a&gt;)&lt;/span&gt;.&lt;/p&gt;
+role=&#34;doc-biblioref&#34;&gt;Freed &amp;amp; Hopkins, 2013&lt;/a&gt;)&lt;/span&gt;. They
+introduce simplicial sets and simplicial sheaves in order to construct a
+classifying space for principal bundles with connection, which is a
+higher category. Actually they need higher categories even to classify
+principal bundles alone, since they wish to do so on the nose rather
+than up to homotopy, and so they need a groupoid-level classifying
+space.&lt;/p&gt;
+&lt;p&gt;In their language, the classifying space is the simplicial sheaf of
+trivializable principal &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt;-bundles
+with connection. (&lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; is a compact
+Lie group.) A connection is a classical, infinitesimal one, i.e. a
+1-form with values in the Lie algebra &lt;span
+class=&#34;math inline&#34;&gt;\(\mathfrak{g}\)&lt;/span&gt;. And so their classifying
+space is the product (bundle classifier) &lt;span
+class=&#34;math inline&#34;&gt;\(\times\)&lt;/span&gt; (connection). If we compose the
+1-form with integration, we form a map from the paths in the classifying
+space to &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt;. But the 1-dimensional
+structure of &lt;span class=&#34;math inline&#34;&gt;\(\mathrm{BAut}_1(S^1)\)&lt;/span&gt;
+is already &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; since it’s a delooping
+of &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt;. So maybe they are just
+building the higher type &lt;span
+class=&#34;math inline&#34;&gt;\(\mathrm{BAut}_1(S^1)\)&lt;/span&gt; as a product of two
+spaces.&lt;/p&gt;
+&lt;p&gt;If that’s the case, then can we see in our picture the Weil algebra
+and so on that they end up proving is the cohomology of this classifying
+space?&lt;/p&gt;
 &lt;h2 data-number=&#34;3.5&#34; id=&#34;atiyah-and-bott&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;3.5&lt;/span&gt; Atiyah and Bott&lt;/h2&gt;
 &lt;p&gt;Let &lt;span
