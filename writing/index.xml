@@ -99,10 +99,93 @@ theory that depend only on homotopy types.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#introduction&#34; id=&#34;toc-introduction&#34;&gt;&lt;span
 class=&#34;toc-section-number&#34;&gt;1&lt;/span&gt; Introduction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#higher-covers&#34; id=&#34;toc-higher-covers&#34;&gt;&lt;span
+class=&#34;toc-section-number&#34;&gt;2&lt;/span&gt; Higher covers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#where-the-curved-connection-is&#34;
+id=&#34;toc-where-the-curved-connection-is&#34;&gt;&lt;span
+class=&#34;toc-section-number&#34;&gt;3&lt;/span&gt; Where the curved connection
+is&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/nav&gt;
 &lt;h1 data-number=&#34;1&#34; id=&#34;introduction&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;1&lt;/span&gt; Introduction&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&#34;It is always ourselves we work on, whether we realize it or not.
+There is no other work to be done in the world.&#34; — Stephen Talbott,
+&lt;em&gt;The Future Does Not Compute&lt;/em&gt;&lt;span class=&#34;citation&#34;
+data-cites=&#34;talbott&#34;&gt;(&lt;a href=&#34;#ref-talbott&#34;
+role=&#34;doc-biblioref&#34;&gt;Talbott, 1995&lt;/a&gt;)&lt;/span&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Homotopy type theory offers us an opportunity to better understand
+the mathematics of the past. It does this by moving more of the commonly
+used structures into the foundational layer of mathematical logic, and
+then asking us to express old ideas in the new foundations. The
+difficulty of doing this varies considerably. Some would say that what
+we gain is the ability to formalize the resulting math, but this makes
+it appear that “banking theorems” is what math is. It’s not. Math is
+about each person’s journey of understanding, which we share with each
+other and at which we help each other succeed. The math is the means,
+and the byproduct, of our own quest for understanding. I wanted to
+understand geometry, connections, curvature, and gauge theory, and I
+have done that. I’d like to share it with you.&lt;/p&gt;
+&lt;p&gt;Connections are not inherently infinitesimal. Infinitesimal
+connections assign holonomy to curves if you integrate them, and if you
+define holonomy directly on the space of paths in a manifold then you
+can differentiate the assignment to get a 1-form with values in the Lie
+algebra of the group where the holonomy takes it values (see &lt;span
+class=&#34;citation&#34; data-cites=&#34;freed1992classical&#34;&gt;(&lt;a
+href=&#34;#ref-freed1992classical&#34; role=&#34;doc-biblioref&#34;&gt;Freed,
+1992&lt;/a&gt;)&lt;/span&gt; Appendix B).&lt;/p&gt;
+&lt;p&gt;Define type families.&lt;/p&gt;
+&lt;p&gt;Define identity types.&lt;/p&gt;
+&lt;p&gt;Define functions and functoriality.&lt;/p&gt;
+&lt;p&gt;Point out that functions are equipped with the full dimensionality of
+effects, including on paths.&lt;/p&gt;
+&lt;p&gt;Define the delooping of a group.&lt;/p&gt;
+&lt;p&gt;Deconstruct a map to the delooping of a group.&lt;/p&gt;
+&lt;h1 data-number=&#34;2&#34; id=&#34;higher-covers&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;2&lt;/span&gt; Higher covers&lt;/h1&gt;
+&lt;p&gt;One problem with the space &lt;span
+class=&#34;math inline&#34;&gt;\(\mathrm{BAut}_1(S^1)\)&lt;/span&gt; is that it’s
+spatially discrete. There are no smooth circles for smooth manifolds to
+get hung up on. It has been argued that this means that any would-be
+classifying map &lt;span class=&#34;math inline&#34;&gt;\(f:X\to
+\mathrm{BAut}_1(S^1)\)&lt;/span&gt; can only produce principal bundles with
+&lt;em&gt;flat&lt;/em&gt; connections. That would not achieve our goals, and so it
+would be disappointing. It looks even worse when we notice that &lt;span
+class=&#34;math inline&#34;&gt;\(f\)&lt;/span&gt; must factor through the shape unit
+&lt;span
+class=&#34;math inline&#34;&gt;\((-)^\text{\textesh}:X\to\text{\textesh}X\)&lt;/span&gt;
+by the universal property of &lt;span
+class=&#34;math inline&#34;&gt;\(\text{\textesh}\)&lt;/span&gt; for a map into a discrete
+space. And when we examine &lt;span
+class=&#34;math inline&#34;&gt;\(\text{\textesh}X\)&lt;/span&gt; we see that homotopic
+paths are identified and so must apparently be sent to equal holonomies,
+just as in a flat connection.&lt;/p&gt;
+&lt;p&gt;Fortunately there’s some hand-waving in the previous paragraph and
+there are indeed non-flat connections in &lt;span
+class=&#34;math inline&#34;&gt;\(\text{\textesh}f:\text{\textesh}X\to
+\mathrm{BAut}_1(S^1)\)&lt;/span&gt;. They are not the infinitesimal variety of
+course. They are known as &lt;em&gt;discrete connections&lt;/em&gt;&lt;span
+class=&#34;citation&#34; data-cites=&#34;crane_connections&#34;&gt;(&lt;a
+href=&#34;#ref-crane_connections&#34; role=&#34;doc-biblioref&#34;&gt;Crane,
+2010&lt;/a&gt;)&lt;/span&gt;&lt;span class=&#34;citation&#34; data-cites=&#34;crane_ddg&#34;&gt;(&lt;a
+href=&#34;#ref-crane_ddg&#34; role=&#34;doc-biblioref&#34;&gt;Crane, 2020&lt;/a&gt;)&lt;/span&gt;.
+Discrete connections are an assignment of group elements to discrete
+paths in a combinatorial manifold. If we represent the homotopy type of
+&lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; by a discrete combinatorial
+manifold, then we can observe a meaningful discrete curvature of the
+principal bundle, and in so doing access the homotopy-invariant aspects
+of gauge theory.&lt;/p&gt;
+&lt;p&gt;What makes this all work is that &lt;span
+class=&#34;math inline&#34;&gt;\(S^1\)&lt;/span&gt; is a discrete 1-type, not a discrete
+set. A map from &lt;span class=&#34;math inline&#34;&gt;\(\text{\textesh}X\to
+BG\)&lt;/span&gt; for a discrete set-level group &lt;span
+class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; would indeed carry its unique
+&lt;em&gt;flat&lt;/em&gt; connection, since homotopic paths must map to the same set
+element. But so long as we’re willing to work with discrete spaces and
+discrete connections, we can see geometry inside homotopy type
+theory!&lt;/p&gt;
 &lt;p&gt;Following David Jaz Myers in &lt;span class=&#34;citation&#34;
 data-cites=&#34;myersgood&#34;&gt;(&lt;a href=&#34;#ref-myersgood&#34;
 role=&#34;doc-biblioref&#34;&gt;Myers, 2022&lt;/a&gt;)&lt;/span&gt;, we define a cover as
@@ -164,49 +247,129 @@ class=&#34;math inline&#34;&gt;\(B\)&lt;/span&gt; is equivalent to &lt;span
 class=&#34;math inline&#34;&gt;\(\text{\textesh}B\to
 \mathsf{Type}_{\text{\textesh}{}_{1}}\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;p&gt;This is the type we will examine.&lt;/p&gt;
-&lt;p&gt;Let &lt;span class=&#34;math inline&#34;&gt;\(S^1\)&lt;/span&gt; be the homotopical
-circle. This is a 1-type and its loop space is &lt;span
-class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{Z}}\)&lt;/span&gt;. We can deloop
-&lt;span class=&#34;math inline&#34;&gt;\(S^1\)&lt;/span&gt; by forming its type of torsors.
-This is equivalent to &lt;span class=&#34;math inline&#34;&gt;\(\mathrm{BAut}_1
-S^1\stackrel{\textup{def}}{=}\sum_{(X:\mathsf{Type})}||X=S^1||_0\)&lt;/span&gt;.
-&lt;span class=&#34;math inline&#34;&gt;\(\mathrm{BAut}_1(S^1)\)&lt;/span&gt; is a 2-type.
-(see &lt;span class=&#34;citation&#34; data-cites=&#34;buchholtz2023central&#34;&gt;(&lt;a
+&lt;p&gt;This is the type we will examine: maps from discrete &lt;span
+class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;-types to the type of discrete
+1-types.&lt;/p&gt;
+&lt;p&gt;For example, let &lt;span class=&#34;math inline&#34;&gt;\(S^1\)&lt;/span&gt; be the
+higher inductive type generated by&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\mathsf{base}:S^1\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;span
+class=&#34;math inline&#34;&gt;\(\mathsf{loop}:\mathsf{base}=\mathsf{base}\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We can deloop &lt;span class=&#34;math inline&#34;&gt;\(S^1\)&lt;/span&gt; by forming its
+type of torsors. This is equivalent to &lt;span
+class=&#34;math inline&#34;&gt;\(\mathrm{BAut}_1(S^1)\stackrel{\textup{def}}{=}\sum_{(X:\mathsf{Type})}||X=S^1||_0\)&lt;/span&gt;,
+the type of pairs of a type together with an equivalence class of
+isomorphisms with &lt;span class=&#34;math inline&#34;&gt;\(S^1\)&lt;/span&gt; (see &lt;span
+class=&#34;citation&#34; data-cites=&#34;buchholtz2023central&#34;&gt;(&lt;a
 href=&#34;#ref-buchholtz2023central&#34; role=&#34;doc-biblioref&#34;&gt;Buchholtz &lt;em&gt;et
 al.&lt;/em&gt;, 2023&lt;/a&gt;)&lt;/span&gt;).&lt;/p&gt;
-&lt;p&gt;Since &lt;span
-class=&#34;math inline&#34;&gt;\(S^1:\mathsf{Type}_{\text{\textesh}{}_{1}}\)&lt;/span&gt;
-we see that &lt;span class=&#34;math inline&#34;&gt;\(\mathrm{BAut}_1(S^1)\)&lt;/span&gt; is
-a subtype of &lt;span
-class=&#34;math inline&#34;&gt;\(\mathsf{Type}_{\text{\textesh}{}_{1}}\)&lt;/span&gt;.
-Which is to say, among the type of 2-covers of &lt;span
-class=&#34;math inline&#34;&gt;\(B\)&lt;/span&gt; are those whose fibers are all &lt;span
-class=&#34;math inline&#34;&gt;\(S^1\)&lt;/span&gt;-torsors.&lt;/p&gt;
-&lt;p&gt;If we believe in the shape operator, then we can design our own
-discrete types that implement known combinatorial versions of spaces,
-and discard the original smooth and continuous spaces completely. Mike
-Shulman proves in &lt;span class=&#34;citation&#34;
-data-cites=&#34;shulman_cohesion&#34;&gt;(&lt;a href=&#34;#ref-shulman_cohesion&#34;
-role=&#34;doc-biblioref&#34;&gt;Shulman, 2017&lt;/a&gt;)&lt;/span&gt; that the shapes of the
-smooth circle and sphere are &lt;span class=&#34;math inline&#34;&gt;\(S^1\)&lt;/span&gt;
-and &lt;span class=&#34;math inline&#34;&gt;\(S^2\)&lt;/span&gt; respectively.&lt;/p&gt;
-&lt;p&gt;One compelling candidate for a general type of combinatorial spaces
-are &lt;em&gt;higher polytopes&lt;/em&gt;. Polytopes are simply posets satisfying
-some extra conditions that make them a generalization of polyhedrons to
-arbitrary dimension. The poset is just the information about the set of
-vertices, edges, faces, and higher faces and their containment. By using
-the higher-dimensional constructors of higher inductive types, we can
-import a polytope into homotopy type theory as a discrete type that
-intuitively captures the homotopy type of any manifolds we are
-interested in!&lt;/p&gt;
-&lt;p&gt;The usual homotopical circle and sphere are not polytopes because the
-edges don’t have enough endpoints... [make the cube and square
-example].&lt;/p&gt;
-&lt;p&gt;If &lt;span class=&#34;math inline&#34;&gt;\(f\)&lt;/span&gt; then &lt;span
-class=&#34;math display&#34;&gt;\[F\]&lt;/span&gt;&lt;/p&gt;
+&lt;div class=&#34;mylemma&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Lemma 3&lt;/strong&gt;. &lt;em&gt;Terms of &lt;span
+class=&#34;math inline&#34;&gt;\(\mathrm{BAut}_1(S^1)\)&lt;/span&gt; are discrete
+1-types.&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;proof&#34;&gt;
+&lt;p&gt;&lt;em&gt;Proof.&lt;/em&gt; TBD. ◻&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Consider a generalization of &lt;span
+class=&#34;math inline&#34;&gt;\(S^1\)&lt;/span&gt;, an &lt;em&gt;&lt;span
+class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;-gon&lt;/em&gt; &lt;span
+class=&#34;math inline&#34;&gt;\(C_n\)&lt;/span&gt;, generated by&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(v_1,\ldots,v_n:C_n\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(e_1:v_1=v_2\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(e_2:v_2=v_3\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\ldots\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(e_{n-1}:v_{n-1}=v_n\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(e_n:v_n=v_1\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;mylemma&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Lemma 4&lt;/strong&gt;. &lt;em&gt;We have &lt;span
+class=&#34;math inline&#34;&gt;\(g:\prod_{(n:\ensuremath{\mathbb{N}})}C_n\simeq
+S^1\)&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Generalize &lt;span class=&#34;citation&#34; data-cites=&#34;hottbook&#34;&gt;(&lt;a
+href=&#34;#ref-hottbook&#34; role=&#34;doc-biblioref&#34;&gt;Univalent Foundations Program,
+2013&lt;/a&gt;)&lt;/span&gt; Lemma 6.5.1.0◻&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;-gons are all discrete
+1-types:&lt;/p&gt;
+&lt;div class=&#34;mydef&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Definition 3&lt;/strong&gt;. &lt;em&gt;Let &lt;span
+class=&#34;math inline&#34;&gt;\(c:\ensuremath{\mathbb{N}}\to
+\mathsf{Type}_{\text{\textesh}{}_{1}}\)&lt;/span&gt; be given by &lt;span
+class=&#34;math inline&#34;&gt;\(c(n)=(C_n, ||g(n)||_0)\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;The reason we’re interested in these is that they form arbitrarily
+fine-grained approximations to the smooth circle. We can consider an
+&lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;-gon to be a circle that has a
+notion of “going around &lt;span class=&#34;math inline&#34;&gt;\(1/n\)&lt;/span&gt;th of
+the way”.&lt;/p&gt;
+&lt;p&gt;Now let’s re-point &lt;span
+class=&#34;math inline&#34;&gt;\(\mathrm{BAut}_1(S^1)\)&lt;/span&gt; at &lt;span
+class=&#34;math inline&#34;&gt;\(C_4\)&lt;/span&gt;. We can use a + to denote a pointed
+type, and we can decorate it with the base point, like so: &lt;span
+class=&#34;math inline&#34;&gt;\({\mathrm{BAut}_1(S^1)}_{+{C_4}}\)&lt;/span&gt;. We can
+then refer to the underlying type (first projection from the pointed
+type) with &lt;span class=&#34;math inline&#34;&gt;\(\mathrm{BAut}_1(S^1)_-\)&lt;/span&gt;.
+This is similar to the notation &lt;span
+class=&#34;math inline&#34;&gt;\(\mathrm{BAut}_1(S^1)_{\div}\)&lt;/span&gt; you find in
+the Symmetry book &lt;span class=&#34;citation&#34; data-cites=&#34;Symmetry&#34;&gt;(&lt;a
+href=&#34;#ref-Symmetry&#34; role=&#34;doc-biblioref&#34;&gt;Bezem &lt;em&gt;et al.&lt;/em&gt;,
+2023&lt;/a&gt;)&lt;/span&gt;.&lt;/p&gt;
+&lt;h1 data-number=&#34;3&#34; id=&#34;where-the-curved-connection-is&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;3&lt;/span&gt; Where the curved connection
+is&lt;/h1&gt;
+&lt;p&gt;Let &lt;span
+class=&#34;math inline&#34;&gt;\({B}_{+{b}}:\mathsf{Type}_{\text{\textesh}*}\)&lt;/span&gt;
+be a pointed discrete type and let &lt;span
+class=&#34;math inline&#34;&gt;\(f:{B}_{+{b}}\,\cdot\!\to{\mathrm{BAut}_1(S^1)}_{+{C_4}}\)&lt;/span&gt;.
+If we need to reference the proof of pointedness we’ll call it &lt;span
+class=&#34;math inline&#34;&gt;\(*_f:f(b)=C_4\)&lt;/span&gt;.&lt;/p&gt;
+&lt;div class=&#34;mylemma&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Lemma 5&lt;/strong&gt;. &lt;em&gt;&lt;span
+class=&#34;math inline&#34;&gt;\(\text{\textesh}(X\to Y)\simeq \text{\textesh}X\to
+\text{\textesh}Y\)&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;.&lt;/p&gt;
+&lt;div class=&#34;proof&#34;&gt;
+&lt;p&gt;&lt;em&gt;Proof.&lt;/em&gt; TODO ◻&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;And so any results that depend only on the homotopy type of, say, a
+classifying map, can be studied in HoTT by replacing both the domain and
+the classifying type with their homotopy types.&lt;/p&gt;
+&lt;div class=&#34;myprop&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Proposition 1&lt;/strong&gt;. &lt;em&gt;(&lt;span class=&#34;citation&#34;
+data-cites=&#34;atiyah1983yang&#34;&gt;(&lt;a href=&#34;#ref-atiyah1983yang&#34;
+role=&#34;doc-biblioref&#34;&gt;Atiyah &amp;amp; Bott, 1983&lt;/a&gt;)&lt;/span&gt; Proposition
+2.4) Let &lt;span class=&#34;math inline&#34;&gt;\(BG\)&lt;/span&gt; be the classifying
+space for a compact Lie group &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt;.
+Then in homotopy theory &lt;span
+class=&#34;math display&#34;&gt;\[B\mathscr{G}(P)=\mathrm{Map}_P(M, BG)\]&lt;/span&gt;
+where &lt;span class=&#34;math inline&#34;&gt;\(\mathscr{G}(P)\)&lt;/span&gt; is the group
+of automorphisms of the principal bundle &lt;span
+class=&#34;math inline&#34;&gt;\(P\)&lt;/span&gt;, and where &lt;span
+class=&#34;math inline&#34;&gt;\(\mathrm{Map}_P\)&lt;/span&gt; denotes the connected
+component of &lt;span class=&#34;math inline&#34;&gt;\(M\to BG\)&lt;/span&gt; containing the
+classifying map of &lt;span class=&#34;math inline&#34;&gt;\(P\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
 &lt;div id=&#34;refs&#34; class=&#34;references csl-bib-body hanging-indent&#34;
 data-entry-spacing=&#34;0&#34; role=&#34;list&#34;&gt;
+&lt;div id=&#34;ref-atiyah1983yang&#34; class=&#34;csl-entry&#34; role=&#34;listitem&#34;&gt;
+&lt;span class=&#34;smallcaps&#34;&gt;Atiyah&lt;/span&gt;, M.F. &amp;amp; &lt;span
+class=&#34;smallcaps&#34;&gt;Bott&lt;/span&gt;, R. (1983) The yang-mills equations over
+riemann surfaces. &lt;em&gt;Philosophical Transactions of the Royal Society of
+London. Series A, Mathematical and Physical Sciences&lt;/em&gt;,
+&lt;strong&gt;308&lt;/strong&gt;, 523–615.
+&lt;/div&gt;
+&lt;div id=&#34;ref-Symmetry&#34; class=&#34;csl-entry&#34; role=&#34;listitem&#34;&gt;
+&lt;span class=&#34;smallcaps&#34;&gt;Bezem&lt;/span&gt;, M., &lt;span
+class=&#34;smallcaps&#34;&gt;Buchholtz&lt;/span&gt;, U., &lt;span
+class=&#34;smallcaps&#34;&gt;Cagne&lt;/span&gt;, P., &lt;span
+class=&#34;smallcaps&#34;&gt;Dundas&lt;/span&gt;, B.I., &amp;amp; &lt;span
+class=&#34;smallcaps&#34;&gt;Grayson&lt;/span&gt;, D.R. (2023) Symmetry.
+&lt;/div&gt;
 &lt;div id=&#34;ref-buchholtz2023central&#34; class=&#34;csl-entry&#34; role=&#34;listitem&#34;&gt;
 &lt;span class=&#34;smallcaps&#34;&gt;Buchholtz&lt;/span&gt;, U., &lt;span
 class=&#34;smallcaps&#34;&gt;Christensen&lt;/span&gt;, J.D., &lt;span
@@ -215,15 +378,38 @@ class=&#34;smallcaps&#34;&gt;Rijke&lt;/span&gt;, E. (2023) &lt;a
 href=&#34;https://arxiv.org/abs/2301.02636&#34;&gt;Central h-spaces and banded
 types&lt;/a&gt;.
 &lt;/div&gt;
+&lt;div id=&#34;ref-crane_connections&#34; class=&#34;csl-entry&#34; role=&#34;listitem&#34;&gt;
+&lt;span class=&#34;smallcaps&#34;&gt;Crane&lt;/span&gt;, K. (2010) &lt;a
+href=&#34;http://resolver.caltech.edu/CaltechTHESIS:05282010-102307125&#34;&gt;Discrete
+connections for geometry processing&lt;/a&gt; (Master’s thesis).
+&lt;/div&gt;
+&lt;div id=&#34;ref-crane_ddg&#34; class=&#34;csl-entry&#34; role=&#34;listitem&#34;&gt;
+&lt;span class=&#34;smallcaps&#34;&gt;Crane&lt;/span&gt;, K. (2020) &lt;em&gt;An excursion through
+discrete differential geometry&lt;/em&gt;, vol. 76, Proceedings of Symposia in
+Applied Mathematics. American Mathematical Society.
+&lt;/div&gt;
+&lt;div id=&#34;ref-freed1992classical&#34; class=&#34;csl-entry&#34; role=&#34;listitem&#34;&gt;
+&lt;span class=&#34;smallcaps&#34;&gt;Freed&lt;/span&gt;, D.S. (1992) &lt;a
+href=&#34;https://arxiv.org/abs/hep-th/9206021&#34;&gt;Classical chern-simons
+theory, part 1&lt;/a&gt;.
+&lt;/div&gt;
 &lt;div id=&#34;ref-myersgood&#34; class=&#34;csl-entry&#34; role=&#34;listitem&#34;&gt;
 &lt;span class=&#34;smallcaps&#34;&gt;Myers&lt;/span&gt;, D.J. (2022) &lt;a
 href=&#34;https://arxiv.org/abs/1908.08034&#34;&gt;Good fibrations through the
 modal prism&lt;/a&gt;.
 &lt;/div&gt;
-&lt;div id=&#34;ref-shulman_cohesion&#34; class=&#34;csl-entry&#34; role=&#34;listitem&#34;&gt;
-&lt;span class=&#34;smallcaps&#34;&gt;Shulman&lt;/span&gt;, M. (2017) &lt;a
-href=&#34;https://arxiv.org/abs/1509.07584&#34;&gt;Brouwer’s fixed-point theorem in
-real-cohesive homotopy type theory&lt;/a&gt;.
+&lt;div id=&#34;ref-talbott&#34; class=&#34;csl-entry&#34; role=&#34;listitem&#34;&gt;
+&lt;span class=&#34;smallcaps&#34;&gt;Talbott&lt;/span&gt;, S. (1995) &lt;em&gt;&lt;a
+href=&#34;https://books.google.com/books?id=KcXaAAAAMAAJ&#34;&gt;The future does
+not compute: Transcending the machines in our midst&lt;/a&gt;&lt;/em&gt;. O’Reilly
+&amp;amp; Associates.
+&lt;/div&gt;
+&lt;div id=&#34;ref-hottbook&#34; class=&#34;csl-entry&#34; role=&#34;listitem&#34;&gt;
+&lt;span class=&#34;smallcaps&#34;&gt;Univalent Foundations Program&lt;/span&gt; (2013)
+&lt;em&gt;Homotopy type theory: Univalent foundations of mathematics&lt;/em&gt;.
+Institute for Advanced Study: &lt;a
+href=&#34;https://homotopytypetheory.org/book&#34;
+class=&#34;uri&#34;&gt;https://homotopytypetheory.org/book&lt;/a&gt;.
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/body&gt;
