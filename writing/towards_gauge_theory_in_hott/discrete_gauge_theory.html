@@ -83,7 +83,23 @@ theory that depend only on homotopy types.</p>
 <nav id="TOC" role="doc-toc">
 <ul>
 <li><a href="#introduction" id="toc-introduction"><span
-class="toc-section-number">1</span> Introduction</a></li>
+class="toc-section-number">1</span> Introduction</a>
+<ul>
+<li><a href="#functions-are-multidimensional"
+id="toc-functions-are-multidimensional"><span
+class="toc-section-number">1.1</span> Functions are
+multidimensional</a></li>
+<li><a href="#pathovers" id="toc-pathovers"><span
+class="toc-section-number">1.2</span> Pathovers</a></li>
+<li><a href="#define-the-delooping-of-a-group"
+id="toc-define-the-delooping-of-a-group"><span
+class="toc-section-number">1.3</span> Define the delooping of a
+group</a></li>
+<li><a href="#deconstruct-a-map-to-the-delooping-of-a-group"
+id="toc-deconstruct-a-map-to-the-delooping-of-a-group"><span
+class="toc-section-number">1.4</span> Deconstruct a map to the delooping
+of a group</a></li>
+</ul></li>
 <li><a href="#higher-covers" id="toc-higher-covers"><span
 class="toc-section-number">2</span> Higher covers</a></li>
 <li><a href="#evidence-that-we-found-curved-connections"
@@ -134,13 +150,51 @@ algebra of the group where the holonomy takes it values (see <span
 class="citation" data-cites="freed1992classical">(<a
 href="#ref-freed1992classical" role="doc-biblioref">Freed,
 1992</a>)</span> Appendix B).</p>
-<p>Define type families.</p>
-<p>Define identity types.</p>
-<p>Define functions and functoriality.</p>
-<p>Point out that functions are equipped with the full dimensionality of
-effects, including on paths.</p>
-<p>Define the delooping of a group.</p>
-<p>Deconstruct a map to the delooping of a group.</p>
+<h2 data-number="1.1" id="functions-are-multidimensional"><span
+class="header-section-number">1.1</span> Functions are
+multidimensional</h2>
+<p>Functions in homotopy type theory carry information in all dimensions
+at once. Given <span class="math inline">\(f:X\to Y\)</span> we can
+access the value of <span class="math inline">\(f\)</span> on paths with
+terms like <span
+class="math inline">\(\ensuremath{\textsf{ap}}(f,-):x=_Xy\to f(x)=_Y
+f(y)\)</span> and we can iterate this with more <span
+class="math inline">\(\ensuremath{\textsf{ap}}\)</span>s.</p>
+<h2 data-number="1.2" id="pathovers"><span
+class="header-section-number">1.2</span> Pathovers</h2>
+<h2 data-number="1.3" id="define-the-delooping-of-a-group"><span
+class="header-section-number">1.3</span> Define the delooping of a
+group</h2>
+<p>A <em>delooping</em> of a group is a pointed type whose loop space is
+the group. The references we follow here are <span class="citation"
+data-cites="Symmetry">(<a href="#ref-Symmetry"
+role="doc-biblioref">Bezem <em>et al.</em>, 2023</a>)</span> and <span
+class="citation" data-cites="buchholtz2023central">(<a
+href="#ref-buchholtz2023central" role="doc-biblioref">Buchholtz <em>et
+al.</em>, 2023</a>)</span>. Especially:</p>
+<p>(<span class="citation" data-cites="buchholtz2023central">(<a
+href="#ref-buchholtz2023central" role="doc-biblioref">Buchholtz <em>et
+al.</em>, 2023</a>)</span> Definition 4.1) <span
+class="math inline">\(\mathrm{BAut}_1(G):=\sum_{(X:U)}||X=G||_0\)</span>.</p>
+<p>(<span class="citation" data-cites="buchholtz2023central">(<a
+href="#ref-buchholtz2023central" role="doc-biblioref">Buchholtz <em>et
+al.</em>, 2023</a>)</span> Theorem 4.26) The type of <span
+class="math inline">\(G\)</span>-torsors is equivalent to <span
+class="math inline">\(\mathrm{BAut}_1(G)\)</span>.</p>
+<p>The component <span class="math inline">\(||X=G||_0\)</span> is
+called a <span class="math inline">\(G\)</span>-band. Its data consists
+of a choice of basepoint in <span class="math inline">\(X\)</span> to
+map to the identity in <span class="math inline">\(G\)</span>.</p>
+<p>The loop space at the base point is the given group. The loop space
+at other points are equivalent groups (e.g. conjugations of the group).
+The path spaces between pairs of points are torsors of the given
+group.</p>
+<h2 data-number="1.4"
+id="deconstruct-a-map-to-the-delooping-of-a-group"><span
+class="header-section-number">1.4</span> Deconstruct a map to the
+delooping of a group</h2>
+<p>A map <span
+class="math inline">\(B\,\cdot\!\to\mathrm{BAut}_1(G)\)</span> is</p>
 <h1 data-number="2" id="higher-covers"><span
 class="header-section-number">2</span> Higher covers</h1>
 <p>One problem with the space <span

@@ -98,7 +98,23 @@ theory that depend only on homotopy types.&lt;/p&gt;
 &lt;nav id=&#34;TOC&#34; role=&#34;doc-toc&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#introduction&#34; id=&#34;toc-introduction&#34;&gt;&lt;span
-class=&#34;toc-section-number&#34;&gt;1&lt;/span&gt; Introduction&lt;/a&gt;&lt;/li&gt;
+class=&#34;toc-section-number&#34;&gt;1&lt;/span&gt; Introduction&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#functions-are-multidimensional&#34;
+id=&#34;toc-functions-are-multidimensional&#34;&gt;&lt;span
+class=&#34;toc-section-number&#34;&gt;1.1&lt;/span&gt; Functions are
+multidimensional&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#pathovers&#34; id=&#34;toc-pathovers&#34;&gt;&lt;span
+class=&#34;toc-section-number&#34;&gt;1.2&lt;/span&gt; Pathovers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#define-the-delooping-of-a-group&#34;
+id=&#34;toc-define-the-delooping-of-a-group&#34;&gt;&lt;span
+class=&#34;toc-section-number&#34;&gt;1.3&lt;/span&gt; Define the delooping of a
+group&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#deconstruct-a-map-to-the-delooping-of-a-group&#34;
+id=&#34;toc-deconstruct-a-map-to-the-delooping-of-a-group&#34;&gt;&lt;span
+class=&#34;toc-section-number&#34;&gt;1.4&lt;/span&gt; Deconstruct a map to the delooping
+of a group&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#higher-covers&#34; id=&#34;toc-higher-covers&#34;&gt;&lt;span
 class=&#34;toc-section-number&#34;&gt;2&lt;/span&gt; Higher covers&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#evidence-that-we-found-curved-connections&#34;
@@ -149,13 +165,51 @@ algebra of the group where the holonomy takes it values (see &lt;span
 class=&#34;citation&#34; data-cites=&#34;freed1992classical&#34;&gt;(&lt;a
 href=&#34;#ref-freed1992classical&#34; role=&#34;doc-biblioref&#34;&gt;Freed,
 1992&lt;/a&gt;)&lt;/span&gt; Appendix B).&lt;/p&gt;
-&lt;p&gt;Define type families.&lt;/p&gt;
-&lt;p&gt;Define identity types.&lt;/p&gt;
-&lt;p&gt;Define functions and functoriality.&lt;/p&gt;
-&lt;p&gt;Point out that functions are equipped with the full dimensionality of
-effects, including on paths.&lt;/p&gt;
-&lt;p&gt;Define the delooping of a group.&lt;/p&gt;
-&lt;p&gt;Deconstruct a map to the delooping of a group.&lt;/p&gt;
+&lt;h2 data-number=&#34;1.1&#34; id=&#34;functions-are-multidimensional&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;1.1&lt;/span&gt; Functions are
+multidimensional&lt;/h2&gt;
+&lt;p&gt;Functions in homotopy type theory carry information in all dimensions
+at once. Given &lt;span class=&#34;math inline&#34;&gt;\(f:X\to Y\)&lt;/span&gt; we can
+access the value of &lt;span class=&#34;math inline&#34;&gt;\(f\)&lt;/span&gt; on paths with
+terms like &lt;span
+class=&#34;math inline&#34;&gt;\(\ensuremath{\textsf{ap}}(f,-):x=_Xy\to f(x)=_Y
+f(y)\)&lt;/span&gt; and we can iterate this with more &lt;span
+class=&#34;math inline&#34;&gt;\(\ensuremath{\textsf{ap}}\)&lt;/span&gt;s.&lt;/p&gt;
+&lt;h2 data-number=&#34;1.2&#34; id=&#34;pathovers&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;1.2&lt;/span&gt; Pathovers&lt;/h2&gt;
+&lt;h2 data-number=&#34;1.3&#34; id=&#34;define-the-delooping-of-a-group&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;1.3&lt;/span&gt; Define the delooping of a
+group&lt;/h2&gt;
+&lt;p&gt;A &lt;em&gt;delooping&lt;/em&gt; of a group is a pointed type whose loop space is
+the group. The references we follow here are &lt;span class=&#34;citation&#34;
+data-cites=&#34;Symmetry&#34;&gt;(&lt;a href=&#34;#ref-Symmetry&#34;
+role=&#34;doc-biblioref&#34;&gt;Bezem &lt;em&gt;et al.&lt;/em&gt;, 2023&lt;/a&gt;)&lt;/span&gt; and &lt;span
+class=&#34;citation&#34; data-cites=&#34;buchholtz2023central&#34;&gt;(&lt;a
+href=&#34;#ref-buchholtz2023central&#34; role=&#34;doc-biblioref&#34;&gt;Buchholtz &lt;em&gt;et
+al.&lt;/em&gt;, 2023&lt;/a&gt;)&lt;/span&gt;. Especially:&lt;/p&gt;
+&lt;p&gt;(&lt;span class=&#34;citation&#34; data-cites=&#34;buchholtz2023central&#34;&gt;(&lt;a
+href=&#34;#ref-buchholtz2023central&#34; role=&#34;doc-biblioref&#34;&gt;Buchholtz &lt;em&gt;et
+al.&lt;/em&gt;, 2023&lt;/a&gt;)&lt;/span&gt; Definition 4.1) &lt;span
+class=&#34;math inline&#34;&gt;\(\mathrm{BAut}_1(G):=\sum_{(X:U)}||X=G||_0\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;(&lt;span class=&#34;citation&#34; data-cites=&#34;buchholtz2023central&#34;&gt;(&lt;a
+href=&#34;#ref-buchholtz2023central&#34; role=&#34;doc-biblioref&#34;&gt;Buchholtz &lt;em&gt;et
+al.&lt;/em&gt;, 2023&lt;/a&gt;)&lt;/span&gt; Theorem 4.26) The type of &lt;span
+class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt;-torsors is equivalent to &lt;span
+class=&#34;math inline&#34;&gt;\(\mathrm{BAut}_1(G)\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;The component &lt;span class=&#34;math inline&#34;&gt;\(||X=G||_0\)&lt;/span&gt; is
+called a &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt;-band. Its data consists
+of a choice of basepoint in &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; to
+map to the identity in &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;The loop space at the base point is the given group. The loop space
+at other points are equivalent groups (e.g. conjugations of the group).
+The path spaces between pairs of points are torsors of the given
+group.&lt;/p&gt;
+&lt;h2 data-number=&#34;1.4&#34;
+id=&#34;deconstruct-a-map-to-the-delooping-of-a-group&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;1.4&lt;/span&gt; Deconstruct a map to the
+delooping of a group&lt;/h2&gt;
+&lt;p&gt;A map &lt;span
+class=&#34;math inline&#34;&gt;\(B\,\cdot\!\to\mathrm{BAut}_1(G)\)&lt;/span&gt; is&lt;/p&gt;
 &lt;h1 data-number=&#34;2&#34; id=&#34;higher-covers&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;2&lt;/span&gt; Higher covers&lt;/h1&gt;
 &lt;p&gt;One problem with the space &lt;span
