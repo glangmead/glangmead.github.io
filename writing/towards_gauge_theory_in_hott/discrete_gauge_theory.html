@@ -91,10 +91,8 @@ class="toc-section-number">1.1</span> Functions are
 multidimensional</a></li>
 <li><a href="#pathovers" id="toc-pathovers"><span
 class="toc-section-number">1.2</span> Pathovers</a></li>
-<li><a href="#define-the-delooping-of-a-group"
-id="toc-define-the-delooping-of-a-group"><span
-class="toc-section-number">1.3</span> Define the delooping of a
-group</a></li>
+<li><a href="#deloopings" id="toc-deloopings"><span
+class="toc-section-number">1.3</span> Deloopings</a></li>
 <li><a href="#deconstruct-a-map-to-the-delooping-of-a-group"
 id="toc-deconstruct-a-map-to-the-delooping-of-a-group"><span
 class="toc-section-number">1.4</span> Deconstruct a map to the delooping
@@ -162,9 +160,75 @@ f(y)\)</span> and we can iterate this with more <span
 class="math inline">\(\ensuremath{\textsf{ap}}\)</span>s.</p>
 <h2 data-number="1.2" id="pathovers"><span
 class="header-section-number">1.2</span> Pathovers</h2>
-<h2 data-number="1.3" id="define-the-delooping-of-a-group"><span
-class="header-section-number">1.3</span> Define the delooping of a
-group</h2>
+<p>Given a type family <span class="math inline">\(f:X\to
+\mathcal{U}\)</span> and a path <span class="math inline">\(p:x=_X
+x&#39;\)</span>, and given terms <span class="math inline">\(y:f(x),
+y&#39;:f(x&#39;)\)</span> in the two fibers, we can define the type
+<span class="math inline">\(y\xrightarrow[{p}]{=}y&#39;\)</span> by
+induction: if <span class="math inline">\(p\)</span> is <span
+class="math inline">\(\ensuremath{\textrm{refl}}\)</span> then <span
+class="math inline">\(y=y&#39;\)</span> lives in a single fiber <span
+class="math inline">\(f(x)\)</span> where it reduces to the usual
+identity type.</p>
+<p>There is an equivalence <span
+class="math inline">\(y\xrightarrow[{p}]{=}y&#39;\simeq
+\mathrm{tr}(p,y)=_{f(x&#39;)}y&#39;\)</span>. Furthermore if we also
+have a dependent function (section) <span
+class="math inline">\(s:\prod_{(x:X)} f(x)\)</span> then we can form
+<span
+class="math inline">\(\mathrm{apd}(f,p):s(x)\xrightarrow[{p}]{=}s(x&#39;)\)</span>.
+In other words, there may be a whole type of paths between two points
+upstairs <span class="math inline">\(y, y&#39;\)</span> but if there is
+also a section then we have a special section-specific pathover between
+<span class="math inline">\(s(x), s(x&#39;)\)</span>.</p>
+<div id="lem:verthoriz" class="mylemma">
+<p><strong>Lemma 1</strong>. <em>(<span class="citation"
+data-cites="Symmetry">(<a href="#ref-Symmetry"
+role="doc-biblioref">Bezem <em>et al.</em>, 2023</a>)</span> Lemma
+4.14.1). Given</em></p>
+<ul>
+<li><p><em>a type family <span
+class="math inline">\(f:X\to\mathcal{U}\)</span></em></p></li>
+<li><p><em>terms <span
+class="math inline">\(x,x&#39;:X\)</span></em></p></li>
+<li><p><em>a section <span
+class="math inline">\(s:\prod_{(x:X)}f(x)\)</span></em></p></li>
+</ul>
+<p><em>then there is an equivalence <span
+class="math display">\[\left((x,f(x)) =_{\sum_{(x:X)}f(x)}
+(x&#39;,f(x&#39;))\right) \simeq
+(x=x&#39;)\times (f(x)=f(x)).\]</span></em></p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> Both sides are identity types in a sigma type, so we
+must prove <span
+class="math display">\[\sum_{(p:x=x&#39;)}f(x)\xrightarrow[{p}]{=}f(x&#39;)
+\simeq \sum_{(p:x=x&#39;)}f(x)=f(x).\]</span> This reduces to proving
+<span class="math inline">\(f(x)\xrightarrow[{p}]{=}f(x&#39;)\equiv
+f(x)=f(x)\)</span>. By induction when <span
+class="math inline">\(p=\ensuremath{\textrm{refl}}\)</span> both sides
+are <span class="math inline">\(f(x)=f(x)\)</span> which we prove with
+<span class="math inline">\(refl\)</span>. ◻</p>
+</div>
+<p>One thing the equivalence in Lemma <a href="#lem:verthoriz"
+data-reference-type="ref" data-reference="lem:verthoriz">1</a> says is
+that in the presende of a section, and given a path in the base, the
+dependent paths over that path are equivalent to loops at one upstairs
+endpoint (the section applied to a downstairs endpoint).</p>
+<p>Note also that in Lemma <a href="#lem:verthoriz"
+data-reference-type="ref" data-reference="lem:verthoriz">1</a> we are
+expressing the type of pathovers (the left hand side) as paths in the
+sigma type of the type family. The sigma type comes equipped with a
+projection <span
+class="math inline">\(\ensuremath{\mathrm{pr}}_1:\sum_{(x:X)}f(x)\to
+X\)</span> and since <span
+class="math inline">\(\ensuremath{\mathrm{pr}}_1\circ
+f\equiv\ensuremath{\text{id}}\)</span> we have that <span
+class="math inline">\(\ensuremath{\textsf{ap}}(\ensuremath{\mathrm{pr}}_1)\)</span>
+maps the pathover back to the downstairs path, confirming the “over”
+portion of the name.</p>
+<h2 data-number="1.3" id="deloopings"><span
+class="header-section-number">1.3</span> Deloopings</h2>
 <p>A <em>delooping</em> of a group is a pointed type whose loop space is
 the group. The references we follow here are <span class="citation"
 data-cites="Symmetry">(<a href="#ref-Symmetry"
@@ -172,15 +236,21 @@ role="doc-biblioref">Bezem <em>et al.</em>, 2023</a>)</span> and <span
 class="citation" data-cites="buchholtz2023central">(<a
 href="#ref-buchholtz2023central" role="doc-biblioref">Buchholtz <em>et
 al.</em>, 2023</a>)</span>. Especially:</p>
-<p>(<span class="citation" data-cites="buchholtz2023central">(<a
-href="#ref-buchholtz2023central" role="doc-biblioref">Buchholtz <em>et
-al.</em>, 2023</a>)</span> Definition 4.1) <span
-class="math inline">\(\mathrm{BAut}_1(G):=\sum_{(X:U)}||X=G||_0\)</span>.</p>
-<p>(<span class="citation" data-cites="buchholtz2023central">(<a
-href="#ref-buchholtz2023central" role="doc-biblioref">Buchholtz <em>et
-al.</em>, 2023</a>)</span> Theorem 4.26) The type of <span
-class="math inline">\(G\)</span>-torsors is equivalent to <span
-class="math inline">\(\mathrm{BAut}_1(G)\)</span>.</p>
+<div class="mydef">
+<p><strong>Definition 1</strong>. <em>(<span class="citation"
+data-cites="buchholtz2023central">(<a href="#ref-buchholtz2023central"
+role="doc-biblioref">Buchholtz <em>et al.</em>, 2023</a>)</span>
+Definition 4.1) <span
+class="math inline">\(\mathrm{BAut}_1(G):=\sum_{(X:U)}||X=G||_0\)</span>.</em></p>
+</div>
+<div class="mythm">
+<p><strong>Theorem 1</strong>. <em>(<span class="citation"
+data-cites="buchholtz2023central">(<a href="#ref-buchholtz2023central"
+role="doc-biblioref">Buchholtz <em>et al.</em>, 2023</a>)</span> Theorem
+4.26) The type of <span class="math inline">\(G\)</span>-torsors is
+equivalent to <span
+class="math inline">\(\mathrm{BAut}_1(G)\)</span>.</em></p>
+</div>
 <p>The component <span class="math inline">\(||X=G||_0\)</span> is
 called a <span class="math inline">\(G\)</span>-band. Its data consists
 of a choice of basepoint in <span class="math inline">\(X\)</span> to
@@ -243,7 +313,7 @@ data-cites="myersgood">(<a href="#ref-myersgood"
 role="doc-biblioref">Myers, 2022</a>)</span>, we define a cover as
 follows:</p>
 <div class="mydef">
-<p><strong>Definition 1</strong>. <em>A map <span
+<p><strong>Definition 2</strong>. <em>A map <span
 class="math inline">\(\pi:E\to B\)</span> is a <em>cover</em> if it is
 <span class="math inline">\(\text{\textesh}{}_{1}\)</span>-étale and its
 fibers are sets.</em></p>
@@ -264,7 +334,7 @@ function type <span class="math inline">\(\text{\textesh}{}_{1}B \to
 \mathsf{Type}_{\text{\textesh}{}_{1}}\)</span>. Since a cover has the
 further condition that the fibers are sets this implies</p>
 <div class="mylemma">
-<p><strong>Lemma 1</strong>. <em>The type of covers over <span
+<p><strong>Lemma 2</strong>. <em>The type of covers over <span
 class="math inline">\(B\)</span> is equivalent to <span
 class="math inline">\(\text{\textesh}{}_{1}B \to
 \mathsf{Type}_{\text{\textesh}{}_{0}}\)</span>.</em></p>
@@ -283,13 +353,13 @@ on the set <span class="math inline">\(f(*_B)\)</span>, which is the
 fiber over <span class="math inline">\(*_B\)</span>.</p>
 <p>Let us move up a dimension:</p>
 <div class="mydef">
-<p><strong>Definition 2</strong>. <em>A map <span
+<p><strong>Definition 3</strong>. <em>A map <span
 class="math inline">\(\pi:E\to B\)</span> is a <em>2-cover</em> if it is
 <span class="math inline">\(\text{\textesh}{}_{2}\)</span>-étale and its
 fibers are groupoids.</em></p>
 </div>
 <div class="mylemma">
-<p><strong>Lemma 2</strong>. <em>The type of 2-covers over <span
+<p><strong>Lemma 3</strong>. <em>The type of 2-covers over <span
 class="math inline">\(B\)</span> is equivalent to <span
 class="math inline">\(\text{\textesh}{}_{2}B \to
 \mathsf{Type}_{\text{\textesh}{}_{1}}\)</span>. Further, since <span
@@ -318,7 +388,7 @@ class="citation" data-cites="buchholtz2023central">(<a
 href="#ref-buchholtz2023central" role="doc-biblioref">Buchholtz <em>et
 al.</em>, 2023</a>)</span>).</p>
 <div class="mylemma">
-<p><strong>Lemma 3</strong>. <em>Terms of <span
+<p><strong>Lemma 4</strong>. <em>Terms of <span
 class="math inline">\(\mathrm{BAut}_1(S^1)\)</span> are discrete
 1-types.</em></p>
 </div>
@@ -343,7 +413,7 @@ class="math inline">\(C_n\)</span>, generated by</p>
 <li><p><span class="math inline">\(e_n:v_n=v_1\)</span></p></li>
 </ul>
 <div class="mylemma">
-<p><strong>Lemma 4</strong>. <em>We have <span
+<p><strong>Lemma 5</strong>. <em>We have <span
 class="math inline">\(g:\prod_{(n:\ensuremath{\mathbb{N}})}C_n\simeq
 S^1\)</span></em></p>
 </div>
@@ -353,7 +423,7 @@ href="#ref-hottbook" role="doc-biblioref">Univalent Foundations Program,
 <p><span class="math inline">\(n\)</span>-gons are all discrete
 1-types:</p>
 <div class="mydef">
-<p><strong>Definition 3</strong>. <em>Let <span
+<p><strong>Definition 4</strong>. <em>Let <span
 class="math inline">\(c:\ensuremath{\mathbb{N}}\to
 \mathsf{Type}_{\text{\textesh}{}_{1}}\)</span> be given by <span
 class="math inline">\(c(n)=(C_n, ||g(n)||_0)\)</span>.</em></p>
@@ -421,7 +491,7 @@ class="math inline">\(f:{B}_{+{b}}\,\cdot\!\to{\mathrm{BAut}_1(S^1)}_{+{C_4}}\)<
 If we need to reference the proof of pointedness we’ll call it <span
 class="math inline">\(*_f:f(b)=C_4\)</span>.</p>
 <div class="mylemma">
-<p><strong>Lemma 5</strong>. <em><span
+<p><strong>Lemma 6</strong>. <em><span
 class="math inline">\(\text{\textesh}(X\to Y)\simeq \text{\textesh}X\to
 \text{\textesh}Y\)</span></em></p>
 </div>
