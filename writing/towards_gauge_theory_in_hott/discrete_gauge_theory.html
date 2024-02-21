@@ -166,7 +166,7 @@ x&#39;\)</span>, and given terms <span class="math inline">\(y:f(x),
 y&#39;:f(x&#39;)\)</span> in the two fibers, we can define the type
 <span class="math inline">\(y\xrightarrow[{p}]{=}y&#39;\)</span> by
 induction: if <span class="math inline">\(p\)</span> is <span
-class="math inline">\(\ensuremath{\textrm{refl}}\)</span> then <span
+class="math inline">\(\ensuremath{\textsf{refl}}\)</span> then <span
 class="math inline">\(y=y&#39;\)</span> lives in a single fiber <span
 class="math inline">\(f(x)\)</span> where it reduces to the usual
 identity type.</p>
@@ -182,51 +182,35 @@ upstairs <span class="math inline">\(y, y&#39;\)</span> but if there is
 also a section then we have a special section-specific pathover between
 <span class="math inline">\(s(x), s(x&#39;)\)</span>.</p>
 <div id="lem:verthoriz" class="mylemma">
-<p><strong>Lemma 1</strong>. <em>(<span class="citation"
-data-cites="Symmetry">(<a href="#ref-Symmetry"
-role="doc-biblioref">Bezem <em>et al.</em>, 2023</a>)</span> Lemma
-4.14.1). Given</em></p>
-<ul>
-<li><p><em>a type family <span
-class="math inline">\(f:X\to\mathcal{U}\)</span></em></p></li>
-<li><p><em>terms <span
-class="math inline">\(x,x&#39;:X\)</span></em></p></li>
-<li><p><em>a section <span
-class="math inline">\(s:\prod_{(x:X)}f(x)\)</span></em></p></li>
-</ul>
-<p><em>then there is an equivalence <span
-class="math display">\[\left((x,f(x)) =_{\sum_{(x:X)}f(x)}
-(x&#39;,f(x&#39;))\right) \simeq
-(x=x&#39;)\times (f(x)=f(x)).\]</span></em></p>
+<p><strong>Lemma 1</strong>. <em>Given a type family <span
+class="math inline">\(f:X\to\mathcal{U}\)</span> and terms <span
+class="math inline">\(x,x&#39;:X, y:f(x), y&#39;:f(x&#39;)\)</span> then
+there is an equivalence <span class="math display">\[\left((x,y)
+=_{\sum_{(x:X)}f(x)} (x&#39;,y&#39;)\right) \simeq
+(x=x&#39;)\times (y=y).\]</span></em></p>
 </div>
 <div class="proof">
 <p><em>Proof.</em> Both sides are identity types in a sigma type, so we
 must prove <span
-class="math display">\[\sum_{(p:x=x&#39;)}f(x)\xrightarrow[{p}]{=}f(x&#39;)
-\simeq \sum_{(p:x=x&#39;)}f(x)=f(x).\]</span> This reduces to proving
-<span class="math inline">\(f(x)\xrightarrow[{p}]{=}f(x&#39;)\equiv
-f(x)=f(x)\)</span>. By induction when <span
-class="math inline">\(p=\ensuremath{\textrm{refl}}\)</span> both sides
-are <span class="math inline">\(f(x)=f(x)\)</span> which we prove with
-<span class="math inline">\(refl\)</span>. ◻</p>
+class="math display">\[\sum_{(p:x=x&#39;)}y\xrightarrow[{p}]{=}y&#39;
+\simeq \sum_{(p:x=x&#39;)}y=y.\]</span> This reduces to proving <span
+class="math inline">\(y\xrightarrow[{p}]{=}y&#39;\simeq y=y\)</span>. By
+induction when <span
+class="math inline">\(p=\ensuremath{\textsf{refl}}\)</span> both sides
+are <span class="math inline">\(y=y\)</span> which we prove with <span
+class="math inline">\(\ensuremath{\textsf{refl}}\)</span>. (Compare to
+(<span class="citation" data-cites="Symmetry">(<a href="#ref-Symmetry"
+role="doc-biblioref">Bezem <em>et al.</em>, 2023</a>)</span> Lemma
+4.14.1) which assumes a section.) ◻</p>
 </div>
-<p>One thing the equivalence in Lemma <a href="#lem:verthoriz"
-data-reference-type="ref" data-reference="lem:verthoriz">1</a> says is
-that in the presende of a section, and given a path in the base, the
-dependent paths over that path are equivalent to loops at one upstairs
-endpoint (the section applied to a downstairs endpoint).</p>
-<p>Note also that in Lemma <a href="#lem:verthoriz"
-data-reference-type="ref" data-reference="lem:verthoriz">1</a> we are
-expressing the type of pathovers (the left hand side) as paths in the
-sigma type of the type family. The sigma type comes equipped with a
-projection <span
-class="math inline">\(\ensuremath{\mathrm{pr}}_1:\sum_{(x:X)}f(x)\to
-X\)</span> and since <span
-class="math inline">\(\ensuremath{\mathrm{pr}}_1\circ
-f\equiv\ensuremath{\text{id}}\)</span> we have that <span
-class="math inline">\(\ensuremath{\textsf{ap}}(\ensuremath{\mathrm{pr}}_1)\)</span>
-maps the pathover back to the downstairs path, confirming the “over”
-portion of the name.</p>
+<p>So given a path <span class="math inline">\(p\)</span> in the base
+and points upstairs over the endpoints, the dependent paths over <span
+class="math inline">\(p\)</span> are equivalent to loops at one upstairs
+point, which are regular non-dependent paths. If <span
+class="math inline">\(p\)</span> is a loop in <span
+class="math inline">\(x=x\)</span> then the type of dependent loops over
+that loop is equivalent to the non-dependent loops <span
+class="math inline">\(y=y\)</span>.</p>
 <h2 data-number="1.3" id="deloopings"><span
 class="header-section-number">1.3</span> Deloopings</h2>
 <p>A <em>delooping</em> of a group is a pointed type whose loop space is
