@@ -93,10 +93,9 @@ multidimensional</a></li>
 class="toc-section-number">1.2</span> Pathovers</a></li>
 <li><a href="#deloopings" id="toc-deloopings"><span
 class="toc-section-number">1.3</span> Deloopings</a></li>
-<li><a href="#deconstruct-a-map-to-the-delooping-of-a-group"
-id="toc-deconstruct-a-map-to-the-delooping-of-a-group"><span
-class="toc-section-number">1.4</span> Deconstruct a map to the delooping
-of a group</a></li>
+<li><a href="#mapping-into-deloopings"
+id="toc-mapping-into-deloopings"><span
+class="toc-section-number">1.4</span> Mapping into deloopings</a></li>
 </ul></li>
 <li><a href="#higher-covers" id="toc-higher-covers"><span
 class="toc-section-number">2</span> Higher covers</a></li>
@@ -174,26 +173,25 @@ identity type.</p>
 class="math inline">\(y\xrightarrow[{p}]{=}y&#39;\simeq
 \mathrm{tr}(p,y)=_{f(x&#39;)}y&#39;\)</span>. Furthermore if we also
 have a dependent function (section) <span
-class="math inline">\(s:\prod_{(x:X)} f(x)\)</span> then we can form
-<span
+class="math inline">\(s:\prod_{x:X} f(x)\)</span> then we can form <span
 class="math inline">\(\mathrm{apd}(f,p):s(x)\xrightarrow[{p}]{=}s(x&#39;)\)</span>.
 In other words, there may be a whole type of paths between two points
 upstairs <span class="math inline">\(y, y&#39;\)</span> but if there is
 also a section then we have a special section-specific pathover between
 <span class="math inline">\(s(x), s(x&#39;)\)</span>.</p>
-<div id="lem:verthoriz" class="mylemma">
+<div class="mylemma">
 <p><strong>Lemma 1</strong>. <em>Given a type family <span
 class="math inline">\(f:X\to\mathcal{U}\)</span> and terms <span
 class="math inline">\(x,x&#39;:X, y:f(x), y&#39;:f(x&#39;)\)</span> then
 there is an equivalence <span class="math display">\[\left((x,y)
-=_{\sum_{(x:X)}f(x)} (x&#39;,y&#39;)\right) \simeq
-(x=x&#39;)\times (y=y).\]</span></em></p>
+=_{\sum_{x:X}f(x)} (x&#39;,y&#39;)\right) \simeq
+  (x=x&#39;)\times (y=y).\]</span></em></p>
 </div>
 <div class="proof">
 <p><em>Proof.</em> Both sides are identity types in a sigma type, so we
 must prove <span
-class="math display">\[\sum_{(p:x=x&#39;)}y\xrightarrow[{p}]{=}y&#39;
-\simeq \sum_{(p:x=x&#39;)}y=y.\]</span> This reduces to proving <span
+class="math display">\[\sum_{p:x=x&#39;}y\xrightarrow[{p}]{=}y&#39;
+\simeq \sum_{p:x=x&#39;}y=y.\]</span> This reduces to proving <span
 class="math inline">\(y\xrightarrow[{p}]{=}y&#39;\simeq y=y\)</span>. By
 induction when <span
 class="math inline">\(p=\ensuremath{\textsf{refl}}\)</span> both sides
@@ -225,7 +223,7 @@ al.</em>, 2023</a>)</span>. Especially:</p>
 data-cites="buchholtz2023central">(<a href="#ref-buchholtz2023central"
 role="doc-biblioref">Buchholtz <em>et al.</em>, 2023</a>)</span>
 Definition 4.1) <span
-class="math inline">\(\mathrm{BAut}_1(G):=\sum_{(X:U)}||X=G||_0\)</span>.</em></p>
+class="math inline">\(\mathrm{BAut}_1(G):=\sum_{X:U}||X=G||_0\)</span>.</em></p>
 </div>
 <div class="mythm">
 <p><strong>Theorem 1</strong>. <em>(<span class="citation"
@@ -243,12 +241,123 @@ map to the identity in <span class="math inline">\(G\)</span>.</p>
 at other points are equivalent groups (e.g. conjugations of the group).
 The path spaces between pairs of points are torsors of the given
 group.</p>
-<h2 data-number="1.4"
-id="deconstruct-a-map-to-the-delooping-of-a-group"><span
-class="header-section-number">1.4</span> Deconstruct a map to the
-delooping of a group</h2>
+<h2 data-number="1.4" id="mapping-into-deloopings"><span
+class="header-section-number">1.4</span> Mapping into deloopings</h2>
 <p>A map <span
-class="math inline">\(B\,\cdot\!\to\mathrm{BAut}_1(G)\)</span> is</p>
+class="math inline">\(f:B\,\cdot\!\to\mathrm{BAut}_1(G)\)</span> maps
+points to types that are torsors, maps 1-paths to isomorphims between
+torsors, and maps 2-paths to homotopies between these. A special case of
+this is: <span class="math inline">\(f\)</span> maps a single point
+<span class="math inline">\(x\)</span> to a torsor, maps loops <span
+class="math inline">\(p:x=x\)</span> to terms of <span
+class="math inline">\(G\)</span> and maps 2-paths <span
+class="math inline">\(H:p=\ensuremath{\textsf{refl}}\)</span> to paths
+in <span class="math inline">\(G\)</span> ending at the identity point.
+For this last map to land somewhere nontrivial <span
+class="math inline">\(G\)</span> must have such paths. This is the
+analogue for us of <span class="math inline">\(G\)</span> being a Lie
+group of positive (classical) dimension.</p>
+<p>A motivating example is <span
+class="math inline">\(\ensuremath{\mathbb{O}}\stackrel{\textup{def}}{=}\ensuremath{\mathbb{2}}\ensuremath{*}(\ensuremath{\mathbb{2}}\ensuremath{*}\ensuremath{\mathbb{2}})\)</span>.
+This is an octahedron with 6 points, 12 paths, and 8 2-paths. Think of
+it as representing a good open cover of a cube, where each vertex of
+<span class="math inline">\(\ensuremath{\mathbb{O}}\)</span> is one
+contractible open set covering a face of the cube (plus a little overlap
+to the four neighboring faces), each path in <span
+class="math inline">\(\ensuremath{\mathbb{O}}\)</span> is an overlap of
+two of these face open sets, and each 2-path is a 3-way overlap. We use
+a join because the join keeps all the 0-dimensional points of all of the
+<span class="math inline">\(\ensuremath{\mathbb{2}}\)</span>s as
+0-dimensional points in the final type, it doesn’t send them up into a
+higher dimension like the suspension does.</p>
+<p>Let’s name the vertices after the colors of a Rubik’s cube: (<span
+class="math inline">\(w\)</span>)hite on top, (<span
+class="math inline">\(y\)</span>)ellow on the bottom, (<span
+class="math inline">\(g\)</span>)reen facing out of the page, (<span
+class="math inline">\(b\)</span>)lue facing into the page, (<span
+class="math inline">\(r\)</span>)ed to the right and (<span
+class="math inline">\(o\)</span>)range to the left. We can name the
+paths <span class="math inline">\(\{wg, wb, wr, wo, yg, yb, yr, yo, gr,
+rb, bo, og\}\)</span> based on what vertices they connect, with <span
+class="math inline">\(wg\)</span> a path of type <span
+class="math inline">\(w=g\)</span> and its inverse has the two names
+<span class="math inline">\((wg)^{-1}\)</span> and <span
+class="math inline">\(gw\)</span>. For the faces <span
+class="math inline">\(\{wgr, wbr, wgo, wbo, ygr, ybr, ygo,
+ybo\}\)</span> the notation means that <span
+class="math inline">\(wgr:wg\cdot gr\cdot
+rw=\ensuremath{\textsf{refl}}_w\)</span>.</p>
+<p>That’s the domain of our map. Let’s map it into <span
+class="math inline">\(\mathrm{BAut}_1(S^1)\)</span> with a certain
+basepoint. Consider a generalization of <span
+class="math inline">\(S^1\)</span>, an <em><span
+class="math inline">\(n\)</span>-gon</em> <span
+class="math inline">\(C_n\)</span>, generated by</p>
+<ul>
+<li><p><span class="math inline">\(v_1,\ldots,v_n:C_n\)</span></p></li>
+<li><p><span class="math inline">\(e_1:v_1=v_2\)</span></p></li>
+<li><p><span class="math inline">\(e_2:v_2=v_3\)</span></p></li>
+<li><p><span class="math inline">\(\ldots\)</span></p></li>
+<li><p><span class="math inline">\(e_{n-1}:v_{n-1}=v_n\)</span></p></li>
+<li><p><span class="math inline">\(e_n:v_n=v_1\)</span></p></li>
+</ul>
+<p>There is a map <span class="math inline">\(s_n:C_n\to C_n\)</span>
+that sends <span class="math inline">\(v_i\mapsto v_{i+1}\)</span> and
+<span class="math inline">\(v_n\mapsto v_1\)</span>, the generating
+cyclic permutation.</p>
+<div class="mylemma">
+<p><strong>Lemma 2</strong>. <em>We have <span
+class="math inline">\(g:\prod_{n:\ensuremath{\mathbb{N}}}C_n\simeq
+S^1\)</span></em></p>
+</div>
+<p>Generalize <span class="citation" data-cites="hottbook">(<a
+href="#ref-hottbook" role="doc-biblioref">Univalent Foundations Program,
+2013</a>)</span> Lemma 6.5.1.0◻</p>
+<p>The reason we’re interested in these is that they form arbitrarily
+fine-grained approximations to the smooth circle. We can consider an
+<span class="math inline">\(n\)</span>-gon to be a circle that has a
+notion of “going around <span class="math inline">\(1/n\)</span>th of
+the way”.</p>
+<p>Now let’s re-point <span
+class="math inline">\(\mathrm{BAut}_1(S^1)\)</span> at <span
+class="math inline">\(C_4\)</span>. We can use a + to denote a pointed
+type, and we can decorate it with the base point, like so: <span
+class="math inline">\({\mathrm{BAut}_1(S^1)}_{+{C_4}}\)</span>. We can
+then refer to the underlying type (first projection from the pointed
+type) with <span class="math inline">\(\mathrm{BAut}_1(S^1)_-\)</span>.
+This is similar to the notation <span
+class="math inline">\(\mathrm{BAut}_1(S^1)_{\div}\)</span> you find in
+the Symmetry book <span class="citation" data-cites="Symmetry">(<a
+href="#ref-Symmetry" role="doc-biblioref">Bezem <em>et al.</em>,
+2023</a>)</span>.</p>
+<p>To construct <span
+class="math inline">\(f:\ensuremath{\mathbb{O}}\to{\mathrm{BAut}_1(S^1)}_{+{C_4}}\)</span>
+and have it imitate the tangent bundle of the sphere, try this:</p>
+<ul>
+<li><p><span class="math inline">\(w, y, g, b, r, o\mapsto
+C_4\)</span></p></li>
+<li><p><span class="math inline">\(wg, wb, wr, wo, yg, yb, yr, yo, gr,
+rb, bo, og\mapsto v_1\)</span></p></li>
+<li><p><span class="math inline">\(wrg, wbr, wgo, wob, ygr, yrb, yog,
+ybo \mapsto s_4\)</span></p></li>
+</ul>
+<p>The order of the letters is especially important around the equator,
+the edges with no <span class="math inline">\(w\)</span> or <span
+class="math inline">\(y\)</span> in them. These appear in opposite order
+in the faces <span class="math inline">\(wxx\)</span> versus <span
+class="math inline">\(yxx\)</span>. So <span
+class="math inline">\(ygr\)</span> maps to <span
+class="math inline">\(s_4\)</span> but <span
+class="math inline">\(yrg\)</span> maps to <span
+class="math inline">\(s_4^{-1}\)</span>.</p>
+<p>If you concatenate all 8 faces you perform two full rotations around
+<span class="math inline">\(C_4\)</span>. On the one hand we’re adding
+up a total curvature in this discrete setting and getting 2 rotations.
+On the other hand we’re adding some combinatorial data and getting 2. In
+classical mathematics this is the Gauss-Bonnet theorem, relating total
+curvature to the Euler characteristic. Its generalization is called
+Chern-Weil theory, linking characteristic classes with certain functions
+of curvature. We’ll get there.</p>
 <h1 data-number="2" id="higher-covers"><span
 class="header-section-number">2</span> Higher covers</h1>
 <p>One problem with the space <span
@@ -318,7 +427,7 @@ function type <span class="math inline">\(\text{\textesh}{}_{1}B \to
 \mathsf{Type}_{\text{\textesh}{}_{1}}\)</span>. Since a cover has the
 further condition that the fibers are sets this implies</p>
 <div class="mylemma">
-<p><strong>Lemma 2</strong>. <em>The type of covers over <span
+<p><strong>Lemma 3</strong>. <em>The type of covers over <span
 class="math inline">\(B\)</span> is equivalent to <span
 class="math inline">\(\text{\textesh}{}_{1}B \to
 \mathsf{Type}_{\text{\textesh}{}_{0}}\)</span>.</em></p>
@@ -343,7 +452,7 @@ class="math inline">\(\pi:E\to B\)</span> is a <em>2-cover</em> if it is
 fibers are groupoids.</em></p>
 </div>
 <div class="mylemma">
-<p><strong>Lemma 3</strong>. <em>The type of 2-covers over <span
+<p><strong>Lemma 4</strong>. <em>The type of 2-covers over <span
 class="math inline">\(B\)</span> is equivalent to <span
 class="math inline">\(\text{\textesh}{}_{2}B \to
 \mathsf{Type}_{\text{\textesh}{}_{1}}\)</span>. Further, since <span
@@ -365,14 +474,14 @@ class="math inline">\(\mathsf{loop}:\mathsf{base}=\mathsf{base}\)</span></p></li
 </ul>
 <p>We can deloop <span class="math inline">\(S^1\)</span> by forming its
 type of torsors. This is equivalent to <span
-class="math inline">\(\mathrm{BAut}_1(S^1)\stackrel{\textup{def}}{=}\sum_{(X:\mathsf{Type})}||X=S^1||_0\)</span>,
+class="math inline">\(\mathrm{BAut}_1(S^1)\stackrel{\textup{def}}{=}\sum_{X:\mathsf{Type}}||X=S^1||_0\)</span>,
 the type of pairs of a type together with an equivalence class of
 isomorphisms with <span class="math inline">\(S^1\)</span> (see <span
 class="citation" data-cites="buchholtz2023central">(<a
 href="#ref-buchholtz2023central" role="doc-biblioref">Buchholtz <em>et
 al.</em>, 2023</a>)</span>).</p>
 <div class="mylemma">
-<p><strong>Lemma 4</strong>. <em>Terms of <span
+<p><strong>Lemma 5</strong>. <em>Terms of <span
 class="math inline">\(\mathrm{BAut}_1(S^1)\)</span> are discrete
 1-types.</em></p>
 </div>
@@ -384,51 +493,6 @@ class="header-section-number">3</span> Evidence that we found curved
 connections</h1>
 <h2 data-number="3.1" id="the-hopf-fibration"><span
 class="header-section-number">3.1</span> The Hopf fibration</h2>
-<p>Consider a generalization of <span
-class="math inline">\(S^1\)</span>, an <em><span
-class="math inline">\(n\)</span>-gon</em> <span
-class="math inline">\(C_n\)</span>, generated by</p>
-<ul>
-<li><p><span class="math inline">\(v_1,\ldots,v_n:C_n\)</span></p></li>
-<li><p><span class="math inline">\(e_1:v_1=v_2\)</span></p></li>
-<li><p><span class="math inline">\(e_2:v_2=v_3\)</span></p></li>
-<li><p><span class="math inline">\(\ldots\)</span></p></li>
-<li><p><span class="math inline">\(e_{n-1}:v_{n-1}=v_n\)</span></p></li>
-<li><p><span class="math inline">\(e_n:v_n=v_1\)</span></p></li>
-</ul>
-<div class="mylemma">
-<p><strong>Lemma 5</strong>. <em>We have <span
-class="math inline">\(g:\prod_{(n:\ensuremath{\mathbb{N}})}C_n\simeq
-S^1\)</span></em></p>
-</div>
-<p>Generalize <span class="citation" data-cites="hottbook">(<a
-href="#ref-hottbook" role="doc-biblioref">Univalent Foundations Program,
-2013</a>)</span> Lemma 6.5.1.0◻</p>
-<p><span class="math inline">\(n\)</span>-gons are all discrete
-1-types:</p>
-<div class="mydef">
-<p><strong>Definition 4</strong>. <em>Let <span
-class="math inline">\(c:\ensuremath{\mathbb{N}}\to
-\mathsf{Type}_{\text{\textesh}{}_{1}}\)</span> be given by <span
-class="math inline">\(c(n)=(C_n, ||g(n)||_0)\)</span>.</em></p>
-</div>
-<p>The reason we’re interested in these is that they form arbitrarily
-fine-grained approximations to the smooth circle. We can consider an
-<span class="math inline">\(n\)</span>-gon to be a circle that has a
-notion of “going around <span class="math inline">\(1/n\)</span>th of
-the way”.</p>
-<p>Now let’s re-point <span
-class="math inline">\(\mathrm{BAut}_1(S^1)\)</span> at <span
-class="math inline">\(C_4\)</span>. We can use a + to denote a pointed
-type, and we can decorate it with the base point, like so: <span
-class="math inline">\({\mathrm{BAut}_1(S^1)}_{+{C_4}}\)</span>. We can
-then refer to the underlying type (first projection from the pointed
-type) with <span class="math inline">\(\mathrm{BAut}_1(S^1)_-\)</span>.
-This is similar to the notation <span
-class="math inline">\(\mathrm{BAut}_1(S^1)_{\div}\)</span> you find in
-the Symmetry book <span class="citation" data-cites="Symmetry">(<a
-href="#ref-Symmetry" role="doc-biblioref">Bezem <em>et al.</em>,
-2023</a>)</span>.</p>
 <h2 data-number="3.2" id="the-hairy-ball-theorem"><span
 class="header-section-number">3.2</span> The hairy ball theorem</h2>
 <h2 data-number="3.3" id="the-atiyah-sequence"><span

@@ -108,10 +108,9 @@ multidimensional&lt;/a&gt;&lt;/li&gt;
 class=&#34;toc-section-number&#34;&gt;1.2&lt;/span&gt; Pathovers&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#deloopings&#34; id=&#34;toc-deloopings&#34;&gt;&lt;span
 class=&#34;toc-section-number&#34;&gt;1.3&lt;/span&gt; Deloopings&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#deconstruct-a-map-to-the-delooping-of-a-group&#34;
-id=&#34;toc-deconstruct-a-map-to-the-delooping-of-a-group&#34;&gt;&lt;span
-class=&#34;toc-section-number&#34;&gt;1.4&lt;/span&gt; Deconstruct a map to the delooping
-of a group&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#mapping-into-deloopings&#34;
+id=&#34;toc-mapping-into-deloopings&#34;&gt;&lt;span
+class=&#34;toc-section-number&#34;&gt;1.4&lt;/span&gt; Mapping into deloopings&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#higher-covers&#34; id=&#34;toc-higher-covers&#34;&gt;&lt;span
 class=&#34;toc-section-number&#34;&gt;2&lt;/span&gt; Higher covers&lt;/a&gt;&lt;/li&gt;
@@ -189,26 +188,25 @@ identity type.&lt;/p&gt;
 class=&#34;math inline&#34;&gt;\(y\xrightarrow[{p}]{=}y&amp;#39;\simeq
 \mathrm{tr}(p,y)=_{f(x&amp;#39;)}y&amp;#39;\)&lt;/span&gt;. Furthermore if we also
 have a dependent function (section) &lt;span
-class=&#34;math inline&#34;&gt;\(s:\prod_{(x:X)} f(x)\)&lt;/span&gt; then we can form
-&lt;span
+class=&#34;math inline&#34;&gt;\(s:\prod_{x:X} f(x)\)&lt;/span&gt; then we can form &lt;span
 class=&#34;math inline&#34;&gt;\(\mathrm{apd}(f,p):s(x)\xrightarrow[{p}]{=}s(x&amp;#39;)\)&lt;/span&gt;.
 In other words, there may be a whole type of paths between two points
 upstairs &lt;span class=&#34;math inline&#34;&gt;\(y, y&amp;#39;\)&lt;/span&gt; but if there is
 also a section then we have a special section-specific pathover between
 &lt;span class=&#34;math inline&#34;&gt;\(s(x), s(x&amp;#39;)\)&lt;/span&gt;.&lt;/p&gt;
-&lt;div id=&#34;lem:verthoriz&#34; class=&#34;mylemma&#34;&gt;
+&lt;div class=&#34;mylemma&#34;&gt;
 &lt;p&gt;&lt;strong&gt;Lemma 1&lt;/strong&gt;. &lt;em&gt;Given a type family &lt;span
 class=&#34;math inline&#34;&gt;\(f:X\to\mathcal{U}\)&lt;/span&gt; and terms &lt;span
 class=&#34;math inline&#34;&gt;\(x,x&amp;#39;:X, y:f(x), y&amp;#39;:f(x&amp;#39;)\)&lt;/span&gt; then
 there is an equivalence &lt;span class=&#34;math display&#34;&gt;\[\left((x,y)
-=_{\sum_{(x:X)}f(x)} (x&amp;#39;,y&amp;#39;)\right) \simeq
-(x=x&amp;#39;)\times (y=y).\]&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;
+=_{\sum_{x:X}f(x)} (x&amp;#39;,y&amp;#39;)\right) \simeq
+  (x=x&amp;#39;)\times (y=y).\]&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;proof&#34;&gt;
 &lt;p&gt;&lt;em&gt;Proof.&lt;/em&gt; Both sides are identity types in a sigma type, so we
 must prove &lt;span
-class=&#34;math display&#34;&gt;\[\sum_{(p:x=x&amp;#39;)}y\xrightarrow[{p}]{=}y&amp;#39;
-\simeq \sum_{(p:x=x&amp;#39;)}y=y.\]&lt;/span&gt; This reduces to proving &lt;span
+class=&#34;math display&#34;&gt;\[\sum_{p:x=x&amp;#39;}y\xrightarrow[{p}]{=}y&amp;#39;
+\simeq \sum_{p:x=x&amp;#39;}y=y.\]&lt;/span&gt; This reduces to proving &lt;span
 class=&#34;math inline&#34;&gt;\(y\xrightarrow[{p}]{=}y&amp;#39;\simeq y=y\)&lt;/span&gt;. By
 induction when &lt;span
 class=&#34;math inline&#34;&gt;\(p=\ensuremath{\textsf{refl}}\)&lt;/span&gt; both sides
@@ -240,7 +238,7 @@ al.&lt;/em&gt;, 2023&lt;/a&gt;)&lt;/span&gt;. Especially:&lt;/p&gt;
 data-cites=&#34;buchholtz2023central&#34;&gt;(&lt;a href=&#34;#ref-buchholtz2023central&#34;
 role=&#34;doc-biblioref&#34;&gt;Buchholtz &lt;em&gt;et al.&lt;/em&gt;, 2023&lt;/a&gt;)&lt;/span&gt;
 Definition 4.1) &lt;span
-class=&#34;math inline&#34;&gt;\(\mathrm{BAut}_1(G):=\sum_{(X:U)}||X=G||_0\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
+class=&#34;math inline&#34;&gt;\(\mathrm{BAut}_1(G):=\sum_{X:U}||X=G||_0\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;mythm&#34;&gt;
 &lt;p&gt;&lt;strong&gt;Theorem 1&lt;/strong&gt;. &lt;em&gt;(&lt;span class=&#34;citation&#34;
@@ -258,12 +256,123 @@ map to the identity in &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt
 at other points are equivalent groups (e.g. conjugations of the group).
 The path spaces between pairs of points are torsors of the given
 group.&lt;/p&gt;
-&lt;h2 data-number=&#34;1.4&#34;
-id=&#34;deconstruct-a-map-to-the-delooping-of-a-group&#34;&gt;&lt;span
-class=&#34;header-section-number&#34;&gt;1.4&lt;/span&gt; Deconstruct a map to the
-delooping of a group&lt;/h2&gt;
+&lt;h2 data-number=&#34;1.4&#34; id=&#34;mapping-into-deloopings&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;1.4&lt;/span&gt; Mapping into deloopings&lt;/h2&gt;
 &lt;p&gt;A map &lt;span
-class=&#34;math inline&#34;&gt;\(B\,\cdot\!\to\mathrm{BAut}_1(G)\)&lt;/span&gt; is&lt;/p&gt;
+class=&#34;math inline&#34;&gt;\(f:B\,\cdot\!\to\mathrm{BAut}_1(G)\)&lt;/span&gt; maps
+points to types that are torsors, maps 1-paths to isomorphims between
+torsors, and maps 2-paths to homotopies between these. A special case of
+this is: &lt;span class=&#34;math inline&#34;&gt;\(f\)&lt;/span&gt; maps a single point
+&lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt; to a torsor, maps loops &lt;span
+class=&#34;math inline&#34;&gt;\(p:x=x\)&lt;/span&gt; to terms of &lt;span
+class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; and maps 2-paths &lt;span
+class=&#34;math inline&#34;&gt;\(H:p=\ensuremath{\textsf{refl}}\)&lt;/span&gt; to paths
+in &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; ending at the identity point.
+For this last map to land somewhere nontrivial &lt;span
+class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; must have such paths. This is the
+analogue for us of &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; being a Lie
+group of positive (classical) dimension.&lt;/p&gt;
+&lt;p&gt;A motivating example is &lt;span
+class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{O}}\stackrel{\textup{def}}{=}\ensuremath{\mathbb{2}}\ensuremath{*}(\ensuremath{\mathbb{2}}\ensuremath{*}\ensuremath{\mathbb{2}})\)&lt;/span&gt;.
+This is an octahedron with 6 points, 12 paths, and 8 2-paths. Think of
+it as representing a good open cover of a cube, where each vertex of
+&lt;span class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{O}}\)&lt;/span&gt; is one
+contractible open set covering a face of the cube (plus a little overlap
+to the four neighboring faces), each path in &lt;span
+class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{O}}\)&lt;/span&gt; is an overlap of
+two of these face open sets, and each 2-path is a 3-way overlap. We use
+a join because the join keeps all the 0-dimensional points of all of the
+&lt;span class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{2}}\)&lt;/span&gt;s as
+0-dimensional points in the final type, it doesn’t send them up into a
+higher dimension like the suspension does.&lt;/p&gt;
+&lt;p&gt;Let’s name the vertices after the colors of a Rubik’s cube: (&lt;span
+class=&#34;math inline&#34;&gt;\(w\)&lt;/span&gt;)hite on top, (&lt;span
+class=&#34;math inline&#34;&gt;\(y\)&lt;/span&gt;)ellow on the bottom, (&lt;span
+class=&#34;math inline&#34;&gt;\(g\)&lt;/span&gt;)reen facing out of the page, (&lt;span
+class=&#34;math inline&#34;&gt;\(b\)&lt;/span&gt;)lue facing into the page, (&lt;span
+class=&#34;math inline&#34;&gt;\(r\)&lt;/span&gt;)ed to the right and (&lt;span
+class=&#34;math inline&#34;&gt;\(o\)&lt;/span&gt;)range to the left. We can name the
+paths &lt;span class=&#34;math inline&#34;&gt;\(\{wg, wb, wr, wo, yg, yb, yr, yo, gr,
+rb, bo, og\}\)&lt;/span&gt; based on what vertices they connect, with &lt;span
+class=&#34;math inline&#34;&gt;\(wg\)&lt;/span&gt; a path of type &lt;span
+class=&#34;math inline&#34;&gt;\(w=g\)&lt;/span&gt; and its inverse has the two names
+&lt;span class=&#34;math inline&#34;&gt;\((wg)^{-1}\)&lt;/span&gt; and &lt;span
+class=&#34;math inline&#34;&gt;\(gw\)&lt;/span&gt;. For the faces &lt;span
+class=&#34;math inline&#34;&gt;\(\{wgr, wbr, wgo, wbo, ygr, ybr, ygo,
+ybo\}\)&lt;/span&gt; the notation means that &lt;span
+class=&#34;math inline&#34;&gt;\(wgr:wg\cdot gr\cdot
+rw=\ensuremath{\textsf{refl}}_w\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;That’s the domain of our map. Let’s map it into &lt;span
+class=&#34;math inline&#34;&gt;\(\mathrm{BAut}_1(S^1)\)&lt;/span&gt; with a certain
+basepoint. Consider a generalization of &lt;span
+class=&#34;math inline&#34;&gt;\(S^1\)&lt;/span&gt;, an &lt;em&gt;&lt;span
+class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;-gon&lt;/em&gt; &lt;span
+class=&#34;math inline&#34;&gt;\(C_n\)&lt;/span&gt;, generated by&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(v_1,\ldots,v_n:C_n\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(e_1:v_1=v_2\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(e_2:v_2=v_3\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\ldots\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(e_{n-1}:v_{n-1}=v_n\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(e_n:v_n=v_1\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;There is a map &lt;span class=&#34;math inline&#34;&gt;\(s_n:C_n\to C_n\)&lt;/span&gt;
+that sends &lt;span class=&#34;math inline&#34;&gt;\(v_i\mapsto v_{i+1}\)&lt;/span&gt; and
+&lt;span class=&#34;math inline&#34;&gt;\(v_n\mapsto v_1\)&lt;/span&gt;, the generating
+cyclic permutation.&lt;/p&gt;
+&lt;div class=&#34;mylemma&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Lemma 2&lt;/strong&gt;. &lt;em&gt;We have &lt;span
+class=&#34;math inline&#34;&gt;\(g:\prod_{n:\ensuremath{\mathbb{N}}}C_n\simeq
+S^1\)&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Generalize &lt;span class=&#34;citation&#34; data-cites=&#34;hottbook&#34;&gt;(&lt;a
+href=&#34;#ref-hottbook&#34; role=&#34;doc-biblioref&#34;&gt;Univalent Foundations Program,
+2013&lt;/a&gt;)&lt;/span&gt; Lemma 6.5.1.0◻&lt;/p&gt;
+&lt;p&gt;The reason we’re interested in these is that they form arbitrarily
+fine-grained approximations to the smooth circle. We can consider an
+&lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;-gon to be a circle that has a
+notion of “going around &lt;span class=&#34;math inline&#34;&gt;\(1/n\)&lt;/span&gt;th of
+the way”.&lt;/p&gt;
+&lt;p&gt;Now let’s re-point &lt;span
+class=&#34;math inline&#34;&gt;\(\mathrm{BAut}_1(S^1)\)&lt;/span&gt; at &lt;span
+class=&#34;math inline&#34;&gt;\(C_4\)&lt;/span&gt;. We can use a + to denote a pointed
+type, and we can decorate it with the base point, like so: &lt;span
+class=&#34;math inline&#34;&gt;\({\mathrm{BAut}_1(S^1)}_{+{C_4}}\)&lt;/span&gt;. We can
+then refer to the underlying type (first projection from the pointed
+type) with &lt;span class=&#34;math inline&#34;&gt;\(\mathrm{BAut}_1(S^1)_-\)&lt;/span&gt;.
+This is similar to the notation &lt;span
+class=&#34;math inline&#34;&gt;\(\mathrm{BAut}_1(S^1)_{\div}\)&lt;/span&gt; you find in
+the Symmetry book &lt;span class=&#34;citation&#34; data-cites=&#34;Symmetry&#34;&gt;(&lt;a
+href=&#34;#ref-Symmetry&#34; role=&#34;doc-biblioref&#34;&gt;Bezem &lt;em&gt;et al.&lt;/em&gt;,
+2023&lt;/a&gt;)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;To construct &lt;span
+class=&#34;math inline&#34;&gt;\(f:\ensuremath{\mathbb{O}}\to{\mathrm{BAut}_1(S^1)}_{+{C_4}}\)&lt;/span&gt;
+and have it imitate the tangent bundle of the sphere, try this:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(w, y, g, b, r, o\mapsto
+C_4\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(wg, wb, wr, wo, yg, yb, yr, yo, gr,
+rb, bo, og\mapsto v_1\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(wrg, wbr, wgo, wob, ygr, yrb, yog,
+ybo \mapsto s_4\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The order of the letters is especially important around the equator,
+the edges with no &lt;span class=&#34;math inline&#34;&gt;\(w\)&lt;/span&gt; or &lt;span
+class=&#34;math inline&#34;&gt;\(y\)&lt;/span&gt; in them. These appear in opposite order
+in the faces &lt;span class=&#34;math inline&#34;&gt;\(wxx\)&lt;/span&gt; versus &lt;span
+class=&#34;math inline&#34;&gt;\(yxx\)&lt;/span&gt;. So &lt;span
+class=&#34;math inline&#34;&gt;\(ygr\)&lt;/span&gt; maps to &lt;span
+class=&#34;math inline&#34;&gt;\(s_4\)&lt;/span&gt; but &lt;span
+class=&#34;math inline&#34;&gt;\(yrg\)&lt;/span&gt; maps to &lt;span
+class=&#34;math inline&#34;&gt;\(s_4^{-1}\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;If you concatenate all 8 faces you perform two full rotations around
+&lt;span class=&#34;math inline&#34;&gt;\(C_4\)&lt;/span&gt;. On the one hand we’re adding
+up a total curvature in this discrete setting and getting 2 rotations.
+On the other hand we’re adding some combinatorial data and getting 2. In
+classical mathematics this is the Gauss-Bonnet theorem, relating total
+curvature to the Euler characteristic. Its generalization is called
+Chern-Weil theory, linking characteristic classes with certain functions
+of curvature. We’ll get there.&lt;/p&gt;
 &lt;h1 data-number=&#34;2&#34; id=&#34;higher-covers&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;2&lt;/span&gt; Higher covers&lt;/h1&gt;
 &lt;p&gt;One problem with the space &lt;span
@@ -333,7 +442,7 @@ function type &lt;span class=&#34;math inline&#34;&gt;\(\text{\textesh}{}_{1}B \
 \mathsf{Type}_{\text{\textesh}{}_{1}}\)&lt;/span&gt;. Since a cover has the
 further condition that the fibers are sets this implies&lt;/p&gt;
 &lt;div class=&#34;mylemma&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Lemma 2&lt;/strong&gt;. &lt;em&gt;The type of covers over &lt;span
+&lt;p&gt;&lt;strong&gt;Lemma 3&lt;/strong&gt;. &lt;em&gt;The type of covers over &lt;span
 class=&#34;math inline&#34;&gt;\(B\)&lt;/span&gt; is equivalent to &lt;span
 class=&#34;math inline&#34;&gt;\(\text{\textesh}{}_{1}B \to
 \mathsf{Type}_{\text{\textesh}{}_{0}}\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
@@ -358,7 +467,7 @@ class=&#34;math inline&#34;&gt;\(\pi:E\to B\)&lt;/span&gt; is a &lt;em&gt;2-cove
 fibers are groupoids.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;mylemma&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Lemma 3&lt;/strong&gt;. &lt;em&gt;The type of 2-covers over &lt;span
+&lt;p&gt;&lt;strong&gt;Lemma 4&lt;/strong&gt;. &lt;em&gt;The type of 2-covers over &lt;span
 class=&#34;math inline&#34;&gt;\(B\)&lt;/span&gt; is equivalent to &lt;span
 class=&#34;math inline&#34;&gt;\(\text{\textesh}{}_{2}B \to
 \mathsf{Type}_{\text{\textesh}{}_{1}}\)&lt;/span&gt;. Further, since &lt;span
@@ -380,14 +489,14 @@ class=&#34;math inline&#34;&gt;\(\mathsf{loop}:\mathsf{base}=\mathsf{base}\)&lt;
 &lt;/ul&gt;
 &lt;p&gt;We can deloop &lt;span class=&#34;math inline&#34;&gt;\(S^1\)&lt;/span&gt; by forming its
 type of torsors. This is equivalent to &lt;span
-class=&#34;math inline&#34;&gt;\(\mathrm{BAut}_1(S^1)\stackrel{\textup{def}}{=}\sum_{(X:\mathsf{Type})}||X=S^1||_0\)&lt;/span&gt;,
+class=&#34;math inline&#34;&gt;\(\mathrm{BAut}_1(S^1)\stackrel{\textup{def}}{=}\sum_{X:\mathsf{Type}}||X=S^1||_0\)&lt;/span&gt;,
 the type of pairs of a type together with an equivalence class of
 isomorphisms with &lt;span class=&#34;math inline&#34;&gt;\(S^1\)&lt;/span&gt; (see &lt;span
 class=&#34;citation&#34; data-cites=&#34;buchholtz2023central&#34;&gt;(&lt;a
 href=&#34;#ref-buchholtz2023central&#34; role=&#34;doc-biblioref&#34;&gt;Buchholtz &lt;em&gt;et
 al.&lt;/em&gt;, 2023&lt;/a&gt;)&lt;/span&gt;).&lt;/p&gt;
 &lt;div class=&#34;mylemma&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Lemma 4&lt;/strong&gt;. &lt;em&gt;Terms of &lt;span
+&lt;p&gt;&lt;strong&gt;Lemma 5&lt;/strong&gt;. &lt;em&gt;Terms of &lt;span
 class=&#34;math inline&#34;&gt;\(\mathrm{BAut}_1(S^1)\)&lt;/span&gt; are discrete
 1-types.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
@@ -399,51 +508,6 @@ class=&#34;header-section-number&#34;&gt;3&lt;/span&gt; Evidence that we found c
 connections&lt;/h1&gt;
 &lt;h2 data-number=&#34;3.1&#34; id=&#34;the-hopf-fibration&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;3.1&lt;/span&gt; The Hopf fibration&lt;/h2&gt;
-&lt;p&gt;Consider a generalization of &lt;span
-class=&#34;math inline&#34;&gt;\(S^1\)&lt;/span&gt;, an &lt;em&gt;&lt;span
-class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;-gon&lt;/em&gt; &lt;span
-class=&#34;math inline&#34;&gt;\(C_n\)&lt;/span&gt;, generated by&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(v_1,\ldots,v_n:C_n\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(e_1:v_1=v_2\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(e_2:v_2=v_3\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\ldots\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(e_{n-1}:v_{n-1}=v_n\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(e_n:v_n=v_1\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;mylemma&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Lemma 5&lt;/strong&gt;. &lt;em&gt;We have &lt;span
-class=&#34;math inline&#34;&gt;\(g:\prod_{(n:\ensuremath{\mathbb{N}})}C_n\simeq
-S^1\)&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;Generalize &lt;span class=&#34;citation&#34; data-cites=&#34;hottbook&#34;&gt;(&lt;a
-href=&#34;#ref-hottbook&#34; role=&#34;doc-biblioref&#34;&gt;Univalent Foundations Program,
-2013&lt;/a&gt;)&lt;/span&gt; Lemma 6.5.1.0◻&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;-gons are all discrete
-1-types:&lt;/p&gt;
-&lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 4&lt;/strong&gt;. &lt;em&gt;Let &lt;span
-class=&#34;math inline&#34;&gt;\(c:\ensuremath{\mathbb{N}}\to
-\mathsf{Type}_{\text{\textesh}{}_{1}}\)&lt;/span&gt; be given by &lt;span
-class=&#34;math inline&#34;&gt;\(c(n)=(C_n, ||g(n)||_0)\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;The reason we’re interested in these is that they form arbitrarily
-fine-grained approximations to the smooth circle. We can consider an
-&lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;-gon to be a circle that has a
-notion of “going around &lt;span class=&#34;math inline&#34;&gt;\(1/n\)&lt;/span&gt;th of
-the way”.&lt;/p&gt;
-&lt;p&gt;Now let’s re-point &lt;span
-class=&#34;math inline&#34;&gt;\(\mathrm{BAut}_1(S^1)\)&lt;/span&gt; at &lt;span
-class=&#34;math inline&#34;&gt;\(C_4\)&lt;/span&gt;. We can use a + to denote a pointed
-type, and we can decorate it with the base point, like so: &lt;span
-class=&#34;math inline&#34;&gt;\({\mathrm{BAut}_1(S^1)}_{+{C_4}}\)&lt;/span&gt;. We can
-then refer to the underlying type (first projection from the pointed
-type) with &lt;span class=&#34;math inline&#34;&gt;\(\mathrm{BAut}_1(S^1)_-\)&lt;/span&gt;.
-This is similar to the notation &lt;span
-class=&#34;math inline&#34;&gt;\(\mathrm{BAut}_1(S^1)_{\div}\)&lt;/span&gt; you find in
-the Symmetry book &lt;span class=&#34;citation&#34; data-cites=&#34;Symmetry&#34;&gt;(&lt;a
-href=&#34;#ref-Symmetry&#34; role=&#34;doc-biblioref&#34;&gt;Bezem &lt;em&gt;et al.&lt;/em&gt;,
-2023&lt;/a&gt;)&lt;/span&gt;.&lt;/p&gt;
 &lt;h2 data-number=&#34;3.2&#34; id=&#34;the-hairy-ball-theorem&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;3.2&lt;/span&gt; The hairy ball theorem&lt;/h2&gt;
 &lt;h2 data-number=&#34;3.3&#34; id=&#34;the-atiyah-sequence&#34;&gt;&lt;span
