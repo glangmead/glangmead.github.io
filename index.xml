@@ -258,20 +258,6 @@ The path spaces between pairs of points are torsors of the given
 group.&lt;/p&gt;
 &lt;h2 data-number=&#34;1.4&#34; id=&#34;mapping-into-deloopings&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;1.4&lt;/span&gt; Mapping into deloopings&lt;/h2&gt;
-&lt;p&gt;A map &lt;span
-class=&#34;math inline&#34;&gt;\(f:B\,\cdot\!\to\mathrm{BAut}_1(G)\)&lt;/span&gt; maps
-points to types that are torsors, maps 1-paths to isomorphims between
-torsors, and maps 2-paths to homotopies between these. A special case of
-this is: &lt;span class=&#34;math inline&#34;&gt;\(f\)&lt;/span&gt; maps a single point
-&lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt; to a torsor, maps loops &lt;span
-class=&#34;math inline&#34;&gt;\(p:x=x\)&lt;/span&gt; to terms of &lt;span
-class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; and maps 2-paths &lt;span
-class=&#34;math inline&#34;&gt;\(H:p=\ensuremath{\textsf{refl}}\)&lt;/span&gt; to paths
-in &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; ending at the identity point.
-For this last map to land somewhere nontrivial &lt;span
-class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; must have such paths. This is the
-analogue for us of &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; being a Lie
-group of positive (classical) dimension.&lt;/p&gt;
 &lt;p&gt;A motivating example is &lt;span
 class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{O}}\stackrel{\textup{def}}{=}\ensuremath{\mathbb{2}}\ensuremath{*}(\ensuremath{\mathbb{2}}\ensuremath{*}\ensuremath{\mathbb{2}})\)&lt;/span&gt;.
 This is an octahedron with 6 points, 12 paths, and 8 2-paths. Think of
@@ -291,17 +277,22 @@ class=&#34;math inline&#34;&gt;\(y\)&lt;/span&gt;)ellow on the bottom, (&lt;span
 class=&#34;math inline&#34;&gt;\(g\)&lt;/span&gt;)reen facing out of the page, (&lt;span
 class=&#34;math inline&#34;&gt;\(b\)&lt;/span&gt;)lue facing into the page, (&lt;span
 class=&#34;math inline&#34;&gt;\(r\)&lt;/span&gt;)ed to the right and (&lt;span
-class=&#34;math inline&#34;&gt;\(o\)&lt;/span&gt;)range to the left. We can name the
-paths &lt;span class=&#34;math inline&#34;&gt;\(\{wg, wb, wr, wo, yg, yb, yr, yo, gr,
-rb, bo, og\}\)&lt;/span&gt; based on what vertices they connect, with &lt;span
-class=&#34;math inline&#34;&gt;\(wg\)&lt;/span&gt; a path of type &lt;span
-class=&#34;math inline&#34;&gt;\(w=g\)&lt;/span&gt; and its inverse has the two names
-&lt;span class=&#34;math inline&#34;&gt;\((wg)^{-1}\)&lt;/span&gt; and &lt;span
-class=&#34;math inline&#34;&gt;\(gw\)&lt;/span&gt;. For the faces &lt;span
-class=&#34;math inline&#34;&gt;\(\{wgr, wbr, wgo, wbo, ygr, ybr, ygo,
-ybo\}\)&lt;/span&gt; the notation means that &lt;span
-class=&#34;math inline&#34;&gt;\(wgr:wg\cdot gr\cdot
-rw=\ensuremath{\textsf{refl}}_w\)&lt;/span&gt;.&lt;/p&gt;
+class=&#34;math inline&#34;&gt;\(o\)&lt;/span&gt;)range to the left. So instead of using
+the same boolean type &lt;span
+class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{2}}\)&lt;/span&gt; repeatedly let’s
+perform the join like this: &lt;span class=&#34;math display&#34;&gt;\[S=\{w,
+y\}\ensuremath{*}(\{b, g\}\ensuremath{*}\{r, o\})\]&lt;/span&gt; so that we
+build up the cube with three pairs of opposite faces. The factor in
+parentheses &lt;span class=&#34;math inline&#34;&gt;\(\{b, g\}\ensuremath{*}\{r,
+o\}\)&lt;/span&gt; is a square where &lt;span class=&#34;math inline&#34;&gt;\(b\)&lt;/span&gt;
+and &lt;span class=&#34;math inline&#34;&gt;\(g\)&lt;/span&gt; are at opposite corners and
+so are &lt;span class=&#34;math inline&#34;&gt;\(r\)&lt;/span&gt; and &lt;span
+class=&#34;math inline&#34;&gt;\(o\)&lt;/span&gt;. Then we join a &#34;north and south pole&#34;
+&lt;span class=&#34;math inline&#34;&gt;\(\{w, y\}\)&lt;/span&gt; to this sqare, forming the
+octahedron. This differs from the suspension of the equatorial square
+&lt;span class=&#34;math inline&#34;&gt;\(\{b, g\}\ensuremath{*}\{r, o\}\)&lt;/span&gt;
+because the square is not moved into dimensions 1 and 2, and because we
+have paths from the poles to the equator, not from pole to pole.&lt;/p&gt;
 &lt;p&gt;That’s the domain of our map. Let’s map it into &lt;span
 class=&#34;math inline&#34;&gt;\(\mathrm{BAut}_1(S^1)\)&lt;/span&gt; with a certain
 basepoint. Consider a generalization of &lt;span
@@ -345,34 +336,25 @@ class=&#34;math inline&#34;&gt;\(\mathrm{BAut}_1(S^1)_{\div}\)&lt;/span&gt; you 
 the Symmetry book &lt;span class=&#34;citation&#34; data-cites=&#34;Symmetry&#34;&gt;(&lt;a
 href=&#34;#ref-Symmetry&#34; role=&#34;doc-biblioref&#34;&gt;Bezem &lt;em&gt;et al.&lt;/em&gt;,
 2023&lt;/a&gt;)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;To construct &lt;span
-class=&#34;math inline&#34;&gt;\(f:\ensuremath{\mathbb{O}}\to{\mathrm{BAut}_1(S^1)}_{+{C_4}}\)&lt;/span&gt;
-and have it imitate the tangent bundle of the sphere, try this:&lt;/p&gt;
+&lt;p&gt;On second thought let’s use a suspension after all: &lt;span
+class=&#34;math display&#34;&gt;\[S&amp;#39;=\Sigma (\{b, g\}\ensuremath{*}\{r, o\})
+=\Sigma C_4\]&lt;/span&gt; so that we can more easily compare the tangent
+bundle with the Hopf bundle. Let’s call the poles &lt;span
+class=&#34;math inline&#34;&gt;\(\{w, y\}\)&lt;/span&gt;, and now we have a copy of &lt;span
+class=&#34;math inline&#34;&gt;\(C_4\)&lt;/span&gt; inside &lt;span
+class=&#34;math inline&#34;&gt;\(w=y\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Define the map &lt;span
+class=&#34;math inline&#34;&gt;\(T:S&amp;#39;\to\mathrm{BAut}_1(S^1)\)&lt;/span&gt; as&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(w, y, g, b, r, o\mapsto
-C_4\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(wg, wb, wr, wo, yg, yb, yr, yo, gr,
-rb, bo, og\mapsto v_1\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(wrg, wbr, wgo, wob, ygr, yrb, yog,
-ybo \mapsto s_4\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(T(w)=T(y)=C_4\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;span
+class=&#34;math inline&#34;&gt;\(T(r)=T(o)=T(b)=T(g)=\ensuremath{\text{id}}_{C_4}\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;span
+class=&#34;math inline&#34;&gt;\(T(rg)=T(go)=T(ob)=T(br)=\mathrm{rotation\ by\
+180}\)&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The order of the letters is especially important around the equator,
-the edges with no &lt;span class=&#34;math inline&#34;&gt;\(w\)&lt;/span&gt; or &lt;span
-class=&#34;math inline&#34;&gt;\(y\)&lt;/span&gt; in them. These appear in opposite order
-in the faces &lt;span class=&#34;math inline&#34;&gt;\(wxx\)&lt;/span&gt; versus &lt;span
-class=&#34;math inline&#34;&gt;\(yxx\)&lt;/span&gt;. So &lt;span
-class=&#34;math inline&#34;&gt;\(ygr\)&lt;/span&gt; maps to &lt;span
-class=&#34;math inline&#34;&gt;\(s_4\)&lt;/span&gt; but &lt;span
-class=&#34;math inline&#34;&gt;\(yrg\)&lt;/span&gt; maps to &lt;span
-class=&#34;math inline&#34;&gt;\(s_4^{-1}\)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;If you concatenate all 8 faces you perform two full rotations around
-&lt;span class=&#34;math inline&#34;&gt;\(C_4\)&lt;/span&gt;. On the one hand we’re adding
-up a total curvature in this discrete setting and getting 2 rotations.
-On the other hand we’re adding some combinatorial data and getting 2. In
-classical mathematics this is the Gauss-Bonnet theorem, relating total
-curvature to the Euler characteristic. Its generalization is called
-Chern-Weil theory, linking characteristic classes with certain functions
-of curvature. We’ll get there.&lt;/p&gt;
+&lt;p&gt;And therefore &lt;span class=&#34;math inline&#34;&gt;\(T(rg\cdot go\cdot ob\cdot
+br)=\mathrm{2\ rotations}\)&lt;/span&gt;.&lt;/p&gt;
 &lt;h1 data-number=&#34;2&#34; id=&#34;higher-covers&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;2&lt;/span&gt; Higher covers&lt;/h1&gt;
 &lt;p&gt;One problem with the space &lt;span

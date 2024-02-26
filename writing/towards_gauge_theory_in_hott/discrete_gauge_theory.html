@@ -243,20 +243,6 @@ The path spaces between pairs of points are torsors of the given
 group.</p>
 <h2 data-number="1.4" id="mapping-into-deloopings"><span
 class="header-section-number">1.4</span> Mapping into deloopings</h2>
-<p>A map <span
-class="math inline">\(f:B\,\cdot\!\to\mathrm{BAut}_1(G)\)</span> maps
-points to types that are torsors, maps 1-paths to isomorphims between
-torsors, and maps 2-paths to homotopies between these. A special case of
-this is: <span class="math inline">\(f\)</span> maps a single point
-<span class="math inline">\(x\)</span> to a torsor, maps loops <span
-class="math inline">\(p:x=x\)</span> to terms of <span
-class="math inline">\(G\)</span> and maps 2-paths <span
-class="math inline">\(H:p=\ensuremath{\textsf{refl}}\)</span> to paths
-in <span class="math inline">\(G\)</span> ending at the identity point.
-For this last map to land somewhere nontrivial <span
-class="math inline">\(G\)</span> must have such paths. This is the
-analogue for us of <span class="math inline">\(G\)</span> being a Lie
-group of positive (classical) dimension.</p>
 <p>A motivating example is <span
 class="math inline">\(\ensuremath{\mathbb{O}}\stackrel{\textup{def}}{=}\ensuremath{\mathbb{2}}\ensuremath{*}(\ensuremath{\mathbb{2}}\ensuremath{*}\ensuremath{\mathbb{2}})\)</span>.
 This is an octahedron with 6 points, 12 paths, and 8 2-paths. Think of
@@ -276,17 +262,22 @@ class="math inline">\(y\)</span>)ellow on the bottom, (<span
 class="math inline">\(g\)</span>)reen facing out of the page, (<span
 class="math inline">\(b\)</span>)lue facing into the page, (<span
 class="math inline">\(r\)</span>)ed to the right and (<span
-class="math inline">\(o\)</span>)range to the left. We can name the
-paths <span class="math inline">\(\{wg, wb, wr, wo, yg, yb, yr, yo, gr,
-rb, bo, og\}\)</span> based on what vertices they connect, with <span
-class="math inline">\(wg\)</span> a path of type <span
-class="math inline">\(w=g\)</span> and its inverse has the two names
-<span class="math inline">\((wg)^{-1}\)</span> and <span
-class="math inline">\(gw\)</span>. For the faces <span
-class="math inline">\(\{wgr, wbr, wgo, wbo, ygr, ybr, ygo,
-ybo\}\)</span> the notation means that <span
-class="math inline">\(wgr:wg\cdot gr\cdot
-rw=\ensuremath{\textsf{refl}}_w\)</span>.</p>
+class="math inline">\(o\)</span>)range to the left. So instead of using
+the same boolean type <span
+class="math inline">\(\ensuremath{\mathbb{2}}\)</span> repeatedly let’s
+perform the join like this: <span class="math display">\[S=\{w,
+y\}\ensuremath{*}(\{b, g\}\ensuremath{*}\{r, o\})\]</span> so that we
+build up the cube with three pairs of opposite faces. The factor in
+parentheses <span class="math inline">\(\{b, g\}\ensuremath{*}\{r,
+o\}\)</span> is a square where <span class="math inline">\(b\)</span>
+and <span class="math inline">\(g\)</span> are at opposite corners and
+so are <span class="math inline">\(r\)</span> and <span
+class="math inline">\(o\)</span>. Then we join a "north and south pole"
+<span class="math inline">\(\{w, y\}\)</span> to this sqare, forming the
+octahedron. This differs from the suspension of the equatorial square
+<span class="math inline">\(\{b, g\}\ensuremath{*}\{r, o\}\)</span>
+because the square is not moved into dimensions 1 and 2, and because we
+have paths from the poles to the equator, not from pole to pole.</p>
 <p>That’s the domain of our map. Let’s map it into <span
 class="math inline">\(\mathrm{BAut}_1(S^1)\)</span> with a certain
 basepoint. Consider a generalization of <span
@@ -330,34 +321,25 @@ class="math inline">\(\mathrm{BAut}_1(S^1)_{\div}\)</span> you find in
 the Symmetry book <span class="citation" data-cites="Symmetry">(<a
 href="#ref-Symmetry" role="doc-biblioref">Bezem <em>et al.</em>,
 2023</a>)</span>.</p>
-<p>To construct <span
-class="math inline">\(f:\ensuremath{\mathbb{O}}\to{\mathrm{BAut}_1(S^1)}_{+{C_4}}\)</span>
-and have it imitate the tangent bundle of the sphere, try this:</p>
+<p>On second thought let’s use a suspension after all: <span
+class="math display">\[S&#39;=\Sigma (\{b, g\}\ensuremath{*}\{r, o\})
+=\Sigma C_4\]</span> so that we can more easily compare the tangent
+bundle with the Hopf bundle. Let’s call the poles <span
+class="math inline">\(\{w, y\}\)</span>, and now we have a copy of <span
+class="math inline">\(C_4\)</span> inside <span
+class="math inline">\(w=y\)</span>.</p>
+<p>Define the map <span
+class="math inline">\(T:S&#39;\to\mathrm{BAut}_1(S^1)\)</span> as</p>
 <ul>
-<li><p><span class="math inline">\(w, y, g, b, r, o\mapsto
-C_4\)</span></p></li>
-<li><p><span class="math inline">\(wg, wb, wr, wo, yg, yb, yr, yo, gr,
-rb, bo, og\mapsto v_1\)</span></p></li>
-<li><p><span class="math inline">\(wrg, wbr, wgo, wob, ygr, yrb, yog,
-ybo \mapsto s_4\)</span></p></li>
+<li><p><span class="math inline">\(T(w)=T(y)=C_4\)</span></p></li>
+<li><p><span
+class="math inline">\(T(r)=T(o)=T(b)=T(g)=\ensuremath{\text{id}}_{C_4}\)</span></p></li>
+<li><p><span
+class="math inline">\(T(rg)=T(go)=T(ob)=T(br)=\mathrm{rotation\ by\
+180}\)</span>.</p></li>
 </ul>
-<p>The order of the letters is especially important around the equator,
-the edges with no <span class="math inline">\(w\)</span> or <span
-class="math inline">\(y\)</span> in them. These appear in opposite order
-in the faces <span class="math inline">\(wxx\)</span> versus <span
-class="math inline">\(yxx\)</span>. So <span
-class="math inline">\(ygr\)</span> maps to <span
-class="math inline">\(s_4\)</span> but <span
-class="math inline">\(yrg\)</span> maps to <span
-class="math inline">\(s_4^{-1}\)</span>.</p>
-<p>If you concatenate all 8 faces you perform two full rotations around
-<span class="math inline">\(C_4\)</span>. On the one hand we’re adding
-up a total curvature in this discrete setting and getting 2 rotations.
-On the other hand we’re adding some combinatorial data and getting 2. In
-classical mathematics this is the Gauss-Bonnet theorem, relating total
-curvature to the Euler characteristic. Its generalization is called
-Chern-Weil theory, linking characteristic classes with certain functions
-of curvature. We’ll get there.</p>
+<p>And therefore <span class="math inline">\(T(rg\cdot go\cdot ob\cdot
+br)=\mathrm{2\ rotations}\)</span>.</p>
 <h1 data-number="2" id="higher-covers"><span
 class="header-section-number">2</span> Higher covers</h1>
 <p>One problem with the space <span
