@@ -85,17 +85,21 @@ theory that depend only on homotopy types.</p>
 <li><a href="#introduction" id="toc-introduction"><span
 class="toc-section-number">1</span> Introduction</a>
 <ul>
+<li><a href="#connections-are-not-necessarily-infinitesimal"
+id="toc-connections-are-not-necessarily-infinitesimal"><span
+class="toc-section-number">1.1</span> Connections are not necessarily
+infinitesimal</a></li>
 <li><a href="#functions-are-multidimensional"
 id="toc-functions-are-multidimensional"><span
-class="toc-section-number">1.1</span> Functions are
+class="toc-section-number">1.2</span> Functions are
 multidimensional</a></li>
 <li><a href="#pathovers" id="toc-pathovers"><span
-class="toc-section-number">1.2</span> Pathovers</a></li>
+class="toc-section-number">1.3</span> Pathovers</a></li>
 <li><a href="#deloopings" id="toc-deloopings"><span
-class="toc-section-number">1.3</span> Deloopings</a></li>
+class="toc-section-number">1.4</span> Deloopings</a></li>
 <li><a href="#mapping-into-deloopings"
 id="toc-mapping-into-deloopings"><span
-class="toc-section-number">1.4</span> Mapping into deloopings</a></li>
+class="toc-section-number">1.5</span> Mapping into deloopings</a></li>
 </ul></li>
 <li><a href="#higher-covers" id="toc-higher-covers"><span
 class="toc-section-number">2</span> Higher covers</a></li>
@@ -139,16 +143,85 @@ other and at which we help each other succeed. The math is the means,
 and the byproduct, of our own quest for understanding. I wanted to
 understand geometry, connections, curvature, and gauge theory, and I
 have done that. I’d like to share it with you.</p>
-<p>Connections are not inherently infinitesimal. Infinitesimal
-connections assign holonomy to curves if you integrate them, and if you
-define holonomy directly on the space of paths in a manifold then you
-can differentiate the assignment to get a 1-form with values in the Lie
-algebra of the group where the holonomy takes it values (see <span
+<h2 data-number="1.1"
+id="connections-are-not-necessarily-infinitesimal"><span
+class="header-section-number">1.1</span> Connections are not necessarily
+infinitesimal</h2>
+<p>Connections are not inherently infinitesimal, just as cohomology is
+not inherently of the de Rham variety. Infinitesimal connections can be
+used to assign holonomy to finite length curves by integrating along
+them and using the exponential map <span
+class="math inline">\(\mathfrak{g}\to G\)</span> of a Lie algebra into
+its Lie group. Integration respects concatentation of paths and reversal
+of paths, and so respects the groupoidal nature of holonomy.</p>
+<p>Likewise we may define holonomy directly on the space of smooth paths
+into a finite-dimensional smooth manifold <span
+class="math inline">\(\mathcal{P}(M)\stackrel{\textup{def}}{=}[0,1]\to
+M\)</span>. This path space can be given a smooth structure and a
+groupoidal structure (via concatenation and reversal of paths). We can
+define a homomorphism <span class="math inline">\(\mathcal{P}(M) \to
+G\)</span> to assign holonomy to each path and then differentiate this
+assignment by taking a limit. For more details see <span
 class="citation" data-cites="freed1992classical">(<a
 href="#ref-freed1992classical" role="doc-biblioref">Freed,
-1992</a>)</span> Appendix B).</p>
-<h2 data-number="1.1" id="functions-are-multidimensional"><span
-class="header-section-number">1.1</span> Functions are
+1992</a>)</span> Appendix B.</p>
+<p>Working entirely with finite paths puts us within the use cases of
+real-cohesive modal homotopy type theory. This has been known for a
+decade, ever since we could write down expressions like <span
+class="math inline">\(\text{\textesh}X\to BG\)</span>. But this is a
+space of maps out of a type that although it can have higher paths, it
+is spatially discrete. This means that the map <span
+class="math inline">\(\ensuremath{\mathrm{const}}:\text{\textesh}X\to
+(\ensuremath{\mathbb{R}}\to\text{\textesh}X)\)</span> is an equivalence.
+Can connections be discrete as well?</p>
+<p>Yes, in a fairly obvious way. It’s a field called <em>discrete
+differential geometry</em> (DDG). Take an <span
+class="math inline">\(n\)</span>-manifold with a triangulation (a
+combinatorial cell structure where <span
+class="math inline">\(n\)</span>-dimensional cells meet at <span
+class="math inline">\(n-1\)</span>-dimensional faces and so on down to
+0-cells). We can define discrete functions that assign a single value to
+each 0-cell, or to each 1-cell, or to each dual 1-cell (pair of
+adjoining <span class="math inline">\(n\)</span>-cells) and so on. We
+can define discrete derivatives (i.e. differences), connections,
+curvature, and even Laplacian operators. For an introduction that’s
+focused on computer graphics see <span class="citation"
+data-cites="crane_connections">(<a href="#ref-crane_connections"
+role="doc-biblioref">Crane, 2010</a>)</span> <span class="citation"
+data-cites="crane_ddg">(<a href="#ref-crane_ddg"
+role="doc-biblioref">Crane, 2020</a>)</span>.</p>
+<p>Let’s draw inspiration from DDG and define some higher inductive
+types (HITs) that stand in for the classical smooth manifolds of which
+they are the homotopy type. Assigning values to cells of various
+dimension is performed by functions, which already encode data at all
+dimensions in homotopy type theory. We can make some educated guesses as
+to what spaces to map our HITs into to mimic classical bundles with
+connection. We can then look more closely at standard HoTT constructions
+such as transport and the lifting of paths and see the very close
+agreement between the theories.</p>
+<p>Of course doing all of that doesn’t prove that the constructions
+deserve to be called bundles with connection. We’ll need some
+justification. What criteria would make sense?</p>
+<div class="myclaim">
+<p><strong>Claim 1</strong>. <em>The analogies hold on various
+examples.</em></p>
+</div>
+<div class="myclaim">
+<p><strong>Claim 2</strong>. <em>The classical theorems relating
+curvature to cohomology (Chern-Weil theory) are made
+transparent.</em></p>
+</div>
+<div class="myclaim">
+<p><strong>Claim 3</strong>. <em>Gauge theory — the relating of bundles
+to the space of all connections modulo gauge transformations — is
+available.</em></p>
+</div>
+<div class="myclaim">
+<p><strong>Claim 4</strong>. <em>We can prove theorems from gauge theory
+that depend only on the homotopy type of the manifold.</em></p>
+</div>
+<h2 data-number="1.2" id="functions-are-multidimensional"><span
+class="header-section-number">1.2</span> Functions are
 multidimensional</h2>
 <p>Functions in homotopy type theory carry information in all dimensions
 at once. Given <span class="math inline">\(f:X\to Y\)</span> we can
@@ -157,8 +230,8 @@ terms like <span
 class="math inline">\(\ensuremath{\textsf{ap}}(f,-):x=_Xy\to f(x)=_Y
 f(y)\)</span> and we can iterate this with more <span
 class="math inline">\(\ensuremath{\textsf{ap}}\)</span>s.</p>
-<h2 data-number="1.2" id="pathovers"><span
-class="header-section-number">1.2</span> Pathovers</h2>
+<h2 data-number="1.3" id="pathovers"><span
+class="header-section-number">1.3</span> Pathovers</h2>
 <p>Given a type family <span class="math inline">\(f:X\to
 \mathcal{U}\)</span> and a path <span class="math inline">\(p:x=_X
 x&#39;\)</span>, and given terms <span class="math inline">\(y:f(x),
@@ -209,8 +282,8 @@ class="math inline">\(p\)</span> is a loop in <span
 class="math inline">\(x=x\)</span> then the type of dependent loops over
 that loop is equivalent to the non-dependent loops <span
 class="math inline">\(y=y\)</span>.</p>
-<h2 data-number="1.3" id="deloopings"><span
-class="header-section-number">1.3</span> Deloopings</h2>
+<h2 data-number="1.4" id="deloopings"><span
+class="header-section-number">1.4</span> Deloopings</h2>
 <p>A <em>delooping</em> of a group is a pointed type whose loop space is
 the group. The references we follow here are <span class="citation"
 data-cites="Symmetry">(<a href="#ref-Symmetry"
@@ -241,8 +314,8 @@ map to the identity in <span class="math inline">\(G\)</span>.</p>
 at other points are equivalent groups (e.g. conjugations of the group).
 The path spaces between pairs of points are torsors of the given
 group.</p>
-<h2 data-number="1.4" id="mapping-into-deloopings"><span
-class="header-section-number">1.4</span> Mapping into deloopings</h2>
+<h2 data-number="1.5" id="mapping-into-deloopings"><span
+class="header-section-number">1.5</span> Mapping into deloopings</h2>
 <p>A motivating example is <span
 class="math inline">\(\ensuremath{\mathbb{O}}\stackrel{\textup{def}}{=}\ensuremath{\mathbb{2}}\ensuremath{*}(\ensuremath{\mathbb{2}}\ensuremath{*}\ensuremath{\mathbb{2}})\)</span>.
 This is an octahedron with 6 points, 12 paths, and 8 2-paths. Think of
@@ -342,38 +415,6 @@ class="math inline">\(T(rg)=T(go)=T(ob)=T(br)=\mathrm{rotation\ by\
 br)=\mathrm{2\ rotations}\)</span>.</p>
 <h1 data-number="2" id="higher-covers"><span
 class="header-section-number">2</span> Higher covers</h1>
-<p>One problem with the space <span
-class="math inline">\(\mathrm{BAut}_1(S^1)\)</span> is that it’s
-spatially discrete. There are no smooth circles for smooth manifolds to
-get hung up on. It has been argued that this means that any would-be
-classifying map <span class="math inline">\(f:X\to
-\mathrm{BAut}_1(S^1)\)</span> can only produce principal bundles with
-<em>flat</em> connections. That would not achieve our goals, and so it
-would be disappointing. It looks even worse when we notice that <span
-class="math inline">\(f\)</span> must factor through the shape unit
-<span
-class="math inline">\((-)^\text{\textesh}:X\to\text{\textesh}X\)</span>
-by the universal property of <span
-class="math inline">\(\text{\textesh}\)</span> for a map into a discrete
-space. And when we examine <span
-class="math inline">\(\text{\textesh}X\)</span> we see that homotopic
-paths are identified and so must apparently be sent to equal holonomies,
-just as in a flat connection.</p>
-<p>Fortunately there’s some hand-waving in the previous paragraph and
-there are indeed non-flat connections in <span
-class="math inline">\(\text{\textesh}f:\text{\textesh}X\to
-\mathrm{BAut}_1(S^1)\)</span>. They are not the infinitesimal variety of
-course. They are known as <em>discrete connections</em><span
-class="citation" data-cites="crane_connections">(<a
-href="#ref-crane_connections" role="doc-biblioref">Crane,
-2010</a>)</span><span class="citation" data-cites="crane_ddg">(<a
-href="#ref-crane_ddg" role="doc-biblioref">Crane, 2020</a>)</span>.
-Discrete connections are an assignment of group elements to discrete
-paths in a combinatorial manifold. If we represent the homotopy type of
-<span class="math inline">\(X\)</span> by a discrete combinatorial
-manifold, then we can observe a meaningful discrete curvature of the
-principal bundle, and in so doing access the homotopy-invariant aspects
-of gauge theory.</p>
 <p>What makes this all work is that <span
 class="math inline">\(S^1\)</span> is a discrete 1-type, not a discrete
 set. A map from <span class="math inline">\(\text{\textesh}X\to
