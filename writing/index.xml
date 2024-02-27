@@ -162,9 +162,14 @@ have done that. I’d like to share it with you.&lt;/p&gt;
 id=&#34;connections-are-not-necessarily-infinitesimal&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;1.1&lt;/span&gt; Connections are not necessarily
 infinitesimal&lt;/h2&gt;
-&lt;p&gt;Connections are not inherently infinitesimal, just as cohomology is
-not inherently of the de Rham variety. Infinitesimal connections can be
-used to assign holonomy to finite length curves by integrating along
+&lt;p&gt;Given a principal bundle &lt;span class=&#34;math inline&#34;&gt;\(\pi:P\to
+X\)&lt;/span&gt; a connection can equally well be defined
+&lt;em&gt;infinitesimally&lt;/em&gt; as a map from tangent vectors in &lt;span
+class=&#34;math inline&#34;&gt;\(TX\)&lt;/span&gt; to horizontal lifts in &lt;span
+class=&#34;math inline&#34;&gt;\(TP\)&lt;/span&gt;, or via &lt;em&gt;holonomy&lt;/em&gt; as a map
+from paths in &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; to horizontal lifts
+in &lt;span class=&#34;math inline&#34;&gt;\(P\)&lt;/span&gt;. Infinitesimal connections can
+be used to assign holonomy to finite length curves by integrating along
 them and using the exponential map &lt;span
 class=&#34;math inline&#34;&gt;\(\mathfrak{g}\to G\)&lt;/span&gt; of a Lie algebra into
 its Lie group. Integration respects concatentation of paths and reversal
@@ -176,35 +181,38 @@ M\)&lt;/span&gt;. This path space can be given a smooth structure and a
 groupoidal structure (via concatenation and reversal of paths). We can
 define a homomorphism &lt;span class=&#34;math inline&#34;&gt;\(\mathcal{P}(M) \to
 G\)&lt;/span&gt; to assign holonomy to each path and then differentiate this
-assignment by taking a limit. For more details see &lt;span
+assignment by taking a limit. For the rigorous details see &lt;span
 class=&#34;citation&#34; data-cites=&#34;freed1992classical&#34;&gt;(&lt;a
 href=&#34;#ref-freed1992classical&#34; role=&#34;doc-biblioref&#34;&gt;Freed,
-1992&lt;/a&gt;)&lt;/span&gt; Appendix B.&lt;/p&gt;
+1992&lt;/a&gt;)&lt;/span&gt; Appendix B and &lt;span class=&#34;citation&#34;
+data-cites=&#34;kobayashinomizu&#34;&gt;(&lt;a href=&#34;#ref-kobayashinomizu&#34;
+role=&#34;doc-biblioref&#34;&gt;Kobayashi &amp;amp; Nomizu, 1963&lt;/a&gt;)&lt;/span&gt; II.3.&lt;/p&gt;
 &lt;p&gt;Working entirely with finite paths puts us within the use cases of
 real-cohesive modal homotopy type theory. This has been known for a
 decade, ever since we could write down expressions like &lt;span
 class=&#34;math inline&#34;&gt;\(\text{\textesh}X\to BG\)&lt;/span&gt;. But this is a
 space of maps out of a type that although it can have higher paths, it
-is spatially discrete. This means that the map &lt;span
+is spatially discrete. Discreteness in this sense means that the map
+&lt;span
 class=&#34;math inline&#34;&gt;\(\ensuremath{\mathrm{const}}:\text{\textesh}X\to
 (\ensuremath{\mathbb{R}}\to\text{\textesh}X)\)&lt;/span&gt; is an equivalence.
 Can connections be discrete as well?&lt;/p&gt;
-&lt;p&gt;Yes, in a fairly obvious way. It’s a field called &lt;em&gt;discrete
-differential geometry&lt;/em&gt; (DDG). Take an &lt;span
+&lt;p&gt;Sure, the same way any function can be discrete. Take an &lt;span
 class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;-manifold with a triangulation (a
 combinatorial cell structure where &lt;span
 class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;-dimensional cells meet at &lt;span
 class=&#34;math inline&#34;&gt;\(n-1\)&lt;/span&gt;-dimensional faces and so on down to
-0-cells). We can define discrete functions that assign a single value to
-each 0-cell, or to each 1-cell, or to each dual 1-cell (pair of
-adjoining &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;-cells) and so on. We
-can define discrete derivatives (i.e. differences), connections,
-curvature, and even Laplacian operators. For an introduction that’s
-focused on computer graphics see &lt;span class=&#34;citation&#34;
-data-cites=&#34;crane_connections&#34;&gt;(&lt;a href=&#34;#ref-crane_connections&#34;
-role=&#34;doc-biblioref&#34;&gt;Crane, 2010&lt;/a&gt;)&lt;/span&gt; &lt;span class=&#34;citation&#34;
-data-cites=&#34;crane_ddg&#34;&gt;(&lt;a href=&#34;#ref-crane_ddg&#34;
-role=&#34;doc-biblioref&#34;&gt;Crane, 2020&lt;/a&gt;)&lt;/span&gt;.&lt;/p&gt;
+0-cells). We can define discrete functions that assign a single value in
+some codomain to each 0-cell, or to each 1-cell, or to each dual 1-cell
+(pair of adjoining &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;-cells) and so
+on. We can define discrete derivatives (i.e. differences), connections,
+curvature, and even Laplacian operators. See the literature from the
+field of &lt;em&gt;discrete differential geometry&lt;/em&gt; (DDG) &lt;span
+class=&#34;citation&#34; data-cites=&#34;crane_connections&#34;&gt;(&lt;a
+href=&#34;#ref-crane_connections&#34; role=&#34;doc-biblioref&#34;&gt;Crane,
+2010&lt;/a&gt;)&lt;/span&gt; &lt;span class=&#34;citation&#34; data-cites=&#34;crane_ddg&#34;&gt;(&lt;a
+href=&#34;#ref-crane_ddg&#34; role=&#34;doc-biblioref&#34;&gt;Crane, 2020&lt;/a&gt;)&lt;/span&gt; for a
+parallel train of thought that’s focused on computer graphics.&lt;/p&gt;
 &lt;p&gt;Let’s draw inspiration from DDG and define some higher inductive
 types (HITs) that stand in for the classical smooth manifolds of which
 they are the homotopy type. Assigning values to cells of various
@@ -214,12 +222,34 @@ to what spaces to map our HITs into to mimic classical bundles with
 connection. We can then look more closely at standard HoTT constructions
 such as transport and the lifting of paths and see the very close
 agreement between the theories.&lt;/p&gt;
-&lt;p&gt;Of course doing all of that doesn’t prove that the constructions
-deserve to be called bundles with connection. We’ll need some
-justification. What criteria would make sense?&lt;/p&gt;
+&lt;p&gt;Why ought this to work? Why would we even expect connections to be so
+near to hand when classically they are an entirely independent and
+separate structure on a principal bundle? HoTT makes questions like this
+very simple to ask and to answer. First, HoTT makes it easy to switch
+between vertical and horizontal thinking: defining bundles as maps into
+the base &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; versus maps from &lt;span
+class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; into a space of fibers. Second, HoTT
+packages functions and their “derivatives” (the action on paths, which
+are integrated versions of vector fields after all). Truncation to
+dimension 0 is the act of taking equivalence classes, and not truncating
+is the act of maintaining the groupoidal information about all the
+equivalences inside the domain, the codomain, and the maps. Classically
+we have the theorem that equivalence classes of principal bundles with
+group &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; over &lt;span
+class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; are in bijection with homotopy classes
+of maps &lt;span class=&#34;math inline&#34;&gt;\(X\to BG\)&lt;/span&gt; into a classifying
+space. That’s the truncation of some groupoidal theorem. If we don’t
+truncate then connections ought to appear at dimension 1: by specifying
+the lift of a path into the total space of a principal bundle,
+connections yield isomorphisms between fibers, which by univalence is a
+path in fiber space.&lt;/p&gt;
+&lt;p&gt;Of course examining untruncated maps into classifying spaces in HoTT
+doesn’t automatically deserve to be called the study of bundles with
+connection. We’ll need some justification. What criteria would make
+sense?&lt;/p&gt;
 &lt;div class=&#34;myclaim&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Claim 1&lt;/strong&gt;. &lt;em&gt;The analogies hold on various
-examples.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Claim 1&lt;/strong&gt;. &lt;em&gt;We can calculate classical examples and
+derive classical formulas.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;myclaim&#34;&gt;
 &lt;p&gt;&lt;strong&gt;Claim 2&lt;/strong&gt;. &lt;em&gt;The classical theorems relating
@@ -235,6 +265,11 @@ available.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Claim 4&lt;/strong&gt;. &lt;em&gt;We can prove theorems from gauge theory
 that depend only on the homotopy type of the manifold.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
+&lt;p&gt;The sections below will justify these claims. We will end with a
+survey of the relationships between topological manifolds, smooth
+manifolds, and various combinatorial manifolds such as CW complexes, PL
+manifolds and manifolds with triangulation, so we can consider how
+limited a theory of HIT manifolds may be.&lt;/p&gt;
 &lt;h2 data-number=&#34;1.2&#34; id=&#34;functions-are-multidimensional&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;1.2&lt;/span&gt; Functions are
 multidimensional&lt;/h2&gt;
@@ -647,6 +682,13 @@ theory, part 1&lt;/a&gt;.
 class=&#34;smallcaps&#34;&gt;Hopkins&lt;/span&gt;, M.J. (2013) &lt;a
 href=&#34;https://arxiv.org/abs/1301.5959&#34;&gt;Chern-weil forms and abstract
 homotopy theory&lt;/a&gt;.
+&lt;/div&gt;
+&lt;div id=&#34;ref-kobayashinomizu&#34; class=&#34;csl-entry&#34; role=&#34;listitem&#34;&gt;
+&lt;span class=&#34;smallcaps&#34;&gt;Kobayashi&lt;/span&gt;, S. &amp;amp; &lt;span
+class=&#34;smallcaps&#34;&gt;Nomizu&lt;/span&gt;, K. (1963) &lt;em&gt;&lt;a
+href=&#34;https://books.google.com/books?id=wn4pAQAAMAAJ&#34;&gt;Foundations of
+differential geometry&lt;/a&gt;&lt;/em&gt;, Foundations of differential geometry.
+Interscience Publishers.
 &lt;/div&gt;
 &lt;div id=&#34;ref-myersgood&#34; class=&#34;csl-entry&#34; role=&#34;listitem&#34;&gt;
 &lt;span class=&#34;smallcaps&#34;&gt;Myers&lt;/span&gt;, D.J. (2022) &lt;a

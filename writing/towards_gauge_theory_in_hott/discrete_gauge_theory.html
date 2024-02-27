@@ -147,9 +147,14 @@ have done that. I’d like to share it with you.</p>
 id="connections-are-not-necessarily-infinitesimal"><span
 class="header-section-number">1.1</span> Connections are not necessarily
 infinitesimal</h2>
-<p>Connections are not inherently infinitesimal, just as cohomology is
-not inherently of the de Rham variety. Infinitesimal connections can be
-used to assign holonomy to finite length curves by integrating along
+<p>Given a principal bundle <span class="math inline">\(\pi:P\to
+X\)</span> a connection can equally well be defined
+<em>infinitesimally</em> as a map from tangent vectors in <span
+class="math inline">\(TX\)</span> to horizontal lifts in <span
+class="math inline">\(TP\)</span>, or via <em>holonomy</em> as a map
+from paths in <span class="math inline">\(X\)</span> to horizontal lifts
+in <span class="math inline">\(P\)</span>. Infinitesimal connections can
+be used to assign holonomy to finite length curves by integrating along
 them and using the exponential map <span
 class="math inline">\(\mathfrak{g}\to G\)</span> of a Lie algebra into
 its Lie group. Integration respects concatentation of paths and reversal
@@ -161,35 +166,38 @@ M\)</span>. This path space can be given a smooth structure and a
 groupoidal structure (via concatenation and reversal of paths). We can
 define a homomorphism <span class="math inline">\(\mathcal{P}(M) \to
 G\)</span> to assign holonomy to each path and then differentiate this
-assignment by taking a limit. For more details see <span
+assignment by taking a limit. For the rigorous details see <span
 class="citation" data-cites="freed1992classical">(<a
 href="#ref-freed1992classical" role="doc-biblioref">Freed,
-1992</a>)</span> Appendix B.</p>
+1992</a>)</span> Appendix B and <span class="citation"
+data-cites="kobayashinomizu">(<a href="#ref-kobayashinomizu"
+role="doc-biblioref">Kobayashi &amp; Nomizu, 1963</a>)</span> II.3.</p>
 <p>Working entirely with finite paths puts us within the use cases of
 real-cohesive modal homotopy type theory. This has been known for a
 decade, ever since we could write down expressions like <span
 class="math inline">\(\text{\textesh}X\to BG\)</span>. But this is a
 space of maps out of a type that although it can have higher paths, it
-is spatially discrete. This means that the map <span
+is spatially discrete. Discreteness in this sense means that the map
+<span
 class="math inline">\(\ensuremath{\mathrm{const}}:\text{\textesh}X\to
 (\ensuremath{\mathbb{R}}\to\text{\textesh}X)\)</span> is an equivalence.
 Can connections be discrete as well?</p>
-<p>Yes, in a fairly obvious way. It’s a field called <em>discrete
-differential geometry</em> (DDG). Take an <span
+<p>Sure, the same way any function can be discrete. Take an <span
 class="math inline">\(n\)</span>-manifold with a triangulation (a
 combinatorial cell structure where <span
 class="math inline">\(n\)</span>-dimensional cells meet at <span
 class="math inline">\(n-1\)</span>-dimensional faces and so on down to
-0-cells). We can define discrete functions that assign a single value to
-each 0-cell, or to each 1-cell, or to each dual 1-cell (pair of
-adjoining <span class="math inline">\(n\)</span>-cells) and so on. We
-can define discrete derivatives (i.e. differences), connections,
-curvature, and even Laplacian operators. For an introduction that’s
-focused on computer graphics see <span class="citation"
-data-cites="crane_connections">(<a href="#ref-crane_connections"
-role="doc-biblioref">Crane, 2010</a>)</span> <span class="citation"
-data-cites="crane_ddg">(<a href="#ref-crane_ddg"
-role="doc-biblioref">Crane, 2020</a>)</span>.</p>
+0-cells). We can define discrete functions that assign a single value in
+some codomain to each 0-cell, or to each 1-cell, or to each dual 1-cell
+(pair of adjoining <span class="math inline">\(n\)</span>-cells) and so
+on. We can define discrete derivatives (i.e. differences), connections,
+curvature, and even Laplacian operators. See the literature from the
+field of <em>discrete differential geometry</em> (DDG) <span
+class="citation" data-cites="crane_connections">(<a
+href="#ref-crane_connections" role="doc-biblioref">Crane,
+2010</a>)</span> <span class="citation" data-cites="crane_ddg">(<a
+href="#ref-crane_ddg" role="doc-biblioref">Crane, 2020</a>)</span> for a
+parallel train of thought that’s focused on computer graphics.</p>
 <p>Let’s draw inspiration from DDG and define some higher inductive
 types (HITs) that stand in for the classical smooth manifolds of which
 they are the homotopy type. Assigning values to cells of various
@@ -199,12 +207,34 @@ to what spaces to map our HITs into to mimic classical bundles with
 connection. We can then look more closely at standard HoTT constructions
 such as transport and the lifting of paths and see the very close
 agreement between the theories.</p>
-<p>Of course doing all of that doesn’t prove that the constructions
-deserve to be called bundles with connection. We’ll need some
-justification. What criteria would make sense?</p>
+<p>Why ought this to work? Why would we even expect connections to be so
+near to hand when classically they are an entirely independent and
+separate structure on a principal bundle? HoTT makes questions like this
+very simple to ask and to answer. First, HoTT makes it easy to switch
+between vertical and horizontal thinking: defining bundles as maps into
+the base <span class="math inline">\(X\)</span> versus maps from <span
+class="math inline">\(X\)</span> into a space of fibers. Second, HoTT
+packages functions and their “derivatives” (the action on paths, which
+are integrated versions of vector fields after all). Truncation to
+dimension 0 is the act of taking equivalence classes, and not truncating
+is the act of maintaining the groupoidal information about all the
+equivalences inside the domain, the codomain, and the maps. Classically
+we have the theorem that equivalence classes of principal bundles with
+group <span class="math inline">\(G\)</span> over <span
+class="math inline">\(X\)</span> are in bijection with homotopy classes
+of maps <span class="math inline">\(X\to BG\)</span> into a classifying
+space. That’s the truncation of some groupoidal theorem. If we don’t
+truncate then connections ought to appear at dimension 1: by specifying
+the lift of a path into the total space of a principal bundle,
+connections yield isomorphisms between fibers, which by univalence is a
+path in fiber space.</p>
+<p>Of course examining untruncated maps into classifying spaces in HoTT
+doesn’t automatically deserve to be called the study of bundles with
+connection. We’ll need some justification. What criteria would make
+sense?</p>
 <div class="myclaim">
-<p><strong>Claim 1</strong>. <em>The analogies hold on various
-examples.</em></p>
+<p><strong>Claim 1</strong>. <em>We can calculate classical examples and
+derive classical formulas.</em></p>
 </div>
 <div class="myclaim">
 <p><strong>Claim 2</strong>. <em>The classical theorems relating
@@ -220,6 +250,11 @@ available.</em></p>
 <p><strong>Claim 4</strong>. <em>We can prove theorems from gauge theory
 that depend only on the homotopy type of the manifold.</em></p>
 </div>
+<p>The sections below will justify these claims. We will end with a
+survey of the relationships between topological manifolds, smooth
+manifolds, and various combinatorial manifolds such as CW complexes, PL
+manifolds and manifolds with triangulation, so we can consider how
+limited a theory of HIT manifolds may be.</p>
 <h2 data-number="1.2" id="functions-are-multidimensional"><span
 class="header-section-number">1.2</span> Functions are
 multidimensional</h2>
@@ -632,6 +667,13 @@ theory, part 1</a>.
 class="smallcaps">Hopkins</span>, M.J. (2013) <a
 href="https://arxiv.org/abs/1301.5959">Chern-weil forms and abstract
 homotopy theory</a>.
+</div>
+<div id="ref-kobayashinomizu" class="csl-entry" role="listitem">
+<span class="smallcaps">Kobayashi</span>, S. &amp; <span
+class="smallcaps">Nomizu</span>, K. (1963) <em><a
+href="https://books.google.com/books?id=wn4pAQAAMAAJ">Foundations of
+differential geometry</a></em>, Foundations of differential geometry.
+Interscience Publishers.
 </div>
 <div id="ref-myersgood" class="csl-entry" role="listitem">
 <span class="smallcaps">Myers</span>, D.J. (2022) <a
