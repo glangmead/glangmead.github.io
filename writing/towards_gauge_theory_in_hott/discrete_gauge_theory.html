@@ -141,36 +141,24 @@ and 0-truncated, i.e. a standard pushout is used.</p></li>
 homotopy type, taking the nerve of the open cover.</p></li>
 <li><p>We can do this <em>twice</em>: in sets, and in higher inductive
 types.</p></li>
-<li><p>We can remain in 0-types and take the poset of the open cover,
-forming an abstract polytope.</p>
-<ol>
-<li><p>Abstract polytopes have this dyadic restriction: two faces meet
-at each of the edges, in all dimensions: if the ranks of two faces <span
-class="math inline">\(a &gt; b\)</span> differ by 2, then there are
-exactly 2 faces that lie strictly between <span
-class="math inline">\(a\)</span> and <span
-class="math inline">\(b\)</span>.</p></li>
-<li><p>There’s no particular reason to use polytopes instead of other
-complexes. I just saw that Egbert had already formalized them (as posets
-only).</p></li>
-</ol></li>
+<li><p>We can remain in 0-types: add a vertex for each open set; connect
+two vertices with an edge if there is a nonempty 2-way overlap; fill in
+a triangle with a face if there is a 3-way overlap and so on.</p></li>
 <li><p>We can define discrete functions and connections on such a
 combinatorial object. This is a field called discrete differential
-geometry. The first two words of the name should probably cancel
-out.</p></li>
-<li><p>In HITs we will use the same poset but will put the edges at
-dimension 1, faces at dimension 2 and so on. This amounts to forming the
-homotopy pushout of the good open cover, since each open set is
-contractible. Call this a <em>higher polytope</em>.</p></li>
-<li><p>Both polytopes have the homotopy type of the original manifold in
-the appropriate sense (one by the nerve theorem, one via real-cohesive
-HoTT). There are other approaches to doing this, such as the shape
-modality from real-cohesive homotopy type theory. We probably need to
-prove they are equivalent.</p></li>
-<li><p>We will map out of the polytope into the delooping of <span
+geometry. (The first two words of the name should probably cancel
+out.)</p></li>
+<li><p>In HITs we will use the same data but will put the edges at
+homotopy dimension 1, faces at dimension 2 and so on. This amounts to
+forming the homotopy pushout of the good open cover, since each open set
+is contractible.</p></li>
+<li><p>Both of these combinatorial objects have the homotopy type of the
+original manifold in the appropriate sense (one by the nerve theorem,
+one via real-cohesive HoTT).</p></li>
+<li><p>We will map out of the HIT into the delooping of <span
 class="math inline">\(S^1\)</span> (the discrete 1-type, not the smooth
-0-type). We will notice how much HoTT functoriality resembles
-connections and transport, including curvature.</p></li>
+0-type). We will notice how much HoTT transport resembles connections,
+including curvature at dimension 2.</p></li>
 <li><p>This will inspire us to claim that HoTT transport deserves to be
 called a discrete connection.</p></li>
 <li><p>We will establish some criteria to test this idea, and work
