@@ -146,39 +146,81 @@ There is no other work to be done in the world.&#34; — Stephen Talbott,
 data-cites=&#34;talbott&#34;&gt;(&lt;a href=&#34;#ref-talbott&#34;
 role=&#34;doc-biblioref&#34;&gt;Talbott, 1995&lt;/a&gt;)&lt;/span&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;We want to bring the theory of connections and the Chern-Weil
-discoveries about characteristic classes into homotopy type theory.
-Here’s the very fast version:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Classically, manifolds with good open covers are glued together
-and 0-truncated, i.e. a standard pushout is used.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;We will replace the manifold with a discrete object with the same
-homotopy type, taking the nerve of the open cover.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;We can do this &lt;em&gt;twice&lt;/em&gt;: in sets, and in higher inductive
-types.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;We can remain in 0-types: add a vertex for each open set; connect
-two vertices with an edge if there is a nonempty 2-way overlap; fill in
-a triangle with a face if there is a 3-way overlap and so on.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;We can define discrete functions and connections on such a
-combinatorial object. This is a field called discrete differential
-geometry. (The first two words of the name should probably cancel
-out.)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;In HITs we will use the same data but will put the edges at
-homotopy dimension 1, faces at dimension 2 and so on. This amounts to
-forming the homotopy pushout of the good open cover, since each open set
-is contractible.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Both of these combinatorial objects have the homotopy type of the
-original manifold in the appropriate sense (one by the nerve theorem,
-one via real-cohesive HoTT).&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;We will map out of the HIT into the delooping of &lt;span
-class=&#34;math inline&#34;&gt;\(S^1\)&lt;/span&gt; (the discrete 1-type, not the smooth
-0-type). We will notice how much HoTT transport resembles connections,
-including curvature at dimension 2.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;This will inspire us to claim that HoTT transport deserves to be
-called a discrete connection.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;We will establish some criteria to test this idea, and work
-through those.&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
+&lt;p&gt;Homotopy type theory (HoTT) is a logical foundation for mathematics
+that adds to set theory several important mathematical patterns. Among
+these are &lt;em&gt;fibrations&lt;/em&gt;, &lt;em&gt;(higher) groupoids&lt;/em&gt;, and
+&lt;em&gt;classifying spaces&lt;/em&gt; (called &lt;em&gt;universes&lt;/em&gt;). It embodies the
+philosophy of constructivism by unifying mathematical statements with
+types and proofs with terms. It has an extensive syntax and a talented
+team of theory builders who have labored for a decade to equip the
+syntax with formal initiality proofs and categorical semantics that
+together generate living, breathing proofs simultaneously in every
+category with enough structure to support the semantics. It has
+implementations in several computer languages which have attracted
+multiple large formalization efforts. It benefits from an unusually
+strong interdisciplinary culture spanning computer science, mathematics,
+philosophy, and physics.&lt;/p&gt;
+&lt;p&gt;The hypothetical scope of HoTT is of course all of mathematics, past,
+present and future. It contains set theory, and the law of excluded
+middle and axiom of choice can be added whenever the intended semantics
+supports them. It therefore invites us to use the rest of its tools to
+enhance our understanding, and to seek better answers to &lt;em&gt;why&lt;/em&gt;
+questions in the same way that category theory sometimes tells us
+&lt;em&gt;why&lt;/em&gt; individual results across specific fields are true. Over
+the last decade many results have been verified in HoTT, and many have
+insightful new proofs. The topics that have received the most attention
+so far include homotopy theory, algebraic topology, group theory,
+category theory, and combinatorics. Our goal is to extend this list with
+topics from geometry: connections, curvature, gauge theory,
+characteristic classes, and Chern-Weil theory.&lt;/p&gt;
+&lt;p&gt;Gauge theory is a collection of tools inspired by, and in dialog
+with, the standard model of particle physics. The quantum field theories
+developed during the 20th century are mathematical models that supply
+spacetime with additional structures: principal bundles, vector bundles,
+sections of these bundles, and connections. The bundles provide internal
+dimensions to quantum particles, which are visible experimentally
+through phenomena such as charge, magnetism, mass, gravity, and quark
+color. Forces are mediated by massless particles that correspond to the
+connections. Particles are sections of associated vector bundles.
+Physical laws are expressed by real- or complex-valued functions called
+lagrangians, on the configuration space of all of this structure.&lt;/p&gt;
+&lt;p&gt;Mathematicians discovered that by adding their own gauge theory
+structures to smooth manifolds of interest they could define new
+invariants of the homotopy type, the homeomorphism class, or the
+diffeomorphism class of the manifold. HoTT is not equipped today to
+explore all of these scenarios since it is most developed in the world
+of homotopy types only. There is beautiful work to bring in notions of
+topology and smooth structure through the principal of &lt;em&gt;cohesion&lt;/em&gt;
+(the study of spatial relationships by way of operators that
+&lt;em&gt;remove&lt;/em&gt; such structure). We will touch on some of this and point
+the way to future work, but for now we will focus on homotopical results
+only.&lt;/p&gt;
+&lt;p&gt;For the HoTT-oriented audience my goal is to demonstrate that
+connections and gauge theory are present in the realm of discrete types.
+This can even serve as an introduction to classical differential
+geometry, and today’s undergraduates who are drawn to HoTT can leverage
+their intuitions to bypass a lot of confusing material!&lt;/p&gt;
+&lt;p&gt;For the geometry audience my goal is to offer an entirely new
+perspective on the de Rham complex in general, and connections and
+curvature in particular. My grandiose hope is that in this framing we
+can find a natural and intuitive understanding of Chern-Weil theory,
+i.e. the link between curvature and characteristic classes.&lt;/p&gt;
+&lt;figure&gt;
+
+&lt;figcaption&gt;The HIT &lt;span class=&#34;math inline&#34;&gt;\(C_4\)&lt;/span&gt; which is
+one of the types in &lt;span
+class=&#34;math inline&#34;&gt;\(\mathrm{BAut}_1(S^1)\)&lt;/span&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+
+&lt;figcaption&gt;The HIT &lt;span class=&#34;math inline&#34;&gt;\(\Sigma C_4\)&lt;/span&gt;
+which has 2 points, 4 1-paths, 4 2-paths.&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+
+&lt;figcaption&gt;The HIT &lt;span class=&#34;math inline&#34;&gt;\(\{w, y\}* C_4\)&lt;/span&gt;
+which has 6 points, 12 1-paths, 8 2-paths.&lt;/figcaption&gt;
+&lt;/figure&gt;
 &lt;h2 data-number=&#34;1.1&#34;
 id=&#34;connections-are-not-necessarily-infinitesimal&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;1.1&lt;/span&gt; Connections are not necessarily

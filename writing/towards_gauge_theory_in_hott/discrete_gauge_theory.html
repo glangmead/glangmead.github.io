@@ -131,39 +131,81 @@ There is no other work to be done in the world." — Stephen Talbott,
 data-cites="talbott">(<a href="#ref-talbott"
 role="doc-biblioref">Talbott, 1995</a>)</span></p>
 </blockquote>
-<p>We want to bring the theory of connections and the Chern-Weil
-discoveries about characteristic classes into homotopy type theory.
-Here’s the very fast version:</p>
-<ol>
-<li><p>Classically, manifolds with good open covers are glued together
-and 0-truncated, i.e. a standard pushout is used.</p></li>
-<li><p>We will replace the manifold with a discrete object with the same
-homotopy type, taking the nerve of the open cover.</p></li>
-<li><p>We can do this <em>twice</em>: in sets, and in higher inductive
-types.</p></li>
-<li><p>We can remain in 0-types: add a vertex for each open set; connect
-two vertices with an edge if there is a nonempty 2-way overlap; fill in
-a triangle with a face if there is a 3-way overlap and so on.</p></li>
-<li><p>We can define discrete functions and connections on such a
-combinatorial object. This is a field called discrete differential
-geometry. (The first two words of the name should probably cancel
-out.)</p></li>
-<li><p>In HITs we will use the same data but will put the edges at
-homotopy dimension 1, faces at dimension 2 and so on. This amounts to
-forming the homotopy pushout of the good open cover, since each open set
-is contractible.</p></li>
-<li><p>Both of these combinatorial objects have the homotopy type of the
-original manifold in the appropriate sense (one by the nerve theorem,
-one via real-cohesive HoTT).</p></li>
-<li><p>We will map out of the HIT into the delooping of <span
-class="math inline">\(S^1\)</span> (the discrete 1-type, not the smooth
-0-type). We will notice how much HoTT transport resembles connections,
-including curvature at dimension 2.</p></li>
-<li><p>This will inspire us to claim that HoTT transport deserves to be
-called a discrete connection.</p></li>
-<li><p>We will establish some criteria to test this idea, and work
-through those.</p></li>
-</ol>
+<p>Homotopy type theory (HoTT) is a logical foundation for mathematics
+that adds to set theory several important mathematical patterns. Among
+these are <em>fibrations</em>, <em>(higher) groupoids</em>, and
+<em>classifying spaces</em> (called <em>universes</em>). It embodies the
+philosophy of constructivism by unifying mathematical statements with
+types and proofs with terms. It has an extensive syntax and a talented
+team of theory builders who have labored for a decade to equip the
+syntax with formal initiality proofs and categorical semantics that
+together generate living, breathing proofs simultaneously in every
+category with enough structure to support the semantics. It has
+implementations in several computer languages which have attracted
+multiple large formalization efforts. It benefits from an unusually
+strong interdisciplinary culture spanning computer science, mathematics,
+philosophy, and physics.</p>
+<p>The hypothetical scope of HoTT is of course all of mathematics, past,
+present and future. It contains set theory, and the law of excluded
+middle and axiom of choice can be added whenever the intended semantics
+supports them. It therefore invites us to use the rest of its tools to
+enhance our understanding, and to seek better answers to <em>why</em>
+questions in the same way that category theory sometimes tells us
+<em>why</em> individual results across specific fields are true. Over
+the last decade many results have been verified in HoTT, and many have
+insightful new proofs. The topics that have received the most attention
+so far include homotopy theory, algebraic topology, group theory,
+category theory, and combinatorics. Our goal is to extend this list with
+topics from geometry: connections, curvature, gauge theory,
+characteristic classes, and Chern-Weil theory.</p>
+<p>Gauge theory is a collection of tools inspired by, and in dialog
+with, the standard model of particle physics. The quantum field theories
+developed during the 20th century are mathematical models that supply
+spacetime with additional structures: principal bundles, vector bundles,
+sections of these bundles, and connections. The bundles provide internal
+dimensions to quantum particles, which are visible experimentally
+through phenomena such as charge, magnetism, mass, gravity, and quark
+color. Forces are mediated by massless particles that correspond to the
+connections. Particles are sections of associated vector bundles.
+Physical laws are expressed by real- or complex-valued functions called
+lagrangians, on the configuration space of all of this structure.</p>
+<p>Mathematicians discovered that by adding their own gauge theory
+structures to smooth manifolds of interest they could define new
+invariants of the homotopy type, the homeomorphism class, or the
+diffeomorphism class of the manifold. HoTT is not equipped today to
+explore all of these scenarios since it is most developed in the world
+of homotopy types only. There is beautiful work to bring in notions of
+topology and smooth structure through the principal of <em>cohesion</em>
+(the study of spatial relationships by way of operators that
+<em>remove</em> such structure). We will touch on some of this and point
+the way to future work, but for now we will focus on homotopical results
+only.</p>
+<p>For the HoTT-oriented audience my goal is to demonstrate that
+connections and gauge theory are present in the realm of discrete types.
+This can even serve as an introduction to classical differential
+geometry, and today’s undergraduates who are drawn to HoTT can leverage
+their intuitions to bypass a lot of confusing material!</p>
+<p>For the geometry audience my goal is to offer an entirely new
+perspective on the de Rham complex in general, and connections and
+curvature in particular. My grandiose hope is that in this framing we
+can find a natural and intuitive understanding of Chern-Weil theory,
+i.e. the link between curvature and characteristic classes.</p>
+<figure>
+
+<figcaption>The HIT <span class="math inline">\(C_4\)</span> which is
+one of the types in <span
+class="math inline">\(\mathrm{BAut}_1(S^1)\)</span></figcaption>
+</figure>
+<figure>
+
+<figcaption>The HIT <span class="math inline">\(\Sigma C_4\)</span>
+which has 2 points, 4 1-paths, 4 2-paths.</figcaption>
+</figure>
+<figure>
+
+<figcaption>The HIT <span class="math inline">\(\{w, y\}* C_4\)</span>
+which has 6 points, 12 1-paths, 8 2-paths.</figcaption>
+</figure>
 <h2 data-number="1.1"
 id="connections-are-not-necessarily-infinitesimal"><span
 class="header-section-number">1.1</span> Connections are not necessarily
