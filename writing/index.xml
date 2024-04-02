@@ -39,7 +39,6 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
     /* CSS for citations */
     div.csl-bib-body { }
     div.csl-entry {
@@ -72,8 +71,8 @@
     text-align: center;
   }
   &lt;/style&gt;
-  &lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;&lt;/span&gt; &lt;span
-  class=&#34;math inline&#34;&gt;&lt;/span&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;\newcommand{\textesh}{∫}&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
+  &lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;\newcommand{\ensuremath}{}&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/p&gt;
 &lt;/head&gt;
 &lt;body&gt;
 &lt;nav id=&#34;TOC&#34; role=&#34;doc-toc&#34;&gt;
@@ -180,289 +179,299 @@ more use cases into our construction. And lastly we will hopefully gain
 a lot of insight into the inner workings of classical differential
 geometry.&lt;/p&gt;
 &lt;p&gt;Classically, functions on the level of points such as a smooth
-function between smooth manifolds &lt;span
-class=&#34;math inline&#34;&gt;&lt;em&gt;f&lt;/em&gt; : &lt;em&gt;M&lt;/em&gt; → &lt;em&gt;N&lt;/em&gt;&lt;/span&gt; can be
-differentiated to yield a new function that acts on both points and
-tangent vectors: &lt;span
-class=&#34;math inline&#34;&gt;&lt;em&gt;T&lt;/em&gt;&lt;em&gt;f&lt;/em&gt; : &lt;em&gt;T&lt;/em&gt;&lt;em&gt;M&lt;/em&gt; → &lt;em&gt;T&lt;/em&gt;&lt;em&gt;N&lt;/em&gt;&lt;/span&gt;.
-There is no new data in &lt;span
-class=&#34;math inline&#34;&gt;&lt;em&gt;T&lt;/em&gt;&lt;em&gt;f&lt;/em&gt;&lt;/span&gt;, its action on vectors
-is computed in terms of its action on points. We package the derived (no
-pun) data into a new function that acts on both points and vectors.
-Passing through the heuristic we proposed, we would instead package the
-derived information as the action on finite-length paths in &lt;span
-class=&#34;math inline&#34;&gt;&lt;em&gt;M&lt;/em&gt;&lt;/span&gt;. Tangent vectors are equivalence
-classes of such paths anyway, so it seems no information is lost. This
-would mean that taking the derivative of a smooth function is the same
-as to extract its action on paths.&lt;/p&gt;
+function between smooth manifolds
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;mo&gt;:&lt;/mo&gt;&lt;mi&gt;M&lt;/mi&gt;&lt;mo&gt;→&lt;/mo&gt;&lt;mi&gt;N&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;f:M\to N&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
+can be differentiated to yield a new function that acts on both points
+and tangent vectors:
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;T&lt;/mi&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;mo&gt;:&lt;/mo&gt;&lt;mi&gt;T&lt;/mi&gt;&lt;mi&gt;M&lt;/mi&gt;&lt;mo&gt;→&lt;/mo&gt;&lt;mi&gt;T&lt;/mi&gt;&lt;mi&gt;N&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;Tf:TM\to TN&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;.
+There is no new data in
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;T&lt;/mi&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;Tf&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;,
+its action on vectors is computed in terms of its action on points. We
+package the derived (no pun) data into a new function that acts on both
+points and vectors. Passing through the heuristic we proposed, we would
+instead package the derived information as the action on finite-length
+paths in
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mi&gt;M&lt;/mi&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;M&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;.
+Tangent vectors are equivalence classes of such paths anyway, so it
+seems no information is lost. This would mean that taking the derivative
+of a smooth function is the same as to extract its action on paths.&lt;/p&gt;
 &lt;p&gt;The derivative is a particular action on paths, one that is entailed
 in the original function on points. Classically the derivative can be
 pulled apart to examine &lt;em&gt;only&lt;/em&gt; its action on paths, often called
-&lt;span class=&#34;math inline&#34;&gt;&lt;em&gt;d&lt;/em&gt;&lt;em&gt;f&lt;/em&gt;&lt;/span&gt;. This is a 1-form,
-meaning a section of the cotangent bundle. A 1-form is an object defined
-on all of &lt;span class=&#34;math inline&#34;&gt;&lt;em&gt;M&lt;/em&gt;&lt;/span&gt; which can be
-integrated over a path to give a number. Again, a function on paths. An
-arbitrary 1-form is some function on paths, and &lt;span
-class=&#34;math inline&#34;&gt;&lt;em&gt;d&lt;/em&gt;&lt;em&gt;f&lt;/em&gt;&lt;/span&gt; is one such.&lt;/p&gt;
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;d&lt;/mi&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;df&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;.
+This is a 1-form, meaning a section of the cotangent bundle. A 1-form is
+an object defined on all of
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mi&gt;M&lt;/mi&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;M&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
+which can be integrated over a path to give a number. Again, a function
+on paths. An arbitrary 1-form is some function on paths, and
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;d&lt;/mi&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;df&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
+is one such.&lt;/p&gt;
 &lt;p&gt;HoTT also has functions, but those functions always act in all the
 available dimensions of the type all at once. It is inherently a
-function on points, paths, and higher paths. We can look at what &lt;span
-class=&#34;math inline&#34;&gt;&lt;em&gt;f&lt;/em&gt;&lt;/span&gt; does to paths using the
-construction &lt;span class=&#34;math inline&#34;&gt;ap&lt;em&gt;f&lt;/em&gt;&lt;/span&gt;. At this
-point there is an important check we can make. &lt;span
-class=&#34;math inline&#34;&gt;&lt;em&gt;d&lt;/em&gt;&lt;em&gt;f&lt;/em&gt;&lt;/span&gt; has a few important
-properties, the most characteristic of which is the Leibniz, or product
-rule. Is this visible in HoTT?&lt;/p&gt;
-&lt;p&gt;The Leibniz rule states that if &lt;span
-class=&#34;math inline&#34;&gt;&lt;em&gt;f&lt;/em&gt;, &lt;em&gt;g&lt;/em&gt; : &lt;em&gt;M&lt;/em&gt; → ℝ&lt;/span&gt; are
-two smooth functions to the real numbers then &lt;span
-class=&#34;math inline&#34;&gt;&lt;em&gt;d&lt;/em&gt;(&lt;em&gt;f&lt;/em&gt;&lt;em&gt;g&lt;/em&gt;) = &lt;em&gt;f&lt;/em&gt;&lt;em&gt;d&lt;/em&gt;&lt;em&gt;g&lt;/em&gt; + &lt;em&gt;g&lt;/em&gt;&lt;em&gt;d&lt;/em&gt;&lt;em&gt;f&lt;/em&gt;&lt;/span&gt;.
-Here &lt;span class=&#34;math inline&#34;&gt;&lt;em&gt;f&lt;/em&gt;&lt;em&gt;g&lt;/em&gt;&lt;/span&gt; is the
-function formed by taking the pointwise product of &lt;span
-class=&#34;math inline&#34;&gt;&lt;em&gt;f&lt;/em&gt;&lt;/span&gt; and &lt;span
-class=&#34;math inline&#34;&gt;&lt;em&gt;g&lt;/em&gt;&lt;/span&gt;. To examine this situation in HoTT
-we need type-theoretic functions &lt;span
-class=&#34;math inline&#34;&gt;&lt;em&gt;f&lt;/em&gt;, &lt;em&gt;g&lt;/em&gt; : &lt;em&gt;M&lt;/em&gt; → &lt;em&gt;B&lt;/em&gt;&lt;/span&gt;
-from some type &lt;span class=&#34;math inline&#34;&gt;&lt;em&gt;M&lt;/em&gt;&lt;/span&gt; to an H-space
-&lt;span class=&#34;math inline&#34;&gt;&lt;em&gt;B&lt;/em&gt;&lt;/span&gt;.&lt;/p&gt;
+function on points, paths, and higher paths. We can look at what
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;f&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
+does to paths using the construction
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mtext mathvariant=&#34;sans-serif&#34;&gt;𝖺𝗉&lt;/mtext&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;\ensuremath{\textsf{ap}}f&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;.
+At this point there is an important check we can make.
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;d&lt;/mi&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;df&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
+has a few important properties, the most characteristic of which is the
+Leibniz, or product rule. Is this visible in HoTT?&lt;/p&gt;
+&lt;p&gt;The Leibniz rule states that if
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;g&lt;/mi&gt;&lt;mo&gt;:&lt;/mo&gt;&lt;mi&gt;M&lt;/mi&gt;&lt;mo&gt;→&lt;/mo&gt;&lt;mi&gt;ℝ&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;f, g:M\to \ensuremath{\mathbb{R}}&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
+are two smooth functions to the real numbers then
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;d&lt;/mi&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;mi&gt;g&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;mi&gt;d&lt;/mi&gt;&lt;mi&gt;g&lt;/mi&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;mi&gt;g&lt;/mi&gt;&lt;mi&gt;d&lt;/mi&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;d(fg) = fdg + gdf&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;.
+Here
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;mi&gt;g&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;fg&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
+is the function formed by taking the pointwise product of
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;f&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
+and
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mi&gt;g&lt;/mi&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;g&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;.
+To examine this situation in HoTT we need type-theoretic functions
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;g&lt;/mi&gt;&lt;mo&gt;:&lt;/mo&gt;&lt;mi&gt;M&lt;/mi&gt;&lt;mo&gt;→&lt;/mo&gt;&lt;mi&gt;B&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;f, g:M\to B&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
+from some type
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mi&gt;M&lt;/mi&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;M&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
+to an H-space
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mi&gt;B&lt;/mi&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;B&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;.&lt;/p&gt;
 &lt;div class=&#34;mydef&#34;&gt;
 &lt;p&gt;&lt;strong&gt;Definition 1&lt;/strong&gt;. &lt;em&gt;An H-space structure on a pointed
-type &lt;span class=&#34;math inline&#34;&gt;(&lt;em&gt;B&lt;/em&gt;,&lt;em&gt;b&lt;/em&gt;)&lt;/span&gt; consists
-of&lt;/em&gt;&lt;/p&gt;
+type
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;B&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;(B,b)&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
+consists of&lt;/em&gt;&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;&lt;em&gt;A binary operation &lt;span
-class=&#34;math inline&#34;&gt;&lt;em&gt;μ&lt;/em&gt; : &lt;em&gt;B&lt;/em&gt; → &lt;em&gt;B&lt;/em&gt; → &lt;em&gt;B&lt;/em&gt;&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;em&gt;A left unit law &lt;span
-class=&#34;math inline&#34;&gt;&lt;em&gt;μ&lt;/em&gt;&lt;sub&gt;&lt;em&gt;l&lt;/em&gt;&lt;/sub&gt; : &lt;em&gt;μ&lt;/em&gt;(pt,−) = id&lt;sub&gt;&lt;em&gt;B&lt;/em&gt;&lt;/sub&gt;&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;em&gt;A right unit law &lt;span
-class=&#34;math inline&#34;&gt;&lt;em&gt;μ&lt;/em&gt;&lt;sub&gt;&lt;em&gt;r&lt;/em&gt;&lt;/sub&gt; : &lt;em&gt;μ&lt;/em&gt;(−,pt) = id&lt;sub&gt;&lt;em&gt;B&lt;/em&gt;&lt;/sub&gt;&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;em&gt;A coherence &lt;span
-class=&#34;math inline&#34;&gt;&lt;em&gt;μ&lt;/em&gt;&lt;sub&gt;&lt;em&gt;l&lt;/em&gt;&lt;em&gt;r&lt;/em&gt;&lt;/sub&gt; : &lt;em&gt;μ&lt;/em&gt;&lt;sub&gt;&lt;em&gt;l&lt;/em&gt;&lt;/sub&gt;(pt)=&lt;sub&gt;&lt;em&gt;μ&lt;/em&gt;(pt,pt) = pt&lt;/sub&gt;&lt;em&gt;μ&lt;/em&gt;&lt;sub&gt;&lt;em&gt;r&lt;/em&gt;&lt;/sub&gt;(pt)&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;em&gt;A proof of left- and right- invertibility: &lt;span
-class=&#34;math inline&#34;&gt;&lt;em&gt;μ&lt;/em&gt;(&lt;em&gt;a&lt;/em&gt;,−) : &lt;em&gt;A&lt;/em&gt; ≃ &lt;em&gt;A&lt;/em&gt;&lt;/span&gt;,
-&lt;span
-class=&#34;math inline&#34;&gt;&lt;em&gt;μ&lt;/em&gt;(−,&lt;em&gt;b&lt;/em&gt;) : &lt;em&gt;A&lt;/em&gt; ≃ &lt;em&gt;A&lt;/em&gt;&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;A binary operation
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;μ&lt;/mi&gt;&lt;mo&gt;:&lt;/mo&gt;&lt;mi&gt;B&lt;/mi&gt;&lt;mo&gt;→&lt;/mo&gt;&lt;mi&gt;B&lt;/mi&gt;&lt;mo&gt;→&lt;/mo&gt;&lt;mi&gt;B&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;\mu:B\to B\to B&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;A left unit law
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;μ&lt;/mi&gt;&lt;mi&gt;l&lt;/mi&gt;&lt;/msub&gt;&lt;mo&gt;:&lt;/mo&gt;&lt;mi&gt;μ&lt;/mi&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;mrow&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;p&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;t&lt;/mi&gt;&lt;/mrow&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mo&gt;−&lt;/mo&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;msub&gt;&lt;mtext mathvariant=&#34;normal&#34;&gt;id&lt;/mtext&gt;&lt;mi&gt;B&lt;/mi&gt;&lt;/msub&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;\mu_l:\mu(\mathrm{pt},-)=\ensuremath{\text{id}}_B&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;A right unit law
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;μ&lt;/mi&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;/msub&gt;&lt;mo&gt;:&lt;/mo&gt;&lt;mi&gt;μ&lt;/mi&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;mo&gt;−&lt;/mo&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mrow&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;p&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;t&lt;/mi&gt;&lt;/mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;msub&gt;&lt;mtext mathvariant=&#34;normal&#34;&gt;id&lt;/mtext&gt;&lt;mi&gt;B&lt;/mi&gt;&lt;/msub&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;\mu_r:\mu(-,\mathrm{pt})=\ensuremath{\text{id}}_B&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;A coherence
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;μ&lt;/mi&gt;&lt;mrow&gt;&lt;mi&gt;l&lt;/mi&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;mo&gt;:&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;μ&lt;/mi&gt;&lt;mi&gt;l&lt;/mi&gt;&lt;/msub&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;mrow&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;p&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;t&lt;/mi&gt;&lt;/mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;msub&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mrow&gt;&lt;mi&gt;μ&lt;/mi&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;mrow&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;p&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;t&lt;/mi&gt;&lt;/mrow&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mrow&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;p&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;t&lt;/mi&gt;&lt;/mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mrow&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;p&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;t&lt;/mi&gt;&lt;/mrow&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;msub&gt;&lt;mi&gt;μ&lt;/mi&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;/msub&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;mrow&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;p&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;t&lt;/mi&gt;&lt;/mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;\mu_{lr}:\mu_l(\mathrm{pt})=_{\mu(\mathrm{pt},\mathrm{pt})=\mathrm{pt}}\mu_r(\mathrm{pt})&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;A proof of left- and right- invertibility:
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;μ&lt;/mi&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mo&gt;−&lt;/mo&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mo&gt;:&lt;/mo&gt;&lt;mi&gt;A&lt;/mi&gt;&lt;mo&gt;≃&lt;/mo&gt;&lt;mi&gt;A&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;\mu(a,-):A\simeq A&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;,
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;μ&lt;/mi&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;mo&gt;−&lt;/mo&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mo&gt;:&lt;/mo&gt;&lt;mi&gt;A&lt;/mi&gt;&lt;mo&gt;≃&lt;/mo&gt;&lt;mi&gt;A&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;\mu(-, b):A\simeq A&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
-&lt;p&gt;The analogue of the algebra of functions to &lt;span
-class=&#34;math inline&#34;&gt;ℝ&lt;/span&gt; is:&lt;/p&gt;
+&lt;p&gt;The analogue of the algebra of functions to
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mi&gt;ℝ&lt;/mi&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;\ensuremath{\mathbb{R}}&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
+is:&lt;/p&gt;
 &lt;div class=&#34;myprop&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Proposition 1&lt;/strong&gt;. &lt;em&gt;For any type &lt;span
-class=&#34;math inline&#34;&gt;&lt;em&gt;M&lt;/em&gt;&lt;/span&gt; and H-space &lt;span
-class=&#34;math inline&#34;&gt;&lt;em&gt;B&lt;/em&gt;&lt;/span&gt; the type of maps &lt;span
-class=&#34;math inline&#34;&gt;&lt;em&gt;M&lt;/em&gt; → &lt;em&gt;B&lt;/em&gt;&lt;/span&gt; with base point the
-constant map is an H-space under pointwise multiplication.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Proposition 1&lt;/strong&gt;. &lt;em&gt;For any type
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mi&gt;M&lt;/mi&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;M&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
+and H-space
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mi&gt;B&lt;/mi&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;B&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
+the type of maps
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;M&lt;/mi&gt;&lt;mo&gt;→&lt;/mo&gt;&lt;mi&gt;B&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;M\to B&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
+with base point the constant map is an H-space under pointwise
+multiplication.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;We claim thact the following deserves to be called the Leibniz
 rule.&lt;/p&gt;
 &lt;div class=&#34;mylemma&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Lemma 1&lt;/strong&gt;. &lt;em&gt;For any type &lt;span
-class=&#34;math inline&#34;&gt;&lt;em&gt;M&lt;/em&gt;&lt;/span&gt; and H-space &lt;span
-class=&#34;math inline&#34;&gt;&lt;em&gt;B&lt;/em&gt;&lt;/span&gt; and maps &lt;span
-class=&#34;math inline&#34;&gt;&lt;em&gt;f&lt;/em&gt;, &lt;em&gt;g&lt;/em&gt; : &lt;em&gt;M&lt;/em&gt; → &lt;em&gt;B&lt;/em&gt;&lt;/span&gt;
-and path &lt;span
-class=&#34;math inline&#34;&gt;&lt;em&gt;p&lt;/em&gt; : &lt;em&gt;x&lt;/em&gt;=&lt;sub&gt;&lt;em&gt;M&lt;/em&gt;&lt;/sub&gt;&lt;em&gt;y&lt;/em&gt;&lt;/span&gt;
-we have &lt;span
-class=&#34;math inline&#34;&gt;ap(&lt;em&gt;f&lt;/em&gt;&lt;em&gt;g&lt;/em&gt;)(&lt;em&gt;p&lt;/em&gt;) = &lt;em&gt;μ&lt;/em&gt;(&lt;em&gt;f&lt;/em&gt;(&lt;em&gt;x&lt;/em&gt;),ap(&lt;em&gt;g&lt;/em&gt;)(&lt;em&gt;p&lt;/em&gt;)) ⋅ &lt;em&gt;μ&lt;/em&gt;(ap(&lt;em&gt;f&lt;/em&gt;)(&lt;em&gt;p&lt;/em&gt;),&lt;em&gt;g&lt;/em&gt;(&lt;em&gt;y&lt;/em&gt;))&lt;/span&gt;.
-(&lt;span class=&#34;math inline&#34;&gt;⋅&lt;/span&gt; is concatenation of paths.)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Lemma 1&lt;/strong&gt;. &lt;em&gt;For any type
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mi&gt;M&lt;/mi&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;M&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
+and H-space
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mi&gt;B&lt;/mi&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;B&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
+and maps
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;g&lt;/mi&gt;&lt;mo&gt;:&lt;/mo&gt;&lt;mi&gt;M&lt;/mi&gt;&lt;mo&gt;→&lt;/mo&gt;&lt;mi&gt;B&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;f,g:M\to B&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
+and path
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;p&lt;/mi&gt;&lt;mo&gt;:&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;msub&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mi&gt;M&lt;/mi&gt;&lt;/msub&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;p:x=_M y&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
+we have
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mtext mathvariant=&#34;sans-serif&#34;&gt;𝖺𝗉&lt;/mtext&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;mi&gt;g&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;p&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mi&gt;μ&lt;/mi&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mtext mathvariant=&#34;sans-serif&#34;&gt;𝖺𝗉&lt;/mtext&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;g&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;p&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mo&gt;⋅&lt;/mo&gt;&lt;mi&gt;μ&lt;/mi&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;mtext mathvariant=&#34;sans-serif&#34;&gt;𝖺𝗉&lt;/mtext&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;p&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;g&lt;/mi&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;\ensuremath{\textsf{ap}}(fg)(p)=\mu(f(x),\ensuremath{\textsf{ap}}(g)(p)) \cdot \mu(\ensuremath{\textsf{ap}}(f)(p),g(y))&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;.
+(&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mo&gt;⋅&lt;/mo&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;\cdot&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
+is concatenation of paths.)&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;p&gt;The notation is temporarily sloppy, but by &lt;span
-class=&#34;math inline&#34;&gt;&lt;em&gt;μ&lt;/em&gt;(&lt;em&gt;a&lt;/em&gt;,&lt;em&gt;p&lt;/em&gt;)&lt;/span&gt; for a path
-&lt;span class=&#34;math inline&#34;&gt;&lt;em&gt;p&lt;/em&gt;&lt;/span&gt; we mean the functorial
-action of multiplication by &lt;span class=&#34;math inline&#34;&gt;&lt;em&gt;a&lt;/em&gt;&lt;/span&gt;
+&lt;p&gt;The notation is temporarily sloppy, but by
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;μ&lt;/mi&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;p&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;\mu(a, p)&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
+for a path
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mi&gt;p&lt;/mi&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;p&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
+we mean the functorial action of multiplication by
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;a&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
 on the left, on a path.g&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;./09052d33113b7087f7abc8b04e220a13697b45a3.png&#34;
 alt=&#34;image&#34; /&gt;&lt;/p&gt;
 &lt;figure&gt;
 &lt;img src=&#34;./45744937ac561c6ce05f971621a980d63ad6d2e1.png&#34; /&gt;
-&lt;figcaption&gt;The HIT &lt;span
-class=&#34;math inline&#34;&gt;&lt;em&gt;C&lt;/em&gt;&lt;sub&gt;4&lt;/sub&gt;&lt;/span&gt; which is one of the
-types in &lt;span
-class=&#34;math inline&#34;&gt;BAut&lt;sub&gt;1&lt;/sub&gt;(&lt;em&gt;S&lt;/em&gt;&lt;sup&gt;1&lt;/sup&gt;)&lt;/span&gt;&lt;/figcaption&gt;
+&lt;figcaption&gt;The HIT
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;msub&gt;&lt;mi&gt;C&lt;/mi&gt;&lt;mn&gt;4&lt;/mn&gt;&lt;/msub&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;C_4&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
+which is one of the types in
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mrow&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;B&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;A&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;u&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;t&lt;/mi&gt;&lt;/mrow&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/msub&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;msup&gt;&lt;mi&gt;S&lt;/mi&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/msup&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;\mathrm{BAut}_1(S^1)&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;figure&gt;
 &lt;img src=&#34;./3c3983eb70861a2d7ffe23e2afa96e12c7df558c.png&#34; /&gt;
-&lt;figcaption&gt;The HIT &lt;span
-class=&#34;math inline&#34;&gt;&lt;em&gt;Σ&lt;/em&gt;&lt;em&gt;C&lt;/em&gt;&lt;sub&gt;4&lt;/sub&gt;&lt;/span&gt; which has 2
-points, 4 1-paths, 4 2-paths.&lt;/figcaption&gt;
+&lt;figcaption&gt;The HIT
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;Σ&lt;/mi&gt;&lt;msub&gt;&lt;mi&gt;C&lt;/mi&gt;&lt;mn&gt;4&lt;/mn&gt;&lt;/msub&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;\Sigma C_4&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
+which has 2 points, 4 1-paths, 4 2-paths.&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;figure&gt;
 &lt;img src=&#34;./742ee3a0cc0d615082501f31cfc529818a29c2e5.png&#34; /&gt;
-&lt;figcaption&gt;The HIT &lt;span
-class=&#34;math inline&#34;&gt;{&lt;em&gt;w&lt;/em&gt;, &lt;em&gt;y&lt;/em&gt;} * &lt;em&gt;C&lt;/em&gt;&lt;sub&gt;4&lt;/sub&gt;&lt;/span&gt;
+&lt;figcaption&gt;The HIT
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;false&#34; form=&#34;prefix&#34;&gt;{&lt;/mo&gt;&lt;mi&gt;w&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;mo stretchy=&#34;false&#34; form=&#34;postfix&#34;&gt;}&lt;/mo&gt;&lt;mo&gt;*&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;C&lt;/mi&gt;&lt;mn&gt;4&lt;/mn&gt;&lt;/msub&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;\{w, y\}* C_4&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
 which has 6 points, 12 1-paths, 8 2-paths.&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;h1 data-number=&#34;3&#34; id=&#34;the-tangent-bundle-of-the-2-sphere&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;3&lt;/span&gt; The tangent bundle of the
 2-sphere&lt;/h1&gt;
-&lt;p&gt;The classical 2-sphere embedded in &lt;span
-class=&#34;math inline&#34;&gt;ℝ&lt;sup&gt;3&lt;/sup&gt;&lt;/span&gt; is curved at every point. But
-we can quantize this curvature by integrating it over a triangulation.
-Consider two great circles at 90 degree angles to each other, passing
-through the north and south pole, and take the equator. Convert this
-data into a combinatorial structure:&lt;/p&gt;
+&lt;p&gt;The classical 2-sphere embedded in
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;msup&gt;&lt;mi&gt;ℝ&lt;/mi&gt;&lt;mn&gt;3&lt;/mn&gt;&lt;/msup&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;\ensuremath{\mathbb{R}}^3&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
+is curved at every point. But we can quantize this curvature by
+integrating it over a triangulation. Consider two great circles at 90
+degree angles to each other, passing through the north and south pole,
+and take the equator. Convert this data into a combinatorial
+structure:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;The set of vertices &lt;span
-class=&#34;math inline&#34;&gt;{&lt;em&gt;w&lt;/em&gt;, &lt;em&gt;y&lt;/em&gt;, &lt;em&gt;b&lt;/em&gt;, &lt;em&gt;g&lt;/em&gt;, &lt;em&gt;r&lt;/em&gt;, &lt;em&gt;o&lt;/em&gt;, &lt;em&gt;y&lt;/em&gt;}&lt;/span&gt;
-where &lt;span class=&#34;math inline&#34;&gt;&lt;em&gt;w&lt;/em&gt;&lt;/span&gt; is the north pole,
-&lt;span class=&#34;math inline&#34;&gt;&lt;em&gt;y&lt;/em&gt;&lt;/span&gt; the south pole, and around
-the equator are the points of intersection of the three circles, labeled
-in eastward order &lt;span
-class=&#34;math inline&#34;&gt;{&lt;em&gt;b&lt;/em&gt;, &lt;em&gt;o&lt;/em&gt;, &lt;em&gt;g&lt;/em&gt;, &lt;em&gt;r&lt;/em&gt;}&lt;/span&gt;.
+&lt;li&gt;&lt;p&gt;The set of vertices
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;false&#34; form=&#34;prefix&#34;&gt;{&lt;/mo&gt;&lt;mi&gt;w&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;g&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;mo stretchy=&#34;false&#34; form=&#34;postfix&#34;&gt;}&lt;/mo&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;\{w, y, b, g, r, o, y\}&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
+where
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mi&gt;w&lt;/mi&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;w&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
+is the north pole,
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;y&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
+the south pole, and around the equator are the points of intersection of
+the three circles, labeled in eastward order
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;false&#34; form=&#34;prefix&#34;&gt;{&lt;/mo&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;g&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mo stretchy=&#34;false&#34; form=&#34;postfix&#34;&gt;}&lt;/mo&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;\{b, o, g, r\}&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;.
 The names come from the colors on a standard Rubik’s cube.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;The set of edges generated by the direct paths between adjacent
-vertices, denoted &lt;span
-class=&#34;math inline&#34;&gt;{&lt;em&gt;w&lt;/em&gt;&lt;em&gt;b&lt;/em&gt;}, {&lt;em&gt;w&lt;/em&gt;&lt;em&gt;o&lt;/em&gt;}&lt;/span&gt;
+vertices, denoted
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;false&#34; form=&#34;prefix&#34;&gt;{&lt;/mo&gt;&lt;mi&gt;w&lt;/mi&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mo stretchy=&#34;false&#34; form=&#34;postfix&#34;&gt;}&lt;/mo&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mo stretchy=&#34;false&#34; form=&#34;prefix&#34;&gt;{&lt;/mo&gt;&lt;mi&gt;w&lt;/mi&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mo stretchy=&#34;false&#34; form=&#34;postfix&#34;&gt;}&lt;/mo&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;\{wb\}, \{wo\}&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
 and so on.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;The set of faces generated by the triangular regions bounded by
-three vertices and three paths, denoted &lt;span
-class=&#34;math inline&#34;&gt;{&lt;em&gt;w&lt;/em&gt;&lt;em&gt;b&lt;/em&gt;&lt;em&gt;o&lt;/em&gt;}, {&lt;em&gt;w&lt;/em&gt;&lt;em&gt;o&lt;/em&gt;&lt;em&gt;g&lt;/em&gt;}&lt;/span&gt;
+three vertices and three paths, denoted
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;false&#34; form=&#34;prefix&#34;&gt;{&lt;/mo&gt;&lt;mi&gt;w&lt;/mi&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mo stretchy=&#34;false&#34; form=&#34;postfix&#34;&gt;}&lt;/mo&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mo stretchy=&#34;false&#34; form=&#34;prefix&#34;&gt;{&lt;/mo&gt;&lt;mi&gt;w&lt;/mi&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mi&gt;g&lt;/mi&gt;&lt;mo stretchy=&#34;false&#34; form=&#34;postfix&#34;&gt;}&lt;/mo&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;\{wbo\}, \{wog\}&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
 and so on.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;Parallel transport in the tangent bundle around the &lt;span
-class=&#34;math inline&#34;&gt;{&lt;em&gt;w&lt;/em&gt;&lt;em&gt;o&lt;/em&gt;&lt;em&gt;g&lt;/em&gt;}&lt;/span&gt; face will
-rotate a tangent vector by 90 degrees clockwise. This is true for all
-the triangular faces and so the sum of the action of all 8 faces will be
-two rotations around the circle. We can compare this result to the
-standard smooth Gauss-Bonnet theorem.&lt;/p&gt;
+&lt;p&gt;Parallel transport in the tangent bundle around the
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;false&#34; form=&#34;prefix&#34;&gt;{&lt;/mo&gt;&lt;mi&gt;w&lt;/mi&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mi&gt;g&lt;/mi&gt;&lt;mo stretchy=&#34;false&#34; form=&#34;postfix&#34;&gt;}&lt;/mo&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;\{wog\}&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
+face will rotate a tangent vector by 90 degrees clockwise. This is true
+for all the triangular faces and so the sum of the action of all 8 faces
+will be two rotations around the circle. We can compare this result to
+the standard smooth Gauss-Bonnet theorem.&lt;/p&gt;
 &lt;p&gt;We can leverage the syntax of HoTT by encoding the above in a map
 between HITs.&lt;/p&gt;
 &lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 2&lt;/strong&gt;. &lt;em&gt;Denote by &lt;span
-class=&#34;math inline&#34;&gt;&lt;em&gt;C&lt;/em&gt;&lt;sub&gt;4&lt;/sub&gt;&lt;/span&gt; the join &lt;span
-class=&#34;math inline&#34;&gt;{&lt;em&gt;b&lt;/em&gt;, &lt;em&gt;g&lt;/em&gt;} * {&lt;em&gt;r&lt;/em&gt;, &lt;em&gt;o&lt;/em&gt;}&lt;/span&gt;.
-This is the equator of the discrete octahedral sphere. Denote by &lt;span
-class=&#34;math inline&#34;&gt;𝕆&lt;/span&gt; the octahedron given by the join &lt;span
-class=&#34;math inline&#34;&gt;{&lt;em&gt;w&lt;/em&gt;, &lt;em&gt;y&lt;/em&gt;} * &lt;em&gt;C&lt;/em&gt;&lt;sub&gt;4&lt;/sub&gt;&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Definition 2&lt;/strong&gt;. &lt;em&gt;Denote by
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;msub&gt;&lt;mi&gt;C&lt;/mi&gt;&lt;mn&gt;4&lt;/mn&gt;&lt;/msub&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;C_4&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
+the join
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;false&#34; form=&#34;prefix&#34;&gt;{&lt;/mo&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;g&lt;/mi&gt;&lt;mo stretchy=&#34;false&#34; form=&#34;postfix&#34;&gt;}&lt;/mo&gt;&lt;mo&gt;*&lt;/mo&gt;&lt;mo stretchy=&#34;false&#34; form=&#34;prefix&#34;&gt;{&lt;/mo&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mo stretchy=&#34;false&#34; form=&#34;postfix&#34;&gt;}&lt;/mo&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;\{b, g\}*\{r, o\}&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;.
+This is the equator of the discrete octahedral sphere. Denote by
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mi&gt;𝕆&lt;/mi&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;\ensuremath{\mathbb{O}}&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
+the octahedron given by the join
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;false&#34; form=&#34;prefix&#34;&gt;{&lt;/mo&gt;&lt;mi&gt;w&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;mo stretchy=&#34;false&#34; form=&#34;postfix&#34;&gt;}&lt;/mo&gt;&lt;mo&gt;*&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;C&lt;/mi&gt;&lt;mn&gt;4&lt;/mn&gt;&lt;/msub&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;\{w, y\}* C_4&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;mylemma&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Lemma 2&lt;/strong&gt;. &lt;em&gt;&lt;span
-class=&#34;math inline&#34;&gt;(&lt;em&gt;C&lt;/em&gt;&lt;sub&gt;4&lt;/sub&gt;,&lt;em&gt;b&lt;/em&gt;) ≡ &lt;em&gt;S&lt;/em&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Lemma 2&lt;/strong&gt;.
+&lt;em&gt;&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;C&lt;/mi&gt;&lt;mn&gt;4&lt;/mn&gt;&lt;/msub&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mo&gt;≃&lt;/mo&gt;&lt;msup&gt;&lt;mi&gt;S&lt;/mi&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/msup&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;(C_4, b)\simeq S^1&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;mylemma&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Lemma 3&lt;/strong&gt;. &lt;em&gt;&lt;span
-class=&#34;math inline&#34;&gt;𝕆 ≡ &lt;em&gt;S&lt;/em&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Lemma 3&lt;/strong&gt;.
+&lt;em&gt;&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;𝕆&lt;/mi&gt;&lt;mo&gt;≃&lt;/mo&gt;&lt;msup&gt;&lt;mi&gt;S&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msup&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;\ensuremath{\mathbb{O}}\simeq S^2&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 3&lt;/strong&gt;. &lt;em&gt;Let &lt;span
-class=&#34;math inline&#34;&gt;$\mathrm{BAut}_1(S^1)\stackrel{\textup{def}}{=}\sum_{X:\mathcal{U}}||X=S^1||_0.$&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Definition 3&lt;/strong&gt;. &lt;em&gt;Let
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mrow&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;B&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;A&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;u&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;t&lt;/mi&gt;&lt;/mrow&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/msub&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;msup&gt;&lt;mi&gt;S&lt;/mi&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/msup&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mover&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mrow&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;d&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;e&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;f&lt;/mi&gt;&lt;/mrow&gt;&lt;/mover&gt;&lt;msub&gt;&lt;mo&gt;∑&lt;/mo&gt;&lt;mrow&gt;&lt;mi&gt;X&lt;/mi&gt;&lt;mo&gt;:&lt;/mo&gt;&lt;mi&gt;𝒰&lt;/mi&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;|&lt;/mo&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;|&lt;/mo&gt;&lt;/mrow&gt;&lt;mi&gt;X&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;msup&gt;&lt;mi&gt;S&lt;/mi&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/msup&gt;&lt;msub&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;|&lt;/mo&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;|&lt;/mo&gt;&lt;/mrow&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/msub&gt;&lt;mi&gt;.&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;\mathrm{BAut}_1(S^1)\stackrel{\mathrm{def}}{=}\sum_{X:\mathcal{U}}||X=S^1||_0.&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;mylemma&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Lemma 4&lt;/strong&gt;. &lt;em&gt;We have &lt;span
-class=&#34;math inline&#34;&gt;(&lt;em&gt;C&lt;/em&gt;&lt;sub&gt;4&lt;/sub&gt;,||{&lt;em&gt;b&lt;/em&gt;,&lt;em&gt;g&lt;/em&gt;,&lt;em&gt;r&lt;/em&gt;,&lt;em&gt;o&lt;/em&gt;}↦base,&lt;em&gt;b&lt;/em&gt;&lt;em&gt;r&lt;/em&gt;↦loop,{&lt;em&gt;r&lt;/em&gt;&lt;em&gt;g&lt;/em&gt;,&lt;em&gt;g&lt;/em&gt;&lt;em&gt;o&lt;/em&gt;,&lt;em&gt;o&lt;/em&gt;&lt;em&gt;b&lt;/em&gt;}↦refl||&lt;sub&gt;0&lt;/sub&gt;) : BAut&lt;sub&gt;1&lt;/sub&gt;(&lt;em&gt;S&lt;/em&gt;&lt;sup&gt;1&lt;/sup&gt;)&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Lemma 4&lt;/strong&gt;. &lt;em&gt;We have
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;C&lt;/mi&gt;&lt;mn&gt;4&lt;/mn&gt;&lt;/msub&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;|&lt;/mo&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;|&lt;/mo&gt;&lt;/mrow&gt;&lt;mo stretchy=&#34;false&#34; form=&#34;prefix&#34;&gt;{&lt;/mo&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;g&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mo stretchy=&#34;false&#34; form=&#34;postfix&#34;&gt;}&lt;/mo&gt;&lt;mo&gt;↦&lt;/mo&gt;&lt;mrow&gt;&lt;mi&gt;𝖻&lt;/mi&gt;&lt;mi&gt;𝖺&lt;/mi&gt;&lt;mi&gt;𝗌&lt;/mi&gt;&lt;mi&gt;𝖾&lt;/mi&gt;&lt;/mrow&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mo&gt;↦&lt;/mo&gt;&lt;mrow&gt;&lt;mi&gt;𝗅&lt;/mi&gt;&lt;mi&gt;𝗈&lt;/mi&gt;&lt;mi&gt;𝗈&lt;/mi&gt;&lt;mi&gt;𝗉&lt;/mi&gt;&lt;/mrow&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mo stretchy=&#34;false&#34; form=&#34;prefix&#34;&gt;{&lt;/mo&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mi&gt;g&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;g&lt;/mi&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mo stretchy=&#34;false&#34; form=&#34;postfix&#34;&gt;}&lt;/mo&gt;&lt;mo&gt;↦&lt;/mo&gt;&lt;mrow&gt;&lt;mi&gt;𝗋&lt;/mi&gt;&lt;mi&gt;𝖾&lt;/mi&gt;&lt;mi&gt;𝖿&lt;/mi&gt;&lt;mi&gt;𝗅&lt;/mi&gt;&lt;/mrow&gt;&lt;msub&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;|&lt;/mo&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;|&lt;/mo&gt;&lt;/mrow&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/msub&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mo&gt;:&lt;/mo&gt;&lt;msub&gt;&lt;mrow&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;B&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;A&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;u&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;t&lt;/mi&gt;&lt;/mrow&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/msub&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;msup&gt;&lt;mi&gt;S&lt;/mi&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/msup&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;(C_4, ||\{b, g, r, o\}\mapsto \mathsf{base}, br\mapsto \mathsf{loop}, \{rg, go, ob\}\mapsto \ensuremath{\mathsf{refl}}||_0):\mathrm{BAut}_1(S^1)&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;mylemma&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Lemma 5&lt;/strong&gt;. &lt;em&gt;&lt;span
-class=&#34;math inline&#34;&gt;BAut&lt;sub&gt;1&lt;/sub&gt;(&lt;em&gt;S&lt;/em&gt;&lt;sup&gt;1&lt;/sup&gt;)&lt;/span&gt; is
-equivalent to the type of &lt;span
-class=&#34;math inline&#34;&gt;&lt;em&gt;S&lt;/em&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/span&gt;-torsors, and to the
-type of &lt;span
-class=&#34;math inline&#34;&gt;(&lt;em&gt;C&lt;/em&gt;&lt;sub&gt;4&lt;/sub&gt;,&lt;em&gt;b&lt;/em&gt;)&lt;/span&gt;-torsors.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Lemma 5&lt;/strong&gt;.
+&lt;em&gt;&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mrow&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;B&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;A&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;u&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;t&lt;/mi&gt;&lt;/mrow&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/msub&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;msup&gt;&lt;mi&gt;S&lt;/mi&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/msup&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;\mathrm{BAut}_1(S^1)&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
+is equivalent to the type of
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;msup&gt;&lt;mi&gt;S&lt;/mi&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/msup&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;S^1&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;-torsors,
+and to the type of
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;C&lt;/mi&gt;&lt;mn&gt;4&lt;/mn&gt;&lt;/msub&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;(C_4,b)&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;-torsors.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;p&gt;We will denote other terms of &lt;span
-class=&#34;math inline&#34;&gt;BAut&lt;sub&gt;1&lt;/sub&gt;(&lt;em&gt;S&lt;/em&gt;&lt;sup&gt;1&lt;/sup&gt;)&lt;/span&gt; with
-notation like &lt;span
-class=&#34;math inline&#34;&gt;[&lt;em&gt;w&lt;/em&gt;,&lt;em&gt;o&lt;/em&gt;,&lt;em&gt;y&lt;/em&gt;,&lt;em&gt;r&lt;/em&gt;]&lt;/span&gt;,
-meaning the square isomorphic to &lt;span
-class=&#34;math inline&#34;&gt;&lt;em&gt;C&lt;/em&gt;&lt;sub&gt;4&lt;/sub&gt;&lt;/span&gt; but with the given
-four points, and with pointing given by whichever point we listed first.
-We will also introduce notation for maps &lt;span
-class=&#34;math inline&#34;&gt;&lt;em&gt;f&lt;/em&gt; : [&lt;em&gt;a&lt;/em&gt;,&lt;em&gt;b&lt;/em&gt;,&lt;em&gt;c&lt;/em&gt;,&lt;em&gt;d&lt;/em&gt;] → [&lt;em&gt;w&lt;/em&gt;,&lt;em&gt;x&lt;/em&gt;,&lt;em&gt;y&lt;/em&gt;,&lt;em&gt;z&lt;/em&gt;]&lt;/span&gt;
-by indicating where each item in the domain list is sent, like so: &lt;span
-class=&#34;math inline&#34;&gt;$f\stackrel{\textup{def}}{=}[[x, y, z,
-w]]$&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;&lt;em&gt;C&lt;/em&gt;&lt;sub&gt;4&lt;/sub&gt;&lt;/span&gt; has an
-unpointed automorphism connected to the identiy which will play the role
-of rotation by 90 degrees:&lt;/p&gt;
+&lt;p&gt;We will denote other terms of
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mrow&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;B&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;A&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;u&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;t&lt;/mi&gt;&lt;/mrow&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/msub&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;msup&gt;&lt;mi&gt;S&lt;/mi&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/msup&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;\mathrm{BAut}_1(S^1)&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
+with notation like
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;[&lt;/mo&gt;&lt;mi&gt;w&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;]&lt;/mo&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;[w, o, y, r]&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;,
+meaning the square isomorphic to
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;msub&gt;&lt;mi&gt;C&lt;/mi&gt;&lt;mn&gt;4&lt;/mn&gt;&lt;/msub&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;C_4&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
+but with the given four points, and with pointing given by whichever
+point we listed first. We will also introduce notation for maps
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;mo&gt;:&lt;/mo&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;[&lt;/mo&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;c&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;d&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;]&lt;/mo&gt;&lt;/mrow&gt;&lt;mo&gt;→&lt;/mo&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;[&lt;/mo&gt;&lt;mi&gt;w&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;z&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;]&lt;/mo&gt;&lt;/mrow&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;f:[a, b, c, d]\to [w, x, y, z]&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
+by indicating where each item in the domain list is sent, like so:
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;mover&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mrow&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;d&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;e&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;f&lt;/mi&gt;&lt;/mrow&gt;&lt;/mover&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;[&lt;/mo&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;[&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;z&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;w&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;]&lt;/mo&gt;&lt;/mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;]&lt;/mo&gt;&lt;/mrow&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;f\stackrel{\mathrm{def}}{=}[[x, y, z, w]]&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;msub&gt;&lt;mi&gt;C&lt;/mi&gt;&lt;mn&gt;4&lt;/mn&gt;&lt;/msub&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;C_4&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
+has an unpointed automorphism connected to the identiy which will play
+the role of rotation by 90 degrees:&lt;/p&gt;
 &lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 4&lt;/strong&gt;. &lt;em&gt;Let &lt;span
-class=&#34;math inline&#34;&gt;&lt;em&gt;R&lt;/em&gt; : &lt;em&gt;C&lt;/em&gt;&lt;sub&gt;4&lt;/sub&gt; → &lt;em&gt;C&lt;/em&gt;&lt;sub&gt;4&lt;/sub&gt;&lt;/span&gt;
-be given by &lt;span
-class=&#34;math inline&#34;&gt;&lt;em&gt;R&lt;/em&gt;(&lt;em&gt;b&lt;/em&gt;) = &lt;em&gt;o&lt;/em&gt;, &lt;em&gt;R&lt;/em&gt;(&lt;em&gt;o&lt;/em&gt;) = &lt;em&gt;g&lt;/em&gt;, &lt;em&gt;R&lt;/em&gt;(&lt;em&gt;g&lt;/em&gt;) = &lt;em&gt;r&lt;/em&gt;, &lt;em&gt;R&lt;/em&gt;(&lt;em&gt;r&lt;/em&gt;) = &lt;em&gt;b&lt;/em&gt;, &lt;em&gt;R&lt;/em&gt;(&lt;em&gt;b&lt;/em&gt;&lt;em&gt;o&lt;/em&gt;) = &lt;em&gt;o&lt;/em&gt;&lt;em&gt;g&lt;/em&gt;, &lt;em&gt;R&lt;/em&gt;(&lt;em&gt;o&lt;/em&gt;&lt;em&gt;g&lt;/em&gt;) = &lt;em&gt;g&lt;/em&gt;&lt;em&gt;r&lt;/em&gt;, &lt;em&gt;R&lt;/em&gt;(&lt;em&gt;g&lt;/em&gt;&lt;em&gt;r&lt;/em&gt;) = &lt;em&gt;r&lt;/em&gt;&lt;em&gt;b&lt;/em&gt;, &lt;em&gt;R&lt;/em&gt;(&lt;em&gt;r&lt;/em&gt;&lt;em&gt;b&lt;/em&gt;) = &lt;em&gt;b&lt;/em&gt;&lt;em&gt;o&lt;/em&gt;.&lt;/span&gt;
-Let &lt;span class=&#34;math inline&#34;&gt;&lt;em&gt;R&lt;/em&gt;′ : &lt;em&gt;R&lt;/em&gt; = id&lt;/span&gt; be
-the obvious homotopy to the identity.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Definition 4&lt;/strong&gt;. &lt;em&gt;Let
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;R&lt;/mi&gt;&lt;mo&gt;:&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;C&lt;/mi&gt;&lt;mn&gt;4&lt;/mn&gt;&lt;/msub&gt;&lt;mo&gt;→&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;C&lt;/mi&gt;&lt;mn&gt;4&lt;/mn&gt;&lt;/msub&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;R:C_4\to C_4&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
+be given by
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;R&lt;/mi&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;R&lt;/mi&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mi&gt;g&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;R&lt;/mi&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;g&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;R&lt;/mi&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;R&lt;/mi&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mi&gt;g&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;R&lt;/mi&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mi&gt;g&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mi&gt;g&lt;/mi&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;R&lt;/mi&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;g&lt;/mi&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;R&lt;/mi&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mi&gt;.&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;R(b)=o, R(o)=g, R(g)=r, R(r)=b, R(bo)=og, R(og)=gr, R(gr)=rb, R(rb)=bo.&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
+Let
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;R&lt;/mi&gt;&lt;mi&gt;′&lt;/mi&gt;&lt;mo&gt;:&lt;/mo&gt;&lt;mi&gt;R&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mtext mathvariant=&#34;normal&#34;&gt;id&lt;/mtext&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;R&amp;#39;:R=\ensuremath{\text{id}}&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
+be the obvious homotopy to the identity.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 5&lt;/strong&gt;. &lt;em&gt;Define &lt;span
-class=&#34;math inline&#34;&gt;&lt;em&gt;T&lt;/em&gt;&lt;sub&gt;1&lt;/sub&gt; : 𝕆 → BAut&lt;sub&gt;1&lt;/sub&gt;(&lt;em&gt;S&lt;/em&gt;&lt;sup&gt;1&lt;/sup&gt;)&lt;/span&gt;
+&lt;p&gt;&lt;strong&gt;Definition 5&lt;/strong&gt;. &lt;em&gt;Define
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;T&lt;/mi&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/msub&gt;&lt;mo&gt;:&lt;/mo&gt;&lt;mi&gt;𝕆&lt;/mi&gt;&lt;mo&gt;→&lt;/mo&gt;&lt;msub&gt;&lt;mrow&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;B&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;A&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;u&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;t&lt;/mi&gt;&lt;/mrow&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/msub&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;msup&gt;&lt;mi&gt;S&lt;/mi&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/msup&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;T_1:\ensuremath{\mathbb{O}}\to\mathrm{BAut}_1(S^1)&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
 by&lt;/em&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;span
-class=&#34;math inline&#34;&gt;&lt;em&gt;T&lt;/em&gt;&lt;sub&gt;1&lt;/sub&gt;(&lt;em&gt;b&lt;/em&gt;) = [&lt;em&gt;w&lt;/em&gt;,&lt;em&gt;o&lt;/em&gt;,&lt;em&gt;y&lt;/em&gt;,&lt;em&gt;r&lt;/em&gt;]&lt;/span&gt;
-(the equator from the point of view of &lt;span
-class=&#34;math inline&#34;&gt;&lt;em&gt;b&lt;/em&gt;&lt;/span&gt; as the north pole).&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;span
-class=&#34;math inline&#34;&gt;&lt;em&gt;T&lt;/em&gt;&lt;sub&gt;1&lt;/sub&gt;(&lt;em&gt;o&lt;/em&gt;) = [&lt;em&gt;w&lt;/em&gt;,&lt;em&gt;b&lt;/em&gt;,&lt;em&gt;y&lt;/em&gt;,&lt;em&gt;g&lt;/em&gt;]&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;span
-class=&#34;math inline&#34;&gt;&lt;em&gt;T&lt;/em&gt;&lt;sub&gt;1&lt;/sub&gt;(&lt;em&gt;g&lt;/em&gt;) = [&lt;em&gt;w&lt;/em&gt;,&lt;em&gt;r&lt;/em&gt;,&lt;em&gt;y&lt;/em&gt;,&lt;em&gt;o&lt;/em&gt;]&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;span
-class=&#34;math inline&#34;&gt;&lt;em&gt;T&lt;/em&gt;&lt;sub&gt;1&lt;/sub&gt;(&lt;em&gt;r&lt;/em&gt;) = [&lt;em&gt;w&lt;/em&gt;,&lt;em&gt;g&lt;/em&gt;,&lt;em&gt;y&lt;/em&gt;,&lt;em&gt;b&lt;/em&gt;]&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;span
-class=&#34;math inline&#34;&gt;&lt;em&gt;T&lt;/em&gt;&lt;sub&gt;1&lt;/sub&gt;(&lt;em&gt;w&lt;/em&gt;) = [&lt;em&gt;b&lt;/em&gt;,&lt;em&gt;o&lt;/em&gt;,&lt;em&gt;g&lt;/em&gt;,&lt;em&gt;r&lt;/em&gt;]&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;span
-class=&#34;math inline&#34;&gt;&lt;em&gt;T&lt;/em&gt;&lt;sub&gt;1&lt;/sub&gt;(&lt;em&gt;y&lt;/em&gt;) = [&lt;em&gt;b&lt;/em&gt;,&lt;em&gt;r&lt;/em&gt;,&lt;em&gt;g&lt;/em&gt;,&lt;em&gt;o&lt;/em&gt;]&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;span
-class=&#34;math inline&#34;&gt;&lt;em&gt;T&lt;/em&gt;&lt;sub&gt;1&lt;/sub&gt;(&lt;em&gt;b&lt;/em&gt;&lt;em&gt;o&lt;/em&gt;) = [[&lt;em&gt;w&lt;/em&gt;,&lt;em&gt;g&lt;/em&gt;,&lt;em&gt;y&lt;/em&gt;,&lt;em&gt;b&lt;/em&gt;]]&lt;/span&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;T&lt;/mi&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/msub&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;[&lt;/mo&gt;&lt;mi&gt;w&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;]&lt;/mo&gt;&lt;/mrow&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;T_1(b)=[w, o, y, r]&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
+(the equator from the point of view of
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;b&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
+as the north pole).&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;T&lt;/mi&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/msub&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;[&lt;/mo&gt;&lt;mi&gt;w&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;g&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;]&lt;/mo&gt;&lt;/mrow&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;T_1(o)=[w, b, y, g]&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;T&lt;/mi&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/msub&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;g&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;[&lt;/mo&gt;&lt;mi&gt;w&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;]&lt;/mo&gt;&lt;/mrow&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;T_1(g)=[w, r, y, o]&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;T&lt;/mi&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/msub&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;[&lt;/mo&gt;&lt;mi&gt;w&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;g&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;]&lt;/mo&gt;&lt;/mrow&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;T_1(r)=[w, g, y, b]&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;T&lt;/mi&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/msub&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;w&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;[&lt;/mo&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;g&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;]&lt;/mo&gt;&lt;/mrow&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;T_1(w)=[b, o, g, r]&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;T&lt;/mi&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/msub&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;[&lt;/mo&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;g&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;]&lt;/mo&gt;&lt;/mrow&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;T_1(y)=[b, r, g, o]&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;T&lt;/mi&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/msub&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;[&lt;/mo&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;[&lt;/mo&gt;&lt;mi&gt;w&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;g&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;]&lt;/mo&gt;&lt;/mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;]&lt;/mo&gt;&lt;/mrow&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;T_1(bo)=[[w, g, y, b]]&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
 (tipping one equator onto the other).&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;span
-class=&#34;math inline&#34;&gt;&lt;em&gt;T&lt;/em&gt;&lt;sub&gt;1&lt;/sub&gt;(&lt;em&gt;o&lt;/em&gt;&lt;em&gt;g&lt;/em&gt;) = [[&lt;em&gt;w&lt;/em&gt;,&lt;em&gt;o&lt;/em&gt;,&lt;em&gt;y&lt;/em&gt;,&lt;em&gt;r&lt;/em&gt;]]&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;span
-class=&#34;math inline&#34;&gt;&lt;em&gt;T&lt;/em&gt;&lt;sub&gt;1&lt;/sub&gt;(&lt;em&gt;g&lt;/em&gt;&lt;em&gt;r&lt;/em&gt;) = [[&lt;em&gt;w&lt;/em&gt;,&lt;em&gt;g&lt;/em&gt;,&lt;em&gt;y&lt;/em&gt;,&lt;em&gt;b&lt;/em&gt;]]&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;span
-class=&#34;math inline&#34;&gt;&lt;em&gt;T&lt;/em&gt;&lt;sub&gt;1&lt;/sub&gt;(&lt;em&gt;r&lt;/em&gt;&lt;em&gt;b&lt;/em&gt;) = [[&lt;em&gt;w&lt;/em&gt;,&lt;em&gt;r&lt;/em&gt;,&lt;em&gt;y&lt;/em&gt;,&lt;em&gt;o&lt;/em&gt;]]&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;span
-class=&#34;math inline&#34;&gt;&lt;em&gt;T&lt;/em&gt;&lt;sub&gt;1&lt;/sub&gt;(&lt;em&gt;w&lt;/em&gt;&lt;em&gt;b&lt;/em&gt;) = [[&lt;em&gt;y&lt;/em&gt;,&lt;em&gt;o&lt;/em&gt;,&lt;em&gt;w&lt;/em&gt;,&lt;em&gt;r&lt;/em&gt;]]&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;span
-class=&#34;math inline&#34;&gt;&lt;em&gt;T&lt;/em&gt;&lt;sub&gt;1&lt;/sub&gt;(&lt;em&gt;w&lt;/em&gt;&lt;em&gt;o&lt;/em&gt;) = [[&lt;em&gt;b&lt;/em&gt;,&lt;em&gt;y&lt;/em&gt;,&lt;em&gt;g&lt;/em&gt;,&lt;em&gt;w&lt;/em&gt;]]&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;span
-class=&#34;math inline&#34;&gt;&lt;em&gt;T&lt;/em&gt;&lt;sub&gt;1&lt;/sub&gt;(&lt;em&gt;w&lt;/em&gt;&lt;em&gt;g&lt;/em&gt;) = [[&lt;em&gt;w&lt;/em&gt;,&lt;em&gt;o&lt;/em&gt;,&lt;em&gt;y&lt;/em&gt;,&lt;em&gt;r&lt;/em&gt;]]&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;span
-class=&#34;math inline&#34;&gt;&lt;em&gt;T&lt;/em&gt;&lt;sub&gt;1&lt;/sub&gt;(&lt;em&gt;w&lt;/em&gt;&lt;em&gt;r&lt;/em&gt;) = [[&lt;em&gt;b&lt;/em&gt;,&lt;em&gt;w&lt;/em&gt;,&lt;em&gt;g&lt;/em&gt;,&lt;em&gt;y&lt;/em&gt;]]&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;span
-class=&#34;math inline&#34;&gt;&lt;em&gt;T&lt;/em&gt;&lt;sub&gt;1&lt;/sub&gt;(&lt;em&gt;y&lt;/em&gt;&lt;em&gt;b&lt;/em&gt;) = [[&lt;em&gt;w&lt;/em&gt;,&lt;em&gt;r&lt;/em&gt;,&lt;em&gt;y&lt;/em&gt;,&lt;em&gt;o&lt;/em&gt;]]&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;span
-class=&#34;math inline&#34;&gt;&lt;em&gt;T&lt;/em&gt;&lt;sub&gt;1&lt;/sub&gt;(&lt;em&gt;y&lt;/em&gt;&lt;em&gt;o&lt;/em&gt;) = [[&lt;em&gt;b&lt;/em&gt;,&lt;em&gt;y&lt;/em&gt;,&lt;em&gt;g&lt;/em&gt;,&lt;em&gt;w&lt;/em&gt;]]&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;span
-class=&#34;math inline&#34;&gt;&lt;em&gt;T&lt;/em&gt;&lt;sub&gt;1&lt;/sub&gt;(&lt;em&gt;y&lt;/em&gt;&lt;em&gt;g&lt;/em&gt;) = [[&lt;em&gt;y&lt;/em&gt;,&lt;em&gt;r&lt;/em&gt;,&lt;em&gt;w&lt;/em&gt;,&lt;em&gt;o&lt;/em&gt;]]&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;span
-class=&#34;math inline&#34;&gt;&lt;em&gt;T&lt;/em&gt;&lt;sub&gt;1&lt;/sub&gt;(&lt;em&gt;y&lt;/em&gt;&lt;em&gt;r&lt;/em&gt;) = [[&lt;em&gt;b&lt;/em&gt;,&lt;em&gt;w&lt;/em&gt;,&lt;em&gt;g&lt;/em&gt;,&lt;em&gt;y&lt;/em&gt;]]&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;T&lt;/mi&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/msub&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mi&gt;g&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;[&lt;/mo&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;[&lt;/mo&gt;&lt;mi&gt;w&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;]&lt;/mo&gt;&lt;/mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;]&lt;/mo&gt;&lt;/mrow&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;T_1(og)=[[w, o, y, r]]&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;T&lt;/mi&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/msub&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;g&lt;/mi&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;[&lt;/mo&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;[&lt;/mo&gt;&lt;mi&gt;w&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;g&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;]&lt;/mo&gt;&lt;/mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;]&lt;/mo&gt;&lt;/mrow&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;T_1(gr)=[[w, g, y, b]]&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;T&lt;/mi&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/msub&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;[&lt;/mo&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;[&lt;/mo&gt;&lt;mi&gt;w&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;]&lt;/mo&gt;&lt;/mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;]&lt;/mo&gt;&lt;/mrow&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;T_1(rb)=[[w, r, y, o]]&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;T&lt;/mi&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/msub&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;w&lt;/mi&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;[&lt;/mo&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;[&lt;/mo&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;w&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;]&lt;/mo&gt;&lt;/mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;]&lt;/mo&gt;&lt;/mrow&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;T_1(wb)=[[y, o, w, r]]&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;T&lt;/mi&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/msub&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;w&lt;/mi&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;[&lt;/mo&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;[&lt;/mo&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;g&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;w&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;]&lt;/mo&gt;&lt;/mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;]&lt;/mo&gt;&lt;/mrow&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;T_1(wo)=[[b, y, g, w]]&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;T&lt;/mi&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/msub&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;w&lt;/mi&gt;&lt;mi&gt;g&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;[&lt;/mo&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;[&lt;/mo&gt;&lt;mi&gt;w&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;]&lt;/mo&gt;&lt;/mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;]&lt;/mo&gt;&lt;/mrow&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;T_1(wg)=[[w, o, y, r]]&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;T&lt;/mi&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/msub&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;w&lt;/mi&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;[&lt;/mo&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;[&lt;/mo&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;w&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;g&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;]&lt;/mo&gt;&lt;/mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;]&lt;/mo&gt;&lt;/mrow&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;T_1(wr)=[[b, w, g, y]]&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;T&lt;/mi&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/msub&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;[&lt;/mo&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;[&lt;/mo&gt;&lt;mi&gt;w&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;]&lt;/mo&gt;&lt;/mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;]&lt;/mo&gt;&lt;/mrow&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;T_1(yb)=[[w, r, y, o]]&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;T&lt;/mi&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/msub&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;[&lt;/mo&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;[&lt;/mo&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;g&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;w&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;]&lt;/mo&gt;&lt;/mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;]&lt;/mo&gt;&lt;/mrow&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;T_1(yo)=[[b, y, g, w]]&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;T&lt;/mi&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/msub&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;mi&gt;g&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;[&lt;/mo&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;[&lt;/mo&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;w&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;]&lt;/mo&gt;&lt;/mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;]&lt;/mo&gt;&lt;/mrow&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;T_1(yg)=[[y, r, w, o]]&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;T&lt;/mi&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/msub&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;[&lt;/mo&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;[&lt;/mo&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;w&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;g&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;]&lt;/mo&gt;&lt;/mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;]&lt;/mo&gt;&lt;/mrow&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;T_1(yr)=[[b, w, g, y]]&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;p&gt;At this point we have defined a map on the 1-skeleton of &lt;span
-class=&#34;math inline&#34;&gt;𝕆&lt;/span&gt;. The only constraint we had to follow was
-functoriality, that the imgage of 1-paths had to be 1-paths between the
-images. The choices we made were motivated by the embedding of the
-Rubik’s cube in Euclidean 3-space.&lt;/p&gt;
+&lt;p&gt;At this point we have defined a map on the 1-skeleton of
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mi&gt;𝕆&lt;/mi&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;\ensuremath{\mathbb{O}}&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;.
+The only constraint we had to follow was functoriality, that the imgage
+of 1-paths had to be 1-paths between the images. The choices we made
+were motivated by the embedding of the Rubik’s cube in Euclidean
+3-space.&lt;/p&gt;
 &lt;div class=&#34;myclaim&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Claim 1&lt;/strong&gt;. &lt;em&gt;&lt;span
-class=&#34;math inline&#34;&gt;&lt;em&gt;T&lt;/em&gt;&lt;sub&gt;1&lt;/sub&gt;&lt;/span&gt; defines a principal
-circle bundle with connection over the 1-skeleton of &lt;span
-class=&#34;math inline&#34;&gt;𝕆&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Claim 1&lt;/strong&gt;.
+&lt;em&gt;&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;msub&gt;&lt;mi&gt;T&lt;/mi&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/msub&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;T_1&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
+defines a principal circle bundle with connection over the 1-skeleton of
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mi&gt;𝕆&lt;/mi&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;\ensuremath{\mathbb{O}}&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;p&gt;We now want to extend this map to all of &lt;span
-class=&#34;math inline&#34;&gt;𝕆&lt;/span&gt; by providing values for the eight faces.
-Here we will be guided by the classical relationship between a
-connection and its curvature. The curvature is computed from the
-connection, it doesn’t contain any new data. Classically the integral of
-curvature over a 2-cell is the holonomy given by transport around the
-boundary. Can we make this idea type check?&lt;/p&gt;
-&lt;p&gt;Take the closed path &lt;span
-class=&#34;math inline&#34;&gt;&lt;em&gt;w&lt;/em&gt;&lt;em&gt;b&lt;/em&gt; ⋅ &lt;em&gt;b&lt;/em&gt;&lt;em&gt;o&lt;/em&gt; ⋅ &lt;em&gt;o&lt;/em&gt;&lt;em&gt;w&lt;/em&gt;&lt;/span&gt;
-that begins and ends at &lt;span class=&#34;math inline&#34;&gt;&lt;em&gt;w&lt;/em&gt;&lt;/span&gt;,
-which bounds the face &lt;span
-class=&#34;math inline&#34;&gt;&lt;em&gt;w&lt;/em&gt;&lt;em&gt;b&lt;/em&gt;&lt;em&gt;o&lt;/em&gt;&lt;/span&gt;. We can
-calculate that &lt;span
-class=&#34;math inline&#34;&gt;&lt;em&gt;T&lt;/em&gt;&lt;sub&gt;1&lt;/sub&gt;(&lt;em&gt;w&lt;/em&gt;&lt;em&gt;b&lt;/em&gt;) ⋅ &lt;em&gt;T&lt;/em&gt;&lt;sub&gt;1&lt;/sub&gt;(&lt;em&gt;b&lt;/em&gt;&lt;em&gt;o&lt;/em&gt;) ⋅ &lt;em&gt;T&lt;/em&gt;&lt;sub&gt;1&lt;/sub&gt;(&lt;em&gt;o&lt;/em&gt;&lt;em&gt;w&lt;/em&gt;) = [[&lt;em&gt;r&lt;/em&gt;,&lt;em&gt;b&lt;/em&gt;,&lt;em&gt;o&lt;/em&gt;,&lt;em&gt;g&lt;/em&gt;]] = &lt;em&gt;R&lt;/em&gt;&lt;/span&gt;,
-rotation clockwise one notch. A 2-path would then be a homotopy &lt;span
-class=&#34;math inline&#34;&gt;refl&lt;sub&gt;&lt;em&gt;w&lt;/em&gt;&lt;/sub&gt; = &lt;em&gt;R&lt;/em&gt;&lt;/span&gt; which
-we called &lt;span class=&#34;math inline&#34;&gt;&lt;em&gt;R&lt;/em&gt;′&lt;/span&gt;. In a similar way
-all 8 faces (so long as the vertices in its name are listed in clockwise
-order) map to &lt;span class=&#34;math inline&#34;&gt;&lt;em&gt;R&lt;/em&gt;′&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;We now want to extend this map to all of
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mi&gt;𝕆&lt;/mi&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;\ensuremath{\mathbb{O}}&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
+by providing values for the eight faces. Here we will be guided by the
+classical relationship between a connection and its curvature. The
+curvature is computed from the connection, it doesn’t contain any new
+data. Classically the integral of curvature over a 2-cell is the
+holonomy given by transport around the boundary. Can we make this idea
+type check?&lt;/p&gt;
+&lt;p&gt;Take the closed path
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;w&lt;/mi&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mo&gt;⋅&lt;/mo&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mo&gt;⋅&lt;/mo&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mi&gt;w&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;wb\cdot bo\cdot ow&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
+that begins and ends at
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mi&gt;w&lt;/mi&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;w&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;,
+which bounds the face
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;w&lt;/mi&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;wbo&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;.
+We can calculate that
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;T&lt;/mi&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/msub&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;w&lt;/mi&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mo&gt;⋅&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;T&lt;/mi&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/msub&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mo&gt;⋅&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;T&lt;/mi&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/msub&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mi&gt;w&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;[&lt;/mo&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;[&lt;/mo&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;g&lt;/mi&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;]&lt;/mo&gt;&lt;/mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;]&lt;/mo&gt;&lt;/mrow&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mi&gt;R&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;T_1(wb)\cdot T_1(bo)\cdot T_1(ow) = [[r, b, o, g]] = R&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;,
+rotation clockwise one notch. A 2-path would then be a homotopy
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mrow&gt;&lt;mi&gt;𝗋&lt;/mi&gt;&lt;mi&gt;𝖾&lt;/mi&gt;&lt;mi&gt;𝖿&lt;/mi&gt;&lt;mi&gt;𝗅&lt;/mi&gt;&lt;/mrow&gt;&lt;mi&gt;w&lt;/mi&gt;&lt;/msub&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mi&gt;R&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;\ensuremath{\mathsf{refl}}_w=R&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
+which we called
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;R&lt;/mi&gt;&lt;mi&gt;′&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;R&amp;#39;&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;.
+In a similar way all 8 faces (so long as the vertices in its name are
+listed in clockwise order) map to
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;R&lt;/mi&gt;&lt;mi&gt;′&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;R&amp;#39;&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;.&lt;/p&gt;
 &lt;p&gt;This is all classical combinatorial stuff, but in a HoTT package. The
-fact that &lt;span
-class=&#34;math inline&#34;&gt;BAut&lt;sub&gt;1&lt;/sub&gt;(&lt;em&gt;S&lt;/em&gt;&lt;sup&gt;1&lt;/sup&gt;)&lt;/span&gt; is a
-2-type gives us someplace to send all the dimensions of the HIT &lt;span
-class=&#34;math inline&#34;&gt;𝕆&lt;/span&gt;.&lt;/p&gt;
+fact that
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mrow&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;B&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;A&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;u&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;t&lt;/mi&gt;&lt;/mrow&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/msub&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;prefix&#34;&gt;(&lt;/mo&gt;&lt;msup&gt;&lt;mi&gt;S&lt;/mi&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/msup&gt;&lt;mo stretchy=&#34;true&#34; form=&#34;postfix&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;\mathrm{BAut}_1(S^1)&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;
+is a 2-type gives us someplace to send all the dimensions of the HIT
+&lt;math display=&#34;inline&#34; xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mi&gt;𝕆&lt;/mi&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;\ensuremath{\mathbb{O}}&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;.&lt;/p&gt;
 &lt;div id=&#34;refs&#34; class=&#34;references csl-bib-body hanging-indent&#34;
 data-entry-spacing=&#34;0&#34; role=&#34;list&#34;&gt;
 &lt;div id=&#34;ref-talbott&#34; class=&#34;csl-entry&#34; role=&#34;listitem&#34;&gt;

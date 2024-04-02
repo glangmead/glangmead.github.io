@@ -21,7 +21,6 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
     /* CSS for citations */
     div.csl-bib-body { }
     div.csl-entry {
@@ -54,8 +53,8 @@
     text-align: center;
   }
   </style>
-  <p><span class="math inline"></span> <span
-  class="math inline"></span></p>
+  <p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow></mrow><annotation encoding="application/x-tex">\newcommand{\textesh}{∫}</annotation></semantics></math>
+  <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow></mrow><annotation encoding="application/x-tex">\newcommand{\ensuremath}{}</annotation></semantics></math></p>
 </head>
 <body>
 <nav id="TOC" role="doc-toc">
@@ -162,289 +161,299 @@ more use cases into our construction. And lastly we will hopefully gain
 a lot of insight into the inner workings of classical differential
 geometry.</p>
 <p>Classically, functions on the level of points such as a smooth
-function between smooth manifolds <span
-class="math inline"><em>f</em> : <em>M</em> → <em>N</em></span> can be
-differentiated to yield a new function that acts on both points and
-tangent vectors: <span
-class="math inline"><em>T</em><em>f</em> : <em>T</em><em>M</em> → <em>T</em><em>N</em></span>.
-There is no new data in <span
-class="math inline"><em>T</em><em>f</em></span>, its action on vectors
-is computed in terms of its action on points. We package the derived (no
-pun) data into a new function that acts on both points and vectors.
-Passing through the heuristic we proposed, we would instead package the
-derived information as the action on finite-length paths in <span
-class="math inline"><em>M</em></span>. Tangent vectors are equivalence
-classes of such paths anyway, so it seems no information is lost. This
-would mean that taking the derivative of a smooth function is the same
-as to extract its action on paths.</p>
+function between smooth manifolds
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>:</mo><mi>M</mi><mo>→</mo><mi>N</mi></mrow><annotation encoding="application/x-tex">f:M\to N</annotation></semantics></math>
+can be differentiated to yield a new function that acts on both points
+and tangent vectors:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mi>f</mi><mo>:</mo><mi>T</mi><mi>M</mi><mo>→</mo><mi>T</mi><mi>N</mi></mrow><annotation encoding="application/x-tex">Tf:TM\to TN</annotation></semantics></math>.
+There is no new data in
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mi>f</mi></mrow><annotation encoding="application/x-tex">Tf</annotation></semantics></math>,
+its action on vectors is computed in terms of its action on points. We
+package the derived (no pun) data into a new function that acts on both
+points and vectors. Passing through the heuristic we proposed, we would
+instead package the derived information as the action on finite-length
+paths in
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>M</mi><annotation encoding="application/x-tex">M</annotation></semantics></math>.
+Tangent vectors are equivalence classes of such paths anyway, so it
+seems no information is lost. This would mean that taking the derivative
+of a smooth function is the same as to extract its action on paths.</p>
 <p>The derivative is a particular action on paths, one that is entailed
 in the original function on points. Classically the derivative can be
 pulled apart to examine <em>only</em> its action on paths, often called
-<span class="math inline"><em>d</em><em>f</em></span>. This is a 1-form,
-meaning a section of the cotangent bundle. A 1-form is an object defined
-on all of <span class="math inline"><em>M</em></span> which can be
-integrated over a path to give a number. Again, a function on paths. An
-arbitrary 1-form is some function on paths, and <span
-class="math inline"><em>d</em><em>f</em></span> is one such.</p>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mi>f</mi></mrow><annotation encoding="application/x-tex">df</annotation></semantics></math>.
+This is a 1-form, meaning a section of the cotangent bundle. A 1-form is
+an object defined on all of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>M</mi><annotation encoding="application/x-tex">M</annotation></semantics></math>
+which can be integrated over a path to give a number. Again, a function
+on paths. An arbitrary 1-form is some function on paths, and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mi>f</mi></mrow><annotation encoding="application/x-tex">df</annotation></semantics></math>
+is one such.</p>
 <p>HoTT also has functions, but those functions always act in all the
 available dimensions of the type all at once. It is inherently a
-function on points, paths, and higher paths. We can look at what <span
-class="math inline"><em>f</em></span> does to paths using the
-construction <span class="math inline">ap<em>f</em></span>. At this
-point there is an important check we can make. <span
-class="math inline"><em>d</em><em>f</em></span> has a few important
-properties, the most characteristic of which is the Leibniz, or product
-rule. Is this visible in HoTT?</p>
-<p>The Leibniz rule states that if <span
-class="math inline"><em>f</em>, <em>g</em> : <em>M</em> → ℝ</span> are
-two smooth functions to the real numbers then <span
-class="math inline"><em>d</em>(<em>f</em><em>g</em>) = <em>f</em><em>d</em><em>g</em> + <em>g</em><em>d</em><em>f</em></span>.
-Here <span class="math inline"><em>f</em><em>g</em></span> is the
-function formed by taking the pointwise product of <span
-class="math inline"><em>f</em></span> and <span
-class="math inline"><em>g</em></span>. To examine this situation in HoTT
-we need type-theoretic functions <span
-class="math inline"><em>f</em>, <em>g</em> : <em>M</em> → <em>B</em></span>
-from some type <span class="math inline"><em>M</em></span> to an H-space
-<span class="math inline"><em>B</em></span>.</p>
+function on points, paths, and higher paths. We can look at what
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>f</mi><annotation encoding="application/x-tex">f</annotation></semantics></math>
+does to paths using the construction
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="sans-serif">𝖺𝗉</mtext><mi>f</mi></mrow><annotation encoding="application/x-tex">\ensuremath{\textsf{ap}}f</annotation></semantics></math>.
+At this point there is an important check we can make.
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mi>f</mi></mrow><annotation encoding="application/x-tex">df</annotation></semantics></math>
+has a few important properties, the most characteristic of which is the
+Leibniz, or product rule. Is this visible in HoTT?</p>
+<p>The Leibniz rule states that if
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>,</mo><mi>g</mi><mo>:</mo><mi>M</mi><mo>→</mo><mi>ℝ</mi></mrow><annotation encoding="application/x-tex">f, g:M\to \ensuremath{\mathbb{R}}</annotation></semantics></math>
+are two smooth functions to the real numbers then
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>f</mi><mi>g</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mi>f</mi><mi>d</mi><mi>g</mi><mo>+</mo><mi>g</mi><mi>d</mi><mi>f</mi></mrow><annotation encoding="application/x-tex">d(fg) = fdg + gdf</annotation></semantics></math>.
+Here
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mi>g</mi></mrow><annotation encoding="application/x-tex">fg</annotation></semantics></math>
+is the function formed by taking the pointwise product of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>f</mi><annotation encoding="application/x-tex">f</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>g</mi><annotation encoding="application/x-tex">g</annotation></semantics></math>.
+To examine this situation in HoTT we need type-theoretic functions
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>,</mo><mi>g</mi><mo>:</mo><mi>M</mi><mo>→</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">f, g:M\to B</annotation></semantics></math>
+from some type
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>M</mi><annotation encoding="application/x-tex">M</annotation></semantics></math>
+to an H-space
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>.</p>
 <div class="mydef">
 <p><strong>Definition 1</strong>. <em>An H-space structure on a pointed
-type <span class="math inline">(<em>B</em>,<em>b</em>)</span> consists
-of</em></p>
+type
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">(</mo><mi>B</mi><mo>,</mo><mi>b</mi><mo stretchy="true" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(B,b)</annotation></semantics></math>
+consists of</em></p>
 <ol>
-<li><p><em>A binary operation <span
-class="math inline"><em>μ</em> : <em>B</em> → <em>B</em> → <em>B</em></span></em></p></li>
-<li><p><em>A left unit law <span
-class="math inline"><em>μ</em><sub><em>l</em></sub> : <em>μ</em>(pt,−) = id<sub><em>B</em></sub></span></em></p></li>
-<li><p><em>A right unit law <span
-class="math inline"><em>μ</em><sub><em>r</em></sub> : <em>μ</em>(−,pt) = id<sub><em>B</em></sub></span></em></p></li>
-<li><p><em>A coherence <span
-class="math inline"><em>μ</em><sub><em>l</em><em>r</em></sub> : <em>μ</em><sub><em>l</em></sub>(pt)=<sub><em>μ</em>(pt,pt) = pt</sub><em>μ</em><sub><em>r</em></sub>(pt)</span></em></p></li>
-<li><p><em>A proof of left- and right- invertibility: <span
-class="math inline"><em>μ</em>(<em>a</em>,−) : <em>A</em> ≃ <em>A</em></span>,
-<span
-class="math inline"><em>μ</em>(−,<em>b</em>) : <em>A</em> ≃ <em>A</em></span></em></p></li>
+<li><p><em>A binary operation
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>:</mo><mi>B</mi><mo>→</mo><mi>B</mi><mo>→</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">\mu:B\to B\to B</annotation></semantics></math></em></p></li>
+<li><p><em>A left unit law
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>μ</mi><mi>l</mi></msub><mo>:</mo><mi>μ</mi><mrow><mo stretchy="true" form="prefix">(</mo><mrow><mi mathvariant="normal">p</mi><mi mathvariant="normal">t</mi></mrow><mo>,</mo><mo>−</mo><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><msub><mtext mathvariant="normal">id</mtext><mi>B</mi></msub></mrow><annotation encoding="application/x-tex">\mu_l:\mu(\mathrm{pt},-)=\ensuremath{\text{id}}_B</annotation></semantics></math></em></p></li>
+<li><p><em>A right unit law
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>μ</mi><mi>r</mi></msub><mo>:</mo><mi>μ</mi><mrow><mo stretchy="true" form="prefix">(</mo><mo>−</mo><mo>,</mo><mrow><mi mathvariant="normal">p</mi><mi mathvariant="normal">t</mi></mrow><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><msub><mtext mathvariant="normal">id</mtext><mi>B</mi></msub></mrow><annotation encoding="application/x-tex">\mu_r:\mu(-,\mathrm{pt})=\ensuremath{\text{id}}_B</annotation></semantics></math></em></p></li>
+<li><p><em>A coherence
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>μ</mi><mrow><mi>l</mi><mi>r</mi></mrow></msub><mo>:</mo><msub><mi>μ</mi><mi>l</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><mrow><mi mathvariant="normal">p</mi><mi mathvariant="normal">t</mi></mrow><mo stretchy="true" form="postfix">)</mo></mrow><msub><mo>=</mo><mrow><mi>μ</mi><mrow><mo stretchy="true" form="prefix">(</mo><mrow><mi mathvariant="normal">p</mi><mi mathvariant="normal">t</mi></mrow><mo>,</mo><mrow><mi mathvariant="normal">p</mi><mi mathvariant="normal">t</mi></mrow><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mrow><mi mathvariant="normal">p</mi><mi mathvariant="normal">t</mi></mrow></mrow></msub><msub><mi>μ</mi><mi>r</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><mrow><mi mathvariant="normal">p</mi><mi mathvariant="normal">t</mi></mrow><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\mu_{lr}:\mu_l(\mathrm{pt})=_{\mu(\mathrm{pt},\mathrm{pt})=\mathrm{pt}}\mu_r(\mathrm{pt})</annotation></semantics></math></em></p></li>
+<li><p><em>A proof of left- and right- invertibility:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>a</mi><mo>,</mo><mo>−</mo><mo stretchy="true" form="postfix">)</mo></mrow><mo>:</mo><mi>A</mi><mo>≃</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">\mu(a,-):A\simeq A</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mrow><mo stretchy="true" form="prefix">(</mo><mo>−</mo><mo>,</mo><mi>b</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>:</mo><mi>A</mi><mo>≃</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">\mu(-, b):A\simeq A</annotation></semantics></math></em></p></li>
 </ol>
 </div>
-<p>The analogue of the algebra of functions to <span
-class="math inline">ℝ</span> is:</p>
+<p>The analogue of the algebra of functions to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ℝ</mi><annotation encoding="application/x-tex">\ensuremath{\mathbb{R}}</annotation></semantics></math>
+is:</p>
 <div class="myprop">
-<p><strong>Proposition 1</strong>. <em>For any type <span
-class="math inline"><em>M</em></span> and H-space <span
-class="math inline"><em>B</em></span> the type of maps <span
-class="math inline"><em>M</em> → <em>B</em></span> with base point the
-constant map is an H-space under pointwise multiplication.</em></p>
+<p><strong>Proposition 1</strong>. <em>For any type
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>M</mi><annotation encoding="application/x-tex">M</annotation></semantics></math>
+and H-space
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+the type of maps
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><mo>→</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">M\to B</annotation></semantics></math>
+with base point the constant map is an H-space under pointwise
+multiplication.</em></p>
 </div>
 <p>We claim thact the following deserves to be called the Leibniz
 rule.</p>
 <div class="mylemma">
-<p><strong>Lemma 1</strong>. <em>For any type <span
-class="math inline"><em>M</em></span> and H-space <span
-class="math inline"><em>B</em></span> and maps <span
-class="math inline"><em>f</em>, <em>g</em> : <em>M</em> → <em>B</em></span>
-and path <span
-class="math inline"><em>p</em> : <em>x</em>=<sub><em>M</em></sub><em>y</em></span>
-we have <span
-class="math inline">ap(<em>f</em><em>g</em>)(<em>p</em>) = <em>μ</em>(<em>f</em>(<em>x</em>),ap(<em>g</em>)(<em>p</em>)) ⋅ <em>μ</em>(ap(<em>f</em>)(<em>p</em>),<em>g</em>(<em>y</em>))</span>.
-(<span class="math inline">⋅</span> is concatenation of paths.)</em></p>
+<p><strong>Lemma 1</strong>. <em>For any type
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>M</mi><annotation encoding="application/x-tex">M</annotation></semantics></math>
+and H-space
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+and maps
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>,</mo><mi>g</mi><mo>:</mo><mi>M</mi><mo>→</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">f,g:M\to B</annotation></semantics></math>
+and path
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>:</mo><mi>x</mi><msub><mo>=</mo><mi>M</mi></msub><mi>y</mi></mrow><annotation encoding="application/x-tex">p:x=_M y</annotation></semantics></math>
+we have
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="sans-serif">𝖺𝗉</mtext><mrow><mo stretchy="true" form="prefix">(</mo><mi>f</mi><mi>g</mi><mo stretchy="true" form="postfix">)</mo></mrow><mrow><mo stretchy="true" form="prefix">(</mo><mi>p</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mi>μ</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>f</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>x</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>,</mo><mtext mathvariant="sans-serif">𝖺𝗉</mtext><mrow><mo stretchy="true" form="prefix">(</mo><mi>g</mi><mo stretchy="true" form="postfix">)</mo></mrow><mrow><mo stretchy="true" form="prefix">(</mo><mi>p</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="true" form="postfix">)</mo></mrow><mo>⋅</mo><mi>μ</mi><mrow><mo stretchy="true" form="prefix">(</mo><mtext mathvariant="sans-serif">𝖺𝗉</mtext><mrow><mo stretchy="true" form="prefix">(</mo><mi>f</mi><mo stretchy="true" form="postfix">)</mo></mrow><mrow><mo stretchy="true" form="prefix">(</mo><mi>p</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>,</mo><mi>g</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>y</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\ensuremath{\textsf{ap}}(fg)(p)=\mu(f(x),\ensuremath{\textsf{ap}}(g)(p)) \cdot \mu(\ensuremath{\textsf{ap}}(f)(p),g(y))</annotation></semantics></math>.
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>⋅</mo><annotation encoding="application/x-tex">\cdot</annotation></semantics></math>
+is concatenation of paths.)</em></p>
 </div>
-<p>The notation is temporarily sloppy, but by <span
-class="math inline"><em>μ</em>(<em>a</em>,<em>p</em>)</span> for a path
-<span class="math inline"><em>p</em></span> we mean the functorial
-action of multiplication by <span class="math inline"><em>a</em></span>
+<p>The notation is temporarily sloppy, but by
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>a</mi><mo>,</mo><mi>p</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\mu(a, p)</annotation></semantics></math>
+for a path
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math>
+we mean the functorial action of multiplication by
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>
 on the left, on a path.g</p>
 <p><img src="./09052d33113b7087f7abc8b04e220a13697b45a3.png"
 alt="image" /></p>
 <figure>
 <img src="./45744937ac561c6ce05f971621a980d63ad6d2e1.png" />
-<figcaption>The HIT <span
-class="math inline"><em>C</em><sub>4</sub></span> which is one of the
-types in <span
-class="math inline">BAut<sub>1</sub>(<em>S</em><sup>1</sup>)</span></figcaption>
+<figcaption>The HIT
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>C</mi><mn>4</mn></msub><annotation encoding="application/x-tex">C_4</annotation></semantics></math>
+which is one of the types in
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mrow><mi mathvariant="normal">B</mi><mi mathvariant="normal">A</mi><mi mathvariant="normal">u</mi><mi mathvariant="normal">t</mi></mrow><mn>1</mn></msub><mrow><mo stretchy="true" form="prefix">(</mo><msup><mi>S</mi><mn>1</mn></msup><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\mathrm{BAut}_1(S^1)</annotation></semantics></math></figcaption>
 </figure>
 <figure>
 <img src="./3c3983eb70861a2d7ffe23e2afa96e12c7df558c.png" />
-<figcaption>The HIT <span
-class="math inline"><em>Σ</em><em>C</em><sub>4</sub></span> which has 2
-points, 4 1-paths, 4 2-paths.</figcaption>
+<figcaption>The HIT
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Σ</mi><msub><mi>C</mi><mn>4</mn></msub></mrow><annotation encoding="application/x-tex">\Sigma C_4</annotation></semantics></math>
+which has 2 points, 4 1-paths, 4 2-paths.</figcaption>
 </figure>
 <figure>
 <img src="./742ee3a0cc0d615082501f31cfc529818a29c2e5.png" />
-<figcaption>The HIT <span
-class="math inline">{<em>w</em>, <em>y</em>} * <em>C</em><sub>4</sub></span>
+<figcaption>The HIT
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">{</mo><mi>w</mi><mo>,</mo><mi>y</mi><mo stretchy="false" form="postfix">}</mo><mo>*</mo><msub><mi>C</mi><mn>4</mn></msub></mrow><annotation encoding="application/x-tex">\{w, y\}* C_4</annotation></semantics></math>
 which has 6 points, 12 1-paths, 8 2-paths.</figcaption>
 </figure>
 <h1 data-number="3" id="the-tangent-bundle-of-the-2-sphere"><span
 class="header-section-number">3</span> The tangent bundle of the
 2-sphere</h1>
-<p>The classical 2-sphere embedded in <span
-class="math inline">ℝ<sup>3</sup></span> is curved at every point. But
-we can quantize this curvature by integrating it over a triangulation.
-Consider two great circles at 90 degree angles to each other, passing
-through the north and south pole, and take the equator. Convert this
-data into a combinatorial structure:</p>
+<p>The classical 2-sphere embedded in
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>ℝ</mi><mn>3</mn></msup><annotation encoding="application/x-tex">\ensuremath{\mathbb{R}}^3</annotation></semantics></math>
+is curved at every point. But we can quantize this curvature by
+integrating it over a triangulation. Consider two great circles at 90
+degree angles to each other, passing through the north and south pole,
+and take the equator. Convert this data into a combinatorial
+structure:</p>
 <ol>
-<li><p>The set of vertices <span
-class="math inline">{<em>w</em>, <em>y</em>, <em>b</em>, <em>g</em>, <em>r</em>, <em>o</em>, <em>y</em>}</span>
-where <span class="math inline"><em>w</em></span> is the north pole,
-<span class="math inline"><em>y</em></span> the south pole, and around
-the equator are the points of intersection of the three circles, labeled
-in eastward order <span
-class="math inline">{<em>b</em>, <em>o</em>, <em>g</em>, <em>r</em>}</span>.
+<li><p>The set of vertices
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">{</mo><mi>w</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>g</mi><mo>,</mo><mi>r</mi><mo>,</mo><mi>o</mi><mo>,</mo><mi>y</mi><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\{w, y, b, g, r, o, y\}</annotation></semantics></math>
+where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>w</mi><annotation encoding="application/x-tex">w</annotation></semantics></math>
+is the north pole,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>y</mi><annotation encoding="application/x-tex">y</annotation></semantics></math>
+the south pole, and around the equator are the points of intersection of
+the three circles, labeled in eastward order
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">{</mo><mi>b</mi><mo>,</mo><mi>o</mi><mo>,</mo><mi>g</mi><mo>,</mo><mi>r</mi><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\{b, o, g, r\}</annotation></semantics></math>.
 The names come from the colors on a standard Rubik’s cube.</p></li>
 <li><p>The set of edges generated by the direct paths between adjacent
-vertices, denoted <span
-class="math inline">{<em>w</em><em>b</em>}, {<em>w</em><em>o</em>}</span>
+vertices, denoted
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">{</mo><mi>w</mi><mi>b</mi><mo stretchy="false" form="postfix">}</mo><mo>,</mo><mo stretchy="false" form="prefix">{</mo><mi>w</mi><mi>o</mi><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\{wb\}, \{wo\}</annotation></semantics></math>
 and so on.</p></li>
 <li><p>The set of faces generated by the triangular regions bounded by
-three vertices and three paths, denoted <span
-class="math inline">{<em>w</em><em>b</em><em>o</em>}, {<em>w</em><em>o</em><em>g</em>}</span>
+three vertices and three paths, denoted
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">{</mo><mi>w</mi><mi>b</mi><mi>o</mi><mo stretchy="false" form="postfix">}</mo><mo>,</mo><mo stretchy="false" form="prefix">{</mo><mi>w</mi><mi>o</mi><mi>g</mi><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\{wbo\}, \{wog\}</annotation></semantics></math>
 and so on.</p></li>
 </ol>
-<p>Parallel transport in the tangent bundle around the <span
-class="math inline">{<em>w</em><em>o</em><em>g</em>}</span> face will
-rotate a tangent vector by 90 degrees clockwise. This is true for all
-the triangular faces and so the sum of the action of all 8 faces will be
-two rotations around the circle. We can compare this result to the
-standard smooth Gauss-Bonnet theorem.</p>
+<p>Parallel transport in the tangent bundle around the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">{</mo><mi>w</mi><mi>o</mi><mi>g</mi><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\{wog\}</annotation></semantics></math>
+face will rotate a tangent vector by 90 degrees clockwise. This is true
+for all the triangular faces and so the sum of the action of all 8 faces
+will be two rotations around the circle. We can compare this result to
+the standard smooth Gauss-Bonnet theorem.</p>
 <p>We can leverage the syntax of HoTT by encoding the above in a map
 between HITs.</p>
 <div class="mydef">
-<p><strong>Definition 2</strong>. <em>Denote by <span
-class="math inline"><em>C</em><sub>4</sub></span> the join <span
-class="math inline">{<em>b</em>, <em>g</em>} * {<em>r</em>, <em>o</em>}</span>.
-This is the equator of the discrete octahedral sphere. Denote by <span
-class="math inline">𝕆</span> the octahedron given by the join <span
-class="math inline">{<em>w</em>, <em>y</em>} * <em>C</em><sub>4</sub></span>.</em></p>
+<p><strong>Definition 2</strong>. <em>Denote by
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>C</mi><mn>4</mn></msub><annotation encoding="application/x-tex">C_4</annotation></semantics></math>
+the join
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">{</mo><mi>b</mi><mo>,</mo><mi>g</mi><mo stretchy="false" form="postfix">}</mo><mo>*</mo><mo stretchy="false" form="prefix">{</mo><mi>r</mi><mo>,</mo><mi>o</mi><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\{b, g\}*\{r, o\}</annotation></semantics></math>.
+This is the equator of the discrete octahedral sphere. Denote by
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>𝕆</mi><annotation encoding="application/x-tex">\ensuremath{\mathbb{O}}</annotation></semantics></math>
+the octahedron given by the join
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">{</mo><mi>w</mi><mo>,</mo><mi>y</mi><mo stretchy="false" form="postfix">}</mo><mo>*</mo><msub><mi>C</mi><mn>4</mn></msub></mrow><annotation encoding="application/x-tex">\{w, y\}* C_4</annotation></semantics></math>.</em></p>
 </div>
 <div class="mylemma">
-<p><strong>Lemma 2</strong>. <em><span
-class="math inline">(<em>C</em><sub>4</sub>,<em>b</em>) ≡ <em>S</em><sup>1</sup></span>.</em></p>
+<p><strong>Lemma 2</strong>.
+<em><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>C</mi><mn>4</mn></msub><mo>,</mo><mi>b</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>≃</mo><msup><mi>S</mi><mn>1</mn></msup></mrow><annotation encoding="application/x-tex">(C_4, b)\simeq S^1</annotation></semantics></math>.</em></p>
 </div>
 <div class="mylemma">
-<p><strong>Lemma 3</strong>. <em><span
-class="math inline">𝕆 ≡ <em>S</em><sup>2</sup></span>.</em></p>
+<p><strong>Lemma 3</strong>.
+<em><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝕆</mi><mo>≃</mo><msup><mi>S</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\ensuremath{\mathbb{O}}\simeq S^2</annotation></semantics></math>.</em></p>
 </div>
 <div class="mydef">
-<p><strong>Definition 3</strong>. <em>Let <span
-class="math inline">$\mathrm{BAut}_1(S^1)\stackrel{\textup{def}}{=}\sum_{X:\mathcal{U}}||X=S^1||_0.$</span></em></p>
+<p><strong>Definition 3</strong>. <em>Let
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mrow><mi mathvariant="normal">B</mi><mi mathvariant="normal">A</mi><mi mathvariant="normal">u</mi><mi mathvariant="normal">t</mi></mrow><mn>1</mn></msub><mrow><mo stretchy="true" form="prefix">(</mo><msup><mi>S</mi><mn>1</mn></msup><mo stretchy="true" form="postfix">)</mo></mrow><mover><mo>=</mo><mrow><mi mathvariant="normal">d</mi><mi mathvariant="normal">e</mi><mi mathvariant="normal">f</mi></mrow></mover><msub><mo>∑</mo><mrow><mi>X</mi><mo>:</mo><mi>𝒰</mi></mrow></msub><mrow><mo stretchy="true" form="prefix">|</mo><mo stretchy="true" form="postfix">|</mo></mrow><mi>X</mi><mo>=</mo><msup><mi>S</mi><mn>1</mn></msup><msub><mrow><mo stretchy="true" form="prefix">|</mo><mo stretchy="true" form="postfix">|</mo></mrow><mn>0</mn></msub><mi>.</mi></mrow><annotation encoding="application/x-tex">\mathrm{BAut}_1(S^1)\stackrel{\mathrm{def}}{=}\sum_{X:\mathcal{U}}||X=S^1||_0.</annotation></semantics></math></em></p>
 </div>
 <div class="mylemma">
-<p><strong>Lemma 4</strong>. <em>We have <span
-class="math inline">(<em>C</em><sub>4</sub>,||{<em>b</em>,<em>g</em>,<em>r</em>,<em>o</em>}↦base,<em>b</em><em>r</em>↦loop,{<em>r</em><em>g</em>,<em>g</em><em>o</em>,<em>o</em><em>b</em>}↦refl||<sub>0</sub>) : BAut<sub>1</sub>(<em>S</em><sup>1</sup>)</span></em></p>
+<p><strong>Lemma 4</strong>. <em>We have
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>C</mi><mn>4</mn></msub><mo>,</mo><mrow><mo stretchy="true" form="prefix">|</mo><mo stretchy="true" form="postfix">|</mo></mrow><mo stretchy="false" form="prefix">{</mo><mi>b</mi><mo>,</mo><mi>g</mi><mo>,</mo><mi>r</mi><mo>,</mo><mi>o</mi><mo stretchy="false" form="postfix">}</mo><mo>↦</mo><mrow><mi>𝖻</mi><mi>𝖺</mi><mi>𝗌</mi><mi>𝖾</mi></mrow><mo>,</mo><mi>b</mi><mi>r</mi><mo>↦</mo><mrow><mi>𝗅</mi><mi>𝗈</mi><mi>𝗈</mi><mi>𝗉</mi></mrow><mo>,</mo><mo stretchy="false" form="prefix">{</mo><mi>r</mi><mi>g</mi><mo>,</mo><mi>g</mi><mi>o</mi><mo>,</mo><mi>o</mi><mi>b</mi><mo stretchy="false" form="postfix">}</mo><mo>↦</mo><mrow><mi>𝗋</mi><mi>𝖾</mi><mi>𝖿</mi><mi>𝗅</mi></mrow><msub><mrow><mo stretchy="true" form="prefix">|</mo><mo stretchy="true" form="postfix">|</mo></mrow><mn>0</mn></msub><mo stretchy="true" form="postfix">)</mo></mrow><mo>:</mo><msub><mrow><mi mathvariant="normal">B</mi><mi mathvariant="normal">A</mi><mi mathvariant="normal">u</mi><mi mathvariant="normal">t</mi></mrow><mn>1</mn></msub><mrow><mo stretchy="true" form="prefix">(</mo><msup><mi>S</mi><mn>1</mn></msup><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">(C_4, ||\{b, g, r, o\}\mapsto \mathsf{base}, br\mapsto \mathsf{loop}, \{rg, go, ob\}\mapsto \ensuremath{\mathsf{refl}}||_0):\mathrm{BAut}_1(S^1)</annotation></semantics></math></em></p>
 </div>
 <div class="mylemma">
-<p><strong>Lemma 5</strong>. <em><span
-class="math inline">BAut<sub>1</sub>(<em>S</em><sup>1</sup>)</span> is
-equivalent to the type of <span
-class="math inline"><em>S</em><sup>1</sup></span>-torsors, and to the
-type of <span
-class="math inline">(<em>C</em><sub>4</sub>,<em>b</em>)</span>-torsors.</em></p>
+<p><strong>Lemma 5</strong>.
+<em><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mrow><mi mathvariant="normal">B</mi><mi mathvariant="normal">A</mi><mi mathvariant="normal">u</mi><mi mathvariant="normal">t</mi></mrow><mn>1</mn></msub><mrow><mo stretchy="true" form="prefix">(</mo><msup><mi>S</mi><mn>1</mn></msup><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\mathrm{BAut}_1(S^1)</annotation></semantics></math>
+is equivalent to the type of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>S</mi><mn>1</mn></msup><annotation encoding="application/x-tex">S^1</annotation></semantics></math>-torsors,
+and to the type of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>C</mi><mn>4</mn></msub><mo>,</mo><mi>b</mi><mo stretchy="true" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(C_4,b)</annotation></semantics></math>-torsors.</em></p>
 </div>
-<p>We will denote other terms of <span
-class="math inline">BAut<sub>1</sub>(<em>S</em><sup>1</sup>)</span> with
-notation like <span
-class="math inline">[<em>w</em>,<em>o</em>,<em>y</em>,<em>r</em>]</span>,
-meaning the square isomorphic to <span
-class="math inline"><em>C</em><sub>4</sub></span> but with the given
-four points, and with pointing given by whichever point we listed first.
-We will also introduce notation for maps <span
-class="math inline"><em>f</em> : [<em>a</em>,<em>b</em>,<em>c</em>,<em>d</em>] → [<em>w</em>,<em>x</em>,<em>y</em>,<em>z</em>]</span>
-by indicating where each item in the domain list is sent, like so: <span
-class="math inline">$f\stackrel{\textup{def}}{=}[[x, y, z,
-w]]$</span>.</p>
-<p><span class="math inline"><em>C</em><sub>4</sub></span> has an
-unpointed automorphism connected to the identiy which will play the role
-of rotation by 90 degrees:</p>
+<p>We will denote other terms of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mrow><mi mathvariant="normal">B</mi><mi mathvariant="normal">A</mi><mi mathvariant="normal">u</mi><mi mathvariant="normal">t</mi></mrow><mn>1</mn></msub><mrow><mo stretchy="true" form="prefix">(</mo><msup><mi>S</mi><mn>1</mn></msup><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\mathrm{BAut}_1(S^1)</annotation></semantics></math>
+with notation like
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">[</mo><mi>w</mi><mo>,</mo><mi>o</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>r</mi><mo stretchy="true" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">[w, o, y, r]</annotation></semantics></math>,
+meaning the square isomorphic to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>C</mi><mn>4</mn></msub><annotation encoding="application/x-tex">C_4</annotation></semantics></math>
+but with the given four points, and with pointing given by whichever
+point we listed first. We will also introduce notation for maps
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>:</mo><mrow><mo stretchy="true" form="prefix">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo>,</mo><mi>d</mi><mo stretchy="true" form="postfix">]</mo></mrow><mo>→</mo><mrow><mo stretchy="true" form="prefix">[</mo><mi>w</mi><mo>,</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo stretchy="true" form="postfix">]</mo></mrow></mrow><annotation encoding="application/x-tex">f:[a, b, c, d]\to [w, x, y, z]</annotation></semantics></math>
+by indicating where each item in the domain list is sent, like so:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mover><mo>=</mo><mrow><mi mathvariant="normal">d</mi><mi mathvariant="normal">e</mi><mi mathvariant="normal">f</mi></mrow></mover><mrow><mo stretchy="true" form="prefix">[</mo><mrow><mo stretchy="true" form="prefix">[</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo>,</mo><mi>w</mi><mo stretchy="true" form="postfix">]</mo></mrow><mo stretchy="true" form="postfix">]</mo></mrow></mrow><annotation encoding="application/x-tex">f\stackrel{\mathrm{def}}{=}[[x, y, z, w]]</annotation></semantics></math>.</p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>C</mi><mn>4</mn></msub><annotation encoding="application/x-tex">C_4</annotation></semantics></math>
+has an unpointed automorphism connected to the identiy which will play
+the role of rotation by 90 degrees:</p>
 <div class="mydef">
-<p><strong>Definition 4</strong>. <em>Let <span
-class="math inline"><em>R</em> : <em>C</em><sub>4</sub> → <em>C</em><sub>4</sub></span>
-be given by <span
-class="math inline"><em>R</em>(<em>b</em>) = <em>o</em>, <em>R</em>(<em>o</em>) = <em>g</em>, <em>R</em>(<em>g</em>) = <em>r</em>, <em>R</em>(<em>r</em>) = <em>b</em>, <em>R</em>(<em>b</em><em>o</em>) = <em>o</em><em>g</em>, <em>R</em>(<em>o</em><em>g</em>) = <em>g</em><em>r</em>, <em>R</em>(<em>g</em><em>r</em>) = <em>r</em><em>b</em>, <em>R</em>(<em>r</em><em>b</em>) = <em>b</em><em>o</em>.</span>
-Let <span class="math inline"><em>R</em>′ : <em>R</em> = id</span> be
-the obvious homotopy to the identity.</em></p>
+<p><strong>Definition 4</strong>. <em>Let
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi><mo>:</mo><msub><mi>C</mi><mn>4</mn></msub><mo>→</mo><msub><mi>C</mi><mn>4</mn></msub></mrow><annotation encoding="application/x-tex">R:C_4\to C_4</annotation></semantics></math>
+be given by
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>b</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mi>o</mi><mo>,</mo><mi>R</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>o</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mi>g</mi><mo>,</mo><mi>R</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>g</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mi>r</mi><mo>,</mo><mi>R</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>r</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mi>b</mi><mo>,</mo><mi>R</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>b</mi><mi>o</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mi>o</mi><mi>g</mi><mo>,</mo><mi>R</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>o</mi><mi>g</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mi>g</mi><mi>r</mi><mo>,</mo><mi>R</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>g</mi><mi>r</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mi>r</mi><mi>b</mi><mo>,</mo><mi>R</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>r</mi><mi>b</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mi>b</mi><mi>o</mi><mi>.</mi></mrow><annotation encoding="application/x-tex">R(b)=o, R(o)=g, R(g)=r, R(r)=b, R(bo)=og, R(og)=gr, R(gr)=rb, R(rb)=bo.</annotation></semantics></math>
+Let
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi><mi>′</mi><mo>:</mo><mi>R</mi><mo>=</mo><mtext mathvariant="normal">id</mtext></mrow><annotation encoding="application/x-tex">R&#39;:R=\ensuremath{\text{id}}</annotation></semantics></math>
+be the obvious homotopy to the identity.</em></p>
 </div>
 <div class="mydef">
-<p><strong>Definition 5</strong>. <em>Define <span
-class="math inline"><em>T</em><sub>1</sub> : 𝕆 → BAut<sub>1</sub>(<em>S</em><sup>1</sup>)</span>
+<p><strong>Definition 5</strong>. <em>Define
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mn>1</mn></msub><mo>:</mo><mi>𝕆</mi><mo>→</mo><msub><mrow><mi mathvariant="normal">B</mi><mi mathvariant="normal">A</mi><mi mathvariant="normal">u</mi><mi mathvariant="normal">t</mi></mrow><mn>1</mn></msub><mrow><mo stretchy="true" form="prefix">(</mo><msup><mi>S</mi><mn>1</mn></msup><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">T_1:\ensuremath{\mathbb{O}}\to\mathrm{BAut}_1(S^1)</annotation></semantics></math>
 by</em></p>
 <ul>
-<li><p><em><span
-class="math inline"><em>T</em><sub>1</sub>(<em>b</em>) = [<em>w</em>,<em>o</em>,<em>y</em>,<em>r</em>]</span>
-(the equator from the point of view of <span
-class="math inline"><em>b</em></span> as the north pole).</em></p></li>
-<li><p><em><span
-class="math inline"><em>T</em><sub>1</sub>(<em>o</em>) = [<em>w</em>,<em>b</em>,<em>y</em>,<em>g</em>]</span>.</em></p></li>
-<li><p><em><span
-class="math inline"><em>T</em><sub>1</sub>(<em>g</em>) = [<em>w</em>,<em>r</em>,<em>y</em>,<em>o</em>]</span>.</em></p></li>
-<li><p><em><span
-class="math inline"><em>T</em><sub>1</sub>(<em>r</em>) = [<em>w</em>,<em>g</em>,<em>y</em>,<em>b</em>]</span>.</em></p></li>
-<li><p><em><span
-class="math inline"><em>T</em><sub>1</sub>(<em>w</em>) = [<em>b</em>,<em>o</em>,<em>g</em>,<em>r</em>]</span>.</em></p></li>
-<li><p><em><span
-class="math inline"><em>T</em><sub>1</sub>(<em>y</em>) = [<em>b</em>,<em>r</em>,<em>g</em>,<em>o</em>]</span>.</em></p></li>
-<li><p><em><span
-class="math inline"><em>T</em><sub>1</sub>(<em>b</em><em>o</em>) = [[<em>w</em>,<em>g</em>,<em>y</em>,<em>b</em>]]</span>
+<li><p><em><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mn>1</mn></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>b</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mi>w</mi><mo>,</mo><mi>o</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>r</mi><mo stretchy="true" form="postfix">]</mo></mrow></mrow><annotation encoding="application/x-tex">T_1(b)=[w, o, y, r]</annotation></semantics></math>
+(the equator from the point of view of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math>
+as the north pole).</em></p></li>
+<li><p><em><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mn>1</mn></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>o</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mi>w</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>g</mi><mo stretchy="true" form="postfix">]</mo></mrow></mrow><annotation encoding="application/x-tex">T_1(o)=[w, b, y, g]</annotation></semantics></math>.</em></p></li>
+<li><p><em><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mn>1</mn></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>g</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mi>w</mi><mo>,</mo><mi>r</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>o</mi><mo stretchy="true" form="postfix">]</mo></mrow></mrow><annotation encoding="application/x-tex">T_1(g)=[w, r, y, o]</annotation></semantics></math>.</em></p></li>
+<li><p><em><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mn>1</mn></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>r</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mi>w</mi><mo>,</mo><mi>g</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>b</mi><mo stretchy="true" form="postfix">]</mo></mrow></mrow><annotation encoding="application/x-tex">T_1(r)=[w, g, y, b]</annotation></semantics></math>.</em></p></li>
+<li><p><em><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mn>1</mn></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>w</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mi>b</mi><mo>,</mo><mi>o</mi><mo>,</mo><mi>g</mi><mo>,</mo><mi>r</mi><mo stretchy="true" form="postfix">]</mo></mrow></mrow><annotation encoding="application/x-tex">T_1(w)=[b, o, g, r]</annotation></semantics></math>.</em></p></li>
+<li><p><em><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mn>1</mn></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>y</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mi>b</mi><mo>,</mo><mi>r</mi><mo>,</mo><mi>g</mi><mo>,</mo><mi>o</mi><mo stretchy="true" form="postfix">]</mo></mrow></mrow><annotation encoding="application/x-tex">T_1(y)=[b, r, g, o]</annotation></semantics></math>.</em></p></li>
+<li><p><em><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mn>1</mn></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>b</mi><mi>o</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mrow><mo stretchy="true" form="prefix">[</mo><mi>w</mi><mo>,</mo><mi>g</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>b</mi><mo stretchy="true" form="postfix">]</mo></mrow><mo stretchy="true" form="postfix">]</mo></mrow></mrow><annotation encoding="application/x-tex">T_1(bo)=[[w, g, y, b]]</annotation></semantics></math>
 (tipping one equator onto the other).</em></p></li>
-<li><p><em><span
-class="math inline"><em>T</em><sub>1</sub>(<em>o</em><em>g</em>) = [[<em>w</em>,<em>o</em>,<em>y</em>,<em>r</em>]]</span>.</em></p></li>
-<li><p><em><span
-class="math inline"><em>T</em><sub>1</sub>(<em>g</em><em>r</em>) = [[<em>w</em>,<em>g</em>,<em>y</em>,<em>b</em>]]</span>.</em></p></li>
-<li><p><em><span
-class="math inline"><em>T</em><sub>1</sub>(<em>r</em><em>b</em>) = [[<em>w</em>,<em>r</em>,<em>y</em>,<em>o</em>]]</span>.</em></p></li>
-<li><p><em><span
-class="math inline"><em>T</em><sub>1</sub>(<em>w</em><em>b</em>) = [[<em>y</em>,<em>o</em>,<em>w</em>,<em>r</em>]]</span>.</em></p></li>
-<li><p><em><span
-class="math inline"><em>T</em><sub>1</sub>(<em>w</em><em>o</em>) = [[<em>b</em>,<em>y</em>,<em>g</em>,<em>w</em>]]</span>.</em></p></li>
-<li><p><em><span
-class="math inline"><em>T</em><sub>1</sub>(<em>w</em><em>g</em>) = [[<em>w</em>,<em>o</em>,<em>y</em>,<em>r</em>]]</span>.</em></p></li>
-<li><p><em><span
-class="math inline"><em>T</em><sub>1</sub>(<em>w</em><em>r</em>) = [[<em>b</em>,<em>w</em>,<em>g</em>,<em>y</em>]]</span>.</em></p></li>
-<li><p><em><span
-class="math inline"><em>T</em><sub>1</sub>(<em>y</em><em>b</em>) = [[<em>w</em>,<em>r</em>,<em>y</em>,<em>o</em>]]</span>.</em></p></li>
-<li><p><em><span
-class="math inline"><em>T</em><sub>1</sub>(<em>y</em><em>o</em>) = [[<em>b</em>,<em>y</em>,<em>g</em>,<em>w</em>]]</span>.</em></p></li>
-<li><p><em><span
-class="math inline"><em>T</em><sub>1</sub>(<em>y</em><em>g</em>) = [[<em>y</em>,<em>r</em>,<em>w</em>,<em>o</em>]]</span>.</em></p></li>
-<li><p><em><span
-class="math inline"><em>T</em><sub>1</sub>(<em>y</em><em>r</em>) = [[<em>b</em>,<em>w</em>,<em>g</em>,<em>y</em>]]</span>.</em></p></li>
+<li><p><em><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mn>1</mn></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>o</mi><mi>g</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mrow><mo stretchy="true" form="prefix">[</mo><mi>w</mi><mo>,</mo><mi>o</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>r</mi><mo stretchy="true" form="postfix">]</mo></mrow><mo stretchy="true" form="postfix">]</mo></mrow></mrow><annotation encoding="application/x-tex">T_1(og)=[[w, o, y, r]]</annotation></semantics></math>.</em></p></li>
+<li><p><em><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mn>1</mn></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>g</mi><mi>r</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mrow><mo stretchy="true" form="prefix">[</mo><mi>w</mi><mo>,</mo><mi>g</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>b</mi><mo stretchy="true" form="postfix">]</mo></mrow><mo stretchy="true" form="postfix">]</mo></mrow></mrow><annotation encoding="application/x-tex">T_1(gr)=[[w, g, y, b]]</annotation></semantics></math>.</em></p></li>
+<li><p><em><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mn>1</mn></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>r</mi><mi>b</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mrow><mo stretchy="true" form="prefix">[</mo><mi>w</mi><mo>,</mo><mi>r</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>o</mi><mo stretchy="true" form="postfix">]</mo></mrow><mo stretchy="true" form="postfix">]</mo></mrow></mrow><annotation encoding="application/x-tex">T_1(rb)=[[w, r, y, o]]</annotation></semantics></math>.</em></p></li>
+<li><p><em><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mn>1</mn></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>w</mi><mi>b</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mrow><mo stretchy="true" form="prefix">[</mo><mi>y</mi><mo>,</mo><mi>o</mi><mo>,</mo><mi>w</mi><mo>,</mo><mi>r</mi><mo stretchy="true" form="postfix">]</mo></mrow><mo stretchy="true" form="postfix">]</mo></mrow></mrow><annotation encoding="application/x-tex">T_1(wb)=[[y, o, w, r]]</annotation></semantics></math>.</em></p></li>
+<li><p><em><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mn>1</mn></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>w</mi><mi>o</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mrow><mo stretchy="true" form="prefix">[</mo><mi>b</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>g</mi><mo>,</mo><mi>w</mi><mo stretchy="true" form="postfix">]</mo></mrow><mo stretchy="true" form="postfix">]</mo></mrow></mrow><annotation encoding="application/x-tex">T_1(wo)=[[b, y, g, w]]</annotation></semantics></math>.</em></p></li>
+<li><p><em><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mn>1</mn></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>w</mi><mi>g</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mrow><mo stretchy="true" form="prefix">[</mo><mi>w</mi><mo>,</mo><mi>o</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>r</mi><mo stretchy="true" form="postfix">]</mo></mrow><mo stretchy="true" form="postfix">]</mo></mrow></mrow><annotation encoding="application/x-tex">T_1(wg)=[[w, o, y, r]]</annotation></semantics></math>.</em></p></li>
+<li><p><em><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mn>1</mn></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>w</mi><mi>r</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mrow><mo stretchy="true" form="prefix">[</mo><mi>b</mi><mo>,</mo><mi>w</mi><mo>,</mo><mi>g</mi><mo>,</mo><mi>y</mi><mo stretchy="true" form="postfix">]</mo></mrow><mo stretchy="true" form="postfix">]</mo></mrow></mrow><annotation encoding="application/x-tex">T_1(wr)=[[b, w, g, y]]</annotation></semantics></math>.</em></p></li>
+<li><p><em><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mn>1</mn></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>y</mi><mi>b</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mrow><mo stretchy="true" form="prefix">[</mo><mi>w</mi><mo>,</mo><mi>r</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>o</mi><mo stretchy="true" form="postfix">]</mo></mrow><mo stretchy="true" form="postfix">]</mo></mrow></mrow><annotation encoding="application/x-tex">T_1(yb)=[[w, r, y, o]]</annotation></semantics></math>.</em></p></li>
+<li><p><em><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mn>1</mn></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>y</mi><mi>o</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mrow><mo stretchy="true" form="prefix">[</mo><mi>b</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>g</mi><mo>,</mo><mi>w</mi><mo stretchy="true" form="postfix">]</mo></mrow><mo stretchy="true" form="postfix">]</mo></mrow></mrow><annotation encoding="application/x-tex">T_1(yo)=[[b, y, g, w]]</annotation></semantics></math>.</em></p></li>
+<li><p><em><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mn>1</mn></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>y</mi><mi>g</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mrow><mo stretchy="true" form="prefix">[</mo><mi>y</mi><mo>,</mo><mi>r</mi><mo>,</mo><mi>w</mi><mo>,</mo><mi>o</mi><mo stretchy="true" form="postfix">]</mo></mrow><mo stretchy="true" form="postfix">]</mo></mrow></mrow><annotation encoding="application/x-tex">T_1(yg)=[[y, r, w, o]]</annotation></semantics></math>.</em></p></li>
+<li><p><em><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mn>1</mn></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>y</mi><mi>r</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mrow><mo stretchy="true" form="prefix">[</mo><mi>b</mi><mo>,</mo><mi>w</mi><mo>,</mo><mi>g</mi><mo>,</mo><mi>y</mi><mo stretchy="true" form="postfix">]</mo></mrow><mo stretchy="true" form="postfix">]</mo></mrow></mrow><annotation encoding="application/x-tex">T_1(yr)=[[b, w, g, y]]</annotation></semantics></math>.</em></p></li>
 </ul>
 </div>
-<p>At this point we have defined a map on the 1-skeleton of <span
-class="math inline">𝕆</span>. The only constraint we had to follow was
-functoriality, that the imgage of 1-paths had to be 1-paths between the
-images. The choices we made were motivated by the embedding of the
-Rubik’s cube in Euclidean 3-space.</p>
+<p>At this point we have defined a map on the 1-skeleton of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>𝕆</mi><annotation encoding="application/x-tex">\ensuremath{\mathbb{O}}</annotation></semantics></math>.
+The only constraint we had to follow was functoriality, that the imgage
+of 1-paths had to be 1-paths between the images. The choices we made
+were motivated by the embedding of the Rubik’s cube in Euclidean
+3-space.</p>
 <div class="myclaim">
-<p><strong>Claim 1</strong>. <em><span
-class="math inline"><em>T</em><sub>1</sub></span> defines a principal
-circle bundle with connection over the 1-skeleton of <span
-class="math inline">𝕆</span>.</em></p>
+<p><strong>Claim 1</strong>.
+<em><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>T</mi><mn>1</mn></msub><annotation encoding="application/x-tex">T_1</annotation></semantics></math>
+defines a principal circle bundle with connection over the 1-skeleton of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>𝕆</mi><annotation encoding="application/x-tex">\ensuremath{\mathbb{O}}</annotation></semantics></math>.</em></p>
 </div>
-<p>We now want to extend this map to all of <span
-class="math inline">𝕆</span> by providing values for the eight faces.
-Here we will be guided by the classical relationship between a
-connection and its curvature. The curvature is computed from the
-connection, it doesn’t contain any new data. Classically the integral of
-curvature over a 2-cell is the holonomy given by transport around the
-boundary. Can we make this idea type check?</p>
-<p>Take the closed path <span
-class="math inline"><em>w</em><em>b</em> ⋅ <em>b</em><em>o</em> ⋅ <em>o</em><em>w</em></span>
-that begins and ends at <span class="math inline"><em>w</em></span>,
-which bounds the face <span
-class="math inline"><em>w</em><em>b</em><em>o</em></span>. We can
-calculate that <span
-class="math inline"><em>T</em><sub>1</sub>(<em>w</em><em>b</em>) ⋅ <em>T</em><sub>1</sub>(<em>b</em><em>o</em>) ⋅ <em>T</em><sub>1</sub>(<em>o</em><em>w</em>) = [[<em>r</em>,<em>b</em>,<em>o</em>,<em>g</em>]] = <em>R</em></span>,
-rotation clockwise one notch. A 2-path would then be a homotopy <span
-class="math inline">refl<sub><em>w</em></sub> = <em>R</em></span> which
-we called <span class="math inline"><em>R</em>′</span>. In a similar way
-all 8 faces (so long as the vertices in its name are listed in clockwise
-order) map to <span class="math inline"><em>R</em>′</span>.</p>
+<p>We now want to extend this map to all of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>𝕆</mi><annotation encoding="application/x-tex">\ensuremath{\mathbb{O}}</annotation></semantics></math>
+by providing values for the eight faces. Here we will be guided by the
+classical relationship between a connection and its curvature. The
+curvature is computed from the connection, it doesn’t contain any new
+data. Classically the integral of curvature over a 2-cell is the
+holonomy given by transport around the boundary. Can we make this idea
+type check?</p>
+<p>Take the closed path
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>w</mi><mi>b</mi><mo>⋅</mo><mi>b</mi><mi>o</mi><mo>⋅</mo><mi>o</mi><mi>w</mi></mrow><annotation encoding="application/x-tex">wb\cdot bo\cdot ow</annotation></semantics></math>
+that begins and ends at
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>w</mi><annotation encoding="application/x-tex">w</annotation></semantics></math>,
+which bounds the face
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>w</mi><mi>b</mi><mi>o</mi></mrow><annotation encoding="application/x-tex">wbo</annotation></semantics></math>.
+We can calculate that
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mn>1</mn></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>w</mi><mi>b</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>⋅</mo><msub><mi>T</mi><mn>1</mn></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>b</mi><mi>o</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>⋅</mo><msub><mi>T</mi><mn>1</mn></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>o</mi><mi>w</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mrow><mo stretchy="true" form="prefix">[</mo><mi>r</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>o</mi><mo>,</mo><mi>g</mi><mo stretchy="true" form="postfix">]</mo></mrow><mo stretchy="true" form="postfix">]</mo></mrow><mo>=</mo><mi>R</mi></mrow><annotation encoding="application/x-tex">T_1(wb)\cdot T_1(bo)\cdot T_1(ow) = [[r, b, o, g]] = R</annotation></semantics></math>,
+rotation clockwise one notch. A 2-path would then be a homotopy
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mrow><mi>𝗋</mi><mi>𝖾</mi><mi>𝖿</mi><mi>𝗅</mi></mrow><mi>w</mi></msub><mo>=</mo><mi>R</mi></mrow><annotation encoding="application/x-tex">\ensuremath{\mathsf{refl}}_w=R</annotation></semantics></math>
+which we called
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi><mi>′</mi></mrow><annotation encoding="application/x-tex">R&#39;</annotation></semantics></math>.
+In a similar way all 8 faces (so long as the vertices in its name are
+listed in clockwise order) map to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi><mi>′</mi></mrow><annotation encoding="application/x-tex">R&#39;</annotation></semantics></math>.</p>
 <p>This is all classical combinatorial stuff, but in a HoTT package. The
-fact that <span
-class="math inline">BAut<sub>1</sub>(<em>S</em><sup>1</sup>)</span> is a
-2-type gives us someplace to send all the dimensions of the HIT <span
-class="math inline">𝕆</span>.</p>
+fact that
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mrow><mi mathvariant="normal">B</mi><mi mathvariant="normal">A</mi><mi mathvariant="normal">u</mi><mi mathvariant="normal">t</mi></mrow><mn>1</mn></msub><mrow><mo stretchy="true" form="prefix">(</mo><msup><mi>S</mi><mn>1</mn></msup><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\mathrm{BAut}_1(S^1)</annotation></semantics></math>
+is a 2-type gives us someplace to send all the dimensions of the HIT
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>𝕆</mi><annotation encoding="application/x-tex">\ensuremath{\mathbb{O}}</annotation></semantics></math>.</p>
 <div id="refs" class="references csl-bib-body hanging-indent"
 data-entry-spacing="0" role="list">
 <div id="ref-talbott" class="csl-entry" role="listitem">
