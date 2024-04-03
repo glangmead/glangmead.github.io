@@ -90,6 +90,11 @@ class=&#34;toc-section-number&#34;&gt;2&lt;/span&gt; Non-infinitesimal calculus&
 id=&#34;toc-the-tangent-bundle-of-the-2-sphere&#34;&gt;&lt;span
 class=&#34;toc-section-number&#34;&gt;3&lt;/span&gt; The tangent bundle of the
 2-sphere&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#gauge-transformations&#34;
+id=&#34;toc-gauge-transformations&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;4&lt;/span&gt;
+Gauge transformations&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#chern-weil-theory&#34; id=&#34;toc-chern-weil-theory&#34;&gt;&lt;span
+class=&#34;toc-section-number&#34;&gt;5&lt;/span&gt; Chern-Weil theory&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/nav&gt;
 &lt;h1 data-number=&#34;1&#34; id=&#34;introduction&#34;&gt;&lt;span
@@ -209,7 +214,7 @@ is one such.&lt;/p&gt;
 available dimensions of the type all at once. It is inherently a
 function on points, paths, and higher paths. We can look at what &lt;span
 class=&#34;math inline&#34;&gt;\(f\)&lt;/span&gt; does to paths using the construction
-&lt;span class=&#34;math inline&#34;&gt;\(\ensuremath{\textsf{ap}}f\)&lt;/span&gt;. At this
+&lt;span class=&#34;math inline&#34;&gt;\(\ensuremath{\mathsf{ap}}f\)&lt;/span&gt;. At this
 point there is an important check we can make. &lt;span
 class=&#34;math inline&#34;&gt;\(df\)&lt;/span&gt; has a few important properties, the
 most characteristic of which is the Leibniz, or product rule. Is this
@@ -257,8 +262,8 @@ class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; and H-space &lt;span
 class=&#34;math inline&#34;&gt;\(B\)&lt;/span&gt; and maps &lt;span
 class=&#34;math inline&#34;&gt;\(f,g:M\to B\)&lt;/span&gt; and path &lt;span
 class=&#34;math inline&#34;&gt;\(p:x=_M y\)&lt;/span&gt; we have &lt;span
-class=&#34;math inline&#34;&gt;\(\ensuremath{\textsf{ap}}(fg)(p)=\mu(f(x),\ensuremath{\textsf{ap}}(g)(p))
-\cdot \mu(\ensuremath{\textsf{ap}}(f)(p),g(y))\)&lt;/span&gt;. (&lt;span
+class=&#34;math inline&#34;&gt;\(\ensuremath{\mathsf{ap}}(fg)(p)=\mu(f(x),\ensuremath{\mathsf{ap}}(g)(p))
+\cdot \mu(\ensuremath{\mathsf{ap}}(f)(p),g(y))\)&lt;/span&gt;. (&lt;span
 class=&#34;math inline&#34;&gt;\(\cdot\)&lt;/span&gt; is concatenation of
 paths.)&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
@@ -276,14 +281,15 @@ one of the types in &lt;span
 class=&#34;math inline&#34;&gt;\(\mathrm{BAut}_1(S^1)\)&lt;/span&gt;&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;figure&gt;
-&lt;img src=&#34;./3c3983eb70861a2d7ffe23e2afa96e12c7df558c.png&#34; /&gt;
+&lt;img src=&#34;./af2efb8d5bd4f1d5edcb52c7da0f2f4212597f36.png&#34; /&gt;
 &lt;figcaption&gt;The HIT &lt;span class=&#34;math inline&#34;&gt;\(\Sigma C_4\)&lt;/span&gt;
 which has 2 points, 4 1-paths, 4 2-paths.&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;figure&gt;
-&lt;img src=&#34;./742ee3a0cc0d615082501f31cfc529818a29c2e5.png&#34; /&gt;
-&lt;figcaption&gt;The HIT &lt;span class=&#34;math inline&#34;&gt;\(\{w, y\}* C_4\)&lt;/span&gt;
-which has 6 points, 12 1-paths, 8 2-paths.&lt;/figcaption&gt;
+&lt;img src=&#34;./cdb3d54d1a96709745e781e659f43190ba62ae89.png&#34; /&gt;
+&lt;figcaption&gt;The HIT &lt;span
+class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{O}}\)&lt;/span&gt; which has 6
+points, 12 1-paths, 8 2-paths.&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;h1 data-number=&#34;3&#34; id=&#34;the-tangent-bundle-of-the-2-sphere&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;3&lt;/span&gt; The tangent bundle of the
@@ -450,8 +456,52 @@ order) map to &lt;span class=&#34;math inline&#34;&gt;\(R&amp;#39;\)&lt;/span&gt
 fact that &lt;span class=&#34;math inline&#34;&gt;\(\mathrm{BAut}_1(S^1)\)&lt;/span&gt; is a
 2-type gives us someplace to send all the dimensions of the HIT &lt;span
 class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{O}}\)&lt;/span&gt;.&lt;/p&gt;
+&lt;h1 data-number=&#34;4&#34; id=&#34;gauge-transformations&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;4&lt;/span&gt; Gauge transformations&lt;/h1&gt;
+&lt;p&gt;A &lt;em&gt;gauge transformation&lt;/em&gt; is a term inherited from physics.
+It’s an automorphism of a principal bundle &lt;span
+class=&#34;math inline&#34;&gt;\(P\to X\)&lt;/span&gt;, meaning a homeomorphism of &lt;span
+class=&#34;math inline&#34;&gt;\(P\)&lt;/span&gt; that commutes with the projection to
+&lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; and so acts on each fiber. It is
+further required to be equivariant under the action of the group &lt;span
+class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt;, and so it’s very similar to the act of
+multiplying each fiber by a continuously varying element of &lt;span
+class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;In HoTT this is easy to express. If a bundle &lt;span
+class=&#34;math inline&#34;&gt;\(P\to X\)&lt;/span&gt; is classified by &lt;span
+class=&#34;math inline&#34;&gt;\(f:X\to\mathrm{BAut}_1(S^1)\)&lt;/span&gt; then the group
+of gauge transformations is just the type &lt;span
+class=&#34;math inline&#34;&gt;\(f=f\)&lt;/span&gt; or in other words &lt;span
+class=&#34;math inline&#34;&gt;\(\Omega_f(X\to\mathrm{BAut}_1(S^1))\)&lt;/span&gt;. The
+delooping &lt;span class=&#34;math inline&#34;&gt;\(B(\mathrm{Aut}P)\)&lt;/span&gt; of this
+group is then &lt;span
+class=&#34;math inline&#34;&gt;\(||X\to\mathrm{BAut}_1(S^1)||_{(f)}\)&lt;/span&gt;, the
+connected component of this mapping type containing &lt;span
+class=&#34;math inline&#34;&gt;\(f\)&lt;/span&gt;. In 1982 this was a theorem&lt;span
+class=&#34;citation&#34; data-cites=&#34;atiyah1983yang&#34;&gt;(&lt;a
+href=&#34;#ref-atiyah1983yang&#34; role=&#34;doc-biblioref&#34;&gt;Atiyah &amp;amp; Bott,
+1983&lt;/a&gt;)&lt;/span&gt;!&lt;/p&gt;
+&lt;h1 data-number=&#34;5&#34; id=&#34;chern-weil-theory&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;5&lt;/span&gt; Chern-Weil theory&lt;/h1&gt;
+&lt;p&gt;What is Chern-Weil theory about? (cite Freed-Hopkins&lt;span
+class=&#34;citation&#34; data-cites=&#34;freed2013chernweil&#34;&gt;(&lt;a
+href=&#34;#ref-freed2013chernweil&#34; role=&#34;doc-biblioref&#34;&gt;Freed &amp;amp; Hopkins,
+2013&lt;/a&gt;)&lt;/span&gt;)&lt;/p&gt;
 &lt;div id=&#34;refs&#34; class=&#34;references csl-bib-body hanging-indent&#34;
 data-entry-spacing=&#34;0&#34; role=&#34;list&#34;&gt;
+&lt;div id=&#34;ref-atiyah1983yang&#34; class=&#34;csl-entry&#34; role=&#34;listitem&#34;&gt;
+&lt;span class=&#34;smallcaps&#34;&gt;Atiyah&lt;/span&gt;, M.F. &amp;amp; &lt;span
+class=&#34;smallcaps&#34;&gt;Bott&lt;/span&gt;, R. (1983) The yang-mills equations over
+riemann surfaces. &lt;em&gt;Philosophical Transactions of the Royal Society of
+London. Series A, Mathematical and Physical Sciences&lt;/em&gt;,
+&lt;strong&gt;308&lt;/strong&gt;, 523–615.
+&lt;/div&gt;
+&lt;div id=&#34;ref-freed2013chernweil&#34; class=&#34;csl-entry&#34; role=&#34;listitem&#34;&gt;
+&lt;span class=&#34;smallcaps&#34;&gt;Freed&lt;/span&gt;, D.S. &amp;amp; &lt;span
+class=&#34;smallcaps&#34;&gt;Hopkins&lt;/span&gt;, M.J. (2013) &lt;a
+href=&#34;https://arxiv.org/abs/1301.5959&#34;&gt;Chern-weil forms and abstract
+homotopy theory&lt;/a&gt;.
+&lt;/div&gt;
 &lt;div id=&#34;ref-talbott&#34; class=&#34;csl-entry&#34; role=&#34;listitem&#34;&gt;
 &lt;span class=&#34;smallcaps&#34;&gt;Talbott&lt;/span&gt;, S. (1995) &lt;em&gt;&lt;a
 href=&#34;https://books.google.com/books?id=KcXaAAAAMAAJ&#34;&gt;The future does
