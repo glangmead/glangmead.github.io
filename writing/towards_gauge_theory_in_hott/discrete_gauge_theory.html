@@ -72,11 +72,29 @@ class="toc-section-number">2</span> Non-infinitesimal calculus</a></li>
 id="toc-the-tangent-bundle-of-the-2-sphere"><span
 class="toc-section-number">3</span> The tangent bundle of the
 2-sphere</a></li>
+<li><a href="#why-this-is-geometry" id="toc-why-this-is-geometry"><span
+class="toc-section-number">4</span> Why this is geometry</a>
+<ul>
+<li><a href="#connections-as-splittings"
+id="toc-connections-as-splittings"><span
+class="toc-section-number">4.1</span> Connections as splittings</a></li>
+<li><a href="#tensorial" id="toc-tensorial"><span
+class="toc-section-number">4.2</span> Tensorial</a></li>
+<li><a href="#the-leibniz-product-rule"
+id="toc-the-leibniz-product-rule"><span
+class="toc-section-number">4.3</span> The Leibniz (product)
+rule</a></li>
 <li><a href="#gauge-transformations"
-id="toc-gauge-transformations"><span class="toc-section-number">4</span>
-Gauge transformations</a></li>
-<li><a href="#chern-weil-theory" id="toc-chern-weil-theory"><span
-class="toc-section-number">5</span> Chern-Weil theory</a></li>
+id="toc-gauge-transformations"><span
+class="toc-section-number">4.4</span> Gauge transformations</a></li>
+<li><a href="#characteristic-classes-and-chern-weil-theory"
+id="toc-characteristic-classes-and-chern-weil-theory"><span
+class="toc-section-number">4.5</span> Characteristic classes and
+Chern-Weil theory</a></li>
+<li><a href="#combinatorial-manifolds"
+id="toc-combinatorial-manifolds"><span
+class="toc-section-number">4.6</span> Combinatorial manifolds</a></li>
+</ul></li>
 </ul>
 </nav>
 <h1 data-number="1" id="introduction"><span
@@ -201,61 +219,6 @@ point there is an important check we can make. <span
 class="math inline">\(df\)</span> has a few important properties, the
 most characteristic of which is the Leibniz, or product rule. Is this
 visible in HoTT?</p>
-<p>The Leibniz rule states that if <span class="math inline">\(f, g:M\to
-\ensuremath{\mathbb{R}}\)</span> are two smooth functions to the real
-numbers then <span class="math inline">\(d(fg) = fdg + gdf\)</span>.
-Here <span class="math inline">\(fg\)</span> is the function formed by
-taking the pointwise product of <span class="math inline">\(f\)</span>
-and <span class="math inline">\(g\)</span>. To examine this situation in
-HoTT we need type-theoretic functions <span class="math inline">\(f,
-g:M\to B\)</span> from some type <span class="math inline">\(M\)</span>
-to an H-space <span class="math inline">\(B\)</span>.</p>
-<div class="mydef">
-<p><strong>Definition 1</strong>. <em>An H-space structure on a pointed
-type <span class="math inline">\((B,b)\)</span> consists of</em></p>
-<ol>
-<li><p><em>A binary operation <span class="math inline">\(\mu:B\to B\to
-B\)</span></em></p></li>
-<li><p><em>A left unit law <span
-class="math inline">\(\mu_l:\mu(\mathrm{pt},-)=\ensuremath{\text{id}}_B\)</span></em></p></li>
-<li><p><em>A right unit law <span
-class="math inline">\(\mu_r:\mu(-,\mathrm{pt})=\ensuremath{\text{id}}_B\)</span></em></p></li>
-<li><p><em>A coherence <span
-class="math inline">\(\mu_{lr}:\mu_l(\mathrm{pt})=_{\mu(\mathrm{pt},\mathrm{pt})=\mathrm{pt}}\mu_r(\mathrm{pt})\)</span></em></p></li>
-<li><p><em>A proof of left- and right- invertibility: <span
-class="math inline">\(\mu(a,-):A\simeq A\)</span>, <span
-class="math inline">\(\mu(-, b):A\simeq A\)</span></em></p></li>
-</ol>
-</div>
-<p>The analogue of the algebra of functions to <span
-class="math inline">\(\ensuremath{\mathbb{R}}\)</span> is:</p>
-<div class="myprop">
-<p><strong>Proposition 1</strong>. <em>For any type <span
-class="math inline">\(M\)</span> and H-space <span
-class="math inline">\(B\)</span> the type of maps <span
-class="math inline">\(M\to B\)</span> with base point the constant map
-is an H-space under pointwise multiplication.</em></p>
-</div>
-<p>We claim thact the following deserves to be called the Leibniz
-rule.</p>
-<div class="mylemma">
-<p><strong>Lemma 1</strong>. <em>For any type <span
-class="math inline">\(M\)</span> and H-space <span
-class="math inline">\(B\)</span> and maps <span
-class="math inline">\(f,g:M\to B\)</span> and path <span
-class="math inline">\(p:x=_M y\)</span> we have <span
-class="math inline">\(\ensuremath{\mathsf{ap}}(fg)(p)=\mu(f(x),\ensuremath{\mathsf{ap}}(g)(p))
-\cdot \mu(\ensuremath{\mathsf{ap}}(f)(p),g(y))\)</span>. (<span
-class="math inline">\(\cdot\)</span> is concatenation of
-paths.)</em></p>
-</div>
-<p>The notation is temporarily sloppy, but by <span
-class="math inline">\(\mu(a, p)\)</span> for a path <span
-class="math inline">\(p\)</span> we mean the functorial action of
-multiplication by <span class="math inline">\(a\)</span> on the left, on
-a path.g</p>
-<p><img src="./09052d33113b7087f7abc8b04e220a13697b45a3.png"
-alt="image" /></p>
 <figure>
 <img src="./45744937ac561c6ce05f971621a980d63ad6d2e1.png" />
 <figcaption>The HIT <span class="math inline">\(C_4\)</span> which is
@@ -306,7 +269,7 @@ theorem.</p>
 <p>We can leverage the syntax of HoTT by encoding the above in a map
 between HITs.</p>
 <div class="mydef">
-<p><strong>Definition 2</strong>. <em>Denote by <span
+<p><strong>Definition 1</strong>. <em>Denote by <span
 class="math inline">\(C_4\)</span> the join <span
 class="math inline">\(\{b, g\}*\{r, o\}\)</span>. This is the equator of
 the discrete octahedral sphere. Denote by <span
@@ -315,26 +278,26 @@ given by the join <span class="math inline">\(\{w, y\}*
 C_4\)</span>.</em></p>
 </div>
 <div class="mylemma">
-<p><strong>Lemma 2</strong>. <em><span class="math inline">\((C_4,
+<p><strong>Lemma 1</strong>. <em><span class="math inline">\((C_4,
 b)\simeq S^1\)</span>.</em></p>
 </div>
 <div class="mylemma">
-<p><strong>Lemma 3</strong>. <em><span
+<p><strong>Lemma 2</strong>. <em><span
 class="math inline">\(\ensuremath{\mathbb{O}}\simeq
 S^2\)</span>.</em></p>
 </div>
 <div class="mydef">
-<p><strong>Definition 3</strong>. <em>Let <span
+<p><strong>Definition 2</strong>. <em>Let <span
 class="math inline">\(\mathrm{BAut}_1(S^1)\stackrel{\mathrm{def}}{=}\sum_{X:\mathcal{U}}||X=S^1||_0.\)</span></em></p>
 </div>
 <div class="mylemma">
-<p><strong>Lemma 4</strong>. <em>We have <span
+<p><strong>Lemma 3</strong>. <em>We have <span
 class="math inline">\((C_4, ||\{b, g, r, o\}\mapsto \mathsf{base},
 br\mapsto \mathsf{loop}, \{rg, go, ob\}\mapsto
 \ensuremath{\mathsf{refl}}||_0):\mathrm{BAut}_1(S^1)\)</span></em></p>
 </div>
 <div class="mylemma">
-<p><strong>Lemma 5</strong>. <em><span
+<p><strong>Lemma 4</strong>. <em><span
 class="math inline">\(\mathrm{BAut}_1(S^1)\)</span> is equivalent to the
 type of <span class="math inline">\(S^1\)</span>-torsors, and to the
 type of <span class="math inline">\((C_4,b)\)</span>-torsors.</em></p>
@@ -353,7 +316,7 @@ w]]\)</span>.</p>
 automorphism connected to the identiy which will play the role of
 rotation by 90 degrees:</p>
 <div class="mydef">
-<p><strong>Definition 4</strong>. <em>Let <span
+<p><strong>Definition 3</strong>. <em>Let <span
 class="math inline">\(R:C_4\to C_4\)</span> be given by <span
 class="math inline">\(R(b)=o, R(o)=g, R(g)=r, R(r)=b, R(bo)=og,
 R(og)=gr, R(gr)=rb, R(rb)=bo.\)</span> Let <span
@@ -361,7 +324,7 @@ class="math inline">\(R&#39;:R=\ensuremath{\text{id}}\)</span> be the
 obvious homotopy to the identity.</em></p>
 </div>
 <div class="mydef">
-<p><strong>Definition 5</strong>. <em>Define <span
+<p><strong>Definition 4</strong>. <em>Define <span
 class="math inline">\(T_1:\ensuremath{\mathbb{O}}\to\mathrm{BAut}_1(S^1)\)</span>
 by</em></p>
 <ul>
@@ -438,8 +401,92 @@ order) map to <span class="math inline">\(R&#39;\)</span>.</p>
 fact that <span class="math inline">\(\mathrm{BAut}_1(S^1)\)</span> is a
 2-type gives us someplace to send all the dimensions of the HIT <span
 class="math inline">\(\ensuremath{\mathbb{O}}\)</span>.</p>
-<h1 data-number="4" id="gauge-transformations"><span
-class="header-section-number">4</span> Gauge transformations</h1>
+<h1 data-number="4" id="why-this-is-geometry"><span
+class="header-section-number">4</span> Why this is geometry</h1>
+<p>Discrete differential forms are alien enough that we ought to provide
+evidence that we are describing honest classical differential geometry.
+In this section we will enumerate a wishlist of facts that we believe
+characterize the subject, and then provide evidence for them.</p>
+<ol>
+<li><p>Connections can be described as an infinitesimal splitting of a
+bundle into horizontal and vertical components.</p></li>
+<li><p>There’s a notion of <em>tensorial</em> that holds for forms but
+not for connections.</p></li>
+<li><p>Differentials and directional derivatives satisfy the Leibniz
+(product) rule.</p></li>
+<li><p>Characteristic classes of bundles can be computed using a
+connection (Chern-Weil theory).</p></li>
+<li><p>The space of all connections on a fixed bundle is a contractible
+space on which the group of <em>based gauge transformations</em> (bundle
+automorphisms that are the identity on one selected fiber) acts
+freely.</p></li>
+<li><p>The homotopy types of manifolds we care about have combinatorial
+presentations, and the real-cohesive shape modal operator maps between
+them.</p></li>
+</ol>
+<h2 data-number="4.1" id="connections-as-splittings"><span
+class="header-section-number">4.1</span> Connections as splittings</h2>
+<h2 data-number="4.2" id="tensorial"><span
+class="header-section-number">4.2</span> Tensorial</h2>
+<h2 data-number="4.3" id="the-leibniz-product-rule"><span
+class="header-section-number">4.3</span> The Leibniz (product) rule</h2>
+<p>The Leibniz rule states that if <span class="math inline">\(f, g:M\to
+\ensuremath{\mathbb{R}}\)</span> are two smooth functions to the real
+numbers then <span class="math inline">\(d(fg) = fdg + gdf\)</span>.
+Here <span class="math inline">\(fg\)</span> is the function formed by
+taking the pointwise product of <span class="math inline">\(f\)</span>
+and <span class="math inline">\(g\)</span>. To examine this situation in
+HoTT we need type-theoretic functions <span class="math inline">\(f,
+g:M\to B\)</span> from some type <span class="math inline">\(M\)</span>
+to an H-space <span class="math inline">\(B\)</span>.</p>
+<div class="mydef">
+<p><strong>Definition 5</strong>. <em>An H-space structure on a pointed
+type <span class="math inline">\((B,b)\)</span> consists of</em></p>
+<ol>
+<li><p><em>A binary operation <span class="math inline">\(\mu:B\to B\to
+B\)</span></em></p></li>
+<li><p><em>A left unit law <span
+class="math inline">\(\mu_l:\mu(\mathrm{pt},-)=\ensuremath{\text{id}}_B\)</span></em></p></li>
+<li><p><em>A right unit law <span
+class="math inline">\(\mu_r:\mu(-,\mathrm{pt})=\ensuremath{\text{id}}_B\)</span></em></p></li>
+<li><p><em>A coherence <span
+class="math inline">\(\mu_{lr}:\mu_l(\mathrm{pt})=_{\mu(\mathrm{pt},\mathrm{pt})=\mathrm{pt}}\mu_r(\mathrm{pt})\)</span></em></p></li>
+<li><p><em>A proof of left- and right- invertibility: <span
+class="math inline">\(\mu(a,-):A\simeq A\)</span>, <span
+class="math inline">\(\mu(-, b):A\simeq A\)</span></em></p></li>
+</ol>
+</div>
+<p>The analogue of the algebra of functions to <span
+class="math inline">\(\ensuremath{\mathbb{R}}\)</span> is:</p>
+<div class="myprop">
+<p><strong>Proposition 1</strong>. <em>For any type <span
+class="math inline">\(M\)</span> and H-space <span
+class="math inline">\(B\)</span> the type of maps <span
+class="math inline">\(M\to B\)</span> with base point the constant map
+is an H-space under pointwise multiplication.</em></p>
+</div>
+<p>We claim thact the following deserves to be called the Leibniz
+rule.</p>
+<div class="mylemma">
+<p><strong>Lemma 5</strong>. <em>For any type <span
+class="math inline">\(M\)</span> and H-space <span
+class="math inline">\(B\)</span> and maps <span
+class="math inline">\(f,g:M\to B\)</span> and path <span
+class="math inline">\(p:x=_M y\)</span> we have <span
+class="math inline">\(\ensuremath{\mathsf{ap}}(fg)(p)=\mu(f(x),\ensuremath{\mathsf{ap}}(g)(p))
+\cdot \mu(\ensuremath{\mathsf{ap}}(f)(p),g(y))\)</span>. (<span
+class="math inline">\(\cdot\)</span> is concatenation of
+paths.)</em></p>
+</div>
+<p>The notation is temporarily sloppy, but by <span
+class="math inline">\(\mu(a, p)\)</span> for a path <span
+class="math inline">\(p\)</span> we mean the functorial action of
+multiplication by <span class="math inline">\(a\)</span> on the left, on
+a path.g</p>
+<p><img src="./09052d33113b7087f7abc8b04e220a13697b45a3.png"
+alt="image" /></p>
+<h2 data-number="4.4" id="gauge-transformations"><span
+class="header-section-number">4.4</span> Gauge transformations</h2>
 <p>A <em>gauge transformation</em> is a term inherited from physics.
 It’s an automorphism of a principal bundle <span
 class="math inline">\(P\to X\)</span>, meaning a homeomorphism of <span
@@ -473,12 +520,48 @@ class="math inline">\(f\)</span>. In 1982 this was a theorem!<span
 class="citation" data-cites="atiyah1983yang"> (<a
 href="#ref-atiyah1983yang" role="doc-biblioref">Atiyah &amp; Bott,
 1983</a>)</span></p>
-<h1 data-number="5" id="chern-weil-theory"><span
-class="header-section-number">5</span> Chern-Weil theory</h1>
+<h2 data-number="4.5"
+id="characteristic-classes-and-chern-weil-theory"><span
+class="header-section-number">4.5</span> Characteristic classes and
+Chern-Weil theory</h2>
 <p>What is Chern-Weil theory about? (cite Freed-Hopkins<span
 class="citation" data-cites="freed2013chernweil"> (<a
 href="#ref-freed2013chernweil" role="doc-biblioref">Freed &amp; Hopkins,
 2013</a>)</span>)</p>
+<h2 data-number="4.6" id="combinatorial-manifolds"><span
+class="header-section-number">4.6</span> Combinatorial manifolds</h2>
+<p>The combinatorial structure we have in mind is a nerve of a good open
+cover. What do we know about which smooth manifolds have such covers?
+While we’re at it, let’s survey all the combinatorial-flavored spaces
+and survey what smooth manifolds are homotopy equivalent to which
+structures.</p>
+<p>What topological manifolds are equivalent to a CW complex? The answer
+is the composition of a few results summarized by Allen Hatcher<a
+href="#fn1" class="footnote-ref" id="fnref1"
+role="doc-noteref"><sup>1</sup></a> (citing <span class="citation"
+data-cites="kirby_siebenmann"> (<a href="#ref-kirby_siebenmann"
+role="doc-biblioref">Kirby &amp; Siebenmann, 1977</a>)</span> and <span
+class="citation" data-cites="freedman_quinn"> (<a
+href="#ref-freedman_quinn" role="doc-biblioref">Freedman &amp; Quinn,
+1990</a>)</span>):</p>
+<blockquote>
+<p>Every topological manifold has a handlebody structure except in
+dimension 4, where a 4-manifold has a handlebody structure if and only
+if it is smoothable. This is a theorem on page 136 of Freedman and
+Quinn’s book "Topology of 4-Manifolds", with a reference given to the
+Kirby-Siebenmann book for the higher-dimensional case. It is then an
+elementary fact that an <span class="math inline">\(n\)</span>-manifold
+with a handlebody structure is homotopy equivalent to a CW complex with
+one <span class="math inline">\(k\)</span>-cell for each <span
+class="math inline">\(k\)</span>-handle, so in particular there are no
+cells of dimension greater than <span class="math inline">\(n\)</span>.
+At least in the compact case a manifold with a handlebody structure is
+in fact homeomorphic to a CW complex with <span
+class="math inline">\(k\)</span>-cells corresponding to <span
+class="math inline">\(k\)</span>-handles; see page 107 of
+Kirby-Siebenmann. This probably holds in the noncompact case as well,
+though I don’t know a reference.</p>
+</blockquote>
 <div id="refs" class="references csl-bib-body hanging-indent"
 data-entry-spacing="0" role="list">
 <div id="ref-atiyah1983yang" class="csl-entry" role="listitem">
@@ -494,6 +577,18 @@ class="smallcaps">Hopkins</span>, M.J. (2013) <a
 href="https://arxiv.org/abs/1301.5959">Chern-weil forms and abstract
 homotopy theory</a>.
 </div>
+<div id="ref-freedman_quinn" class="csl-entry" role="listitem">
+<span class="smallcaps">Freedman</span>, M.H. &amp; <span
+class="smallcaps">Quinn</span>, F. (1990) <em><a
+href="http://www.jstor.org/stable/j.ctt7ztz2d">Topology of 4-manifolds
+(PMS-39)</a></em>. Princeton University Press.
+</div>
+<div id="ref-kirby_siebenmann" class="csl-entry" role="listitem">
+<span class="smallcaps">Kirby</span>, R.C. &amp; <span
+class="smallcaps">Siebenmann</span>, L.C. (1977) <em>Foundational essays
+on topological manifolds, smoothings, and triangulations</em>, Annals of
+mathematics studies. Princeton University Press.
+</div>
 <div id="ref-talbott" class="csl-entry" role="listitem">
 <span class="smallcaps">Talbott</span>, S. (1995) <em><a
 href="https://books.google.com/books?id=KcXaAAAAMAAJ">The future does
@@ -501,5 +596,15 @@ not compute: Transcending the machines in our midst</a></em>. O’Reilly
 &amp; Associates.
 </div>
 </div>
+<section id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p><a
+href="https://mathoverflow.net/questions/201944/topological-n-manifolds-have-the-homotopy-type-of-n-dimensional-cw-complexes"
+class="uri">https://mathoverflow.net/questions/201944/topological-n-manifolds-have-the-homotopy-type-of-n-dimensional-cw-complexes</a><a
+href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
 </body>
 </html>

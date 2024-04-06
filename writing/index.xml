@@ -90,11 +90,29 @@ class=&#34;toc-section-number&#34;&gt;2&lt;/span&gt; Non-infinitesimal calculus&
 id=&#34;toc-the-tangent-bundle-of-the-2-sphere&#34;&gt;&lt;span
 class=&#34;toc-section-number&#34;&gt;3&lt;/span&gt; The tangent bundle of the
 2-sphere&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#why-this-is-geometry&#34; id=&#34;toc-why-this-is-geometry&#34;&gt;&lt;span
+class=&#34;toc-section-number&#34;&gt;4&lt;/span&gt; Why this is geometry&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#connections-as-splittings&#34;
+id=&#34;toc-connections-as-splittings&#34;&gt;&lt;span
+class=&#34;toc-section-number&#34;&gt;4.1&lt;/span&gt; Connections as splittings&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#tensorial&#34; id=&#34;toc-tensorial&#34;&gt;&lt;span
+class=&#34;toc-section-number&#34;&gt;4.2&lt;/span&gt; Tensorial&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#the-leibniz-product-rule&#34;
+id=&#34;toc-the-leibniz-product-rule&#34;&gt;&lt;span
+class=&#34;toc-section-number&#34;&gt;4.3&lt;/span&gt; The Leibniz (product)
+rule&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#gauge-transformations&#34;
-id=&#34;toc-gauge-transformations&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;4&lt;/span&gt;
-Gauge transformations&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#chern-weil-theory&#34; id=&#34;toc-chern-weil-theory&#34;&gt;&lt;span
-class=&#34;toc-section-number&#34;&gt;5&lt;/span&gt; Chern-Weil theory&lt;/a&gt;&lt;/li&gt;
+id=&#34;toc-gauge-transformations&#34;&gt;&lt;span
+class=&#34;toc-section-number&#34;&gt;4.4&lt;/span&gt; Gauge transformations&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#characteristic-classes-and-chern-weil-theory&#34;
+id=&#34;toc-characteristic-classes-and-chern-weil-theory&#34;&gt;&lt;span
+class=&#34;toc-section-number&#34;&gt;4.5&lt;/span&gt; Characteristic classes and
+Chern-Weil theory&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#combinatorial-manifolds&#34;
+id=&#34;toc-combinatorial-manifolds&#34;&gt;&lt;span
+class=&#34;toc-section-number&#34;&gt;4.6&lt;/span&gt; Combinatorial manifolds&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/nav&gt;
 &lt;h1 data-number=&#34;1&#34; id=&#34;introduction&#34;&gt;&lt;span
@@ -219,61 +237,6 @@ point there is an important check we can make. &lt;span
 class=&#34;math inline&#34;&gt;\(df\)&lt;/span&gt; has a few important properties, the
 most characteristic of which is the Leibniz, or product rule. Is this
 visible in HoTT?&lt;/p&gt;
-&lt;p&gt;The Leibniz rule states that if &lt;span class=&#34;math inline&#34;&gt;\(f, g:M\to
-\ensuremath{\mathbb{R}}\)&lt;/span&gt; are two smooth functions to the real
-numbers then &lt;span class=&#34;math inline&#34;&gt;\(d(fg) = fdg + gdf\)&lt;/span&gt;.
-Here &lt;span class=&#34;math inline&#34;&gt;\(fg\)&lt;/span&gt; is the function formed by
-taking the pointwise product of &lt;span class=&#34;math inline&#34;&gt;\(f\)&lt;/span&gt;
-and &lt;span class=&#34;math inline&#34;&gt;\(g\)&lt;/span&gt;. To examine this situation in
-HoTT we need type-theoretic functions &lt;span class=&#34;math inline&#34;&gt;\(f,
-g:M\to B\)&lt;/span&gt; from some type &lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt;
-to an H-space &lt;span class=&#34;math inline&#34;&gt;\(B\)&lt;/span&gt;.&lt;/p&gt;
-&lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 1&lt;/strong&gt;. &lt;em&gt;An H-space structure on a pointed
-type &lt;span class=&#34;math inline&#34;&gt;\((B,b)\)&lt;/span&gt; consists of&lt;/em&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;&lt;em&gt;A binary operation &lt;span class=&#34;math inline&#34;&gt;\(\mu:B\to B\to
-B\)&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;em&gt;A left unit law &lt;span
-class=&#34;math inline&#34;&gt;\(\mu_l:\mu(\mathrm{pt},-)=\ensuremath{\text{id}}_B\)&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;em&gt;A right unit law &lt;span
-class=&#34;math inline&#34;&gt;\(\mu_r:\mu(-,\mathrm{pt})=\ensuremath{\text{id}}_B\)&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;em&gt;A coherence &lt;span
-class=&#34;math inline&#34;&gt;\(\mu_{lr}:\mu_l(\mathrm{pt})=_{\mu(\mathrm{pt},\mathrm{pt})=\mathrm{pt}}\mu_r(\mathrm{pt})\)&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;em&gt;A proof of left- and right- invertibility: &lt;span
-class=&#34;math inline&#34;&gt;\(\mu(a,-):A\simeq A\)&lt;/span&gt;, &lt;span
-class=&#34;math inline&#34;&gt;\(\mu(-, b):A\simeq A\)&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;p&gt;The analogue of the algebra of functions to &lt;span
-class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{R}}\)&lt;/span&gt; is:&lt;/p&gt;
-&lt;div class=&#34;myprop&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Proposition 1&lt;/strong&gt;. &lt;em&gt;For any type &lt;span
-class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; and H-space &lt;span
-class=&#34;math inline&#34;&gt;\(B\)&lt;/span&gt; the type of maps &lt;span
-class=&#34;math inline&#34;&gt;\(M\to B\)&lt;/span&gt; with base point the constant map
-is an H-space under pointwise multiplication.&lt;/em&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;We claim thact the following deserves to be called the Leibniz
-rule.&lt;/p&gt;
-&lt;div class=&#34;mylemma&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Lemma 1&lt;/strong&gt;. &lt;em&gt;For any type &lt;span
-class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; and H-space &lt;span
-class=&#34;math inline&#34;&gt;\(B\)&lt;/span&gt; and maps &lt;span
-class=&#34;math inline&#34;&gt;\(f,g:M\to B\)&lt;/span&gt; and path &lt;span
-class=&#34;math inline&#34;&gt;\(p:x=_M y\)&lt;/span&gt; we have &lt;span
-class=&#34;math inline&#34;&gt;\(\ensuremath{\mathsf{ap}}(fg)(p)=\mu(f(x),\ensuremath{\mathsf{ap}}(g)(p))
-\cdot \mu(\ensuremath{\mathsf{ap}}(f)(p),g(y))\)&lt;/span&gt;. (&lt;span
-class=&#34;math inline&#34;&gt;\(\cdot\)&lt;/span&gt; is concatenation of
-paths.)&lt;/em&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;The notation is temporarily sloppy, but by &lt;span
-class=&#34;math inline&#34;&gt;\(\mu(a, p)\)&lt;/span&gt; for a path &lt;span
-class=&#34;math inline&#34;&gt;\(p\)&lt;/span&gt; we mean the functorial action of
-multiplication by &lt;span class=&#34;math inline&#34;&gt;\(a\)&lt;/span&gt; on the left, on
-a path.g&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;./09052d33113b7087f7abc8b04e220a13697b45a3.png&#34;
-alt=&#34;image&#34; /&gt;&lt;/p&gt;
 &lt;figure&gt;
 &lt;img src=&#34;./45744937ac561c6ce05f971621a980d63ad6d2e1.png&#34; /&gt;
 &lt;figcaption&gt;The HIT &lt;span class=&#34;math inline&#34;&gt;\(C_4\)&lt;/span&gt; which is
@@ -324,7 +287,7 @@ theorem.&lt;/p&gt;
 &lt;p&gt;We can leverage the syntax of HoTT by encoding the above in a map
 between HITs.&lt;/p&gt;
 &lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 2&lt;/strong&gt;. &lt;em&gt;Denote by &lt;span
+&lt;p&gt;&lt;strong&gt;Definition 1&lt;/strong&gt;. &lt;em&gt;Denote by &lt;span
 class=&#34;math inline&#34;&gt;\(C_4\)&lt;/span&gt; the join &lt;span
 class=&#34;math inline&#34;&gt;\(\{b, g\}*\{r, o\}\)&lt;/span&gt;. This is the equator of
 the discrete octahedral sphere. Denote by &lt;span
@@ -333,26 +296,26 @@ given by the join &lt;span class=&#34;math inline&#34;&gt;\(\{w, y\}*
 C_4\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;mylemma&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Lemma 2&lt;/strong&gt;. &lt;em&gt;&lt;span class=&#34;math inline&#34;&gt;\((C_4,
+&lt;p&gt;&lt;strong&gt;Lemma 1&lt;/strong&gt;. &lt;em&gt;&lt;span class=&#34;math inline&#34;&gt;\((C_4,
 b)\simeq S^1\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;mylemma&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Lemma 3&lt;/strong&gt;. &lt;em&gt;&lt;span
+&lt;p&gt;&lt;strong&gt;Lemma 2&lt;/strong&gt;. &lt;em&gt;&lt;span
 class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{O}}\simeq
 S^2\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 3&lt;/strong&gt;. &lt;em&gt;Let &lt;span
+&lt;p&gt;&lt;strong&gt;Definition 2&lt;/strong&gt;. &lt;em&gt;Let &lt;span
 class=&#34;math inline&#34;&gt;\(\mathrm{BAut}_1(S^1)\stackrel{\mathrm{def}}{=}\sum_{X:\mathcal{U}}||X=S^1||_0.\)&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;mylemma&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Lemma 4&lt;/strong&gt;. &lt;em&gt;We have &lt;span
+&lt;p&gt;&lt;strong&gt;Lemma 3&lt;/strong&gt;. &lt;em&gt;We have &lt;span
 class=&#34;math inline&#34;&gt;\((C_4, ||\{b, g, r, o\}\mapsto \mathsf{base},
 br\mapsto \mathsf{loop}, \{rg, go, ob\}\mapsto
 \ensuremath{\mathsf{refl}}||_0):\mathrm{BAut}_1(S^1)\)&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;mylemma&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Lemma 5&lt;/strong&gt;. &lt;em&gt;&lt;span
+&lt;p&gt;&lt;strong&gt;Lemma 4&lt;/strong&gt;. &lt;em&gt;&lt;span
 class=&#34;math inline&#34;&gt;\(\mathrm{BAut}_1(S^1)\)&lt;/span&gt; is equivalent to the
 type of &lt;span class=&#34;math inline&#34;&gt;\(S^1\)&lt;/span&gt;-torsors, and to the
 type of &lt;span class=&#34;math inline&#34;&gt;\((C_4,b)\)&lt;/span&gt;-torsors.&lt;/em&gt;&lt;/p&gt;
@@ -371,7 +334,7 @@ w]]\)&lt;/span&gt;.&lt;/p&gt;
 automorphism connected to the identiy which will play the role of
 rotation by 90 degrees:&lt;/p&gt;
 &lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 4&lt;/strong&gt;. &lt;em&gt;Let &lt;span
+&lt;p&gt;&lt;strong&gt;Definition 3&lt;/strong&gt;. &lt;em&gt;Let &lt;span
 class=&#34;math inline&#34;&gt;\(R:C_4\to C_4\)&lt;/span&gt; be given by &lt;span
 class=&#34;math inline&#34;&gt;\(R(b)=o, R(o)=g, R(g)=r, R(r)=b, R(bo)=og,
 R(og)=gr, R(gr)=rb, R(rb)=bo.\)&lt;/span&gt; Let &lt;span
@@ -379,7 +342,7 @@ class=&#34;math inline&#34;&gt;\(R&amp;#39;:R=\ensuremath{\text{id}}\)&lt;/span&
 obvious homotopy to the identity.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 5&lt;/strong&gt;. &lt;em&gt;Define &lt;span
+&lt;p&gt;&lt;strong&gt;Definition 4&lt;/strong&gt;. &lt;em&gt;Define &lt;span
 class=&#34;math inline&#34;&gt;\(T_1:\ensuremath{\mathbb{O}}\to\mathrm{BAut}_1(S^1)\)&lt;/span&gt;
 by&lt;/em&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -456,8 +419,92 @@ order) map to &lt;span class=&#34;math inline&#34;&gt;\(R&amp;#39;\)&lt;/span&gt
 fact that &lt;span class=&#34;math inline&#34;&gt;\(\mathrm{BAut}_1(S^1)\)&lt;/span&gt; is a
 2-type gives us someplace to send all the dimensions of the HIT &lt;span
 class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{O}}\)&lt;/span&gt;.&lt;/p&gt;
-&lt;h1 data-number=&#34;4&#34; id=&#34;gauge-transformations&#34;&gt;&lt;span
-class=&#34;header-section-number&#34;&gt;4&lt;/span&gt; Gauge transformations&lt;/h1&gt;
+&lt;h1 data-number=&#34;4&#34; id=&#34;why-this-is-geometry&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;4&lt;/span&gt; Why this is geometry&lt;/h1&gt;
+&lt;p&gt;Discrete differential forms are alien enough that we ought to provide
+evidence that we are describing honest classical differential geometry.
+In this section we will enumerate a wishlist of facts that we believe
+characterize the subject, and then provide evidence for them.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Connections can be described as an infinitesimal splitting of a
+bundle into horizontal and vertical components.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;There’s a notion of &lt;em&gt;tensorial&lt;/em&gt; that holds for forms but
+not for connections.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Differentials and directional derivatives satisfy the Leibniz
+(product) rule.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Characteristic classes of bundles can be computed using a
+connection (Chern-Weil theory).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The space of all connections on a fixed bundle is a contractible
+space on which the group of &lt;em&gt;based gauge transformations&lt;/em&gt; (bundle
+automorphisms that are the identity on one selected fiber) acts
+freely.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The homotopy types of manifolds we care about have combinatorial
+presentations, and the real-cohesive shape modal operator maps between
+them.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 data-number=&#34;4.1&#34; id=&#34;connections-as-splittings&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;4.1&lt;/span&gt; Connections as splittings&lt;/h2&gt;
+&lt;h2 data-number=&#34;4.2&#34; id=&#34;tensorial&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;4.2&lt;/span&gt; Tensorial&lt;/h2&gt;
+&lt;h2 data-number=&#34;4.3&#34; id=&#34;the-leibniz-product-rule&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;4.3&lt;/span&gt; The Leibniz (product) rule&lt;/h2&gt;
+&lt;p&gt;The Leibniz rule states that if &lt;span class=&#34;math inline&#34;&gt;\(f, g:M\to
+\ensuremath{\mathbb{R}}\)&lt;/span&gt; are two smooth functions to the real
+numbers then &lt;span class=&#34;math inline&#34;&gt;\(d(fg) = fdg + gdf\)&lt;/span&gt;.
+Here &lt;span class=&#34;math inline&#34;&gt;\(fg\)&lt;/span&gt; is the function formed by
+taking the pointwise product of &lt;span class=&#34;math inline&#34;&gt;\(f\)&lt;/span&gt;
+and &lt;span class=&#34;math inline&#34;&gt;\(g\)&lt;/span&gt;. To examine this situation in
+HoTT we need type-theoretic functions &lt;span class=&#34;math inline&#34;&gt;\(f,
+g:M\to B\)&lt;/span&gt; from some type &lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt;
+to an H-space &lt;span class=&#34;math inline&#34;&gt;\(B\)&lt;/span&gt;.&lt;/p&gt;
+&lt;div class=&#34;mydef&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Definition 5&lt;/strong&gt;. &lt;em&gt;An H-space structure on a pointed
+type &lt;span class=&#34;math inline&#34;&gt;\((B,b)\)&lt;/span&gt; consists of&lt;/em&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;A binary operation &lt;span class=&#34;math inline&#34;&gt;\(\mu:B\to B\to
+B\)&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;A left unit law &lt;span
+class=&#34;math inline&#34;&gt;\(\mu_l:\mu(\mathrm{pt},-)=\ensuremath{\text{id}}_B\)&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;A right unit law &lt;span
+class=&#34;math inline&#34;&gt;\(\mu_r:\mu(-,\mathrm{pt})=\ensuremath{\text{id}}_B\)&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;A coherence &lt;span
+class=&#34;math inline&#34;&gt;\(\mu_{lr}:\mu_l(\mathrm{pt})=_{\mu(\mathrm{pt},\mathrm{pt})=\mathrm{pt}}\mu_r(\mathrm{pt})\)&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;A proof of left- and right- invertibility: &lt;span
+class=&#34;math inline&#34;&gt;\(\mu(a,-):A\simeq A\)&lt;/span&gt;, &lt;span
+class=&#34;math inline&#34;&gt;\(\mu(-, b):A\simeq A\)&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;p&gt;The analogue of the algebra of functions to &lt;span
+class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{R}}\)&lt;/span&gt; is:&lt;/p&gt;
+&lt;div class=&#34;myprop&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Proposition 1&lt;/strong&gt;. &lt;em&gt;For any type &lt;span
+class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; and H-space &lt;span
+class=&#34;math inline&#34;&gt;\(B\)&lt;/span&gt; the type of maps &lt;span
+class=&#34;math inline&#34;&gt;\(M\to B\)&lt;/span&gt; with base point the constant map
+is an H-space under pointwise multiplication.&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;We claim thact the following deserves to be called the Leibniz
+rule.&lt;/p&gt;
+&lt;div class=&#34;mylemma&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Lemma 5&lt;/strong&gt;. &lt;em&gt;For any type &lt;span
+class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; and H-space &lt;span
+class=&#34;math inline&#34;&gt;\(B\)&lt;/span&gt; and maps &lt;span
+class=&#34;math inline&#34;&gt;\(f,g:M\to B\)&lt;/span&gt; and path &lt;span
+class=&#34;math inline&#34;&gt;\(p:x=_M y\)&lt;/span&gt; we have &lt;span
+class=&#34;math inline&#34;&gt;\(\ensuremath{\mathsf{ap}}(fg)(p)=\mu(f(x),\ensuremath{\mathsf{ap}}(g)(p))
+\cdot \mu(\ensuremath{\mathsf{ap}}(f)(p),g(y))\)&lt;/span&gt;. (&lt;span
+class=&#34;math inline&#34;&gt;\(\cdot\)&lt;/span&gt; is concatenation of
+paths.)&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;The notation is temporarily sloppy, but by &lt;span
+class=&#34;math inline&#34;&gt;\(\mu(a, p)\)&lt;/span&gt; for a path &lt;span
+class=&#34;math inline&#34;&gt;\(p\)&lt;/span&gt; we mean the functorial action of
+multiplication by &lt;span class=&#34;math inline&#34;&gt;\(a\)&lt;/span&gt; on the left, on
+a path.g&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./09052d33113b7087f7abc8b04e220a13697b45a3.png&#34;
+alt=&#34;image&#34; /&gt;&lt;/p&gt;
+&lt;h2 data-number=&#34;4.4&#34; id=&#34;gauge-transformations&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;4.4&lt;/span&gt; Gauge transformations&lt;/h2&gt;
 &lt;p&gt;A &lt;em&gt;gauge transformation&lt;/em&gt; is a term inherited from physics.
 It’s an automorphism of a principal bundle &lt;span
 class=&#34;math inline&#34;&gt;\(P\to X\)&lt;/span&gt;, meaning a homeomorphism of &lt;span
@@ -491,12 +538,48 @@ class=&#34;math inline&#34;&gt;\(f\)&lt;/span&gt;. In 1982 this was a theorem!&l
 class=&#34;citation&#34; data-cites=&#34;atiyah1983yang&#34;&gt; (&lt;a
 href=&#34;#ref-atiyah1983yang&#34; role=&#34;doc-biblioref&#34;&gt;Atiyah &amp;amp; Bott,
 1983&lt;/a&gt;)&lt;/span&gt;&lt;/p&gt;
-&lt;h1 data-number=&#34;5&#34; id=&#34;chern-weil-theory&#34;&gt;&lt;span
-class=&#34;header-section-number&#34;&gt;5&lt;/span&gt; Chern-Weil theory&lt;/h1&gt;
+&lt;h2 data-number=&#34;4.5&#34;
+id=&#34;characteristic-classes-and-chern-weil-theory&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;4.5&lt;/span&gt; Characteristic classes and
+Chern-Weil theory&lt;/h2&gt;
 &lt;p&gt;What is Chern-Weil theory about? (cite Freed-Hopkins&lt;span
 class=&#34;citation&#34; data-cites=&#34;freed2013chernweil&#34;&gt; (&lt;a
 href=&#34;#ref-freed2013chernweil&#34; role=&#34;doc-biblioref&#34;&gt;Freed &amp;amp; Hopkins,
 2013&lt;/a&gt;)&lt;/span&gt;)&lt;/p&gt;
+&lt;h2 data-number=&#34;4.6&#34; id=&#34;combinatorial-manifolds&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;4.6&lt;/span&gt; Combinatorial manifolds&lt;/h2&gt;
+&lt;p&gt;The combinatorial structure we have in mind is a nerve of a good open
+cover. What do we know about which smooth manifolds have such covers?
+While we’re at it, let’s survey all the combinatorial-flavored spaces
+and survey what smooth manifolds are homotopy equivalent to which
+structures.&lt;/p&gt;
+&lt;p&gt;What topological manifolds are equivalent to a CW complex? The answer
+is the composition of a few results summarized by Allen Hatcher&lt;a
+href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;
+role=&#34;doc-noteref&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt; (citing &lt;span class=&#34;citation&#34;
+data-cites=&#34;kirby_siebenmann&#34;&gt; (&lt;a href=&#34;#ref-kirby_siebenmann&#34;
+role=&#34;doc-biblioref&#34;&gt;Kirby &amp;amp; Siebenmann, 1977&lt;/a&gt;)&lt;/span&gt; and &lt;span
+class=&#34;citation&#34; data-cites=&#34;freedman_quinn&#34;&gt; (&lt;a
+href=&#34;#ref-freedman_quinn&#34; role=&#34;doc-biblioref&#34;&gt;Freedman &amp;amp; Quinn,
+1990&lt;/a&gt;)&lt;/span&gt;):&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Every topological manifold has a handlebody structure except in
+dimension 4, where a 4-manifold has a handlebody structure if and only
+if it is smoothable. This is a theorem on page 136 of Freedman and
+Quinn’s book &#34;Topology of 4-Manifolds&#34;, with a reference given to the
+Kirby-Siebenmann book for the higher-dimensional case. It is then an
+elementary fact that an &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;-manifold
+with a handlebody structure is homotopy equivalent to a CW complex with
+one &lt;span class=&#34;math inline&#34;&gt;\(k\)&lt;/span&gt;-cell for each &lt;span
+class=&#34;math inline&#34;&gt;\(k\)&lt;/span&gt;-handle, so in particular there are no
+cells of dimension greater than &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;.
+At least in the compact case a manifold with a handlebody structure is
+in fact homeomorphic to a CW complex with &lt;span
+class=&#34;math inline&#34;&gt;\(k\)&lt;/span&gt;-cells corresponding to &lt;span
+class=&#34;math inline&#34;&gt;\(k\)&lt;/span&gt;-handles; see page 107 of
+Kirby-Siebenmann. This probably holds in the noncompact case as well,
+though I don’t know a reference.&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;div id=&#34;refs&#34; class=&#34;references csl-bib-body hanging-indent&#34;
 data-entry-spacing=&#34;0&#34; role=&#34;list&#34;&gt;
 &lt;div id=&#34;ref-atiyah1983yang&#34; class=&#34;csl-entry&#34; role=&#34;listitem&#34;&gt;
@@ -512,6 +595,18 @@ class=&#34;smallcaps&#34;&gt;Hopkins&lt;/span&gt;, M.J. (2013) &lt;a
 href=&#34;https://arxiv.org/abs/1301.5959&#34;&gt;Chern-weil forms and abstract
 homotopy theory&lt;/a&gt;.
 &lt;/div&gt;
+&lt;div id=&#34;ref-freedman_quinn&#34; class=&#34;csl-entry&#34; role=&#34;listitem&#34;&gt;
+&lt;span class=&#34;smallcaps&#34;&gt;Freedman&lt;/span&gt;, M.H. &amp;amp; &lt;span
+class=&#34;smallcaps&#34;&gt;Quinn&lt;/span&gt;, F. (1990) &lt;em&gt;&lt;a
+href=&#34;http://www.jstor.org/stable/j.ctt7ztz2d&#34;&gt;Topology of 4-manifolds
+(PMS-39)&lt;/a&gt;&lt;/em&gt;. Princeton University Press.
+&lt;/div&gt;
+&lt;div id=&#34;ref-kirby_siebenmann&#34; class=&#34;csl-entry&#34; role=&#34;listitem&#34;&gt;
+&lt;span class=&#34;smallcaps&#34;&gt;Kirby&lt;/span&gt;, R.C. &amp;amp; &lt;span
+class=&#34;smallcaps&#34;&gt;Siebenmann&lt;/span&gt;, L.C. (1977) &lt;em&gt;Foundational essays
+on topological manifolds, smoothings, and triangulations&lt;/em&gt;, Annals of
+mathematics studies. Princeton University Press.
+&lt;/div&gt;
 &lt;div id=&#34;ref-talbott&#34; class=&#34;csl-entry&#34; role=&#34;listitem&#34;&gt;
 &lt;span class=&#34;smallcaps&#34;&gt;Talbott&lt;/span&gt;, S. (1995) &lt;em&gt;&lt;a
 href=&#34;https://books.google.com/books?id=KcXaAAAAMAAJ&#34;&gt;The future does
@@ -519,6 +614,16 @@ not compute: Transcending the machines in our midst&lt;/a&gt;&lt;/em&gt;. O’Re
 &amp;amp; Associates.
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;section id=&#34;footnotes&#34; class=&#34;footnotes footnotes-end-of-document&#34;
+role=&#34;doc-endnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;&lt;a
+href=&#34;https://mathoverflow.net/questions/201944/topological-n-manifolds-have-the-homotopy-type-of-n-dimensional-cw-complexes&#34;
+class=&#34;uri&#34;&gt;https://mathoverflow.net/questions/201944/topological-n-manifolds-have-the-homotopy-type-of-n-dimensional-cw-complexes&lt;/a&gt;&lt;a
+href=&#34;#fnref1&#34; class=&#34;footnote-back&#34; role=&#34;doc-backlink&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
 &lt;/body&gt;
 &lt;/html&gt;
 </description>
