@@ -84,16 +84,20 @@ class="toc-section-number">4.2</span> Tensorial</a></li>
 id="toc-the-leibniz-product-rule"><span
 class="toc-section-number">4.3</span> The Leibniz (product)
 rule</a></li>
+<li><a href="#nonvanishing-tangent-vector-fields"
+id="toc-nonvanishing-tangent-vector-fields"><span
+class="toc-section-number">4.4</span> Nonvanishing tangent vector
+fields</a></li>
 <li><a href="#gauge-transformations"
 id="toc-gauge-transformations"><span
-class="toc-section-number">4.4</span> Gauge transformations</a></li>
+class="toc-section-number">4.5</span> Gauge transformations</a></li>
 <li><a href="#characteristic-classes-and-chern-weil-theory"
 id="toc-characteristic-classes-and-chern-weil-theory"><span
-class="toc-section-number">4.5</span> Characteristic classes and
+class="toc-section-number">4.6</span> Characteristic classes and
 Chern-Weil theory</a></li>
 <li><a href="#combinatorial-manifolds"
 id="toc-combinatorial-manifolds"><span
-class="toc-section-number">4.6</span> Combinatorial manifolds</a></li>
+class="toc-section-number">4.7</span> Combinatorial manifolds</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -414,6 +418,8 @@ bundle into horizontal and vertical components.</p></li>
 not for connections.</p></li>
 <li><p>Differentials and directional derivatives satisfy the Leibniz
 (product) rule.</p></li>
+<li><p>Having an everywhere nonvanishing tangent vector field implies
+the Euler characteristic is zero.</p></li>
 <li><p>Characteristic classes of bundles can be computed using a
 connection (Chern-Weil theory).</p></li>
 <li><p>The space of all connections on a fixed bundle is a contractible
@@ -426,6 +432,66 @@ them.</p></li>
 </ol>
 <h2 data-number="4.1" id="connections-as-splittings"><span
 class="header-section-number">4.1</span> Connections as splittings</h2>
+<p>The classical story goes like this.</p>
+<div class="mydef">
+<p><strong>Definition 5</strong>. <em>The <em>vertical bundle</em> <span
+class="math inline">\(VP\)</span> of a principal bundle <span
+class="math inline">\(\pi:P\to B\)</span> with Lie group <span
+class="math inline">\(G\)</span> is the kernel of the derivative <span
+class="math inline">\(T\pi:TP\to TB\)</span>.</em></p>
+</div>
+<p><span class="math inline">\(VP\)</span> can be visualized as the
+collection of tangent vectors that point along the fibers. It should be
+clear that the group <span class="math inline">\(\mathrm{Aut}P\)</span>
+acts on <span class="math inline">\(VP\)</span>: an automorphism <span
+class="math inline">\(\phi:P\to P\)</span> sends <span
+class="math inline">\(V_pP\)</span> to <span
+class="math inline">\(V_{\phi(p)}P\)</span>, where of course <span
+class="math inline">\(\pi(p)=\pi(\phi(p))\)</span>.</p>
+<div class="mydef">
+<p><strong>Definition 6</strong>. <em>A classical <em>Ehresmann
+connection</em> on a principal bundle <span
+class="math inline">\(\pi:P\to B\)</span> with Lie group <span
+class="math inline">\(G\)</span> is a splitting <span
+class="math inline">\(TP=VP\oplus HP\)</span> at every point of <span
+class="math inline">\(P\)</span> into vertical and “horizontal”
+subspaces, which is preserved by the action of <span
+class="math inline">\(\mathrm{Aut}P\)</span>.</em></p>
+</div>
+<p>Being preserved by the action of <span
+class="math inline">\(\mathrm{Aut}P\)</span> means that the
+complementary horizontal subspaces in a given fiber of <span
+class="math inline">\(\pi:P\to B\)</span> are determined by the
+splitting at any single point in the fiber. The action of <span
+class="math inline">\(G\)</span> on this fiber can then push the
+splitting around to all the other points.</p>
+<p>The motivation for this definition is that we now have an isomorphism
+<span class="math inline">\(T_p\pi:H_pP\to T_{\pi(p)}B\)</span> between
+each horizontal space and the tangent space below it in <span
+class="math inline">\(B\)</span>. This means that given a tangent vector
+at <span class="math inline">\(b:B\)</span> and a point <span
+class="math inline">\(p\)</span> in <span
+class="math inline">\(\pi^{-1}(b)\)</span> we can uniquely lift the
+tangent vector to a horizontal vector at <span
+class="math inline">\(p\)</span>. We can also lift vector fields and
+paths in this way. To lift a path <span
+class="math inline">\(\gamma:[0,1]\to B\)</span> you must specify a lift
+for <span class="math inline">\(\gamma(0)\)</span> and then lift the
+tangent vectors of <span class="math inline">\(\gamma\)</span> and prove
+that you can integrate the lift of that vector field upstairs in <span
+class="math inline">\(HP\)</span>.</p>
+<p>Then, armed with the lifting of paths one immediately obtains
+isomorphisms between the fibers of <span
+class="math inline">\(P\)</span>. So the Ehresmann connection, the
+lifting of paths, and transport isomorphisms between fibers are all
+recaptulations of the structure that the connection adds to the
+bundle.</p>
+<p>Moving now to HoTT, fix a type <span
+class="math inline">\(B:\mathcal{U}\)</span> and a type family <span
+class="math inline">\(f:B\to\mathcal{U}\)</span>. Path induction gives
+us the transport isomorphism <span class="math inline">\(\prod_{p:x=_B
+y}\mathrm{tr}(p):f(x)=f(y)\)</span>.</p>
+<p>(Now describe lifts and splitting.)</p>
 <h2 data-number="4.2" id="tensorial"><span
 class="header-section-number">4.2</span> Tensorial</h2>
 <h2 data-number="4.3" id="the-leibniz-product-rule"><span
@@ -440,7 +506,7 @@ HoTT we need type-theoretic functions <span class="math inline">\(f,
 g:M\to B\)</span> from some type <span class="math inline">\(M\)</span>
 to an H-space <span class="math inline">\(B\)</span>.</p>
 <div class="mydef">
-<p><strong>Definition 5</strong>. <em>An H-space structure on a pointed
+<p><strong>Definition 7</strong>. <em>An H-space structure on a pointed
 type <span class="math inline">\((B,b)\)</span> consists of</em></p>
 <ol>
 <li><p><em>A binary operation <span class="math inline">\(\mu:B\to B\to
@@ -485,8 +551,12 @@ multiplication by <span class="math inline">\(a\)</span> on the left, on
 a path.g</p>
 <p><img src="./09052d33113b7087f7abc8b04e220a13697b45a3.png"
 alt="image" /></p>
-<h2 data-number="4.4" id="gauge-transformations"><span
-class="header-section-number">4.4</span> Gauge transformations</h2>
+<h2 data-number="4.4" id="nonvanishing-tangent-vector-fields"><span
+class="header-section-number">4.4</span> Nonvanishing tangent vector
+fields</h2>
+<p>What’s the non-infinitesimal version of this?</p>
+<h2 data-number="4.5" id="gauge-transformations"><span
+class="header-section-number">4.5</span> Gauge transformations</h2>
 <p>A <em>gauge transformation</em> is a term inherited from physics.
 It’s an automorphism of a principal bundle <span
 class="math inline">\(P\to X\)</span>, meaning a homeomorphism of <span
@@ -520,16 +590,16 @@ class="math inline">\(f\)</span>. In 1982 this was a theorem!<span
 class="citation" data-cites="atiyah1983yang"> (<a
 href="#ref-atiyah1983yang" role="doc-biblioref">Atiyah &amp; Bott,
 1983</a>)</span></p>
-<h2 data-number="4.5"
+<h2 data-number="4.6"
 id="characteristic-classes-and-chern-weil-theory"><span
-class="header-section-number">4.5</span> Characteristic classes and
+class="header-section-number">4.6</span> Characteristic classes and
 Chern-Weil theory</h2>
 <p>What is Chern-Weil theory about? (cite Freed-Hopkins<span
 class="citation" data-cites="freed2013chernweil"> (<a
 href="#ref-freed2013chernweil" role="doc-biblioref">Freed &amp; Hopkins,
 2013</a>)</span>)</p>
-<h2 data-number="4.6" id="combinatorial-manifolds"><span
-class="header-section-number">4.6</span> Combinatorial manifolds</h2>
+<h2 data-number="4.7" id="combinatorial-manifolds"><span
+class="header-section-number">4.7</span> Combinatorial manifolds</h2>
 <p>The combinatorial structure we have in mind is a nerve of a good open
 cover. What do we know about which smooth manifolds have such covers?
 While we’re at it, let’s survey all the combinatorial-flavored spaces

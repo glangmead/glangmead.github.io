@@ -230,16 +230,20 @@ class=&#34;toc-section-number&#34;&gt;4.2&lt;/span&gt; Tensorial&lt;/a&gt;&lt;/l
 id=&#34;toc-the-leibniz-product-rule&#34;&gt;&lt;span
 class=&#34;toc-section-number&#34;&gt;4.3&lt;/span&gt; The Leibniz (product)
 rule&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#nonvanishing-tangent-vector-fields&#34;
+id=&#34;toc-nonvanishing-tangent-vector-fields&#34;&gt;&lt;span
+class=&#34;toc-section-number&#34;&gt;4.4&lt;/span&gt; Nonvanishing tangent vector
+fields&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#gauge-transformations&#34;
 id=&#34;toc-gauge-transformations&#34;&gt;&lt;span
-class=&#34;toc-section-number&#34;&gt;4.4&lt;/span&gt; Gauge transformations&lt;/a&gt;&lt;/li&gt;
+class=&#34;toc-section-number&#34;&gt;4.5&lt;/span&gt; Gauge transformations&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#characteristic-classes-and-chern-weil-theory&#34;
 id=&#34;toc-characteristic-classes-and-chern-weil-theory&#34;&gt;&lt;span
-class=&#34;toc-section-number&#34;&gt;4.5&lt;/span&gt; Characteristic classes and
+class=&#34;toc-section-number&#34;&gt;4.6&lt;/span&gt; Characteristic classes and
 Chern-Weil theory&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#combinatorial-manifolds&#34;
 id=&#34;toc-combinatorial-manifolds&#34;&gt;&lt;span
-class=&#34;toc-section-number&#34;&gt;4.6&lt;/span&gt; Combinatorial manifolds&lt;/a&gt;&lt;/li&gt;
+class=&#34;toc-section-number&#34;&gt;4.7&lt;/span&gt; Combinatorial manifolds&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/nav&gt;
@@ -560,6 +564,8 @@ bundle into horizontal and vertical components.&lt;/p&gt;&lt;/li&gt;
 not for connections.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Differentials and directional derivatives satisfy the Leibniz
 (product) rule.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Having an everywhere nonvanishing tangent vector field implies
+the Euler characteristic is zero.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Characteristic classes of bundles can be computed using a
 connection (Chern-Weil theory).&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;The space of all connections on a fixed bundle is a contractible
@@ -572,6 +578,66 @@ them.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 data-number=&#34;4.1&#34; id=&#34;connections-as-splittings&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;4.1&lt;/span&gt; Connections as splittings&lt;/h2&gt;
+&lt;p&gt;The classical story goes like this.&lt;/p&gt;
+&lt;div class=&#34;mydef&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Definition 5&lt;/strong&gt;. &lt;em&gt;The &lt;em&gt;vertical bundle&lt;/em&gt; &lt;span
+class=&#34;math inline&#34;&gt;\(VP\)&lt;/span&gt; of a principal bundle &lt;span
+class=&#34;math inline&#34;&gt;\(\pi:P\to B\)&lt;/span&gt; with Lie group &lt;span
+class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; is the kernel of the derivative &lt;span
+class=&#34;math inline&#34;&gt;\(T\pi:TP\to TB\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(VP\)&lt;/span&gt; can be visualized as the
+collection of tangent vectors that point along the fibers. It should be
+clear that the group &lt;span class=&#34;math inline&#34;&gt;\(\mathrm{Aut}P\)&lt;/span&gt;
+acts on &lt;span class=&#34;math inline&#34;&gt;\(VP\)&lt;/span&gt;: an automorphism &lt;span
+class=&#34;math inline&#34;&gt;\(\phi:P\to P\)&lt;/span&gt; sends &lt;span
+class=&#34;math inline&#34;&gt;\(V_pP\)&lt;/span&gt; to &lt;span
+class=&#34;math inline&#34;&gt;\(V_{\phi(p)}P\)&lt;/span&gt;, where of course &lt;span
+class=&#34;math inline&#34;&gt;\(\pi(p)=\pi(\phi(p))\)&lt;/span&gt;.&lt;/p&gt;
+&lt;div class=&#34;mydef&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Definition 6&lt;/strong&gt;. &lt;em&gt;A classical &lt;em&gt;Ehresmann
+connection&lt;/em&gt; on a principal bundle &lt;span
+class=&#34;math inline&#34;&gt;\(\pi:P\to B\)&lt;/span&gt; with Lie group &lt;span
+class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; is a splitting &lt;span
+class=&#34;math inline&#34;&gt;\(TP=VP\oplus HP\)&lt;/span&gt; at every point of &lt;span
+class=&#34;math inline&#34;&gt;\(P\)&lt;/span&gt; into vertical and “horizontal”
+subspaces, which is preserved by the action of &lt;span
+class=&#34;math inline&#34;&gt;\(\mathrm{Aut}P\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Being preserved by the action of &lt;span
+class=&#34;math inline&#34;&gt;\(\mathrm{Aut}P\)&lt;/span&gt; means that the
+complementary horizontal subspaces in a given fiber of &lt;span
+class=&#34;math inline&#34;&gt;\(\pi:P\to B\)&lt;/span&gt; are determined by the
+splitting at any single point in the fiber. The action of &lt;span
+class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; on this fiber can then push the
+splitting around to all the other points.&lt;/p&gt;
+&lt;p&gt;The motivation for this definition is that we now have an isomorphism
+&lt;span class=&#34;math inline&#34;&gt;\(T_p\pi:H_pP\to T_{\pi(p)}B\)&lt;/span&gt; between
+each horizontal space and the tangent space below it in &lt;span
+class=&#34;math inline&#34;&gt;\(B\)&lt;/span&gt;. This means that given a tangent vector
+at &lt;span class=&#34;math inline&#34;&gt;\(b:B\)&lt;/span&gt; and a point &lt;span
+class=&#34;math inline&#34;&gt;\(p\)&lt;/span&gt; in &lt;span
+class=&#34;math inline&#34;&gt;\(\pi^{-1}(b)\)&lt;/span&gt; we can uniquely lift the
+tangent vector to a horizontal vector at &lt;span
+class=&#34;math inline&#34;&gt;\(p\)&lt;/span&gt;. We can also lift vector fields and
+paths in this way. To lift a path &lt;span
+class=&#34;math inline&#34;&gt;\(\gamma:[0,1]\to B\)&lt;/span&gt; you must specify a lift
+for &lt;span class=&#34;math inline&#34;&gt;\(\gamma(0)\)&lt;/span&gt; and then lift the
+tangent vectors of &lt;span class=&#34;math inline&#34;&gt;\(\gamma\)&lt;/span&gt; and prove
+that you can integrate the lift of that vector field upstairs in &lt;span
+class=&#34;math inline&#34;&gt;\(HP\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Then, armed with the lifting of paths one immediately obtains
+isomorphisms between the fibers of &lt;span
+class=&#34;math inline&#34;&gt;\(P\)&lt;/span&gt;. So the Ehresmann connection, the
+lifting of paths, and transport isomorphisms between fibers are all
+recaptulations of the structure that the connection adds to the
+bundle.&lt;/p&gt;
+&lt;p&gt;Moving now to HoTT, fix a type &lt;span
+class=&#34;math inline&#34;&gt;\(B:\mathcal{U}\)&lt;/span&gt; and a type family &lt;span
+class=&#34;math inline&#34;&gt;\(f:B\to\mathcal{U}\)&lt;/span&gt;. Path induction gives
+us the transport isomorphism &lt;span class=&#34;math inline&#34;&gt;\(\prod_{p:x=_B
+y}\mathrm{tr}(p):f(x)=f(y)\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;(Now describe lifts and splitting.)&lt;/p&gt;
 &lt;h2 data-number=&#34;4.2&#34; id=&#34;tensorial&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;4.2&lt;/span&gt; Tensorial&lt;/h2&gt;
 &lt;h2 data-number=&#34;4.3&#34; id=&#34;the-leibniz-product-rule&#34;&gt;&lt;span
@@ -586,7 +652,7 @@ HoTT we need type-theoretic functions &lt;span class=&#34;math inline&#34;&gt;\(
 g:M\to B\)&lt;/span&gt; from some type &lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt;
 to an H-space &lt;span class=&#34;math inline&#34;&gt;\(B\)&lt;/span&gt;.&lt;/p&gt;
 &lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 5&lt;/strong&gt;. &lt;em&gt;An H-space structure on a pointed
+&lt;p&gt;&lt;strong&gt;Definition 7&lt;/strong&gt;. &lt;em&gt;An H-space structure on a pointed
 type &lt;span class=&#34;math inline&#34;&gt;\((B,b)\)&lt;/span&gt; consists of&lt;/em&gt;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;&lt;em&gt;A binary operation &lt;span class=&#34;math inline&#34;&gt;\(\mu:B\to B\to
@@ -631,8 +697,12 @@ multiplication by &lt;span class=&#34;math inline&#34;&gt;\(a\)&lt;/span&gt; on 
 a path.g&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;./09052d33113b7087f7abc8b04e220a13697b45a3.png&#34;
 alt=&#34;image&#34; /&gt;&lt;/p&gt;
-&lt;h2 data-number=&#34;4.4&#34; id=&#34;gauge-transformations&#34;&gt;&lt;span
-class=&#34;header-section-number&#34;&gt;4.4&lt;/span&gt; Gauge transformations&lt;/h2&gt;
+&lt;h2 data-number=&#34;4.4&#34; id=&#34;nonvanishing-tangent-vector-fields&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;4.4&lt;/span&gt; Nonvanishing tangent vector
+fields&lt;/h2&gt;
+&lt;p&gt;What’s the non-infinitesimal version of this?&lt;/p&gt;
+&lt;h2 data-number=&#34;4.5&#34; id=&#34;gauge-transformations&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;4.5&lt;/span&gt; Gauge transformations&lt;/h2&gt;
 &lt;p&gt;A &lt;em&gt;gauge transformation&lt;/em&gt; is a term inherited from physics.
 It’s an automorphism of a principal bundle &lt;span
 class=&#34;math inline&#34;&gt;\(P\to X\)&lt;/span&gt;, meaning a homeomorphism of &lt;span
@@ -666,16 +736,16 @@ class=&#34;math inline&#34;&gt;\(f\)&lt;/span&gt;. In 1982 this was a theorem!&l
 class=&#34;citation&#34; data-cites=&#34;atiyah1983yang&#34;&gt; (&lt;a
 href=&#34;#ref-atiyah1983yang&#34; role=&#34;doc-biblioref&#34;&gt;Atiyah &amp;amp; Bott,
 1983&lt;/a&gt;)&lt;/span&gt;&lt;/p&gt;
-&lt;h2 data-number=&#34;4.5&#34;
+&lt;h2 data-number=&#34;4.6&#34;
 id=&#34;characteristic-classes-and-chern-weil-theory&#34;&gt;&lt;span
-class=&#34;header-section-number&#34;&gt;4.5&lt;/span&gt; Characteristic classes and
+class=&#34;header-section-number&#34;&gt;4.6&lt;/span&gt; Characteristic classes and
 Chern-Weil theory&lt;/h2&gt;
 &lt;p&gt;What is Chern-Weil theory about? (cite Freed-Hopkins&lt;span
 class=&#34;citation&#34; data-cites=&#34;freed2013chernweil&#34;&gt; (&lt;a
 href=&#34;#ref-freed2013chernweil&#34; role=&#34;doc-biblioref&#34;&gt;Freed &amp;amp; Hopkins,
 2013&lt;/a&gt;)&lt;/span&gt;)&lt;/p&gt;
-&lt;h2 data-number=&#34;4.6&#34; id=&#34;combinatorial-manifolds&#34;&gt;&lt;span
-class=&#34;header-section-number&#34;&gt;4.6&lt;/span&gt; Combinatorial manifolds&lt;/h2&gt;
+&lt;h2 data-number=&#34;4.7&#34; id=&#34;combinatorial-manifolds&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;4.7&lt;/span&gt; Combinatorial manifolds&lt;/h2&gt;
 &lt;p&gt;The combinatorial structure we have in mind is a nerve of a good open
 cover. What do we know about which smooth manifolds have such covers?
 While we’re at it, let’s survey all the combinatorial-flavored spaces
