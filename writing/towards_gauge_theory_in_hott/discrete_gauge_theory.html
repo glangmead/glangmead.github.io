@@ -489,8 +489,56 @@ bundle.</p>
 class="math inline">\(B:\mathcal{U}\)</span> and a type family <span
 class="math inline">\(f:B\to\mathcal{U}\)</span>. Path induction gives
 us the transport isomorphism <span class="math inline">\(\prod_{p:x=_B
-y}\mathrm{tr}(p):f(x)=f(y)\)</span>.</p>
-<p>(Now describe lifts and splitting.)</p>
+y}\mathrm{tr}(p):f(x)=f(y)\)</span>. We can use this to define a type of
+<em>dependent paths</em>, also called <em>pathovers</em> or <em>paths
+over</em> a given path.</p>
+<div class="mydef">
+<p><strong>Definition 7</strong>. <em>With the above context and points
+<span class="math inline">\(a:f(x), b:f(y)\)</span> the type of
+<em>dependent paths over <span class="math inline">\(p\)</span></em>
+with endpoints <span class="math inline">\(a, b\)</span> is denoted
+<span class="math display">\[a\xrightarrow[{p}]{=}b.\]</span> By
+induction we can assume <span class="math inline">\(p\)</span> is <span
+class="math inline">\(\ensuremath{\mathsf{refl}}_a\)</span> in which
+case <span class="math inline">\(a\xrightarrow[{p}]{=}b\)</span> is
+<span class="math inline">\(a=_{f(x)}a\)</span>.</em></p>
+</div>
+<p>See <span class="citation" data-cites="Symmetry"> (<a
+href="#ref-Symmetry" role="doc-biblioref">Bezem <em>et al.</em>,
+2023</a>)</span> for more discussion of dependent paths (where they use
+the term “path over”), including composition, and associativity
+thereof.</p>
+<p>The following two lemmas explain how transport decomposes dependent
+paths into horizontal and vertical components. These two lemmas take
+place in the dependent sum <span
+class="math inline">\(\sum_{x:B}f(x)\)</span>.</p>
+<div class="mylemma">
+<p><strong>Lemma 5</strong>. <em>(Path lifting property, <span
+class="citation" data-cites="hottbook"> (<a href="#ref-hottbook"
+role="doc-biblioref">Univalent Foundations Program, 2013</a>)</span>
+Lemma 2.3.2). Let <span class="math inline">\(f:B\to\mathcal{U}\)</span>
+be a type family over <span class="math inline">\(B\)</span> and assume
+we have <span class="math inline">\(a:f(x)\)</span> for some <span
+class="math inline">\(x:B\)</span>. Then for any <span
+class="math inline">\(\alpha:x=_B y\)</span>, we have <span
+class="math display">\[\ensuremath{\mathsf{lift}}(p,
+\alpha):(x,a)=(y,\mathrm{tr}(\alpha)(a))\]</span></em></p>
+</div>
+<div class="mylemma">
+<p><strong>Lemma 6</strong>. <em>Let <span
+class="math inline">\(f:B\to\mathcal{U}\)</span> be a type family over
+<span class="math inline">\(B\)</span> and assume we have <span
+class="math inline">\(x,x&#39;:B,a:f(x),a:f(x&#39;)\)</span>. Then <span
+class="math display">\[((x,a)=(x&#39;,a&#39;))\simeq (x=x&#39;)\times
+(a=a).\]</span></em></p>
+</div>
+<p>This is a slight generalization of <span class="citation"
+data-cites="Symmetry"> (<a href="#ref-Symmetry"
+role="doc-biblioref">Bezem <em>et al.</em>, 2023</a>)</span> Lemma
+4.14.1. To prove it we can assume <span
+class="math inline">\(x&#39;\)</span> is <span
+class="math inline">\(x\)</span> in which case the lemma is a special
+case of the identity type of a sum type.</p>
 <h2 data-number="4.2" id="tensorial"><span
 class="header-section-number">4.2</span> Tensorial</h2>
 <p>Let <span class="math inline">\(\alpha\)</span> be an <span
@@ -531,7 +579,7 @@ HoTT we need type-theoretic functions <span class="math inline">\(f,
 g:M\to B\)</span> from some type <span class="math inline">\(M\)</span>
 to an H-space <span class="math inline">\(B\)</span>.</p>
 <div class="mydef">
-<p><strong>Definition 7</strong>. <em>An H-space structure on a pointed
+<p><strong>Definition 8</strong>. <em>An H-space structure on a pointed
 type <span class="math inline">\((B,b)\)</span> consists of</em></p>
 <ol>
 <li><p><em>A binary operation <span class="math inline">\(\mu:B\to B\to
@@ -559,7 +607,7 @@ is an H-space under pointwise multiplication.</em></p>
 <p>We claim thact the following deserves to be called the Leibniz
 rule.</p>
 <div class="mylemma">
-<p><strong>Lemma 5</strong>. <em>For any type <span
+<p><strong>Lemma 7</strong>. <em>For any type <span
 class="math inline">\(M\)</span> and H-space <span
 class="math inline">\(B\)</span> and maps <span
 class="math inline">\(f,g:M\to B\)</span> and path <span
@@ -666,6 +714,13 @@ riemann surfaces. <em>Philosophical Transactions of the Royal Society of
 London. Series A, Mathematical and Physical Sciences</em>,
 <strong>308</strong>, 523–615.
 </div>
+<div id="ref-Symmetry" class="csl-entry" role="listitem">
+<span class="smallcaps">Bezem</span>, M., <span
+class="smallcaps">Buchholtz</span>, U., <span
+class="smallcaps">Cagne</span>, P., <span
+class="smallcaps">Dundas</span>, B.I., &amp; <span
+class="smallcaps">Grayson</span>, D.R. (2023) Symmetry.
+</div>
 <div id="ref-freed2013chernweil" class="csl-entry" role="listitem">
 <span class="smallcaps">Freed</span>, D.S. &amp; <span
 class="smallcaps">Hopkins</span>, M.J. (2013) <a
@@ -689,6 +744,13 @@ mathematics studies. Princeton University Press.
 href="https://books.google.com/books?id=KcXaAAAAMAAJ">The future does
 not compute: Transcending the machines in our midst</a></em>. O’Reilly
 &amp; Associates.
+</div>
+<div id="ref-hottbook" class="csl-entry" role="listitem">
+<span class="smallcaps">Univalent Foundations Program</span> (2013)
+<em>Homotopy type theory: Univalent foundations of mathematics</em>.
+Institute for Advanced Study: <a
+href="https://homotopytypetheory.org/book"
+class="uri">https://homotopytypetheory.org/book</a>.
 </div>
 </div>
 <section id="footnotes" class="footnotes footnotes-end-of-document"

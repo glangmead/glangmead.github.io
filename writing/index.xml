@@ -507,8 +507,56 @@ bundle.&lt;/p&gt;
 class=&#34;math inline&#34;&gt;\(B:\mathcal{U}\)&lt;/span&gt; and a type family &lt;span
 class=&#34;math inline&#34;&gt;\(f:B\to\mathcal{U}\)&lt;/span&gt;. Path induction gives
 us the transport isomorphism &lt;span class=&#34;math inline&#34;&gt;\(\prod_{p:x=_B
-y}\mathrm{tr}(p):f(x)=f(y)\)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;(Now describe lifts and splitting.)&lt;/p&gt;
+y}\mathrm{tr}(p):f(x)=f(y)\)&lt;/span&gt;. We can use this to define a type of
+&lt;em&gt;dependent paths&lt;/em&gt;, also called &lt;em&gt;pathovers&lt;/em&gt; or &lt;em&gt;paths
+over&lt;/em&gt; a given path.&lt;/p&gt;
+&lt;div class=&#34;mydef&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Definition 7&lt;/strong&gt;. &lt;em&gt;With the above context and points
+&lt;span class=&#34;math inline&#34;&gt;\(a:f(x), b:f(y)\)&lt;/span&gt; the type of
+&lt;em&gt;dependent paths over &lt;span class=&#34;math inline&#34;&gt;\(p\)&lt;/span&gt;&lt;/em&gt;
+with endpoints &lt;span class=&#34;math inline&#34;&gt;\(a, b\)&lt;/span&gt; is denoted
+&lt;span class=&#34;math display&#34;&gt;\[a\xrightarrow[{p}]{=}b.\]&lt;/span&gt; By
+induction we can assume &lt;span class=&#34;math inline&#34;&gt;\(p\)&lt;/span&gt; is &lt;span
+class=&#34;math inline&#34;&gt;\(\ensuremath{\mathsf{refl}}_a\)&lt;/span&gt; in which
+case &lt;span class=&#34;math inline&#34;&gt;\(a\xrightarrow[{p}]{=}b\)&lt;/span&gt; is
+&lt;span class=&#34;math inline&#34;&gt;\(a=_{f(x)}a\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;See &lt;span class=&#34;citation&#34; data-cites=&#34;Symmetry&#34;&gt; (&lt;a
+href=&#34;#ref-Symmetry&#34; role=&#34;doc-biblioref&#34;&gt;Bezem &lt;em&gt;et al.&lt;/em&gt;,
+2023&lt;/a&gt;)&lt;/span&gt; for more discussion of dependent paths (where they use
+the term “path over”), including composition, and associativity
+thereof.&lt;/p&gt;
+&lt;p&gt;The following two lemmas explain how transport decomposes dependent
+paths into horizontal and vertical components. These two lemmas take
+place in the dependent sum &lt;span
+class=&#34;math inline&#34;&gt;\(\sum_{x:B}f(x)\)&lt;/span&gt;.&lt;/p&gt;
+&lt;div class=&#34;mylemma&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Lemma 5&lt;/strong&gt;. &lt;em&gt;(Path lifting property, &lt;span
+class=&#34;citation&#34; data-cites=&#34;hottbook&#34;&gt; (&lt;a href=&#34;#ref-hottbook&#34;
+role=&#34;doc-biblioref&#34;&gt;Univalent Foundations Program, 2013&lt;/a&gt;)&lt;/span&gt;
+Lemma 2.3.2). Let &lt;span class=&#34;math inline&#34;&gt;\(f:B\to\mathcal{U}\)&lt;/span&gt;
+be a type family over &lt;span class=&#34;math inline&#34;&gt;\(B\)&lt;/span&gt; and assume
+we have &lt;span class=&#34;math inline&#34;&gt;\(a:f(x)\)&lt;/span&gt; for some &lt;span
+class=&#34;math inline&#34;&gt;\(x:B\)&lt;/span&gt;. Then for any &lt;span
+class=&#34;math inline&#34;&gt;\(\alpha:x=_B y\)&lt;/span&gt;, we have &lt;span
+class=&#34;math display&#34;&gt;\[\ensuremath{\mathsf{lift}}(p,
+\alpha):(x,a)=(y,\mathrm{tr}(\alpha)(a))\]&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;mylemma&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Lemma 6&lt;/strong&gt;. &lt;em&gt;Let &lt;span
+class=&#34;math inline&#34;&gt;\(f:B\to\mathcal{U}\)&lt;/span&gt; be a type family over
+&lt;span class=&#34;math inline&#34;&gt;\(B\)&lt;/span&gt; and assume we have &lt;span
+class=&#34;math inline&#34;&gt;\(x,x&amp;#39;:B,a:f(x),a:f(x&amp;#39;)\)&lt;/span&gt;. Then &lt;span
+class=&#34;math display&#34;&gt;\[((x,a)=(x&amp;#39;,a&amp;#39;))\simeq (x=x&amp;#39;)\times
+(a=a).\]&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;This is a slight generalization of &lt;span class=&#34;citation&#34;
+data-cites=&#34;Symmetry&#34;&gt; (&lt;a href=&#34;#ref-Symmetry&#34;
+role=&#34;doc-biblioref&#34;&gt;Bezem &lt;em&gt;et al.&lt;/em&gt;, 2023&lt;/a&gt;)&lt;/span&gt; Lemma
+4.14.1. To prove it we can assume &lt;span
+class=&#34;math inline&#34;&gt;\(x&amp;#39;\)&lt;/span&gt; is &lt;span
+class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt; in which case the lemma is a special
+case of the identity type of a sum type.&lt;/p&gt;
 &lt;h2 data-number=&#34;4.2&#34; id=&#34;tensorial&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;4.2&lt;/span&gt; Tensorial&lt;/h2&gt;
 &lt;p&gt;Let &lt;span class=&#34;math inline&#34;&gt;\(\alpha\)&lt;/span&gt; be an &lt;span
@@ -549,7 +597,7 @@ HoTT we need type-theoretic functions &lt;span class=&#34;math inline&#34;&gt;\(
 g:M\to B\)&lt;/span&gt; from some type &lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt;
 to an H-space &lt;span class=&#34;math inline&#34;&gt;\(B\)&lt;/span&gt;.&lt;/p&gt;
 &lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 7&lt;/strong&gt;. &lt;em&gt;An H-space structure on a pointed
+&lt;p&gt;&lt;strong&gt;Definition 8&lt;/strong&gt;. &lt;em&gt;An H-space structure on a pointed
 type &lt;span class=&#34;math inline&#34;&gt;\((B,b)\)&lt;/span&gt; consists of&lt;/em&gt;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;&lt;em&gt;A binary operation &lt;span class=&#34;math inline&#34;&gt;\(\mu:B\to B\to
@@ -577,7 +625,7 @@ is an H-space under pointwise multiplication.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;We claim thact the following deserves to be called the Leibniz
 rule.&lt;/p&gt;
 &lt;div class=&#34;mylemma&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Lemma 5&lt;/strong&gt;. &lt;em&gt;For any type &lt;span
+&lt;p&gt;&lt;strong&gt;Lemma 7&lt;/strong&gt;. &lt;em&gt;For any type &lt;span
 class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; and H-space &lt;span
 class=&#34;math inline&#34;&gt;\(B\)&lt;/span&gt; and maps &lt;span
 class=&#34;math inline&#34;&gt;\(f,g:M\to B\)&lt;/span&gt; and path &lt;span
@@ -684,6 +732,13 @@ riemann surfaces. &lt;em&gt;Philosophical Transactions of the Royal Society of
 London. Series A, Mathematical and Physical Sciences&lt;/em&gt;,
 &lt;strong&gt;308&lt;/strong&gt;, 523–615.
 &lt;/div&gt;
+&lt;div id=&#34;ref-Symmetry&#34; class=&#34;csl-entry&#34; role=&#34;listitem&#34;&gt;
+&lt;span class=&#34;smallcaps&#34;&gt;Bezem&lt;/span&gt;, M., &lt;span
+class=&#34;smallcaps&#34;&gt;Buchholtz&lt;/span&gt;, U., &lt;span
+class=&#34;smallcaps&#34;&gt;Cagne&lt;/span&gt;, P., &lt;span
+class=&#34;smallcaps&#34;&gt;Dundas&lt;/span&gt;, B.I., &amp;amp; &lt;span
+class=&#34;smallcaps&#34;&gt;Grayson&lt;/span&gt;, D.R. (2023) Symmetry.
+&lt;/div&gt;
 &lt;div id=&#34;ref-freed2013chernweil&#34; class=&#34;csl-entry&#34; role=&#34;listitem&#34;&gt;
 &lt;span class=&#34;smallcaps&#34;&gt;Freed&lt;/span&gt;, D.S. &amp;amp; &lt;span
 class=&#34;smallcaps&#34;&gt;Hopkins&lt;/span&gt;, M.J. (2013) &lt;a
@@ -707,6 +762,13 @@ mathematics studies. Princeton University Press.
 href=&#34;https://books.google.com/books?id=KcXaAAAAMAAJ&#34;&gt;The future does
 not compute: Transcending the machines in our midst&lt;/a&gt;&lt;/em&gt;. O’Reilly
 &amp;amp; Associates.
+&lt;/div&gt;
+&lt;div id=&#34;ref-hottbook&#34; class=&#34;csl-entry&#34; role=&#34;listitem&#34;&gt;
+&lt;span class=&#34;smallcaps&#34;&gt;Univalent Foundations Program&lt;/span&gt; (2013)
+&lt;em&gt;Homotopy type theory: Univalent foundations of mathematics&lt;/em&gt;.
+Institute for Advanced Study: &lt;a
+href=&#34;https://homotopytypetheory.org/book&#34;
+class=&#34;uri&#34;&gt;https://homotopytypetheory.org/book&lt;/a&gt;.
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;section id=&#34;footnotes&#34; class=&#34;footnotes footnotes-end-of-document&#34;
