@@ -595,12 +595,11 @@ class=&#34;math inline&#34;&gt;\(V_pP\)&lt;/span&gt; to &lt;span
 class=&#34;math inline&#34;&gt;\(V_{\phi(p)}P\)&lt;/span&gt;, where of course &lt;span
 class=&#34;math inline&#34;&gt;\(\pi(p)=\pi(\phi(p))\)&lt;/span&gt;.&lt;/p&gt;
 &lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 6&lt;/strong&gt;. &lt;em&gt;A classical &lt;em&gt;Ehresmann
-connection&lt;/em&gt; on a principal bundle &lt;span
-class=&#34;math inline&#34;&gt;\(\pi:P\to B\)&lt;/span&gt; with Lie group &lt;span
-class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; is a splitting &lt;span
-class=&#34;math inline&#34;&gt;\(TP=VP\oplus HP\)&lt;/span&gt; at every point of &lt;span
-class=&#34;math inline&#34;&gt;\(P\)&lt;/span&gt; into vertical and “horizontal”
+&lt;p&gt;&lt;strong&gt;Definition 6&lt;/strong&gt;. &lt;em&gt;An &lt;em&gt;Ehresmann connection&lt;/em&gt;
+on a principal bundle &lt;span class=&#34;math inline&#34;&gt;\(\pi:P\to B\)&lt;/span&gt;
+with Lie group &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; is a splitting
+&lt;span class=&#34;math inline&#34;&gt;\(TP=VP\oplus HP\)&lt;/span&gt; at every point of
+&lt;span class=&#34;math inline&#34;&gt;\(P\)&lt;/span&gt; into vertical and “horizontal”
 subspaces, which is preserved by the action of &lt;span
 class=&#34;math inline&#34;&gt;\(\mathrm{Aut}P\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
@@ -630,7 +629,7 @@ class=&#34;math inline&#34;&gt;\(HP\)&lt;/span&gt;.&lt;/p&gt;
 isomorphisms between the fibers of &lt;span
 class=&#34;math inline&#34;&gt;\(P\)&lt;/span&gt;. So the Ehresmann connection, the
 lifting of paths, and transport isomorphisms between fibers are all
-recaptulations of the structure that the connection adds to the
+recapitulations of the structure that the connection adds to the
 bundle.&lt;/p&gt;
 &lt;p&gt;Moving now to HoTT, fix a type &lt;span
 class=&#34;math inline&#34;&gt;\(B:\mathcal{U}\)&lt;/span&gt; and a type family &lt;span
@@ -640,6 +639,32 @@ y}\mathrm{tr}(p):f(x)=f(y)\)&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;(Now describe lifts and splitting.)&lt;/p&gt;
 &lt;h2 data-number=&#34;4.2&#34; id=&#34;tensorial&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;4.2&lt;/span&gt; Tensorial&lt;/h2&gt;
+&lt;p&gt;Let &lt;span class=&#34;math inline&#34;&gt;\(\alpha\)&lt;/span&gt; be an &lt;span
+class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;-form on a smooth manifold &lt;span
+class=&#34;math inline&#34;&gt;\(B\)&lt;/span&gt;. We are encouraged to think of &lt;span
+class=&#34;math inline&#34;&gt;\(\alpha\)&lt;/span&gt; as a function that takes &lt;span
+class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; vector fields as input and returns a
+smooth function. Denoting by &lt;span class=&#34;math inline&#34;&gt;\(\Gamma
+TB\)&lt;/span&gt; the type of vector fields, this gives &lt;span
+class=&#34;math inline&#34;&gt;\(\alpha:(\Gamma TB)^n\to (B\to
+\ensuremath{\mathbb{R}})\)&lt;/span&gt;. If this seems so natural as to be
+confusing, remember that forms are usually defined as sections of the
+exterior power of the cotangent bundle, and so we are moving between
+viewing a form as a section of a bundle, or as a function on tuples of
+vector fields.&lt;/p&gt;
+&lt;p&gt;An &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;-form viewed this way has
+the property that it is linear over &lt;span
+class=&#34;math inline&#34;&gt;\(B\to\ensuremath{\mathbb{R}}\)&lt;/span&gt; in every
+component, i.e. if &lt;span class=&#34;math inline&#34;&gt;\(f_1, \ldots,
+f_n:B\to\ensuremath{\mathbb{R}}\)&lt;/span&gt; then &lt;span
+class=&#34;math inline&#34;&gt;\(\alpha(f_1 X_1,\ldots, f_n X_n) = f_1\cdots
+f_n\alpha(X_1,\ldots,X_n).\)&lt;/span&gt; We also say that &lt;span
+class=&#34;math inline&#34;&gt;\(\alpha\)&lt;/span&gt; is &lt;em&gt;tensorial&lt;/em&gt; in every
+argument. A function on vector fields is tensorial just when it’s linear
+over the action of smooth functions on vector fields. Examples include
+&lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;-forms and metrics (which are
+symmetric instead of being antisymmetric like forms).&lt;/p&gt;
+&lt;p&gt;But what about connections and curvature?&lt;/p&gt;
 &lt;h2 data-number=&#34;4.3&#34; id=&#34;the-leibniz-product-rule&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;4.3&lt;/span&gt; The Leibniz (product) rule&lt;/h2&gt;
 &lt;p&gt;The Leibniz rule states that if &lt;span class=&#34;math inline&#34;&gt;\(f, g:M\to

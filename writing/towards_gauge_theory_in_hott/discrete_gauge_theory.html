@@ -449,12 +449,11 @@ class="math inline">\(V_pP\)</span> to <span
 class="math inline">\(V_{\phi(p)}P\)</span>, where of course <span
 class="math inline">\(\pi(p)=\pi(\phi(p))\)</span>.</p>
 <div class="mydef">
-<p><strong>Definition 6</strong>. <em>A classical <em>Ehresmann
-connection</em> on a principal bundle <span
-class="math inline">\(\pi:P\to B\)</span> with Lie group <span
-class="math inline">\(G\)</span> is a splitting <span
-class="math inline">\(TP=VP\oplus HP\)</span> at every point of <span
-class="math inline">\(P\)</span> into vertical and “horizontal”
+<p><strong>Definition 6</strong>. <em>An <em>Ehresmann connection</em>
+on a principal bundle <span class="math inline">\(\pi:P\to B\)</span>
+with Lie group <span class="math inline">\(G\)</span> is a splitting
+<span class="math inline">\(TP=VP\oplus HP\)</span> at every point of
+<span class="math inline">\(P\)</span> into vertical and “horizontal”
 subspaces, which is preserved by the action of <span
 class="math inline">\(\mathrm{Aut}P\)</span>.</em></p>
 </div>
@@ -484,7 +483,7 @@ class="math inline">\(HP\)</span>.</p>
 isomorphisms between the fibers of <span
 class="math inline">\(P\)</span>. So the Ehresmann connection, the
 lifting of paths, and transport isomorphisms between fibers are all
-recaptulations of the structure that the connection adds to the
+recapitulations of the structure that the connection adds to the
 bundle.</p>
 <p>Moving now to HoTT, fix a type <span
 class="math inline">\(B:\mathcal{U}\)</span> and a type family <span
@@ -494,6 +493,32 @@ y}\mathrm{tr}(p):f(x)=f(y)\)</span>.</p>
 <p>(Now describe lifts and splitting.)</p>
 <h2 data-number="4.2" id="tensorial"><span
 class="header-section-number">4.2</span> Tensorial</h2>
+<p>Let <span class="math inline">\(\alpha\)</span> be an <span
+class="math inline">\(n\)</span>-form on a smooth manifold <span
+class="math inline">\(B\)</span>. We are encouraged to think of <span
+class="math inline">\(\alpha\)</span> as a function that takes <span
+class="math inline">\(n\)</span> vector fields as input and returns a
+smooth function. Denoting by <span class="math inline">\(\Gamma
+TB\)</span> the type of vector fields, this gives <span
+class="math inline">\(\alpha:(\Gamma TB)^n\to (B\to
+\ensuremath{\mathbb{R}})\)</span>. If this seems so natural as to be
+confusing, remember that forms are usually defined as sections of the
+exterior power of the cotangent bundle, and so we are moving between
+viewing a form as a section of a bundle, or as a function on tuples of
+vector fields.</p>
+<p>An <span class="math inline">\(n\)</span>-form viewed this way has
+the property that it is linear over <span
+class="math inline">\(B\to\ensuremath{\mathbb{R}}\)</span> in every
+component, i.e. if <span class="math inline">\(f_1, \ldots,
+f_n:B\to\ensuremath{\mathbb{R}}\)</span> then <span
+class="math inline">\(\alpha(f_1 X_1,\ldots, f_n X_n) = f_1\cdots
+f_n\alpha(X_1,\ldots,X_n).\)</span> We also say that <span
+class="math inline">\(\alpha\)</span> is <em>tensorial</em> in every
+argument. A function on vector fields is tensorial just when it’s linear
+over the action of smooth functions on vector fields. Examples include
+<span class="math inline">\(n\)</span>-forms and metrics (which are
+symmetric instead of being antisymmetric like forms).</p>
+<p>But what about connections and curvature?</p>
 <h2 data-number="4.3" id="the-leibniz-product-rule"><span
 class="header-section-number">4.3</span> The Leibniz (product) rule</h2>
 <p>The Leibniz rule states that if <span class="math inline">\(f, g:M\to
