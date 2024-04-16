@@ -63,185 +63,98 @@
 <body>
 <nav id="TOC" role="doc-toc">
 <ul>
-<li><a href="#introduction" id="toc-introduction"><span
-class="toc-section-number">1</span> Introduction</a></li>
-<li><a href="#non-infinitesimal-calculus"
-id="toc-non-infinitesimal-calculus"><span
-class="toc-section-number">2</span> Non-infinitesimal calculus</a></li>
+<li><a href="#introduction-discrete-differential-geometry"
+id="toc-introduction-discrete-differential-geometry"><span
+class="toc-section-number">1</span> Introduction: discrete differential
+geometry</a></li>
 <li><a href="#the-tangent-bundle-of-the-2-sphere"
 id="toc-the-tangent-bundle-of-the-2-sphere"><span
-class="toc-section-number">3</span> The tangent bundle of the
+class="toc-section-number">2</span> The tangent bundle of the
 2-sphere</a></li>
 <li><a href="#why-this-is-geometry" id="toc-why-this-is-geometry"><span
-class="toc-section-number">4</span> Why this is geometry</a>
+class="toc-section-number">3</span> Why this is geometry</a>
 <ul>
 <li><a href="#connections-as-splittings"
 id="toc-connections-as-splittings"><span
-class="toc-section-number">4.1</span> Connections as splittings</a></li>
+class="toc-section-number">3.1</span> Connections as splittings</a></li>
 <li><a href="#tensorial" id="toc-tensorial"><span
-class="toc-section-number">4.2</span> Tensorial</a></li>
+class="toc-section-number">3.2</span> Tensorial</a></li>
 <li><a href="#the-leibniz-product-rule"
 id="toc-the-leibniz-product-rule"><span
-class="toc-section-number">4.3</span> The Leibniz (product)
+class="toc-section-number">3.3</span> The Leibniz (product)
 rule</a></li>
 <li><a href="#nonvanishing-tangent-vector-fields"
 id="toc-nonvanishing-tangent-vector-fields"><span
-class="toc-section-number">4.4</span> Nonvanishing tangent vector
+class="toc-section-number">3.4</span> Nonvanishing tangent vector
 fields</a></li>
 <li><a href="#gauge-transformations"
 id="toc-gauge-transformations"><span
-class="toc-section-number">4.5</span> Gauge transformations</a></li>
+class="toc-section-number">3.5</span> Gauge transformations</a></li>
 <li><a href="#characteristic-classes-and-chern-weil-theory"
 id="toc-characteristic-classes-and-chern-weil-theory"><span
-class="toc-section-number">4.6</span> Characteristic classes and
+class="toc-section-number">3.6</span> Characteristic classes and
 Chern-Weil theory</a></li>
 <li><a href="#combinatorial-manifolds"
 id="toc-combinatorial-manifolds"><span
-class="toc-section-number">4.7</span> Combinatorial manifolds</a></li>
+class="toc-section-number">3.7</span> Combinatorial manifolds</a></li>
 </ul></li>
 </ul>
 </nav>
-<h1 data-number="1" id="introduction"><span
-class="header-section-number">1</span> Introduction</h1>
-<blockquote>
-<p>"It is always ourselves we work on, whether we realize it or not.
-There is no other work to be done in the world." — Stephen Talbott,
-<em>The Future Does Not Compute</em><span class="citation"
-data-cites="talbott"> (<a href="#ref-talbott"
-role="doc-biblioref">Talbott, 1995</a>)</span></p>
-</blockquote>
-<p>Homotopy type theory (HoTT) is a logical foundation for mathematics
-that adds to set theory several important mathematical patterns. Among
-these are <em>fibrations</em>, <em>(higher) groupoids</em>, and
-<em>classifying spaces</em> (called <em>universes</em>). It embodies the
-philosophy of constructivism by unifying mathematical statements with
-types and proofs with terms. It has an extensive syntax and a talented
-team of theory builders who have labored for a decade to equip the
-syntax with formal initiality proofs and categorical semantics that
-together generate living, breathing proofs simultaneously in every
-category with enough structure to support the semantics. It has
-implementations in several computer languages which have attracted
-multiple large formalization efforts. It benefits from an unusually
-strong interdisciplinary culture spanning computer science, mathematics,
-philosophy, and physics.</p>
-<p>The hypothetical scope of HoTT is of course all of mathematics, past,
-present and future. It contains set theory, and the law of excluded
-middle and axiom of choice can be added whenever the intended semantics
-supports them. It therefore invites us to use the rest of its tools to
-enhance our understanding, and to seek better answers to <em>why</em>
-questions in the same way that category theory sometimes tells us
-<em>why</em> individual results across specific fields are true. Over
-the last decade many results have been verified in HoTT, and many have
-insightful new proofs. The topics that have received the most attention
-so far include homotopy theory, algebraic topology, group theory,
-category theory, and combinatorics. Our goal is to extend this list with
-topics from geometry: connections, curvature, gauge theory,
-characteristic classes, and Chern-Weil theory.</p>
-<p>Gauge theory is a collection of tools inspired by, and in dialog
-with, the standard model of particle physics. The quantum field theories
-developed during the 20th century are mathematical models that supply
-spacetime with additional structures: principal bundles, vector bundles,
-sections of these bundles, and connections. The bundles provide internal
-dimensions to quantum particles, which are visible experimentally
-through phenomena such as charge, magnetism, mass, gravity, and quark
-color. Forces are mediated by massless particles that correspond to the
-connections. Particles are sections of associated vector bundles.
-Physical laws are expressed by real- or complex-valued functions called
-lagrangians, on the configuration space of all of this structure.</p>
-<p>Mathematicians discovered that by adding their own gauge theory
-structures to smooth manifolds of interest they could define new
-invariants of the homotopy type, the homeomorphism class, or the
-diffeomorphism class of the manifold. HoTT is not equipped today to
-explore all of these scenarios since it is most developed in the world
-of homotopy types only. There is beautiful work to bring in notions of
-topology and smooth structure through the principal of <em>cohesion</em>
-(the study of spatial relationships by way of operators that
-<em>remove</em> such structure). We will touch on some of this and point
-the way to future work, but for now we will focus on homotopical results
-only.</p>
-<p>For the HoTT-oriented audience my goal is to demonstrate that
-connections and gauge theory are present in the realm of discrete types.
-This can even serve as an introduction to classical differential
-geometry, and today’s undergraduates who are drawn to HoTT can leverage
-their intuitions to bypass a lot of confusing material!</p>
-<p>For the geometry audience my goal is to offer an entirely new
-perspective on the de Rham complex in general, and connections and
-curvature in particular. My grandiose hope is that in this framing we
-can find a natural and intuitive understanding of Chern-Weil theory,
-i.e. the link between curvature and characteristic classes.</p>
-<h1 data-number="2" id="non-infinitesimal-calculus"><span
-class="header-section-number">2</span> Non-infinitesimal calculus</h1>
-<p>Our plan is to examine differential geometry using finite methods:
-using paths instead of vector fields. We will apply the syntax of type
-theory and work through a first course in differential forms,
-connections and curvature.</p>
-<p>We will use a heuristic to guide us: whenever a classical statement
-uses infinitesimal objects we should find an equivalent one that uses
-finite objects. We should try to restate results involving tangent
-vectors using finite-length paths instead. We should try to replace
-1-forms with integrals of the 1-form over paths.</p>
-<p>In addition to changing our perspective on classical geometry we will
-make a concession on the type theory side: we will work with objects in
-HoTT that are <em>discrete</em>, meaning devoid of cohesion or spatial
-information. Manifolds will be combinatorial objects, not based on the
-real numbers. There are three consolations for this loss: first, we will
-still have access to results in gauge theory that depend only on the
-homotopy type. Secondly we can approximate a curved manifold as closely
-as we want by adding more points, paths, and so on to the mesh, bringing
-more use cases into our construction. And lastly we will hopefully gain
-a lot of insight into the inner workings of classical differential
-geometry.</p>
-<p>Classically, functions on the level of points such as a smooth
-function between smooth manifolds <span class="math inline">\(f:M\to
-N\)</span> can be differentiated to yield a new function that acts on
-both points and tangent vectors: <span class="math inline">\(Tf:TM\to
-TN\)</span>. There is no new data in <span
-class="math inline">\(Tf\)</span>, its action on vectors is computed in
-terms of its action on points. We package the derived (no pun) data into
-a new function that acts on both points and vectors. Passing through the
-heuristic we proposed, we would instead package the derived information
-as the action on finite-length paths in <span
-class="math inline">\(M\)</span>. Tangent vectors are equivalence
-classes of such paths anyway, so it seems no information is lost. This
-would mean that taking the derivative of a smooth function is the same
-as to extract its action on paths.</p>
-<p>The derivative is a particular action on paths, one that is entailed
-in the original function on points. Classically the derivative can be
-pulled apart to examine <em>only</em> its action on paths, often called
-<span class="math inline">\(df\)</span>. This is a 1-form, meaning a
-section of the cotangent bundle. A 1-form is an object defined on all of
-<span class="math inline">\(M\)</span> which can be integrated over a
-path to give a number. Again, a function on paths. An arbitrary 1-form
-is some function on paths, and <span class="math inline">\(df\)</span>
-is one such.</p>
-<p>HoTT also has functions, but those functions always act in all the
-available dimensions of the type all at once. It is inherently a
-function on points, paths, and higher paths. We can look at what <span
-class="math inline">\(f\)</span> does to paths using the construction
-<span class="math inline">\(\ensuremath{\mathsf{ap}}f\)</span>. At this
-point there is an important check we can make. <span
-class="math inline">\(df\)</span> has a few important properties, the
-most characteristic of which is the Leibniz, or product rule. Is this
-visible in HoTT?</p>
-<figure>
-<img src="./45744937ac561c6ce05f971621a980d63ad6d2e1.png" />
-<figcaption>The HIT <span class="math inline">\(C_4\)</span> which is
-one of the types in <span
-class="math inline">\(\mathrm{BAut}_1(S^1)\)</span></figcaption>
-</figure>
-<figure>
-<img src="./af2efb8d5bd4f1d5edcb52c7da0f2f4212597f36.png" />
-<figcaption>The HIT <span class="math inline">\(\Sigma C_4\)</span>
-which has 2 points, 4 1-paths, 4 2-paths.</figcaption>
-</figure>
-<figure>
-<img src="./cdb3d54d1a96709745e781e659f43190ba62ae89.png" />
-<figcaption>The HIT <span
-class="math inline">\(\ensuremath{\mathbb{O}}\)</span> which has 6
-points, 12 1-paths, 8 2-paths.</figcaption>
-</figure>
-<h1 data-number="3" id="the-tangent-bundle-of-the-2-sphere"><span
-class="header-section-number">3</span> The tangent bundle of the
+<h1 data-number="1"
+id="introduction-discrete-differential-geometry"><span
+class="header-section-number">1</span> Introduction: discrete
+differential geometry</h1>
+<p>The observation that sparks the following discussion is this: if we
+can manage to reformulate differential geometry in discrete terms (i.e.
+finite, without infinitesimals) then we may also be able to construct it
+synthetically in homotopy type theory (HoTT). Furthermore, if we do
+capture geometry in HoTT then there’s a chance that it can become
+clearer and smaller. We would then have new tools, a new audience, and a
+new program to (re)explore geometry, gauge theory, low dimensional
+topology, and mathematical physics.</p>
+<p>Applied mathematicians and computer scientists have been developing
+discrete differential geometry (DDG) for 20 years. The 2003 Ph.D. thesis
+of Anil Hirani <span class="citation" data-cites="hiranidec"> (<a
+href="#ref-hiranidec" role="doc-biblioref">Hirani, 2003</a>)</span> (see
+also the multi-author follow-up <span class="citation"
+data-cites="desbrundec"> (<a href="#ref-desbrundec"
+role="doc-biblioref">Desbrun <em>et al.</em>, 2005</a>)</span>) defines
+finite versions of vector fields, differential forms, the wedge product,
+the Hodge star, and several differential operators (exterior derivative,
+div, grad, curl, Laplace-Beltrami, Lie derivative). In 2004 Melvil Leok,
+Jerrold Marsden, and Alan Weinstein <span class="citation"
+data-cites="leok"> (<a href="#ref-leok" role="doc-biblioref">Leok <em>et
+al.</em>, 2005</a>)</span> defined discrete connections on principal
+bundles. This is probably the work most spiritually similar to this
+paper. The motivation for the above constructions was applied
+mathematics: modeling the differential equations of mechanics and fluid
+mechanics with the so-called “finite element” methods. The theory has
+been adopted and extended by the computer graphics community as well
+(see Keenan Crane’s course notes <span class="citation"
+data-cites="crane_ddg"> (<a href="#ref-crane_ddg"
+role="doc-biblioref">Crane, 2020</a>)</span> for a gentle survey). The
+applied category theory community has begun to develop category
+theoretic foundations and software libraries to increase the power and
+applicability of finite methods in science and engineering problems. See
+for example recent work to bring discrete exterior calculus into the
+AlgebraicJulia library <span class="citation"
+data-cites="morris_decapodes"> (<a href="#ref-morris_decapodes"
+role="doc-biblioref">Morris <em>et al.</em>, 2024</a>)</span> <span
+class="citation" data-cites="patterson_diffeq"> (<a
+href="#ref-patterson_diffeq" role="doc-biblioref">Patterson <em>et
+al.</em>, 2022</a>)</span>.</p>
+<p>DDG is defined on combinatorial manifolds such as simplicial
+complexes or polytopes, of any finite dimension. The various points,
+edges, faces and so on each have a formal dimension, and these generate
+the homology chains, just as in standard algebraic topology. Cochains
+are maps from chains into some other space such as <span
+class="math inline">\(\ensuremath{\mathbb{R}}\)</span> or <span
+class="math inline">\(\ensuremath{\mathbb{Z}}\)</span>. What is novel is
+that we will view a cochain as the integral of a differential form over
+the chain. We won’t need to directly access the background differential
+form, we will just have the result of the integral.</p>
+<h1 data-number="2" id="the-tangent-bundle-of-the-2-sphere"><span
+class="header-section-number">2</span> The tangent bundle of the
 2-sphere</h1>
 <p>The classical 2-sphere embedded in <span
 class="math inline">\(\ensuremath{\mathbb{R}}^3\)</span> is curved at
@@ -281,6 +194,23 @@ class="math inline">\(\ensuremath{\mathbb{O}}\)</span> the octahedron
 given by the join <span class="math inline">\(\{w, y\}*
 C_4\)</span>.</em></p>
 </div>
+<figure>
+<img src="./45744937ac561c6ce05f971621a980d63ad6d2e1.png" />
+<figcaption>The HIT <span class="math inline">\(C_4\)</span> which is
+one of the types in <span
+class="math inline">\(\mathrm{BAut}_1(S^1)\)</span></figcaption>
+</figure>
+<figure>
+<img src="./af2efb8d5bd4f1d5edcb52c7da0f2f4212597f36.png" />
+<figcaption>The HIT <span class="math inline">\(\Sigma C_4\)</span>
+which has 2 points, 4 1-paths, 4 2-paths.</figcaption>
+</figure>
+<figure>
+<img src="./cdb3d54d1a96709745e781e659f43190ba62ae89.png" />
+<figcaption>The HIT <span
+class="math inline">\(\ensuremath{\mathbb{O}}\)</span> which has 6
+points, 12 1-paths, 8 2-paths.</figcaption>
+</figure>
 <div class="mylemma">
 <p><strong>Lemma 1</strong>. <em><span class="math inline">\((C_4,
 b)\simeq S^1\)</span>.</em></p>
@@ -405,8 +335,8 @@ order) map to <span class="math inline">\(R&#39;\)</span>.</p>
 fact that <span class="math inline">\(\mathrm{BAut}_1(S^1)\)</span> is a
 2-type gives us someplace to send all the dimensions of the HIT <span
 class="math inline">\(\ensuremath{\mathbb{O}}\)</span>.</p>
-<h1 data-number="4" id="why-this-is-geometry"><span
-class="header-section-number">4</span> Why this is geometry</h1>
+<h1 data-number="3" id="why-this-is-geometry"><span
+class="header-section-number">3</span> Why this is geometry</h1>
 <p>Discrete differential forms are alien enough that we ought to provide
 evidence that we are describing honest classical differential geometry.
 In this section we will enumerate a wishlist of facts that we believe
@@ -418,6 +348,8 @@ bundle into horizontal and vertical components.</p></li>
 not for connections.</p></li>
 <li><p>Differentials and directional derivatives satisfy the Leibniz
 (product) rule.</p></li>
+<li><p>The Gauss-Bonnet theorem holds, relating the curvature of a
+2-manifold to the Euler characteristic.</p></li>
 <li><p>Having an everywhere nonvanishing tangent vector field implies
 the Euler characteristic is zero.</p></li>
 <li><p>Characteristic classes of bundles can be computed using a
@@ -430,8 +362,14 @@ freely.</p></li>
 presentations, and the real-cohesive shape modal operator maps between
 them.</p></li>
 </ol>
-<h2 data-number="4.1" id="connections-as-splittings"><span
-class="header-section-number">4.1</span> Connections as splittings</h2>
+<p>Other questions we might explore:</p>
+<ol>
+<li><p>Where is orientation in this story? Can we compute any examples
+of Stiefel-Whitney classes?</p></li>
+<li><p>Can we define the Hopf bundle?</p></li>
+</ol>
+<h2 data-number="3.1" id="connections-as-splittings"><span
+class="header-section-number">3.1</span> Connections as splittings</h2>
 <p>The classical story goes like this.</p>
 <div class="mydef">
 <p><strong>Definition 5</strong>. <em>The <em>vertical bundle</em> <span
@@ -539,8 +477,8 @@ role="doc-biblioref">Bezem <em>et al.</em>, 2023</a>)</span> Lemma
 class="math inline">\(x&#39;\)</span> is <span
 class="math inline">\(x\)</span> in which case the lemma is a special
 case of the identity type of a sum type.</p>
-<h2 data-number="4.2" id="tensorial"><span
-class="header-section-number">4.2</span> Tensorial</h2>
+<h2 data-number="3.2" id="tensorial"><span
+class="header-section-number">3.2</span> Tensorial</h2>
 <p>Let <span class="math inline">\(\alpha\)</span> be an <span
 class="math inline">\(n\)</span>-form on a smooth manifold <span
 class="math inline">\(B\)</span>. We are encouraged to think of <span
@@ -567,8 +505,8 @@ over the action of smooth functions on vector fields. Examples include
 <span class="math inline">\(n\)</span>-forms and metrics (which are
 symmetric instead of being antisymmetric like forms).</p>
 <p>But what about connections and curvature?</p>
-<h2 data-number="4.3" id="the-leibniz-product-rule"><span
-class="header-section-number">4.3</span> The Leibniz (product) rule</h2>
+<h2 data-number="3.3" id="the-leibniz-product-rule"><span
+class="header-section-number">3.3</span> The Leibniz (product) rule</h2>
 <p>The Leibniz rule states that if <span class="math inline">\(f, g:M\to
 \ensuremath{\mathbb{R}}\)</span> are two smooth functions to the real
 numbers then <span class="math inline">\(d(fg) = fdg + gdf\)</span>.
@@ -624,12 +562,16 @@ multiplication by <span class="math inline">\(a\)</span> on the left, on
 a path.g</p>
 <p><img src="./09052d33113b7087f7abc8b04e220a13697b45a3.png"
 alt="image" /></p>
-<h2 data-number="4.4" id="nonvanishing-tangent-vector-fields"><span
-class="header-section-number">4.4</span> Nonvanishing tangent vector
+<h2 data-number="3.4" id="nonvanishing-tangent-vector-fields"><span
+class="header-section-number">3.4</span> Nonvanishing tangent vector
 fields</h2>
-<p>What’s the non-infinitesimal version of this?</p>
-<h2 data-number="4.5" id="gauge-transformations"><span
-class="header-section-number">4.5</span> Gauge transformations</h2>
+<p>Associated bundles in HoTT.</p>
+<p>A nowhere-vanishing section is therefore a section of a decomposition
+<span class="math inline">\(\prod_{x:B}GL(n)=GL(n-1)\times
+GL(1)\)</span> acting separately on the section direction and on the
+quotient of the vector space by the section direction.</p>
+<h2 data-number="3.5" id="gauge-transformations"><span
+class="header-section-number">3.5</span> Gauge transformations</h2>
 <p>A <em>gauge transformation</em> is a term inherited from physics.
 It’s an automorphism of a principal bundle <span
 class="math inline">\(P\to X\)</span>, meaning a homeomorphism of <span
@@ -663,16 +605,19 @@ class="math inline">\(f\)</span>. In 1982 this was a theorem!<span
 class="citation" data-cites="atiyah1983yang"> (<a
 href="#ref-atiyah1983yang" role="doc-biblioref">Atiyah &amp; Bott,
 1983</a>)</span></p>
-<h2 data-number="4.6"
+<h2 data-number="3.6"
 id="characteristic-classes-and-chern-weil-theory"><span
-class="header-section-number">4.6</span> Characteristic classes and
+class="header-section-number">3.6</span> Characteristic classes and
 Chern-Weil theory</h2>
-<p>What is Chern-Weil theory about? (cite Freed-Hopkins<span
-class="citation" data-cites="freed2013chernweil"> (<a
+<p>Chern-Weil “theory” is actually a map, from the space of connections
+on the bundle <span class="math inline">\(\pi:P\to B\)</span> to the
+cohomology ring of <span class="math inline">\(B\)</span>, plus the
+claim that these are the characteristic classes for the bundle. (cite
+Freed-Hopkins<span class="citation" data-cites="freed2013chernweil"> (<a
 href="#ref-freed2013chernweil" role="doc-biblioref">Freed &amp; Hopkins,
 2013</a>)</span>)</p>
-<h2 data-number="4.7" id="combinatorial-manifolds"><span
-class="header-section-number">4.7</span> Combinatorial manifolds</h2>
+<h2 data-number="3.7" id="combinatorial-manifolds"><span
+class="header-section-number">3.7</span> Combinatorial manifolds</h2>
 <p>The combinatorial structure we have in mind is a nerve of a good open
 cover. What do we know about which smooth manifolds have such covers?
 While we’re at it, let’s survey all the combinatorial-flavored spaces
@@ -721,6 +666,19 @@ class="smallcaps">Cagne</span>, P., <span
 class="smallcaps">Dundas</span>, B.I., &amp; <span
 class="smallcaps">Grayson</span>, D.R. (2023) Symmetry.
 </div>
+<div id="ref-crane_ddg" class="csl-entry" role="listitem">
+<span class="smallcaps">Crane</span>, K. (2020) <em>An excursion through
+discrete differential geometry</em>, vol. 76, Proceedings of Symposia in
+Applied Mathematics. American Mathematical Society.
+</div>
+<div id="ref-desbrundec" class="csl-entry" role="listitem">
+<span class="smallcaps">Desbrun</span>, M., <span
+class="smallcaps">Hirani</span>, A.N., <span
+class="smallcaps">Leok</span>, M., &amp; <span
+class="smallcaps">Marsden</span>, J.E. (2005) <a
+href="https://arxiv.org/abs/math/0508341">Discrete exterior
+calculus</a>.
+</div>
 <div id="ref-freed2013chernweil" class="csl-entry" role="listitem">
 <span class="smallcaps">Freed</span>, D.S. &amp; <span
 class="smallcaps">Hopkins</span>, M.J. (2013) <a
@@ -733,17 +691,41 @@ class="smallcaps">Quinn</span>, F. (1990) <em><a
 href="http://www.jstor.org/stable/j.ctt7ztz2d">Topology of 4-manifolds
 (PMS-39)</a></em>. Princeton University Press.
 </div>
+<div id="ref-hiranidec" class="csl-entry" role="listitem">
+<span class="smallcaps">Hirani</span>, A.N. (2003) Discrete exterior
+calculus (PhD thesis).
+</div>
 <div id="ref-kirby_siebenmann" class="csl-entry" role="listitem">
 <span class="smallcaps">Kirby</span>, R.C. &amp; <span
 class="smallcaps">Siebenmann</span>, L.C. (1977) <em>Foundational essays
 on topological manifolds, smoothings, and triangulations</em>, Annals of
 mathematics studies. Princeton University Press.
 </div>
-<div id="ref-talbott" class="csl-entry" role="listitem">
-<span class="smallcaps">Talbott</span>, S. (1995) <em><a
-href="https://books.google.com/books?id=KcXaAAAAMAAJ">The future does
-not compute: Transcending the machines in our midst</a></em>. O’Reilly
-&amp; Associates.
+<div id="ref-leok" class="csl-entry" role="listitem">
+<span class="smallcaps">Leok</span>, M., <span
+class="smallcaps">Marsden</span>, J.E., &amp; <span
+class="smallcaps">Weinstein</span>, A.D. (2005) <a
+href="https://arxiv.org/abs/math/0508338">A discrete theory of
+connections on principal bundles</a>.
+</div>
+<div id="ref-morris_decapodes" class="csl-entry" role="listitem">
+<span class="smallcaps">Morris</span>, L., <span
+class="smallcaps">Baas</span>, A., <span class="smallcaps">Arias</span>,
+J., <span class="smallcaps">Gatlin</span>, M., <span
+class="smallcaps">Patterson</span>, E., &amp; <span
+class="smallcaps">Fairbanks</span>, J.P. (2024) <a
+href="https://arxiv.org/abs/2401.17432">Decapodes: A diagrammatic tool
+for representing, composing, and computing spatialized partial
+differential equations</a>.
+</div>
+<div id="ref-patterson_diffeq" class="csl-entry" role="listitem">
+<span class="smallcaps">Patterson</span>, E., <span
+class="smallcaps">Baas</span>, A., <span
+class="smallcaps">Hosgood</span>, T., &amp; <span
+class="smallcaps">Fairbanks</span>, J. (2022) <a
+href="https://doi.org/10.3934/mine.2023036">A diagrammatic view of
+differential equations in physics</a>. <em>Mathematics in
+Engineering</em>, <strong>5</strong>, 1–59.
 </div>
 <div id="ref-hottbook" class="csl-entry" role="listitem">
 <span class="smallcaps">Univalent Foundations Program</span> (2013)
