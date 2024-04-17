@@ -284,7 +284,8 @@ mechanics with the so-called “finite element” methods. The theory has
 been adopted and extended by the computer graphics community as well
 (see Keenan Crane’s course notes &lt;span class=&#34;citation&#34;
 data-cites=&#34;crane_ddg&#34;&gt; (&lt;a href=&#34;#ref-crane_ddg&#34;
-role=&#34;doc-biblioref&#34;&gt;Crane, 2020&lt;/a&gt;)&lt;/span&gt; for a gentle survey).&lt;/p&gt;
+role=&#34;doc-biblioref&#34;&gt;Crane &lt;em&gt;et al.&lt;/em&gt;, 2013&lt;/a&gt;)&lt;/span&gt; for a
+gentle survey).&lt;/p&gt;
 &lt;p&gt;The applied category theory community has begun to develop category
 theoretic foundations and software libraries to increase the reusability
 and compositionality of finite element methods in science and
@@ -864,9 +865,13 @@ href=&#34;https://arxiv.org/abs/2301.02636&#34;&gt;Central h-spaces and banded
 types&lt;/a&gt;.
 &lt;/div&gt;
 &lt;div id=&#34;ref-crane_ddg&#34; class=&#34;csl-entry&#34; role=&#34;listitem&#34;&gt;
-&lt;span class=&#34;smallcaps&#34;&gt;Crane&lt;/span&gt;, K. (2020) &lt;em&gt;An excursion through
-discrete differential geometry&lt;/em&gt;, vol. 76, Proceedings of Symposia in
-Applied Mathematics. American Mathematical Society.
+&lt;span class=&#34;smallcaps&#34;&gt;Crane&lt;/span&gt;, K., &lt;span
+class=&#34;smallcaps&#34;&gt;Goes&lt;/span&gt;, F. de, &lt;span
+class=&#34;smallcaps&#34;&gt;Desbrun&lt;/span&gt;, M., &amp;amp; &lt;span
+class=&#34;smallcaps&#34;&gt;Schröder&lt;/span&gt;, P. (2013) &lt;a
+href=&#34;{https://www.cs.cmu.edu/~kmcrane/Projects/DDG/}&#34;&gt;Digital geometry
+processing with discrete exterior calculus&lt;/a&gt;. &lt;em&gt;ACM SIGGRAPH 2013
+courses&lt;/em&gt;, &lt;em&gt;SIGGRAPH ’13&lt;/em&gt;. New York, NY, USA: ACM.
 &lt;/div&gt;
 &lt;div id=&#34;ref-desbrundec&#34; class=&#34;csl-entry&#34; role=&#34;listitem&#34;&gt;
 &lt;span class=&#34;smallcaps&#34;&gt;Desbrun&lt;/span&gt;, M., &lt;span
