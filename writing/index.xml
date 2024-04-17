@@ -85,36 +85,38 @@
 id=&#34;toc-introduction-discrete-differential-geometry&#34;&gt;&lt;span
 class=&#34;toc-section-number&#34;&gt;1&lt;/span&gt; Introduction: discrete differential
 geometry&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#central-h-spaces&#34; id=&#34;toc-central-h-spaces&#34;&gt;&lt;span
+class=&#34;toc-section-number&#34;&gt;2&lt;/span&gt; Central H-spaces&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#the-tangent-bundle-of-the-2-sphere&#34;
 id=&#34;toc-the-tangent-bundle-of-the-2-sphere&#34;&gt;&lt;span
-class=&#34;toc-section-number&#34;&gt;2&lt;/span&gt; The tangent bundle of the
+class=&#34;toc-section-number&#34;&gt;3&lt;/span&gt; The tangent bundle of the
 2-sphere&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#why-this-is-geometry&#34; id=&#34;toc-why-this-is-geometry&#34;&gt;&lt;span
-class=&#34;toc-section-number&#34;&gt;3&lt;/span&gt; Why this is geometry&lt;/a&gt;
+class=&#34;toc-section-number&#34;&gt;4&lt;/span&gt; Why this is geometry&lt;/a&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#connections-as-splittings&#34;
 id=&#34;toc-connections-as-splittings&#34;&gt;&lt;span
-class=&#34;toc-section-number&#34;&gt;3.1&lt;/span&gt; Connections as splittings&lt;/a&gt;&lt;/li&gt;
+class=&#34;toc-section-number&#34;&gt;4.1&lt;/span&gt; Connections as splittings&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#tensorial&#34; id=&#34;toc-tensorial&#34;&gt;&lt;span
-class=&#34;toc-section-number&#34;&gt;3.2&lt;/span&gt; Tensorial&lt;/a&gt;&lt;/li&gt;
+class=&#34;toc-section-number&#34;&gt;4.2&lt;/span&gt; Tensorial&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#the-leibniz-product-rule&#34;
 id=&#34;toc-the-leibniz-product-rule&#34;&gt;&lt;span
-class=&#34;toc-section-number&#34;&gt;3.3&lt;/span&gt; The Leibniz (product)
+class=&#34;toc-section-number&#34;&gt;4.3&lt;/span&gt; The Leibniz (product)
 rule&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#nonvanishing-tangent-vector-fields&#34;
 id=&#34;toc-nonvanishing-tangent-vector-fields&#34;&gt;&lt;span
-class=&#34;toc-section-number&#34;&gt;3.4&lt;/span&gt; Nonvanishing tangent vector
+class=&#34;toc-section-number&#34;&gt;4.4&lt;/span&gt; Nonvanishing tangent vector
 fields&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#gauge-transformations&#34;
 id=&#34;toc-gauge-transformations&#34;&gt;&lt;span
-class=&#34;toc-section-number&#34;&gt;3.5&lt;/span&gt; Gauge transformations&lt;/a&gt;&lt;/li&gt;
+class=&#34;toc-section-number&#34;&gt;4.5&lt;/span&gt; Gauge transformations&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#characteristic-classes-and-chern-weil-theory&#34;
 id=&#34;toc-characteristic-classes-and-chern-weil-theory&#34;&gt;&lt;span
-class=&#34;toc-section-number&#34;&gt;3.6&lt;/span&gt; Characteristic classes and
+class=&#34;toc-section-number&#34;&gt;4.6&lt;/span&gt; Characteristic classes and
 Chern-Weil theory&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#combinatorial-manifolds&#34;
 id=&#34;toc-combinatorial-manifolds&#34;&gt;&lt;span
-class=&#34;toc-section-number&#34;&gt;3.7&lt;/span&gt; Combinatorial manifolds&lt;/a&gt;&lt;/li&gt;
+class=&#34;toc-section-number&#34;&gt;4.7&lt;/span&gt; Combinatorial manifolds&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/nav&gt;
@@ -131,16 +133,20 @@ clearer and smaller. We would then have new tools, a new audience, and a
 new program to (re)explore geometry, gauge theory, low dimensional
 topology, and mathematical physics.&lt;/p&gt;
 &lt;p&gt;Applied mathematicians and computer scientists have been developing
-discrete differential geometry (DDG) for 20 years. The 2003 Ph.D. thesis
-of Anil Hirani &lt;span class=&#34;citation&#34; data-cites=&#34;hiranidec&#34;&gt; (&lt;a
+discrete differential geometry (DDG) for many years. The 2003 Ph.D.
+thesis of Anil Hirani &lt;span class=&#34;citation&#34; data-cites=&#34;hiranidec&#34;&gt; (&lt;a
 href=&#34;#ref-hiranidec&#34; role=&#34;doc-biblioref&#34;&gt;Hirani, 2003&lt;/a&gt;)&lt;/span&gt; (see
 also the multi-author follow-up &lt;span class=&#34;citation&#34;
 data-cites=&#34;desbrundec&#34;&gt; (&lt;a href=&#34;#ref-desbrundec&#34;
 role=&#34;doc-biblioref&#34;&gt;Desbrun &lt;em&gt;et al.&lt;/em&gt;, 2005&lt;/a&gt;)&lt;/span&gt;) defines
 finite versions of vector fields, differential forms, the wedge product,
 the Hodge star, and several differential operators (exterior derivative,
-div, grad, curl, Laplace-Beltrami, Lie derivative). In 2004 Melvil Leok,
-Jerrold Marsden, and Alan Weinstein &lt;span class=&#34;citation&#34;
+div, grad, curl, Laplace-Beltrami, Lie derivative). Hirani and others
+cite Whitney’s 1957 book &lt;em&gt;Geometric Integration Theory&lt;/em&gt;&lt;span
+class=&#34;citation&#34; data-cites=&#34;whitney1957&#34;&gt; (&lt;a href=&#34;#ref-whitney1957&#34;
+role=&#34;doc-biblioref&#34;&gt;Whitney, 1957&lt;/a&gt;)&lt;/span&gt; which develops a theory
+of cochains by integrating smooth forms over chains. In 2004 Melvil
+Leok, Jerrold Marsden, and Alan Weinstein &lt;span class=&#34;citation&#34;
 data-cites=&#34;leok&#34;&gt; (&lt;a href=&#34;#ref-leok&#34; role=&#34;doc-biblioref&#34;&gt;Leok &lt;em&gt;et
 al.&lt;/em&gt;, 2005&lt;/a&gt;)&lt;/span&gt; defined discrete connections on principal
 bundles. This is probably the work most spiritually similar to this
@@ -150,29 +156,66 @@ mechanics with the so-called “finite element” methods. The theory has
 been adopted and extended by the computer graphics community as well
 (see Keenan Crane’s course notes &lt;span class=&#34;citation&#34;
 data-cites=&#34;crane_ddg&#34;&gt; (&lt;a href=&#34;#ref-crane_ddg&#34;
-role=&#34;doc-biblioref&#34;&gt;Crane, 2020&lt;/a&gt;)&lt;/span&gt; for a gentle survey). The
-applied category theory community has begun to develop category
-theoretic foundations and software libraries to increase the power and
-applicability of finite methods in science and engineering problems. See
-for example recent work to bring discrete exterior calculus into the
-AlgebraicJulia library &lt;span class=&#34;citation&#34;
+role=&#34;doc-biblioref&#34;&gt;Crane, 2020&lt;/a&gt;)&lt;/span&gt; for a gentle survey).&lt;/p&gt;
+&lt;p&gt;The applied category theory community has begun to develop category
+theoretic foundations and software libraries to increase the reusability
+and compositionality of finite element methods in science and
+engineering problems. See for example recent work to bring discrete
+exterior calculus into the AlgebraicJulia library &lt;span class=&#34;citation&#34;
 data-cites=&#34;morris_decapodes&#34;&gt; (&lt;a href=&#34;#ref-morris_decapodes&#34;
 role=&#34;doc-biblioref&#34;&gt;Morris &lt;em&gt;et al.&lt;/em&gt;, 2024&lt;/a&gt;)&lt;/span&gt; &lt;span
 class=&#34;citation&#34; data-cites=&#34;patterson_diffeq&#34;&gt; (&lt;a
 href=&#34;#ref-patterson_diffeq&#34; role=&#34;doc-biblioref&#34;&gt;Patterson &lt;em&gt;et
 al.&lt;/em&gt;, 2022&lt;/a&gt;)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;DDG is defined on combinatorial manifolds such as simplicial
-complexes or polytopes, of any finite dimension. The various points,
-edges, faces and so on each have a formal dimension, and these generate
-the homology chains, just as in standard algebraic topology. Cochains
-are maps from chains into some other space such as &lt;span
-class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{R}}\)&lt;/span&gt; or &lt;span
-class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{Z}}\)&lt;/span&gt;. What is novel is
-that we will view a cochain as the integral of a differential form over
-the chain. We won’t need to directly access the background differential
-form, we will just have the result of the integral.&lt;/p&gt;
-&lt;h1 data-number=&#34;2&#34; id=&#34;the-tangent-bundle-of-the-2-sphere&#34;&gt;&lt;span
-class=&#34;header-section-number&#34;&gt;2&lt;/span&gt; The tangent bundle of the
+&lt;p&gt;For these classically-minded applied mathematicians DDG is defined on
+combinatorial manifolds such as simplicial complexes or polytopes, of
+any finite dimension. The 0-cells play the role of points, the 1-cells
+are path segments, and so on. They define &lt;span
+class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;-forms as functions on the &lt;span
+class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;-dimensional faces of the manifold into
+the real numbers, which is then extended by linearity to arbitrary &lt;span
+class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;-chains. Exterior differentiation is
+defined by Stokes theorem (which is no longer a theorem in this
+setting), by which we mean the following.&lt;/p&gt;
+&lt;div class=&#34;mydef&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Definition 1&lt;/strong&gt;. &lt;em&gt;(Exterior derivative in DDG.) Let
+&lt;span class=&#34;math inline&#34;&gt;\(\omega\)&lt;/span&gt; be an &lt;span
+class=&#34;math inline&#34;&gt;\(n-1\)&lt;/span&gt;-form on a combinatorial manifold
+&lt;span class=&#34;math inline&#34;&gt;\(B\)&lt;/span&gt;, and let &lt;span
+class=&#34;math inline&#34;&gt;\(\Omega\)&lt;/span&gt; be an &lt;span
+class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;-face of &lt;span
+class=&#34;math inline&#34;&gt;\(B\)&lt;/span&gt;. Let &lt;span
+class=&#34;math inline&#34;&gt;\(\partial\)&lt;/span&gt; be the boundary operator on
+faces. The exterior derivative &lt;span class=&#34;math inline&#34;&gt;\(d\)&lt;/span&gt; is
+defined by &lt;span class=&#34;math display&#34;&gt;\[d\omega(\Omega) =
+\omega(\partial\Omega).\]&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;At this point a study of DDG would move into chain complexes, where
+the forms of different dimensions are combined through the grading.
+Grassman algebras would be introduced, to convey the dependence of forms
+on orientation. The Leibniz rule (product rule) would be explored.
+Defining connections and curvature require constructing a codomain that
+is group-like and then creating more definitions about transport and
+holonomy. At that point major theorems like Gauss-Bonnet and Chern-Weil
+would be available to prove.&lt;/p&gt;
+&lt;p&gt;We will take a different path. We will not define forms, complexes,
+or Grassman algebras at all, we will view ordinary HoTT functions out of
+a given manifold-like type as &lt;em&gt;synthetic discrete differential
+forms&lt;/em&gt;. The codomain will be a central H-space, which combines the
+features of the real numbers (in that functions can be pointwise
+multiplied) and classifying spaces of groups (so that maps into the
+H-space can classify bundles). We will then merely &lt;em&gt;observe&lt;/em&gt; the
+emergence of various aspects of geometry.&lt;/p&gt;
+&lt;p&gt;We won’t be able to answer every question, so eventually we will stop
+and point to future directions.&lt;/p&gt;
+&lt;h1 data-number=&#34;2&#34; id=&#34;central-h-spaces&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;2&lt;/span&gt; Central H-spaces&lt;/h1&gt;
+&lt;p&gt;We will rely on the lovely paper by Buchholtz, Christensen, Flaten
+and Rijke &lt;span class=&#34;citation&#34; data-cites=&#34;buchholtz2023central&#34;&gt; (&lt;a
+href=&#34;#ref-buchholtz2023central&#34; role=&#34;doc-biblioref&#34;&gt;Buchholtz &lt;em&gt;et
+al.&lt;/em&gt;, 2023&lt;/a&gt;)&lt;/span&gt;.&lt;/p&gt;
+&lt;h1 data-number=&#34;3&#34; id=&#34;the-tangent-bundle-of-the-2-sphere&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;3&lt;/span&gt; The tangent bundle of the
 2-sphere&lt;/h1&gt;
 &lt;p&gt;The classical 2-sphere embedded in &lt;span
 class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{R}}^3\)&lt;/span&gt; is curved at
@@ -204,7 +247,7 @@ theorem.&lt;/p&gt;
 &lt;p&gt;We can leverage the syntax of HoTT by encoding the above in a map
 between HITs.&lt;/p&gt;
 &lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 1&lt;/strong&gt;. &lt;em&gt;Denote by &lt;span
+&lt;p&gt;&lt;strong&gt;Definition 2&lt;/strong&gt;. &lt;em&gt;Denote by &lt;span
 class=&#34;math inline&#34;&gt;\(C_4\)&lt;/span&gt; the join &lt;span
 class=&#34;math inline&#34;&gt;\(\{b, g\}*\{r, o\}\)&lt;/span&gt;. This is the equator of
 the discrete octahedral sphere. Denote by &lt;span
@@ -239,7 +282,7 @@ class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{O}}\simeq
 S^2\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 2&lt;/strong&gt;. &lt;em&gt;Let &lt;span
+&lt;p&gt;&lt;strong&gt;Definition 3&lt;/strong&gt;. &lt;em&gt;Let &lt;span
 class=&#34;math inline&#34;&gt;\(\mathrm{BAut}_1(S^1)\stackrel{\mathrm{def}}{=}\sum_{X:\mathcal{U}}||X=S^1||_0.\)&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;mylemma&#34;&gt;
@@ -268,7 +311,7 @@ w]]\)&lt;/span&gt;.&lt;/p&gt;
 automorphism connected to the identiy which will play the role of
 rotation by 90 degrees:&lt;/p&gt;
 &lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 3&lt;/strong&gt;. &lt;em&gt;Let &lt;span
+&lt;p&gt;&lt;strong&gt;Definition 4&lt;/strong&gt;. &lt;em&gt;Let &lt;span
 class=&#34;math inline&#34;&gt;\(R:C_4\to C_4\)&lt;/span&gt; be given by &lt;span
 class=&#34;math inline&#34;&gt;\(R(b)=o, R(o)=g, R(g)=r, R(r)=b, R(bo)=og,
 R(og)=gr, R(gr)=rb, R(rb)=bo.\)&lt;/span&gt; Let &lt;span
@@ -276,7 +319,7 @@ class=&#34;math inline&#34;&gt;\(R&amp;#39;:R=\ensuremath{\text{id}}\)&lt;/span&
 obvious homotopy to the identity.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 4&lt;/strong&gt;. &lt;em&gt;Define &lt;span
+&lt;p&gt;&lt;strong&gt;Definition 5&lt;/strong&gt;. &lt;em&gt;Define &lt;span
 class=&#34;math inline&#34;&gt;\(T_1:\ensuremath{\mathbb{O}}\to\mathrm{BAut}_1(S^1)\)&lt;/span&gt;
 by&lt;/em&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -353,8 +396,8 @@ order) map to &lt;span class=&#34;math inline&#34;&gt;\(R&amp;#39;\)&lt;/span&gt
 fact that &lt;span class=&#34;math inline&#34;&gt;\(\mathrm{BAut}_1(S^1)\)&lt;/span&gt; is a
 2-type gives us someplace to send all the dimensions of the HIT &lt;span
 class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{O}}\)&lt;/span&gt;.&lt;/p&gt;
-&lt;h1 data-number=&#34;3&#34; id=&#34;why-this-is-geometry&#34;&gt;&lt;span
-class=&#34;header-section-number&#34;&gt;3&lt;/span&gt; Why this is geometry&lt;/h1&gt;
+&lt;h1 data-number=&#34;4&#34; id=&#34;why-this-is-geometry&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;4&lt;/span&gt; Why this is geometry&lt;/h1&gt;
 &lt;p&gt;Discrete differential forms are alien enough that we ought to provide
 evidence that we are describing honest classical differential geometry.
 In this section we will enumerate a wishlist of facts that we believe
@@ -386,11 +429,11 @@ them.&lt;/p&gt;&lt;/li&gt;
 of Stiefel-Whitney classes?&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Can we define the Hopf bundle?&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2 data-number=&#34;3.1&#34; id=&#34;connections-as-splittings&#34;&gt;&lt;span
-class=&#34;header-section-number&#34;&gt;3.1&lt;/span&gt; Connections as splittings&lt;/h2&gt;
+&lt;h2 data-number=&#34;4.1&#34; id=&#34;connections-as-splittings&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;4.1&lt;/span&gt; Connections as splittings&lt;/h2&gt;
 &lt;p&gt;The classical story goes like this.&lt;/p&gt;
 &lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 5&lt;/strong&gt;. &lt;em&gt;The &lt;em&gt;vertical bundle&lt;/em&gt; &lt;span
+&lt;p&gt;&lt;strong&gt;Definition 6&lt;/strong&gt;. &lt;em&gt;The &lt;em&gt;vertical bundle&lt;/em&gt; &lt;span
 class=&#34;math inline&#34;&gt;\(VP\)&lt;/span&gt; of a principal bundle &lt;span
 class=&#34;math inline&#34;&gt;\(\pi:P\to B\)&lt;/span&gt; with Lie group &lt;span
 class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; is the kernel of the derivative &lt;span
@@ -405,7 +448,7 @@ class=&#34;math inline&#34;&gt;\(V_pP\)&lt;/span&gt; to &lt;span
 class=&#34;math inline&#34;&gt;\(V_{\phi(p)}P\)&lt;/span&gt;, where of course &lt;span
 class=&#34;math inline&#34;&gt;\(\pi(p)=\pi(\phi(p))\)&lt;/span&gt;.&lt;/p&gt;
 &lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 6&lt;/strong&gt;. &lt;em&gt;An &lt;em&gt;Ehresmann connection&lt;/em&gt;
+&lt;p&gt;&lt;strong&gt;Definition 7&lt;/strong&gt;. &lt;em&gt;An &lt;em&gt;Ehresmann connection&lt;/em&gt;
 on a principal bundle &lt;span class=&#34;math inline&#34;&gt;\(\pi:P\to B\)&lt;/span&gt;
 with Lie group &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; is a splitting
 &lt;span class=&#34;math inline&#34;&gt;\(TP=VP\oplus HP\)&lt;/span&gt; at every point of
@@ -449,7 +492,7 @@ y}\mathrm{tr}(p):f(x)=f(y)\)&lt;/span&gt;. We can use this to define a type of
 &lt;em&gt;dependent paths&lt;/em&gt;, also called &lt;em&gt;pathovers&lt;/em&gt; or &lt;em&gt;paths
 over&lt;/em&gt; a given path.&lt;/p&gt;
 &lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 7&lt;/strong&gt;. &lt;em&gt;With the above context and points
+&lt;p&gt;&lt;strong&gt;Definition 8&lt;/strong&gt;. &lt;em&gt;With the above context and points
 &lt;span class=&#34;math inline&#34;&gt;\(a:f(x), b:f(y)\)&lt;/span&gt; the type of
 &lt;em&gt;dependent paths over &lt;span class=&#34;math inline&#34;&gt;\(p\)&lt;/span&gt;&lt;/em&gt;
 with endpoints &lt;span class=&#34;math inline&#34;&gt;\(a, b\)&lt;/span&gt; is denoted
@@ -495,8 +538,8 @@ role=&#34;doc-biblioref&#34;&gt;Bezem &lt;em&gt;et al.&lt;/em&gt;, 2023&lt;/a&gt
 class=&#34;math inline&#34;&gt;\(x&amp;#39;\)&lt;/span&gt; is &lt;span
 class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt; in which case the lemma is a special
 case of the identity type of a sum type.&lt;/p&gt;
-&lt;h2 data-number=&#34;3.2&#34; id=&#34;tensorial&#34;&gt;&lt;span
-class=&#34;header-section-number&#34;&gt;3.2&lt;/span&gt; Tensorial&lt;/h2&gt;
+&lt;h2 data-number=&#34;4.2&#34; id=&#34;tensorial&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;4.2&lt;/span&gt; Tensorial&lt;/h2&gt;
 &lt;p&gt;Let &lt;span class=&#34;math inline&#34;&gt;\(\alpha\)&lt;/span&gt; be an &lt;span
 class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;-form on a smooth manifold &lt;span
 class=&#34;math inline&#34;&gt;\(B\)&lt;/span&gt;. We are encouraged to think of &lt;span
@@ -523,8 +566,8 @@ over the action of smooth functions on vector fields. Examples include
 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;-forms and metrics (which are
 symmetric instead of being antisymmetric like forms).&lt;/p&gt;
 &lt;p&gt;But what about connections and curvature?&lt;/p&gt;
-&lt;h2 data-number=&#34;3.3&#34; id=&#34;the-leibniz-product-rule&#34;&gt;&lt;span
-class=&#34;header-section-number&#34;&gt;3.3&lt;/span&gt; The Leibniz (product) rule&lt;/h2&gt;
+&lt;h2 data-number=&#34;4.3&#34; id=&#34;the-leibniz-product-rule&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;4.3&lt;/span&gt; The Leibniz (product) rule&lt;/h2&gt;
 &lt;p&gt;The Leibniz rule states that if &lt;span class=&#34;math inline&#34;&gt;\(f, g:M\to
 \ensuremath{\mathbb{R}}\)&lt;/span&gt; are two smooth functions to the real
 numbers then &lt;span class=&#34;math inline&#34;&gt;\(d(fg) = fdg + gdf\)&lt;/span&gt;.
@@ -535,7 +578,7 @@ HoTT we need type-theoretic functions &lt;span class=&#34;math inline&#34;&gt;\(
 g:M\to B\)&lt;/span&gt; from some type &lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt;
 to an H-space &lt;span class=&#34;math inline&#34;&gt;\(B\)&lt;/span&gt;.&lt;/p&gt;
 &lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 8&lt;/strong&gt;. &lt;em&gt;An H-space structure on a pointed
+&lt;p&gt;&lt;strong&gt;Definition 9&lt;/strong&gt;. &lt;em&gt;An H-space structure on a pointed
 type &lt;span class=&#34;math inline&#34;&gt;\((B,b)\)&lt;/span&gt; consists of&lt;/em&gt;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;&lt;em&gt;A binary operation &lt;span class=&#34;math inline&#34;&gt;\(\mu:B\to B\to
@@ -580,16 +623,16 @@ multiplication by &lt;span class=&#34;math inline&#34;&gt;\(a\)&lt;/span&gt; on 
 a path.g&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;./09052d33113b7087f7abc8b04e220a13697b45a3.png&#34;
 alt=&#34;image&#34; /&gt;&lt;/p&gt;
-&lt;h2 data-number=&#34;3.4&#34; id=&#34;nonvanishing-tangent-vector-fields&#34;&gt;&lt;span
-class=&#34;header-section-number&#34;&gt;3.4&lt;/span&gt; Nonvanishing tangent vector
+&lt;h2 data-number=&#34;4.4&#34; id=&#34;nonvanishing-tangent-vector-fields&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;4.4&lt;/span&gt; Nonvanishing tangent vector
 fields&lt;/h2&gt;
 &lt;p&gt;Associated bundles in HoTT.&lt;/p&gt;
 &lt;p&gt;A nowhere-vanishing section is therefore a section of a decomposition
 &lt;span class=&#34;math inline&#34;&gt;\(\prod_{x:B}GL(n)=GL(n-1)\times
 GL(1)\)&lt;/span&gt; acting separately on the section direction and on the
 quotient of the vector space by the section direction.&lt;/p&gt;
-&lt;h2 data-number=&#34;3.5&#34; id=&#34;gauge-transformations&#34;&gt;&lt;span
-class=&#34;header-section-number&#34;&gt;3.5&lt;/span&gt; Gauge transformations&lt;/h2&gt;
+&lt;h2 data-number=&#34;4.5&#34; id=&#34;gauge-transformations&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;4.5&lt;/span&gt; Gauge transformations&lt;/h2&gt;
 &lt;p&gt;A &lt;em&gt;gauge transformation&lt;/em&gt; is a term inherited from physics.
 It’s an automorphism of a principal bundle &lt;span
 class=&#34;math inline&#34;&gt;\(P\to X\)&lt;/span&gt;, meaning a homeomorphism of &lt;span
@@ -623,9 +666,9 @@ class=&#34;math inline&#34;&gt;\(f\)&lt;/span&gt;. In 1982 this was a theorem!&l
 class=&#34;citation&#34; data-cites=&#34;atiyah1983yang&#34;&gt; (&lt;a
 href=&#34;#ref-atiyah1983yang&#34; role=&#34;doc-biblioref&#34;&gt;Atiyah &amp;amp; Bott,
 1983&lt;/a&gt;)&lt;/span&gt;&lt;/p&gt;
-&lt;h2 data-number=&#34;3.6&#34;
+&lt;h2 data-number=&#34;4.6&#34;
 id=&#34;characteristic-classes-and-chern-weil-theory&#34;&gt;&lt;span
-class=&#34;header-section-number&#34;&gt;3.6&lt;/span&gt; Characteristic classes and
+class=&#34;header-section-number&#34;&gt;4.6&lt;/span&gt; Characteristic classes and
 Chern-Weil theory&lt;/h2&gt;
 &lt;p&gt;Chern-Weil “theory” is actually a map, from the space of connections
 on the bundle &lt;span class=&#34;math inline&#34;&gt;\(\pi:P\to B\)&lt;/span&gt; to the
@@ -634,8 +677,8 @@ claim that these are the characteristic classes for the bundle. (cite
 Freed-Hopkins&lt;span class=&#34;citation&#34; data-cites=&#34;freed2013chernweil&#34;&gt; (&lt;a
 href=&#34;#ref-freed2013chernweil&#34; role=&#34;doc-biblioref&#34;&gt;Freed &amp;amp; Hopkins,
 2013&lt;/a&gt;)&lt;/span&gt;)&lt;/p&gt;
-&lt;h2 data-number=&#34;3.7&#34; id=&#34;combinatorial-manifolds&#34;&gt;&lt;span
-class=&#34;header-section-number&#34;&gt;3.7&lt;/span&gt; Combinatorial manifolds&lt;/h2&gt;
+&lt;h2 data-number=&#34;4.7&#34; id=&#34;combinatorial-manifolds&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;4.7&lt;/span&gt; Combinatorial manifolds&lt;/h2&gt;
 &lt;p&gt;The combinatorial structure we have in mind is a nerve of a good open
 cover. What do we know about which smooth manifolds have such covers?
 While we’re at it, let’s survey all the combinatorial-flavored spaces
@@ -683,6 +726,14 @@ class=&#34;smallcaps&#34;&gt;Buchholtz&lt;/span&gt;, U., &lt;span
 class=&#34;smallcaps&#34;&gt;Cagne&lt;/span&gt;, P., &lt;span
 class=&#34;smallcaps&#34;&gt;Dundas&lt;/span&gt;, B.I., &amp;amp; &lt;span
 class=&#34;smallcaps&#34;&gt;Grayson&lt;/span&gt;, D.R. (2023) Symmetry.
+&lt;/div&gt;
+&lt;div id=&#34;ref-buchholtz2023central&#34; class=&#34;csl-entry&#34; role=&#34;listitem&#34;&gt;
+&lt;span class=&#34;smallcaps&#34;&gt;Buchholtz&lt;/span&gt;, U., &lt;span
+class=&#34;smallcaps&#34;&gt;Christensen&lt;/span&gt;, J.D., &lt;span
+class=&#34;smallcaps&#34;&gt;Flaten&lt;/span&gt;, J.G.T., &amp;amp; &lt;span
+class=&#34;smallcaps&#34;&gt;Rijke&lt;/span&gt;, E. (2023) &lt;a
+href=&#34;https://arxiv.org/abs/2301.02636&#34;&gt;Central h-spaces and banded
+types&lt;/a&gt;.
 &lt;/div&gt;
 &lt;div id=&#34;ref-crane_ddg&#34; class=&#34;csl-entry&#34; role=&#34;listitem&#34;&gt;
 &lt;span class=&#34;smallcaps&#34;&gt;Crane&lt;/span&gt;, K. (2020) &lt;em&gt;An excursion through
@@ -751,6 +802,11 @@ Engineering&lt;/em&gt;, &lt;strong&gt;5&lt;/strong&gt;, 1–59.
 Institute for Advanced Study: &lt;a
 href=&#34;https://homotopytypetheory.org/book&#34;
 class=&#34;uri&#34;&gt;https://homotopytypetheory.org/book&lt;/a&gt;.
+&lt;/div&gt;
+&lt;div id=&#34;ref-whitney1957&#34; class=&#34;csl-entry&#34; role=&#34;listitem&#34;&gt;
+&lt;span class=&#34;smallcaps&#34;&gt;Whitney&lt;/span&gt;, H. (1957) &lt;em&gt;&lt;a
+href=&#34;http://www.jstor.org/stable/j.ctt183q1bm&#34;&gt;Geometric integration
+theory&lt;/a&gt;&lt;/em&gt;. Princeton University Press.
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;section id=&#34;footnotes&#34; class=&#34;footnotes footnotes-end-of-document&#34;
