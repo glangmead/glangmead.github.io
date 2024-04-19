@@ -80,16 +80,14 @@ class="toc-section-number">4</span> Why this is geometry</a>
 <li><a href="#connections-as-splittings"
 id="toc-connections-as-splittings"><span
 class="toc-section-number">4.1</span> Connections as splittings</a></li>
-<li><a href="#tensorial" id="toc-tensorial"><span
-class="toc-section-number">4.2</span> Tensorial</a></li>
 <li><a href="#the-leibniz-product-rule"
 id="toc-the-leibniz-product-rule"><span
-class="toc-section-number">4.3</span> The Leibniz (product)
+class="toc-section-number">4.2</span> The Leibniz (product)
 rule</a></li>
-<li><a href="#nonvanishing-tangent-vector-fields"
-id="toc-nonvanishing-tangent-vector-fields"><span
-class="toc-section-number">4.4</span> Nonvanishing tangent vector
-fields</a></li>
+<li><a href="#covering-spaces" id="toc-covering-spaces"><span
+class="toc-section-number">4.3</span> Covering spaces</a></li>
+<li><a href="#tensoriality" id="toc-tensoriality"><span
+class="toc-section-number">4.4</span> Tensoriality</a></li>
 <li><a href="#gauge-transformations"
 id="toc-gauge-transformations"><span
 class="toc-section-number">4.5</span> Gauge transformations</a></li>
@@ -100,10 +98,12 @@ Chern-Weil theory</a></li>
 <li><a href="#combinatorial-manifolds"
 id="toc-combinatorial-manifolds"><span
 class="toc-section-number">4.7</span> Combinatorial manifolds</a></li>
+<li><a href="#future-work" id="toc-future-work"><span
+class="toc-section-number">4.8</span> Future work</a></li>
 </ul></li>
-<li><a href="#example-the-tangent-bundle-of-the-2-sphere"
-id="toc-example-the-tangent-bundle-of-the-2-sphere"><span
-class="toc-section-number">5</span> Example: the tangent bundle of the
+<li><a href="#appendix-the-tangent-bundle-of-the-2-sphere"
+id="toc-appendix-the-tangent-bundle-of-the-2-sphere"><span
+class="toc-section-number">5</span> Appendix: the tangent bundle of the
 2-sphere</a></li>
 </ul>
 </nav>
@@ -309,16 +309,17 @@ them.</p>
 <ol>
 <li><p>Connections can be described as an infinitesimal splitting of a
 bundle into horizontal and vertical components.</p></li>
-<li><p>There’s a notion of <em>tensorial</em> that holds for forms but
-not for connections.</p></li>
 <li><p>Differentials and directional derivatives satisfy the Leibniz
 (product) rule.</p></li>
+<li><p>Principal bundles with connection in the case of 0-truncated
+discrete groups recaptulates the theory of covering spaces, and covering
+spaces have a flat connection.</p></li>
+<li><p>There’s a notion of <em>tensorial</em> that holds for forms but
+not for connections.</p></li>
 <li><p>The Gauss-Bonnet theorem holds, relating the curvature of a
 2-manifold to the Euler characteristic.</p></li>
-<li><p>Having an everywhere nonvanishing tangent vector field implies
-the Euler characteristic is zero.</p></li>
-<li><p>Characteristic classes of bundles can be computed using a
-connection (Chern-Weil theory).</p></li>
+<li><p>More generally, characteristic classes of bundles can be computed
+using a connection (Chern-Weil theory).</p></li>
 <li><p>The space of all connections on a fixed bundle is a contractible
 space on which the group of <em>based gauge transformations</em> (bundle
 automorphisms that are the identity on one selected fiber) acts
@@ -412,41 +413,111 @@ href="#ref-Symmetry" role="doc-biblioref">Bezem <em>et al.</em>,
 2023</a>)</span> for more discussion of dependent paths (where they use
 the term “path over”), including composition, and associativity
 thereof.</p>
-<p>The following two lemmas explain how transport decomposes dependent
-paths into horizontal and vertical components. These two lemmas take
-place in the dependent sum <span
-class="math inline">\(\sum_{x:B}f(x)\)</span>.</p>
-<div class="mylemma">
-<p><strong>Lemma 1</strong>. <em>(Path lifting property, <span
+<p>We recall now the identity type of sigma types:</p>
+<div class="mythm">
+<p><strong>Theorem 1</strong>. <em>(HoTT book Theorem 2.7.2 <span
 class="citation" data-cites="hottbook"> (<a href="#ref-hottbook"
-role="doc-biblioref">Univalent Foundations Program, 2013</a>)</span>
-Lemma 2.3.2). Let <span class="math inline">\(f:B\to\mathcal{U}\)</span>
-be a type family over <span class="math inline">\(B\)</span> and assume
-we have <span class="math inline">\(a:f(x)\)</span> for some <span
-class="math inline">\(x:B\)</span>. Then for any <span
-class="math inline">\(\alpha:x=_B y\)</span>, we have <span
-class="math display">\[\ensuremath{\mathsf{lift}}(p,
-\alpha):(x,a)=(y,\mathrm{tr}(\alpha)(a))\]</span></em></p>
+role="doc-biblioref">Univalent Foundations Program, 2013</a>)</span>) If
+<span class="math inline">\(f:B\to \mathcal{U}\)</span> is a type family
+and <span class="math inline">\(w,w&#39;:\sum_{x:B}f(x)\)</span> then
+there is an equivalence <span class="math display">\[(w=w&#39;)\simeq
+\sum_{p:\ensuremath{\mathrm{pr}}_1(w)=_B\ensuremath{\mathrm{pr}}_1(w&#39;)}
+\left[\mathrm{tr}(p)(\ensuremath{\mathrm{pr}}_2(w))\right] =
+\ensuremath{\mathrm{pr}}_2(w&#39;).\]</span></em></p>
 </div>
+<p>In particular, given <span class="math inline">\(p:x=_B y\)</span>
+and <span class="math inline">\(w:f(x)\)</span> we have <span
+class="math inline">\(w\xrightarrow[{p}]{=}tr(p)(w)\simeq
+tr(p)(w)=_{f(y)}tr(p)(w)\)</span> which has the term <span
+class="math inline">\(\ensuremath{\mathsf{refl}}\)</span> which we can
+call “the horizontal lift of <span class="math inline">\(p\)</span>
+starting at <span class="math inline">\(w\)</span>.” And so in HoTT we
+can see the equivalence of transport and lifting of paths into
+horizontal and vertical components.</p>
+<h2 data-number="4.2" id="the-leibniz-product-rule"><span
+class="header-section-number">4.2</span> The Leibniz (product) rule</h2>
+<p>The Leibniz rule for exterior differentiation states that if <span
+class="math inline">\(f, g:M\to \ensuremath{\mathbb{R}}\)</span> are two
+smooth functions to the real numbers then <span
+class="math inline">\(d(fg) = fdg + gdf\)</span>. Here <span
+class="math inline">\(fg\)</span> is the function formed by taking the
+pointwise product of <span class="math inline">\(f\)</span> and <span
+class="math inline">\(g\)</span>. This is an interaction between
+multiplication in <span
+class="math inline">\(\ensuremath{\mathbb{R}}\)</span> and the procedure
+for building a 1-form out of a 0-form.</p>
+<p>To examine this situation in HoTT we need type-theoretic functions
+<span class="math inline">\(f, g:M\to B\)</span> from some type <span
+class="math inline">\(M\)</span> to an H-space <span
+class="math inline">\(B\)</span>. Let <span
+class="math inline">\(\mu:B\to B\to B\)</span> be the H-space
+multiplication. How does <span class="math inline">\(\mu\)</span> act on
+paths? Suppose we have <span class="math inline">\(a, a&#39;, b,
+b&#39;:B\)</span> and <span class="math inline">\(p:a=_B a&#39;, q:b=_B
+b&#39;\)</span>. Then we also have homotopies <span
+class="math inline">\(\mu(p, -):\mu(a, -)=_{B\to B}\mu(a&#39;,
+-)\)</span> and <span class="math inline">\(\mu(-,q):\mu(-,b)=_{B\to
+B}\mu(-,b&#39;).\)</span> Since <span class="math inline">\(\mu(a,
+-):B=B\)</span> is an (unpointed) equivalence of <span
+class="math inline">\(B\)</span>, and similarly for <span
+class="math inline">\(\mu(b, -)\)</span> and so on, this data assembles
+into the following diagram:</p>
+<p><img src="./d183777157a8a3e2d296890f77fb0c2aee7abf41.png"
+alt="image" /></p>
+<p>And so the two homotopies can be horizontally composed to give a path
+<span class="math display">\[\mu(p,-)\star\mu(-,q): \mu(a,
+b)=\mu(a&#39;,b&#39;).\]</span> Horizontal composition is given by <span
+class="math display">\[\mu(p,-)\star\mu(-,q)\stackrel{\mathrm{def}}{=}(\mu(p,-)\cdot_r
+\mu(-,b))\cdot(\mu(a&#39;, -)\cdot_l\mu(-, q))\]</span> where <span
+class="math display">\[\mu(p,-)\cdot_r\mu(-,b):\mu(a,b)=\mu(a&#39;,b)\]</span>
+and <span
+class="math display">\[\mu(a&#39;,-)\cdot_l\mu(-,q):\mu(a&#39;,b)=\mu(a&#39;,b&#39;)\]</span>
+are defined by path induction. See the HoTT book Theorem 2.1.6 on the
+Eckmann-Hilton argument<span class="citation" data-cites="hottbook"> (<a
+href="#ref-hottbook" role="doc-biblioref">Univalent Foundations Program,
+2013</a>)</span>.</p>
+<p>We can recognize the process of using whiskering to form horizontal
+composition in the Leibniz rule.</p>
+<p>Quick aside: moving from infinitesimal calculus to finite groupoid
+algebra actually involves two changes. The first is the change from
+vectors to paths, forms to functions and so on. But it’s also the case
+that tangent vectors have just the one basepoint, whereas paths have two
+endpoints. You can see this play out in this example, where <span
+class="math inline">\(a\)</span> and <span
+class="math inline">\(a&#39;\)</span> were distinct points (and <span
+class="math inline">\(b\)</span> and <span
+class="math inline">\(b&#39;\)</span>).</p>
+<p>The horizontal composition we build lives entirely in <span
+class="math inline">\(B\)</span> and we didn’t make use of <span
+class="math inline">\(M\)</span> yet. The Leibniz rule will be a
+pointwise version of what’s going on in <span
+class="math inline">\(B\)</span>. Denote by <span
+class="math inline">\(\mu\circ(f,g):B\to B\)</span> the map which sends
+<span class="math inline">\(x\mapsto \mu(f(x),g(x))\)</span>.</p>
 <div class="mylemma">
-<p><strong>Lemma 2</strong>. <em>Let <span
-class="math inline">\(f:B\to\mathcal{U}\)</span> be a type family over
-<span class="math inline">\(B\)</span> and assume we have <span
-class="math inline">\(x,x&#39;:B,a:f(x),a:f(x&#39;)\)</span>. Then <span
-class="math display">\[((x,a)=(x&#39;,a&#39;))\simeq (x=x&#39;)\times
-(a=a).\]</span></em></p>
+<p><strong>Lemma 1</strong>. <em>Given <span class="math inline">\(f,
+g:M\to B\)</span> and <span class="math inline">\(p:x=_M y\)</span> then
+<span class="math display">\[\begin{aligned}
+\ensuremath{\mathsf{ap}}(\mu\circ(f,g))(p)&amp;=\mu(f(p),-)\star\mu(-,g(p))\\
+&amp;=\left[\mu(f(p),-)\cdot_r \mu(-,g(x))\right]\cdot
+\left[\mu(f(y),-)\cdot_l\mu(-,g(p))\right]\\
+&amp;:\mu(f(x),g(x))=\mu(f(y),g(y))
+\end{aligned}\]</span></em></p>
 </div>
-<p>(independent of <span class="math inline">\(a&#39;\)</span>? perhaps
-this lemma is indeed only true when there is a section.)</p>
-<p>This is a slight generalization of <span class="citation"
-data-cites="Symmetry"> (<a href="#ref-Symmetry"
-role="doc-biblioref">Bezem <em>et al.</em>, 2023</a>)</span> Lemma
-4.14.1. To prove it we can assume <span
-class="math inline">\(x&#39;\)</span> is <span
-class="math inline">\(x\)</span> in which case the lemma is a special
-case of the identity type of a sum type.</p>
-<h2 data-number="4.2" id="tensorial"><span
-class="header-section-number">4.2</span> Tensorial</h2>
+<h2 data-number="4.3" id="covering-spaces"><span
+class="header-section-number">4.3</span> Covering spaces</h2>
+<p>If <span class="math inline">\(G\)</span> is a 0-truncated group such
+as <span class="math inline">\(\ensuremath{\mathbb{Z}}\)</span> then the
+type of torsors (delooping) <span class="math inline">\(BG\)</span> is
+1-truncated. If <span class="math inline">\(f:M\to BG\)</span> is a type
+family then <span class="math inline">\(\sum_{x:M}f(x)\)</span> has
+fibers that are sets (<span class="math inline">\(G\)</span>-torsors).
+So transport functions are set isomorphisms, and the transport of any
+contractible loop in <span class="math inline">\(M\)</span> will be
+<span class="math inline">\(\ensuremath{\mathsf{refl}}\)</span> (the
+identity) of the fiber, which is what we mean by flat.</p>
+<h2 data-number="4.4" id="tensoriality"><span
+class="header-section-number">4.4</span> Tensoriality</h2>
 <p>Let <span class="math inline">\(\alpha\)</span> be an <span
 class="math inline">\(n\)</span>-form on a smooth manifold <span
 class="math inline">\(B\)</span>. We are encouraged to think of <span
@@ -465,54 +536,14 @@ the property that it is linear over <span
 class="math inline">\(B\to\ensuremath{\mathbb{R}}\)</span> in every
 component, i.e. if <span class="math inline">\(f_1, \ldots,
 f_n:B\to\ensuremath{\mathbb{R}}\)</span> then <span
-class="math inline">\(\alpha(f_1 X_1,\ldots, f_n X_n) = f_1\cdots
-f_n\alpha(X_1,\ldots,X_n).\)</span> We also say that <span
+class="math display">\[\alpha(f_1 X_1,\ldots, f_n X_n) = f_1\cdots
+f_n\alpha(X_1,\ldots,X_n).\]</span> We also say that <span
 class="math inline">\(\alpha\)</span> is <em>tensorial</em> in every
 argument. A function on vector fields is tensorial just when it’s linear
 over the action of smooth functions on vector fields. Examples include
 <span class="math inline">\(n\)</span>-forms and metrics (which are
 symmetric instead of being antisymmetric like forms).</p>
 <p>But what about connections and curvature?</p>
-<h2 data-number="4.3" id="the-leibniz-product-rule"><span
-class="header-section-number">4.3</span> The Leibniz (product) rule</h2>
-<p>Generalize this for connections.</p>
-<p>The Leibniz rule states that if <span class="math inline">\(f, g:M\to
-\ensuremath{\mathbb{R}}\)</span> are two smooth functions to the real
-numbers then <span class="math inline">\(d(fg) = fdg + gdf\)</span>.
-Here <span class="math inline">\(fg\)</span> is the function formed by
-taking the pointwise product of <span class="math inline">\(f\)</span>
-and <span class="math inline">\(g\)</span>. To examine this situation in
-HoTT we need type-theoretic functions <span class="math inline">\(f,
-g:M\to B\)</span> from some type <span class="math inline">\(M\)</span>
-to an H-space <span class="math inline">\(B\)</span>.</p>
-<p>We claim thact the following deserves to be called the Leibniz
-rule.</p>
-<div class="mylemma">
-<p><strong>Lemma 3</strong>. <em>For any type <span
-class="math inline">\(M\)</span> and H-space <span
-class="math inline">\(B\)</span> and maps <span
-class="math inline">\(f,g:M\to B\)</span> and path <span
-class="math inline">\(p:x=_M y\)</span> we have <span
-class="math inline">\(\ensuremath{\mathsf{ap}}(fg)(p)=\mu(f(x),\ensuremath{\mathsf{ap}}(g)(p))
-\cdot \mu(\ensuremath{\mathsf{ap}}(f)(p),g(y))\)</span>. (<span
-class="math inline">\(\cdot\)</span> is concatenation of
-paths.)</em></p>
-</div>
-<p>The notation is temporarily sloppy, but by <span
-class="math inline">\(\mu(a, p)\)</span> for a path <span
-class="math inline">\(p\)</span> we mean the functorial action of
-multiplication by <span class="math inline">\(a\)</span> on the left, on
-a path.g</p>
-<p><img src="./09052d33113b7087f7abc8b04e220a13697b45a3.png"
-alt="image" /></p>
-<h2 data-number="4.4" id="nonvanishing-tangent-vector-fields"><span
-class="header-section-number">4.4</span> Nonvanishing tangent vector
-fields</h2>
-<p>Associated bundles in HoTT.</p>
-<p>A nowhere-vanishing section is therefore a section of a decomposition
-<span class="math inline">\(\prod_{x:B}GL(n)=GL(n-1)\times
-GL(1)\)</span> acting separately on the section direction and on the
-quotient of the vector space by the section direction.</p>
 <h2 data-number="4.5" id="gauge-transformations"><span
 class="header-section-number">4.5</span> Gauge transformations</h2>
 <p>A <em>gauge transformation</em> is a term inherited from physics.
@@ -552,6 +583,8 @@ href="#ref-atiyah1983yang" role="doc-biblioref">Atiyah &amp; Bott,
 id="characteristic-classes-and-chern-weil-theory"><span
 class="header-section-number">4.6</span> Characteristic classes and
 Chern-Weil theory</h2>
+<p>(I am trying to decide whether this can be in a follow-up paper. Here
+is a sketch.)</p>
 <p>Chern-Weil “theory” is actually a map, from the space of connections
 on the bundle <span class="math inline">\(\pi:P\to B\)</span> to the
 cohomology ring of <span class="math inline">\(B\)</span>, plus the
@@ -559,8 +592,25 @@ claim that these are the characteristic classes for the bundle. (cite
 Freed-Hopkins<span class="citation" data-cites="freed2013chernweil"> (<a
 href="#ref-freed2013chernweil" role="doc-biblioref">Freed &amp; Hopkins,
 2013</a>)</span>)</p>
+<p>In HoTT this theorem will disappear, in two steps. Step 1 is to
+replace bundles by classifying maps to <span
+class="math inline">\(\mathrm{BAut}_1(S^1)\)</span>, and cohomology
+classes by classifying maps to <span
+class="math inline">\(K(G,n)\)</span>s. The characteristic classes of a
+bundle are then just the composition of the two classifying maps. In
+particular the first Chern class would be given by composing the
+bundle-classifying map with the identity map <span
+class="math inline">\(\mathrm{BAut}_1(S^1)\simeq
+K(\ensuremath{\mathbb{Z}},2)\)</span>!</p>
+<p>Step 2 is the work of the previous sections, noting that in HoTT maps
+contain connections, and so inside the characteristic classes, defined
+by maps into a classifying space, we can see conenctions and curvature.
+In the case of the Chern class we can see that the curvature “is” the
+characteristic class, since it is picked out by the map to <span
+class="math inline">\(K(\ensuremath{\mathbb{Z}},2)\)</span>.</p>
 <h2 data-number="4.7" id="combinatorial-manifolds"><span
 class="header-section-number">4.7</span> Combinatorial manifolds</h2>
+<p>(This section is not quite off the ground.)</p>
 <p>The combinatorial structure we have in mind is a nerve of a good open
 cover. What do we know about which smooth manifolds have such covers?
 While we’re at it, let’s survey all the combinatorial-flavored spaces
@@ -593,9 +643,12 @@ class="math inline">\(k\)</span>-handles; see page 107 of
 Kirby-Siebenmann. This probably holds in the noncompact case as well,
 though I don’t know a reference.</p>
 </blockquote>
+<h2 data-number="4.8" id="future-work"><span
+class="header-section-number">4.8</span> Future work</h2>
+<p>Additional classical results to look for in HoTT are:</p>
 <h1 data-number="5"
-id="example-the-tangent-bundle-of-the-2-sphere"><span
-class="header-section-number">5</span> Example: the tangent bundle of
+id="appendix-the-tangent-bundle-of-the-2-sphere"><span
+class="header-section-number">5</span> Appendix: the tangent bundle of
 the 2-sphere</h1>
 <p>The classical 2-sphere embedded in <span
 class="math inline">\(\ensuremath{\mathbb{R}}^3\)</span> is curved at
@@ -653,22 +706,22 @@ class="math inline">\(\ensuremath{\mathbb{O}}\)</span> which has 6
 points, 12 1-paths, 8 2-paths.</figcaption>
 </figure>
 <div class="mylemma">
-<p><strong>Lemma 4</strong>. <em><span class="math inline">\((C_4,
+<p><strong>Lemma 2</strong>. <em><span class="math inline">\((C_4,
 b)\simeq S^1\)</span>.</em></p>
 </div>
 <div class="mylemma">
-<p><strong>Lemma 5</strong>. <em><span
+<p><strong>Lemma 3</strong>. <em><span
 class="math inline">\(\ensuremath{\mathbb{O}}\simeq
 S^2\)</span>.</em></p>
 </div>
 <div class="mylemma">
-<p><strong>Lemma 6</strong>. <em>We have <span
+<p><strong>Lemma 4</strong>. <em>We have <span
 class="math inline">\((C_4, ||\{b, g, r, o\}\mapsto \mathsf{base},
 br\mapsto \mathsf{loop}, \{rg, go, ob\}\mapsto
 \ensuremath{\mathsf{refl}}||_0):\mathrm{BAut}_1(S^1)\)</span></em></p>
 </div>
 <div class="mylemma">
-<p><strong>Lemma 7</strong>. <em><span
+<p><strong>Lemma 5</strong>. <em><span
 class="math inline">\(\mathrm{BAut}_1(S^1)\)</span> is equivalent to the
 type of <span class="math inline">\(S^1\)</span>-torsors, and to the
 type of <span class="math inline">\((C_4,b)\)</span>-torsors.</em></p>
