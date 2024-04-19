@@ -209,6 +209,7 @@ Wagner came up with a solution.&lt;/p&gt;
 &lt;body&gt;
 &lt;nav id=&#34;TOC&#34; role=&#34;doc-toc&#34;&gt;
 &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#abstract&#34; id=&#34;toc-abstract&#34;&gt;Abstract&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#introduction-discrete-differential-geometry&#34;
 id=&#34;toc-introduction-discrete-differential-geometry&#34;&gt;&lt;span
 class=&#34;toc-section-number&#34;&gt;1&lt;/span&gt; Introduction: discrete differential
@@ -252,10 +253,27 @@ class=&#34;toc-section-number&#34;&gt;5&lt;/span&gt; Example: the tangent bundle
 2-sphere&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/nav&gt;
+&lt;h1 class=&#34;unnumbered&#34; id=&#34;abstract&#34;&gt;Abstract&lt;/h1&gt;
+&lt;p&gt;Homotopy type theory captures all the major concepts of differential
+geometry including forms, connections, curvature, and gauge theory. We
+show this by focusing on combinatorial manifolds, which are discrete in
+the sense of real cohesion&lt;span class=&#34;citation&#34;
+data-cites=&#34;shulman_cohesion&#34;&gt; (&lt;a href=&#34;#ref-shulman_cohesion&#34;
+role=&#34;doc-biblioref&#34;&gt;Shulman, 2017&lt;/a&gt;)&lt;/span&gt;, drawing inspiration from
+the similarly young field of discrete differential geometry.
+Reinterpreting the Chern-Weil theory of characteristic classes via
+connections is a first application of the framework.&lt;/p&gt;
 &lt;h1 data-number=&#34;1&#34;
 id=&#34;introduction-discrete-differential-geometry&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;1&lt;/span&gt; Introduction: discrete
 differential geometry&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&#34;It is always ourselves we work on, whether we realize it or not.
+There is no other work to be done in the world.&#34; — Stephen Talbott,
+&lt;em&gt;The Future Does Not Compute&lt;/em&gt;&lt;span class=&#34;citation&#34;
+data-cites=&#34;talbott&#34;&gt; (&lt;a href=&#34;#ref-talbott&#34;
+role=&#34;doc-biblioref&#34;&gt;Talbott, 1995&lt;/a&gt;)&lt;/span&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;The observation that sparks the following discussion is this: if we
 can manage to reformulate differential geometry in discrete terms (i.e.
 finite, without infinitesimals) then we may also be able to construct it
@@ -343,6 +361,11 @@ geometry.&lt;/p&gt;
 and point to future directions.&lt;/p&gt;
 &lt;h1 data-number=&#34;2&#34; id=&#34;central-h-spaces&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;2&lt;/span&gt; Central H-spaces&lt;/h1&gt;
+&lt;p&gt;Central H-spaces are the classifying spaces for principal bundles on
+abelian groups. We won’t be able to access the full theory for
+nonabelian groups just yet, but we hope that the theory of maximal tori
+and weights might bring even those within reach of the central H-space
+paradigm.&lt;/p&gt;
 &lt;p&gt;We will rely on the lovely paper by Buchholtz, Christensen, Flaten
 and Rijke &lt;span class=&#34;citation&#34; data-cites=&#34;buchholtz2023central&#34;&gt; (&lt;a
 href=&#34;#ref-buchholtz2023central&#34; role=&#34;doc-biblioref&#34;&gt;Buchholtz &lt;em&gt;et
@@ -983,6 +1006,17 @@ class=&#34;smallcaps&#34;&gt;Fairbanks&lt;/span&gt;, J. (2022) &lt;a
 href=&#34;https://doi.org/10.3934/mine.2023036&#34;&gt;A diagrammatic view of
 differential equations in physics&lt;/a&gt;. &lt;em&gt;Mathematics in
 Engineering&lt;/em&gt;, &lt;strong&gt;5&lt;/strong&gt;, 1–59.
+&lt;/div&gt;
+&lt;div id=&#34;ref-shulman_cohesion&#34; class=&#34;csl-entry&#34; role=&#34;listitem&#34;&gt;
+&lt;span class=&#34;smallcaps&#34;&gt;Shulman&lt;/span&gt;, M. (2017) &lt;a
+href=&#34;https://arxiv.org/abs/1509.07584&#34;&gt;Brouwer’s fixed-point theorem in
+real-cohesive homotopy type theory&lt;/a&gt;.
+&lt;/div&gt;
+&lt;div id=&#34;ref-talbott&#34; class=&#34;csl-entry&#34; role=&#34;listitem&#34;&gt;
+&lt;span class=&#34;smallcaps&#34;&gt;Talbott&lt;/span&gt;, S. (1995) &lt;em&gt;&lt;a
+href=&#34;https://books.google.com/books?id=KcXaAAAAMAAJ&#34;&gt;The future does
+not compute: Transcending the machines in our midst&lt;/a&gt;&lt;/em&gt;. O’Reilly
+&amp;amp; Associates.
 &lt;/div&gt;
 &lt;div id=&#34;ref-hottbook&#34; class=&#34;csl-entry&#34; role=&#34;listitem&#34;&gt;
 &lt;span class=&#34;smallcaps&#34;&gt;Univalent Foundations Program&lt;/span&gt; (2013)
