@@ -117,6 +117,20 @@ role="doc-biblioref">Shulman, 2017</a>)</span>, drawing inspiration from
 the similarly young field of discrete differential geometry.
 Reinterpreting the Chern-Weil theory of characteristic classes via
 connections is a first application of the framework.</p>
+<ol>
+<li><p>Stop using <span class="math inline">\(B\)</span> as the manifold
+so it can be the H-space. Switch it to <span
+class="math inline">\(M\)</span>.</p></li>
+<li><p>what is the Maurer-Cartan form <span
+class="math inline">\(\Omega^1(G,\mathfrak{g})\)</span>? Maps from paths
+in G to G? Sure, it’s subtraction of the endpoints, which is like
+transporting the start point to the identity and asking where the other
+endpoint is.</p></li>
+<li><p>illustrate the three equators we chose for transport along <span
+class="math inline">\(w,r,g\)</span>.</p></li>
+<li><p>make a table of all the statements in very simplified
+form</p></li>
+</ol>
 <h1 data-number="1"
 id="introduction-discrete-differential-geometry"><span
 class="header-section-number">1</span> Introduction: discrete
@@ -548,37 +562,95 @@ symmetric instead of being antisymmetric like forms).</p>
 class="header-section-number">4.5</span> Gauge transformations</h2>
 <p>A <em>gauge transformation</em> is a term inherited from physics.
 It’s an automorphism of a principal bundle <span
-class="math inline">\(P\to X\)</span>, meaning a homeomorphism of <span
+class="math inline">\(P\to M\)</span>, meaning a homeomorphism of <span
 class="math inline">\(P\)</span> that commutes with the projection to
-<span class="math inline">\(X\)</span> and so acts on each fiber. It is
+<span class="math inline">\(M\)</span> and so acts on each fiber. It is
 further required to be equivariant under the action of the group <span
 class="math inline">\(G\)</span>, and so it’s very similar to the act of
 multiplying each fiber by a continuously varying element of <span
-class="math inline">\(G\)</span>. Another way to say that is that, since
-each fiber is a <span class="math inline">\(G\)</span>-torsor, a gauge
-transformation is a continuously varying isomorphism of each fiber with
-<span class="math inline">\(G\)</span>, or a continuously varying choice
-of identity element. If we think of a <span
-class="math inline">\(G\)</span>-torsor as the fundamental physical
-quantity, and a particular choice of identity element as a choice of
-units, then you can see why we might want to consider gauge
-transformations “physically meaningless”. Even though this group <span
-class="math inline">\(\mathrm{Aut}P\)</span> is very large, we will
-sometimes want to quotient by it.</p>
-<p>In HoTT this is easy to express. If a bundle <span
-class="math inline">\(P\to X\)</span> is classified by <span
-class="math inline">\(f:X\to\mathrm{BAut}_1(S^1)\)</span> then the group
-of gauge transformations is just the type <span
-class="math inline">\(f=f\)</span> or in other words <span
-class="math inline">\(\Omega_f(X\to\mathrm{BAut}_1(S^1))\)</span>. The
-delooping <span class="math inline">\(B(\mathrm{Aut}P)\)</span> of this
-group is then <span
-class="math inline">\(||X\to\mathrm{BAut}_1(S^1)||_{(f)}\)</span>, the
-connected component of this mapping type containing <span
-class="math inline">\(f\)</span>. In 1982 this was a theorem!<span
-class="citation" data-cites="atiyah1983yang"> (<a
-href="#ref-atiyah1983yang" role="doc-biblioref">Atiyah &amp; Bott,
-1983</a>)</span></p>
+class="math inline">\(G\)</span>.</p>
+<p>In HoTT if the bundle is classified by <span
+class="math inline">\(f:M\to \mathcal{U}\)</span> then an automorphism
+is a homotopy <span class="math inline">\(f\sim f\)</span> and the group
+of gauge transformations is the loop space <span
+class="math inline">\(\Omega_f(M\to \mathcal{U})\)</span>.</p>
+<p>Recall that torsors have a physical interpretation as a quantity
+without a specified unit, such as mass, length, or time. When we choose
+a base point in a torsor it becomes the standard torsor <span
+class="math inline">\(G\)</span> acting on itself (for example, the
+additive real numbers). A physicist is looking for properties or laws
+that are independent of such a choice. In the 20th century physicists
+further wondered about choices of units that vary from point to point,
+and began searching for laws that are invariant under this much larger
+space of transformations. And so they and we are led to explore
+quotienting by the action of the group of gauge transformations, and in
+particular the space of connections “mod gauge.” In this scenario the
+base manifold <span class="math inline">\(M\)</span> is spacetime, and a
+gauge transformation is a smoothly varying choice of gauge (units) at
+each point.</p>
+<p>Gauge transformations act on connections. When we view connections as
+infinitesimal splittings of <span class="math inline">\(TP\)</span> into
+vertical and horizontal sub-bundles, a gauge transformation that is
+constant in the neighborhood of a point will not change the splitting,
+it will just shift the fiber rigidly along itself, but one that is
+changing rapidly near a point will tilt the horizontal subspaces. So
+there are two effects: the effect of sliding along the fiber, and the
+effect of the rate of change of the gauge transformation. In classical
+geometry you’ll see formulas like this:</p>
+<div class="mythm">
+<p><strong>Theorem 2</strong>. <em>Let <span class="math inline">\(P\to
+M\)</span> be a principal bundle and <span
+class="math inline">\(A\in\Omega^1(M,\mathfrak{g})\)</span> a connection
+1-form on <span class="math inline">\(P\)</span>. Suppose that <span
+class="math inline">\(f\in \mathscr{G}(P)\)</span> is a bundle
+automorphism. Then <span class="math inline">\(f^*A\)</span> is a
+connection 1-form and in a neighborhood <span
+class="math inline">\(U\)</span> of a point <span
+class="math inline">\(x\in M\)</span> we can write <span
+class="math inline">\(f\)</span> as a function <span
+class="math inline">\(f_U:U\to G\)</span> where <span
+class="math inline">\(f_U(x)\in G\)</span> is a group element
+multiplying the fiber at <span class="math inline">\(x\)</span>, and
+then we have <span
+class="math display">\[f^*A=\mathrm{Ad}_{f_U(x)^{-1}}\circ A +
+f_U^*(\mu_G)\]</span> where <span
+class="math inline">\(\mu_G:\Omega^1(G,\mathfrak{g})\)</span> is the
+Maurer-Cartan form on <span class="math inline">\(G\)</span>.</em></p>
+</div>
+<p>This theorem is a combination of Theorems 5.2.2 and 5.4.4 in the
+excellent recent book on gauge theory for mathematicians interested in
+physics by Mark Hamilton<span class="citation"
+data-cites="hamilton2017"> (<a href="#ref-hamilton2017"
+role="doc-biblioref">Hamilton, 2017</a>)</span>.</p>
+<p>It’s not so important to fully understand this formula because we
+will re-explain it in HoTT terms in a moment. But notice that <span
+class="math inline">\(f^*A\)</span> (the action of the gauge
+transformation on the connection 1-form) has contributions from two
+terms (both of which are vertical — connections always map onto the
+vertical bundle). The first is the adjoint action at the specific point
+<span class="math inline">\(x\)</span>. This is always what we expect
+when we shift the base point in a torsor. The second term involves the
+Maurer-Cartan form, which is the derivative of subtraction in the group.
+It takes tangent vectors at <span class="math inline">\(g:G\)</span> to
+a tangent vector at the identity (the Lie algebra, denoted <span
+class="math inline">\(\mathfrak{g}\)</span>) by differentiating the
+action of multiplication by <span class="math inline">\(g^-1\)</span>.
+If we think in terms of finite-length paths, then imagine a path <span
+class="math inline">\(p:g=g&#39;\)</span> and the function <span
+class="math inline">\(g^{-1}\cdot -\)</span> will act on the path to
+give a path <span class="math inline">\(g^{-1}\cdot p:e=g&#39;\cdot
+g^{-1}\)</span> that starts at the identity. So the Maurer-Cartan form
+shifts paths to start at the identity by subtracting off the start
+point. So this Maurer-Cartan term is recording the contribution from the
+gauge transformation <span class="math inline">\(f\)</span> that comes
+from the rapidity of change from point to point. This term will be large
+when <span class="math inline">\(f_U\)</span> has a large
+derivative.</p>
+<p>In HoTT the connection’s parallel transport is visible as the
+transport function, and the horizontal-vertical splitting is visible in
+the decomposition of paths in the sigma type (total space) into pairs of
+paths. What is the effect of applying a homotopy <span
+class="math inline">\(H:f\sim f\)</span>?</p>
 <h2 data-number="4.6"
 id="characteristic-classes-and-chern-weil-theory"><span
 class="header-section-number">4.6</span> Characteristic classes and
@@ -646,6 +718,9 @@ though I don’t know a reference.</p>
 <h2 data-number="4.8" id="future-work"><span
 class="header-section-number">4.8</span> Future work</h2>
 <p>Additional classical results to look for in HoTT are:</p>
+<ol>
+<li><p>Full Chern-Weil theory in arbitrary dimensions.</p></li>
+</ol>
 <h1 data-number="5"
 id="appendix-the-tangent-bundle-of-the-2-sphere"><span
 class="header-section-number">5</span> Appendix: the tangent bundle of
@@ -827,13 +902,6 @@ fact that <span class="math inline">\(\mathrm{BAut}_1(S^1)\)</span> is a
 class="math inline">\(\ensuremath{\mathbb{O}}\)</span>.</p>
 <div id="refs" class="references csl-bib-body hanging-indent"
 data-entry-spacing="0" role="list">
-<div id="ref-atiyah1983yang" class="csl-entry" role="listitem">
-<span class="smallcaps">Atiyah</span>, M.F. &amp; <span
-class="smallcaps">Bott</span>, R. (1983) The yang-mills equations over
-riemann surfaces. <em>Philosophical Transactions of the Royal Society of
-London. Series A, Mathematical and Physical Sciences</em>,
-<strong>308</strong>, 523–615.
-</div>
 <div id="ref-Symmetry" class="csl-entry" role="listitem">
 <span class="smallcaps">Bezem</span>, M., <span
 class="smallcaps">Buchholtz</span>, U., <span
@@ -877,6 +945,12 @@ homotopy theory</a>.
 class="smallcaps">Quinn</span>, F. (1990) <em><a
 href="http://www.jstor.org/stable/j.ctt7ztz2d">Topology of 4-manifolds
 (PMS-39)</a></em>. Princeton University Press.
+</div>
+<div id="ref-hamilton2017" class="csl-entry" role="listitem">
+<span class="smallcaps">Hamilton</span>, M.J.D. (2017) <em><a
+href="https://books.google.com/books?id=8zVCDwAAQBAJ">Mathematical gauge
+theory: With applications to the standard model of particle
+physics</a></em>, Universitext. Springer International Publishing.
 </div>
 <div id="ref-hiranidec" class="csl-entry" role="listitem">
 <span class="smallcaps">Hirani</span>, A.N. (2003) Discrete exterior
