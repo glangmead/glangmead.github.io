@@ -754,13 +754,14 @@ which uses only &lt;span class=&#34;math inline&#34;&gt;\(H(b)\)&lt;/span&gt;.&l
 &lt;p&gt;&lt;strong&gt;Lemma 2&lt;/strong&gt;. &lt;em&gt;Given a function &lt;span
 class=&#34;math inline&#34;&gt;\(f:M\to\mathcal{U}\)&lt;/span&gt; and homotopy &lt;span
 class=&#34;math inline&#34;&gt;\(H:f\sim f\)&lt;/span&gt; the following square commutes
-&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
-\xymatrix{
-  f(a) \ar@{=}[r]^{f(p)} \ar@{=}[d]_{H(a)} &amp;amp; f(b) \ar@{=}[d]^{H(b)}
-\\
-  f(a) \ar@{=}[r]_{f(p)} &amp;amp; f(b)
-}
-\end{aligned}\]&lt;/span&gt; and so in the type family we have &lt;span
+&lt;span class=&#34;math display&#34;&gt;\[\begin{tikzcd}
+  {f(a)} &amp;amp; {f(b)} \\
+  {f(a)} &amp;amp; {f(b)}
+  \arrow[&amp;quot;{f(p)}&amp;quot;, equal, from=1-1, to=1-2]
+  \arrow[&amp;quot;{H(a)}&amp;quot;&amp;#39;, equal, from=1-1, to=2-1]
+  \arrow[&amp;quot;{H(b)}&amp;quot;, equal, from=1-2, to=2-2]
+  \arrow[&amp;quot;{f(p)}&amp;quot;&amp;#39;, equal, from=2-1, to=2-2]
+\end{tikzcd}\]&lt;/span&gt; and so in the type family we have &lt;span
 class=&#34;math inline&#34;&gt;\(\mathrm{tr}(H(x)\cdot f(p)) =
 \mathrm{tr}(f(p)\cdot H(y))\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
