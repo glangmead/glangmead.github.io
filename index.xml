@@ -427,6 +427,10 @@ class=&#34;math inline&#34;&gt;\(\mathrm{BAut}_1(S^1)\stackrel{\mathrm{def}}{=}\
 &lt;h1 data-number=&#34;4&#34; id=&#34;classifying-maps-contain-connections&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;4&lt;/span&gt; Classifying maps contain
 connections&lt;/h1&gt;
+&lt;p&gt;To hew close to the intended context of the term “connection” we will
+examine manifold-like types and bundle-classifying-like types. The
+novelty here, compared to other HoTT investigations, is the focus on
+combinatorial types to stand in for manifolds.&lt;/p&gt;
 &lt;p&gt;The DDG philosophy tells us to look at HITs that are polytope-like. A
 polytope &lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; will have finitely many
 0-dimesional (point) constructors &lt;span
@@ -434,15 +438,16 @@ class=&#34;math inline&#34;&gt;\(\{m_0^i\}\)&lt;/span&gt;, finitely many 1-dimes
 constructors &lt;span
 class=&#34;math inline&#34;&gt;\(\{m_1^{ij}:m_0^i=m_0^j\}\)&lt;/span&gt;, and so on. Type
 families &lt;span class=&#34;math inline&#34;&gt;\(f:M\to \mathcal{U}\)&lt;/span&gt; on this
-type specify where each of thee constructors is sent. In DDG parlance,
+type specify where each of these constructors is sent. In DDG parlance,
 &lt;span class=&#34;math inline&#34;&gt;\(f\)&lt;/span&gt; restricted to the 0-dimensional
 constructors of &lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; is a 0-form and
 &lt;span class=&#34;math inline&#34;&gt;\(f\)&lt;/span&gt; restricted to the 1-dimensional
-constructors (whatever that means in HoTT) is a 1-form, and so on.&lt;/p&gt;
+constructors (not the 1-skeleton but just the 1-dimensional parts,
+whatever that means in HoTT) is a 1-form, and so on.&lt;/p&gt;
 &lt;p&gt;A principal &lt;span class=&#34;math inline&#34;&gt;\(S^1\)&lt;/span&gt; bundle is a
 family of &lt;span class=&#34;math inline&#34;&gt;\(S^1\)&lt;/span&gt; torsors and so we
 will be focusing on the function type &lt;span class=&#34;math inline&#34;&gt;\(M\to
-\mathrm{BAut}_1(S^1)\)&lt;/span&gt;. The claim is that &lt;span
+\mathrm{BAut}_1(S^1)\)&lt;/span&gt;. The novel claim here is that &lt;span
 class=&#34;math inline&#34;&gt;\(M\to \mathrm{BAut}_1(S^1)\)&lt;/span&gt; contains more
 than just all the principal &lt;span
 class=&#34;math inline&#34;&gt;\(S^1\)&lt;/span&gt;-bundles: it also contains all the
@@ -463,21 +468,23 @@ If &lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; is at least a 2-ty
 want to claim that &lt;span class=&#34;math inline&#34;&gt;\(f\)&lt;/span&gt; classifies a
 bundle with connection, then we will be required to map the 2-faces of
 &lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; (the 2-dimesional constructors)
-to a path from the image of a bounding loop to &lt;span
-class=&#34;math inline&#34;&gt;\(\ensuremath{\mathsf{refl}}\)&lt;/span&gt;. So at
-dimension 2 we will impose that constraint. Since &lt;span
-class=&#34;math inline&#34;&gt;\(\mathrm{BAut}_1(S^1)\)&lt;/span&gt; is 2-truncated,
-&lt;span class=&#34;math inline&#34;&gt;\(f\)&lt;/span&gt; factors through the truncation
-map &lt;span class=&#34;math inline&#34;&gt;\(M\to||M||_2\)&lt;/span&gt; and so that’s the
-top dimension.&lt;/p&gt;
+to a path from &lt;span
+class=&#34;math inline&#34;&gt;\(\ensuremath{\mathsf{refl}}\)&lt;/span&gt; to the image
+of a bounding loop. So at dimension 2 we will impose that constraint.
+Since &lt;span class=&#34;math inline&#34;&gt;\(\mathrm{BAut}_1(S^1)\)&lt;/span&gt; is
+2-truncated, &lt;span class=&#34;math inline&#34;&gt;\(f\)&lt;/span&gt; factors through the
+truncation map &lt;span class=&#34;math inline&#34;&gt;\(M\to||M||_2\)&lt;/span&gt; and so
+that’s the top dimension.&lt;/p&gt;
+&lt;p&gt;There is an example at the end of this paper. For those who are best
+served by examples, do look at it and return to this point.&lt;/p&gt;
 &lt;h1 data-number=&#34;5&#34; id=&#34;why-this-is-geometry&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;5&lt;/span&gt; Why this is geometry&lt;/h1&gt;
 &lt;p&gt;How can we double check that we are describing the intended theory of
 geometry? In this section we will enumerate a wishlist of facts that we
 believe characterize the subject, and then provide evidence for some of
 them.&lt;/p&gt;
-&lt;p&gt;Here are the translations that are covered below: &lt;span
-class=&#34;math display&#34;&gt;\[\begin{aligned}
+&lt;p&gt;Here are the translations that are covered in the current paper:
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
 &amp;amp; \text{\small Connections are infinitesimal splittings of a} &amp;amp;
 \quad &amp;amp;\text{\small Paths in a sigma type are equivalent to
 a}        \\
@@ -497,14 +504,10 @@ contractible loops is } \ensuremath{\mathsf{refl}}\\
 &amp;amp; \text{\small automorphisms) acts on the space of connections.}
 &amp;amp; \quad&amp;amp;\text{\small the splitting of paths in sigma types.} \\
 \end{aligned}\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Questions to explore in the future:&lt;/p&gt;
+&lt;p&gt;And here are questions to explore in the future:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;There’s a notion of &lt;em&gt;tensorial&lt;/em&gt; that holds for forms but
 not for connections.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;The homotopy types of manifolds we care about have combinatorial
-presentations, and the real-cohesive shape modal operator maps between
-them.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Can we define the Hopf bundle?&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Where is the Grassmannian structure of wedge product?&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;The Gauss-Bonnet theorem holds, relating the curvature of a
 2-manifold to the Euler characteristic.&lt;/p&gt;&lt;/li&gt;

@@ -281,6 +281,10 @@ class="math inline">\(\mathrm{BAut}_1(S^1)\stackrel{\mathrm{def}}{=}\sum_{X:\mat
 <h1 data-number="4" id="classifying-maps-contain-connections"><span
 class="header-section-number">4</span> Classifying maps contain
 connections</h1>
+<p>To hew close to the intended context of the term “connection” we will
+examine manifold-like types and bundle-classifying-like types. The
+novelty here, compared to other HoTT investigations, is the focus on
+combinatorial types to stand in for manifolds.</p>
 <p>The DDG philosophy tells us to look at HITs that are polytope-like. A
 polytope <span class="math inline">\(M\)</span> will have finitely many
 0-dimesional (point) constructors <span
@@ -288,15 +292,16 @@ class="math inline">\(\{m_0^i\}\)</span>, finitely many 1-dimesnional
 constructors <span
 class="math inline">\(\{m_1^{ij}:m_0^i=m_0^j\}\)</span>, and so on. Type
 families <span class="math inline">\(f:M\to \mathcal{U}\)</span> on this
-type specify where each of thee constructors is sent. In DDG parlance,
+type specify where each of these constructors is sent. In DDG parlance,
 <span class="math inline">\(f\)</span> restricted to the 0-dimensional
 constructors of <span class="math inline">\(M\)</span> is a 0-form and
 <span class="math inline">\(f\)</span> restricted to the 1-dimensional
-constructors (whatever that means in HoTT) is a 1-form, and so on.</p>
+constructors (not the 1-skeleton but just the 1-dimensional parts,
+whatever that means in HoTT) is a 1-form, and so on.</p>
 <p>A principal <span class="math inline">\(S^1\)</span> bundle is a
 family of <span class="math inline">\(S^1\)</span> torsors and so we
 will be focusing on the function type <span class="math inline">\(M\to
-\mathrm{BAut}_1(S^1)\)</span>. The claim is that <span
+\mathrm{BAut}_1(S^1)\)</span>. The novel claim here is that <span
 class="math inline">\(M\to \mathrm{BAut}_1(S^1)\)</span> contains more
 than just all the principal <span
 class="math inline">\(S^1\)</span>-bundles: it also contains all the
@@ -317,21 +322,23 @@ If <span class="math inline">\(M\)</span> is at least a 2-type and if we
 want to claim that <span class="math inline">\(f\)</span> classifies a
 bundle with connection, then we will be required to map the 2-faces of
 <span class="math inline">\(M\)</span> (the 2-dimesional constructors)
-to a path from the image of a bounding loop to <span
-class="math inline">\(\ensuremath{\mathsf{refl}}\)</span>. So at
-dimension 2 we will impose that constraint. Since <span
-class="math inline">\(\mathrm{BAut}_1(S^1)\)</span> is 2-truncated,
-<span class="math inline">\(f\)</span> factors through the truncation
-map <span class="math inline">\(M\to||M||_2\)</span> and so that’s the
-top dimension.</p>
+to a path from <span
+class="math inline">\(\ensuremath{\mathsf{refl}}\)</span> to the image
+of a bounding loop. So at dimension 2 we will impose that constraint.
+Since <span class="math inline">\(\mathrm{BAut}_1(S^1)\)</span> is
+2-truncated, <span class="math inline">\(f\)</span> factors through the
+truncation map <span class="math inline">\(M\to||M||_2\)</span> and so
+that’s the top dimension.</p>
+<p>There is an example at the end of this paper. For those who are best
+served by examples, do look at it and return to this point.</p>
 <h1 data-number="5" id="why-this-is-geometry"><span
 class="header-section-number">5</span> Why this is geometry</h1>
 <p>How can we double check that we are describing the intended theory of
 geometry? In this section we will enumerate a wishlist of facts that we
 believe characterize the subject, and then provide evidence for some of
 them.</p>
-<p>Here are the translations that are covered below: <span
-class="math display">\[\begin{aligned}
+<p>Here are the translations that are covered in the current paper:
+<span class="math display">\[\begin{aligned}
 &amp; \text{\small Connections are infinitesimal splittings of a} &amp;
 \quad &amp;\text{\small Paths in a sigma type are equivalent to
 a}        \\
@@ -351,14 +358,10 @@ contractible loops is } \ensuremath{\mathsf{refl}}\\
 &amp; \text{\small automorphisms) acts on the space of connections.}
 &amp; \quad&amp;\text{\small the splitting of paths in sigma types.} \\
 \end{aligned}\]</span></p>
-<p>Questions to explore in the future:</p>
+<p>And here are questions to explore in the future:</p>
 <ol>
 <li><p>There’s a notion of <em>tensorial</em> that holds for forms but
 not for connections.</p></li>
-<li><p>The homotopy types of manifolds we care about have combinatorial
-presentations, and the real-cohesive shape modal operator maps between
-them.</p></li>
-<li><p>Can we define the Hopf bundle?</p></li>
 <li><p>Where is the Grassmannian structure of wedge product?</p></li>
 <li><p>The Gauss-Bonnet theorem holds, relating the curvature of a
 2-manifold to the Euler characteristic.</p></li>
