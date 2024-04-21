@@ -574,26 +574,30 @@ href=&#34;#ref-Symmetry&#34; role=&#34;doc-biblioref&#34;&gt;Bezem &lt;em&gt;et 
 the term “path over”), including composition, and associativity
 thereof.&lt;/p&gt;
 &lt;p&gt;We recall now the identity type of sigma types:&lt;/p&gt;
-&lt;div class=&#34;mythm&#34;&gt;
+&lt;div id=&#34;thm:idsit&#34; class=&#34;mythm&#34;&gt;
 &lt;p&gt;&lt;strong&gt;Theorem 1&lt;/strong&gt;. &lt;em&gt;(HoTT book Theorem 2.7.2 &lt;span
 class=&#34;citation&#34; data-cites=&#34;hottbook&#34;&gt; (&lt;a href=&#34;#ref-hottbook&#34;
 role=&#34;doc-biblioref&#34;&gt;Univalent Foundations Program, 2013&lt;/a&gt;)&lt;/span&gt;) If
-&lt;span class=&#34;math inline&#34;&gt;\(f:B\to \mathcal{U}\)&lt;/span&gt; is a type family
-and &lt;span class=&#34;math inline&#34;&gt;\(w,w&amp;#39;:\sum_{x:B}f(x)\)&lt;/span&gt; then
-there is an equivalence &lt;span class=&#34;math display&#34;&gt;\[(w=w&amp;#39;)\simeq
-\sum_{p:\ensuremath{\mathrm{pr}}_1(w)=_B\ensuremath{\mathrm{pr}}_1(w&amp;#39;)}
+&lt;span class=&#34;math inline&#34;&gt;\(f:M\to \mathcal{U}\)&lt;/span&gt; is a type family
+and &lt;span class=&#34;math inline&#34;&gt;\(w,w&amp;#39;:\sum_{x:M}f(x)\)&lt;/span&gt; then
+there is an equivalence &lt;span
+class=&#34;math display&#34;&gt;\[\mathsf{split}:(w=w&amp;#39;)\simeq
+\sum_{p:\ensuremath{\mathrm{pr}}_1(w)=_M\ensuremath{\mathrm{pr}}_1(w&amp;#39;)}
 \left[\mathrm{tr}(p)(\ensuremath{\mathrm{pr}}_2(w))\right] =
 \ensuremath{\mathrm{pr}}_2(w&amp;#39;).\]&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;p&gt;In particular, given &lt;span class=&#34;math inline&#34;&gt;\(p:x=_B y\)&lt;/span&gt;
+&lt;p&gt;In particular, given &lt;span class=&#34;math inline&#34;&gt;\(p:x=_M y\)&lt;/span&gt;
 and &lt;span class=&#34;math inline&#34;&gt;\(w:f(x)\)&lt;/span&gt; we have &lt;span
 class=&#34;math inline&#34;&gt;\(w\xrightarrow[{p}]{=}tr(p)(w)\simeq
 tr(p)(w)=_{f(y)}tr(p)(w)\)&lt;/span&gt; which has the term &lt;span
 class=&#34;math inline&#34;&gt;\(\ensuremath{\mathsf{refl}}\)&lt;/span&gt; which we can
 call “the horizontal lift of &lt;span class=&#34;math inline&#34;&gt;\(p\)&lt;/span&gt;
-starting at &lt;span class=&#34;math inline&#34;&gt;\(w\)&lt;/span&gt;.” And so in HoTT we
-can see the equivalence of transport and lifting of paths into
-horizontal and vertical components.&lt;/p&gt;
+starting at &lt;span class=&#34;math inline&#34;&gt;\(w\)&lt;/span&gt;.” We can imitate the
+classical definition of a connection by defining &lt;span
+class=&#34;math inline&#34;&gt;\(\omega\stackrel{\mathrm{def}}{=}\ensuremath{\mathrm{pr}}_2\circ\mathsf{split}\)&lt;/span&gt;,
+the projection onto the vertical component. And thus in HoTT we can see
+the equivalence of transport and lifting of paths into horizontal and
+vertical components.&lt;/p&gt;
 &lt;h2 data-number=&#34;4.2&#34; id=&#34;the-leibniz-product-rule&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;4.2&lt;/span&gt; The Leibniz (product) rule&lt;/h2&gt;
 &lt;p&gt;The Leibniz rule for exterior differentiation states that if &lt;span
@@ -604,8 +608,10 @@ class=&#34;math inline&#34;&gt;\(fg\)&lt;/span&gt; is the function formed by tak
 pointwise product of &lt;span class=&#34;math inline&#34;&gt;\(f\)&lt;/span&gt; and &lt;span
 class=&#34;math inline&#34;&gt;\(g\)&lt;/span&gt;. This is an interaction between
 multiplication in &lt;span
-class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{R}}\)&lt;/span&gt; and the procedure
-for building a 1-form out of a 0-form.&lt;/p&gt;
+class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{R}}\)&lt;/span&gt; and the action on
+vectors of smooth functions (the 1-forms &lt;span
+class=&#34;math inline&#34;&gt;\(df\)&lt;/span&gt; and &lt;span
+class=&#34;math inline&#34;&gt;\(dg\)&lt;/span&gt;).&lt;/p&gt;
 &lt;p&gt;To examine this situation in HoTT we need type-theoretic functions
 &lt;span class=&#34;math inline&#34;&gt;\(f, g:M\to B\)&lt;/span&gt; from some type &lt;span
 class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; to an H-space &lt;span
@@ -621,7 +627,7 @@ B}\mu(-,b&amp;#39;).\)&lt;/span&gt; Since &lt;span class=&#34;math inline&#34;&g
 -):B=B\)&lt;/span&gt; is an (unpointed) equivalence of &lt;span
 class=&#34;math inline&#34;&gt;\(B\)&lt;/span&gt;, and similarly for &lt;span
 class=&#34;math inline&#34;&gt;\(\mu(b, -)\)&lt;/span&gt; and so on, this data assembles
-into the following diagram:&lt;/p&gt;
+into the following diagram of higher groupoid morphisms:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;./d183777157a8a3e2d296890f77fb0c2aee7abf41.png&#34;
 alt=&#34;image&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;And so the two homotopies can be horizontally composed to give a path
@@ -748,18 +754,18 @@ geometry you’ll see formulas like this:&lt;/p&gt;
 M\)&lt;/span&gt; be a principal bundle and &lt;span
 class=&#34;math inline&#34;&gt;\(A\in\Omega^1(M,\mathfrak{g})\)&lt;/span&gt; a connection
 1-form on &lt;span class=&#34;math inline&#34;&gt;\(P\)&lt;/span&gt;. Suppose that &lt;span
-class=&#34;math inline&#34;&gt;\(f\in \mathscr{G}(P)\)&lt;/span&gt; is a bundle
-automorphism. Then &lt;span class=&#34;math inline&#34;&gt;\(f^*A\)&lt;/span&gt; is a
+class=&#34;math inline&#34;&gt;\(H\in \mathscr{G}(P)\)&lt;/span&gt; is a bundle
+automorphism. Then &lt;span class=&#34;math inline&#34;&gt;\(H^*A\)&lt;/span&gt; is a
 connection 1-form and in a neighborhood &lt;span
 class=&#34;math inline&#34;&gt;\(U\)&lt;/span&gt; of a point &lt;span
 class=&#34;math inline&#34;&gt;\(x\in M\)&lt;/span&gt; we can write &lt;span
-class=&#34;math inline&#34;&gt;\(f\)&lt;/span&gt; as a function &lt;span
-class=&#34;math inline&#34;&gt;\(f_U:U\to G\)&lt;/span&gt; where &lt;span
-class=&#34;math inline&#34;&gt;\(f_U(x)\in G\)&lt;/span&gt; is a group element
+class=&#34;math inline&#34;&gt;\(H\)&lt;/span&gt; as a function &lt;span
+class=&#34;math inline&#34;&gt;\(H_U:U\to G\)&lt;/span&gt; where &lt;span
+class=&#34;math inline&#34;&gt;\(H_U(x)\in G\)&lt;/span&gt; is a group element
 multiplying the fiber at &lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt;, and
 then we have &lt;span
-class=&#34;math display&#34;&gt;\[f^*A=\mathrm{Ad}_{f_U(x)^{-1}}\circ A +
-f_U^*(\mu_G)\]&lt;/span&gt; where &lt;span
+class=&#34;math display&#34;&gt;\[H^*A=\mathrm{Ad}_{H_U(x)^{-1}}\circ A +
+H_U^*(\mu_G)\]&lt;/span&gt; where &lt;span
 class=&#34;math inline&#34;&gt;\(\mu_G:\Omega^1(G,\mathfrak{g})\)&lt;/span&gt; is the
 Maurer-Cartan form on &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
@@ -770,33 +776,79 @@ data-cites=&#34;hamilton2017&#34;&gt; (&lt;a href=&#34;#ref-hamilton2017&#34;
 role=&#34;doc-biblioref&#34;&gt;Hamilton, 2017&lt;/a&gt;)&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;It’s not so important to fully understand this formula because we
 will re-explain it in HoTT terms in a moment. But notice that &lt;span
-class=&#34;math inline&#34;&gt;\(f^*A\)&lt;/span&gt; (the action of the gauge
+class=&#34;math inline&#34;&gt;\(H^*A\)&lt;/span&gt; (the action of the gauge
 transformation on the connection 1-form) has contributions from two
 terms (both of which are vertical — connections always map onto the
 vertical bundle). The first is the adjoint action at the specific point
 &lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt;. This is always what we expect
-when we shift the base point in a torsor. The second term involves the
+when we shift the base point in a torsor and look at the resulting group
+(or in this case, the Lie algebra). The second term involves the
 Maurer-Cartan form, which is the derivative of subtraction in the group.
 It takes tangent vectors at &lt;span class=&#34;math inline&#34;&gt;\(g:G\)&lt;/span&gt; to
 a tangent vector at the identity (the Lie algebra, denoted &lt;span
 class=&#34;math inline&#34;&gt;\(\mathfrak{g}\)&lt;/span&gt;) by differentiating the
-action of multiplication by &lt;span class=&#34;math inline&#34;&gt;\(g^-1\)&lt;/span&gt;.
+action of multiplication by &lt;span class=&#34;math inline&#34;&gt;\(g^{-1}\)&lt;/span&gt;.
 If we think in terms of finite-length paths, then imagine a path &lt;span
 class=&#34;math inline&#34;&gt;\(p:g=g&amp;#39;\)&lt;/span&gt; and the function &lt;span
-class=&#34;math inline&#34;&gt;\(g^{-1}\cdot -\)&lt;/span&gt; will act on the path to
-give a path &lt;span class=&#34;math inline&#34;&gt;\(g^{-1}\cdot p:e=g&amp;#39;\cdot
-g^{-1}\)&lt;/span&gt; that starts at the identity. So the Maurer-Cartan form
-shifts paths to start at the identity by subtracting off the start
-point. So this Maurer-Cartan term is recording the contribution from the
-gauge transformation &lt;span class=&#34;math inline&#34;&gt;\(f\)&lt;/span&gt; that comes
-from the rapidity of change from point to point. This term will be large
-when &lt;span class=&#34;math inline&#34;&gt;\(f_U\)&lt;/span&gt; has a large
-derivative.&lt;/p&gt;
+class=&#34;math inline&#34;&gt;\((g^{-1}\cdot -)\)&lt;/span&gt;. The function will act on
+the path to give a path &lt;span class=&#34;math inline&#34;&gt;\(g^{-1}\cdot
+p:e=(g&amp;#39;\cdot g^{-1})\)&lt;/span&gt; that starts at the identity. So the
+Maurer-Cartan form shifts paths to start at the identity by subtracting
+off the start point. Our Maurer-Cartan term is the pullback of the
+Maurer-Cartan form by &lt;span class=&#34;math inline&#34;&gt;\(H\)&lt;/span&gt; which
+records how &lt;span class=&#34;math inline&#34;&gt;\(H\)&lt;/span&gt; acts infinitesimally,
+i.e. the contribution from the gauge transformation &lt;span
+class=&#34;math inline&#34;&gt;\(H\)&lt;/span&gt; that comes from the rapidity of change
+from point to point. This term will be large when &lt;span
+class=&#34;math inline&#34;&gt;\(H_U\)&lt;/span&gt; has a large derivative.&lt;/p&gt;
 &lt;p&gt;In HoTT the connection’s parallel transport is visible as the
 transport function, and the horizontal-vertical splitting is visible in
 the decomposition of paths in the sigma type (total space) into pairs of
 paths. What is the effect of applying a homotopy &lt;span
-class=&#34;math inline&#34;&gt;\(H:f\sim f\)&lt;/span&gt;?&lt;/p&gt;
+class=&#34;math inline&#34;&gt;\(H:f\sim f\)&lt;/span&gt; on transport, and on
+splitting?&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(H\)&lt;/span&gt; is a family of fiber
+automorphisms: &lt;span
+class=&#34;math inline&#34;&gt;\(H:\prod_{a:M}f(a)=f(a)\)&lt;/span&gt; which we can
+assemble into an equivalence &lt;span
+class=&#34;math inline&#34;&gt;\(H&amp;#39;:\sum_{a:M}f(a)=\sum_{a:M}f(a)\)&lt;/span&gt; that
+acts fiberwise. We want to compute the action of &lt;span
+class=&#34;math inline&#34;&gt;\(\ensuremath{\mathsf{ap}}(H&amp;#39;)\)&lt;/span&gt; on the
+horizontal-vertical decomposition of paths from Theorem &lt;a
+href=&#34;#thm:idsit&#34; data-reference-type=&#34;ref&#34;
+data-reference=&#34;thm:idsit&#34;&gt;1&lt;/a&gt; by computing &lt;span
+class=&#34;math inline&#34;&gt;\(\omega\circ\ensuremath{\mathsf{ap}}(H&amp;#39;)=\ensuremath{\mathrm{pr}}_2\circ\mathsf{split}\circ\ensuremath{\mathsf{ap}}(H&amp;#39;)\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Denote &lt;span class=&#34;math inline&#34;&gt;\(\sum_{a:M}f(a)\)&lt;/span&gt; by &lt;span
+class=&#34;math inline&#34;&gt;\(P\)&lt;/span&gt;. We’ll adopt a convention of roman
+letters for structures in &lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; and
+Greek for those upstairs in &lt;span class=&#34;math inline&#34;&gt;\(P\)&lt;/span&gt;. Let
+&lt;span class=&#34;math inline&#34;&gt;\(p:a=_M b\)&lt;/span&gt; be a path in the base and
+let &lt;span class=&#34;math inline&#34;&gt;\(\pi:(a,\alpha)=_P (b,\beta)\)&lt;/span&gt; be
+a path in &lt;span class=&#34;math inline&#34;&gt;\(P\)&lt;/span&gt; over &lt;span
+class=&#34;math inline&#34;&gt;\(p\)&lt;/span&gt;. Then &lt;span
+class=&#34;math inline&#34;&gt;\(\omega(\pi):\mathrm{tr}_p(\alpha)=\beta\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Now let’s apply &lt;span class=&#34;math inline&#34;&gt;\(H\)&lt;/span&gt;. We have &lt;span
+class=&#34;math inline&#34;&gt;\(\ensuremath{\mathsf{ap}}(H&amp;#39;)(\pi):(a,H(a)(\alpha))=_P(b,H(b)(\beta))\)&lt;/span&gt;
+which is still a path over &lt;span class=&#34;math inline&#34;&gt;\(p\)&lt;/span&gt;.
+Applying &lt;span class=&#34;math inline&#34;&gt;\(\omega\)&lt;/span&gt; we get &lt;span
+class=&#34;math display&#34;&gt;\[\omega(\ensuremath{\mathsf{ap}}(H&amp;#39;)(\pi)):\mathrm{tr}_p(H(a)(\alpha))=(H(b)(\beta))\]&lt;/span&gt;.
+Using the lemma below we can if we wish rewrite this as &lt;span
+class=&#34;math display&#34;&gt;\[\omega(\ensuremath{\mathsf{ap}}(H&amp;#39;)(\pi)):H(b)\[\mathrm{tr}_p(\alpha)=\beta\]&lt;/span&gt;
+which uses only &lt;span class=&#34;math inline&#34;&gt;\(H(b)\)&lt;/span&gt;.&lt;/p&gt;
+&lt;div class=&#34;mylemma&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Lemma 2&lt;/strong&gt;. &lt;em&gt;Given a function &lt;span
+class=&#34;math inline&#34;&gt;\(f:M\to\mathcal{U}\)&lt;/span&gt; and homotopy &lt;span
+class=&#34;math inline&#34;&gt;\(H:f\sim f\)&lt;/span&gt; the following square commutes
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+\xymatrix{
+  f(a) \ar@{=}[r]^{f(p)} \ar@{=}[d]_{H(a)} &amp;amp; f(b) \ar@{=}[d]^{H(b)}
+\\
+  f(a) \ar@{=}[r]_{f(p)} &amp;amp; f(b)
+}
+\end{aligned}\]&lt;/span&gt; and so in the type family we have &lt;span
+class=&#34;math inline&#34;&gt;\(\mathrm{tr}(H(x)\cdot f(p)) =
+\mathrm{tr}(f(p)\cdot H(y))\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
 &lt;h2 data-number=&#34;4.6&#34;
 id=&#34;characteristic-classes-and-chern-weil-theory&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;4.6&lt;/span&gt; Characteristic classes and
@@ -927,22 +979,22 @@ class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{O}}\)&lt;/span&gt; which ha
 points, 12 1-paths, 8 2-paths.&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;div class=&#34;mylemma&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Lemma 2&lt;/strong&gt;. &lt;em&gt;&lt;span class=&#34;math inline&#34;&gt;\((C_4,
+&lt;p&gt;&lt;strong&gt;Lemma 3&lt;/strong&gt;. &lt;em&gt;&lt;span class=&#34;math inline&#34;&gt;\((C_4,
 b)\simeq S^1\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;mylemma&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Lemma 3&lt;/strong&gt;. &lt;em&gt;&lt;span
+&lt;p&gt;&lt;strong&gt;Lemma 4&lt;/strong&gt;. &lt;em&gt;&lt;span
 class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{O}}\simeq
 S^2\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;mylemma&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Lemma 4&lt;/strong&gt;. &lt;em&gt;We have &lt;span
+&lt;p&gt;&lt;strong&gt;Lemma 5&lt;/strong&gt;. &lt;em&gt;We have &lt;span
 class=&#34;math inline&#34;&gt;\((C_4, ||\{b, g, r, o\}\mapsto \mathsf{base},
 br\mapsto \mathsf{loop}, \{rg, go, ob\}\mapsto
 \ensuremath{\mathsf{refl}}||_0):\mathrm{BAut}_1(S^1)\)&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;mylemma&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Lemma 5&lt;/strong&gt;. &lt;em&gt;&lt;span
+&lt;p&gt;&lt;strong&gt;Lemma 6&lt;/strong&gt;. &lt;em&gt;&lt;span
 class=&#34;math inline&#34;&gt;\(\mathrm{BAut}_1(S^1)\)&lt;/span&gt; is equivalent to the
 type of &lt;span class=&#34;math inline&#34;&gt;\(S^1\)&lt;/span&gt;-torsors, and to the
 type of &lt;span class=&#34;math inline&#34;&gt;\((C_4,b)\)&lt;/span&gt;-torsors.&lt;/em&gt;&lt;/p&gt;

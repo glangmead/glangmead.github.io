@@ -428,26 +428,30 @@ href="#ref-Symmetry" role="doc-biblioref">Bezem <em>et al.</em>,
 the term “path over”), including composition, and associativity
 thereof.</p>
 <p>We recall now the identity type of sigma types:</p>
-<div class="mythm">
+<div id="thm:idsit" class="mythm">
 <p><strong>Theorem 1</strong>. <em>(HoTT book Theorem 2.7.2 <span
 class="citation" data-cites="hottbook"> (<a href="#ref-hottbook"
 role="doc-biblioref">Univalent Foundations Program, 2013</a>)</span>) If
-<span class="math inline">\(f:B\to \mathcal{U}\)</span> is a type family
-and <span class="math inline">\(w,w&#39;:\sum_{x:B}f(x)\)</span> then
-there is an equivalence <span class="math display">\[(w=w&#39;)\simeq
-\sum_{p:\ensuremath{\mathrm{pr}}_1(w)=_B\ensuremath{\mathrm{pr}}_1(w&#39;)}
+<span class="math inline">\(f:M\to \mathcal{U}\)</span> is a type family
+and <span class="math inline">\(w,w&#39;:\sum_{x:M}f(x)\)</span> then
+there is an equivalence <span
+class="math display">\[\mathsf{split}:(w=w&#39;)\simeq
+\sum_{p:\ensuremath{\mathrm{pr}}_1(w)=_M\ensuremath{\mathrm{pr}}_1(w&#39;)}
 \left[\mathrm{tr}(p)(\ensuremath{\mathrm{pr}}_2(w))\right] =
 \ensuremath{\mathrm{pr}}_2(w&#39;).\]</span></em></p>
 </div>
-<p>In particular, given <span class="math inline">\(p:x=_B y\)</span>
+<p>In particular, given <span class="math inline">\(p:x=_M y\)</span>
 and <span class="math inline">\(w:f(x)\)</span> we have <span
 class="math inline">\(w\xrightarrow[{p}]{=}tr(p)(w)\simeq
 tr(p)(w)=_{f(y)}tr(p)(w)\)</span> which has the term <span
 class="math inline">\(\ensuremath{\mathsf{refl}}\)</span> which we can
 call “the horizontal lift of <span class="math inline">\(p\)</span>
-starting at <span class="math inline">\(w\)</span>.” And so in HoTT we
-can see the equivalence of transport and lifting of paths into
-horizontal and vertical components.</p>
+starting at <span class="math inline">\(w\)</span>.” We can imitate the
+classical definition of a connection by defining <span
+class="math inline">\(\omega\stackrel{\mathrm{def}}{=}\ensuremath{\mathrm{pr}}_2\circ\mathsf{split}\)</span>,
+the projection onto the vertical component. And thus in HoTT we can see
+the equivalence of transport and lifting of paths into horizontal and
+vertical components.</p>
 <h2 data-number="4.2" id="the-leibniz-product-rule"><span
 class="header-section-number">4.2</span> The Leibniz (product) rule</h2>
 <p>The Leibniz rule for exterior differentiation states that if <span
@@ -458,8 +462,10 @@ class="math inline">\(fg\)</span> is the function formed by taking the
 pointwise product of <span class="math inline">\(f\)</span> and <span
 class="math inline">\(g\)</span>. This is an interaction between
 multiplication in <span
-class="math inline">\(\ensuremath{\mathbb{R}}\)</span> and the procedure
-for building a 1-form out of a 0-form.</p>
+class="math inline">\(\ensuremath{\mathbb{R}}\)</span> and the action on
+vectors of smooth functions (the 1-forms <span
+class="math inline">\(df\)</span> and <span
+class="math inline">\(dg\)</span>).</p>
 <p>To examine this situation in HoTT we need type-theoretic functions
 <span class="math inline">\(f, g:M\to B\)</span> from some type <span
 class="math inline">\(M\)</span> to an H-space <span
@@ -475,7 +481,7 @@ B}\mu(-,b&#39;).\)</span> Since <span class="math inline">\(\mu(a,
 -):B=B\)</span> is an (unpointed) equivalence of <span
 class="math inline">\(B\)</span>, and similarly for <span
 class="math inline">\(\mu(b, -)\)</span> and so on, this data assembles
-into the following diagram:</p>
+into the following diagram of higher groupoid morphisms:</p>
 <p><img src="./d183777157a8a3e2d296890f77fb0c2aee7abf41.png"
 alt="image" /></p>
 <p>And so the two homotopies can be horizontally composed to give a path
@@ -602,18 +608,18 @@ geometry you’ll see formulas like this:</p>
 M\)</span> be a principal bundle and <span
 class="math inline">\(A\in\Omega^1(M,\mathfrak{g})\)</span> a connection
 1-form on <span class="math inline">\(P\)</span>. Suppose that <span
-class="math inline">\(f\in \mathscr{G}(P)\)</span> is a bundle
-automorphism. Then <span class="math inline">\(f^*A\)</span> is a
+class="math inline">\(H\in \mathscr{G}(P)\)</span> is a bundle
+automorphism. Then <span class="math inline">\(H^*A\)</span> is a
 connection 1-form and in a neighborhood <span
 class="math inline">\(U\)</span> of a point <span
 class="math inline">\(x\in M\)</span> we can write <span
-class="math inline">\(f\)</span> as a function <span
-class="math inline">\(f_U:U\to G\)</span> where <span
-class="math inline">\(f_U(x)\in G\)</span> is a group element
+class="math inline">\(H\)</span> as a function <span
+class="math inline">\(H_U:U\to G\)</span> where <span
+class="math inline">\(H_U(x)\in G\)</span> is a group element
 multiplying the fiber at <span class="math inline">\(x\)</span>, and
 then we have <span
-class="math display">\[f^*A=\mathrm{Ad}_{f_U(x)^{-1}}\circ A +
-f_U^*(\mu_G)\]</span> where <span
+class="math display">\[H^*A=\mathrm{Ad}_{H_U(x)^{-1}}\circ A +
+H_U^*(\mu_G)\]</span> where <span
 class="math inline">\(\mu_G:\Omega^1(G,\mathfrak{g})\)</span> is the
 Maurer-Cartan form on <span class="math inline">\(G\)</span>.</em></p>
 </div>
@@ -624,33 +630,79 @@ data-cites="hamilton2017"> (<a href="#ref-hamilton2017"
 role="doc-biblioref">Hamilton, 2017</a>)</span>.</p>
 <p>It’s not so important to fully understand this formula because we
 will re-explain it in HoTT terms in a moment. But notice that <span
-class="math inline">\(f^*A\)</span> (the action of the gauge
+class="math inline">\(H^*A\)</span> (the action of the gauge
 transformation on the connection 1-form) has contributions from two
 terms (both of which are vertical — connections always map onto the
 vertical bundle). The first is the adjoint action at the specific point
 <span class="math inline">\(x\)</span>. This is always what we expect
-when we shift the base point in a torsor. The second term involves the
+when we shift the base point in a torsor and look at the resulting group
+(or in this case, the Lie algebra). The second term involves the
 Maurer-Cartan form, which is the derivative of subtraction in the group.
 It takes tangent vectors at <span class="math inline">\(g:G\)</span> to
 a tangent vector at the identity (the Lie algebra, denoted <span
 class="math inline">\(\mathfrak{g}\)</span>) by differentiating the
-action of multiplication by <span class="math inline">\(g^-1\)</span>.
+action of multiplication by <span class="math inline">\(g^{-1}\)</span>.
 If we think in terms of finite-length paths, then imagine a path <span
 class="math inline">\(p:g=g&#39;\)</span> and the function <span
-class="math inline">\(g^{-1}\cdot -\)</span> will act on the path to
-give a path <span class="math inline">\(g^{-1}\cdot p:e=g&#39;\cdot
-g^{-1}\)</span> that starts at the identity. So the Maurer-Cartan form
-shifts paths to start at the identity by subtracting off the start
-point. So this Maurer-Cartan term is recording the contribution from the
-gauge transformation <span class="math inline">\(f\)</span> that comes
-from the rapidity of change from point to point. This term will be large
-when <span class="math inline">\(f_U\)</span> has a large
-derivative.</p>
+class="math inline">\((g^{-1}\cdot -)\)</span>. The function will act on
+the path to give a path <span class="math inline">\(g^{-1}\cdot
+p:e=(g&#39;\cdot g^{-1})\)</span> that starts at the identity. So the
+Maurer-Cartan form shifts paths to start at the identity by subtracting
+off the start point. Our Maurer-Cartan term is the pullback of the
+Maurer-Cartan form by <span class="math inline">\(H\)</span> which
+records how <span class="math inline">\(H\)</span> acts infinitesimally,
+i.e. the contribution from the gauge transformation <span
+class="math inline">\(H\)</span> that comes from the rapidity of change
+from point to point. This term will be large when <span
+class="math inline">\(H_U\)</span> has a large derivative.</p>
 <p>In HoTT the connection’s parallel transport is visible as the
 transport function, and the horizontal-vertical splitting is visible in
 the decomposition of paths in the sigma type (total space) into pairs of
 paths. What is the effect of applying a homotopy <span
-class="math inline">\(H:f\sim f\)</span>?</p>
+class="math inline">\(H:f\sim f\)</span> on transport, and on
+splitting?</p>
+<p><span class="math inline">\(H\)</span> is a family of fiber
+automorphisms: <span
+class="math inline">\(H:\prod_{a:M}f(a)=f(a)\)</span> which we can
+assemble into an equivalence <span
+class="math inline">\(H&#39;:\sum_{a:M}f(a)=\sum_{a:M}f(a)\)</span> that
+acts fiberwise. We want to compute the action of <span
+class="math inline">\(\ensuremath{\mathsf{ap}}(H&#39;)\)</span> on the
+horizontal-vertical decomposition of paths from Theorem <a
+href="#thm:idsit" data-reference-type="ref"
+data-reference="thm:idsit">1</a> by computing <span
+class="math inline">\(\omega\circ\ensuremath{\mathsf{ap}}(H&#39;)=\ensuremath{\mathrm{pr}}_2\circ\mathsf{split}\circ\ensuremath{\mathsf{ap}}(H&#39;)\)</span>.</p>
+<p>Denote <span class="math inline">\(\sum_{a:M}f(a)\)</span> by <span
+class="math inline">\(P\)</span>. We’ll adopt a convention of roman
+letters for structures in <span class="math inline">\(M\)</span> and
+Greek for those upstairs in <span class="math inline">\(P\)</span>. Let
+<span class="math inline">\(p:a=_M b\)</span> be a path in the base and
+let <span class="math inline">\(\pi:(a,\alpha)=_P (b,\beta)\)</span> be
+a path in <span class="math inline">\(P\)</span> over <span
+class="math inline">\(p\)</span>. Then <span
+class="math inline">\(\omega(\pi):\mathrm{tr}_p(\alpha)=\beta\)</span>.</p>
+<p>Now let’s apply <span class="math inline">\(H\)</span>. We have <span
+class="math inline">\(\ensuremath{\mathsf{ap}}(H&#39;)(\pi):(a,H(a)(\alpha))=_P(b,H(b)(\beta))\)</span>
+which is still a path over <span class="math inline">\(p\)</span>.
+Applying <span class="math inline">\(\omega\)</span> we get <span
+class="math display">\[\omega(\ensuremath{\mathsf{ap}}(H&#39;)(\pi)):\mathrm{tr}_p(H(a)(\alpha))=(H(b)(\beta))\]</span>.
+Using the lemma below we can if we wish rewrite this as <span
+class="math display">\[\omega(\ensuremath{\mathsf{ap}}(H&#39;)(\pi)):H(b)\[\mathrm{tr}_p(\alpha)=\beta\]</span>
+which uses only <span class="math inline">\(H(b)\)</span>.</p>
+<div class="mylemma">
+<p><strong>Lemma 2</strong>. <em>Given a function <span
+class="math inline">\(f:M\to\mathcal{U}\)</span> and homotopy <span
+class="math inline">\(H:f\sim f\)</span> the following square commutes
+<span class="math display">\[\begin{aligned}
+\xymatrix{
+  f(a) \ar@{=}[r]^{f(p)} \ar@{=}[d]_{H(a)} &amp; f(b) \ar@{=}[d]^{H(b)}
+\\
+  f(a) \ar@{=}[r]_{f(p)} &amp; f(b)
+}
+\end{aligned}\]</span> and so in the type family we have <span
+class="math inline">\(\mathrm{tr}(H(x)\cdot f(p)) =
+\mathrm{tr}(f(p)\cdot H(y))\)</span>.</em></p>
+</div>
 <h2 data-number="4.6"
 id="characteristic-classes-and-chern-weil-theory"><span
 class="header-section-number">4.6</span> Characteristic classes and
@@ -781,22 +833,22 @@ class="math inline">\(\ensuremath{\mathbb{O}}\)</span> which has 6
 points, 12 1-paths, 8 2-paths.</figcaption>
 </figure>
 <div class="mylemma">
-<p><strong>Lemma 2</strong>. <em><span class="math inline">\((C_4,
+<p><strong>Lemma 3</strong>. <em><span class="math inline">\((C_4,
 b)\simeq S^1\)</span>.</em></p>
 </div>
 <div class="mylemma">
-<p><strong>Lemma 3</strong>. <em><span
+<p><strong>Lemma 4</strong>. <em><span
 class="math inline">\(\ensuremath{\mathbb{O}}\simeq
 S^2\)</span>.</em></p>
 </div>
 <div class="mylemma">
-<p><strong>Lemma 4</strong>. <em>We have <span
+<p><strong>Lemma 5</strong>. <em>We have <span
 class="math inline">\((C_4, ||\{b, g, r, o\}\mapsto \mathsf{base},
 br\mapsto \mathsf{loop}, \{rg, go, ob\}\mapsto
 \ensuremath{\mathsf{refl}}||_0):\mathrm{BAut}_1(S^1)\)</span></em></p>
 </div>
 <div class="mylemma">
-<p><strong>Lemma 5</strong>. <em><span
+<p><strong>Lemma 6</strong>. <em><span
 class="math inline">\(\mathrm{BAut}_1(S^1)\)</span> is equivalent to the
 type of <span class="math inline">\(S^1\)</span>-torsors, and to the
 type of <span class="math inline">\((C_4,b)\)</span>-torsors.</em></p>
