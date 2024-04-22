@@ -130,8 +130,8 @@ data-cites=&#34;shulman_cohesion&#34;&gt; (&lt;a href=&#34;#ref-shulman_cohesion
 role=&#34;doc-biblioref&#34;&gt;Shulman, 2017a&lt;/a&gt;)&lt;/span&gt;, and drawing inspiration
 from the similarly young field of discrete differential geometry.&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&#34;It is always ourselves we work on, whether we realize it or not.
-There is no other work to be done in the world.&#34; — Stephen Talbott,
+&lt;p&gt;“It is always ourselves we work on, whether we realize it or not.
+There is no other work to be done in the world.” — Stephen Talbott,
 &lt;em&gt;The Future Does Not Compute&lt;/em&gt;&lt;span class=&#34;citation&#34;
 data-cites=&#34;talbott&#34;&gt; (&lt;a href=&#34;#ref-talbott&#34;
 role=&#34;doc-biblioref&#34;&gt;Talbott, 1995&lt;/a&gt;)&lt;/span&gt;&lt;/p&gt;
@@ -781,7 +781,7 @@ href=&#34;#ref-freedman_quinn&#34; role=&#34;doc-biblioref&#34;&gt;Freedman &amp
 &lt;p&gt;Every topological manifold has a handlebody structure except in
 dimension 4, where a 4-manifold has a handlebody structure if and only
 if it is smoothable. This is a theorem on page 136 of Freedman and
-Quinn’s book &#34;Topology of 4-Manifolds&#34;, with a reference given to the
+Quinn’s book “Topology of 4-Manifolds”, with a reference given to the
 Kirby-Siebenmann book for the higher-dimensional case. It is then an
 elementary fact that an &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;-manifold
 with a handlebody structure is homotopy equivalent to a CW complex with
