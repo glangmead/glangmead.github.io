@@ -82,42 +82,44 @@
 &lt;nav id=&#34;TOC&#34; role=&#34;doc-toc&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#abstract&#34; id=&#34;toc-abstract&#34;&gt;Abstract&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#roadmap&#34; id=&#34;toc-roadmap&#34;&gt;&lt;span
+class=&#34;toc-section-number&#34;&gt;1&lt;/span&gt; Roadmap&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#first-introduction-homotopy-type-theory&#34;
 id=&#34;toc-first-introduction-homotopy-type-theory&#34;&gt;&lt;span
-class=&#34;toc-section-number&#34;&gt;1&lt;/span&gt; First introduction: homotopy type
+class=&#34;toc-section-number&#34;&gt;2&lt;/span&gt; First introduction: homotopy type
 theory&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#second-introduction-discrete-differential-geometry&#34;
 id=&#34;toc-second-introduction-discrete-differential-geometry&#34;&gt;&lt;span
-class=&#34;toc-section-number&#34;&gt;2&lt;/span&gt; Second introduction: discrete
+class=&#34;toc-section-number&#34;&gt;3&lt;/span&gt; Second introduction: discrete
 differential geometry&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#central-h-spaces&#34; id=&#34;toc-central-h-spaces&#34;&gt;&lt;span
-class=&#34;toc-section-number&#34;&gt;3&lt;/span&gt; Central H-spaces&lt;/a&gt;&lt;/li&gt;
+class=&#34;toc-section-number&#34;&gt;4&lt;/span&gt; Central H-spaces&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#higher-maps-contain-connections&#34;
 id=&#34;toc-higher-maps-contain-connections&#34;&gt;&lt;span
-class=&#34;toc-section-number&#34;&gt;4&lt;/span&gt; Higher maps contain
+class=&#34;toc-section-number&#34;&gt;5&lt;/span&gt; Higher maps contain
 connections&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#why-this-is-geometry&#34; id=&#34;toc-why-this-is-geometry&#34;&gt;&lt;span
-class=&#34;toc-section-number&#34;&gt;5&lt;/span&gt; Why this is geometry&lt;/a&gt;
+class=&#34;toc-section-number&#34;&gt;6&lt;/span&gt; Why this is geometry&lt;/a&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#connections-as-splittings&#34;
 id=&#34;toc-connections-as-splittings&#34;&gt;&lt;span
-class=&#34;toc-section-number&#34;&gt;5.1&lt;/span&gt; Connections as splittings&lt;/a&gt;&lt;/li&gt;
+class=&#34;toc-section-number&#34;&gt;6.1&lt;/span&gt; Connections as splittings&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#the-leibniz-product-rule&#34;
 id=&#34;toc-the-leibniz-product-rule&#34;&gt;&lt;span
-class=&#34;toc-section-number&#34;&gt;5.2&lt;/span&gt; The Leibniz (product)
+class=&#34;toc-section-number&#34;&gt;6.2&lt;/span&gt; The Leibniz (product)
 rule&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#covering-spaces&#34; id=&#34;toc-covering-spaces&#34;&gt;&lt;span
-class=&#34;toc-section-number&#34;&gt;5.3&lt;/span&gt; Covering spaces&lt;/a&gt;&lt;/li&gt;
+class=&#34;toc-section-number&#34;&gt;6.3&lt;/span&gt; Covering spaces&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#gauge-transformations&#34;
 id=&#34;toc-gauge-transformations&#34;&gt;&lt;span
-class=&#34;toc-section-number&#34;&gt;5.4&lt;/span&gt; Gauge transformations&lt;/a&gt;&lt;/li&gt;
+class=&#34;toc-section-number&#34;&gt;6.4&lt;/span&gt; Gauge transformations&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#combinatorial-manifolds&#34;
 id=&#34;toc-combinatorial-manifolds&#34;&gt;&lt;span
-class=&#34;toc-section-number&#34;&gt;5.5&lt;/span&gt; Combinatorial manifolds&lt;/a&gt;&lt;/li&gt;
+class=&#34;toc-section-number&#34;&gt;6.5&lt;/span&gt; Combinatorial manifolds&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#appendix-the-tangent-bundle-of-the-2-sphere&#34;
 id=&#34;toc-appendix-the-tangent-bundle-of-the-2-sphere&#34;&gt;&lt;span
-class=&#34;toc-section-number&#34;&gt;6&lt;/span&gt; Appendix: the tangent bundle of the
+class=&#34;toc-section-number&#34;&gt;7&lt;/span&gt; Appendix: the tangent bundle of the
 2-sphere&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/nav&gt;
@@ -136,8 +138,41 @@ There is no other work to be done in the world.” — Stephen Talbott,
 data-cites=&#34;talbott&#34;&gt; (&lt;a href=&#34;#ref-talbott&#34;
 role=&#34;doc-biblioref&#34;&gt;Talbott, 1995&lt;/a&gt;)&lt;/span&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h1 data-number=&#34;1&#34; id=&#34;first-introduction-homotopy-type-theory&#34;&gt;&lt;span
-class=&#34;header-section-number&#34;&gt;1&lt;/span&gt; First introduction: homotopy type
+&lt;h1 data-number=&#34;1&#34; id=&#34;roadmap&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;1&lt;/span&gt; Roadmap&lt;/h1&gt;
+&lt;p&gt;After meeting with SA,MA 5/1/1024&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Focus on one audience: HoTT folks. Don’t intermix as much classic
+geometry.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Make explicit the triangle of DG, DDG, HoTT.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Expand H-spaces section&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;introduce torsors&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;show subtlety how &lt;span class=&#34;math inline&#34;&gt;\(BG\)&lt;/span&gt; doesn’t
+classify stuff since it has extra properties&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;draw&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./6a4feec92d142f0ad0daeaca4306a46f9aaa33a5.png&#34;
+alt=&#34;image&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;H-spaces paper result equating this to a universal cover of a
+component of the universe. (It should feel significant that &lt;span
+class=&#34;math inline&#34;&gt;\(BS^1\simeq
+\mathrm{BAut}_1(S^1)\)&lt;/span&gt;.)&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Move example to the start!&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Define &lt;span
+class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{O}}\)&lt;/span&gt; via skeleta with
+inclusions. Use the inclusions to help identify aspects of the map &lt;span
+class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{O}}\to\mathrm{BAut}_1(S^1)\)&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Make it a lemma that &lt;span
+class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{O}}\)&lt;/span&gt; is the triple
+join&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Define polytopes&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Put HoTT and DDG first.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Poincaré-Hopf and/or Gauss-Bonnet, even just for some
+examples.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 data-number=&#34;2&#34; id=&#34;first-introduction-homotopy-type-theory&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;2&lt;/span&gt; First introduction: homotopy type
 theory&lt;/h1&gt;
 &lt;p&gt;For people trained in classical mathematics, as the author was,
 homotopy type theory (HoTT) is a major change of perspective. It is a
@@ -166,9 +201,9 @@ data-cites=&#34;freed2013chernweil&#34;&gt; (&lt;a href=&#34;#ref-freed2013chern
 role=&#34;doc-biblioref&#34;&gt;Freed &amp;amp; Hopkins, 2013&lt;/a&gt;)&lt;/span&gt;. Bringing all
 of their results into the HoTT framework would be a natural program that
 could follow from our discussion here.&lt;/p&gt;
-&lt;h1 data-number=&#34;2&#34;
+&lt;h1 data-number=&#34;3&#34;
 id=&#34;second-introduction-discrete-differential-geometry&#34;&gt;&lt;span
-class=&#34;header-section-number&#34;&gt;2&lt;/span&gt; Second introduction: discrete
+class=&#34;header-section-number&#34;&gt;3&lt;/span&gt; Second introduction: discrete
 differential geometry&lt;/h1&gt;
 &lt;p&gt;The observation that sparks the following discussion is this: if we
 can manage to reformulate differential geometry in discrete terms (i.e.
@@ -255,8 +290,8 @@ We will then merely &lt;em&gt;observe&lt;/em&gt; the emergence of various aspect
 geometry.&lt;/p&gt;
 &lt;p&gt;We won’t be able to answer every question, so eventually we will stop
 and point to future directions.&lt;/p&gt;
-&lt;h1 data-number=&#34;3&#34; id=&#34;central-h-spaces&#34;&gt;&lt;span
-class=&#34;header-section-number&#34;&gt;3&lt;/span&gt; Central H-spaces&lt;/h1&gt;
+&lt;h1 data-number=&#34;4&#34; id=&#34;central-h-spaces&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;4&lt;/span&gt; Central H-spaces&lt;/h1&gt;
 &lt;p&gt;Central H-spaces are the classifying spaces for principal bundles on
 abelian groups. We won’t be able to access the full theory for
 nonabelian groups just yet, but we hope that the theory of maximal tori
@@ -322,15 +357,15 @@ class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; (such as &lt;span
 class=&#34;math inline&#34;&gt;\(S^1\)&lt;/span&gt;) the type of torsors of &lt;span
 class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; is a delooping of &lt;span
 class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt;, and is equivalent to &lt;span
-class=&#34;math inline&#34;&gt;\(\mathrm{BAut}_1(S^1)\stackrel{\mathrm{def}}{=}\sum_{X:\mathcal{U}}||X=A||_0.\)&lt;/span&gt;
+class=&#34;math inline&#34;&gt;\(\mathrm{BAut}_1(A)\stackrel{\mathrm{def}}{=}\sum_{X:\mathcal{U}}||X=A||_0.\)&lt;/span&gt;
 This delooping is also a central H-space and so can be infinitely
 delooped.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;This means that we can form a sequence of deloopings &lt;span
 class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{Z}}, S^1,
 \mathrm{BAut}_1(S^1), \ldots\)&lt;/span&gt;.&lt;/p&gt;
-&lt;h1 data-number=&#34;4&#34; id=&#34;higher-maps-contain-connections&#34;&gt;&lt;span
-class=&#34;header-section-number&#34;&gt;4&lt;/span&gt; Higher maps contain
+&lt;h1 data-number=&#34;5&#34; id=&#34;higher-maps-contain-connections&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;5&lt;/span&gt; Higher maps contain
 connections&lt;/h1&gt;
 &lt;p&gt;To hew close to the intended context of the term “connection” we will
 examine manifold-like types mapping into bundle-classifying-like types.
@@ -401,8 +436,8 @@ truncation map &lt;span class=&#34;math inline&#34;&gt;\(M\to||M||_2\)&lt;/span&
 that’s the top dimension.&lt;/p&gt;
 &lt;p&gt;There is an example at the end of this paper. For those who are best
 served by examples, do look at it and return to this point.&lt;/p&gt;
-&lt;h1 data-number=&#34;5&#34; id=&#34;why-this-is-geometry&#34;&gt;&lt;span
-class=&#34;header-section-number&#34;&gt;5&lt;/span&gt; Why this is geometry&lt;/h1&gt;
+&lt;h1 data-number=&#34;6&#34; id=&#34;why-this-is-geometry&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;6&lt;/span&gt; Why this is geometry&lt;/h1&gt;
 &lt;p&gt;How can we double check that we are describing the intended theory of
 geometry? In this section we will enumerate a wishlist of facts that we
 believe characterize the subject, and then provide evidence for some of
@@ -438,8 +473,8 @@ not for connections.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;More generally, characteristic classes of bundles can be computed
 using a connection (Chern-Weil theory).&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2 data-number=&#34;5.1&#34; id=&#34;connections-as-splittings&#34;&gt;&lt;span
-class=&#34;header-section-number&#34;&gt;5.1&lt;/span&gt; Connections as splittings&lt;/h2&gt;
+&lt;h2 data-number=&#34;6.1&#34; id=&#34;connections-as-splittings&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;6.1&lt;/span&gt; Connections as splittings&lt;/h2&gt;
 &lt;p&gt;The classical story goes like this.&lt;/p&gt;
 &lt;div class=&#34;mydef&#34;&gt;
 &lt;p&gt;&lt;strong&gt;Definition 3&lt;/strong&gt;. &lt;em&gt;The &lt;em&gt;vertical bundle&lt;/em&gt; &lt;span
@@ -541,8 +576,8 @@ class=&#34;math inline&#34;&gt;\(\omega\stackrel{\mathrm{def}}{=}\ensuremath{\ma
 the projection onto the vertical component. And thus in HoTT we can see
 the equivalence of transport and lifting of paths into horizontal and
 vertical components.&lt;/p&gt;
-&lt;h2 data-number=&#34;5.2&#34; id=&#34;the-leibniz-product-rule&#34;&gt;&lt;span
-class=&#34;header-section-number&#34;&gt;5.2&lt;/span&gt; The Leibniz (product) rule&lt;/h2&gt;
+&lt;h2 data-number=&#34;6.2&#34; id=&#34;the-leibniz-product-rule&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;6.2&lt;/span&gt; The Leibniz (product) rule&lt;/h2&gt;
 &lt;p&gt;The Leibniz rule for exterior differentiation states that if &lt;span
 class=&#34;math inline&#34;&gt;\(f, g:M\to \ensuremath{\mathbb{R}}\)&lt;/span&gt; are two
 smooth functions to the real numbers then &lt;span
@@ -601,7 +636,7 @@ class=&#34;math inline&#34;&gt;\(B\)&lt;/span&gt; and we didn’t make use of &l
 class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; yet. The Leibniz rule will be a
 pointwise version of what’s going on in &lt;span
 class=&#34;math inline&#34;&gt;\(B\)&lt;/span&gt;. Denote by &lt;span
-class=&#34;math inline&#34;&gt;\(\mu\circ(f,g):B\to B\)&lt;/span&gt; the map which sends
+class=&#34;math inline&#34;&gt;\(\mu\circ(f,g):M\to B\)&lt;/span&gt; the map which sends
 &lt;span class=&#34;math inline&#34;&gt;\(x\mapsto \mu(f(x),g(x))\)&lt;/span&gt;.&lt;/p&gt;
 &lt;div class=&#34;mylemma&#34;&gt;
 &lt;p&gt;&lt;strong&gt;Lemma 1&lt;/strong&gt;. &lt;em&gt;Given &lt;span class=&#34;math inline&#34;&gt;\(f,
@@ -613,8 +648,8 @@ g:M\to B\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(p:x=_M y\)
 &amp;amp;:\mu(f(x),g(x))=\mu(f(y),g(y))
 \end{aligned}\]&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;h2 data-number=&#34;5.3&#34; id=&#34;covering-spaces&#34;&gt;&lt;span
-class=&#34;header-section-number&#34;&gt;5.3&lt;/span&gt; Covering spaces&lt;/h2&gt;
+&lt;h2 data-number=&#34;6.3&#34; id=&#34;covering-spaces&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;6.3&lt;/span&gt; Covering spaces&lt;/h2&gt;
 &lt;p&gt;If &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; is a 0-truncated group such
 as &lt;span class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{Z}}\)&lt;/span&gt; then the
 type of torsors (delooping) &lt;span class=&#34;math inline&#34;&gt;\(BG\)&lt;/span&gt; is
@@ -625,8 +660,8 @@ So transport functions are set isomorphisms, and the transport of any
 contractible loop in &lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; will be
 &lt;span class=&#34;math inline&#34;&gt;\(\ensuremath{\mathsf{refl}}\)&lt;/span&gt; (the
 identity) of the fiber, which is what we mean by flat.&lt;/p&gt;
-&lt;h2 data-number=&#34;5.4&#34; id=&#34;gauge-transformations&#34;&gt;&lt;span
-class=&#34;header-section-number&#34;&gt;5.4&lt;/span&gt; Gauge transformations&lt;/h2&gt;
+&lt;h2 data-number=&#34;6.4&#34; id=&#34;gauge-transformations&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;6.4&lt;/span&gt; Gauge transformations&lt;/h2&gt;
 &lt;p&gt;A &lt;em&gt;gauge transformation&lt;/em&gt; is a term inherited from physics.
 It’s an automorphism of a principal bundle &lt;span
 class=&#34;math inline&#34;&gt;\(P\to M\)&lt;/span&gt;, meaning a homeomorphism of &lt;span
@@ -760,8 +795,8 @@ class=&#34;math inline&#34;&gt;\(\mathrm{tr}(H(x)\cdot f(p)) =
 &lt;/div&gt;
 &lt;p&gt;&lt;img src=&#34;./d75a6e58297fe05a808990d9551f5e2751b819cb.png&#34;
 alt=&#34;image&#34; /&gt;&lt;/p&gt;
-&lt;h2 data-number=&#34;5.5&#34; id=&#34;combinatorial-manifolds&#34;&gt;&lt;span
-class=&#34;header-section-number&#34;&gt;5.5&lt;/span&gt; Combinatorial manifolds&lt;/h2&gt;
+&lt;h2 data-number=&#34;6.5&#34; id=&#34;combinatorial-manifolds&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;6.5&lt;/span&gt; Combinatorial manifolds&lt;/h2&gt;
 &lt;p&gt;(This section is not quite off the ground.)&lt;/p&gt;
 &lt;p&gt;The combinatorial structure we have in mind is a nerve of a good open
 cover. What do we know about which smooth manifolds have such covers?
@@ -795,9 +830,9 @@ class=&#34;math inline&#34;&gt;\(k\)&lt;/span&gt;-handles; see page 107 of
 Kirby-Siebenmann. This probably holds in the noncompact case as well,
 though I don’t know a reference.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h1 data-number=&#34;6&#34;
+&lt;h1 data-number=&#34;7&#34;
 id=&#34;appendix-the-tangent-bundle-of-the-2-sphere&#34;&gt;&lt;span
-class=&#34;header-section-number&#34;&gt;6&lt;/span&gt; Appendix: the tangent bundle of
+class=&#34;header-section-number&#34;&gt;7&lt;/span&gt; Appendix: the tangent bundle of
 the 2-sphere&lt;/h1&gt;
 &lt;p&gt;The usual HoTT &lt;span class=&#34;math inline&#34;&gt;\(S^1\)&lt;/span&gt; and &lt;span
 class=&#34;math inline&#34;&gt;\(S^2\)&lt;/span&gt; are a little impoverished, and seeing
@@ -940,17 +975,17 @@ r\)&lt;/span&gt;.&lt;/figcaption&gt;
 class=&#34;math inline&#34;&gt;\(T_0:\ensuremath{\mathbb{O}}\to\mathrm{BAut}_1(S^1)\)&lt;/span&gt;
 on just the 0-skeleton by&lt;/em&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;span class=&#34;math inline&#34;&gt;\(T_1(b)=[w, o, y,
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;span class=&#34;math inline&#34;&gt;\(T_0(b)=[w, o, y,
 r]\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;span class=&#34;math inline&#34;&gt;\(T_1(o)=[w, g, y,
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;span class=&#34;math inline&#34;&gt;\(T_0(o)=[w, g, y,
 b]\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;span class=&#34;math inline&#34;&gt;\(T_1(g)=[w, r, y,
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;span class=&#34;math inline&#34;&gt;\(T_0(g)=[w, r, y,
 o]\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;span class=&#34;math inline&#34;&gt;\(T_1(r)=[w, b, y,
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;span class=&#34;math inline&#34;&gt;\(T_0(r)=[w, b, y,
 g]\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;span class=&#34;math inline&#34;&gt;\(T_1(w)=[b, r, g,
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;span class=&#34;math inline&#34;&gt;\(T_0(w)=[b, r, g,
 o]\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;span class=&#34;math inline&#34;&gt;\(T_1(y)=[b, o, g,
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;span class=&#34;math inline&#34;&gt;\(T_0(y)=[b, o, g,
 r]\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;

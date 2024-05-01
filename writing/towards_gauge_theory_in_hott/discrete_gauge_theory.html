@@ -64,42 +64,44 @@
 <nav id="TOC" role="doc-toc">
 <ul>
 <li><a href="#abstract" id="toc-abstract">Abstract</a></li>
+<li><a href="#roadmap" id="toc-roadmap"><span
+class="toc-section-number">1</span> Roadmap</a></li>
 <li><a href="#first-introduction-homotopy-type-theory"
 id="toc-first-introduction-homotopy-type-theory"><span
-class="toc-section-number">1</span> First introduction: homotopy type
+class="toc-section-number">2</span> First introduction: homotopy type
 theory</a></li>
 <li><a href="#second-introduction-discrete-differential-geometry"
 id="toc-second-introduction-discrete-differential-geometry"><span
-class="toc-section-number">2</span> Second introduction: discrete
+class="toc-section-number">3</span> Second introduction: discrete
 differential geometry</a></li>
 <li><a href="#central-h-spaces" id="toc-central-h-spaces"><span
-class="toc-section-number">3</span> Central H-spaces</a></li>
+class="toc-section-number">4</span> Central H-spaces</a></li>
 <li><a href="#higher-maps-contain-connections"
 id="toc-higher-maps-contain-connections"><span
-class="toc-section-number">4</span> Higher maps contain
+class="toc-section-number">5</span> Higher maps contain
 connections</a></li>
 <li><a href="#why-this-is-geometry" id="toc-why-this-is-geometry"><span
-class="toc-section-number">5</span> Why this is geometry</a>
+class="toc-section-number">6</span> Why this is geometry</a>
 <ul>
 <li><a href="#connections-as-splittings"
 id="toc-connections-as-splittings"><span
-class="toc-section-number">5.1</span> Connections as splittings</a></li>
+class="toc-section-number">6.1</span> Connections as splittings</a></li>
 <li><a href="#the-leibniz-product-rule"
 id="toc-the-leibniz-product-rule"><span
-class="toc-section-number">5.2</span> The Leibniz (product)
+class="toc-section-number">6.2</span> The Leibniz (product)
 rule</a></li>
 <li><a href="#covering-spaces" id="toc-covering-spaces"><span
-class="toc-section-number">5.3</span> Covering spaces</a></li>
+class="toc-section-number">6.3</span> Covering spaces</a></li>
 <li><a href="#gauge-transformations"
 id="toc-gauge-transformations"><span
-class="toc-section-number">5.4</span> Gauge transformations</a></li>
+class="toc-section-number">6.4</span> Gauge transformations</a></li>
 <li><a href="#combinatorial-manifolds"
 id="toc-combinatorial-manifolds"><span
-class="toc-section-number">5.5</span> Combinatorial manifolds</a></li>
+class="toc-section-number">6.5</span> Combinatorial manifolds</a></li>
 </ul></li>
 <li><a href="#appendix-the-tangent-bundle-of-the-2-sphere"
 id="toc-appendix-the-tangent-bundle-of-the-2-sphere"><span
-class="toc-section-number">6</span> Appendix: the tangent bundle of the
+class="toc-section-number">7</span> Appendix: the tangent bundle of the
 2-sphere</a></li>
 </ul>
 </nav>
@@ -118,8 +120,41 @@ There is no other work to be done in the world.” — Stephen Talbott,
 data-cites="talbott"> (<a href="#ref-talbott"
 role="doc-biblioref">Talbott, 1995</a>)</span></p>
 </blockquote>
-<h1 data-number="1" id="first-introduction-homotopy-type-theory"><span
-class="header-section-number">1</span> First introduction: homotopy type
+<h1 data-number="1" id="roadmap"><span
+class="header-section-number">1</span> Roadmap</h1>
+<p>After meeting with SA,MA 5/1/1024</p>
+<ul>
+<li><p>Focus on one audience: HoTT folks. Don’t intermix as much classic
+geometry.</p></li>
+<li><p>Make explicit the triangle of DG, DDG, HoTT.</p></li>
+<li><p>Expand H-spaces section</p>
+<ul>
+<li><p>introduce torsors</p></li>
+<li><p>show subtlety how <span class="math inline">\(BG\)</span> doesn’t
+classify stuff since it has extra properties</p></li>
+<li><p>draw</p>
+<p><img src="./6a4feec92d142f0ad0daeaca4306a46f9aaa33a5.png"
+alt="image" /></p></li>
+<li><p>H-spaces paper result equating this to a universal cover of a
+component of the universe. (It should feel significant that <span
+class="math inline">\(BS^1\simeq
+\mathrm{BAut}_1(S^1)\)</span>.)</p></li>
+</ul></li>
+<li><p>Move example to the start!</p></li>
+<li><p>Define <span
+class="math inline">\(\ensuremath{\mathbb{O}}\)</span> via skeleta with
+inclusions. Use the inclusions to help identify aspects of the map <span
+class="math inline">\(\ensuremath{\mathbb{O}}\to\mathrm{BAut}_1(S^1)\)</span>.</p></li>
+<li><p>Make it a lemma that <span
+class="math inline">\(\ensuremath{\mathbb{O}}\)</span> is the triple
+join</p></li>
+<li><p>Define polytopes</p></li>
+<li><p>Put HoTT and DDG first.</p></li>
+<li><p>Poincaré-Hopf and/or Gauss-Bonnet, even just for some
+examples.</p></li>
+</ul>
+<h1 data-number="2" id="first-introduction-homotopy-type-theory"><span
+class="header-section-number">2</span> First introduction: homotopy type
 theory</h1>
 <p>For people trained in classical mathematics, as the author was,
 homotopy type theory (HoTT) is a major change of perspective. It is a
@@ -148,9 +183,9 @@ data-cites="freed2013chernweil"> (<a href="#ref-freed2013chernweil"
 role="doc-biblioref">Freed &amp; Hopkins, 2013</a>)</span>. Bringing all
 of their results into the HoTT framework would be a natural program that
 could follow from our discussion here.</p>
-<h1 data-number="2"
+<h1 data-number="3"
 id="second-introduction-discrete-differential-geometry"><span
-class="header-section-number">2</span> Second introduction: discrete
+class="header-section-number">3</span> Second introduction: discrete
 differential geometry</h1>
 <p>The observation that sparks the following discussion is this: if we
 can manage to reformulate differential geometry in discrete terms (i.e.
@@ -237,8 +272,8 @@ We will then merely <em>observe</em> the emergence of various aspects of
 geometry.</p>
 <p>We won’t be able to answer every question, so eventually we will stop
 and point to future directions.</p>
-<h1 data-number="3" id="central-h-spaces"><span
-class="header-section-number">3</span> Central H-spaces</h1>
+<h1 data-number="4" id="central-h-spaces"><span
+class="header-section-number">4</span> Central H-spaces</h1>
 <p>Central H-spaces are the classifying spaces for principal bundles on
 abelian groups. We won’t be able to access the full theory for
 nonabelian groups just yet, but we hope that the theory of maximal tori
@@ -304,15 +339,15 @@ class="math inline">\(A\)</span> (such as <span
 class="math inline">\(S^1\)</span>) the type of torsors of <span
 class="math inline">\(A\)</span> is a delooping of <span
 class="math inline">\(A\)</span>, and is equivalent to <span
-class="math inline">\(\mathrm{BAut}_1(S^1)\stackrel{\mathrm{def}}{=}\sum_{X:\mathcal{U}}||X=A||_0.\)</span>
+class="math inline">\(\mathrm{BAut}_1(A)\stackrel{\mathrm{def}}{=}\sum_{X:\mathcal{U}}||X=A||_0.\)</span>
 This delooping is also a central H-space and so can be infinitely
 delooped.</em></p>
 </div>
 <p>This means that we can form a sequence of deloopings <span
 class="math inline">\(\ensuremath{\mathbb{Z}}, S^1,
 \mathrm{BAut}_1(S^1), \ldots\)</span>.</p>
-<h1 data-number="4" id="higher-maps-contain-connections"><span
-class="header-section-number">4</span> Higher maps contain
+<h1 data-number="5" id="higher-maps-contain-connections"><span
+class="header-section-number">5</span> Higher maps contain
 connections</h1>
 <p>To hew close to the intended context of the term “connection” we will
 examine manifold-like types mapping into bundle-classifying-like types.
@@ -383,8 +418,8 @@ truncation map <span class="math inline">\(M\to||M||_2\)</span> and so
 that’s the top dimension.</p>
 <p>There is an example at the end of this paper. For those who are best
 served by examples, do look at it and return to this point.</p>
-<h1 data-number="5" id="why-this-is-geometry"><span
-class="header-section-number">5</span> Why this is geometry</h1>
+<h1 data-number="6" id="why-this-is-geometry"><span
+class="header-section-number">6</span> Why this is geometry</h1>
 <p>How can we double check that we are describing the intended theory of
 geometry? In this section we will enumerate a wishlist of facts that we
 believe characterize the subject, and then provide evidence for some of
@@ -420,8 +455,8 @@ not for connections.</p></li>
 <li><p>More generally, characteristic classes of bundles can be computed
 using a connection (Chern-Weil theory).</p></li>
 </ol>
-<h2 data-number="5.1" id="connections-as-splittings"><span
-class="header-section-number">5.1</span> Connections as splittings</h2>
+<h2 data-number="6.1" id="connections-as-splittings"><span
+class="header-section-number">6.1</span> Connections as splittings</h2>
 <p>The classical story goes like this.</p>
 <div class="mydef">
 <p><strong>Definition 3</strong>. <em>The <em>vertical bundle</em> <span
@@ -523,8 +558,8 @@ class="math inline">\(\omega\stackrel{\mathrm{def}}{=}\ensuremath{\mathrm{pr}}_2
 the projection onto the vertical component. And thus in HoTT we can see
 the equivalence of transport and lifting of paths into horizontal and
 vertical components.</p>
-<h2 data-number="5.2" id="the-leibniz-product-rule"><span
-class="header-section-number">5.2</span> The Leibniz (product) rule</h2>
+<h2 data-number="6.2" id="the-leibniz-product-rule"><span
+class="header-section-number">6.2</span> The Leibniz (product) rule</h2>
 <p>The Leibniz rule for exterior differentiation states that if <span
 class="math inline">\(f, g:M\to \ensuremath{\mathbb{R}}\)</span> are two
 smooth functions to the real numbers then <span
@@ -583,7 +618,7 @@ class="math inline">\(B\)</span> and we didn’t make use of <span
 class="math inline">\(M\)</span> yet. The Leibniz rule will be a
 pointwise version of what’s going on in <span
 class="math inline">\(B\)</span>. Denote by <span
-class="math inline">\(\mu\circ(f,g):B\to B\)</span> the map which sends
+class="math inline">\(\mu\circ(f,g):M\to B\)</span> the map which sends
 <span class="math inline">\(x\mapsto \mu(f(x),g(x))\)</span>.</p>
 <div class="mylemma">
 <p><strong>Lemma 1</strong>. <em>Given <span class="math inline">\(f,
@@ -595,8 +630,8 @@ g:M\to B\)</span> and <span class="math inline">\(p:x=_M y\)</span> then
 &amp;:\mu(f(x),g(x))=\mu(f(y),g(y))
 \end{aligned}\]</span></em></p>
 </div>
-<h2 data-number="5.3" id="covering-spaces"><span
-class="header-section-number">5.3</span> Covering spaces</h2>
+<h2 data-number="6.3" id="covering-spaces"><span
+class="header-section-number">6.3</span> Covering spaces</h2>
 <p>If <span class="math inline">\(G\)</span> is a 0-truncated group such
 as <span class="math inline">\(\ensuremath{\mathbb{Z}}\)</span> then the
 type of torsors (delooping) <span class="math inline">\(BG\)</span> is
@@ -607,8 +642,8 @@ So transport functions are set isomorphisms, and the transport of any
 contractible loop in <span class="math inline">\(M\)</span> will be
 <span class="math inline">\(\ensuremath{\mathsf{refl}}\)</span> (the
 identity) of the fiber, which is what we mean by flat.</p>
-<h2 data-number="5.4" id="gauge-transformations"><span
-class="header-section-number">5.4</span> Gauge transformations</h2>
+<h2 data-number="6.4" id="gauge-transformations"><span
+class="header-section-number">6.4</span> Gauge transformations</h2>
 <p>A <em>gauge transformation</em> is a term inherited from physics.
 It’s an automorphism of a principal bundle <span
 class="math inline">\(P\to M\)</span>, meaning a homeomorphism of <span
@@ -742,8 +777,8 @@ class="math inline">\(\mathrm{tr}(H(x)\cdot f(p)) =
 </div>
 <p><img src="./d75a6e58297fe05a808990d9551f5e2751b819cb.png"
 alt="image" /></p>
-<h2 data-number="5.5" id="combinatorial-manifolds"><span
-class="header-section-number">5.5</span> Combinatorial manifolds</h2>
+<h2 data-number="6.5" id="combinatorial-manifolds"><span
+class="header-section-number">6.5</span> Combinatorial manifolds</h2>
 <p>(This section is not quite off the ground.)</p>
 <p>The combinatorial structure we have in mind is a nerve of a good open
 cover. What do we know about which smooth manifolds have such covers?
@@ -777,9 +812,9 @@ class="math inline">\(k\)</span>-handles; see page 107 of
 Kirby-Siebenmann. This probably holds in the noncompact case as well,
 though I don’t know a reference.</p>
 </blockquote>
-<h1 data-number="6"
+<h1 data-number="7"
 id="appendix-the-tangent-bundle-of-the-2-sphere"><span
-class="header-section-number">6</span> Appendix: the tangent bundle of
+class="header-section-number">7</span> Appendix: the tangent bundle of
 the 2-sphere</h1>
 <p>The usual HoTT <span class="math inline">\(S^1\)</span> and <span
 class="math inline">\(S^2\)</span> are a little impoverished, and seeing
@@ -922,17 +957,17 @@ r\)</span>.</figcaption>
 class="math inline">\(T_0:\ensuremath{\mathbb{O}}\to\mathrm{BAut}_1(S^1)\)</span>
 on just the 0-skeleton by</em></p>
 <ul>
-<li><p><em><span class="math inline">\(T_1(b)=[w, o, y,
+<li><p><em><span class="math inline">\(T_0(b)=[w, o, y,
 r]\)</span>.</em></p></li>
-<li><p><em><span class="math inline">\(T_1(o)=[w, g, y,
+<li><p><em><span class="math inline">\(T_0(o)=[w, g, y,
 b]\)</span>.</em></p></li>
-<li><p><em><span class="math inline">\(T_1(g)=[w, r, y,
+<li><p><em><span class="math inline">\(T_0(g)=[w, r, y,
 o]\)</span>.</em></p></li>
-<li><p><em><span class="math inline">\(T_1(r)=[w, b, y,
+<li><p><em><span class="math inline">\(T_0(r)=[w, b, y,
 g]\)</span>.</em></p></li>
-<li><p><em><span class="math inline">\(T_1(w)=[b, r, g,
+<li><p><em><span class="math inline">\(T_0(w)=[b, r, g,
 o]\)</span>.</em></p></li>
-<li><p><em><span class="math inline">\(T_1(y)=[b, o, g,
+<li><p><em><span class="math inline">\(T_0(y)=[b, o, g,
 r]\)</span>.</em></p></li>
 </ul>
 </div>
