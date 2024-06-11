@@ -64,45 +64,48 @@
 <nav id="TOC" role="doc-toc">
 <ul>
 <li><a href="#abstract" id="toc-abstract">Abstract</a></li>
-<li><a href="#roadmap" id="toc-roadmap"><span
-class="toc-section-number">1</span> Roadmap</a></li>
-<li><a href="#first-introduction-homotopy-type-theory"
-id="toc-first-introduction-homotopy-type-theory"><span
-class="toc-section-number">2</span> First introduction: homotopy type
-theory</a></li>
-<li><a href="#second-introduction-discrete-differential-geometry"
-id="toc-second-introduction-discrete-differential-geometry"><span
-class="toc-section-number">3</span> Second introduction: discrete
-differential geometry</a></li>
-<li><a href="#central-h-spaces" id="toc-central-h-spaces"><span
-class="toc-section-number">4</span> Central H-spaces</a></li>
-<li><a href="#higher-maps-contain-connections"
-id="toc-higher-maps-contain-connections"><span
-class="toc-section-number">5</span> Higher maps contain
-connections</a></li>
-<li><a href="#why-this-is-geometry" id="toc-why-this-is-geometry"><span
-class="toc-section-number">6</span> Why this is geometry</a>
+<li><a href="#todo" id="toc-todo"><span
+class="toc-section-number">1</span> TODO</a></li>
+<li><a href="#introduction-discrete-differential-geometry"
+id="toc-introduction-discrete-differential-geometry"><span
+class="toc-section-number">2</span> Introduction: Discrete differential
+geometry</a></li>
+<li><a href="#examples" id="toc-examples"><span
+class="toc-section-number">3</span> Examples</a>
 <ul>
-<li><a href="#connections-as-splittings"
-id="toc-connections-as-splittings"><span
-class="toc-section-number">6.1</span> Connections as splittings</a></li>
-<li><a href="#the-leibniz-product-rule"
-id="toc-the-leibniz-product-rule"><span
-class="toc-section-number">6.2</span> The Leibniz (product)
-rule</a></li>
-<li><a href="#covering-spaces" id="toc-covering-spaces"><span
-class="toc-section-number">6.3</span> Covering spaces</a></li>
-<li><a href="#gauge-transformations"
-id="toc-gauge-transformations"><span
-class="toc-section-number">6.4</span> Gauge transformations</a></li>
+<li><a href="#the-tangent-bundle-of-the-2-sphere"
+id="toc-the-tangent-bundle-of-the-2-sphere"><span
+class="toc-section-number">3.1</span> The tangent bundle of the
+2-sphere</a></li>
 <li><a href="#combinatorial-manifolds"
 id="toc-combinatorial-manifolds"><span
-class="toc-section-number">6.5</span> Combinatorial manifolds</a></li>
+class="toc-section-number">3.2</span> Combinatorial manifolds</a></li>
 </ul></li>
-<li><a href="#appendix-the-tangent-bundle-of-the-2-sphere"
-id="toc-appendix-the-tangent-bundle-of-the-2-sphere"><span
-class="toc-section-number">7</span> Appendix: the tangent bundle of the
-2-sphere</a></li>
+<li><a href="#central-h-spaces" id="toc-central-h-spaces"><span
+class="toc-section-number">4</span> Central H-spaces</a></li>
+<li><a href="#why-this-is-geometry" id="toc-why-this-is-geometry"><span
+class="toc-section-number">5</span> Why this is geometry</a>
+<ul>
+<li><a href="#higher-maps-contain-connections"
+id="toc-higher-maps-contain-connections"><span
+class="toc-section-number">5.1</span> Higher maps contain
+connections</a></li>
+<li><a href="#connections-as-splittings"
+id="toc-connections-as-splittings"><span
+class="toc-section-number">5.2</span> Connections as splittings</a></li>
+<li><a href="#the-leibniz-product-rule"
+id="toc-the-leibniz-product-rule"><span
+class="toc-section-number">5.3</span> The Leibniz (product)
+rule</a></li>
+<li><a href="#covering-spaces" id="toc-covering-spaces"><span
+class="toc-section-number">5.4</span> Covering spaces</a></li>
+<li><a href="#gauge-transformations"
+id="toc-gauge-transformations"><span
+class="toc-section-number">5.5</span> Gauge transformations</a></li>
+</ul></li>
+<li><a href="#vector-fields-and-the-poincaruxe9-hopf-theorem"
+id="toc-vector-fields-and-the-poincaruxe9-hopf-theorem">Vector fields
+and the Poincaré-Hopf theorem</a></li>
 </ul>
 </nav>
 <h1 class="unnumbered" id="abstract">Abstract</h1>
@@ -111,7 +114,7 @@ geometry including forms, connections, curvature, and gauge theory. We
 show this by focusing on combinatorial manifolds, which are discrete in
 the sense of real cohesion<span class="citation"
 data-cites="shulman_cohesion"> (<a href="#ref-shulman_cohesion"
-role="doc-biblioref">Shulman, 2017a</a>)</span>, and drawing inspiration
+role="doc-biblioref">Shulman, 2017</a>)</span>, and drawing inspiration
 from the similarly young field of discrete differential geometry.</p>
 <blockquote>
 <p>“It is always ourselves we work on, whether we realize it or not.
@@ -120,72 +123,45 @@ There is no other work to be done in the world.” — Stephen Talbott,
 data-cites="talbott"> (<a href="#ref-talbott"
 role="doc-biblioref">Talbott, 1995</a>)</span></p>
 </blockquote>
-<h1 data-number="1" id="roadmap"><span
-class="header-section-number">1</span> Roadmap</h1>
-<p>After meeting with SA,MA 5/1/1024</p>
+<h1 data-number="1" id="todo"><span
+class="header-section-number">1</span> TODO</h1>
+<p>After meeting with SA,MA 5/1/2024</p>
 <ul>
 <li><p>Focus on one audience: HoTT folks. Don’t intermix as much classic
 geometry.</p></li>
-<li><p>Make explicit the triangle of DG, DDG, HoTT.</p></li>
-<li><p>Expand H-spaces section</p>
-<ul>
-<li><p>introduce torsors</p></li>
-<li><p>show subtlety how <span class="math inline">\(BG\)</span> doesn’t
-classify stuff since it has extra properties</p></li>
-<li><p>draw</p>
-<p><img src="./6a4feec92d142f0ad0daeaca4306a46f9aaa33a5.png"
+<li><p>Section 1. Make explicit the triangle of DG, DDG, HoTT.</p></li>
+<li><p>Section 2. Sphere example and combinatorial manifolds, torus
+example.</p></li>
+<li><p>Section 3. Torsors and H-spaces</p></li>
+<li><p>Poincaré-Hopf and/or Gauss-Bonnet, even just for some examples.
+The curvature will be given by loops around a circle via <span
+class="math inline">\(\Omega^2 f\)</span> and the vector field will be
+integrated to an automorphism <span class="math inline">\(M\to
+M\)</span> and some integer from there.</p>
+<p><img src="./968a77ed3382e1bbffa601a5a504c7759fb55e00.png"
 alt="image" /></p></li>
-<li><p>H-spaces paper result equating this to a universal cover of a
-component of the universe. (It should feel significant that <span
-class="math inline">\(BS^1\simeq
-\mathrm{BAut}_1(S^1)\)</span>.)</p></li>
-</ul></li>
-<li><p>Move example to the start!</p></li>
-<li><p>Define <span
-class="math inline">\(\ensuremath{\mathbb{O}}\)</span> via skeleta with
-inclusions. Use the inclusions to help identify aspects of the map <span
-class="math inline">\(\ensuremath{\mathbb{O}}\to\mathrm{BAut}_1(S^1)\)</span>.</p></li>
-<li><p>Make it a lemma that <span
-class="math inline">\(\ensuremath{\mathbb{O}}\)</span> is the triple
-join</p></li>
-<li><p>Define polytopes</p></li>
-<li><p>Put HoTT and DDG first.</p></li>
-<li><p>Poincaré-Hopf and/or Gauss-Bonnet, even just for some
-examples.</p></li>
+<li><p>Vector fields are sections of the disk bundle, which is the
+combinatorial neighborhood. We can define the circle bundle with our map
+to <span class="math inline">\(\mathrm{BAut}_1(S^1)\)</span> and add the
+base point to form the disk. Note that the requirement that every point
+have a link that is a simplicial sphere is called "combinatorial
+manifold" or "combinatorial triangulation".</p></li>
+<li><p>When is a vector field an automorphism?</p></li>
+<li><p>the disk bundle has a canonical section given by choosing the
+center point in each fiber. It has two other sections, one for each
+orientation of the circle.</p></li>
+<li><p>At a fixed point of a vector field therefore, we can compare the
+vector field to either of the canonical sections. Use this to map to
+<span class="math inline">\(S^1\)</span> or <span
+class="math inline">\(C_4\)</span> or a path in one of those. This will
+have a winding number which is our index.</p></li>
+<li><p>Prove that the total index is independent of a vector field that
+isn’t the identity.</p></li>
+<li><p>Prove Poincaré-Hopf</p></li>
 </ul>
-<h1 data-number="2" id="first-introduction-homotopy-type-theory"><span
-class="header-section-number">2</span> First introduction: homotopy type
-theory</h1>
-<p>For people trained in classical mathematics, as the author was,
-homotopy type theory (HoTT) is a major change of perspective. It is a
-new foundational system for mathematics which foregrounds fibrations and
-classifying spaces, and which defaults to a constructive philosophy. It
-is similar in those ways to the theory underpinning Lean and the
-formalization work happening in that community. But beyond that it also
-retains full fidelity of higher groupoidal structures and so supports
-homotopy theory directly in the syntax. The emphasis on syntax is quite
-alien to classical mathematicians, partially because that’s where the
-emphasis on foundations truly takes place, something workaday
-mathematicians don’t concern themselves with. This disorientation is
-acknowledged and soothed in perhaps the best starting point for HoTT for
-mathematicians, a survey by Mike Shulman<span class="citation"
-data-cites="shulman_logic_of_space"> (<a
-href="#ref-shulman_logic_of_space" role="doc-biblioref">Shulman,
-2017b</a>)</span>.</p>
-<p>The goal of this paper is to try to indicate just how much of
-differential geometry is emergent from the syntax of HoTT, making it a
-powerful new tool to prove theorems and generalize them to higher
-structures. For any differential geometer wishing to triangulate along
-with me between HoTT and geometry there is no better companion than Dan
-Freed and Mike Hopkins’ treatment of differential geometry through the
-lens of homotopy theory<span class="citation"
-data-cites="freed2013chernweil"> (<a href="#ref-freed2013chernweil"
-role="doc-biblioref">Freed &amp; Hopkins, 2013</a>)</span>. Bringing all
-of their results into the HoTT framework would be a natural program that
-could follow from our discussion here.</p>
-<h1 data-number="3"
-id="second-introduction-discrete-differential-geometry"><span
-class="header-section-number">3</span> Second introduction: discrete
+<h1 data-number="2"
+id="introduction-discrete-differential-geometry"><span
+class="header-section-number">2</span> Introduction: Discrete
 differential geometry</h1>
 <p>The observation that sparks the following discussion is this: if we
 can manage to reformulate differential geometry in discrete terms (i.e.
@@ -272,8 +248,331 @@ We will then merely <em>observe</em> the emergence of various aspects of
 geometry.</p>
 <p>We won’t be able to answer every question, so eventually we will stop
 and point to future directions.</p>
+<h1 data-number="3" id="examples"><span
+class="header-section-number">3</span> Examples</h1>
+<h2 data-number="3.1" id="the-tangent-bundle-of-the-2-sphere"><span
+class="header-section-number">3.1</span> The tangent bundle of the
+2-sphere</h2>
+<ul>
+<li><p>Define <span
+class="math inline">\(\ensuremath{\mathbb{O}}\)</span> via skeleta with
+inclusions. Use the inclusions to help identify aspects of the map <span
+class="math inline">\(\ensuremath{\mathbb{O}}\to\mathrm{BAut}_1(S^1)\)</span>.</p></li>
+<li><p>Make it a lemma that <span
+class="math inline">\(\ensuremath{\mathbb{O}}\)</span> is the triple
+join</p></li>
+<li><p>Define polytopes</p></li>
+</ul>
+<p>The usual HoTT <span class="math inline">\(S^1\)</span> and <span
+class="math inline">\(S^2\)</span> are a little impoverished, and seeing
+connections and curvature is difficult. Instead we will define
+equivalent HITs that have more constructors. The representation of the
+sphere will be the octohedron <span
+class="math inline">\(\ensuremath{\mathbb{O}}\)</span> and the circle
+will be <span class="math inline">\(C_4\)</span> which has four points
+and is designed to work well with <span
+class="math inline">\(\ensuremath{\mathbb{O}}\)</span>.</p>
+<p>The Rubik’s cube has a convenient standardized arrangement of colors
+that start with different letters (white, yellow, blue, orange, green,
+red) so we will use those to label our points, especially since having
+such a cube handy is very helpful to visualize some of the geometry that
+is encoded below as mere lists of data.</p>
+<p>Should the 0-dimensional constructors represent the corners or the
+faces? We have so far found it intuitive to imagine taking the nerve of
+a good open cover, where the top-dimensional bulk of the cube, namely
+the faces, is converted to a point since an open set covering that face
+is contractible. That’s why we end up with an icosohedron, which is a
+dual polyhedron to the cube.</p>
+<p>We won’t discuss in detail the fact that Mike Shulman’s shape
+operator <span class="citation" data-cites="shulman_cohesion"> (<a
+href="#ref-shulman_cohesion" role="doc-biblioref">Shulman,
+2017</a>)</span> is equivalent to taking the nerve of an open cover and
+forming a HIT from the overlap data. The shape operator preserves
+colimits and so the simple homotopy pushouts we are considering should
+be within the use cases of shape.</p>
+<p>The HIT <span class="math inline">\(\ensuremath{\mathbb{O}}\)</span>
+is built from the following constructors:</p>
+<ol>
+<li><p>Dimension 0: the vertices <span class="math inline">\(\{w, y, b,
+g, r, o, y\}\)</span> where we think of <span
+class="math inline">\(w\)</span> as the north pole and <span
+class="math inline">\(y\)</span> the south pole.</p></li>
+<li><p>Dimension 1: the 12 adjacency pairs of faces, denoted <span
+class="math inline">\(\{wb\}, \{wo\}\)</span> and so on.</p></li>
+<li><p>Dimension 2: the set of faces generated by the 3-way adjacency of
+faces (which takes place in neighborhoods of the cube’s original
+corners), denoted <span class="math inline">\(\{wbo\}, \{wog\}\)</span>
+and so on.</p></li>
+</ol>
+<figure>
+<img src="./ff7f3a1e9ad288427a1f8fe354f5e5e4112b62fd.png" />
+<figcaption>The HIT <span
+class="math inline">\(\ensuremath{\mathbb{O}}\)</span> which has 6
+points, 12 1-paths, 8 2-paths.</figcaption>
+</figure>
+<p>We will choose a base point of <span
+class="math inline">\(\mathrm{BAut}_1(S^1)\)</span> that has four
+points, just like the equator of <span
+class="math inline">\(\ensuremath{\mathbb{O}}\)</span>.</p>
+<div class="mydef">
+<p><strong>Definition 2</strong>. <em>Denote by <span
+class="math inline">\(C_4\)</span> the join <span
+class="math inline">\(\{b, g\}*\{r, o\}\)</span>. This is the equator of
+the discrete octahedral sphere. Then <span
+class="math inline">\(\ensuremath{\mathbb{O}}\)</span> itself can be
+seen as the join <span class="math inline">\(\{w, y\}*
+C_4\)</span>.</em></p>
+</div>
+<figure>
+<img src="./45744937ac561c6ce05f971621a980d63ad6d2e1.png" />
+<figcaption>The HIT <span class="math inline">\(C_4\)</span> which is
+one of the types in <span
+class="math inline">\(\mathrm{BAut}_1(S^1)\)</span></figcaption>
+</figure>
+<div class="mylemma">
+<p><strong>Lemma 1</strong>. <em><span class="math inline">\((C_4,
+b)\simeq S^1\)</span>.</em></p>
+</div>
+<p><em>Proof.</em> Similar to Lemma 6.5.1 from the HoTT book<span
+class="citation" data-cites="hottbook"> (<a href="#ref-hottbook"
+role="doc-biblioref">Univalent Foundations Program, 2013</a>)</span>. We
+will make some use of the particular map <span
+class="math inline">\(\{b, r, g, o\}\mapsto \mathsf{base}, br\mapsto
+\mathsf{loop}, \{rg, go, ob\}\mapsto
+\ensuremath{\mathsf{refl}}.\)</span> ◻</p>
+<div class="mylemma">
+<p><strong>Lemma 2</strong>. <em><span
+class="math inline">\(\ensuremath{\mathbb{O}}\simeq
+S^2\)</span>.</em></p>
+</div>
+<p><em>Proof.</em> <span
+class="math inline">\(\ensuremath{\mathbb{O}}\)</span> is the join of
+<span class="math inline">\(C_4\)</span> and a two-point type. For more
+discussion of the join operation see the HoTT book section 8.5<span
+class="citation" data-cites="hottbook"> (<a href="#ref-hottbook"
+role="doc-biblioref">Univalent Foundations Program,
+2013</a>)</span>. ◻</p>
+<p>To produce a term in <span
+class="math inline">\(\mathrm{BAut}_1(S^1)\)</span> we need <span
+class="math inline">\(C_4\)</span> and a choice of an equivalence class
+of equivalences with <span class="math inline">\(S^1\)</span>:</p>
+<div class="mylemma">
+<p><strong>Lemma 3</strong>. <em>We have <span
+class="math inline">\((C_4, ||\{b, r, g, o\}\mapsto \mathsf{base},
+br\mapsto \mathsf{loop}, \{rg, go, ob\}\mapsto
+\ensuremath{\mathsf{refl}}||_0):\mathrm{BAut}_1(S^1)\)</span></em></p>
+</div>
+<p>There are other near-to-hand terms of <span
+class="math inline">\(\mathrm{BAut}_1(S^1)\)</span> we can denote like:
+<span class="math inline">\([w, o, y, r]\)</span>, meaning the square
+isomorphic to <span class="math inline">\(C_4\)</span> but with the
+given four points, with pointing given by whichever point we listed
+first, and with equivalence with <span
+class="math inline">\(S^1\)</span> chosen so that the path between the
+first two points maps to <span
+class="math inline">\(\mathsf{loop}\)</span>. We will also introduce
+notation for maps <span class="math inline">\(f:[a, b, c, d]\to [w, x,
+y, z]\)</span> by indicating where each item in the domain list is sent,
+like so: <span class="math inline">\(f\stackrel{\mathrm{def}}{=}[[x, y,
+z, w]]\)</span>.</p>
+<p><span class="math inline">\(C_4\)</span> has an unpointed
+automorphism connected to the identiy which will play the role of
+rotation by 90 degrees:</p>
+<div class="mydef">
+<p><strong>Definition 3</strong>. <em>Let <span
+class="math inline">\(R:C_4\to C_4\)</span> be the cyclic permutation
+given by <span class="math inline">\(R(b)=r, R(r)=g, R(g)=o, R(o)=b,
+R(br)=rg, R(rg)=go, R(go)=ob, R(ob)=br.\)</span> Let <span
+class="math inline">\(R&#39;:R=\ensuremath{\text{id}}\)</span> be the
+obvious homotopy to the identity.</em></p>
+</div>
+<p>To construct a map <span
+class="math inline">\(\ensuremath{\mathbb{O}}\to\mathrm{BAut}_1(S^1)\)</span>
+we need to send each vertex to an <span
+class="math inline">\(S^1\)</span>-torsor such as <span
+class="math inline">\(C_4\)</span>. We will choose to send each vertex
+to “the clockwise equator if this was the north pole.”</p>
+<figure>
+<img src="./5223124258db050f495250e281a65d462714f6df.png" />
+<img src="./f8ad0fbb66a7ad51b3cb4db7a0f35ea8a8a56a4b.png" />
+<img src="./d3b55304a407c9ca808e19bf9256206529608d82.png" />
+<figcaption>The equators for <span class="math inline">\(w, b,
+r\)</span>.</figcaption>
+</figure>
+<div class="mydef">
+<p><strong>Definition 4</strong>. <em>Define <span
+class="math inline">\(T_0:\ensuremath{\mathbb{O}}\to\mathrm{BAut}_1(S^1)\)</span>
+on just the 0-skeleton by</em></p>
+<ul>
+<li><p><em><span class="math inline">\(T_0(b)=[w, o, y,
+r]\)</span>.</em></p></li>
+<li><p><em><span class="math inline">\(T_0(o)=[w, g, y,
+b]\)</span>.</em></p></li>
+<li><p><em><span class="math inline">\(T_0(g)=[w, r, y,
+o]\)</span>.</em></p></li>
+<li><p><em><span class="math inline">\(T_0(r)=[w, b, y,
+g]\)</span>.</em></p></li>
+<li><p><em><span class="math inline">\(T_0(w)=[b, r, g,
+o]\)</span>.</em></p></li>
+<li><p><em><span class="math inline">\(T_0(y)=[b, o, g,
+r]\)</span>.</em></p></li>
+</ul>
+</div>
+<p>Extending this to the 1-skeleton requires various choices. We will
+choose the one that reflects the tangent bundle, using the transport we
+can intuitively see through the embedding of <span
+class="math inline">\(\ensuremath{\mathbb{O}}\)</span> in 3-dimensional
+space as in our pictures. If you focus for a moment just on a path <span
+class="math inline">\(w\to b\to r\)</span> and imagine rigidly tipping a
+moving equator along with a moving point, you can imagine a
+moving-equator point that starts at <span
+class="math inline">\(r\)</span> and stays fixed when the north pole
+slides from <span class="math inline">\(w\)</span> to <span
+class="math inline">\(b\)</span>. When the north pole continues sliding
+from <span class="math inline">\(b\)</span> to <span
+class="math inline">\(r\)</span> the moving-equator point moves to <span
+class="math inline">\(g\)</span>. Then it remains fixed when the north
+pole slides from <span class="math inline">\(r\)</span> up to <span
+class="math inline">\(w\)</span>. So all in all we “moved <span
+class="math inline">\(r\)</span> to <span
+class="math inline">\(g\)</span>.” When we track all the points on the
+original <span class="math inline">\(w\)</span>-equator we see that we
+performed the rotation we earlier named <span
+class="math inline">\(R\)</span>.</p>
+<p>In general we have:</p>
+<div class="mydef">
+<p><strong>Definition 5</strong>. <em>Define <span
+class="math inline">\(T_1:\ensuremath{\mathbb{O}}\to\mathrm{BAut}_1(S^1)\)</span>
+on just the 1-skeleton by extending <span
+class="math inline">\(T_0\)</span> as follows: Transport away from <span
+class="math inline">\(w\)</span>:</em></p>
+<ul>
+<li><p><em><span class="math inline">\(T_1(wb):[b, r, g, o]\mapsto [y,
+r, w, o]\)</span> (<span class="math inline">\(r, o\)</span>
+fixed)</em></p></li>
+<li><p><em><span class="math inline">\(T_1(wr):[b, r, g, o]\mapsto [b,
+y, g, w]\)</span> (<span class="math inline">\(b, g\)</span>
+fixed)</em></p></li>
+<li><p><em><span class="math inline">\(T_1(wg):[b, r, g, o]\mapsto [w,
+r, y, o]\)</span></em></p></li>
+<li><p><em><span class="math inline">\(T_1(wo):[b, r, g, o]\mapsto [b,
+w, g, y]\)</span></em></p></li>
+</ul>
+<p><em>Transport away from <span
+class="math inline">\(y\)</span>:</em></p>
+<ul>
+<li><p><em><span class="math inline">\(T_1(yb):[b, o, g, r]\mapsto [w,
+o, y, r]\)</span></em></p></li>
+<li><p><em><span class="math inline">\(T_1(yr):[b, o, g, r]\mapsto [b,
+y, g, w]\)</span></em></p></li>
+<li><p><em><span class="math inline">\(T_1(yg):[b, o, g, r]\mapsto [y,
+o, w, r]\)</span></em></p></li>
+<li><p><em><span class="math inline">\(T_1(yo):[b, o, g, r]\mapsto [b,
+w, g, y]\)</span></em></p></li>
+</ul>
+<p><em>Transport along the equator:</em></p>
+<ul>
+<li><p><em><span class="math inline">\(T_1(br):[w, o, y, r]\mapsto [w,
+b, y, g]\)</span></em></p></li>
+<li><p><em><span class="math inline">\(T_1(rg):[w, b, y, g]\mapsto [w,
+r, y, o]\)</span></em></p></li>
+<li><p><em><span class="math inline">\(T_1(go):[w, r, y, o]\mapsto [w,
+g, y, b]\)</span></em></p></li>
+<li><p><em><span class="math inline">\(T_1(ob):[w, g, y, b]\mapsto [w,
+o, y, r]\)</span></em></p></li>
+</ul>
+</div>
+<p>At this point we have defined a map on the 1-skeleton of <span
+class="math inline">\(\ensuremath{\mathbb{O}}\)</span>.</p>
+<div class="myclaim">
+<p><strong>Claim 1</strong>. <em><span
+class="math inline">\(T_1\)</span> defines a principal circle bundle
+with connection over the 1-skeleton of <span
+class="math inline">\(\ensuremath{\mathbb{O}}\)</span>.</em></p>
+</div>
+<p>We now want to extend this map to all of <span
+class="math inline">\(\ensuremath{\mathbb{O}}\)</span> by providing
+values for the eight faces. Here we will be guided by the classical
+relationship between a connection and its curvature. The curvature is
+computed from the connection, it doesn’t contain any new data.
+Classically the integral of curvature over a 2-cell is the holonomy
+given by transport around the boundary.</p>
+<div class="mydef">
+<p><strong>Definition 6</strong>. <em>Define <span
+class="math inline">\(T_2:\ensuremath{\mathbb{O}}\to\mathrm{BAut}_1(S^1)\)</span>
+by extending <span class="math inline">\(T_1\)</span> as follows. We
+will send every clockwise triangle to <span
+class="math inline">\(R&#39;\)</span>, the homotopy from <span
+class="math inline">\(\ensuremath{\mathsf{refl}}\)</span> to <span
+class="math inline">\(R\)</span>:</em></p>
+<ul>
+<li><p><em><span
+class="math inline">\(T_2(wbr)=R&#39;\)</span></em></p></li>
+<li><p><em><span
+class="math inline">\(T_2(wrg)=R&#39;\)</span></em></p></li>
+<li><p><em><span
+class="math inline">\(T_2(wgo)=R&#39;\)</span></em></p></li>
+<li><p><em><span
+class="math inline">\(T_2(ybo)=R&#39;\)</span></em></p></li>
+<li><p><em><span
+class="math inline">\(T_2(yrb)=R&#39;\)</span></em></p></li>
+<li><p><em><span
+class="math inline">\(T_2(ygr)=R&#39;\)</span></em></p></li>
+<li><p><em><span
+class="math inline">\(T_2(yog)=R&#39;\)</span></em></p></li>
+<li><p><em><span
+class="math inline">\(T_2(ybo)=R&#39;\)</span></em></p></li>
+</ul>
+</div>
+<h2 data-number="3.2" id="combinatorial-manifolds"><span
+class="header-section-number">3.2</span> Combinatorial manifolds</h2>
+<p>(This section is not quite off the ground.)</p>
+<p>The combinatorial structure we have in mind is a nerve of a good open
+cover. What do we know about which smooth manifolds have such covers?
+While we’re at it, let’s survey all the combinatorial-flavored spaces
+and survey what smooth manifolds are homotopy equivalent to which
+structures.</p>
+<p>What topological manifolds are equivalent to a CW complex? The answer
+is the composition of a few results summarized by Allen Hatcher<a
+href="#fn1" class="footnote-ref" id="fnref1"
+role="doc-noteref"><sup>1</sup></a> (citing <span class="citation"
+data-cites="kirby_siebenmann"> (<a href="#ref-kirby_siebenmann"
+role="doc-biblioref">Kirby &amp; Siebenmann, 1977</a>)</span> and <span
+class="citation" data-cites="freedman_quinn"> (<a
+href="#ref-freedman_quinn" role="doc-biblioref">Freedman &amp; Quinn,
+1990</a>)</span>):</p>
+<blockquote>
+<p>Every topological manifold has a handlebody structure except in
+dimension 4, where a 4-manifold has a handlebody structure if and only
+if it is smoothable. This is a theorem on page 136 of Freedman and
+Quinn’s book “Topology of 4-Manifolds”, with a reference given to the
+Kirby-Siebenmann book for the higher-dimensional case. It is then an
+elementary fact that an <span class="math inline">\(n\)</span>-manifold
+with a handlebody structure is homotopy equivalent to a CW complex with
+one <span class="math inline">\(k\)</span>-cell for each <span
+class="math inline">\(k\)</span>-handle, so in particular there are no
+cells of dimension greater than <span class="math inline">\(n\)</span>.
+At least in the compact case a manifold with a handlebody structure is
+in fact homeomorphic to a CW complex with <span
+class="math inline">\(k\)</span>-cells corresponding to <span
+class="math inline">\(k\)</span>-handles; see page 107 of
+Kirby-Siebenmann. This probably holds in the noncompact case as well,
+though I don’t know a reference.</p>
+</blockquote>
 <h1 data-number="4" id="central-h-spaces"><span
 class="header-section-number">4</span> Central H-spaces</h1>
+<ul>
+<li><p>introduce torsors</p></li>
+<li><p>show subtlety how <span class="math inline">\(BG\)</span> doesn’t
+classify stuff since it has extra properties</p></li>
+<li><p>draw</p>
+<p><img src="./6a4feec92d142f0ad0daeaca4306a46f9aaa33a5.png"
+alt="image" /></p></li>
+<li><p>H-spaces paper result equating this to a universal cover of a
+component of the universe. (It should feel significant that <span
+class="math inline">\(BS^1\simeq
+\mathrm{BAut}_1(S^1)\)</span>.)</p></li>
+</ul>
 <p>Central H-spaces are the classifying spaces for principal bundles on
 abelian groups. We won’t be able to access the full theory for
 nonabelian groups just yet, but we hope that the theory of maximal tori
@@ -284,7 +583,7 @@ and Rijke <span class="citation" data-cites="buchholtz2023central"> (<a
 href="#ref-buchholtz2023central" role="doc-biblioref">Buchholtz <em>et
 al.</em>, 2023</a>)</span>.</p>
 <div class="mydef">
-<p><strong>Definition 2</strong>. <em>An H-space structure on a pointed
+<p><strong>Definition 7</strong>. <em>An H-space structure on a pointed
 type <span class="math inline">\((B,b)\)</span> consists of</em></p>
 <ol>
 <li><p><em>A binary operation <span class="math inline">\(\mu:B\to B\to
@@ -346,9 +645,46 @@ delooped.</em></p>
 <p>This means that we can form a sequence of deloopings <span
 class="math inline">\(\ensuremath{\mathbb{Z}}, S^1,
 \mathrm{BAut}_1(S^1), \ldots\)</span>.</p>
-<h1 data-number="5" id="higher-maps-contain-connections"><span
-class="header-section-number">5</span> Higher maps contain
-connections</h1>
+<h1 data-number="5" id="why-this-is-geometry"><span
+class="header-section-number">5</span> Why this is geometry</h1>
+<p>How can we double check that we are describing the intended theory of
+geometry? In this section we will enumerate a wishlist of facts that we
+believe characterize the subject, and then provide evidence for some of
+them.</p>
+<p>Here are the translations that are covered in the current paper:
+<span class="math display">\[\begin{aligned}
+&amp; \text{\small Connections are infinitesimal splittings of a} &amp;
+\quad &amp;\text{\small Paths in a sigma type are equivalent to
+a}        \\
+&amp; \text{\small principal bundle.} &amp; \quad&amp;\text{\small pair
+of paths.}        \\ \hline
+&amp; \text{\small Differentials satisfy the Leibniz (product) rule.}
+&amp;\quad  &amp;\text{\small Horizontal composition in an H-space is}
+\\
+&amp;  &amp;  \quad&amp;\text{\small performed in two steps.} \\ \hline
+&amp; \text{\small Connections with 0-truncated groups are
+covering}        &amp;\quad &amp;\text{\small Transport around
+contractible loops is } \ensuremath{\mathsf{refl}}\\
+&amp; \text{\small spaces with unique flat connection.}        &amp;
+\quad&amp;\text{\small when fibers are sets.}             \\ \hline
+&amp; \text{\small The group of gauge transformations (bundle}
+&amp;\quad &amp;\text{\small Homotopies of classifying maps respect } \\
+&amp; \text{\small automorphisms) acts on the space of connections.}
+&amp; \quad&amp;\text{\small the splitting of paths in sigma types.} \\
+\end{aligned}\]</span></p>
+<p>And here are questions to explore in the future:</p>
+<ol>
+<li><p>There’s a notion of <em>tensorial</em> that holds for forms but
+not for connections.</p></li>
+<li><p>Where is the Grassmannian structure of wedge product?</p></li>
+<li><p>The Gauss-Bonnet theorem holds, relating the curvature of a
+2-manifold to the Euler characteristic.</p></li>
+<li><p>More generally, characteristic classes of bundles can be computed
+using a connection (Chern-Weil theory).</p></li>
+</ol>
+<h2 data-number="5.1" id="higher-maps-contain-connections"><span
+class="header-section-number">5.1</span> Higher maps contain
+connections</h2>
 <p>To hew close to the intended context of the term “connection” we will
 examine manifold-like types mapping into bundle-classifying-like types.
 The novelty here, compared to other HoTT investigations, is the focus on
@@ -360,7 +696,7 @@ connections that a classical mathematician would call <em>flat</em>
 having the discrete topology, in the sense of cohesion<span
 class="citation" data-cites="shulman_cohesion"> (<a
 href="#ref-shulman_cohesion" role="doc-biblioref">Shulman,
-2017a</a>)</span>. This is not the case! We will show that if the
+2017</a>)</span>. This is not the case! We will show that if the
 codomain is a classifying space of <span
 class="math inline">\(S^1\)</span> or other group of homotopy dimension
 at least 1, then non-flat connections appear despite the type <span
@@ -402,8 +738,8 @@ of the paths.</p>
 computed either on infinitesimal loops, or on the infinitesimal surface
 bounded by the loop. In fact it is “the derivative of the connection”
 morally speaking. Getting into the details would wreck the simplicity
-we’re going for<a href="#fn1" class="footnote-ref" id="fnref1"
-role="doc-noteref"><sup>1</sup></a>. We will look for curvature by
+we’re going for<a href="#fn2" class="footnote-ref" id="fnref2"
+role="doc-noteref"><sup>2</sup></a>. We will look for curvature by
 examining <span class="math inline">\(f\)</span> on 1-dimensional loops.
 If <span class="math inline">\(M\)</span> is at least a 2-type and if we
 want to claim that <span class="math inline">\(f\)</span> classifies a
@@ -418,48 +754,11 @@ truncation map <span class="math inline">\(M\to||M||_2\)</span> and so
 that’s the top dimension.</p>
 <p>There is an example at the end of this paper. For those who are best
 served by examples, do look at it and return to this point.</p>
-<h1 data-number="6" id="why-this-is-geometry"><span
-class="header-section-number">6</span> Why this is geometry</h1>
-<p>How can we double check that we are describing the intended theory of
-geometry? In this section we will enumerate a wishlist of facts that we
-believe characterize the subject, and then provide evidence for some of
-them.</p>
-<p>Here are the translations that are covered in the current paper:
-<span class="math display">\[\begin{aligned}
-&amp; \text{\small Connections are infinitesimal splittings of a} &amp;
-\quad &amp;\text{\small Paths in a sigma type are equivalent to
-a}        \\
-&amp; \text{\small principal bundle.} &amp; \quad&amp;\text{\small pair
-of paths.}        \\ \hline
-&amp; \text{\small Differentials satisfy the Leibniz (product) rule.}
-&amp;\quad  &amp;\text{\small Horizontal composition in an H-space is}
-\\
-&amp;  &amp;  \quad&amp;\text{\small performed in two steps.} \\ \hline
-&amp; \text{\small Connections with 0-truncated groups are
-covering}        &amp;\quad &amp;\text{\small Transport around
-contractible loops is } \ensuremath{\mathsf{refl}}\\
-&amp; \text{\small spaces with unique flat connection.}        &amp;
-\quad&amp;\text{\small when fibers are sets.}             \\ \hline
-&amp; \text{\small The group of gauge transformations (bundle}
-&amp;\quad &amp;\text{\small Homotopies of classifying maps respect } \\
-&amp; \text{\small automorphisms) acts on the space of connections.}
-&amp; \quad&amp;\text{\small the splitting of paths in sigma types.} \\
-\end{aligned}\]</span></p>
-<p>And here are questions to explore in the future:</p>
-<ol>
-<li><p>There’s a notion of <em>tensorial</em> that holds for forms but
-not for connections.</p></li>
-<li><p>Where is the Grassmannian structure of wedge product?</p></li>
-<li><p>The Gauss-Bonnet theorem holds, relating the curvature of a
-2-manifold to the Euler characteristic.</p></li>
-<li><p>More generally, characteristic classes of bundles can be computed
-using a connection (Chern-Weil theory).</p></li>
-</ol>
-<h2 data-number="6.1" id="connections-as-splittings"><span
-class="header-section-number">6.1</span> Connections as splittings</h2>
+<h2 data-number="5.2" id="connections-as-splittings"><span
+class="header-section-number">5.2</span> Connections as splittings</h2>
 <p>The classical story goes like this.</p>
 <div class="mydef">
-<p><strong>Definition 3</strong>. <em>The <em>vertical bundle</em> <span
+<p><strong>Definition 8</strong>. <em>The <em>vertical bundle</em> <span
 class="math inline">\(VP\)</span> of a principal bundle <span
 class="math inline">\(\pi:P\to M\)</span> with Lie group <span
 class="math inline">\(G\)</span> is the kernel of the derivative <span
@@ -474,7 +773,7 @@ class="math inline">\(V_pP\)</span> to <span
 class="math inline">\(V_{\phi(p)}P\)</span>, where of course <span
 class="math inline">\(\pi(p)=\pi(\phi(p))\)</span>.</p>
 <div class="mydef">
-<p><strong>Definition 4</strong>. <em>An <em>Ehresmann connection</em>
+<p><strong>Definition 9</strong>. <em>An <em>Ehresmann connection</em>
 on a principal bundle <span class="math inline">\(\pi:P\to M\)</span>
 with Lie group <span class="math inline">\(G\)</span> is a splitting
 <span class="math inline">\(TP=VP\oplus HP\)</span> at every point of
@@ -518,7 +817,7 @@ y}\mathrm{tr}(p):f(x)=f(y)\)</span>. We can use this to define a type of
 <em>dependent paths</em>, also called <em>pathovers</em> or <em>paths
 over</em> a given path.</p>
 <div class="mydef">
-<p><strong>Definition 5</strong>. <em>With the above context and points
+<p><strong>Definition 10</strong>. <em>With the above context and points
 <span class="math inline">\(a:f(x), b:f(y)\)</span> the type of
 <em>dependent paths over <span class="math inline">\(p\)</span></em>
 with endpoints <span class="math inline">\(a, b\)</span> is denoted
@@ -558,8 +857,8 @@ class="math inline">\(\omega\stackrel{\mathrm{def}}{=}\ensuremath{\mathrm{pr}}_2
 the projection onto the vertical component. And thus in HoTT we can see
 the equivalence of transport and lifting of paths into horizontal and
 vertical components.</p>
-<h2 data-number="6.2" id="the-leibniz-product-rule"><span
-class="header-section-number">6.2</span> The Leibniz (product) rule</h2>
+<h2 data-number="5.3" id="the-leibniz-product-rule"><span
+class="header-section-number">5.3</span> The Leibniz (product) rule</h2>
 <p>The Leibniz rule for exterior differentiation states that if <span
 class="math inline">\(f, g:M\to \ensuremath{\mathbb{R}}\)</span> are two
 smooth functions to the real numbers then <span
@@ -621,7 +920,7 @@ class="math inline">\(B\)</span>. Denote by <span
 class="math inline">\(\mu\circ(f,g):M\to B\)</span> the map which sends
 <span class="math inline">\(x\mapsto \mu(f(x),g(x))\)</span>.</p>
 <div class="mylemma">
-<p><strong>Lemma 1</strong>. <em>Given <span class="math inline">\(f,
+<p><strong>Lemma 4</strong>. <em>Given <span class="math inline">\(f,
 g:M\to B\)</span> and <span class="math inline">\(p:x=_M y\)</span> then
 <span class="math display">\[\begin{aligned}
 \ensuremath{\mathsf{ap}}(\mu\circ(f,g))(p)&amp;=\mu(f(p),-)\star\mu(-,g(p))\\
@@ -630,8 +929,8 @@ g:M\to B\)</span> and <span class="math inline">\(p:x=_M y\)</span> then
 &amp;:\mu(f(x),g(x))=\mu(f(y),g(y))
 \end{aligned}\]</span></em></p>
 </div>
-<h2 data-number="6.3" id="covering-spaces"><span
-class="header-section-number">6.3</span> Covering spaces</h2>
+<h2 data-number="5.4" id="covering-spaces"><span
+class="header-section-number">5.4</span> Covering spaces</h2>
 <p>If <span class="math inline">\(G\)</span> is a 0-truncated group such
 as <span class="math inline">\(\ensuremath{\mathbb{Z}}\)</span> then the
 type of torsors (delooping) <span class="math inline">\(BG\)</span> is
@@ -642,8 +941,8 @@ So transport functions are set isomorphisms, and the transport of any
 contractible loop in <span class="math inline">\(M\)</span> will be
 <span class="math inline">\(\ensuremath{\mathsf{refl}}\)</span> (the
 identity) of the fiber, which is what we mean by flat.</p>
-<h2 data-number="6.4" id="gauge-transformations"><span
-class="header-section-number">6.4</span> Gauge transformations</h2>
+<h2 data-number="5.5" id="gauge-transformations"><span
+class="header-section-number">5.5</span> Gauge transformations</h2>
 <p>A <em>gauge transformation</em> is a term inherited from physics.
 It’s an automorphism of a principal bundle <span
 class="math inline">\(P\to M\)</span>, meaning a homeomorphism of <span
@@ -768,7 +1067,7 @@ Using the lemma below we can if we wish rewrite this as <span
 class="math display">\[\omega(\ensuremath{\mathsf{ap}}(H&#39;)(\pi)):H(b)\left[\mathrm{tr}_p(\alpha)=\beta\right]\]</span>
 which uses only <span class="math inline">\(H(b)\)</span>.</p>
 <div class="mylemma">
-<p><strong>Lemma 2</strong>. <em>Given a function <span
+<p><strong>Lemma 5</strong>. <em>Given a function <span
 class="math inline">\(f:M\to\mathcal{U}\)</span> and homotopy <span
 class="math inline">\(H:f\sim f\)</span> the following square commutes
 and so in the type family we have <span
@@ -777,306 +1076,9 @@ class="math inline">\(\mathrm{tr}(H(x)\cdot f(p)) =
 </div>
 <p><img src="./d75a6e58297fe05a808990d9551f5e2751b819cb.png"
 alt="image" /></p>
-<h2 data-number="6.5" id="combinatorial-manifolds"><span
-class="header-section-number">6.5</span> Combinatorial manifolds</h2>
-<p>(This section is not quite off the ground.)</p>
-<p>The combinatorial structure we have in mind is a nerve of a good open
-cover. What do we know about which smooth manifolds have such covers?
-While we’re at it, let’s survey all the combinatorial-flavored spaces
-and survey what smooth manifolds are homotopy equivalent to which
-structures.</p>
-<p>What topological manifolds are equivalent to a CW complex? The answer
-is the composition of a few results summarized by Allen Hatcher<a
-href="#fn2" class="footnote-ref" id="fnref2"
-role="doc-noteref"><sup>2</sup></a> (citing <span class="citation"
-data-cites="kirby_siebenmann"> (<a href="#ref-kirby_siebenmann"
-role="doc-biblioref">Kirby &amp; Siebenmann, 1977</a>)</span> and <span
-class="citation" data-cites="freedman_quinn"> (<a
-href="#ref-freedman_quinn" role="doc-biblioref">Freedman &amp; Quinn,
-1990</a>)</span>):</p>
-<blockquote>
-<p>Every topological manifold has a handlebody structure except in
-dimension 4, where a 4-manifold has a handlebody structure if and only
-if it is smoothable. This is a theorem on page 136 of Freedman and
-Quinn’s book “Topology of 4-Manifolds”, with a reference given to the
-Kirby-Siebenmann book for the higher-dimensional case. It is then an
-elementary fact that an <span class="math inline">\(n\)</span>-manifold
-with a handlebody structure is homotopy equivalent to a CW complex with
-one <span class="math inline">\(k\)</span>-cell for each <span
-class="math inline">\(k\)</span>-handle, so in particular there are no
-cells of dimension greater than <span class="math inline">\(n\)</span>.
-At least in the compact case a manifold with a handlebody structure is
-in fact homeomorphic to a CW complex with <span
-class="math inline">\(k\)</span>-cells corresponding to <span
-class="math inline">\(k\)</span>-handles; see page 107 of
-Kirby-Siebenmann. This probably holds in the noncompact case as well,
-though I don’t know a reference.</p>
-</blockquote>
-<h1 data-number="7"
-id="appendix-the-tangent-bundle-of-the-2-sphere"><span
-class="header-section-number">7</span> Appendix: the tangent bundle of
-the 2-sphere</h1>
-<p>The usual HoTT <span class="math inline">\(S^1\)</span> and <span
-class="math inline">\(S^2\)</span> are a little impoverished, and seeing
-connections and curvature is difficult. Instead we will define
-equivalent HITs that have more constructors. The representation of the
-sphere will be the octohedron <span
-class="math inline">\(\ensuremath{\mathbb{O}}\)</span> and the circle
-will be <span class="math inline">\(C_4\)</span> which has four points
-and is designed to work well with <span
-class="math inline">\(\ensuremath{\mathbb{O}}\)</span>.</p>
-<p>The Rubik’s cube has a convenient standardized arrangement of colors
-that start with different letters (white, yellow, blue, orange, green,
-red) so we will use those to label our points, especially since having
-such a cube handy is very helpful to visualize some of the geometry that
-is encoded below as mere lists of data.</p>
-<p>Should the 0-dimensional constructors represent the corners or the
-faces? We have so far found it intuitive to imagine taking the nerve of
-a good open cover, where the top-dimensional bulk of the cube, namely
-the faces, is converted to a point since an open set covering that face
-is contractible. That’s why we end up with an icosohedron, which is a
-dual polyhedron to the cube.</p>
-<p>We won’t discuss in detail the fact that Mike Shulman’s shape
-operator <span class="citation" data-cites="shulman_cohesion"> (<a
-href="#ref-shulman_cohesion" role="doc-biblioref">Shulman,
-2017a</a>)</span> is equivalent to taking the nerve of an open cover and
-forming a HIT from the overlap data. The shape operator preserves
-colimits and so the simple homotopy pushouts we are considering should
-be within the use cases of shape.</p>
-<p>The HIT <span class="math inline">\(\ensuremath{\mathbb{O}}\)</span>
-is built from the following constructors:</p>
-<ol>
-<li><p>Dimension 0: the vertices <span class="math inline">\(\{w, y, b,
-g, r, o, y\}\)</span> where we think of <span
-class="math inline">\(w\)</span> as the north pole and <span
-class="math inline">\(y\)</span> the south pole.</p></li>
-<li><p>Dimension 1: the 12 adjacency pairs of faces, denoted <span
-class="math inline">\(\{wb\}, \{wo\}\)</span> and so on.</p></li>
-<li><p>Dimension 2: the set of faces generated by the 3-way adjacency of
-faces (which takes place in neighborhoods of the cube’s original
-corners), denoted <span class="math inline">\(\{wbo\}, \{wog\}\)</span>
-and so on.</p></li>
-</ol>
-<figure>
-<img src="./6b0a1aa167687f6f5182cc788cf399c6b7a4ce20.png" />
-<figcaption>The HIT <span
-class="math inline">\(\ensuremath{\mathbb{O}}\)</span> which has 6
-points, 12 1-paths, 8 2-paths.</figcaption>
-</figure>
-<p>We will choose a base point of <span
-class="math inline">\(\mathrm{BAut}_1(S^1)\)</span> that has four
-points, just like the equator of <span
-class="math inline">\(\ensuremath{\mathbb{O}}\)</span>.</p>
-<div class="mydef">
-<p><strong>Definition 6</strong>. <em>Denote by <span
-class="math inline">\(C_4\)</span> the join <span
-class="math inline">\(\{b, g\}*\{r, o\}\)</span>. This is the equator of
-the discrete octahedral sphere. Then <span
-class="math inline">\(\ensuremath{\mathbb{O}}\)</span> itself can be
-seen as the join <span class="math inline">\(\{w, y\}*
-C_4\)</span>.</em></p>
-</div>
-<figure>
-<img src="./45744937ac561c6ce05f971621a980d63ad6d2e1.png" />
-<figcaption>The HIT <span class="math inline">\(C_4\)</span> which is
-one of the types in <span
-class="math inline">\(\mathrm{BAut}_1(S^1)\)</span></figcaption>
-</figure>
-<div class="mylemma">
-<p><strong>Lemma 3</strong>. <em><span class="math inline">\((C_4,
-b)\simeq S^1\)</span>.</em></p>
-</div>
-<p><em>Proof.</em> Similar to Lemma 6.5.1 from the HoTT book<span
-class="citation" data-cites="hottbook"> (<a href="#ref-hottbook"
-role="doc-biblioref">Univalent Foundations Program, 2013</a>)</span>. We
-will make some use of the particular map <span
-class="math inline">\(\{b, r, g, o\}\mapsto \mathsf{base}, br\mapsto
-\mathsf{loop}, \{rg, go, ob\}\mapsto
-\ensuremath{\mathsf{refl}}.\)</span> ◻</p>
-<div class="mylemma">
-<p><strong>Lemma 4</strong>. <em><span
-class="math inline">\(\ensuremath{\mathbb{O}}\simeq
-S^2\)</span>.</em></p>
-</div>
-<p><em>Proof.</em> <span
-class="math inline">\(\ensuremath{\mathbb{O}}\)</span> is the join of
-<span class="math inline">\(C_4\)</span> and a two-point type. For more
-discussion of the join operation see the HoTT book section 8.5<span
-class="citation" data-cites="hottbook"> (<a href="#ref-hottbook"
-role="doc-biblioref">Univalent Foundations Program,
-2013</a>)</span>. ◻</p>
-<p>To produce a term in <span
-class="math inline">\(\mathrm{BAut}_1(S^1)\)</span> we need <span
-class="math inline">\(C_4\)</span> and a choice of an equivalence class
-of equivalences with <span class="math inline">\(S^1\)</span>:</p>
-<div class="mylemma">
-<p><strong>Lemma 5</strong>. <em>We have <span
-class="math inline">\((C_4, ||\{b, r, g, o\}\mapsto \mathsf{base},
-br\mapsto \mathsf{loop}, \{rg, go, ob\}\mapsto
-\ensuremath{\mathsf{refl}}||_0):\mathrm{BAut}_1(S^1)\)</span></em></p>
-</div>
-<p>There are other near-to-hand terms of <span
-class="math inline">\(\mathrm{BAut}_1(S^1)\)</span> we can denote like:
-<span class="math inline">\([w, o, y, r]\)</span>, meaning the square
-isomorphic to <span class="math inline">\(C_4\)</span> but with the
-given four points, with pointing given by whichever point we listed
-first, and with equivalence with <span
-class="math inline">\(S^1\)</span> chosen so that the path between the
-first two points maps to <span
-class="math inline">\(\mathsf{loop}\)</span>. We will also introduce
-notation for maps <span class="math inline">\(f:[a, b, c, d]\to [w, x,
-y, z]\)</span> by indicating where each item in the domain list is sent,
-like so: <span class="math inline">\(f\stackrel{\mathrm{def}}{=}[[x, y,
-z, w]]\)</span>.</p>
-<p><span class="math inline">\(C_4\)</span> has an unpointed
-automorphism connected to the identiy which will play the role of
-rotation by 90 degrees:</p>
-<div class="mydef">
-<p><strong>Definition 7</strong>. <em>Let <span
-class="math inline">\(R:C_4\to C_4\)</span> be the cyclic permutation
-given by <span class="math inline">\(R(b)=r, R(r)=g, R(g)=o, R(o)=b,
-R(br)=rg, R(rg)=go, R(go)=ob, R(ob)=br.\)</span> Let <span
-class="math inline">\(R&#39;:R=\ensuremath{\text{id}}\)</span> be the
-obvious homotopy to the identity.</em></p>
-</div>
-<p>To construct a map <span
-class="math inline">\(\ensuremath{\mathbb{O}}\to\mathrm{BAut}_1(S^1)\)</span>
-we need to send each vertex to an <span
-class="math inline">\(S^1\)</span>-torsor such as <span
-class="math inline">\(C_4\)</span>. We will choose to send each vertex
-to “the clockwise equator if this was the north pole.”</p>
-<figure>
-<img src="./505704a8e51ba44a48f2805306c8aba6a9675aa2.png" />
-<img src="./b7357b79cf34c1f4a8961ddb746680a3074056fe.png" />
-<img src="./aff62935109bbb6d85b8d229d1a56a5770b06509.png" />
-<figcaption>The equators for <span class="math inline">\(w, b,
-r\)</span>.</figcaption>
-</figure>
-<div class="mydef">
-<p><strong>Definition 8</strong>. <em>Define <span
-class="math inline">\(T_0:\ensuremath{\mathbb{O}}\to\mathrm{BAut}_1(S^1)\)</span>
-on just the 0-skeleton by</em></p>
-<ul>
-<li><p><em><span class="math inline">\(T_0(b)=[w, o, y,
-r]\)</span>.</em></p></li>
-<li><p><em><span class="math inline">\(T_0(o)=[w, g, y,
-b]\)</span>.</em></p></li>
-<li><p><em><span class="math inline">\(T_0(g)=[w, r, y,
-o]\)</span>.</em></p></li>
-<li><p><em><span class="math inline">\(T_0(r)=[w, b, y,
-g]\)</span>.</em></p></li>
-<li><p><em><span class="math inline">\(T_0(w)=[b, r, g,
-o]\)</span>.</em></p></li>
-<li><p><em><span class="math inline">\(T_0(y)=[b, o, g,
-r]\)</span>.</em></p></li>
-</ul>
-</div>
-<p>Extending this to the 1-skeleton requires various choices. We will
-choose the one that reflects the tangent bundle, using the transport we
-can intuitively see through the embedding of <span
-class="math inline">\(\ensuremath{\mathbb{O}}\)</span> in 3-dimensional
-space as in our pictures. If you focus for a moment just on a path <span
-class="math inline">\(w\to b\to r\)</span> and imagine rigidly tipping a
-moving equator along with a moving point, you can imagine a
-moving-equator point that starts at <span
-class="math inline">\(r\)</span> and stays fixed when the north pole
-slides from <span class="math inline">\(w\)</span> to <span
-class="math inline">\(b\)</span>. When the north pole continues sliding
-from <span class="math inline">\(b\)</span> to <span
-class="math inline">\(r\)</span> the moving-equator point moves to <span
-class="math inline">\(g\)</span>. Then it remains fixed when the north
-pole slides from <span class="math inline">\(r\)</span> up to <span
-class="math inline">\(w\)</span>. So all in all we “moved <span
-class="math inline">\(r\)</span> to <span
-class="math inline">\(g\)</span>.” When we track all the points on the
-original <span class="math inline">\(w\)</span>-equator we see that we
-performed the rotation we earlier named <span
-class="math inline">\(R\)</span>.</p>
-<p>In general we have:</p>
-<div class="mydef">
-<p><strong>Definition 9</strong>. <em>Define <span
-class="math inline">\(T_1:\ensuremath{\mathbb{O}}\to\mathrm{BAut}_1(S^1)\)</span>
-on just the 1-skeleton by extending <span
-class="math inline">\(T_0\)</span> as follows: Transport away from <span
-class="math inline">\(w\)</span>:</em></p>
-<ul>
-<li><p><em><span class="math inline">\(T_1(wb):[b, r, g, o]\mapsto [y,
-r, w, o]\)</span> (<span class="math inline">\(r, o\)</span>
-fixed)</em></p></li>
-<li><p><em><span class="math inline">\(T_1(wr):[b, r, g, o]\mapsto [b,
-y, g, w]\)</span> (<span class="math inline">\(b, g\)</span>
-fixed)</em></p></li>
-<li><p><em><span class="math inline">\(T_1(wg):[b, r, g, o]\mapsto [w,
-r, y, o]\)</span></em></p></li>
-<li><p><em><span class="math inline">\(T_1(wo):[b, r, g, o]\mapsto [b,
-w, g, y]\)</span></em></p></li>
-</ul>
-<p><em>Transport away from <span
-class="math inline">\(y\)</span>:</em></p>
-<ul>
-<li><p><em><span class="math inline">\(T_1(yb):[b, o, g, r]\mapsto [w,
-o, y, r]\)</span></em></p></li>
-<li><p><em><span class="math inline">\(T_1(yr):[b, o, g, r]\mapsto [b,
-y, g, w]\)</span></em></p></li>
-<li><p><em><span class="math inline">\(T_1(yg):[b, o, g, r]\mapsto [y,
-o, w, r]\)</span></em></p></li>
-<li><p><em><span class="math inline">\(T_1(yo):[b, o, g, r]\mapsto [b,
-w, g, y]\)</span></em></p></li>
-</ul>
-<p><em>Transport along the equator:</em></p>
-<ul>
-<li><p><em><span class="math inline">\(T_1(br):[w, o, y, r]\mapsto [w,
-b, y, g]\)</span></em></p></li>
-<li><p><em><span class="math inline">\(T_1(rg):[w, b, y, g]\mapsto [w,
-r, y, o]\)</span></em></p></li>
-<li><p><em><span class="math inline">\(T_1(go):[w, r, y, o]\mapsto [w,
-g, y, b]\)</span></em></p></li>
-<li><p><em><span class="math inline">\(T_1(ob):[w, g, y, b]\mapsto [w,
-o, y, r]\)</span></em></p></li>
-</ul>
-</div>
-<p>At this point we have defined a map on the 1-skeleton of <span
-class="math inline">\(\ensuremath{\mathbb{O}}\)</span>.</p>
-<div class="myclaim">
-<p><strong>Claim 1</strong>. <em><span
-class="math inline">\(T_1\)</span> defines a principal circle bundle
-with connection over the 1-skeleton of <span
-class="math inline">\(\ensuremath{\mathbb{O}}\)</span>.</em></p>
-</div>
-<p>We now want to extend this map to all of <span
-class="math inline">\(\ensuremath{\mathbb{O}}\)</span> by providing
-values for the eight faces. Here we will be guided by the classical
-relationship between a connection and its curvature. The curvature is
-computed from the connection, it doesn’t contain any new data.
-Classically the integral of curvature over a 2-cell is the holonomy
-given by transport around the boundary.</p>
-<div class="mydef">
-<p><strong>Definition 10</strong>. <em>Define <span
-class="math inline">\(T_2:\ensuremath{\mathbb{O}}\to\mathrm{BAut}_1(S^1)\)</span>
-by extending <span class="math inline">\(T_1\)</span> as follows. We
-will send every clockwise triangle to <span
-class="math inline">\(R&#39;\)</span>, the homotopy from <span
-class="math inline">\(\ensuremath{\mathsf{refl}}\)</span> to <span
-class="math inline">\(R\)</span>:</em></p>
-<ul>
-<li><p><em><span
-class="math inline">\(T_2(wbr)=R&#39;\)</span></em></p></li>
-<li><p><em><span
-class="math inline">\(T_2(wrg)=R&#39;\)</span></em></p></li>
-<li><p><em><span
-class="math inline">\(T_2(wgo)=R&#39;\)</span></em></p></li>
-<li><p><em><span
-class="math inline">\(T_2(ybo)=R&#39;\)</span></em></p></li>
-<li><p><em><span
-class="math inline">\(T_2(yrb)=R&#39;\)</span></em></p></li>
-<li><p><em><span
-class="math inline">\(T_2(ygr)=R&#39;\)</span></em></p></li>
-<li><p><em><span
-class="math inline">\(T_2(yog)=R&#39;\)</span></em></p></li>
-<li><p><em><span
-class="math inline">\(T_2(ybo)=R&#39;\)</span></em></p></li>
-</ul>
-</div>
+<h1 class="unnumbered"
+id="vector-fields-and-the-poincaruxe9-hopf-theorem">Vector fields and
+the Poincaré-Hopf theorem</h1>
 <div id="refs" class="references csl-bib-body hanging-indent"
 data-entry-spacing="0" role="list">
 <div id="ref-Symmetry" class="csl-entry" role="listitem">
@@ -1110,12 +1112,6 @@ class="smallcaps">Leok</span>, M., &amp; <span
 class="smallcaps">Marsden</span>, J.E. (2005) <a
 href="https://arxiv.org/abs/math/0508341">Discrete exterior
 calculus</a>.
-</div>
-<div id="ref-freed2013chernweil" class="csl-entry" role="listitem">
-<span class="smallcaps">Freed</span>, D.S. &amp; <span
-class="smallcaps">Hopkins</span>, M.J. (2013) <a
-href="https://arxiv.org/abs/1301.5959">Chern-weil forms and abstract
-homotopy theory</a>.
 </div>
 <div id="ref-freedman_quinn" class="csl-entry" role="listitem">
 <span class="smallcaps">Freedman</span>, M.H. &amp; <span
@@ -1166,14 +1162,9 @@ differential equations in physics</a>. <em>Mathematics in
 Engineering</em>, <strong>5</strong>, 1–59.
 </div>
 <div id="ref-shulman_cohesion" class="csl-entry" role="listitem">
-<span class="smallcaps">Shulman</span>, M. (2017a) <a
+<span class="smallcaps">Shulman</span>, M. (2017) <a
 href="https://arxiv.org/abs/1509.07584">Brouwer’s fixed-point theorem in
 real-cohesive homotopy type theory</a>.
-</div>
-<div id="ref-shulman_logic_of_space" class="csl-entry" role="listitem">
-<span class="smallcaps">Shulman</span>, M. (2017b) <a
-href="https://arxiv.org/abs/1703.03007">Homotopy type theory: The logic
-of space</a>.
 </div>
 <div id="ref-talbott" class="csl-entry" role="listitem">
 <span class="smallcaps">Talbott</span>, S. (1995) <em><a
@@ -1198,12 +1189,12 @@ theory</a></em>. Princeton University Press.
 role="doc-endnotes">
 <hr />
 <ol>
-<li id="fn1"><p>I’m picking and choosing where to tell the story fully
-twice (see the next section) and where to simply look for motivation.<a
-href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p><a
+<li id="fn1"><p><a
 href="https://mathoverflow.net/questions/201944/topological-n-manifolds-have-the-homotopy-type-of-n-dimensional-cw-complexes"
 class="uri">https://mathoverflow.net/questions/201944/topological-n-manifolds-have-the-homotopy-type-of-n-dimensional-cw-complexes</a><a
+href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>I’m picking and choosing where to tell the story fully
+twice (see the next section) and where to simply look for motivation.<a
 href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
