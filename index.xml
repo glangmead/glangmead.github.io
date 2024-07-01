@@ -744,24 +744,34 @@ visible in HoTT the link between curvature and the euler characteristic
 (which is 2 for the octahedron).&lt;/p&gt;
 &lt;h2 data-number=&#34;2.2&#34; id=&#34;the-torus&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;2.2&lt;/span&gt; The torus&lt;/h2&gt;
-&lt;p&gt;We can define a combinatorial torus as a similar HIT. Each vertex
-will again have four neighbors and all the links will be merely equal to
+&lt;p&gt;We can define a combinatorial torus as a similar HIT. This time each
+vertex will have six neighbors. So all the links will be merely equal to
+&lt;span class=&#34;math inline&#34;&gt;\(C_6\)&lt;/span&gt; which is a hexagonal version of
 &lt;span class=&#34;math inline&#34;&gt;\(C_4\)&lt;/span&gt;. See Figure &lt;a
 href=&#34;#fig:torus&#34; data-reference-type=&#34;ref&#34;
-data-reference=&#34;fig:torus&#34;&gt;2&lt;/a&gt;. Hmm that one isn’t a combinatorial
-manifold so never mind!&lt;/p&gt;
+data-reference=&#34;fig:torus&#34;&gt;2&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;To help parse this figure, imagine instead Figure &lt;a
+href=&#34;#fig:flattorus&#34; data-reference-type=&#34;ref&#34;
+data-reference=&#34;fig:flattorus&#34;&gt;3&lt;/a&gt;. We take this simple
+alternating-triangle pattern, then glue the left and right edges, then
+bend into Figure &lt;a href=&#34;#fig:torus&#34; data-reference-type=&#34;ref&#34;
+data-reference=&#34;fig:torus&#34;&gt;2&lt;/a&gt;. The fact that each column in Figure &lt;a
+href=&#34;#fig:flattorus&#34; data-reference-type=&#34;ref&#34;
+data-reference=&#34;fig:flattorus&#34;&gt;3&lt;/a&gt; has four dots corresponds to the
+torus in Figure &lt;a href=&#34;#fig:torus&#34; data-reference-type=&#34;ref&#34;
+data-reference=&#34;fig:torus&#34;&gt;2&lt;/a&gt; having a square in front, diamond in
+the middle, and square in back.&lt;/p&gt;
+&lt;figure id=&#34;fig:torus&#34;&gt;
+&lt;img src=&#34;./dfced31a931ceca10c8a02ce4d1ed2b1ac193178.png&#34; /&gt;
+&lt;figcaption&gt;Torus.&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure id=&#34;fig:flattorus&#34;&gt;
+&lt;img src=&#34;./9738e4bd485fa970ddfd98d1361254425a61aebd.png&#34; /&gt;
+&lt;figcaption&gt;Flat torus.&lt;/figcaption&gt;
+&lt;/figure&gt;
 &lt;p&gt;In this case it should be intuitively obvious that transport around
 the boundary of any face is the identity, corresponding to the torus
 being flat.&lt;/p&gt;
-&lt;figure id=&#34;fig:torus&#34;&gt;
-&lt;img src=&#34;./9d0a8c432e91b2bfd3ddaf0ec43f496ca2cdd882.png&#34; /&gt;
-&lt;figcaption&gt;Torus. The squares are nicknamed cap, cup, lhole, and rhole.
-Each one has a &lt;span class=&#34;math inline&#34;&gt;\(b, r, g, o\)&lt;/span&gt; vertex,
-in that order when following the arrows. All the &lt;span
-class=&#34;math inline&#34;&gt;\(b\)&lt;/span&gt;s are on the outer corners, all the
-&lt;span class=&#34;math inline&#34;&gt;\(r\)&lt;/span&gt;s are in the back, and so
-on.&lt;/figcaption&gt;
-&lt;/figure&gt;
 &lt;h2 data-number=&#34;2.3&#34; id=&#34;combinatorial-manifolds&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;2.3&lt;/span&gt; Combinatorial manifolds&lt;/h2&gt;
 &lt;p&gt;(This section is not quite off the ground.)&lt;/p&gt;
