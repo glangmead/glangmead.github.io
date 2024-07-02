@@ -119,7 +119,16 @@ class="toc-section-number">4.5</span> Gauge transformations</a></li>
 href="#gauss-bonnet-vector-fields-and-the-poincaruxe9-hopf-theorem"
 id="toc-gauss-bonnet-vector-fields-and-the-poincaruxe9-hopf-theorem"><span
 class="toc-section-number">5</span> Gauss-Bonnet, Vector Fields, and the
-Poincaré-Hopf Theorem</a></li>
+Poincaré-Hopf Theorem</a>
+<ul>
+<li><a href="#discrete-vector-fields"
+id="toc-discrete-vector-fields"><span
+class="toc-section-number">5.1</span> Discrete vector fields</a></li>
+<li><a href="#the-index-of-a-fixed-point"
+id="toc-the-index-of-a-fixed-point"><span
+class="toc-section-number">5.2</span> The index of a fixed
+point</a></li>
+</ul></li>
 </ul>
 </nav>
 <h1 class="unnumbered" id="abstract">Abstract</h1>
@@ -220,6 +229,11 @@ geometry}\longrightarrow\mathrm{Discrete\ differential\
 geometry}\longrightarrow \mathrm{Homotopy\ type\ theory}\]</span></p>
 <h1 data-number="2" id="examples"><span
 class="header-section-number">2</span> Examples</h1>
+<p>TODO:</p>
+<ol>
+<li><p>Color-code each continuous cycle on the flat torus and the 3d
+torus, and use that to demonstrate how the curvature acts.</p></li>
+</ol>
 <h2 data-number="2.1" id="the-octahedron"><span
 class="header-section-number">2.1</span> The octahedron</h2>
 <p>We will define some higher inductive types to serve as domain and
@@ -1219,9 +1233,73 @@ determinants can be made from the path groupoid structure.</p></li>
 euler characteristic via a specific v.f.</p></li>
 <li><p>Non-theorem: v.f. on torus is the gradient of a Morse function.
 Bringing in Morse theory is future work.</p></li>
+<li><p>use</p>
+<p><img src="./c3761762270c966dd7a8eff7ff9572271448d824.png"
+alt="image" /></p></li>
 </ol>
-<p><img src="./968a77ed3382e1bbffa601a5a504c7759fb55e00.png"
-alt="image" /></p>
+<h2 data-number="5.1" id="discrete-vector-fields"><span
+class="header-section-number">5.1</span> Discrete vector fields</h2>
+<p>If <span class="math inline">\(M\)</span> is a combinatorial manifold
+and we form a type family over <span class="math inline">\(M\)</span>
+using <span class="math inline">\(\mathsf{link}\)</span>, <span
+class="math inline">\(\mathsf{xbox}\)</span>, or <span
+class="math inline">\(\mathsf{xdisk}\)</span> then what we want to
+examine next is the dependent function type of this family, which are
+equivalent to sections of the sigma type. These sections will play the
+role of vector fields.</p>
+<p>Introduce the notation <span
+class="math inline">\(P_f\stackrel{\mathrm{def}}{=}\sum_{x:M}f(x)\)</span>
+and <span
+class="math inline">\(V_f\stackrel{\mathrm{def}}{=}\prod_{x:M}f(x)\)</span>.
+We will also refer to the 0-skeleton of <span
+class="math inline">\(M\)</span> as <span
+class="math inline">\(M_0\)</span> and the 1-skeleton as <span
+class="math inline">\(M_1\)</span>. We’ll be interested in <span
+class="math inline">\(P_\mathsf{xbox}\)</span> (the xbox bundle over
+<span class="math inline">\(M\)</span>) and <span
+class="math inline">\(V_\mathsf{xbox}\)</span> (the type of sections
+thereof). Since <span class="math inline">\(M\)</span> is a HIT, then to
+specify a map <span class="math inline">\(X:V_\mathsf{xbox}\)</span> we
+need to supply a point in each fiber, and for each path <span
+class="math inline">\(p:x=_M y\)</span> in <span
+class="math inline">\(M\)</span> a path <span
+class="math inline">\(X(p):p_* X(x)=_{\mathsf{xbox}(y)}
+X(y)\)</span>.</p>
+<p>Since <span class="math inline">\(\mathsf{xbox}\)</span> is defined
+using the neighboring points and paths of <span
+class="math inline">\(M\)</span>, we can exponentiate <span
+class="math inline">\(P_\mathsf{xbox}\)</span>, forming a map <span
+class="math inline">\(\exp:P_\mathsf{xbox}\to M\)</span>: just map the
+xboxes back onto where they came from in <span
+class="math inline">\(M\)</span>. This is the finite version of
+exponentiating a tangent space. It’s very different from the projection
+map <span class="math inline">\(\ensuremath{\mathrm{pr}}_1\)</span>
+since it spreads the fibers out along <span
+class="math inline">\(M\)</span>.</p>
+<p>Hence we also have a map <span class="math inline">\(\exp\circ X:M\to
+M\)</span> which is in general not an equivalence but can be. We can
+think of it as the <em>flow</em> given by <span
+class="math inline">\(X\)</span>, the analogue of integrating a vector
+field for some finite time.</p>
+<h2 data-number="5.2" id="the-index-of-a-fixed-point"><span
+class="header-section-number">5.2</span> The index of a fixed point</h2>
+<p>Suppose that <span class="math inline">\(x\)</span> satisfies <span
+class="math inline">\(X(x)=\ensuremath{\mathsf{refl}}_x\)</span>, and so
+<span class="math inline">\(\exp\circ X(x)=x\)</span> and <span
+class="math inline">\(x\)</span> is a fixed point of the flow.
+Combinatorial manifolds are finite and decidable so this equation makes
+sense. In such a situation we can form a map <span
+class="math inline">\(\mathrm{tr}\circ
+X\circ\exp:\mathsf{link}(x)\to\mathsf{link}(x).\)</span> Starting with a
+point in <span class="math inline">\(\mathsf{link}(x)\)</span> we
+exponentiate to the actual neighboring point in <span
+class="math inline">\(M\)</span>, take the value of <span
+class="math inline">\(X\)</span> on this other point (some neighbor of
+this neighbor, possibly <span class="math inline">\(x\)</span>), and
+transport that back to <span
+class="math inline">\(\mathsf{link}(x)\)</span>. Such a map has a
+degree, and that degree is a discrete version of what is called the
+<em>index</em> of the vector field at a fixed point.</p>
 <p>To prove the Gauss-Bonnet theorem one needs a notion of <em>Euler
 characteristic</em> and a notion of curvature. To prove the
 Poincaré-Hopf theorem, one needs a notion of <em>the index of a vector
@@ -1259,6 +1337,10 @@ equal to the total curvature.</em></p>
 <div class="mythm">
 <p><strong>Theorem 6</strong>. <em>The total index is equal to the Euler
 characteristic.</em></p>
+</div>
+<div class="mythm">
+<p><strong>Theorem 7</strong>. <em>(Gauss-Bonnet) The total curvature is
+equal to the Euler characteristic.</em></p>
 </div>
 <div id="refs" class="references csl-bib-body hanging-indent"
 data-entry-spacing="0" role="list">
