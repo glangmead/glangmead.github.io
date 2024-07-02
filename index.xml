@@ -766,13 +766,10 @@ the middle, and square in back.&lt;/p&gt;
 &lt;figcaption&gt;Torus embedded in 3-dimensional space.&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;figure id=&#34;fig:flattorus&#34;&gt;
-&lt;img src=&#34;./518fc68d3181bee2bb93f7bd6691d7a687c06ea0.png&#34; /&gt;
+&lt;img src=&#34;./e15645edebdda60c139ef14005bd28bdddea2f31.png&#34; /&gt;
 &lt;figcaption&gt;An inspiration for the torus. Identify the sides and then
 the top, definitionally, to get the actual torus.&lt;/figcaption&gt;
 &lt;/figure&gt;
-&lt;p&gt;In this case it should be intuitively obvious that transport around
-the boundary of any face is the identity, corresponding to the torus
-being flat.&lt;/p&gt;
 &lt;h2 data-number=&#34;2.3&#34; id=&#34;combinatorial-manifolds&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;2.3&lt;/span&gt; Combinatorial manifolds&lt;/h2&gt;
 &lt;p&gt;(This section is not quite off the ground.)&lt;/p&gt;
