@@ -635,11 +635,12 @@ data-reference=&#34;fig:torus&#34;&gt;2&lt;/a&gt; having a square in front, diam
 the middle, and square in back.&lt;/p&gt;
 &lt;figure id=&#34;fig:torus&#34;&gt;
 &lt;img src=&#34;./dfced31a931ceca10c8a02ce4d1ed2b1ac193178.png&#34; /&gt;
-&lt;figcaption&gt;Torus.&lt;/figcaption&gt;
+&lt;figcaption&gt;Torus embedded in 3-dimensional space.&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;figure id=&#34;fig:flattorus&#34;&gt;
-&lt;img src=&#34;./9738e4bd485fa970ddfd98d1361254425a61aebd.png&#34; /&gt;
-&lt;figcaption&gt;Flat torus.&lt;/figcaption&gt;
+&lt;img src=&#34;./518fc68d3181bee2bb93f7bd6691d7a687c06ea0.png&#34; /&gt;
+&lt;figcaption&gt;An inspiration for the torus. Identify the sides and then
+the top, definitionally, to get the actual torus.&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;p&gt;In this case it should be intuitively obvious that transport around
 the boundary of any face is the identity, corresponding to the torus
