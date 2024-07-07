@@ -232,7 +232,10 @@ class="header-section-number">2</span> Examples</h1>
 <p>TODO:</p>
 <ol>
 <li><p>Color-code each continuous cycle on the flat torus and the 3d
-torus, and use that to demonstrate how the curvature acts.</p></li>
+torus, and use that to demonstrate how the curvature acts
+(begun).</p></li>
+<li><p>Motivate the refinement by showing a many-triangled neighborhood
+being tranpsorted around a small triangle.</p></li>
 </ol>
 <h2 data-number="2.1" id="the-octahedron"><span
 class="header-section-number">2.1</span> The octahedron</h2>
@@ -644,15 +647,22 @@ the top, definitionally, to get the actual torus.</figcaption>
 <p>It’s a bit of a challenge to visualize how the connection should
 twist these “xhexes” as we move around. Part of the issue is that we
 have actually constrained ourselves quite a bit by requiring the tangent
-space to be the link itself, which only has six settings. We could be
+space to be the link of a point, which only has six points. We could be
 more precise about angles if the tangent spaces had many subdivisions of
-the circle. If we had an actual application in mind then we might do
-that, but for now we’ll be content to operate more conceptually.</p>
-<p>Given an arbitrary edge on the 3d-embedded torus, how should we
-decide how to map the hexagons at the endpoints? The goal is of course
-to approximate the actual geometry of transport on a curved torus, so we
-should learn a little about that. Which is comforting – we’re trying to
-capture geometry, so it’s good that we need to use some!</p>
+the circle. The way to achieve better approximations, which we will not
+pursue in this paper, is to <em>refine</em> a given triangulation, and
+then choose a contractible neighborhood for each point which is not the
+link but goes “farther out” and consists of many edges and encloses many
+triangles. We could then transport along a single edge, and map between
+two circles that each have many segments, approximating to arbitrary
+precision any real-world application. The theory and practice of
+refinements is extensive and includes computer graphics research.</p>
+<p>But given an arbitrary edge on our impoverished 3d-embedded torus,
+how should we decide how to map the hexagons at the endpoints? The goal
+is of course to approximate the actual geometry of transport on a curved
+torus, so we should learn a little about that. Which is comforting –
+we’re trying to capture geometry, so it’s good that we need to use
+some!</p>
 <p>Of all the edges on our shape, the ones that are not very similar to
 geodesics are the squares in front and back. The two diamonds clearly
 correspond to highly symmetric geodesics, and less clearly there are
@@ -675,9 +685,13 @@ degree rotations of those two.</figcaption>
 <figure id="fig:torus_twist">
 <img src="./74e87957a0c0b151aa781029eb51b5a4bcea734f.png" />
 <img src="./8c972c514edf14e70e7a216ad43fcf5fed43b31a.png" />
-<figcaption>This shows the transport map along the top of the front
-square. It is twistier than along other edges. It pivots the hexagon
-around the top of the outer diamond.</figcaption>
+<img src="./50a69a817bb2cf04d0b0b237979d4aef0b402dea.png" />
+<img src="./51f8c3b380038bbc78688e77dacceb2319f8d1f1.png" />
+<figcaption>This shows the transport map along the top triangle, in the
+counterclockwise direction. The first transport is twistier than along
+other edges: it pivots the hexagon around the top of the outer diamond.
+The net effect of the three stages is to rotate the original hexagon by
+one notch counterclockwise.</figcaption>
 </figure>
 <p>Transport along geodesics is minimal in a technical sense, meaning
 the least twisty. If we use the flat torus diagram to help us, then we
