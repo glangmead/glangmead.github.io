@@ -651,7 +651,7 @@ torus in Figure &lt;a href=&#34;#fig:torus&#34; data-reference-type=&#34;ref&#3
 data-reference=&#34;fig:torus&#34;&gt;2&lt;/a&gt; having a square in front, diamonds in
 the middle, and a square in back.&lt;/p&gt;
 &lt;figure id=&#34;fig:torus&#34;&gt;
-&lt;img src=&#34;./864558e562436955261c113ad1b4dde0515baf7f.png&#34; /&gt;
+&lt;img src=&#34;./0087b249788a090ea395f319a1aa6bb257b59103.png&#34; /&gt;
 &lt;figcaption&gt;Torus embedded in 3-dimensional space. Black lines trace
 four square-shaped paths, red ones connect the front square to the
 middle diamonds, and blue ones connect the back path to the middle
@@ -694,17 +694,17 @@ data-reference=&#34;fig:torus_geodesic&#34;&gt;5&lt;/a&gt;).&lt;/p&gt;
 3.&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;figure id=&#34;fig:torus_geodesic&#34;&gt;
-&lt;img src=&#34;./9fb1a142725ef40410c419d0702646046399be32.png&#34; /&gt;
+&lt;img src=&#34;./7d047294f53d293e80beb650d3b5a012878e882c.png&#34; /&gt;
 &lt;figcaption&gt;This path is very similar to an actual geodesic on an actual
 torus. There are three other analogous ones, one that also passes
 through the top and bottom of the outer diamond, and two that are 90
 degree rotations of those two.&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;figure id=&#34;fig:torus_twist&#34;&gt;
-&lt;img src=&#34;./74e87957a0c0b151aa781029eb51b5a4bcea734f.png&#34; /&gt;
-&lt;img src=&#34;./8c972c514edf14e70e7a216ad43fcf5fed43b31a.png&#34; /&gt;
-&lt;img src=&#34;./50a69a817bb2cf04d0b0b237979d4aef0b402dea.png&#34; /&gt;
-&lt;img src=&#34;./51f8c3b380038bbc78688e77dacceb2319f8d1f1.png&#34; /&gt;
+&lt;img src=&#34;./d63aceba26abea8e763fa0be466d7187c82eb65f.png&#34; /&gt;
+&lt;img src=&#34;./853c33a104add763b36b0af4a934ff7701f99bc1.png&#34; /&gt;
+&lt;img src=&#34;./744fc66da4802f05385ea29fc4f532ed88fc41bc.png&#34; /&gt;
+&lt;img src=&#34;./d2294d6385c2f94c89ea62b652875636e8348c6d.png&#34; /&gt;
 &lt;figcaption&gt;This shows the transport map along the top triangle, in the
 counterclockwise direction. The first transport is twistier than along
 other edges: it pivots the hexagon around the top of the outer diamond.
@@ -728,6 +728,17 @@ href=&#34;#fig:flattorus&#34; data-reference-type=&#34;ref&#34;
 data-reference=&#34;fig:flattorus&#34;&gt;3&lt;/a&gt;. But let’s not use that extra
 information, and instead let’s start talking about loops around
 faces.&lt;/p&gt;
+&lt;figure id=&#34;fig:dense_circle&#34;&gt;
+&lt;embed src=&#34;dense_circle.pdf&#34; /&gt;
+&lt;figcaption&gt;To better approximate small transport angles, we would
+refine the mesh and instead of the link we would use circle-like paths
+that include more triangles, and have many edges. Imagine transporting
+the blue circle around the triangle indicated in the center. The point
+on the circle might move through the path shown, indicating how the
+circle comes back rotated just a few degrees counterclockwise. Use your
+imagination to discretize the smooth circle onto the points of the
+mesh.&lt;/figcaption&gt;
+&lt;/figure&gt;
 &lt;h2 data-number=&#34;2.3&#34; id=&#34;combinatorial-manifolds&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;2.3&lt;/span&gt; Combinatorial manifolds&lt;/h2&gt;
 &lt;p&gt;(This section is not quite off the ground.)&lt;/p&gt;
