@@ -252,8 +252,10 @@ class=&#34;header-section-number&#34;&gt;2&lt;/span&gt; Examples&lt;/h1&gt;
 &lt;li&gt;&lt;p&gt;Color-code each continuous cycle on the flat torus and the 3d
 torus, and use that to demonstrate how the curvature acts
 (begun).&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Motivate the refinement by showing a many-triangled neighborhood
-being tranpsorted around a small triangle.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;There’s a missing argument here. I motivate some particular
+permutation of hexagons with geometric analogy, but what is actually
+being said? Why is this making contact with anything? Does it have to
+wait for the proof of Poincaré-Hopf and Gauss-Bonnet?&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 data-number=&#34;2.1&#34; id=&#34;the-octahedron&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;2.1&lt;/span&gt; The octahedron&lt;/h2&gt;
@@ -703,7 +705,7 @@ degree rotations of those two.&lt;/figcaption&gt;
 &lt;figure id=&#34;fig:torus_twist&#34;&gt;
 &lt;img src=&#34;./d63aceba26abea8e763fa0be466d7187c82eb65f.png&#34; /&gt;
 &lt;img src=&#34;./853c33a104add763b36b0af4a934ff7701f99bc1.png&#34; /&gt;
-&lt;img src=&#34;./744fc66da4802f05385ea29fc4f532ed88fc41bc.png&#34; /&gt;
+&lt;img src=&#34;./5f65e43737195af7d01a2bd1ab54ad0cfcba27ff.png&#34; /&gt;
 &lt;img src=&#34;./d2294d6385c2f94c89ea62b652875636e8348c6d.png&#34; /&gt;
 &lt;figcaption&gt;This shows the transport map along the top triangle, in the
 counterclockwise direction. The first transport is twistier than along
