@@ -5,12 +5,131 @@
     <link>https://greg.langmead.info/</link>
       <atom:link href="https://greg.langmead.info/index.xml" rel="self" type="application/rss+xml" />
     <description>Long Head</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 31 Mar 2024 17:22:28 -0400</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 07 Sep 2024 21:06:01 -0400</lastBuildDate>
     <image>
       <url>https://greg.langmead.info/media/icon_hu1bbe79ab3a4c16ae2bff36fb493a5b01_1012_512x512_fill_lanczos_center_3.png</url>
       <title>Long Head</title>
       <link>https://greg.langmead.info/</link>
     </image>
+    
+    <item>
+      <title>D&amp;D Adventure System House Rules</title>
+      <link>https://greg.langmead.info/posts/2024-09-07-adventure-system/</link>
+      <pubDate>Sat, 07 Sep 2024 21:06:01 -0400</pubDate>
+      <guid>https://greg.langmead.info/posts/2024-09-07-adventure-system/</guid>
+      <description>&lt;p&gt;The following is a list of ideas I gathered for adding flavor and tactics to D&amp;amp;D board games in the Adventure Game system. Personally we own &lt;a href=&#34;https://shop.wizkids.com/products/dungeons-dragons-tomb-of-annihilation-adventure-system-board-game-standard-edition&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Tomb of Annihilation&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Environment&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;outdoors in Chult there might be a tropical storm
+&lt;ul&gt;
+&lt;li&gt;PCs get Exhaustion 1, and do a DC 10 Constitution check or gain Exhaustion 2&lt;/li&gt;
+&lt;li&gt;Exhaustion 1: ability checks have disadvantage&lt;/li&gt;
+&lt;li&gt;Exhaustion 2: speed halved&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;With black triangles, roll D2 and either draw an Encounter card or draw a monster&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Saving throws for any traps (or trap encounters, like hidden tripwire, hail of traps)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;maybe roll 11+ like in the base rules, but with advantage if AC 15 or less)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Enemy mechanics adapted from their stat blocks&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Saving throws for PCs
+&lt;ul&gt;
+&lt;li&gt;Firenewt: flame breath (dexterity, D2 if AC 15 or less)&lt;/li&gt;
+&lt;li&gt;Su-monster: psychic crush (wisdom, D2 for druid, wizard)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Velociraptors gain advantage for their attacks if another veloci is adjacent to it or flanking the target.&lt;/li&gt;
+&lt;li&gt;Yuan-Ti broodguard can roll with advantage on melee attacks but PCs roll with advantage against them as well. Roll a D2 when at the start of their turn to decide if they are adopting this tactic. If so, mark them with a token so that the next hero attack has advantage, then remove the token.&lt;/li&gt;
+&lt;li&gt;Zorbo: magic resistance, roll with disadvantage for any magical attacks on it&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;4e rules to bring in&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Flanking&lt;/strong&gt;: get on opposite sides with an ally, and you can get combat advantage. Might be negated if one of you can&amp;rsquo;t attack or perhaps other statuses.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Aid&lt;/strong&gt;: if you are in melee range, roll against DC10 and if you succeed, deal no damage but an ally gets +2 to their attack roll, until your next turn. You can do the same with an ability, and the ally gets +2 against the same ability check.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Opportunity&lt;/strong&gt; actions are allowed against an opponent &lt;em&gt;on the opponent&amp;rsquo;s turn&lt;/em&gt; if
+&lt;ul&gt;
+&lt;li&gt;the opponent leaves a square adjacent to you (not counting shift/teleport/push/pull/slide)&lt;/li&gt;
+&lt;li&gt;the opponent uses a ranged or area power&lt;/li&gt;
+&lt;li&gt;you are able to make a melee attack and see the enemy&lt;/li&gt;
+&lt;li&gt;(if those hold, the opportunity action is one action you get during the current character/monster&amp;rsquo;s turn)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;https://docs.google.com/document/d/10CqWFWROhWVDhvtRBiAoO0G14j9wBDzuRouAw1X4Sbo/edit&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;From web&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;General&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;When rolling d20, 20 is always a success, 1 is always a failure regardless of the modifiers
+&lt;ul&gt;
+&lt;li&gt;the rulebook actually says a 20 deals +1 damage&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;When heroes are moved by an encounter/trap/monster, they go to the monster movement squares (or Ambush squares if there are no movement squares) &lt;/li&gt;
+&lt;li&gt;Active Environment cards can be canceled by spending the regular amount of XP&lt;/li&gt;
+&lt;li&gt;Heroes can level up to level 4.&lt;/li&gt;
+&lt;li&gt;Level 3 (and 4) heroes&amp;rsquo; all At-Wills deal an extra point of damage on an even roll that hits&lt;/li&gt;
+&lt;li&gt;Level 3 (and 4) heroes may replace their fixed At-Will with another of their At-Wills&lt;/li&gt;
+&lt;li&gt;Hero level is the maximum cap on how many Advancement Tokens can be equipped for an adventure. You may &amp;ldquo;own&amp;rdquo; an unlimited number of Advancement Tokens. (the chevron shaped tokens like &amp;ldquo;Reroll&amp;rdquo;)&lt;/li&gt;
+&lt;li&gt;Multiple similar Advancement Tokens cannot be spent during one attack&lt;/li&gt;
+&lt;li&gt;Disadvantage can be removed by spending an Attack Action&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Automated Difficulty Scaling&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;If you did not use a Healing Surge (HS) and you already have only one/adventure, increase the number of tiles in the following adventures by +1.&lt;/li&gt;
+&lt;li&gt;If you lose the game and you have additional tiles in play, instead of adding a HS, remove 2 extra tiles from play. If you only have 0-1 extra tiles in play, then add the HS as usual in addition to removing the possible extra tile.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Exploration&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Warrior types (Defensive Approach): Monsters from the newly explored tile make all attacks at disadvantage against the hero until your next hero phase&lt;/li&gt;
+&lt;li&gt;Rogue types (Find Traps): If the revealed tile has a trap, get a free disarm before it activates, all traps make attack rolls at a disadvantage against the hero until your next hero phase&lt;/li&gt;
+&lt;li&gt;Spell casters (Divination): Cost to discard an encounter is halved, round up (so 5 XP -&amp;gt; 3 XP), encounter attacks (excluding traps) are made at disadvantage against your hero&lt;/li&gt;
+&lt;li&gt;All heroes (Stealth): Hero must roll their AC or higher (rogues roll with advantage). If successful, place a stunned marker on a newly revealed monster (thematically the monster is surprised by the hero’s approach, high AC has correlation to armor usage, which is why the roll is versus their AC).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Treasure&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;You only get a treasure card when your hero kills a monster during your hero phase.&lt;/li&gt;
+&lt;li&gt;A treasure item already in play may be given/taken to/from another adjacent willing hero using the attack action&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Monsters&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Monsters avoid squeezing, if possible, when following their tactics&lt;/li&gt;
+&lt;li&gt;When duplicate monsters are drawn, place the card on top of an existing monster card (they only activate once during the villain phase).&lt;/li&gt;
+&lt;li&gt;Villains: Remove (round down(HP/10)) *(5 - # heroes) HPs from villains.
+&lt;ul&gt;
+&lt;li&gt;So villains that initially have 10-19 HP, have one less HP for each &amp;ldquo;missing&amp;rdquo; hero (compared to a full party of five), villains with 20-29 HP two HP less for each missing hero.&lt;/li&gt;
+&lt;li&gt;Example: Villain has 16 HP and there are 3 heroes in play. Villain starts play with 1*(5-3)=2 HP removed -&amp;gt; 14 HP.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Tomb of Annihilation&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Druid’s Call Lightning: When used on a Dungeon Tile (indoors), make all attack rolls with Disadvantage&lt;/li&gt;
+&lt;li&gt;Mage’s Mage Armor sets the AC to 17 until discharged (on a roll of 17-20)&lt;/li&gt;
+&lt;li&gt;Bard’s Inspire Courage ability works on 2 heroes on the tile (bard can benefit from the advantage)&lt;/li&gt;
+&lt;li&gt;Hidden outpost, each hero may benefit from the bonus only once.&lt;/li&gt;
+&lt;li&gt;Lich Necromancer (4XP) Tactics:
+&lt;ul&gt;
+&lt;li&gt;If the Lich Necromancer is the only Monster you control, place a new Monster on its tile.&lt;/li&gt;
+&lt;li&gt;If Lich Necromancer is adjacent to a hero, cast Vampiric Touch/Bestow Curse/Ice Storm/Magic Missile&lt;/li&gt;
+&lt;li&gt;If the Lich Necromancer is within 2 tiles of a Hero, it attacks the closest Hero with a ray of fire.&lt;/li&gt;
+&lt;li&gt;Otherwise, pass this card to the player on your right&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Wagner and Tolkien</title>
