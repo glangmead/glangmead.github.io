@@ -1,17 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Collin D. Ruffenach | Long Head</title>
+    <title>Collin D. Ruffenach on Long Head</title>
     <link>https://greg.langmead.info/authors/collin-d.-ruffenach/</link>
-      <atom:link href="https://greg.langmead.info/authors/collin-d.-ruffenach/index.xml" rel="self" type="application/rss+xml" />
-    <description>Collin D. Ruffenach</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 24 Sep 2020 00:00:00 +0000</lastBuildDate>
-    <image>
-      <url>https://greg.langmead.info/media/icon_hu1bbe79ab3a4c16ae2bff36fb493a5b01_1012_512x512_fill_lanczos_center_3.png</url>
-      <title>Collin D. Ruffenach</title>
-      <link>https://greg.langmead.info/authors/collin-d.-ruffenach/</link>
-    </image>
-    
+    <description>Recent content in Collin D. Ruffenach on Long Head</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 24 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://greg.langmead.info/authors/collin-d.-ruffenach/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Personalization Aggregate Content Item Recommendations</title>
       <link>https://greg.langmead.info/publications/recommendations-2019/</link>
@@ -19,7 +15,6 @@
       <guid>https://greg.langmead.info/publications/recommendations-2019/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Reader application with a personalized feed and method of providing recommendations while maintaining user privacy</title>
       <link>https://greg.langmead.info/publications/reader-privacy-2015/</link>
@@ -27,6 +22,5 @@
       <guid>https://greg.langmead.info/publications/reader-privacy-2015/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

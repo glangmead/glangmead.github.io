@@ -1,24 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>2 | Long Head</title>
+    <title>2 on Long Head</title>
     <link>https://greg.langmead.info/publication-type/2/</link>
-      <atom:link href="https://greg.langmead.info/publication-type/2/index.xml" rel="self" type="application/rss+xml" />
-    <description>2</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 01 Oct 2002 00:00:00 +0000</lastBuildDate>
-    <image>
-      <url>https://greg.langmead.info/media/icon_hu1bbe79ab3a4c16ae2bff36fb493a5b01_1012_512x512_fill_lanczos_center_3.png</url>
-      <title>2</title>
-      <link>https://greg.langmead.info/publication-type/2/</link>
-    </image>
-    
+    <description>Recent content in 2 on Long Head</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 01 Oct 2002 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://greg.langmead.info/publication-type/2/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>A Supersymmetric Quantum Field Theory Formulation of the Donaldson Polynomial Invariants</title>
       <link>https://greg.langmead.info/publications/langmead-supersymmetric-2002/</link>
-      <pubDate>Tue, 01 Oct 2002 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 16 Jun 2019 23:23:18 +0000</pubDate>
       <guid>https://greg.langmead.info/publications/langmead-supersymmetric-2002/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

@@ -1,17 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Sidy Diop | Long Head</title>
+    <title>Sidy Diop on Long Head</title>
     <link>https://greg.langmead.info/authors/sidy-diop/</link>
-      <atom:link href="https://greg.langmead.info/authors/sidy-diop/index.xml" rel="self" type="application/rss+xml" />
-    <description>Sidy Diop</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 24 Sep 2020 00:00:00 +0000</lastBuildDate>
-    <image>
-      <url>https://greg.langmead.info/media/icon_hu1bbe79ab3a4c16ae2bff36fb493a5b01_1012_512x512_fill_lanczos_center_3.png</url>
-      <title>Sidy Diop</title>
-      <link>https://greg.langmead.info/authors/sidy-diop/</link>
-    </image>
-    
+    <description>Recent content in Sidy Diop on Long Head</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 24 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://greg.langmead.info/authors/sidy-diop/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Personalization Aggregate Content Item Recommendations</title>
       <link>https://greg.langmead.info/publications/recommendations-2019/</link>
@@ -19,6 +15,5 @@
       <guid>https://greg.langmead.info/publications/recommendations-2019/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

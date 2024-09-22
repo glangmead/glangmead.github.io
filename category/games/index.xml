@@ -1,141 +1,54 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Games | Long Head</title>
+    <title>Games on Long Head</title>
     <link>https://greg.langmead.info/category/games/</link>
-      <atom:link href="https://greg.langmead.info/category/games/index.xml" rel="self" type="application/rss+xml" />
-    <description>Games</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 17 Aug 2008 05:17:07 +0000</lastBuildDate>
-    <image>
-      <url>https://greg.langmead.info/media/icon_hu1bbe79ab3a4c16ae2bff36fb493a5b01_1012_512x512_fill_lanczos_center_3.png</url>
-      <title>Games</title>
-      <link>https://greg.langmead.info/category/games/</link>
-    </image>
-    
+    <description>Recent content in Games on Long Head</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 17 Aug 2008 05:17:07 +0000</lastBuildDate>
+    <atom:link href="https://greg.langmead.info/category/games/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Infocom games, using your voice</title>
       <link>https://greg.langmead.info/posts/2008-08-17-infocom-games-using-your-voice/</link>
       <pubDate>Sun, 17 Aug 2008 05:17:07 +0000</pubDate>
       <guid>https://greg.langmead.info/posts/2008-08-17-infocom-games-using-your-voice/</guid>
-      <description>&lt;p&gt;I have a long history with Infocom games (&amp;ldquo;text adventures&amp;rdquo; was what I called them as a kid, and &amp;ldquo;interactive fiction&amp;rdquo; is the new name). People still write these games, did you know that? There&amp;rsquo;s a &lt;a href=&#34;http://ifdb.tads.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;big archive&lt;/a&gt; and an &lt;a href=&#34;http://ifcomp.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;annual competition&lt;/a&gt;. I haven&amp;rsquo;t played any of the non-Infocom variety, though I think I ought to try one. I have copies of all the data files for all the original Infocom games from the 80s, and for years there has been an open-source program to load these files and let you play the games. It&amp;rsquo;s called &lt;a href=&#34;http://frotz.sourceforge.net/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Frotz&lt;/a&gt;. I&amp;rsquo;ve had a version of Frotz on all my computers for the last 12 years, including my various Palm PDAs. The only Infocom game I&amp;rsquo;ve ever finished in my life (making it one of like 5 games of any variety that I have ever finished) was &amp;ldquo;Enchanter&amp;rdquo;, which I played on the Palm. The &lt;a href=&#34;http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=287653015&amp;amp;mt=8&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;latest incarnation of Frotz&lt;/a&gt; is for the iPhone, and so of course I downloaded it right away.&lt;/p&gt;
-&lt;p&gt;PDAs in general are not the easiest devices to type on, though, and there&amp;rsquo;s lots of typing in Infocom games. So it occurred to me that it would be really cool to speak the commands. After all, there is a limited vocabulary, which should be ideal for getting good accuracy from automatic speech recognition, and furthermore the engine should require a pretty small amount of data. On top of that, what if Frotz synthesized a (pleasant, configurable) computer voice to read you all the text in the game? Then you could set the iPhone down in front of you, close your eyes, and enjoy a nice bit of interactive fiction by having a dialog with thin air. All of a sudden the very stodgiest and oldest of technology leapfrogs three decades of competition and actually sounds futuristic! I patted myself on the back for thinking of such a great idea, and told myself I&amp;rsquo;d take a stab at it myself &amp;ldquo;one day,&amp;rdquo; since speech recognition is just a hop, skip and a jump away from machine translation.&lt;/p&gt;
-&lt;p&gt;But that&amp;rsquo;s not all, there&amp;rsquo;s a punchline to this story. It further occurred to me that I wouldn&amp;rsquo;t have been the first to think of this idea, so I did a Google search. &lt;a href=&#34;http://iphonefrotz.googlecode.com/svn/trunk/doc/SPEECH&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;The link I found&lt;/a&gt; is inside a code repository for Frotz itself, namely the iPhone version. Actually, this is just a branch of Frotz, so I checked the general Frotz SourceForge repository as well and the same file is there too. It&amp;rsquo;s a placeholder for future work on just this idea, but it&amp;rsquo;s super-vague and kind of creepy, what with the whole &amp;ldquo;commissioned by a presently undisclosed party&amp;rdquo; thing. The technology looks good, it&amp;rsquo;s all open-source stuff released by academics, which was where I figured I would start looking as well.&lt;/p&gt;
-&lt;p&gt;So who wrote this document, and when, and when do they intend to come out of the shadows with the result of their work? Who knows &amp;ndash; but it sure is a weird end to my story.&lt;/p&gt;
-</description>
+      <description>&lt;p&gt;I have a long history with Infocom games (&amp;ldquo;text adventures&amp;rdquo; was what I called them as a kid, and &amp;ldquo;interactive fiction&amp;rdquo; is the new name). People still write these games, did you know that? There&amp;rsquo;s a &lt;a href=&#34;http://ifdb.tads.org/&#34;&gt;big archive&lt;/a&gt; and an &lt;a href=&#34;http://ifcomp.org/&#34;&gt;annual competition&lt;/a&gt;. I haven&amp;rsquo;t played any of the non-Infocom variety, though I think I ought to try one. I have copies of all the data files for all the original Infocom games from the 80s, and for years there has been an open-source program to load these files and let you play the games. It&amp;rsquo;s called &lt;a href=&#34;http://frotz.sourceforge.net/&#34;&gt;Frotz&lt;/a&gt;. I&amp;rsquo;ve had a version of Frotz on all my computers for the last 12 years, including my various Palm PDAs. The only Infocom game I&amp;rsquo;ve ever finished in my life (making it one of like 5 games of any variety that I have ever finished) was &amp;ldquo;Enchanter&amp;rdquo;, which I played on the Palm. The &lt;a href=&#34;http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=287653015&amp;mt=8&#34;&gt;latest incarnation of Frotz&lt;/a&gt; is for the iPhone, and so of course I downloaded it right away.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Panzer Tactics</title>
       <link>https://greg.langmead.info/posts/2007-12-30-panzer-tactics/</link>
       <pubDate>Sun, 30 Dec 2007 22:36:16 +0000</pubDate>
       <guid>https://greg.langmead.info/posts/2007-12-30-panzer-tactics/</guid>
-      <description>&lt;p&gt;Over this holiday break, I played through all the tutorials in one of my newer DS games &lt;em&gt;&lt;a href=&#34;http://www.amazon.com/Atlus-PT-00070-2-Panzer-Tactics/dp/B000TU4M4Q/ref=pd_bbs_sr_1?ie=UTF8&amp;amp;s=videogames&amp;amp;qid=1199053915&amp;amp;sr=8-1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Panzer Tactics&lt;/a&gt;&lt;/em&gt;. It&amp;rsquo;s a very engrossing turn-based war game, very much along the lines of &lt;em&gt;&lt;a href=&#34;http://www.amazon.com/Nintendo-PS2-ACT-81033-Advance/dp/B0009XEC02/ref=pd_bbs_sr_2?ie=UTF8&amp;amp;s=videogames&amp;amp;qid=1199054118&amp;amp;sr=8-2&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Advance Wars&lt;/a&gt;&lt;/em&gt;. Panzer Tactics clicked much more with me, though, and I grasped how to deploy my units intuitively pretty quickly. I think I can take this experience back to Advance Wars as well, and have more fun with it, too. But first, I&amp;rsquo;m ready to start the real campaigns in Panzer Tactics. Then maybe I&amp;rsquo;ll go back to &lt;em&gt;&lt;a href=&#34;http://greg.langmead.info/?p=68&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Korsun Pocket&lt;/a&gt;&lt;/em&gt;, which is more complicated.&lt;/p&gt;
-</description>
+      <description>&lt;p&gt;Over this holiday break, I played through all the tutorials in one of my newer DS games &lt;em&gt;&lt;a href=&#34;http://www.amazon.com/Atlus-PT-00070-2-Panzer-Tactics/dp/B000TU4M4Q/ref=pd_bbs_sr_1?ie=UTF8&amp;s=videogames&amp;qid=1199053915&amp;sr=8-1&#34;&gt;Panzer Tactics&lt;/a&gt;&lt;/em&gt;. It&amp;rsquo;s a very engrossing turn-based war game, very much along the lines of &lt;em&gt;&lt;a href=&#34;http://www.amazon.com/Nintendo-PS2-ACT-81033-Advance/dp/B0009XEC02/ref=pd_bbs_sr_2?ie=UTF8&amp;s=videogames&amp;qid=1199054118&amp;sr=8-2&#34;&gt;Advance Wars&lt;/a&gt;&lt;/em&gt;. Panzer Tactics clicked much more with me, though, and I grasped how to deploy my units intuitively pretty quickly. I think I can take this experience back to Advance Wars as well, and have more fun with it, too. But first, I&amp;rsquo;m ready to start the real campaigns in Panzer Tactics. Then maybe I&amp;rsquo;ll go back to &lt;em&gt;&lt;a href=&#34;http://greg.langmead.info/?p=68&#34;&gt;Korsun Pocket&lt;/a&gt;&lt;/em&gt;, which is more complicated.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Korsun Pocket</title>
       <link>https://greg.langmead.info/posts/2006-12-04-korsun-pocket/</link>
       <pubDate>Mon, 04 Dec 2006 19:40:43 +0000</pubDate>
       <guid>https://greg.langmead.info/posts/2006-12-04-korsun-pocket/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;ve bought my first computer wargame, called &lt;em&gt;Korsun Pocket&lt;/em&gt;, from &lt;a href=&#34;http://www.matrixgames.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Matrix Games&lt;/a&gt;.  I wanted to share a short section from the manual, because it gets me pretty excited to play and so I thought it would be a good illustration to share:&lt;/p&gt;
-&lt;blockquote&gt;
-1. Introduction
-&gt; 
-&gt; 
-The Object of the Game
-&gt; 
-&gt; 
-&lt;p&gt;The Eastern Front - January 1944.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Another severe Russian winter and months of devastating retreats have forced Manstein&amp;rsquo;s
-once mighty Army Group South to its knees. Weakened by innumerable losses and defeats, the 8th Army and 1st Panzer Army desperately defend a tenuous portion of the Dnieper River in a salient 50 kilometres west of the city of Cherkassy. OKH demands this portion of river be held as the bridgehead for a renewed summer offensive - an offensive that would never - &lt;em&gt;could never&lt;/em&gt; - materialize.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;The salient invites encirclement and on January 24th and 25th the Soviets happily oblige. Fuelled
-by their enormous victories the previous summer, five full armies of mechanised and Armored troops of the 1st and 2nd Ukrainian Fronts burst through the tired German defence creating the first major encirclement since Stalingrad the previous winter. Their objective? To surround and crush the German forces against the River Dnieper.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;In a flawed strategy only too familiar to his weary generals, Hitler refuses a withdrawal and by doing so, seems to seal the fate of yet another army. Within 4 days the Russians link up near the town of Lysyanko, trapping the German XLII and XI Army Korps, a pocket of 60,000
-troops, behind enemy lines.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Centred on the city of Korsun, the forlorn Germans are forced to fight for their lives with only a minor airfield to sustain them. They are trapped without hope of surviving, destined for the POW cages east of the Urals. Or are they? Amongst the trapped units is the mighty 5th SS Wiking Division and they are not going to go down without a fight&amp;hellip;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Korsun Pocket recreates the formation of that pocket, and the desperate German attempts to relieve it in the
-days that followed. Players control brigade, regimental and battalion sized units on a map spanning more than 28,500 km2, manoeuvring and fighting with the historical units present in the campaign. Off-board support, air interdiction and
-replacements are all faithfully recreated to assist the player in his quest.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;The game&amp;rsquo;s five scenarios cover the most exciting aspects of the battle and include a full campaign game which allows you to re-fight the entire battle. A series of fictional tutorial scenarios take you through the game mechanics and are highly recommended.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Can you as the Soviet Commander
-create and defeat the German pocket before strong panzer reinforcements intervene?&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;As German Commander, can you obey your
-Fuhrer&amp;rsquo;s orders and hang on to the Dnieper against all odds?&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;The reason this gets me excited is because I stand to learn a great deal about military strategy and tactics, as well as gaining a more detailed context for my understanding of the 20th century&amp;rsquo;s wars.&lt;/p&gt;
-&lt;p&gt;There is a new World War I game coming soon, also from Matrix (they&amp;rsquo;re the publisher, not the developer), called &lt;em&gt;The Guns of August&lt;/em&gt;, which I will definitely also get, since currently I&amp;rsquo;ve read more about that war.&lt;/p&gt;
-</description>
+      <description>&lt;p&gt;I&amp;rsquo;ve bought my first computer wargame, called &lt;em&gt;Korsun Pocket&lt;/em&gt;, from &lt;a href=&#34;http://www.matrixgames.com&#34;&gt;Matrix Games&lt;/a&gt;.  I wanted to share a short section from the manual, because it gets me pretty excited to play and so I thought it would be a good illustration to share:&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Wargames</title>
       <link>https://greg.langmead.info/posts/2006-12-01-wargames/</link>
       <pubDate>Fri, 01 Dec 2006 05:31:20 +0000</pubDate>
       <guid>https://greg.langmead.info/posts/2006-12-01-wargames/</guid>
-      <description>&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://greg.langmead.info/img/s317_TOAW3_shot9.jpg&#34; alt=&#34;s317_TOAW3_shot9.jpg&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;p&gt;My interest in the World Wars, and my recent reading of &lt;em&gt;The Guns of August&lt;/em&gt; (Tuchman), led me somehow to look into the wargaming universe. I learned that there is of course a sizable community of computer wargamers and developers, and I took a look around the landscape and selected a few to zero in on. Some of these are on my &lt;a href=&#34;http://www.shelfcentered.com/index.php?event=user_shelf&amp;amp;userid=26&amp;amp;user_shelf=Christmas%202006&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Christmas shelf&lt;/a&gt;, and some I pirated so I could read the manual and get a feel for how it goes.  It turns out the more detailed ones are more appealing so far, such as the one pictured above, &lt;a href=&#34;http://www.matrixgames.com/games/game.asp?gid=317&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;The Operational Art of War III&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;What I&amp;rsquo;d like to do is to get familiar with the mechanics and idioms of the genre, and then play through some WWI and WWII scenarios to see if it really adds some depth to my understanding of the great battles of the last century.&lt;/p&gt;
-</description>
+      <description>&lt;p&gt;&lt;img alt=&#34;s317_TOAW3_shot9.jpg&#34; src=&#34;https://greg.langmead.info/img/s317_TOAW3_shot9.jpg&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;My interest in the World Wars, and my recent reading of &lt;em&gt;The Guns of August&lt;/em&gt; (Tuchman), led me somehow to look into the wargaming universe. I learned that there is of course a sizable community of computer wargamers and developers, and I took a look around the landscape and selected a few to zero in on. Some of these are on my &lt;a href=&#34;http://www.shelfcentered.com/index.php?event=user_shelf&amp;userid=26&amp;user_shelf=Christmas%202006&#34;&gt;Christmas shelf&lt;/a&gt;, and some I pirated so I could read the manual and get a feel for how it goes.  It turns out the more detailed ones are more appealing so far, such as the one pictured above, &lt;a href=&#34;http://www.matrixgames.com/games/game.asp?gid=317&#34;&gt;The Operational Art of War III&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Games, games and games</title>
       <link>https://greg.langmead.info/posts/2003-04-14-games-games-and-games/</link>
       <pubDate>Mon, 14 Apr 2003 03:14:38 +0000</pubDate>
       <guid>https://greg.langmead.info/posts/2003-04-14-games-games-and-games/</guid>
-      <description>&lt;p&gt;I actually had time to play some Gameboy games today! I have quite a backlog, which will surprise no one who knows me, and it felt good to give it some attention.&lt;/p&gt;
-&lt;p&gt;My father-in-law got me &lt;a href=&#34;http://www.gamespot.com/gba/strategy/advancewars/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Advance Wars&lt;/a&gt; for Christmas, and I love it! I was afraid it would be confusing, but the designers have succeeded in making it very accessible. Any game that hides complexity with an accessible and fun interface, and especially good tutorials, becomes addictive &amp;ndash; it&amp;rsquo;s a rule somewhere.&lt;/p&gt;
-&lt;p&gt;I also picked up &lt;a href=&#34;http://www.gamespot.com/gba/action/legendofzeldaalinkttp/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Zelda: A Link to the Past&lt;/a&gt; again. I was somewhere in the middle, and when I couldn&amp;rsquo;t immediately remember what had already happened, I decided to start over. (Aside: people like me who like big games, yet have little time to devote to them often end up in the position of having to start all over to keep continuity. It adds that extra level of frustration to the sense of lost time.) Well, it turned out I was only about three minutes from the beginning! So that was a relief. Anyway, it&amp;rsquo;s also a great game with very interesting maps and buildings.&lt;/p&gt;
-&lt;p&gt;Soon I hope to get Pokemon Advance, and to get back into Golden Sun.&lt;/p&gt;
-</description>
+      <description>&lt;p&gt;I actually had time to play some Gameboy games today! I have quite a backlog, which will surprise no one who knows me, and it felt good to give it some attention.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Hall of Fame Game M.U.L.E.</title>
       <link>https://greg.langmead.info/posts/2002-04-16-hall-of-fame-game-mule/</link>
       <pubDate>Tue, 16 Apr 2002 02:26:30 +0000</pubDate>
       <guid>https://greg.langmead.info/posts/2002-04-16-hall-of-fame-game-mule/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://slashdot.org/article.pl?sid=02/04/15/1153203&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hall of Fame Game M.U.L.E. To Be Ported To PC&lt;/a&gt; [&lt;a href=&#34;http://slashdot.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slashdot&lt;/a&gt;]&lt;/p&gt;
-&lt;p&gt;M.U.L.E. was one of my favorite games. It&amp;rsquo;s like the modern real-time strategy games we have now, except that it was fun. I&amp;rsquo;ll definitely be checking this out.&lt;/p&gt;
-</description>
+      <description>&lt;p&gt;&lt;a href=&#34;http://slashdot.org/article.pl?sid=02/04/15/1153203&#34;&gt;Hall of Fame Game M.U.L.E. To Be Ported To PC&lt;/a&gt; [&lt;a href=&#34;http://slashdot.org/&#34;&gt;Slashdot&lt;/a&gt;]&lt;/p&gt;&#xA;&lt;p&gt;M.U.L.E. was one of my favorite games. It&amp;rsquo;s like the modern real-time strategy games we have now, except that it was fun. I&amp;rsquo;ll definitely be checking this out.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

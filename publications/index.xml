@@ -1,17 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Publications | Long Head</title>
+    <title>Publications on Long Head</title>
     <link>https://greg.langmead.info/publications/</link>
-      <atom:link href="https://greg.langmead.info/publications/index.xml" rel="self" type="application/rss+xml" />
-    <description>Publications</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 24 Sep 2020 00:00:00 +0000</lastBuildDate>
-    <image>
-      <url>https://greg.langmead.info/media/icon_hu1bbe79ab3a4c16ae2bff36fb493a5b01_1012_512x512_fill_lanczos_center_3.png</url>
-      <title>Publications</title>
-      <link>https://greg.langmead.info/publications/</link>
-    </image>
-    
+    <description>Recent content in Publications on Long Head</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 24 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://greg.langmead.info/publications/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Personalization Aggregate Content Item Recommendations</title>
       <link>https://greg.langmead.info/publications/recommendations-2019/</link>
@@ -19,7 +15,6 @@
       <guid>https://greg.langmead.info/publications/recommendations-2019/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Apparatus, system and method for string disambiguation and entity ranking</title>
       <link>https://greg.langmead.info/publications/entity-linking-2015/</link>
@@ -27,7 +22,6 @@
       <guid>https://greg.langmead.info/publications/entity-linking-2015/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Reader application with a personalized feed and method of providing recommendations while maintaining user privacy</title>
       <link>https://greg.langmead.info/publications/reader-privacy-2015/</link>
@@ -35,7 +29,6 @@
       <guid>https://greg.langmead.info/publications/reader-privacy-2015/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>System and method for interacting with a displayed work space</title>
       <link>https://greg.langmead.info/publications/work-space-2012/</link>
@@ -43,23 +36,20 @@
       <guid>https://greg.langmead.info/publications/work-space-2012/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Extraction programs: a unified approach to translation rule extraction</title>
       <link>https://greg.langmead.info/publications/hopkins-extraction-2011/</link>
-      <pubDate>Sat, 01 Jan 2011 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 17 Jun 2019 01:50:10 +0000</pubDate>
       <guid>https://greg.langmead.info/publications/hopkins-extraction-2011/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>SCFG decoding without binarization</title>
       <link>https://greg.langmead.info/publications/hopkins-scfg-2010/</link>
-      <pubDate>Fri, 01 Jan 2010 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 16 Jun 2019 23:23:18 +0000</pubDate>
       <guid>https://greg.langmead.info/publications/hopkins-scfg-2010/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Adapter for allowing both online and offline training of a text to text system</title>
       <link>https://greg.langmead.info/publications/adapter/</link>
@@ -67,15 +57,13 @@
       <guid>https://greg.langmead.info/publications/adapter/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Cube pruning as heuristic search</title>
       <link>https://greg.langmead.info/publications/hopkins-cube-2009/</link>
-      <pubDate>Thu, 01 Jan 2009 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 16 Jun 2019 23:23:18 +0000</pubDate>
       <guid>https://greg.langmead.info/publications/hopkins-cube-2009/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Task parallelization in a text-to-text system</title>
       <link>https://greg.langmead.info/publications/text-to-text-parallelization/</link>
@@ -83,14 +71,12 @@
       <guid>https://greg.langmead.info/publications/text-to-text-parallelization/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>A Supersymmetric Quantum Field Theory Formulation of the Donaldson Polynomial Invariants</title>
       <link>https://greg.langmead.info/publications/langmead-supersymmetric-2002/</link>
-      <pubDate>Tue, 01 Oct 2002 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 16 Jun 2019 23:23:18 +0000</pubDate>
       <guid>https://greg.langmead.info/publications/langmead-supersymmetric-2002/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

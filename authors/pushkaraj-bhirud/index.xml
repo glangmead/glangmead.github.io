@@ -1,17 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Pushkaraj Bhirud | Long Head</title>
+    <title>Pushkaraj Bhirud on Long Head</title>
     <link>https://greg.langmead.info/authors/pushkaraj-bhirud/</link>
-      <atom:link href="https://greg.langmead.info/authors/pushkaraj-bhirud/index.xml" rel="self" type="application/rss+xml" />
-    <description>Pushkaraj Bhirud</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 24 Sep 2020 00:00:00 +0000</lastBuildDate>
-    <image>
-      <url>https://greg.langmead.info/media/icon_hu1bbe79ab3a4c16ae2bff36fb493a5b01_1012_512x512_fill_lanczos_center_3.png</url>
-      <title>Pushkaraj Bhirud</title>
-      <link>https://greg.langmead.info/authors/pushkaraj-bhirud/</link>
-    </image>
-    
+    <description>Recent content in Pushkaraj Bhirud on Long Head</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 24 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://greg.langmead.info/authors/pushkaraj-bhirud/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Personalization Aggregate Content Item Recommendations</title>
       <link>https://greg.langmead.info/publications/recommendations-2019/</link>
@@ -19,7 +15,6 @@
       <guid>https://greg.langmead.info/publications/recommendations-2019/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Apparatus, system and method for string disambiguation and entity ranking</title>
       <link>https://greg.langmead.info/publications/entity-linking-2015/</link>
@@ -27,6 +22,5 @@
       <guid>https://greg.langmead.info/publications/entity-linking-2015/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

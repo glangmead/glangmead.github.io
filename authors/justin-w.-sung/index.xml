@@ -1,17 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Justin W. Sung | Long Head</title>
+    <title>Justin W. Sung on Long Head</title>
     <link>https://greg.langmead.info/authors/justin-w.-sung/</link>
-      <atom:link href="https://greg.langmead.info/authors/justin-w.-sung/index.xml" rel="self" type="application/rss+xml" />
-    <description>Justin W. Sung</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 15 Dec 2016 00:00:00 +0000</lastBuildDate>
-    <image>
-      <url>https://greg.langmead.info/media/icon_hu1bbe79ab3a4c16ae2bff36fb493a5b01_1012_512x512_fill_lanczos_center_3.png</url>
-      <title>Justin W. Sung</title>
-      <link>https://greg.langmead.info/authors/justin-w.-sung/</link>
-    </image>
-    
+    <description>Recent content in Justin W. Sung on Long Head</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 15 Dec 2016 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://greg.langmead.info/authors/justin-w.-sung/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Reader application with a personalized feed and method of providing recommendations while maintaining user privacy</title>
       <link>https://greg.langmead.info/publications/reader-privacy-2015/</link>
@@ -19,6 +15,5 @@
       <guid>https://greg.langmead.info/publications/reader-privacy-2015/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

@@ -1,16 +1,243 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Authors | Long Head</title>
+    <title>Authors on Long Head</title>
     <link>https://greg.langmead.info/authors/</link>
-      <atom:link href="https://greg.langmead.info/authors/index.xml" rel="self" type="application/rss+xml" />
-    <description>Authors</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 24 Sep 2020 00:00:00 +0000</lastBuildDate>
-    <image>
-      <url>https://greg.langmead.info/media/icon_hu1bbe79ab3a4c16ae2bff36fb493a5b01_1012_512x512_fill_lanczos_center_3.png</url>
-      <title>Authors</title>
-      <link>https://greg.langmead.info/authors/</link>
-    </image>
-    
+    <description>Recent content in Authors on Long Head</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 24 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://greg.langmead.info/authors/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Anil A. Sewani</title>
+      <link>https://greg.langmead.info/authors/anil-a.-sewani/</link>
+      <pubDate>Thu, 24 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>https://greg.langmead.info/authors/anil-a.-sewani/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Collin D. Ruffenach</title>
+      <link>https://greg.langmead.info/authors/collin-d.-ruffenach/</link>
+      <pubDate>Thu, 24 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>https://greg.langmead.info/authors/collin-d.-ruffenach/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dominic J. Hughes</title>
+      <link>https://greg.langmead.info/authors/dominic-j.-hughes/</link>
+      <pubDate>Thu, 24 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>https://greg.langmead.info/authors/dominic-j.-hughes/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Gregory C. Langmead</title>
+      <link>https://greg.langmead.info/authors/gregory-c.-langmead/</link>
+      <pubDate>Thu, 24 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>https://greg.langmead.info/authors/gregory-c.-langmead/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Gurumurthy D. Ramkumar</title>
+      <link>https://greg.langmead.info/authors/gurumurthy-d.-ramkumar/</link>
+      <pubDate>Thu, 24 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>https://greg.langmead.info/authors/gurumurthy-d.-ramkumar/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ian J. Elseth</title>
+      <link>https://greg.langmead.info/authors/ian-j.-elseth/</link>
+      <pubDate>Thu, 24 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>https://greg.langmead.info/authors/ian-j.-elseth/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pushkaraj Bhirud</title>
+      <link>https://greg.langmead.info/authors/pushkaraj-bhirud/</link>
+      <pubDate>Thu, 24 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>https://greg.langmead.info/authors/pushkaraj-bhirud/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sidy Diop</title>
+      <link>https://greg.langmead.info/authors/sidy-diop/</link>
+      <pubDate>Thu, 24 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>https://greg.langmead.info/authors/sidy-diop/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Venkatesh Venkataramanan</title>
+      <link>https://greg.langmead.info/authors/venkatesh-venkataramanan/</link>
+      <pubDate>Thu, 24 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>https://greg.langmead.info/authors/venkatesh-venkataramanan/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Daniel Ribeiro Silva</title>
+      <link>https://greg.langmead.info/authors/daniel-ribeiro-silva/</link>
+      <pubDate>Tue, 04 Dec 2018 00:00:00 +0000</pubDate>
+      <guid>https://greg.langmead.info/authors/daniel-ribeiro-silva/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Donald R. Beaver</title>
+      <link>https://greg.langmead.info/authors/donald-r.-beaver/</link>
+      <pubDate>Tue, 04 Dec 2018 00:00:00 +0000</pubDate>
+      <guid>https://greg.langmead.info/authors/donald-r.-beaver/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Kamal M. Ali</title>
+      <link>https://greg.langmead.info/authors/kamal-m.-ali/</link>
+      <pubDate>Tue, 04 Dec 2018 00:00:00 +0000</pubDate>
+      <guid>https://greg.langmead.info/authors/kamal-m.-ali/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mark A. Gingrich</title>
+      <link>https://greg.langmead.info/authors/mark-a.-gingrich/</link>
+      <pubDate>Tue, 04 Dec 2018 00:00:00 +0000</pubDate>
+      <guid>https://greg.langmead.info/authors/mark-a.-gingrich/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Martin J. Murrett</title>
+      <link>https://greg.langmead.info/authors/martin-j.-murrett/</link>
+      <pubDate>Tue, 04 Dec 2018 00:00:00 +0000</pubDate>
+      <guid>https://greg.langmead.info/authors/martin-j.-murrett/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ravi Chandra Jammalamadaka</title>
+      <link>https://greg.langmead.info/authors/ravi-chandra-jammalamadaka/</link>
+      <pubDate>Tue, 04 Dec 2018 00:00:00 +0000</pubDate>
+      <guid>https://greg.langmead.info/authors/ravi-chandra-jammalamadaka/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Shizhu Liu</title>
+      <link>https://greg.langmead.info/authors/shizhu-liu/</link>
+      <pubDate>Tue, 04 Dec 2018 00:00:00 +0000</pubDate>
+      <guid>https://greg.langmead.info/authors/shizhu-liu/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Amogh Mahapatra</title>
+      <link>https://greg.langmead.info/authors/amogh-mahapatra/</link>
+      <pubDate>Thu, 15 Dec 2016 00:00:00 +0000</pubDate>
+      <guid>https://greg.langmead.info/authors/amogh-mahapatra/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Casey M. Dougherty</title>
+      <link>https://greg.langmead.info/authors/casey-m.-dougherty/</link>
+      <pubDate>Thu, 15 Dec 2016 00:00:00 +0000</pubDate>
+      <guid>https://greg.langmead.info/authors/casey-m.-dougherty/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Georgios Sofianatos</title>
+      <link>https://greg.langmead.info/authors/georgios-sofianatos/</link>
+      <pubDate>Thu, 15 Dec 2016 00:00:00 +0000</pubDate>
+      <guid>https://greg.langmead.info/authors/georgios-sofianatos/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Guillermo Ortiz</title>
+      <link>https://greg.langmead.info/authors/guillermo-ortiz/</link>
+      <pubDate>Thu, 15 Dec 2016 00:00:00 +0000</pubDate>
+      <guid>https://greg.langmead.info/authors/guillermo-ortiz/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Jason A. Novak</title>
+      <link>https://greg.langmead.info/authors/jason-a.-novak/</link>
+      <pubDate>Thu, 15 Dec 2016 00:00:00 +0000</pubDate>
+      <guid>https://greg.langmead.info/authors/jason-a.-novak/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Justin W. Sung</title>
+      <link>https://greg.langmead.info/authors/justin-w.-sung/</link>
+      <pubDate>Thu, 15 Dec 2016 00:00:00 +0000</pubDate>
+      <guid>https://greg.langmead.info/authors/justin-w.-sung/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Kang Tu</title>
+      <link>https://greg.langmead.info/authors/kang-tu/</link>
+      <pubDate>Thu, 15 Dec 2016 00:00:00 +0000</pubDate>
+      <guid>https://greg.langmead.info/authors/kang-tu/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Steve E. Marmon</title>
+      <link>https://greg.langmead.info/authors/steve-e.-marmon/</link>
+      <pubDate>Thu, 15 Dec 2016 00:00:00 +0000</pubDate>
+      <guid>https://greg.langmead.info/authors/steve-e.-marmon/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Greg Langmead</title>
+      <link>https://greg.langmead.info/authors/greg-langmead/</link>
+      <pubDate>Mon, 17 Jun 2019 01:50:10 +0000</pubDate>
+      <guid>https://greg.langmead.info/authors/greg-langmead/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mark Hopkins</title>
+      <link>https://greg.langmead.info/authors/mark-hopkins/</link>
+      <pubDate>Mon, 17 Jun 2019 01:50:10 +0000</pubDate>
+      <guid>https://greg.langmead.info/authors/mark-hopkins/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tai Vo</title>
+      <link>https://greg.langmead.info/authors/tai-vo/</link>
+      <pubDate>Mon, 17 Jun 2019 01:50:10 +0000</pubDate>
+      <guid>https://greg.langmead.info/authors/tai-vo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>G. Langmead</title>
+      <link>https://greg.langmead.info/authors/g.-langmead/</link>
+      <pubDate>Thu, 01 Jan 2009 00:00:00 +0000</pubDate>
+      <guid>https://greg.langmead.info/authors/g.-langmead/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>K. Knight</title>
+      <link>https://greg.langmead.info/authors/k.-knight/</link>
+      <pubDate>Thu, 01 Jan 2009 00:00:00 +0000</pubDate>
+      <guid>https://greg.langmead.info/authors/k.-knight/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>K. Yamada</title>
+      <link>https://greg.langmead.info/authors/k.-yamada/</link>
+      <pubDate>Thu, 01 Jan 2009 00:00:00 +0000</pubDate>
+      <guid>https://greg.langmead.info/authors/k.-yamada/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>D. Marcu</title>
+      <link>https://greg.langmead.info/authors/d.-marcu/</link>
+      <pubDate>Tue, 01 Jan 2008 00:00:00 +0000</pubDate>
+      <guid>https://greg.langmead.info/authors/d.-marcu/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Gregory Langmead</title>
+      <link>https://greg.langmead.info/authors/gregory-langmead/</link>
+      <pubDate>Sun, 16 Jun 2019 23:23:18 +0000</pubDate>
+      <guid>https://greg.langmead.info/authors/gregory-langmead/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://greg.langmead.info/authors/admin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://greg.langmead.info/authors/admin/</guid>
+      <description>&lt;p&gt;My name is Greg Langmead. I am a machine learning engineer at &lt;a href=&#34;https://machinelearning.apple.com&#34;&gt;Apple&lt;/a&gt;, where I work on &lt;a href=&#34;https://www.apple.com/news/&#34;&gt;Apple News&lt;/a&gt; and Stocks.&lt;/p&gt;&#xA;&lt;p&gt;I am also a student in the &lt;a href=&#34;https://www.cmu.edu/dietrich/philosophy&#34;&gt;Philosophy department&lt;/a&gt; at Carnegie Mellon University. I study &lt;a href=&#34;https://homotopytypetheory.org&#34;&gt;homotopy type theory&lt;/a&gt; and differential geometry. I use theorem proving software such as &lt;a href=&#34;https://en.wikipedia.org/wiki/Agda_(programming_language)&#34;&gt;Agda&lt;/a&gt; and &lt;a href=&#34;https://leanprover.github.io&#34;&gt;Lean&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>

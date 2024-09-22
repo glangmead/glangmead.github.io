@@ -1,17 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>K. Knight | Long Head</title>
+    <title>K. Knight on Long Head</title>
     <link>https://greg.langmead.info/authors/k.-knight/</link>
-      <atom:link href="https://greg.langmead.info/authors/k.-knight/index.xml" rel="self" type="application/rss+xml" />
-    <description>K. Knight</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 01 Jan 2009 00:00:00 +0000</lastBuildDate>
-    <image>
-      <url>https://greg.langmead.info/media/icon_hu1bbe79ab3a4c16ae2bff36fb493a5b01_1012_512x512_fill_lanczos_center_3.png</url>
-      <title>K. Knight</title>
-      <link>https://greg.langmead.info/authors/k.-knight/</link>
-    </image>
-    
+    <description>Recent content in K. Knight on Long Head</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 01 Jan 2009 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://greg.langmead.info/authors/k.-knight/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Adapter for allowing both online and offline training of a text to text system</title>
       <link>https://greg.langmead.info/publications/adapter/</link>
@@ -19,7 +15,6 @@
       <guid>https://greg.langmead.info/publications/adapter/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Task parallelization in a text-to-text system</title>
       <link>https://greg.langmead.info/publications/text-to-text-parallelization/</link>
@@ -27,6 +22,5 @@
       <guid>https://greg.langmead.info/publications/text-to-text-parallelization/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

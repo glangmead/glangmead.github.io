@@ -1,17 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>8 | Long Head</title>
+    <title>8 on Long Head</title>
     <link>https://greg.langmead.info/publication-type/8/</link>
-      <atom:link href="https://greg.langmead.info/publication-type/8/index.xml" rel="self" type="application/rss+xml" />
-    <description>8</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 24 Sep 2020 00:00:00 +0000</lastBuildDate>
-    <image>
-      <url>https://greg.langmead.info/media/icon_hu1bbe79ab3a4c16ae2bff36fb493a5b01_1012_512x512_fill_lanczos_center_3.png</url>
-      <title>8</title>
-      <link>https://greg.langmead.info/publication-type/8/</link>
-    </image>
-    
+    <description>Recent content in 8 on Long Head</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 24 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://greg.langmead.info/publication-type/8/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Personalization Aggregate Content Item Recommendations</title>
       <link>https://greg.langmead.info/publications/recommendations-2019/</link>
@@ -19,7 +15,6 @@
       <guid>https://greg.langmead.info/publications/recommendations-2019/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Apparatus, system and method for string disambiguation and entity ranking</title>
       <link>https://greg.langmead.info/publications/entity-linking-2015/</link>
@@ -27,7 +22,6 @@
       <guid>https://greg.langmead.info/publications/entity-linking-2015/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Reader application with a personalized feed and method of providing recommendations while maintaining user privacy</title>
       <link>https://greg.langmead.info/publications/reader-privacy-2015/</link>
@@ -35,7 +29,6 @@
       <guid>https://greg.langmead.info/publications/reader-privacy-2015/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>System and method for interacting with a displayed work space</title>
       <link>https://greg.langmead.info/publications/work-space-2012/</link>
@@ -43,7 +36,6 @@
       <guid>https://greg.langmead.info/publications/work-space-2012/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Adapter for allowing both online and offline training of a text to text system</title>
       <link>https://greg.langmead.info/publications/adapter/</link>
@@ -51,7 +43,6 @@
       <guid>https://greg.langmead.info/publications/adapter/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Task parallelization in a text-to-text system</title>
       <link>https://greg.langmead.info/publications/text-to-text-parallelization/</link>
@@ -59,6 +50,5 @@
       <guid>https://greg.langmead.info/publications/text-to-text-parallelization/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

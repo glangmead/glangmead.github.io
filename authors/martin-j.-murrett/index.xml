@@ -1,17 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Martin J. Murrett | Long Head</title>
+    <title>Martin J. Murrett on Long Head</title>
     <link>https://greg.langmead.info/authors/martin-j.-murrett/</link>
-      <atom:link href="https://greg.langmead.info/authors/martin-j.-murrett/index.xml" rel="self" type="application/rss+xml" />
-    <description>Martin J. Murrett</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 04 Dec 2018 00:00:00 +0000</lastBuildDate>
-    <image>
-      <url>https://greg.langmead.info/media/icon_hu1bbe79ab3a4c16ae2bff36fb493a5b01_1012_512x512_fill_lanczos_center_3.png</url>
-      <title>Martin J. Murrett</title>
-      <link>https://greg.langmead.info/authors/martin-j.-murrett/</link>
-    </image>
-    
+    <description>Recent content in Martin J. Murrett on Long Head</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 04 Dec 2018 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://greg.langmead.info/authors/martin-j.-murrett/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Apparatus, system and method for string disambiguation and entity ranking</title>
       <link>https://greg.langmead.info/publications/entity-linking-2015/</link>
@@ -19,7 +15,6 @@
       <guid>https://greg.langmead.info/publications/entity-linking-2015/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Reader application with a personalized feed and method of providing recommendations while maintaining user privacy</title>
       <link>https://greg.langmead.info/publications/reader-privacy-2015/</link>
@@ -27,6 +22,5 @@
       <guid>https://greg.langmead.info/publications/reader-privacy-2015/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>
