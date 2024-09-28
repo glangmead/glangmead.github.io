@@ -1,152 +1,277 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Misc on Long Head</title>
     <link>https://greg.langmead.info/category/misc/</link>
     <description>Recent content in Misc on Long Head</description>
-    <generator>Hugo</generator>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 05 Nov 2018 12:36:54 +0000</lastBuildDate>
-    <atom:link href="https://greg.langmead.info/category/misc/index.xml" rel="self" type="application/rss+xml" />
+    
+	    <atom:link href="https://greg.langmead.info/category/misc/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>Smoothness</title>
       <link>https://greg.langmead.info/posts/2018-11-05-smoothness/</link>
       <pubDate>Mon, 05 Nov 2018 12:36:54 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/posts/2018-11-05-smoothness/</guid>
-      <description>&lt;p&gt;This post accompanies a pair of talks given at CMU in November 2018.&lt;/p&gt;&#xA;&lt;p&gt;Coming soon: my notes from the talk, and possibly a screencast.&lt;/p&gt;&#xA;&lt;p&gt;Links&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Differential_structure&#34;&gt;Wikipedia article about differential structures&lt;/a&gt;, with a table of counts of exotic spheres.&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://bookstore.ams.org/fourman&#34;&gt;The Wild World of Four-manifolds&lt;/a&gt; by Alexandru Scorpan (2005), a simply wonderful resource about smooth structures in all dimensions, as a matter of fact.&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://math.stackexchange.com/questions/1577985/smooth-manifold-m-is-completely-determined-by-the-ring-f&#34;&gt;A post that helped me&lt;/a&gt; with a proof about the ring of smooth functions determining a manifold.&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.springer.com/gp/book/9783540562351&#34;&gt;A book that looks wonderful&lt;/a&gt; (&lt;em&gt;Natural Operations in Differential Geometry&lt;/em&gt; by Kolar, Michor and Slovak, 1993), but which I&amp;rsquo;ve had to pilfer rudely for information about the fully faithful embedding of smooth manifolds inside the category of commutative algebras.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+      <description>&lt;p&gt;This post accompanies a pair of talks given at CMU in November 2018.&lt;/p&gt;
+&lt;p&gt;Coming soon: my notes from the talk, and possibly a screencast.&lt;/p&gt;
+&lt;p&gt;Links&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Differential_structure&#34;&gt;Wikipedia article about differential structures&lt;/a&gt;, with a table of counts of exotic spheres.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://bookstore.ams.org/fourman&#34;&gt;The Wild World of Four-manifolds&lt;/a&gt; by Alexandru Scorpan (2005), a simply wonderful resource about smooth structures in all dimensions, as a matter of fact.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://math.stackexchange.com/questions/1577985/smooth-manifold-m-is-completely-determined-by-the-ring-f&#34;&gt;A post that helped me&lt;/a&gt; with a proof about the ring of smooth functions determining a manifold.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.springer.com/gp/book/9783540562351&#34;&gt;A book that looks wonderful&lt;/a&gt; (&lt;em&gt;Natural Operations in Differential Geometry&lt;/em&gt; by Kolar, Michor and Slovak, 1993), but which I&amp;rsquo;ve had to pilfer rudely for information about the fully faithful embedding of smooth manifolds inside the category of commutative algebras.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
     </item>
+    
     <item>
       <title>Lossless Lord of the Rings Blu-ray rip on iPad 3</title>
       <link>https://greg.langmead.info/posts/2012-03-24-lossless-lord-of-the-rings-blu-ray-rip-on-ipad-3/</link>
       <pubDate>Sat, 24 Mar 2012 02:16:24 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/posts/2012-03-24-lossless-lord-of-the-rings-blu-ray-rip-on-ipad-3/</guid>
-      <description>&lt;p&gt;I have seen what 1080p from a Blu-ray looks like on iPad 3, and it is something to behold. The detail and the colors are just beautiful. Over the last few days I&amp;rsquo;ve worked through the technical issues of ripping one of my Blu-ray discs and converting it losslessly to a format the iPad can play. This doesn&amp;rsquo;t work for every Blu-ray because they are not all encoded on the disc in H.264. For example, Blade Runner: The Final Cut is encoded in VC1, and so I had to transcode that (but it still looks amazing). But the LOTR Extended trilogy uses H.264 and so you can have perfection. The steps were:&lt;/p&gt;</description>
+      <description>&lt;p&gt;I have seen what 1080p from a Blu-ray looks like on iPad 3, and it is something to behold. The detail and the colors are just beautiful. Over the last few days I&amp;rsquo;ve worked through the technical issues of ripping one of my Blu-ray discs and converting it losslessly to a format the iPad can play. This doesn&amp;rsquo;t work for every Blu-ray because they are not all encoded on the disc in H.264. For example, Blade Runner: The Final Cut is encoded in VC1, and so I had to transcode that (but it still looks amazing). But the LOTR Extended trilogy uses H.264 and so you can have perfection. The steps were:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;On Windows, where my Blu-ray reader is, I ran makemkv and ripped the main movie plus all the audio tracks to disc. Each of the 6 discs in this trilogy takes between 20-35 GB of disk space. So, a lot!&lt;/li&gt;
+&lt;li&gt;I copied each .mkv file to my Mac and ran MP4Tools, but just to convert the DTS audio track to AAC stereo format.&lt;/li&gt;
+&lt;li&gt;I opened the .mkv and the AAC in Subler and &amp;ldquo;muxed&amp;rdquo; them together.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Joy!&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>Lord of the Rings project to become a web site</title>
       <link>https://greg.langmead.info/posts/2011-06-15-lord-of-the-rings-project-to-become-a-web-site/</link>
       <pubDate>Wed, 15 Jun 2011 01:46:14 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/posts/2011-06-15-lord-of-the-rings-project-to-become-a-web-site/</guid>
-      <description>&lt;p&gt;As I &lt;a href=&#34;https://greg.langmead.info/?p=114&#34;&gt;have written previously&lt;/a&gt;, I created an annotated list of excerpts from &lt;em&gt;The Lord of the Rings&lt;/em&gt; to encapsulate the differences in the plot (and theme) from the Peter Jackson films. I was unhappy with the tabular format of a Google spreadsheet though, and so I cast around for other ways to present this information. My requirements were&lt;/p&gt;</description>
+      <description>&lt;p&gt;As I &lt;a href=&#34;https://greg.langmead.info/?p=114&#34;&gt;have written previously&lt;/a&gt;, I created an annotated list of excerpts from &lt;em&gt;The Lord of the Rings&lt;/em&gt; to encapsulate the differences in the plot (and theme) from the Peter Jackson films. I was unhappy with the tabular format of a Google spreadsheet though, and so I cast around for other ways to present this information. My requirements were&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;  1. Each excerpt should have its own page so I could write expanded versions of my thoughts.
+
+  2. There should be a feature to assign structured metadata to each post so I could assign fields like &amp;quot;page number in edition X&amp;quot;, &amp;quot;novel name&amp;quot;, &amp;quot;chapter&amp;quot; and so on.
+
+  3. Each page should support user comments.
+
+  4. There should be a one-page view that is condensed and tabular like the spreadsheet.
+
+  5. There should be a robust category feature so I could group things in various ways.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I contemplated using a CMS and even installed a few. But at the end of the day I decided to use WordPress, even though it required some research to solve items 2 and 4. Also, WordPress has a numeric paradigm for linking to posts (each post has a unique number starting from 1), and I didn&amp;rsquo;t like that because it makes the excerpts look sequential. Although they are sequential in a sense (inside the novels) if I ever were to insert a new excerpt between two existing ones, it would have a nonsequential post ID.&lt;/p&gt;
+&lt;p&gt;I found solutions to all of this, but haven&amp;rsquo;t fully implemented everything yet. The results will go up at &lt;a href=&#34;http://lotr.langmead.info&#34;&gt;http://lotr.langmead.info&lt;/a&gt;.&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>Mathematics with MathJax</title>
       <link>https://greg.langmead.info/posts/2011-06-14-mathematics-with-mathjax/</link>
       <pubDate>Tue, 14 Jun 2011 16:05:46 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/posts/2011-06-14-mathematics-with-mathjax/</guid>
-      <description>&lt;p&gt;This is a post to test the functionality of &lt;a href=&#34;http://www.mathjax.org&#34;&gt;MathJax&lt;/a&gt;. Just put a simple script tag in your header, pointing to a global copy of mathjax.js distributed via Amazon&amp;rsquo;s CloudFront content distribution network. After that, you can enter LaTeX or MathML directly in your posts and MathJax will render it into beautiful equations. Here is a favorite (from &lt;a href=&#34;http://arxiv.org/abs/hep-th/0210192&#34;&gt;my dissertation&lt;/a&gt;):&lt;/p&gt;</description>
+      <description>&lt;p&gt;This is a post to test the functionality of &lt;a href=&#34;http://www.mathjax.org&#34;&gt;MathJax&lt;/a&gt;. Just put a simple script tag in your header, pointing to a global copy of mathjax.js distributed via Amazon&amp;rsquo;s CloudFront content distribution network. After that, you can enter LaTeX or MathML directly in your posts and MathJax will render it into beautiful equations. Here is a favorite (from &lt;a href=&#34;http://arxiv.org/abs/hep-th/0210192&#34;&gt;my dissertation&lt;/a&gt;):&lt;/p&gt;
+&lt;p&gt;[ \Pi \wedge^{2}&lt;em&gt;{+}TX\otimes\wedge^{2}&lt;/em&gt;{+}T^{&lt;em&gt;}X \hookrightarrow
+\Pi\wedge^{2}_{+}TX\otimes T^{&lt;/em&gt;}X\otimes T^{*}X ]&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>Digital conservation</title>
       <link>https://greg.langmead.info/posts/2010-09-30-digital-conservation/</link>
       <pubDate>Thu, 30 Sep 2010 13:38:16 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/posts/2010-09-30-digital-conservation/</guid>
-      <description>&lt;p&gt;If I&amp;rsquo;m fixing a typo where I typed &amp;ldquo;loose&amp;rdquo; instead of &amp;ldquo;lose&amp;rdquo;, then is it less wasteful if I click inside and delete one of the &amp;ldquo;o&amp;quot;s, versus double-clicking the whole word and typing four brand new letters? If I do it the first way, it seems like I am reusing the existing four correct letters, so it seems less wasteful.&lt;/p&gt;</description>
+      <description>&lt;p&gt;If I&amp;rsquo;m fixing a typo where I typed &amp;ldquo;loose&amp;rdquo; instead of &amp;ldquo;lose&amp;rdquo;, then is it less wasteful if I click inside and delete one of the &amp;ldquo;o&amp;quot;s, versus double-clicking the whole word and typing four brand new letters? If I do it the first way, it seems like I am reusing the existing four correct letters, so it seems less wasteful.&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>The Ur-Quan Masters</title>
       <link>https://greg.langmead.info/posts/2010-09-26-the-ur-quan-masters/</link>
       <pubDate>Sun, 26 Sep 2010 19:34:42 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/posts/2010-09-26-the-ur-quan-masters/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://greg.langmead.info/img/Screen-shot-2010-09-26-at-3.06.20-PM.png&#34;&gt;&lt;img alt=&#34;Screenshot of The Ur-Quan Masters&#34; src=&#34;https://greg.langmead.info/img/Screen-shot-2010-09-26-at-3.06.20-PM.png&#34;&gt;&#xA;&lt;/a&gt;&#xA;I learned something new this weekend. First, I learned that one of my favorite childhood games, &lt;a href=&#34;http://en.wikipedia.org/wiki/Archon:_The_Light_and_the_Dark&#34;&gt;Archon&lt;/a&gt;, has some spiritual successors. The game designer Paul Reiche III, who designed Archon, went on to design other games from his studio Toys for Bob. I just learned all of this when I was listening to a podcast where some old timers like me were discussing the game Star Control 2, which Reiche designed and which was released for PC in 1992, and then on 3DO. It sounded like a great game, and given the Archon pedigree I was curious to try it out. Well the good news is that 3DO released the source code back to Reiche in 2002 and he made it open source, and so there are many ways to &lt;a href=&#34;http://sc2.sourceforge.net/downloads.php&#34;&gt;play the game today on modern hardware&lt;/a&gt; including Mac, PC, Wii, and Android. The name &amp;ldquo;Star Control 2&amp;rdquo; is trademarked and so this open source version is called &amp;ldquo;The Ur-Quan Masters.&amp;rdquo; Having played for 30 minutes, I was immediately drawn in to the accessible gameplay, the gentle introduction that gives you full control but subtly guides you to try new things, and the tinge of humor in the dialog. An abandonware success story!&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://greg.langmead.info/img/Screen-shot-2010-09-26-at-3.06.20-PM.png&#34;&gt;&lt;img alt=&#34;Screenshot of The Ur-Quan Masters&#34; src=&#34;https://greg.langmead.info/img/Screen-shot-2010-09-26-at-3.06.20-PM.png&#34;&gt;
+&lt;/a&gt;
+I learned something new this weekend. First, I learned that one of my favorite childhood games, &lt;a href=&#34;http://en.wikipedia.org/wiki/Archon:_The_Light_and_the_Dark&#34;&gt;Archon&lt;/a&gt;, has some spiritual successors. The game designer Paul Reiche III, who designed Archon, went on to design other games from his studio Toys for Bob. I just learned all of this when I was listening to a podcast where some old timers like me were discussing the game Star Control 2, which Reiche designed and which was released for PC in 1992, and then on 3DO. It sounded like a great game, and given the Archon pedigree I was curious to try it out. Well the good news is that 3DO released the source code back to Reiche in 2002 and he made it open source, and so there are many ways to &lt;a href=&#34;http://sc2.sourceforge.net/downloads.php&#34;&gt;play the game today on modern hardware&lt;/a&gt; including Mac, PC, Wii, and Android. The name &amp;ldquo;Star Control 2&amp;rdquo; is trademarked and so this open source version is called &amp;ldquo;The Ur-Quan Masters.&amp;rdquo; Having played for 30 minutes, I was immediately drawn in to the accessible gameplay, the gentle introduction that gives you full control but subtly guides you to try new things, and the tinge of humor in the dialog. An abandonware success story!&lt;/p&gt;
+&lt;p&gt;The only bad news is that &lt;a href=&#34;http://cci-games.com/&#34;&gt;the iPhone port&lt;/a&gt; seems to have stalled just when it was almost complete.&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>Star Wars for Toddlers is a go</title>
       <link>https://greg.langmead.info/posts/2010-09-26-star-wars-for-toddlers-is-a-go/</link>
       <pubDate>Sun, 26 Sep 2010 19:19:32 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/posts/2010-09-26-star-wars-for-toddlers-is-a-go/</guid>
-      <description>&lt;p&gt;I finished editing Star Wars, and my 3-year-old loves it, and I feel guilt-free about showing it to her. There were some wrinkles during the process, so the current version is actually the third one I made (I&amp;rsquo;m REAL familiar with the movie now, at least around the problematic scenes). I ended up having success with the Mac-based tool &lt;a href=&#34;http://simplemoviex.com/SimpleMovieX/&#34;&gt;SimpleMovieX&lt;/a&gt;, and in fact it&amp;rsquo;s the first piece of software I&amp;rsquo;ve paid for in a long time (and it&amp;rsquo;s not cheap, $40). The free version is full-featured, but saving out the whole movie would have taken a couple of days because they deliberately slow down file saves in order to get you to pay. Still, I ended up liking that particular method of having a free trial, because it let me experiment with all the features over any number of weeks or months (which is sometimes how long it takes me to get my act together).&lt;/p&gt;</description>
+      <description>&lt;p&gt;I finished editing Star Wars, and my 3-year-old loves it, and I feel guilt-free about showing it to her. There were some wrinkles during the process, so the current version is actually the third one I made (I&amp;rsquo;m REAL familiar with the movie now, at least around the problematic scenes). I ended up having success with the Mac-based tool &lt;a href=&#34;http://simplemoviex.com/SimpleMovieX/&#34;&gt;SimpleMovieX&lt;/a&gt;, and in fact it&amp;rsquo;s the first piece of software I&amp;rsquo;ve paid for in a long time (and it&amp;rsquo;s not cheap, $40). The free version is full-featured, but saving out the whole movie would have taken a couple of days because they deliberately slow down file saves in order to get you to pay. Still, I ended up liking that particular method of having a free trial, because it let me experiment with all the features over any number of weeks or months (which is sometimes how long it takes me to get my act together).&lt;/p&gt;
+&lt;p&gt;All that said, I would like to make a fourth version. In addition to fixing a couple of my edits, I have two other problems. First, the file size is too big, and I think I can get decent quality with a lower bit rate and smaller file size. Secondly, there is a white line along the bottom. I believe this is because the software decided to render it at 768x327 instead of 768x328. Many players assume a multiple of four for the resolution, and so put a white line since there&amp;rsquo;s no data on the 328th row. I&amp;rsquo;m not sure how to force SimpleMovieX to use a different size, since it only had a short pop-up of choices. Maybe I can use a different tool for the transcoding part.&lt;/p&gt;
+&lt;p&gt;Oh, and by the way, I didn&amp;rsquo;t find any good tools that could work directly from a DVD rip, so I had to encode to H.264 with very high quality and size, edit that, and transcode it. Moreover, I had started off hoping to directly edit the H.264 and just save it out, but the audio kept getting out of sync more and more after each edit. I learned about keyframes, and that&amp;rsquo;s how I found SimpleMovieX, whose primary feature was to let me only visit keyframes while editing, but it helped NOT AT ALL. Come to think of it, if SimpleMovieX didn&amp;rsquo;t let me edit, and didn&amp;rsquo;t transcode well, I&amp;rsquo;m not sure I&amp;rsquo;ve even found the right tool after all. But I did get a pretty good result, so there.&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>Star Wars for toddlers</title>
       <link>https://greg.langmead.info/posts/2010-09-11-star-wars-for-toddlers/</link>
       <pubDate>Sat, 11 Sep 2010 18:03:16 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/posts/2010-09-11-star-wars-for-toddlers/</guid>
-      <description>&lt;p&gt;My daughter is 3, and her best friend is also 3. He has been shown the entire Star Wars trilogy already, and is in love with Darth Vader. So my daughter hears about it a lot, and is excited to see it too. Recently I showed her a couple moments from Episode 4, and she loved it. So I&amp;rsquo;m going to try to make a version of the movie that is appropriate for her. I&amp;rsquo;ll edit out everything I deem too intense or violent, and see how it goes. So far, I have a rip of the DVD, and I&amp;rsquo;m trying to get it into iMovie.&lt;/p&gt;</description>
+      <description>&lt;p&gt;My daughter is 3, and her best friend is also 3. He has been shown the entire Star Wars trilogy already, and is in love with Darth Vader. So my daughter hears about it a lot, and is excited to see it too. Recently I showed her a couple moments from Episode 4, and she loved it. So I&amp;rsquo;m going to try to make a version of the movie that is appropriate for her. I&amp;rsquo;ll edit out everything I deem too intense or violent, and see how it goes. So far, I have a rip of the DVD, and I&amp;rsquo;m trying to get it into iMovie.&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>Let&#39;s hurry along the iPad gaming revolution</title>
       <link>https://greg.langmead.info/posts/2010-07-10-lets-hurry-along-the-ipad-gaming-revolution/</link>
       <pubDate>Sat, 10 Jul 2010 19:19:43 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/posts/2010-07-10-lets-hurry-along-the-ipad-gaming-revolution/</guid>
-      <description>&lt;p&gt;I am so excited at the possibilities the iPad holds for gaming, especially strategy gaming. Others have voiced enthusiasm, but I think there&amp;rsquo;s another level or two of excitement that folks are missing. So let&amp;rsquo;s hasten the story along because I want to play these games. Let me convince you I&amp;rsquo;m right, and then you can go make some games for me. I&amp;rsquo;ll pay $50 for the games I have in mind. Do you hear me, Matrix, Paradox, Slitherine, Panther, Creative Assembly, SSG, Firaxis, Big Huge Games, TGW, Wizards, and friends?&lt;/p&gt;</description>
+      <description>&lt;p&gt;I am so excited at the possibilities the iPad holds for gaming, especially strategy gaming. Others have voiced enthusiasm, but I think there&amp;rsquo;s another level or two of excitement that folks are missing. So let&amp;rsquo;s hasten the story along because I want to play these games. Let me convince you I&amp;rsquo;m right, and then you can go make some games for me. I&amp;rsquo;ll pay $50 for the games I have in mind. Do you hear me, Matrix, Paradox, Slitherine, Panther, Creative Assembly, SSG, Firaxis, Big Huge Games, TGW, Wizards, and friends?&lt;/p&gt;
+&lt;p&gt;The best examples of strategy games on the iPad right now are Small World and Civilization Revolution. I consider these &amp;ldquo;console-like&amp;rdquo; games, since Civ Rev is in fact a port of a console game, and Small World is in the same vein as the recent spate of board game conversions for XBLA, like Catan, Carcassonne, Lost Cities, and Ticket to Ride. I&amp;rsquo;d like to argue that these titles are not nearly ambitious enough, because I think the iPad can supplant every aspect of PC gaming due to the touch interface. Small World comes closer to what I mean since it uses touch, and it makes excellent use of pretty 2D graphics and sound, but still, it could easily live on XBLA. Conversely, I don&amp;rsquo;t see any reason all of Civ IV couldn&amp;rsquo;t be brought to the iPad.&lt;/p&gt;
+&lt;p&gt;The console comparison, however, is strengthened by the analogy of the App Store to the curated download stores that live in the consoles. John Gruber of daringfireball.net makes the case that the iPad and iPhone are best thought of as &amp;ldquo;app consoles&amp;rdquo; (see &lt;a href=&#34;http://daringfireball.net/linked/2010/05/03/fraser-back-in&#34;&gt;here&lt;/a&gt;). So I expect to see  games that are only as ambitious as XBLA titles for a while, but I am sure much more is possible.&lt;/p&gt;
+&lt;p&gt;Holding the iPad in your hands and using your fingers is a whole different level of control than that offered by the game consoles. An iPad is great for reading, and for touching. It offers terrific precision, and greater immersion than a PC. It has a gaggle of new UI paradigms that are best observed in the non-game apps that exist now, like Mail, Pages and Keynote. The popover menu is one example (see &lt;a href=&#34;https://developer.apple.com/design/human-interface-guidelines/ios/views/popovers/&#34;&gt;here&lt;/a&gt;). All of this can bring nice, neat order to complex interfaces. This, in fact, is one of Apple&amp;rsquo;s strengths.&lt;/p&gt;
+&lt;p&gt;I also feel strongly that reading on the iPad is an entirely different experience than reading on a laptop screen or monitor. There is empirical evidence to back this up &lt;a href=&#34;http://www.useit.com/alertbox/ipad-kindle-reading.html&#34;&gt;here&lt;/a&gt; (punchline: reading on an iPad, Kindle, or from a real book scores about 5.7/7 whereas reading on the PC scores 3.6/7). But you don&amp;rsquo;t need the studies really, because if you try one you will see. Reading web pages on the iPad is actually a joyful experience. My theory is that the brain processes visual input differently when it&amp;rsquo;s being held in your hands. Maybe it&amp;rsquo;s the reinforcement coming from using two of your senses, even if all there is to touch is smooth glass. Whatever the reason, and however surprising it seems to you, it&amp;rsquo;s just not the same medium as the PC screen.&lt;/p&gt;
+&lt;p&gt;So the iPad offers a device where reading is superior to a PC, interactivity is superior in many ways (every device has an accelerometer, compass, and a mic and speakers, which developers can count on), and the UI is different, and arguably superior, but certainly not inferior (touch versus mouse). Plus new UI paradigms exist that smart designers can take advantage of to bridge the remaining gap in screen real estate. So why limit ourselves to ports of simple boardgames? I want to see Advanced Squad Leader and other wargames brought to the iPad as ports from the physical games. I want to see all the Paradox titles and SSG and Panther wargames brought over, as ports from the PC games. (Strangely enough, Paradox announced an iPhone port of Hearts of Iron and Majesty in 2008, but then never followed up in words or deeds. The press release has been removed from their archive, but some game sites are still tracking the HOI port, like &lt;a href=&#34;http://wireless.ign.com/objects/143/14304006.html&#34;&gt;IGN&lt;/a&gt;.) I want to see the back catalog brought over as well: X-Com, Heroes of Might and Magic, you name it! (Someone is working on DOSBox for iOS, called &lt;a href=&#34;http://www.litchie.net/apps/dospad.html&#34;&gt;DOSPad&lt;/a&gt;, but it will probably not be approved given current App Store policies.) I&amp;rsquo;m just naming the games of most interest to me, but I don&amp;rsquo;t really see any limitation.&lt;/p&gt;
+&lt;p&gt;After all those games are brought over, there&amp;rsquo;s even another level we can go, because none of these ports will make full use of the accelerometer and multitouch capabilities, and the greater immersion possible on the iPad. I can&amp;rsquo;t foresee those games, though, because I&amp;rsquo;m not a designer. One category of example for the hardcore strategy gamer might be a hybrid approach where a board game or wargame with lots of rules and calculations could have a tabletop component and an iPad component that makes playing more fun. You could even take &lt;em&gt;that&lt;/em&gt; idea to the next level by making the game even more complex without adding strain to the players. It would be some sort of interactive engine that contains all the rules. Or maybe it&amp;rsquo;s the opposite. Maybe what we want are sandboxes with lots of pieces and board configurations, and we can play whatever game we want and enforce the rules ourselves like with boardgames. I&amp;rsquo;d especially love a sandbox that came with MTG cards but didn&amp;rsquo;t force the linear application of rules into the UI the way Duels of the Planeswalkers does, but rather leaves it up to me like &lt;a href=&#34;http://www.octgn.net/&#34;&gt;OCTGN2&lt;/a&gt; or &lt;a href=&#34;http://www.magicworkstation.com/&#34;&gt;Magic Workstation&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;OK, having said ALL of that, I actually do like the way things are going. There&amp;rsquo;s an X-COM clone in the works for iPad (&lt;a href=&#34;http://isochron.jseuss.com/&#34;&gt;Isochron&lt;/a&gt;), and plenty of SRPG originals and ports coming (e.g., Final Fantasy Tactics in September). As I learned on Three Moves Ahead, Small World was profitable for Days of Wonder on its first day of release, so that will surely be noticed, and hopefully at least all the XBLA board games will be brought over. But what I really want is EU3!&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>Tolkien project complete</title>
       <link>https://greg.langmead.info/posts/2010-07-10-tolkien-project-complete/</link>
       <pubDate>Sat, 10 Jul 2010 17:58:10 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/posts/2010-07-10-tolkien-project-complete/</guid>
-      <description>&lt;p&gt;I finished my project to annotate the differences between the book and movie version of LOTR. So I updated &lt;a href=&#34;http://greg.langmead.info/?p=114&#34;&gt;my earlier post&lt;/a&gt; to point to the finished product.&lt;/p&gt;</description>
+      <description>&lt;p&gt;I finished my project to annotate the differences between the book and movie version of LOTR. So I updated &lt;a href=&#34;http://greg.langmead.info/?p=114&#34;&gt;my earlier post&lt;/a&gt; to point to the finished product.&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>OK</title>
       <link>https://greg.langmead.info/posts/2010-03-30-ok/</link>
       <pubDate>Tue, 30 Mar 2010 20:14:31 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/posts/2010-03-30-ok/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;ve read a few theories about the origin of our expression &amp;ldquo;OK.&amp;rdquo; But I haven&amp;rsquo;t come across this one that occurred to me the other day. When you hold your hand in that gesture that means &amp;ldquo;OK&amp;rdquo;, you make a circle with your thumb and index finger. That&amp;rsquo;s an O, and your other three fingers sort of make a &amp;ldquo;K&amp;rdquo;. The middle finger is the vertical stem, and the other two fingers are the diagonal ones. Just a thought.&lt;/p&gt;</description>
+      <description>&lt;p&gt;I&amp;rsquo;ve read a few theories about the origin of our expression &amp;ldquo;OK.&amp;rdquo; But I haven&amp;rsquo;t come across this one that occurred to me the other day. When you hold your hand in that gesture that means &amp;ldquo;OK&amp;rdquo;, you make a circle with your thumb and index finger. That&amp;rsquo;s an O, and your other three fingers sort of make a &amp;ldquo;K&amp;rdquo;. The middle finger is the vertical stem, and the other two fingers are the diagonal ones. Just a thought.&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>Distance learning for the over-educated</title>
       <link>https://greg.langmead.info/posts/2010-03-24-distance-learning-for-the-over-educated/</link>
       <pubDate>Wed, 24 Mar 2010 02:51:23 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/posts/2010-03-24-distance-learning-for-the-over-educated/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;m definitely a &amp;ldquo;lifelong learner&amp;rdquo; type, always craving new courses, books, or ideas. I even love reading long computer game manuals for complicated games like Europa Universalis 3. It&amp;rsquo;s pretty easy to learn the beginning of a new field, because there are usually some audiobooks, Teaching Company courses, or online materials to introduce you to the main concepts. But what if you already know a lot about something, and you want to learn even more?&lt;/p&gt;</description>
+      <description>&lt;p&gt;I&amp;rsquo;m definitely a &amp;ldquo;lifelong learner&amp;rdquo; type, always craving new courses, books, or ideas. I even love reading long computer game manuals for complicated games like Europa Universalis 3. It&amp;rsquo;s pretty easy to learn the beginning of a new field, because there are usually some audiobooks, Teaching Company courses, or online materials to introduce you to the main concepts. But what if you already know a lot about something, and you want to learn even more?&lt;/p&gt;
+&lt;p&gt;What if you are already educated in a field, and you want to learn about a sub-field, or a more advanced version of what you already know? Here, your options are more limited. If you are lucky enough to live near a college or university, and that university teaches in your field, and offers a course in the sub-field you want to explore, and you have time to audit a course, and the professor permits you to audit, and you manage to attend twice a week while holding down a job, then goody for you! I am almost in that boat, since I live in Pittsburgh, which has several colleges and universities, including two major universities that have several departments covering the areas I love. In browsing the Fall 2010 class schedules, I see a few courses I&amp;rsquo;d like to take. Some are more related to work, some are more related to my past life as a mathematician. If I convince myself I should take time during the work day to take a class, then I might be in luck. But what if I specifically wanted to take a graduate-level class in, say, algebraic geometry, and none was on offer in the Fall? Are there online algebraic geometry courses?&lt;/p&gt;
+&lt;p&gt;No. Believe me, I looked everywhere. &lt;a href=&#34;http://www.msri.org&#34;&gt;MSRI&lt;/a&gt; has lots of lectures posted online, and they are usually long workshops that might constitute a good introduction to a subject, but their videos are all broken and have been since I first went to the site, and are still broken three weeks after I wrote to inform them they were broken. I looked at everything in iTunes U, and those cover mainly undergraduate topics, and the few exceptions were not interesting to me. I looked at MIT OpenCourseware, but everything with video lectures is on iTunes U, which I already know doesn&amp;rsquo;t cover what I want. Lecture notes don&amp;rsquo;t help any more than books.&lt;/p&gt;
+&lt;p&gt;So what about books? I have lots of books. I have one next to me called &amp;ldquo;Heat Kernels and Dirac Operators&amp;rdquo; which is beautiful and fun to read. But I don&amp;rsquo;t have the discipline to work through it all alone. I need the structure of a class, or a seminar.&lt;/p&gt;
+&lt;p&gt;An informal seminar would be fantastic. If I knew someone in Pittsburgh who wanted to work through &amp;ldquo;Heat Kernels&amp;rdquo; with me, that would probably be the best possible outcome. But the odds that there is such a person and that I will meet them during my limited time outside of work is zilch.&lt;/p&gt;
+&lt;p&gt;Which brings me to my dual proposal for the world. First, please record video of all your graduate courses and sell them on iTunes, or offer them free through iTunes U, or offer them to distance learning students at a reasonable rate, and make the course easy to find. I mean, my own alma mater, Columbia University, should offer me, an alumnus, video of all the math department courses. I&amp;rsquo;d love them for it. Yes I took some of those courses, but now, years later, I&amp;rsquo;d take different ones, and different ones would be offered than were offered during my years there anyway, and it would be great.&lt;/p&gt;
+&lt;p&gt;Part two of my proposal is for the Web 2.0 entrepreneurs. Let me meet, non-awkwardly, on a web site, people like myself, and form an ad-hoc videoconferencing seminar. We would agree on the reading material, and take turns presenting chapters or sections of the material, like in a regular seminar. Video skype, plus screen sharing or web conferencing, plus whiteboards, it could totally work! The technology all exists, we just need a way to find each other, and to have a web site with enough features to support it. Should I create it? Would anybody show up? Maybe I&amp;rsquo;ll post to mathoverflow.com and see if anyone agrees.&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>Giving digital items is hard</title>
       <link>https://greg.langmead.info/posts/2009-12-08-giving-digital-items-is-hard/</link>
       <pubDate>Tue, 08 Dec 2009 20:28:12 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/posts/2009-12-08-giving-digital-items-is-hard/</guid>
-      <description>&lt;p&gt;Here&amp;rsquo;s a list of a few things I like: books, audiobooks, music, movies, video games, iPhone apps. I consume these items on a variety of devices: Kindle, iPhone, PC, Mac, Xbox, PS3, Wii. Most of those platforms have a digital download mechanism in place for the software, e.g. you can download music or audiobooks from the iTunes store, Amazon or Audible. You can download movies from iTunes, Amazon, Xbox, or PS3. You download iPhone apps from iTunes. You can download Kindle books from Amazon. You can download many PC games from Steam. Some games are ONLY available for download. The consoles have their own built-in stores that use points or a credit card.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Here&amp;rsquo;s a list of a few things I like: books, audiobooks, music, movies, video games, iPhone apps. I consume these items on a variety of devices: Kindle, iPhone, PC, Mac, Xbox, PS3, Wii. Most of those platforms have a digital download mechanism in place for the software, e.g. you can download music or audiobooks from the iTunes store, Amazon or Audible. You can download movies from iTunes, Amazon, Xbox, or PS3. You download iPhone apps from iTunes. You can download Kindle books from Amazon. You can download many PC games from Steam. Some games are ONLY available for download. The consoles have their own built-in stores that use points or a credit card.&lt;/p&gt;
+&lt;p&gt;Of all the permutations and combinations, only a handful permit gift-giving. You can &amp;ldquo;gift&amp;rdquo; (as we say now) iTunes music, movies, or audiobooks from one account to another. You can do the same with Steam to give someone a PC game. You can purchase an Xbox downloadable game code from Amazon and give it to somebody. That&amp;rsquo;s it, that&amp;rsquo;s the full subset of the above available for giving as a gift. You cannot give iPhone apps, Amazon music or movies, Kindle books, or PS3 or Wii downloadable games. The best gift-giving experience is still to give someone a physical item, but as time goes on that&amp;rsquo;s just not what I want to receive, with the notable exception of movies. I am not yet comfortable owning a purely digital version of a movie. I want to have the disc, preferably blu-ray since the quality is the highest possible.&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>Mac Moments: Not using paths</title>
       <link>https://greg.langmead.info/posts/2009-07-27-mac-moments-not-using-paths/</link>
       <pubDate>Mon, 27 Jul 2009 03:14:45 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/posts/2009-07-27-mac-moments-not-using-paths/</guid>
-      <description>&lt;p&gt;On my Mac, I had a movie in my Movies folder called &amp;ldquo;Sesame Street Season 1 part 1.m4v&amp;rdquo;. I dragged it to iTunes so I could play it there (for my daughter), and all was well. One day I wanted to move those old Sesame Streets into a folder called &amp;ldquo;old&amp;rdquo;, so I made the &amp;ldquo;old&amp;rdquo; folder and dragged that movie in, no big deal.&lt;/p&gt;</description>
+      <description>&lt;p&gt;On my Mac, I had a movie in my Movies folder called &amp;ldquo;Sesame Street Season 1 part 1.m4v&amp;rdquo;. I dragged it to iTunes so I could play it there (for my daughter), and all was well. One day I wanted to move those old Sesame Streets into a folder called &amp;ldquo;old&amp;rdquo;, so I made the &amp;ldquo;old&amp;rdquo; folder and dragged that movie in, no big deal.&lt;/p&gt;
+&lt;p&gt;iTunes still had a record of that movie file of course, but what happens when I ask iTunes to play it? What do you think &lt;em&gt;ought&lt;/em&gt; to happen? What do you &lt;em&gt;wish&lt;/em&gt; would happen? What do you think computers are &lt;em&gt;capable&lt;/em&gt; of enabling to happen?&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ll tell you what happens on a Mac: it plays the movie, and on Windows and all other operating systems, it does not. This is not about iTunes. The distinction holds for any piece of software at all that maintains pointers to files, whether it&amp;rsquo;s a media organizer, or a Recent Documents feature in a word processor. This is because on Windows, there is no other system-provided mechanism for storing file locations besides paths. Paths include the name of all enclosing folders, plus the filename, plus of course the drive letter on Windows, e.g. &amp;ldquo;C:\Documents and Settings\Greg\My Movies\Sesame Street Season 1 part 1.m4v&amp;rdquo;. If I change the path to include &amp;ldquo;old&amp;rdquo; partway along the chain, which is what moving the file into &amp;ldquo;old&amp;rdquo; amounts to, then the path has changed and the original path is invalid, it points to nothing.&lt;/p&gt;
+&lt;p&gt;I will not describe the technical details of the mechanism the Mac uses instead, because frankly it doesn&amp;rsquo;t matter, that&amp;rsquo;s the whole point. It&amp;rsquo;s a smart piece of technology that hides from the user, but enables the user to work in a more intuitive way. It permits all software not to be sensitive to changes the user makes to the locations of files or folders.&lt;/p&gt;
+&lt;p&gt;This mechanism has existed since the early days of the Mac. It&amp;rsquo;s not some fancy modern cpu-intensive disk-intensive feature that indexes your hard drive or anything. It&amp;rsquo;s just a better way of storing file locations in software, since users like to move stuff around.&lt;/p&gt;
+&lt;p&gt;This is one of those differences that I usually have trouble articulating, but subconsciously affects all my decisions, just like the fragility of paths affects many of my decisions when I&amp;rsquo;m using Windows.&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>Lord of the Rings in 100 48 pages</title>
       <link>https://greg.langmead.info/posts/2009-07-19-lord-of-the-rings-in-100-pages/</link>
       <pubDate>Sun, 19 Jul 2009 18:12:40 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/posts/2009-07-19-lord-of-the-rings-in-100-pages/</guid>
-      <description>&lt;p&gt;I am a huge fan of Peter Jackson’s movie versions of The Lord of the Rings novels. A HUGE fan. But I am also a fan of the books, which I have read several times, and which I have also done supplementary reading on.&lt;/p&gt;</description>
+      <description>&lt;p&gt;I am a huge fan of Peter Jackson’s movie versions of The Lord of the Rings novels. A HUGE fan. But I am also a fan of the books, which I have read several times, and which I have also done supplementary reading on.&lt;/p&gt;
+&lt;p&gt;This post is for anyone who enjoyed watching the movies, is willing to re-watch the extended editions, and has a desire to read the books but hesitates to invest the full time required to read 3 novels.&lt;/p&gt;
+&lt;p&gt;What I have done is go through the books and find the paragraphs where the story differs from the story told in the movies. This serves two purposes. Firstly, for me, there are a few things I felt were especially disappointing or overlooked in the movies, including elements that I consider thematically crucial, and I want others to share in that opinion without having to read every word. Secondly, for you, it will allow you to use the movies to substitute for most of the content of the novels, which when added to the material I am listing here, will give you the entire story as presented in the book. It will also give you good exposure to Tolkien’s writing style and the tone of the books.&lt;/p&gt;
+&lt;p&gt;I have tried to make it easy for you to follow along no matter what edition of the novels you have. I have provided page numbers for the 3-paperback version published by Ballantine in 1993, and the red single-volume collector’s edition. But in addition I provide the chapter number and the snippet of text that begins and ends the excerpt, plus the approximate number of pages the excerpt runs in my paperback edition, just to give you a sense of the size of the excerpt. If you own the Kindle or another electronic edition, you can probably type in my snippets to find the beginning. I have also annotated each excerpt, to indicate why I am including it.&lt;/p&gt;
+&lt;p&gt;Note that each novel has two sets of chapters numbered from 1, since it’s actually a 6 ‘book’ story the way Tolkien divided it up. So &amp;ldquo;TTT 2.5&amp;rdquo; means &lt;em&gt;The Two Towers&lt;/em&gt;, book 2, chapter 5.&lt;/p&gt;
+&lt;p&gt;The table is available as &lt;a href=&#34;http://spreadsheets.google.com/ccc?key=0AmZerv8xRx48dDVBV2ZxUk1FaEdyRmFQbUU4ZHJ5b2c&amp;hl=en&#34;&gt;a Google spreadsheet document&lt;/a&gt;.&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>My interpretation of 42% pro-choice</title>
       <link>https://greg.langmead.info/posts/2009-05-18-my-interpretation-of-42-pro-choice/</link>
       <pubDate>Mon, 18 May 2009 02:44:31 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/posts/2009-05-18-my-interpretation-of-42-pro-choice/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;m going way out on a limb here, so bear with me.&lt;/p&gt;&#xA;&lt;p&gt;42% of Americans are pro-choice, according to a new Gallup poll, and 51% are pro-life. My response to this is: since so many Americans disagree with the pro-life stance, then we should stick with the neutral road, which is the policy to keep abortions legal.&lt;/p&gt;</description>
+      <description>&lt;p&gt;I&amp;rsquo;m going way out on a limb here, so bear with me.&lt;/p&gt;
+&lt;p&gt;42% of Americans are pro-choice, according to a new Gallup poll, and 51% are pro-life. My response to this is: since so many Americans disagree with the pro-life stance, then we should stick with the neutral road, which is the policy to keep abortions legal.&lt;/p&gt;
+&lt;p&gt;Those who are against abortion may avoid having them, and convince those around them not to have them, either. That is also neutral. What is not neutral is to project one&amp;rsquo;s morality onto others and require adherence without sharing the morality. Not when there is so much disagreement. There is no clear morality here if 42% disagree. Morality is not democracy, I&amp;rsquo;m sure you&amp;rsquo;ll agree, but when did it become OK to require conformance to one view in the presence of many others? Maybe in Afghanistan, but not here.&lt;/p&gt;
+&lt;p&gt;If John is pro-life and Mary has an abortion, she does not commit any sin against John. John is NOT INVOLVED unless he actively and aggressively meddles. Any view that reaches out and forms an opinion about the actions of others is suspect. I question the motives of that person, because I suspect they are overcome by their will to dominate others.&lt;/p&gt;
+&lt;p&gt;Oh, and by the way, I&amp;rsquo;d like to see the poll numbers broken down by response to the question &amp;ldquo;are you anti-abortion?&amp;rdquo;&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>Why is science important?</title>
       <link>https://greg.langmead.info/posts/2009-03-13-why-is-science-important/</link>
       <pubDate>Fri, 13 Mar 2009 21:23:42 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/posts/2009-03-13-why-is-science-important/</guid>
-      <description>&lt;p&gt;I was linked to this video today and really enjoyed it. I have never heard of Alom Shaha, but I hope to see more from him in the future.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://vimeo.com/3531977&#34;&gt;Why is Science Important?&lt;/a&gt; from &lt;a href=&#34;http://vimeo.com/user1353157&#34;&gt;Alom Shaha&lt;/a&gt; on &lt;a href=&#34;http://vimeo.com&#34;&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;</description>
+      <description>&lt;p&gt;I was linked to this video today and really enjoyed it. I have never heard of Alom Shaha, but I hope to see more from him in the future.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://vimeo.com/3531977&#34;&gt;Why is Science Important?&lt;/a&gt; from &lt;a href=&#34;http://vimeo.com/user1353157&#34;&gt;Alom Shaha&lt;/a&gt; on &lt;a href=&#34;http://vimeo.com&#34;&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>Nudge</title>
       <link>https://greg.langmead.info/posts/2009-02-24-nudge/</link>
       <pubDate>Tue, 24 Feb 2009 04:58:28 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/posts/2009-02-24-nudge/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;m reading an interesting book about economics, public policy, and psychology. It&amp;rsquo;s called &lt;a href=&#34;http://www.amazon.com/Nudge-Improving-Decisions-Health-Happiness/dp/014311526X%3FSubscriptionId%3D13D7MCZQKMM5E1WMY782%26tag%3Dshelfcentered-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D014311526X&#34;&gt;Nudge&lt;/a&gt;. They make many interesting points that were completely new to me about the way people do &lt;em&gt;not&lt;/em&gt; behave in the rational manner modeled by the previous generation of economists. In fact, there are systematic biases in our decision-making that can be quantified and worked around by enacting sensible policies. The cover issues ranging from the Medicare prescription drug plan to 401k plans, to organ donation, to the environment. The ideas are presented clearly with lots of examples. Highly recommended.&lt;/p&gt;</description>
+      <description>&lt;p&gt;I&amp;rsquo;m reading an interesting book about economics, public policy, and psychology. It&amp;rsquo;s called &lt;a href=&#34;http://www.amazon.com/Nudge-Improving-Decisions-Health-Happiness/dp/014311526X%3FSubscriptionId%3D13D7MCZQKMM5E1WMY782%26tag%3Dshelfcentered-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D014311526X&#34;&gt;Nudge&lt;/a&gt;. They make many interesting points that were completely new to me about the way people do &lt;em&gt;not&lt;/em&gt; behave in the rational manner modeled by the previous generation of economists. In fact, there are systematic biases in our decision-making that can be quantified and worked around by enacting sensible policies. The cover issues ranging from the Medicare prescription drug plan to 401k plans, to organ donation, to the environment. The ideas are presented clearly with lots of examples. Highly recommended.&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>Vista = Ick</title>
       <link>https://greg.langmead.info/posts/2009-01-12-vista-ick/</link>
       <pubDate>Mon, 12 Jan 2009 03:22:02 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/posts/2009-01-12-vista-ick/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;m so tired of living with Windows Vista. Especially when it comes to USB. Whenever I plug in a USB device that I&amp;rsquo;ve used a million times before, but I plug it into a different USB port, Vista goes into overdrive. &amp;ldquo;Searching for driver!&amp;rdquo; it exclaims in a balloon. The hard drive churns and churns for about two minutes. You can&amp;rsquo;t do anything else disk-intensive during this time, so basically you&amp;rsquo;re just waiting at this point. If you click the little tray icon that appears, it says &amp;ldquo;Searching for driver in installed locations&amp;rdquo; or something. Finally it&amp;rsquo;s done and it says &amp;ldquo;Canon digital camera.&amp;rdquo; No kidding, the one I plugged in yesterday? Congratulations. Maybe I should plug it into each port in my hub so that I can go through this once and then know that I&amp;rsquo;m safe.&lt;/p&gt;</description>
+      <description>&lt;p&gt;I&amp;rsquo;m so tired of living with Windows Vista. Especially when it comes to USB. Whenever I plug in a USB device that I&amp;rsquo;ve used a million times before, but I plug it into a different USB port, Vista goes into overdrive. &amp;ldquo;Searching for driver!&amp;rdquo; it exclaims in a balloon. The hard drive churns and churns for about two minutes. You can&amp;rsquo;t do anything else disk-intensive during this time, so basically you&amp;rsquo;re just waiting at this point. If you click the little tray icon that appears, it says &amp;ldquo;Searching for driver in installed locations&amp;rdquo; or something. Finally it&amp;rsquo;s done and it says &amp;ldquo;Canon digital camera.&amp;rdquo; No kidding, the one I plugged in yesterday? Congratulations. Maybe I should plug it into each port in my hub so that I can go through this once and then know that I&amp;rsquo;m safe.&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>Freshness</title>
       <link>https://greg.langmead.info/posts/2008-10-08-freshness/</link>
       <pubDate>Wed, 08 Oct 2008 20:06:03 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/posts/2008-10-08-freshness/</guid>
-      <description>&lt;p&gt;I love the feeling I get after I tweak what songs are on my iPhone. I added a composer (Mahler) and a Teaching Company course (about Mahler) because I finished listening to another course (about US relations with the Middle East). I added some Beatles album art and the latest Ben Folds album. It&amp;rsquo;s all freshened up and ready for new listening!&lt;/p&gt;</description>
+      <description>&lt;p&gt;I love the feeling I get after I tweak what songs are on my iPhone. I added a composer (Mahler) and a Teaching Company course (about Mahler) because I finished listening to another course (about US relations with the Middle East). I added some Beatles album art and the latest Ben Folds album. It&amp;rsquo;s all freshened up and ready for new listening!&lt;/p&gt;
+</description>
     </item>
+    
   </channel>
 </rss>

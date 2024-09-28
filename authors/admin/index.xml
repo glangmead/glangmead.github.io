@@ -1,18 +1,14 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Long Head</title>
     <link>https://greg.langmead.info/authors/admin/</link>
     <description>Recent content on Long Head</description>
-    <generator>Hugo</generator>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
-    <atom:link href="https://greg.langmead.info/authors/admin/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title></title>
-      <link>https://greg.langmead.info/authors/admin/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://greg.langmead.info/authors/admin/</guid>
-      <description>&lt;p&gt;My name is Greg Langmead. I am a machine learning manager at &lt;a href=&#34;https://machinelearning.apple.com&#34;&gt;Apple&lt;/a&gt;, where I work on &lt;a href=&#34;https://www.apple.com/news/&#34;&gt;Apple News&lt;/a&gt; and Stocks.&lt;/p&gt;&#xA;&lt;p&gt;I am also a student in the &lt;a href=&#34;https://www.cmu.edu/dietrich/philosophy&#34;&gt;Philosophy department&lt;/a&gt; at Carnegie Mellon University. I study &lt;a href=&#34;https://homotopytypetheory.org&#34;&gt;homotopy type theory&lt;/a&gt; and differential geometry. I use theorem proving software such as &lt;a href=&#34;https://en.wikipedia.org/wiki/Agda_(programming_language)&#34;&gt;Agda&lt;/a&gt; and &lt;a href=&#34;https://leanprover.github.io&#34;&gt;Lean&lt;/a&gt;.&lt;/p&gt;</description>
-    </item>
+    
+	    <atom:link href="https://greg.langmead.info/authors/admin/index.xml" rel="self" type="application/rss+xml" />
+    
+    
   </channel>
 </rss>

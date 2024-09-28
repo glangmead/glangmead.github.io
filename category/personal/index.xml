@@ -1,348 +1,669 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Personal on Long Head</title>
     <link>https://greg.langmead.info/category/personal/</link>
     <description>Recent content in Personal on Long Head</description>
-    <generator>Hugo</generator>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 23 Jun 2015 02:21:22 +0000</lastBuildDate>
-    <atom:link href="https://greg.langmead.info/category/personal/index.xml" rel="self" type="application/rss+xml" />
+    
+	    <atom:link href="https://greg.langmead.info/category/personal/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>Rubik&#39;s Cube</title>
       <link>https://greg.langmead.info/posts/2015-06-23-rubiks-cube/</link>
       <pubDate>Tue, 23 Jun 2015 02:21:22 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/posts/2015-06-23-rubiks-cube/</guid>
-      <description>&lt;p&gt;I decided recently to embrace my dilettantism. I don&amp;rsquo;t think there have been two consecutive days in my life where I wanted to pursue and learn the same ideas. Now mind you, the complete list of topics is finite and I cycle back eventually.&lt;/p&gt;</description>
+      <description>&lt;p&gt;I decided recently to embrace my dilettantism. I don&amp;rsquo;t think there have been two consecutive days in my life where I wanted to pursue and learn the same ideas. Now mind you, the complete list of topics is finite and I cycle back eventually.&lt;/p&gt;
+&lt;p&gt;But recently, when I was reminded of the existence of superfast Rubik&amp;rsquo;s cube solver people, blindfold solvers, one-handed solvers, and foot solvers, I thought it might finally be time to learn how to solve the cube, and to push down the stack the rest of my crazy research agenda.&lt;/p&gt;
+&lt;p&gt;A couple weeks later, I can assert that I can solve the cube within a few minutes. And moreover, I am able to do it with some modicum of understanding of what I am doing. My goal was not to memorize recipes, which is the approach that most tutorials assume for some reason. Instead, I wanted to know the most granular small changes that can be made and how to carry them out, and also &lt;em&gt;why&lt;/em&gt; they work out. And I achieved that! I am impressed with myself, way more than is warranted. This outcome is of course all due to the existence of the Internet and especially YouTube. Here are my favorite links.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;all current speed records in one video: [youtube=http://youtu.be/83Bd746XZaw&amp;amp;w=400]&lt;/li&gt;
+&lt;li&gt;one of the better math-flavored tutorials: &lt;a href=&#34;http://people.math.sfu.ca/~jtmulhol/math302/notes/19-RubiksCube-Beginnings.pdf&#34;&gt;link&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;same teacher, but now we&amp;rsquo;re getting somewhere with a discussion of commutators: &lt;a href=&#34;http://people.math.sfu.ca/~jtmulhol/math302/notes/13-Commutators.pdf&#34;&gt;link&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;dour but breakthrough presentation that clinched my understanding: [youtube=http://youtu.be/54SGrZbLcoE&amp;amp;w=400]&lt;/li&gt;
+&lt;/ul&gt;
+</description>
     </item>
+    
     <item>
       <title>On the importance of mentors</title>
       <link>https://greg.langmead.info/posts/2008-07-10-on-the-importance-of-mentors/</link>
       <pubDate>Thu, 10 Jul 2008 04:10:41 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/posts/2008-07-10-on-the-importance-of-mentors/</guid>
-      <description>&lt;p&gt;I grew up assuming that people make their own way in the world. I thought it was up to me to make every decision, plan every move, open every door, and find my own way in my life and career. Only much later did I learn that I was doing it all wrong. Not only is my way much harder, it&amp;rsquo;s also completely miserable to be so isolated. Here&amp;rsquo;s an example. The place where I started making these wrong decisions was in college. I attended my classes, which in some cases were way below my capabilities, and in other cases were way above. Either way, at the end of class, I packed up my things and walked back to my room. I dreamed of being a scientist, just like I had since I was 10 years old. But all I did was go to class, I never spoke with any professors, nor was I ever approached by any. My talents started to appear in my sophomore year, but I was still doing things in this retarded way. Then in my junior year the first consequence of my nihilistic lifestyle happened, and I didn&amp;rsquo;t even really notice it for what it was until years later. I switched my major from Astronomy to Astrophysics, then I added a concentration (minor) in Math, and then I made Math a second major. This all happened within a couple of months. Even these bureaucratic thrashings didn&amp;rsquo;t raise any red flags in any administrators or professors. No one cared. So, I shifted my focus to math, threw away the pile of physics grad school applications I had, and requested a bunch of math ones. I went to graduate school for a year at Stony Brook, then transferred back to Columbia for the rest of my Ph.D., because my then-girlfriend, now-wife, was continuing on from Columbia undergrad to grad school.&lt;/p&gt;</description>
+      <description>&lt;p&gt;I grew up assuming that people make their own way in the world. I thought it was up to me to make every decision, plan every move, open every door, and find my own way in my life and career. Only much later did I learn that I was doing it all wrong. Not only is my way much harder, it&amp;rsquo;s also completely miserable to be so isolated. Here&amp;rsquo;s an example. The place where I started making these wrong decisions was in college. I attended my classes, which in some cases were way below my capabilities, and in other cases were way above. Either way, at the end of class, I packed up my things and walked back to my room. I dreamed of being a scientist, just like I had since I was 10 years old. But all I did was go to class, I never spoke with any professors, nor was I ever approached by any. My talents started to appear in my sophomore year, but I was still doing things in this retarded way. Then in my junior year the first consequence of my nihilistic lifestyle happened, and I didn&amp;rsquo;t even really notice it for what it was until years later. I switched my major from Astronomy to Astrophysics, then I added a concentration (minor) in Math, and then I made Math a second major. This all happened within a couple of months. Even these bureaucratic thrashings didn&amp;rsquo;t raise any red flags in any administrators or professors. No one cared. So, I shifted my focus to math, threw away the pile of physics grad school applications I had, and requested a bunch of math ones. I went to graduate school for a year at Stony Brook, then transferred back to Columbia for the rest of my Ph.D., because my then-girlfriend, now-wife, was continuing on from Columbia undergrad to grad school.&lt;/p&gt;
+&lt;p&gt;OK, here&amp;rsquo;s the denoument to the story. In my second year or so, the reference librarian of the math library was leaving Columbia, and she was well-liked by the department. I had worked for her as an undergraduate, so I was invited to her going away party. At that party, there was a professor who was a fixture in the math department. He was the kind of professor who was very focused on undergraduates and mentoring. I had never had a class with him, and had never met him personally until I was a graduate student. We got to chatting, and it came out that I had attended Columbia as an undergrad as well as a grad student. He was shocked. &amp;ldquo;How is it that I don&amp;rsquo;t remember you?&amp;rdquo; he asked. My answer was &amp;ldquo;I do a good job of going under the radar.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;This story brings me a whole lot of pain. I know that I somehow failed to do &amp;ldquo;things&amp;rdquo; right as an undergrad. All those times I walked straight back to my room to lie on my back, have a cigarette, and listen to music, I suspected that I was doing the wrong thing. I knew I should be doing &amp;ldquo;more&amp;rdquo; or seeking more opportunities. But how do you do that? I have never been good at taking that feeling and turning it into non-ridiculous-looking actions. But I also suspect that others also failed me. The professors who taught me recognized my talent, I&amp;rsquo;m sure. A few years later I heard from a third party that one of them had called me &amp;ldquo;the best mathematician he has ever met.&amp;rdquo; WTF? Why weren&amp;rsquo;t these people looking out for me, then? Couldn&amp;rsquo;t they see that I had lots of talent but no direction? Professors like the one I was talking to at the going-away party do in fact devote lots of energy to nurturing undergrads. Just not me. So I waver between self-loathing and bitterness.&lt;/p&gt;
+&lt;p&gt;I am determined to make at least one good thing out of this part of my life story. I will be an excellent mentor, and I will always act when I spot talent. It&amp;rsquo;s happened plenty at my job, and I have been very vocal about singing the praise of new young employees who are talented. I have been instrumental in having them promoted and being assigned interesting work. I will do what was not done for me. The best would be if I ran across someone like myself, who was incapable of grabbing this kind of attention for him or herself. I will see their talent, and their reticence, and I will help them.&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>Alison on Jumping Monkeys!</title>
       <link>https://greg.langmead.info/posts/2008-03-16-alison-on-jumping-monkeys/</link>
       <pubDate>Sun, 16 Mar 2008 17:30:43 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/posts/2008-03-16-alison-on-jumping-monkeys/</guid>
-      <description>&lt;p&gt;Alison was interviewed on one of our favorite podcasts, Jumping Monkeys. &lt;a href=&#34;http://www.jumpingmonkeys.com/jumpingmonkeys/2008/03/jumping-monke-2.html&#34;&gt;Here&amp;rsquo;s the episode page&lt;/a&gt;. She discusses home archives and how to approach saving your family&amp;rsquo;s stuff for the future. Cool!&lt;/p&gt;</description>
+      <description>&lt;p&gt;Alison was interviewed on one of our favorite podcasts, Jumping Monkeys. &lt;a href=&#34;http://www.jumpingmonkeys.com/jumpingmonkeys/2008/03/jumping-monke-2.html&#34;&gt;Here&amp;rsquo;s the episode page&lt;/a&gt;. She discusses home archives and how to approach saving your family&amp;rsquo;s stuff for the future. Cool!&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>Competitiveness considered harmful?</title>
       <link>https://greg.langmead.info/posts/2007-12-13-competitiveness-considered-harmful/</link>
       <pubDate>Thu, 13 Dec 2007 16:53:28 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/posts/2007-12-13-competitiveness-considered-harmful/</guid>
-      <description>&lt;p&gt;Over Thanksgiving, I was complaining about people who crowd forward when boarding a plane, even if their row hasn&amp;rsquo;t been called, so that when it &lt;em&gt;is&lt;/em&gt; called, they get on first. And if they can get away with boarding before their row is called, they&amp;rsquo;ll do that too. Someone close to me retorted, &amp;ldquo;competition made the human race what it is today.&amp;rdquo; I haven&amp;rsquo;t stopped thinking about that remark ever since. Can this person be right? I dearly, dearly hope not. Because all I can think of in reply is, &amp;ldquo;yes, it did make us what we are &amp;ndash; especially the World Wars and the Holocaust.&amp;rdquo;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Over Thanksgiving, I was complaining about people who crowd forward when boarding a plane, even if their row hasn&amp;rsquo;t been called, so that when it &lt;em&gt;is&lt;/em&gt; called, they get on first. And if they can get away with boarding before their row is called, they&amp;rsquo;ll do that too. Someone close to me retorted, &amp;ldquo;competition made the human race what it is today.&amp;rdquo; I haven&amp;rsquo;t stopped thinking about that remark ever since. Can this person be right? I dearly, dearly hope not. Because all I can think of in reply is, &amp;ldquo;yes, it did make us what we are &amp;ndash; especially the World Wars and the Holocaust.&amp;rdquo;&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>Lord of the Rings soundtrack</title>
       <link>https://greg.langmead.info/posts/2007-11-30-lord-of-the-rings-soundtrack/</link>
       <pubDate>Fri, 30 Nov 2007 20:30:22 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/posts/2007-11-30-lord-of-the-rings-soundtrack/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;m listening to &lt;a href=&#34;http://www.amazon.com/Lord-Rings-Return-Complete-Recordings/dp/B000V6BE6M/ref=pd_bbs_sr_1?ie=UTF8&amp;s=music&amp;qid=1196454269&amp;sr=8-1&#34;&gt;&lt;em&gt;The Return of the King: The Complete Recordings&lt;/em&gt;&lt;/a&gt; at work, and I&amp;rsquo;m at the point near the (first) end when Frodo and Sam have just destroyed the ring (with Gollum&amp;rsquo;s unwitting help) and they&amp;rsquo;re escaping the flowing lava by standing on a rock, feeling a relieved. With all the events of the story to back up the scene, I think it&amp;rsquo;s truly moving to see these two regular guys, who together destroyed a great and senseless evil power. I actually see it as a very tragic moment, when two of the world&amp;rsquo;s great forces are being presented to us via the heightened drama of this point in the story: senseless evil/destruction/chaos on the one hand, and the fortitude and perseverance and good of the common person on the other hand. You can ask all sorts of questions at this point, like if the common person is so good, where is all the evil coming from? Why must the most ordinary and good people sustain such injury and sacrifice to ward off the worst effects of the evil?&lt;/p&gt;</description>
+      <description>&lt;p&gt;I&amp;rsquo;m listening to &lt;a href=&#34;http://www.amazon.com/Lord-Rings-Return-Complete-Recordings/dp/B000V6BE6M/ref=pd_bbs_sr_1?ie=UTF8&amp;s=music&amp;qid=1196454269&amp;sr=8-1&#34;&gt;&lt;em&gt;The Return of the King: The Complete Recordings&lt;/em&gt;&lt;/a&gt; at work, and I&amp;rsquo;m at the point near the (first) end when Frodo and Sam have just destroyed the ring (with Gollum&amp;rsquo;s unwitting help) and they&amp;rsquo;re escaping the flowing lava by standing on a rock, feeling a relieved. With all the events of the story to back up the scene, I think it&amp;rsquo;s truly moving to see these two regular guys, who together destroyed a great and senseless evil power. I actually see it as a very tragic moment, when two of the world&amp;rsquo;s great forces are being presented to us via the heightened drama of this point in the story: senseless evil/destruction/chaos on the one hand, and the fortitude and perseverance and good of the common person on the other hand. You can ask all sorts of questions at this point, like if the common person is so good, where is all the evil coming from? Why must the most ordinary and good people sustain such injury and sacrifice to ward off the worst effects of the evil?&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>Masterpiece Theater?</title>
       <link>https://greg.langmead.info/posts/2007-11-19-masterpiece-theater/</link>
       <pubDate>Mon, 19 Nov 2007 22:29:11 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/posts/2007-11-19-masterpiece-theater/</guid>
-      <description>&lt;p&gt;Has &lt;em&gt;Masterpiece Theater&lt;/em&gt; always just been some British TV show? Lately they&amp;rsquo;ve been showing &lt;em&gt;The Amazing Mrs. Prithcard&lt;/em&gt;, which felt like an American TV show that happened to be British. Is it a masterpiece? Did they pick it because they felt it was a masterpiece? Maybe they should rename Masterpiece Theater to &amp;ldquo;Some British TV Show&amp;rdquo;.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Has &lt;em&gt;Masterpiece Theater&lt;/em&gt; always just been some British TV show? Lately they&amp;rsquo;ve been showing &lt;em&gt;The Amazing Mrs. Prithcard&lt;/em&gt;, which felt like an American TV show that happened to be British. Is it a masterpiece? Did they pick it because they felt it was a masterpiece? Maybe they should rename Masterpiece Theater to &amp;ldquo;Some British TV Show&amp;rdquo;.&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>Lord of the Rings, movie versus book</title>
       <link>https://greg.langmead.info/posts/2007-09-27-lord-of-the-rings-movie-versus-book/</link>
       <pubDate>Thu, 27 Sep 2007 22:46:40 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/posts/2007-09-27-lord-of-the-rings-movie-versus-book/</guid>
-      <description>&lt;p&gt;A while back I wanted to read &lt;em&gt;The Lord of the Rings&lt;/em&gt; aloud with my wife. We&amp;rsquo;ve read lots of books together this way, and I&amp;rsquo;m a huge LOTR fan, so I really wanted to share it. The problem is it&amp;rsquo;s very long and many people consider lots of it boring. So, I took a clever (if I do say so myself) shortcut! I went through the books and dog-eared ranges of pages where the plot differed from the movies in a way I thought significant or noteworthy. For example, I read the entire chapter &amp;ldquo;The scouring of the shire&amp;rdquo; because this was left out of the movie. I highlighted the differences in Denethor&amp;rsquo;s character as much as I could, as well as Faramir&amp;rsquo;s. Both were substantially diminished in moral quality in the movies.&lt;/p&gt;</description>
+      <description>&lt;p&gt;A while back I wanted to read &lt;em&gt;The Lord of the Rings&lt;/em&gt; aloud with my wife. We&amp;rsquo;ve read lots of books together this way, and I&amp;rsquo;m a huge LOTR fan, so I really wanted to share it. The problem is it&amp;rsquo;s very long and many people consider lots of it boring. So, I took a clever (if I do say so myself) shortcut! I went through the books and dog-eared ranges of pages where the plot differed from the movies in a way I thought significant or noteworthy. For example, I read the entire chapter &amp;ldquo;The scouring of the shire&amp;rdquo; because this was left out of the movie. I highlighted the differences in Denethor&amp;rsquo;s character as much as I could, as well as Faramir&amp;rsquo;s. Both were substantially diminished in moral quality in the movies.&lt;/p&gt;
+&lt;p&gt;I want to go back through what I did, and post it here with annotations, so that others can read the same portions of the books in tandem with the movies to get a much more accurate picture of what the books are all about. The problem is that before I had this great idea, I had already read half of &lt;em&gt;Fellowship&lt;/em&gt;, so I&amp;rsquo;ll have to make some decisions about what parts of that to keep.&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>The Jasons</title>
       <link>https://greg.langmead.info/posts/2006-08-10-the-jasons/</link>
       <pubDate>Thu, 10 Aug 2006 01:09:28 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/posts/2006-08-10-the-jasons/</guid>
-      <description>&lt;p&gt;I recently heard of a book called &lt;a href=&#34;http://www.amazon.com/gp/product/0670034894/ref=nosim/002-6749880-5641633?n=283155&#34;&gt;The Jasons&lt;/a&gt; at &lt;a href=&#34;http://www.math.columbia.edu/~woit/wordpress/?p=376&#34;&gt;the blog of a former colleague&lt;/a&gt;, Peter Woit. Since I spent the summer of 2004 doing classified math research for the government, I was very interested to hear of another such group. In a way, the Jasons are a sequel to the very successful Manhattan Project, and there is lots of overlap of personnel. The Jasons came into being in the aftermath of the Soviet launch of Sputnik, in 1960 to be exact.&lt;/p&gt;</description>
+      <description>&lt;p&gt;I recently heard of a book called &lt;a href=&#34;http://www.amazon.com/gp/product/0670034894/ref=nosim/002-6749880-5641633?n=283155&#34;&gt;The Jasons&lt;/a&gt; at &lt;a href=&#34;http://www.math.columbia.edu/~woit/wordpress/?p=376&#34;&gt;the blog of a former colleague&lt;/a&gt;, Peter Woit. Since I spent the summer of 2004 doing classified math research for the government, I was very interested to hear of another such group. In a way, the Jasons are a sequel to the very successful Manhattan Project, and there is lots of overlap of personnel. The Jasons came into being in the aftermath of the Soviet launch of Sputnik, in 1960 to be exact.&lt;/p&gt;
+&lt;p&gt;After buying the book on a recent visit to the &lt;a href=&#34;http://www.ciweb.org&#34;&gt;Chautauqua Institution&lt;/a&gt;, I was fascinated to read that in their very early years, they invented an idea that today is revolutionizing astronomy: &lt;a href=&#34;http://en.wikipedia.org/wiki/Adaptive_optics&#34;&gt;adaptive optics&lt;/a&gt;. By coincidence, this technique was just starting to move its way to the front of my mind, because I try to keep up with astronomy news, due to my lifelong interest in the subject. I&amp;rsquo;m thrilled to happen upon it in the quite different context of the Jasons.&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>The huamn mnid</title>
       <link>https://greg.langmead.info/posts/2006-07-26-the-huamn-mnid/</link>
       <pubDate>Wed, 26 Jul 2006 02:57:21 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/posts/2006-07-26-the-huamn-mnid/</guid>
-      <description>&lt;p&gt;&amp;ldquo;Aoccdrnig to a rscheearch at Cmabrigde Uinervtisy, it deosn&amp;rsquo;t mttaer in waht oredr the ltteers in a wrod are, the olny iprmoetnt tihng is taht the frist and lsat ltteer be at the rghit pclae. The rset can be a toatl mses and you can sitll raed it wouthit porbelm. Tihs is bcuseae the huamn mnid deos not raed ervey lteter by istlef, but the wrod as a wlohe.&amp;rdquo;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&amp;ldquo;Aoccdrnig to a rscheearch at Cmabrigde Uinervtisy, it deosn&amp;rsquo;t mttaer in waht oredr the ltteers in a wrod are, the olny iprmoetnt tihng is taht the frist and lsat ltteer be at the rghit pclae. The rset can be a toatl mses and you can sitll raed it wouthit porbelm. Tihs is bcuseae the huamn mnid deos not raed ervey lteter by istlef, but the wrod as a wlohe.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;Here&amp;rsquo;s &lt;a href=&#34;http://www.mrc-cbu.cam.ac.uk/~mattd/Cmabrigde/&#34;&gt;a link that discusses this phenomenon&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I read about this a while back, but this evening it came back to me. I think I read about it before I became a natural language processing dude, but now that I deal with machines that work with language, it is one of the items I keep in the back of my mind that may be helpful some day.&lt;/p&gt;
+&lt;p&gt;Language is not data.&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>Intelligent Design: The Final Word, Part 3</title>
       <link>https://greg.langmead.info/posts/2006-03-12-intelligent-design-the-final-word-part-3/</link>
       <pubDate>Sun, 12 Mar 2006 21:53:52 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/posts/2006-03-12-intelligent-design-the-final-word-part-3/</guid>
-      <description>&lt;p&gt;The central question I have been trying to satisfy myself about with these notes is the following: is there a way to formulate Intelligent Design as a scientific theory? (See &lt;a href=&#34;http://greg.langmead.info/?p=61&#34;&gt;part 1&lt;/a&gt; and &lt;a href=&#34;http://greg.langmead.info/?p=62&#34;&gt;part 2&lt;/a&gt;.)&lt;/p&gt;</description>
+      <description>&lt;p&gt;The central question I have been trying to satisfy myself about with these notes is the following: is there a way to formulate Intelligent Design as a scientific theory? (See &lt;a href=&#34;http://greg.langmead.info/?p=61&#34;&gt;part 1&lt;/a&gt; and &lt;a href=&#34;http://greg.langmead.info/?p=62&#34;&gt;part 2&lt;/a&gt;.)&lt;/p&gt;
+&lt;p&gt;By definition, a scientific theory is a model of a part of the world that makes verifiable and falsifiable predictions about specific observations. To answer this question, I will reformulate the statement of ID. Behe&amp;rsquo;s formulation looks like this (this is not a quote, I&amp;rsquo;m summing up his argument):&lt;/p&gt;
+&lt;p&gt;My summary of Behe&amp;rsquo;s argument:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;I want to say up front that I am not going to attack the probability part of this argument in order to argue whether it is scientific. It is perfectly reasonable to say that something we observe has a very low probability of arising from some process, and to remove evidence from the applicability of that process in so doing. &lt;em&gt;If&lt;/em&gt; you can demonstrate what that probability is. In a further essay I will look at this issue more closely, but only when I want to discuss the &lt;em&gt;correctness&lt;/em&gt; of ID, not whether it is  a scientific theory in the first place, which is our current aim.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m going to reformulate the statement above summarizing Behe a couple times to draw out out what I&amp;rsquo;m looking for. I expect that an ID enthusiast will object to my reformulations at some point because the conclusion will follow immediately from the final reformulation, but I wonder where the objections will arise exactly.&lt;/p&gt;
+&lt;p&gt;Reformulation 1:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;I will now add to the discussion that I fully grant that all of Behe&amp;rsquo;s examples are in fact irreducibly complex, which simply means that the systems involve several interacting parts without any one of which the system fails to function. It&amp;rsquo;s a simple to define concept, and surely his examples are all in fact irreducibly complex. Granted. Now, also losing the bit about probability, we can reformulate:&lt;/p&gt;
+&lt;p&gt;Reformulation 2:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;This is &lt;em&gt;entirely equivalent&lt;/em&gt; to Behe&amp;rsquo;s statement of ID, once you remove the question about whether the systems are irreducibly complex, and replacing the caveat about probability with the blank statement &amp;ldquo;cannot explain.&amp;rdquo; If you agree with the complexity part, then all ID says is that evolution cannot explain this complexity.&lt;/p&gt;
+&lt;p&gt;The problem with ID is that this not the statement of a scientific theory. It is the contradiction of one, namely of evolution. It only makes one prediction, that evolution will not be able to explain irreducible complexity. The only way to study this idea is to study the evolution of molecular systems and try to explain how the irreducible complexity of some particular system came to be. See, ID doesn&amp;rsquo;t substitute anything for evolution, it merely fills the gap it creates with the Designer. It cannot make any new predictions, and it doesn&amp;rsquo;t try.&lt;/p&gt;
+&lt;p&gt;Here is an analogous scenario. The 6 o&amp;rsquo;clock news reports that there are crop circles on a farm outside town. A scientist on TV expresses his theory that it is the work of teenagers playing a prank. Another scientist puts forward the theory that the crop circles cannot be explained as the work of humans, they must be the work of extraterrestrials. Furthermore, the second scientist argues that his theory is just as scientific as the first theory, because they both purport to explain a particular phenomenon. The problem with the second theory is that its central claim is that the first claim is wrong, and in so doing it creates a gap, which it then fills with extraterrestrials. But the gap is not a theory, just the contradiction of one. The way to proceed to investigate crop circles, then, is to pursue the first theory and try to find a natural explanation. That&amp;rsquo;s the same course of action we&amp;rsquo;d take if there was no second theory. And of course crop circles were eventually found to be easily made by teenagers using planks of wood with rope handles to press down the crops in just a few hours overnight.&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s the same with ID. The way to pursue this issue is to investigate natural ways that these irreducibly complex systems may have come about. That&amp;rsquo;s the same approach we&amp;rsquo;d take if there was no ID theory. ID theory adds nothing and makes no claims other than to contradict an existing line of inquiry.&lt;/p&gt;
+&lt;p&gt;The funny thing is that ID is falsifiable. Finding a viable evolutionary path for the cilium or any of the systems Behe is interested in will falsify ID, and Behe himself points this out. That&amp;rsquo;s an important point, because when I started this line of thinking I assumed I&amp;rsquo;d be determining that ID isn&amp;rsquo;t falsifiable. What I&amp;rsquo;ve learned instead is that ID isn&amp;rsquo;t predictive. No theory whose statement can be summarized as &amp;ldquo;that other theory over there won&amp;rsquo;t work in this case&amp;rdquo; is predictive. It doesn&amp;rsquo;t make any claims of its own that can be tested, and so the only way to investigate it is to investigate the original theory, making the contradictory theory actually meaningless.&lt;/p&gt;
+&lt;p&gt;What does this tell us about teaching ID in science classes? My short answer is that since it is not a scientific theory, it should not be taught. It certainly should not be required, and probably its absence should be required. But why? Because science is about skepticism, model-building and model-testing. It&amp;rsquo;s never about authority, never about personal preferences. It makes no contact with our political or spiritual structures. It is completely confined, completely focused on material predictions that can be tested and falsified. Theories that limit the domain of science, the way ID claims science will never apply to certain biological systems, may or may not be correct. But science does not place such limitiations on itself, for to do so is impossible within the framework of science. Scientists will be the first to admit that they have a poor understanding of how evolution applies to sub-cellular systems. Science demands such concessions &amp;ndash; science &lt;em&gt;is the requirement&lt;/em&gt; to make such concessions. And that state of affairs may continue to hold for a million years for all I know. It does not change the central point, that science is a process for adding to the accuracy of our models, not for defining boundaries.&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>Intelligent Design: The Final Word, Part 2</title>
       <link>https://greg.langmead.info/posts/2006-03-12-intelligent-design-the-final-word-part-2/</link>
       <pubDate>Sun, 12 Mar 2006 21:32:22 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/posts/2006-03-12-intelligent-design-the-final-word-part-2/</guid>
-      <description>&lt;p&gt;This is a continuation of my discussion of ID (see &lt;a href=&#34;http://greg.langmead.info/?p=61&#34;&gt;part 1&lt;/a&gt;). Here in part 2 I have exerpted from Behe&amp;rsquo;s book in order to summarize his argument. I am using the 2003 trade paperback edition published by Free Press, lent to me by a work colleague.&lt;/p&gt;</description>
+      <description>&lt;p&gt;This is a continuation of my discussion of ID (see &lt;a href=&#34;http://greg.langmead.info/?p=61&#34;&gt;part 1&lt;/a&gt;). Here in part 2 I have exerpted from Behe&amp;rsquo;s book in order to summarize his argument. I am using the 2003 trade paperback edition published by Free Press, lent to me by a work colleague.&lt;/p&gt;
+&lt;p&gt;The ID argument in a nutshell:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&amp;ldquo;For discrete physical systems &amp;mdash; if there is not a gradual route to their production &amp;mdash; design is evident when a number of separate, interacting components are ordered in such a way as to accomplish a function beyond the individual components.&amp;rdquo; (p. 194)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&amp;ldquo;Because the functions depend critically on the intricate interactions of the parts we must conclude that they, like a mousetrap, were designed.&amp;rdquo; (p. 205)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;In particular for the cilium, a system used by cells for movement:&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;&amp;ldquo;The function of the cilium is to be a motorized paddle. In order to achieve this function microtubules, nexin linkers, and motor proteins all have to be ordered in a precise fashion. They have to recognize each other intimately, and interact exactly. The function is not present if any of the components is missing.&amp;rdquo; (p. 204)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;On the identity of the designer:&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;&amp;ldquo;Inferences to design do not require that we have a candidate for the role of designer.&amp;rdquo; (p. 196)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;On the falsifiability of ID:&lt;/p&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;&amp;ldquo;Might there be an as-yet-undiscovered natural process that would explain biochemical complexity? No one would be foolish enough to categorically deny the possibility. Nonetheless, we can say that if there is such a process, no one has a clue how it would work. Further, it would go against all human experience, like postulating that a natural process might explain computers. Concluding that no such process exists is as scientifically sound as concluding that mental telepathy is not possible, or that the Loch Ness monster doesn&amp;rsquo;t exist. In the face of the massive evidence we do have for biochemical design, ignoring that evidence in the name of a phantom process would be to play the role of the detectives who ignore an elephant.&amp;rdquo; (p. 203-204)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;On the testability of ID:&lt;/p&gt;
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;&amp;ldquo;Hypothesis, careful testing, replicability &amp;ndash; all these have served science well. But how can an intelligent designer be tested? Can a designer be put in a test tube? No, of course not. But neither can extinct common ancestors be put in test tubes. The problem is that whenever science tries to explain a unique historical event, careful testing and replicability are by definition impossible. Science may be able to study the motion of modern comets, and test Newton&amp;rsquo;s laws of motion that describe how the comets move. But science will never be able to study the comet that putatively struck the earth many millions of years ago. Science can, however, observe the comet&amp;rsquo;s lingering &lt;em&gt;effects&lt;/em&gt; on the modern earth. Similarly, science can see the effects that a designer has had on life.&amp;rdquo; (emphasis in the original) (p. 242-243)&lt;/li&gt;
+&lt;/ol&gt;
+</description>
     </item>
+    
     <item>
       <title>Intelligent Design: The Final Word, Part 1</title>
       <link>https://greg.langmead.info/posts/2006-03-12-intelligent-design-the-final-word-part-1/</link>
       <pubDate>Sun, 12 Mar 2006 20:59:54 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/posts/2006-03-12-intelligent-design-the-final-word-part-1/</guid>
-      <description>&lt;p&gt;I am finally ready to write some definitive thoughts about Intelligent Design. I just finished reading Michael Behe&amp;rsquo;s book &lt;em&gt;Darwin&amp;rsquo;s Black Box&lt;/em&gt; from 1996, and I&amp;rsquo;ve thought about it from the perspective of science, falsifiability, religion, and philosophy. I would like to be very careful about where I plan and do not plan to take issue with him, so let me start in Part 1 by delineating the argument.&lt;/p&gt;</description>
+      <description>&lt;p&gt;I am finally ready to write some definitive thoughts about Intelligent Design. I just finished reading Michael Behe&amp;rsquo;s book &lt;em&gt;Darwin&amp;rsquo;s Black Box&lt;/em&gt; from 1996, and I&amp;rsquo;ve thought about it from the perspective of science, falsifiability, religion, and philosophy. I would like to be very careful about where I plan and do not plan to take issue with him, so let me start in Part 1 by delineating the argument.&lt;/p&gt;
+&lt;p&gt;First of all, the eponymous designer of ID need not be divine, says Behe, and I agree completely. It could be an alien species, or something way beyond our understanding, but non-divine. ID is not inherently theological. So this discussion will have nothing whatsoever to do with God or religion. Religious folks may want ID to become a political movement so they can impose their views into everyone&amp;rsquo;s lives, but that is the problem of those religious folks, and does not bear on ID&amp;rsquo;s validity.&lt;/p&gt;
+&lt;p&gt;Secondly, I will not contest any of Behe&amp;rsquo;s descriptions of various biochemical systems. The cilium, blood clotting, etc., are all assumed to work the way he describes, &lt;em&gt;including&lt;/em&gt; the &amp;ldquo;irreducible complexity&amp;rdquo; of these systems (more on that in later parts, of course).&lt;/p&gt;
+&lt;p&gt;We both agree, further, that the earth is 5 billion years old, that Darwinian evolution does in fact take place in many domains (including the descent of man from a common ancestor with apes, the origin of new species, all that good stuff). ID does not deny these things, so we needn&amp;rsquo;t discuss them.&lt;/p&gt;
+&lt;p&gt;We both reject the counterargument to ID that goes like this: If an intelligent designer designed our cilia, or our blood clotting system, or our eyes, then he could have made them more efficient/effective/symmetric/beautiful or whatever, and so they were not designed. This argument requires an understanding of the motivation of the designer, as well as a claim to completely understand all the tradeoffs involved in the functioning of these systems, which no one has. We will not be discussing this argument further.&lt;/p&gt;
+&lt;p&gt;Any new scientific theory will be treated with skepticism, and ID touches religious nerves which makes this an especially complicated issue to deal with. I am not going to make the mistake of dismissing ID based on my own concerns about the political ramifications, or the granting of power to religious interests. I am attempting to understand Behe&amp;rsquo;s arguments on his terms. I want to know whether ID can be a truly testable, falsifiable scientific theory that stands on its own. I want to understand this because if it passes this test, then I invite it to be taught in science classrooms. If it fails this test, then I will join the fight to keep it out of the science classroom, where it can do no good and can do quite a bit of harm.&lt;/p&gt;
+&lt;p&gt;A few further clarifications are in order. I am not making the assumption that science is a good system. I am not requiring you to agree that science enhances our sense of wonder and of the divine. I do not claim that scientists are automatically benevolent, or are smarter than anyone else. I am not claiming that scientists should be the sole trustees of ethical decisions concerning technology. I am not trying to pass a value judgment on science itself, in other words. I may do so in future writings, but I am leaving it out of the discussion of ID. I am only studying a very narrow question:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+</description>
     </item>
+    
     <item>
       <title>Written verbal tics</title>
       <link>https://greg.langmead.info/posts/2005-12-10-written-verbal-tics/</link>
       <pubDate>Sat, 10 Dec 2005 22:17:26 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/posts/2005-12-10-written-verbal-tics/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;ve been meaning to write this down for a long time. There are two very widespread and very annoying idioms that I see a lot in amateur writing. The main example of the kind of writing I mean is product reviews on sites like Amazon, but I see it also on Macworld, CNet and other more professional sites.&lt;/p&gt;</description>
+      <description>&lt;p&gt;I&amp;rsquo;ve been meaning to write this down for a long time. There are two very widespread and very annoying idioms that I see a lot in amateur writing. The main example of the kind of writing I mean is product reviews on sites like Amazon, but I see it also on Macworld, CNet and other more professional sites.&lt;/p&gt;
+&lt;p&gt;The first is the word &amp;ldquo;little&amp;rdquo; as in &amp;ldquo;this little device from Apple,&amp;rdquo; or even worse, &amp;ldquo;this little gem from Apple.&amp;rdquo;  There&amp;rsquo;s nothing wrong with it really, it&amp;rsquo;s just hugely overused, and I&amp;rsquo;m oversensitive to triteness.  The second phrase is &amp;ldquo;a winner,&amp;rdquo; as in &amp;ldquo;this telescope is a real winner.&amp;rdquo;  Both phrases are frequently found together, as in &amp;ldquo;This little gem from Apple is a definite winner!&amp;rdquo;  Cut it out, please.&lt;/p&gt;
+&lt;p&gt;While I&amp;rsquo;m here, let me point out one more horribly annoying habit: listing three things and then saying &amp;ldquo;oh my.&amp;rdquo;  This is hugely common in cutesy computer publications like Macworld, as in &amp;ldquo;iPods and iTunes and iMacs, oh my!&amp;rdquo;  It&amp;rsquo;s not funny, and you probably already used the joke six times a year for the last five years!&lt;/p&gt;
+&lt;p&gt;Am I just an ass who likes to find flaws in other people, so that I can dismiss them?  Probably.  But I also think that the best writers are probably aware of pitfalls like these and strive to avoid them.&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>Contact</title>
       <link>https://greg.langmead.info/posts/2005-10-19-contact/</link>
       <pubDate>Wed, 19 Oct 2005 04:00:59 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/posts/2005-10-19-contact/</guid>
-      <description>&lt;p&gt;I just watched &lt;a href=&#34;http://www.amazon.com/gp/product/0790733226/104-8979811-4830322?v=glance&amp;n=130&amp;n=507846&amp;s=dvd&amp;v=glance&#34;&gt;&lt;em&gt;Contact&lt;/em&gt;&lt;/a&gt; again for the first time in a while. A major theme of the movie is that the goals of science and religion are so hard to untangle that the two main protagonists have a very complicated adult relationship based on it.&lt;/p&gt;</description>
+      <description>&lt;p&gt;I just watched &lt;a href=&#34;http://www.amazon.com/gp/product/0790733226/104-8979811-4830322?v=glance&amp;n=130&amp;n=507846&amp;s=dvd&amp;v=glance&#34;&gt;&lt;em&gt;Contact&lt;/em&gt;&lt;/a&gt; again for the first time in a while. A major theme of the movie is that the goals of science and religion are so hard to untangle that the two main protagonists have a very complicated adult relationship based on it.&lt;/p&gt;
+&lt;p&gt;In the current context of the debate about religion in the science classroom, I think about my own feelings about science quite a bit. Far from feeling that science and religion are incompatible, I actually feel that they are two sides of the same coin.  I mean, think about it. How often do people&amp;rsquo;s deeply held, innermost core beliefs actually tend to be different?  Can we really believe that, given the size of the universe (which I guess you&amp;rsquo;ll have to grant me) and all the diversity of our planet, that two of us humans could really be all that &lt;em&gt;tremendously&lt;/em&gt; different in our innermost models of what our purpose is in the universe? OF COURSE SCIENCE AND RELIGION ARE THE SAME THING, HOW COULD THEY NOT BE? WE&amp;rsquo;RE ALL PEOPLE, WE ALL WANT THE SAME THINGS AND WE ALL FEEL THE SAME WAY!&lt;/p&gt;
+&lt;p&gt;I hope that a more sophisticated dialogue is going on somewhere in the world, and that it spreads to this country.  In particular, I wish that some religious representatives would realize that pursuing science is a way of appreciating the Universe, or God, or Nature, or whatever Large Thing you care to call it.  If God did create the Universe, why wouldn&amp;rsquo;t he want us to understand all the wonders he created?  Is it sinful to break apart an atom and see what God made inside the atom?  Far from it, it&amp;rsquo;s an expression of wonder to pursue such knowledge.  If you interviewed all the scientists who do stuff like that, you&amp;rsquo;d find many or most of them are on a search for something larger than themselves, a way to be connected to the Universe.  Listen to the moving speech that Jodie Foster&amp;rsquo;s character gives to James Woods&amp;rsquo; character and his committee at the end of the movie.&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>Irrational Design?</title>
       <link>https://greg.langmead.info/posts/2005-10-09-irrational-design/</link>
       <pubDate>Sun, 09 Oct 2005 22:00:28 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/posts/2005-10-09-irrational-design/</guid>
-      <description>&lt;p&gt;There is a great deal of controversy at the moment over Intelligent Design (ID) being taught in science classrooms. I have always felt very strongly about the dangers faced by science in our society, and this crisis is a perfect example of what can happen without careful vigilance on the part of science teachers and practitioners.&lt;/p&gt;</description>
+      <description>&lt;p&gt;There is a great deal of controversy at the moment over Intelligent Design (ID) being taught in science classrooms. I have always felt very strongly about the dangers faced by science in our society, and this crisis is a perfect example of what can happen without careful vigilance on the part of science teachers and practitioners.&lt;/p&gt;
+&lt;p&gt;I will be trying to understand this issue thoroughly in the coming months, though I must admit my conclusion is rather clear in advance. Nonetheless, I believe there are subtle arguments being made in ID, and if I am truly worried about the role of science in my society, then I owe it to my children to understand the debate completely, so that I can be an informed participant in any future discussions that involve my district.&lt;/p&gt;
+&lt;p&gt;The main themes I&amp;rsquo;ll be keeping in mind as I read are: is ID a purely religious point of view?  Is ID a &amp;ldquo;God of the Gaps&amp;rdquo; argument?  Can a falsifiable scientific theory of ID exist?  Are our children being taught that science produces facts rather than theories?  Are our children being taught that science and religion cannot coexist?&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ll be getting to these questions over time.  At the moment, I want to say something about science to get the ball rolling.  Science is many things, but right now I feel especially protective of its adherence to &lt;em&gt;falsifiability&lt;/em&gt;. Any scientific statement or prediction must be testable against nature, and such tests must be able to either confirm or contradict the statement. When Einstein proposed the theory of General Relativity, it was known right away that its predictions of the movement of bodies did not vary very much from the Newtonian formulation of gravity. If Einstein had been unable to think of an experiment or observation that would be able to confirm or contradict his theory with respect to Newton&amp;rsquo;s, then the scientific community would have rejected General Relativity completely.  Einstein and Sir Arthur Eddington were able, however, to use GR to predict an observed anomoly in the orbit of Mercury that had previously gone unexplained.  Moreover, they were able to use GR to predict the phenomenon of gravitational lensing, and observe such lensing during a solar eclipse.  Once these observations were made and proved to be consistent with GR to great precision, GR became the new working theory of gravity.  If we make an observation tomorrow that is inconsistent with GR, and in some sense we already have because quantum theory is known to be incompatible, then we will start looking for a better theory that explains everything explained by GR and also the inconsistent observations.  Science does not hold any given theory dear, and each one is always ready to be rejected as soon as it fails.  The system only works if falsifiability is held as the highest goal. Skepticism, peer review, and measurements against nature are the tools of science.&lt;/p&gt;
+&lt;p&gt;Now let me extend this idea to science &lt;em&gt;class&lt;/em&gt;. We should teach only scientific theories in science class.  This means two things.  First, no non-falsifiable theories need apply.  Those are not testable by science, and so they lie outside the domain.  They are as irrelevant in science class as anything can be.  It would be the same as requiring students to learn to tell fortunes with Tarot cards in history class.  Secondly, we must be very careful in how we teach science.  I suspect that many teachers do not give students the impression that scientific theories can be overthrown, or how that happens.  Rather, they teach theories as if they were final facts.  Gravity &lt;em&gt;is&lt;/em&gt; the curvature of spacetime.  Electrons &lt;em&gt;do&lt;/em&gt; orbit the nucleus in fixed orbitals that are physically real.  Galaxies &lt;em&gt;definitely have&lt;/em&gt; black holes at the center.  The universe &lt;em&gt;definitely started&lt;/em&gt; with the Big Bang.  Now, I&amp;rsquo;m not saying that every sentence like these needs to be qualified with &amp;ldquo;&amp;hellip;, we think&amp;rdquo; every time you say them, so long as you spend a good amount of class time explaining that everything is just a working model. Science does not claim that the world really works in certain ways.  Rather, it is a process for better modeling the world, and it requires certain criteria in order for the forward movement to continue.&lt;/p&gt;
+&lt;p&gt;So, if ID is not falsifiable, that&amp;rsquo;s the only piece of information I need to decide if it should be taught in science class.  Others like to discuss how religious Newton was, or how uncertain of natural selection so-and-so actual practiciing biologist is.  None of this matters.  Every falsifiable theory of biology that explains all the known facts should be taught in science class, and nothing more.  If someone says &amp;ldquo;God created some of our biochemical machinery,&amp;rdquo; then I&amp;rsquo;m very interested to hear their argument, but not in science class.  It can never be proved wrong, because we will never know what &lt;em&gt;actually&lt;/em&gt; happened in the past, and so it gets science nowhere.&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>Poker</title>
       <link>https://greg.langmead.info/posts/2005-04-26-poker/</link>
       <pubDate>Tue, 26 Apr 2005 01:15:24 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/posts/2005-04-26-poker/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;ve had poker on my mind since last Thanksgiving, specifically Texas Hold&amp;rsquo;em. At this point, I have special hold&amp;rsquo;em software, four poker strategy books and one nonfiction book about poker. I mostly study the books and play a bit with the software, but eventually I want to start a real-money account on one of the online poker sites. I feel that if I apply what&amp;rsquo;s in the books, then I can win money, which would be a very fun goal to shoot for. Of course, to avoid having a gambling problem I have to tread very carefully and lower my expectations within reason for the early stages. I have been procrastinating setting up a new checking account for my poker money both because I truly hesitate to take this step, and because I don&amp;rsquo;t feel I&amp;rsquo;m good enough yet.&lt;/p&gt;</description>
+      <description>&lt;p&gt;I&amp;rsquo;ve had poker on my mind since last Thanksgiving, specifically Texas Hold&amp;rsquo;em. At this point, I have special hold&amp;rsquo;em software, four poker strategy books and one nonfiction book about poker. I mostly study the books and play a bit with the software, but eventually I want to start a real-money account on one of the online poker sites. I feel that if I apply what&amp;rsquo;s in the books, then I can win money, which would be a very fun goal to shoot for. Of course, to avoid having a gambling problem I have to tread very carefully and lower my expectations within reason for the early stages. I have been procrastinating setting up a new checking account for my poker money both because I truly hesitate to take this step, and because I don&amp;rsquo;t feel I&amp;rsquo;m good enough yet.&lt;/p&gt;
+&lt;p&gt;The poker sites all offer games with pretend money, but the problem there is the opponents are so crazy and bad that you can hardly apply any real strategy. The poker software offers a good challenge, but it&amp;rsquo;s almost to the other extreme &amp;ndash; it&amp;rsquo;s designed to provide challenging opponents. This is a good thing, but the kind of opponents I&amp;rsquo;m aiming to win money from are inbetween: they&amp;rsquo;re better than lunatics, but they won&amp;rsquo;t play like a typical strong opponent. They&amp;rsquo;ll play too many hands and go too far with them. If I can tune my poker software to simulate this, maybe I can grow more confident and eventually open that bank account. I&amp;rsquo;m sure my friends and family will all be equally horrified by this (my wife doesn&amp;rsquo;t like to discuss it with me), but I still feel like it&amp;rsquo;s something I should try.&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>Daylight Savings Time</title>
       <link>https://greg.langmead.info/posts/2005-04-08-daylight-savings-time/</link>
       <pubDate>Fri, 08 Apr 2005 05:16:35 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/posts/2005-04-08-daylight-savings-time/</guid>
-      <description>&lt;p&gt;I don&amp;rsquo;t understand daylight savings time. No one I talk to has a clear idea of when and why it was invented. What country started it?  What countries adhere to it?  Why is Europe still doing it a week before the US?&lt;/p&gt;</description>
+      <description>&lt;p&gt;I don&amp;rsquo;t understand daylight savings time. No one I talk to has a clear idea of when and why it was invented. What country started it?  What countries adhere to it?  Why is Europe still doing it a week before the US?&lt;/p&gt;
+&lt;p&gt;It seems clear to me that having extremely accurate measurements of time has become an indispensible part of our society.  Computers and many other timekeeping devices are synchronized regularly with servers maintained by (or synchronized with) our standards bodies&amp;rsquo; equipment, so that their inherent inaccuracy can be overcome.  Very nearly, there is one nearly standard idea of time.&lt;/p&gt;
+&lt;p&gt;Why, then, do we have this sloppy period where times start changing all over the world.  At the company where I work, we have employees everywhere with whom we meet regularly by phone.  One of them works from Morocco, and we missed a meeting with him last week because he had already gone to daylight savings time and we hadn&amp;rsquo;t, and we all forgot.&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s not so much that this really bothers me, because I don&amp;rsquo;t care if we have a somewhat loose notion of time &amp;amp;emdash; when we make it too strict, I start to feel a bit dehumanized.  Rather, what I find interesting is that we&amp;rsquo;re so inconsistent.  We seem obsessed with the exact microsecond of time, and we do all we can to get univeral agreement among our devices, at least &lt;em&gt;locally&lt;/em&gt;, while at the same time we don&amp;rsquo;t keep very good track of the hours.&lt;/p&gt;
+&lt;p&gt;All this was an overly elaborate way to link to a CNN story (via Slashdot) about &lt;a href=&#34;http://www.cnn.com/2005/POLITICS/04/07/daylight.saving.ap/index.html&#34;&gt;Congress considering extending Daylight Savings Time by a couple of months&lt;/a&gt;. That would make eight months of DST out of twelve.  Doesn&amp;rsquo;t that sound strange?  It drives home how arbitrary time is anyway &amp;ndash; why not call the other four months &amp;ldquo;Daylight Wastings Time&amp;rdquo;?  When I saw the headline mention changing DST, I assumed they were trying to do away with it!  I assumed that the confusion and loss of maximal human efficiency caused by the change would be declared to be a drag on our economy or something.&lt;/p&gt;
+&lt;p&gt;Of course, there are reasons it seems DST is a good idea.  I guess it saves energy to move the daylight hours around.  That&amp;rsquo;s all fine and good, but do it everywhere in the world at once, or else let&amp;rsquo;s just admit we don&amp;rsquo;t really care what time it is.&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>C. S. Lewis 2005</title>
       <link>https://greg.langmead.info/posts/2005-01-17-c-s-lewis-2005/</link>
       <pubDate>Mon, 17 Jan 2005 01:39:40 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/posts/2005-01-17-c-s-lewis-2005/</guid>
-      <description>&lt;p&gt;I visited my parents for the holidays again this year, and like last year I decided to read some of their C. S. Lewis collection. I felt like progressing on with his Christian works, and so I chose &lt;em&gt;Mere Christianity&lt;/em&gt;.&lt;/p&gt;</description>
+      <description>&lt;p&gt;I visited my parents for the holidays again this year, and like last year I decided to read some of their C. S. Lewis collection. I felt like progressing on with his Christian works, and so I chose &lt;em&gt;Mere Christianity&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;In this book, there are good, simple explanations of many points of Christian doctrine that I rarely heard explained in Catholic school.  Without fully admitting it to myself, however, I was looking for something specific.  Namely, I was looking for more material like that which I found to be  compelling in &lt;em&gt;The Great Divorce&lt;/em&gt;, describing what it might be like to really surrender to a certain impulse. In Lewis&amp;rsquo; mind this is the religious, specifically Christian impulse, to be one with God. In my mind, I&amp;rsquo;d rather not say it&amp;rsquo;s religious, but yet I know exactly what he&amp;rsquo;s talking about.  I am familiar with trying to improve myself, and also with failing to do so. I am familiar with many doubts and fears, and I also perceive that it is possible to defeat all of these with a single choice. That choice is simply to give them up and stop having the doubts and fears. The funny thing is, though, that we don&amp;rsquo;t want to give them up.  We feel very possessive of these feelings because they are part of our identity. I enjoy very much reading about this idea, because it gives me glimpses into what life might be like after such a surrender.&lt;/p&gt;
+&lt;p&gt;One point he makes that stood out for me is in the chapter called &amp;ldquo;Is Christianity Hard or Easy?&amp;rdquo;  Lewis describes a misconception, which I can relate to. The misconception is that we sometimes feel like obeying morality is something we hope we can do some of, and then when we&amp;rsquo;re done, there will be time left over for ourselves, to do the things we want to do. Not evil things, just things that aren&amp;rsquo;t so wrapped up with morality, like watching a movie, say. We hold back that little piece; our own personal agenda is more important, but we will try to make decisions consistant with our moral code &amp;ldquo;some of the time.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;This is a simple observation, but I just don&amp;rsquo;t hear about other people feeling this way anywhere else. I can&amp;rsquo;t imagine why not, because if Lewis is right, we all feel the same way.  Maybe the non-religious point of view in fashion in the world today is that if you fail to live up to morals, then you&amp;rsquo;ve just plain failed, so we all give it up.  There&amp;rsquo;s no real acknowledgment in the society I live in that this failure is to be taken for granted, and that you then have to decide how to proceed. This theme is central to &lt;em&gt;Mere Christianity&lt;/em&gt;, and I think it deserves a lot of thought, but I still suspect you can separate it from the religious aspects.&lt;/p&gt;
+&lt;p&gt;I suppose it&amp;rsquo;s not too surprising that I haven&amp;rsquo;t been exposed to this train of thought, because I read mainly fiction, and watch movies and some television.  I don&amp;rsquo;t do a lot of nonfiction reading, outside of these Lewis books.  Maybe I should broaden that horizon a bit.&lt;/p&gt;
+&lt;p&gt;One final point.  I&amp;rsquo;m playing both sides of the fence in these entries about Lewis.  I&amp;rsquo;m very accepting of his ideas, and clearly I&amp;rsquo;m trying to find deep truths here.  But at the same time, I reserve the right not to be thought of as religious!  I haven&amp;rsquo;t thought the details through, but I believe I can accept these truths without linking them with God, and especially not with Jesus. I think these are psychological ideas, and many of the concepts of morality are societal ones. My firm belief is that all of this can be looked at with or without God, but that the decision as to which is very important. But it is still a decision. It may not be arbitrary for every person, i.e. for some people maybe only one side makes sense. But I believe in this &amp;ldquo;freedom to choose.&amp;rdquo;&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>The Civil War</title>
       <link>https://greg.langmead.info/posts/2004-07-17-the-civil-war/</link>
       <pubDate>Sat, 17 Jul 2004 16:07:02 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/posts/2004-07-17-the-civil-war/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;ve been renting Ken Burns&amp;rsquo; &lt;em&gt;Civil War&lt;/em&gt; shows lately, from Netflix. I thought I&amp;rsquo;d share a misconception I learned I had about the Civil War. My memory from school left me thinking that the war would involve a large set of complicated virtuosic battlefield maneuvers, and that I&amp;rsquo;d come to appreciate how all the famous generals were geniuses. In fact, I&amp;rsquo;d somehow developed the opinion that the generals during that war outshine generals in other wars, that through a coincidence of history, the best strategists somehow simultaneously appeared during that conflict.&lt;/p&gt;</description>
+      <description>&lt;p&gt;I&amp;rsquo;ve been renting Ken Burns&amp;rsquo; &lt;em&gt;Civil War&lt;/em&gt; shows lately, from Netflix. I thought I&amp;rsquo;d share a misconception I learned I had about the Civil War. My memory from school left me thinking that the war would involve a large set of complicated virtuosic battlefield maneuvers, and that I&amp;rsquo;d come to appreciate how all the famous generals were geniuses. In fact, I&amp;rsquo;d somehow developed the opinion that the generals during that war outshine generals in other wars, that through a coincidence of history, the best strategists somehow simultaneously appeared during that conflict.&lt;/p&gt;
+&lt;p&gt;Well, now that I&amp;rsquo;ve written that idea down, you can see how ill-informed it must be. The way Ken Burns presents most of the battles, there are indeed arrows and colored bars moving over maps, but the level of intelligence rarely rises above common sense. In fact, it seems that common sense alone makes you a great general. There were many instances of really stupid attacks. A pattern that I&amp;rsquo;ve seen repeated (Picket&amp;rsquo;s Charge, Cold Harbor, etc.) is where a really entrenched group on a hill and/or behind a wall is charged by the enemy (the North, usually) and the troops that are dug in just mow down the attackers, for hours and hours, killing thousands of men. It seemed that all that was needed to be a great general was to avoid that kind of decision.&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>Does Tolkien think Good always defeats Evil?</title>
       <link>https://greg.langmead.info/posts/2004-06-01-does-tolkien-think-good-always-defeats-evil/</link>
       <pubDate>Tue, 01 Jun 2004 02:54:49 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/posts/2004-06-01-does-tolkien-think-good-always-defeats-evil/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;ve always thought Tolkien was essentially pessimistic, despite the happy ending of &lt;em&gt;The Lord of the Rings&lt;/em&gt;. The power of Evil he describes, and the inevibatle comparisons to the horror of World War I make this a convincing point of view. The army of Gondor is forced to risk a suicidal attack against a formidable foe to even preserve their tiny ghost of a chance of victory.&lt;/p&gt;</description>
+      <description>&lt;p&gt;I&amp;rsquo;ve always thought Tolkien was essentially pessimistic, despite the happy ending of &lt;em&gt;The Lord of the Rings&lt;/em&gt;. The power of Evil he describes, and the inevibatle comparisons to the horror of World War I make this a convincing point of view. The army of Gondor is forced to risk a suicidal attack against a formidable foe to even preserve their tiny ghost of a chance of victory.&lt;/p&gt;
+&lt;p&gt;More than this, the mood of the work is very bleak. The larger story arc about the Elves that includes &lt;em&gt;The Silmarillion&lt;/em&gt; is in Elrond&amp;rsquo;s words a story about &amp;ldquo;fighting the long defeat.&amp;rdquo; The defeat of Sauron, a minor lieutenant of the world&amp;rsquo;s great evil, Melkor, means the end of the Elves&amp;rsquo; rings of power and their final flight into the West, having finally failed to &amp;ldquo;make a go of it&amp;rdquo; in Middle Earth.&lt;/p&gt;
+&lt;p&gt;Even Frodo&amp;rsquo;s victory is bittersweet. His path to redemption was to press on through despair and hopelessness, and in the process receive deep spiritual wounds that would never heal. In the end, he has to forsake the Shire and leave Middle Earth as well. This is not really a happy ending, in the sense of Good people living happily ever after.&lt;/p&gt;
+&lt;p&gt;I can&amp;rsquo;t really say I&amp;rsquo;ve changed my mind, but reflecting on the book recently reminded me that there are definitely a few moments where Tolkien is saying something else, and I wanted to share them. These are small quotes from the books (in fact, all three are from &lt;em&gt;The Return of the King&lt;/em&gt; and didn&amp;rsquo;t make it into the movie). I&amp;rsquo;ll present the context and the quotes, then indicate why I thought they are optimistic (though I think they&amp;rsquo;re quite crystal clear).&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;When referring to chapters of &lt;em&gt;The Lord of the Rings&lt;/em&gt;, I believe it&amp;rsquo;s customary to use notation like VI.1, meaning Book 6, Chapter 1. Recall that each of the three novels is divided into two Books each, for a total of 6.&lt;/p&gt;
+&lt;p&gt;In Chapter V.2, the orcs are attacking Minas Tirith. The orcs bring Grond, the giant battering ram, and bash the main gate open. The chief of the Nazgul, the Witch King of Angmar, rides through the gate to take the first level of the city, but finds Gandalf on Shadowfax, who challenges him. This is a bleak moment for Gondor, when the military might of Sauron has utterly defeated the city. The Nazgul replies:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Gandalf did not move. And in that very moment, away beyond in some courtyard of the City, a cock crowed. Shrill and clear he crowed, recking nothing of wizardry or war, welcoming only the morning that in the sky far above the shadows of death was coming with the dawn.&lt;/p&gt;
+&lt;p&gt;And as if in answer there came from far away another note. Horns, horns, horns. In dark Mindolluin&amp;rsquo;s sides they dimly echoed. Great horns of the North wildly blowing. Rohan had come at last.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;In chapter VI.1 Frodo has been taken prisoner by the orcs after they find him wrapped in Shelob&amp;rsquo;s web. The orcs defeated, Sam and Frodo are discussing how to get some food, and Sam wonders out loud whether orcs eat poison rather than real food. Frodo replies:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;In the next chapter, VI.2, when Sam and Frodo are hunkering down for the night, Sam looks up:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;The first and third quote are quite similar. In both, events outside the context of the story&amp;rsquo;s characters remind the reader (and the characters) that all their important doings are taking place in a larger world, one where the battle against Sauron is a small matter. It is a small matter because that outside world is essentially Good. In both cases, it is a form of natural beauty that calls attention to itself, and I think Tolkien is using this beauty to indicate the Goodness of the universe.&lt;/p&gt;
+&lt;p&gt;The middle quote, Frodo&amp;rsquo;s remark about how Sauron can mock but not make, is drawing a distinction between God and Satan, I think. Tolkien believes there is an inherent power in Good that cannot be duplicated by Evil. This is a tenet of faith, a religious point of view, that makes Sauron&amp;rsquo;s defeat more of an inevitability. Note that I can&amp;rsquo;t reconcile this idea with the fact that Sauron forges a powerful ring, an act of creation that holds real meaning because it can only be undone with great difficulty.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Update&lt;/em&gt;&lt;/strong&gt;: Two of the above scenes (the first and third) now appear in the Extended Edition release of the movie version of &lt;em&gt;The Return of the King&lt;/em&gt;. The movie version of the first scene is missing the element I&amp;rsquo;m highlighting here, namely the crowing of the cock. Also, this same scene has the Witch King breaking Gandalf&amp;rsquo;s staff, which is inferior to the more mental struggle I think is portrayed in the text. The movie version of the third moment, where Sam sees the star in the sky, is changed only in that Sam points the star out to Frodo and shares his thoughts. I was very glad this was inserted in the Extended Edition, and there is even a companion moment where Frodo and Sam see an old king&amp;rsquo;s statue briefly lit by the sun with a wreath of flowers for a crown &amp;ndash; a similar image of hope.&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>New feature: better links</title>
       <link>https://greg.langmead.info/posts/2004-04-17-new-feature-better-links/</link>
       <pubDate>Sat, 17 Apr 2004 21:46:18 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/posts/2004-04-17-new-feature-better-links/</guid>
-      <description>&lt;p&gt;A new feature on Long Head is the new super-accurate &amp;ldquo;Greg Links&amp;rdquo; list on the left. Except for the other langmead.info sites, these links are the sites I&amp;rsquo;m actually actively reading every day.&lt;/p&gt;</description>
+      <description>&lt;p&gt;A new feature on Long Head is the new super-accurate &amp;ldquo;Greg Links&amp;rdquo; list on the left. Except for the other langmead.info sites, these links are the sites I&amp;rsquo;m actually actively reading every day.&lt;/p&gt;
+&lt;p&gt;I keep up to date with almost all my favorite internet sites by subscribing to RSS feeds using the free service at &lt;a href=&#34;http://www.bloglines.com&#34;&gt;BlogLines&lt;/a&gt;. RSS feeds are little XML files published by sites alongside the web pages with the actual content. As an example, here is a link to one of the many &lt;a href=&#34;http://news.bbc.co.uk/rss/newsonline_uk_edition/world/europe/rss091.xml&#34;&gt;RSS feeds published by the BBC&lt;/a&gt; (covering, in this case, just their European news).&lt;/p&gt;
+&lt;p&gt;When RSS was invented, the feeds were meant to allow easy syndication into those little customizable boxes on portal pages like Netscape and Yahoo. But these days it&amp;rsquo;s also common to use them in aggregators like BlogLines, where they become similar to mailboxes, with changes to the xml file coming in like new emails. Of course, you don&amp;rsquo;t read the XML itself, rather the XML contains information like a headline, a link to the full story, and a brief summary. The headlines and summaries let you skip over everything that doesn&amp;rsquo;t interest you, and in that way it&amp;rsquo;s become my main tool for coping with information overload.&lt;/p&gt;
+&lt;p&gt;Circularly, RSS feeds and aggregators are the &amp;ldquo;other half&amp;rdquo; of the blog system itself: every blog engine (Blogger.com, Movable Type, Radio, etc.) publishes an RSS feed file that is kept in sync with the blog. Blogs then become just like news sites: new postings are gathered by aggregators and people can keep up with them that way. At the bottom of my left navbar you&amp;rsquo;ll see an image with a link to Long Head&amp;rsquo;s RSS feed.&lt;/p&gt;
+&lt;p&gt;Back to Greg Links. BlogLines supports a scheme where I put a little snippet of code in the Long Head home page to generate a list of exactly the sites whose feeds I currently subscribe to. When I add a new feed or stop subscribing to one, Long Head reflects those changes in real time.&lt;/p&gt;
+&lt;p&gt;I publish the links on Long Head to serve the same purpose as the rest of this site &amp;ndash; as a diary of my thoughts and activities. If you want to know just about every single piece of informational input that goes into my head, then listen to NPR and read those web sites.&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>Book review: C. S. Lewis</title>
       <link>https://greg.langmead.info/posts/2004-04-17-book-review-c-s-lewis/</link>
       <pubDate>Sat, 17 Apr 2004 21:00:08 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/posts/2004-04-17-book-review-c-s-lewis/</guid>
-      <description>&lt;p&gt;This winter I read three books by C. S. Lewis: &lt;em&gt;The Great Divorce&lt;/em&gt;, &lt;em&gt;The Screwtape Letters&lt;/em&gt; and &lt;em&gt;Surprised by Joy&lt;/em&gt;.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve been introduced to Lewis before, when I was young. I read the first several books of the &lt;em&gt;Narnia&lt;/em&gt; series, and I read the whole &lt;em&gt;Out of the Silent Planet&lt;/em&gt; trilogy. Back then, however, I was looking for pure entertainment from those books, and although they delivered it, the religious level was also apparent, and detracted from their enjoyment for me.&lt;/p&gt;</description>
+      <description>&lt;p&gt;This winter I read three books by C. S. Lewis: &lt;em&gt;The Great Divorce&lt;/em&gt;, &lt;em&gt;The Screwtape Letters&lt;/em&gt; and &lt;em&gt;Surprised by Joy&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ve been introduced to Lewis before, when I was young. I read the first several books of the &lt;em&gt;Narnia&lt;/em&gt; series, and I read the whole &lt;em&gt;Out of the Silent Planet&lt;/em&gt; trilogy. Back then, however, I was looking for pure entertainment from those books, and although they delivered it, the religious level was also apparent, and detracted from their enjoyment for me.&lt;/p&gt;
+&lt;p&gt;I came back to Lewis through Tolkien, having read &lt;em&gt;The Lord of the Rings&lt;/em&gt; several times now and wondering a bit about how much religion to look for in it. Lewis and Tolkien were friends and colleagues, and I knew Lewis wrote religious works, so I was hoping to gain insight into Tolkien&amp;rsquo;s religious side this way.  So, this time around I was looking for the religious content, and curious about how Lewis approached it.  I chose works that I was told were good examples of his religious writing.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;I found that he emphasizes all the aspects of Christianity that I find most comforting.  In fact, one of Lewis&amp;rsquo; central ideas in &lt;em&gt;The Great Divorce&lt;/em&gt; suggests the sort of therapy we could all use. In this allegorical story, the visitors to Heaven must let go of things that make life on earth more like Hell: an attachment to unhappiness and to fear.  To hold onto these things, and use them for nourishment instead of their opposites, leads not to safety and peace (since to my mind they are intended as protection against hurt) but to a bland and bleak life, empty and devoid of beauty.  To make this trade-off is not only foolish, it is Lewis&amp;rsquo; definition of Hell.&lt;/p&gt;
+&lt;p&gt;Letting go of fear and anger, however, seems to me to be an issue on a psychological level, not a religious one.  And I kept feeling this disconnect throughout all three books, as well as during a recent re-reading of &lt;em&gt;Out of the Silent Planet&lt;/em&gt;.  The real lessons kept seeming very earthly to me, suggesting attitude adjustments that could take place in the here and now, under one&amp;rsquo;s own power.&lt;/p&gt;
+&lt;p&gt;Almost like a self-help book, Lewis seemed to be instructing us about joy, something I think everyone already has a fully fleshed-out idea of, if only by contradiction to their own disappointments in life.  He never draws a very convincing connection between this freedom from fear and God or Jesus.  At one point in &lt;em&gt;Surprised by Joy&lt;/em&gt;, which chronicles his own conversion in adulthood, Lewis, having tapped into a realization of God&amp;rsquo;s existence, and having learned how to let go and stop grasping at false images of happiness, he then began to &amp;ldquo;shop around&amp;rdquo; for a religion:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Then, a few sentences later, after having rejected Hinduism as &amp;ldquo;coexistence of philosophy side by side with Paganism unpurged&amp;rdquo; he says of Christianity,&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Lewis is a renowned Christian writer, and I am not dismissing his ability to explain or shore up the ideas of Christianity. The point I&amp;rsquo;m making is that when I read these three books, I did not find a very strong explanation of why Christianity and faith must play a role in setting the moral and psychological tone of one&amp;rsquo;s life.&lt;/p&gt;
+&lt;p&gt;I also did not find evidence either way as to whether &lt;em&gt;The Lord of the Rings&lt;/em&gt; is a Christian work.&lt;/p&gt;
+&lt;p&gt;What I did find, however, was an excellent and inspiring account of the &lt;em&gt;choice&lt;/em&gt; that one must make to be happy. In a way, happiness &lt;em&gt;is&lt;/em&gt; the choice to be happy, and Lewis provides very insightful and persuasive images of what it means to make that choice, and why it is so easy to decide the opposite instead.&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>MathType for Mac&#39;s out!</title>
       <link>https://greg.langmead.info/posts/2004-03-26-mathtype-for-macs-out/</link>
       <pubDate>Fri, 26 Mar 2004 19:25:30 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/posts/2004-03-26-mathtype-for-macs-out/</guid>
-      <description>&lt;p&gt;After nearly three years of development, &lt;a href=&#34;http://www.dessci.com/en/products/mathtype/mtm_upgrade.htm&#34;&gt;MathType 5 for Mac&lt;/a&gt; has been released.&lt;/p&gt;&#xA;&lt;p&gt;It&amp;rsquo;s been a long time coming, and I&amp;rsquo;m looking forward to moving on to other projects, but for now I&amp;rsquo;m happy it&amp;rsquo;s finished.&lt;/p&gt;</description>
+      <description>&lt;p&gt;After nearly three years of development, &lt;a href=&#34;http://www.dessci.com/en/products/mathtype/mtm_upgrade.htm&#34;&gt;MathType 5 for Mac&lt;/a&gt; has been released.&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s been a long time coming, and I&amp;rsquo;m looking forward to moving on to other projects, but for now I&amp;rsquo;m happy it&amp;rsquo;s finished.&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>Coming soon...</title>
       <link>https://greg.langmead.info/posts/2004-02-12-coming-soon/</link>
       <pubDate>Thu, 12 Feb 2004 05:32:36 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/posts/2004-02-12-coming-soon/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;ll be adding my thoughts soon about three books by C. S. Lewis that I&amp;rsquo;ve recently finished. Although I had a few false starts with the Narnia books as a youth, these were read more to find out about the real Christian thinker, and because I wanted to branch out from Tolkien to some of his colleagues.&lt;/p&gt;</description>
+      <description>&lt;p&gt;I&amp;rsquo;ll be adding my thoughts soon about three books by C. S. Lewis that I&amp;rsquo;ve recently finished. Although I had a few false starts with the Narnia books as a youth, these were read more to find out about the real Christian thinker, and because I wanted to branch out from Tolkien to some of his colleagues.&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>I&#39;m a pundit, I&#39;m punditing, I pun</title>
       <link>https://greg.langmead.info/posts/2003-12-04-im-a-pundit-im-punditing-i-pun/</link>
       <pubDate>Thu, 04 Dec 2003 04:00:45 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/posts/2003-12-04-im-a-pundit-im-punditing-i-pun/</guid>
-      <description>&lt;p&gt;A few weeks ago I decided to put some thought into why I have so much trouble getting good at real-time strategy computer games. I went ahead and submitted it to &lt;a href=&#34;http://www.gamespot.com&#34;&gt;GameSpot&lt;/a&gt;, my favorite gaming news site, which does a weekly set of op-ed pieces with a slot for a reader to opine. Well, my article was accepted! &lt;a href=&#34;http://www.gamespot.com/features/6084762/index.html&#34;&gt;Have a read&lt;/a&gt; &amp;ndash; I&amp;rsquo;m the second one down.&lt;/p&gt;</description>
+      <description>&lt;p&gt;A few weeks ago I decided to put some thought into why I have so much trouble getting good at real-time strategy computer games. I went ahead and submitted it to &lt;a href=&#34;http://www.gamespot.com&#34;&gt;GameSpot&lt;/a&gt;, my favorite gaming news site, which does a weekly set of op-ed pieces with a slot for a reader to opine. Well, my article was accepted! &lt;a href=&#34;http://www.gamespot.com/features/6084762/index.html&#34;&gt;Have a read&lt;/a&gt; &amp;ndash; I&amp;rsquo;m the second one down.&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>Blogging from bed</title>
       <link>https://greg.langmead.info/posts/2003-06-28-blogging-from-bed/</link>
       <pubDate>Sat, 28 Jun 2003 07:58:43 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/posts/2003-06-28-blogging-from-bed/</guid>
-      <description>&lt;p&gt;Got wireless today! It&amp;rsquo;s totally new to me, but not to most other people, so I won&amp;rsquo;t dwell on it. Anyway, I&amp;rsquo;m in bed, which means Penelope is in the chair and Alison&amp;rsquo;s got her arms all over my pillows. This laptop has a very loud hard drive, which I already knew, but which is a bit more of a problem in this context.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Got wireless today! It&amp;rsquo;s totally new to me, but not to most other people, so I won&amp;rsquo;t dwell on it. Anyway, I&amp;rsquo;m in bed, which means Penelope is in the chair and Alison&amp;rsquo;s got her arms all over my pillows. This laptop has a very loud hard drive, which I already knew, but which is a bit more of a problem in this context.&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>Don&#39;t Want to Miss a Thing</title>
       <link>https://greg.langmead.info/posts/2003-06-11-dont-want-to-miss-a-thing/</link>
       <pubDate>Wed, 11 Jun 2003 05:59:11 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/posts/2003-06-11-dont-want-to-miss-a-thing/</guid>
-      <description>&lt;p&gt;I just finished watching &lt;em&gt;Armageddon&lt;/em&gt; and it reminds me of an issue I have with the grammar of the Aerosmith/Dianne Warren song &amp;ldquo;Don&amp;rsquo;t Want to Miss a Thing.&amp;rdquo; The lyrics go &amp;ldquo;&amp;hellip;don&amp;rsquo;t want to fall asleep / &amp;lsquo;cause I miss you babe / and I don&amp;rsquo;t want to miss a thing.&amp;rdquo;&lt;/p&gt;</description>
+      <description>&lt;p&gt;I just finished watching &lt;em&gt;Armageddon&lt;/em&gt; and it reminds me of an issue I have with the grammar of the Aerosmith/Dianne Warren song &amp;ldquo;Don&amp;rsquo;t Want to Miss a Thing.&amp;rdquo; The lyrics go &amp;ldquo;&amp;hellip;don&amp;rsquo;t want to fall asleep / &amp;lsquo;cause I miss you babe / and I don&amp;rsquo;t want to miss a thing.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;I can&amp;rsquo;t help but hear this the wrong way &amp;ndash; it&amp;rsquo;s my contrary nature. My interpretation is that he&amp;rsquo;s singing &amp;ldquo;I miss you. You&amp;rsquo;re an object. I don&amp;rsquo;t want to miss an object, so I don&amp;rsquo;t want to miss you.&amp;rdquo; It&amp;rsquo;s analogous to saying &amp;ldquo;&amp;lsquo;cause I miss you babe / and I don&amp;rsquo;t want to miss a blockhead.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;Anyway, I know he isn&amp;rsquo;t saying anything of the kind, but the proximity of two uses of &amp;ldquo;thing&amp;rdquo; makes this an automatic alternative my brain entertains.&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>I&#39;m 30</title>
       <link>https://greg.langmead.info/posts/2003-04-20-im-30/</link>
       <pubDate>Sun, 20 Apr 2003 17:53:29 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/posts/2003-04-20-im-30/</guid>
-      <description>&lt;p&gt;&lt;img alt=&#34;Bunny Cake!&#34; src=&#34;https://greg.langmead.info/img/BunnyCake.jpg&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Yesterday was my 30th birthday. Alison threw me a surprise party (just the two of us) on Friday night and made me a bunny cake! Yesterday she gave me a bottle of &lt;em&gt;really&lt;/em&gt; nice tequila, and I had some with breakfast ;-). My brother got me a book, and there are more gifts on the way that I don&amp;rsquo;t know what they are. Alison and I had a nice visit to our favorite boba tea place in Long Beach, then headed over to Anaheim to see the Angels play the Mariners, and I got a proper Angels hat. It&amp;rsquo;s made of really light, breathable material and it was very comfortable. It also represents some sort of turning point for me, as I do not change baseball allegience lightly, though eventually I guess I always do.&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;img alt=&#34;Bunny Cake!&#34; src=&#34;https://greg.langmead.info/img/BunnyCake.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Yesterday was my 30th birthday. Alison threw me a surprise party (just the two of us) on Friday night and made me a bunny cake! Yesterday she gave me a bottle of &lt;em&gt;really&lt;/em&gt; nice tequila, and I had some with breakfast ;-). My brother got me a book, and there are more gifts on the way that I don&amp;rsquo;t know what they are. Alison and I had a nice visit to our favorite boba tea place in Long Beach, then headed over to Anaheim to see the Angels play the Mariners, and I got a proper Angels hat. It&amp;rsquo;s made of really light, breathable material and it was very comfortable. It also represents some sort of turning point for me, as I do not change baseball allegience lightly, though eventually I guess I always do.&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>Alison&#39;s PhD</title>
       <link>https://greg.langmead.info/posts/2003-04-14-alisons-phd/</link>
       <pubDate>Mon, 14 Apr 2003 04:39:01 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/posts/2003-04-14-alisons-phd/</guid>
-      <description>&lt;p&gt;This past week, my wife&amp;rsquo;s dissertation was aproved by Columbia&amp;rsquo;s dissertation office, meaning the printouts had the right margins, her paperwork made its way from the Art History department, her library fees were all paid, her account was in good standing, and 12 years of your typical bureaucratic wrangling has sorted itself out.&lt;/p&gt;</description>
+      <description>&lt;p&gt;This past week, my wife&amp;rsquo;s dissertation was aproved by Columbia&amp;rsquo;s dissertation office, meaning the printouts had the right margins, her paperwork made its way from the Art History department, her library fees were all paid, her account was in good standing, and 12 years of your typical bureaucratic wrangling has sorted itself out.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m very proud of Alison for seeing this project through. It was a long project, beginning back in 1997 when we took our first trip to Cahors in southern France and she got the idea of doing a massive geographic survey of Romanesque architecture. But it&amp;rsquo;s not just the length, it&amp;rsquo;s the fact that she did it on her own (with a little technical and minor logistical help from me, but my whining cancels that out), often against hardship imposed by lesser or more jaded minds. If anyone had thought that academics was about the pursuit of knowledge and study, to understand our place in history and in the universe, they would be pretty much wrong. Academics is dominated by small minds and people who try to stop the proliferation of great ideas, just like in other pursuits. There really is no good home for people who want to pursue true, pure knowledge and understanding.&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>Buy me toys!</title>
       <link>https://greg.langmead.info/posts/2003-04-08-buy-me-toys/</link>
       <pubDate>Tue, 08 Apr 2003 04:14:06 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/posts/2003-04-08-buy-me-toys/</guid>
-      <description>&lt;p&gt;My birthday&amp;rsquo;s coming up, so head on over to amazon.com and &lt;a href=&#34;http://www.amazon.com/exec/obidos/registry/1T63DINEDI1C1/ref%3Dwl%5Fs%5F3/104-1790558-0272731&#34;&gt;check out my wish list&lt;/a&gt;! :)&lt;/p&gt;</description>
+      <description>&lt;p&gt;My birthday&amp;rsquo;s coming up, so head on over to amazon.com and &lt;a href=&#34;http://www.amazon.com/exec/obidos/registry/1T63DINEDI1C1/ref%3Dwl%5Fs%5F3/104-1790558-0272731&#34;&gt;check out my wish list&lt;/a&gt;! :)&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>So I guess I&#39;ve made</title>
       <link>https://greg.langmead.info/posts/2003-03-08-so-i-guess-ive-made/</link>
       <pubDate>Sat, 08 Mar 2003 18:36:01 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/posts/2003-03-08-so-i-guess-ive-made/</guid>
-      <description>&lt;p&gt;So I guess I&amp;rsquo;ve made a mess of all my various weblogs. First there was a Movable Type blog in 2001, then a radio blog, then a new radio blog, and then this new Movable Type blog. I&amp;rsquo;m going to settle on this one, but all my old posts to the other blogs will just have to be lost unless I can muster the enthusiasm for scrounging them up somehow.&lt;/p&gt;</description>
+      <description>&lt;p&gt;So I guess I&amp;rsquo;ve made a mess of all my various weblogs. First there was a Movable Type blog in 2001, then a radio blog, then a new radio blog, and then this new Movable Type blog. I&amp;rsquo;m going to settle on this one, but all my old posts to the other blogs will just have to be lost unless I can muster the enthusiasm for scrounging them up somehow.&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>Still working on Fabric of</title>
       <link>https://greg.langmead.info/posts/2003-03-08-still-working-on-fabric-of/</link>
       <pubDate>Sat, 08 Mar 2003 18:35:11 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/posts/2003-03-08-still-working-on-fabric-of/</guid>
-      <description>&lt;p&gt;Still working on &lt;em&gt;Fabric of Reality&lt;/em&gt;, because I am a little lost in the chapter on quantum computing, which was the main topic I bought the book to read about. I&amp;rsquo;m sure I&amp;rsquo;ll figure it out eventually.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Still working on &lt;em&gt;Fabric of Reality&lt;/em&gt;, because I am a little lost in the chapter on quantum computing, which was the main topic I bought the book to read about. I&amp;rsquo;m sure I&amp;rsquo;ll figure it out eventually.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m just about finished re-listening to my audio-book version of &lt;em&gt;The Fellowship of the Ring&lt;/em&gt;, which I enjoyed immensely. I&amp;rsquo;ve now read the dead-tree book once, and listened to this audio book twice.&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>Now that I&#39;m finished American</title>
       <link>https://greg.langmead.info/posts/2003-03-08-now-that-im-finished-american/</link>
       <pubDate>Sat, 08 Mar 2003 18:34:16 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/posts/2003-03-08-now-that-im-finished-american/</guid>
-      <description>&lt;p&gt;Now that I&amp;rsquo;m finished &lt;em&gt;American Gods&lt;/em&gt;, I&amp;rsquo;m just reading &lt;a href=&#34;http://www.amazon.com/exec/obidos/tg/detail/-/014027541X/qid=1046661995/sr=12-1/104-0484812-0662315?v=glance&amp;s=books&#34;&gt;&lt;em&gt;The Fabric of Reality&lt;/em&gt;&lt;/a&gt; by David Deutsch. It&amp;rsquo;s about physics, quantum computation, DNA, and lots of other topics, sort of unified into a really interesting and idiosyncratic world-view. David Deutsch is a father of quantum computing, so he knows what he&amp;rsquo;s talking about. I always prefer well-expressed personal viewpoints to bland, objective information.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Now that I&amp;rsquo;m finished &lt;em&gt;American Gods&lt;/em&gt;, I&amp;rsquo;m just reading &lt;a href=&#34;http://www.amazon.com/exec/obidos/tg/detail/-/014027541X/qid=1046661995/sr=12-1/104-0484812-0662315?v=glance&amp;s=books&#34;&gt;&lt;em&gt;The Fabric of Reality&lt;/em&gt;&lt;/a&gt; by David Deutsch. It&amp;rsquo;s about physics, quantum computation, DNA, and lots of other topics, sort of unified into a really interesting and idiosyncratic world-view. David Deutsch is a father of quantum computing, so he knows what he&amp;rsquo;s talking about. I always prefer well-expressed personal viewpoints to bland, objective information.&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>I just finished reading American</title>
       <link>https://greg.langmead.info/posts/2003-03-08-i-just-finished-reading-american/</link>
       <pubDate>Sat, 08 Mar 2003 18:33:43 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/posts/2003-03-08-i-just-finished-reading-american/</guid>
-      <description>&lt;p&gt;I just finished reading &lt;em&gt;&lt;a href=&#34;http://www.amazon.com/exec/obidos/tg/detail/-/0380789035/qid=1046661792/sr=12-1/104-0484812-0662315?v=glance&amp;s=books&#34;&gt;American Gods&lt;/a&gt;&lt;/em&gt; by Neil Gaiman. I enjoyed it, but it was a little slow. Basically it explores the idea (in fictional form) that gods from the various pantheons traveled to America with the settlers and started trying to eke their living here. In this day and age, it&amp;rsquo;s not easy to be a god, and they&amp;rsquo;re almost like pathetic people.&lt;/p&gt;</description>
+      <description>&lt;p&gt;I just finished reading &lt;em&gt;&lt;a href=&#34;http://www.amazon.com/exec/obidos/tg/detail/-/0380789035/qid=1046661792/sr=12-1/104-0484812-0662315?v=glance&amp;s=books&#34;&gt;American Gods&lt;/a&gt;&lt;/em&gt; by Neil Gaiman. I enjoyed it, but it was a little slow. Basically it explores the idea (in fictional form) that gods from the various pantheons traveled to America with the settlers and started trying to eke their living here. In this day and age, it&amp;rsquo;s not easy to be a god, and they&amp;rsquo;re almost like pathetic people.&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>Oh my, I haven&#39;t posted</title>
       <link>https://greg.langmead.info/posts/2003-03-08-oh-my-i-havent-posted/</link>
       <pubDate>Sat, 08 Mar 2003 18:32:47 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/posts/2003-03-08-oh-my-i-havent-posted/</guid>
-      <description>&lt;p&gt;Oh my, I haven&amp;rsquo;t posted for a long time.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Oh my, I haven&amp;rsquo;t posted for a long time.&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>Long Head moving to Langmead.info</title>
       <link>https://greg.langmead.info/posts/2002-08-14-long-head-moving-to-langmeadinfo/</link>
       <pubDate>Wed, 14 Aug 2002 07:51:22 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/posts/2002-08-14-long-head-moving-to-langmeadinfo/</guid>
-      <description>&lt;p&gt;Test, test. Blah, blah, blah.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Test, test. Blah, blah, blah.&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>We have proper internet hosting</title>
       <link>https://greg.langmead.info/posts/2002-08-01-we-have-proper-internet-hosting/</link>
       <pubDate>Thu, 01 Aug 2002 21:34:09 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/posts/2002-08-01-we-have-proper-internet-hosting/</guid>
-      <description>&lt;p&gt;We have proper internet hosting now, via the domain langmead.info. More soon.&lt;/p&gt;</description>
+      <description>&lt;p&gt;We have proper internet hosting now, via the domain langmead.info. More soon.&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>Alison and I are all</title>
       <link>https://greg.langmead.info/posts/2002-05-17-alison-and-i-are-all/</link>
       <pubDate>Fri, 17 May 2002 02:33:54 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/posts/2002-05-17-alison-and-i-are-all/</guid>
-      <description>&lt;p&gt;Alison and I are all set up in L.A.! We have an apartment on the beach, and two cars. We&amp;rsquo;re moving June 1. &lt;a href=&#34;http://homepage.mac.com/langmead/PhotoAlbum5.html&#34;&gt;Here&lt;/a&gt; are some pictures.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Alison and I are all set up in L.A.! We have an apartment on the beach, and two cars. We&amp;rsquo;re moving June 1. &lt;a href=&#34;http://homepage.mac.com/langmead/PhotoAlbum5.html&#34;&gt;Here&lt;/a&gt; are some pictures.&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>So I have progressed nicely</title>
       <link>https://greg.langmead.info/posts/2002-05-07-so-i-have-progressed-nicely/</link>
       <pubDate>Tue, 07 May 2002 02:32:08 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/posts/2002-05-07-so-i-have-progressed-nicely/</guid>
-      <description>&lt;p&gt;So I have progressed nicely in my quest to hear new music that I like. I bought two CDs! Blur&amp;rsquo;s greatest hits (or is it &amp;ldquo;best of?&amp;rdquo;) and Ben Folds Five (Whatever and ever amen).&lt;/p&gt;</description>
+      <description>&lt;p&gt;So I have progressed nicely in my quest to hear new music that I like. I bought two CDs! Blur&amp;rsquo;s greatest hits (or is it &amp;ldquo;best of?&amp;rdquo;) and Ben Folds Five (Whatever and ever amen).&lt;/p&gt;
+&lt;p&gt;I have enjoyed both, especially the Blur. I will be trying some more of their stuff very soon. I&amp;rsquo;m a little frustrated that they didn&amp;rsquo;t get along with Andy Partridge when he was lined up as producer, but then again Andy is supposedly not very easy to get along with, at least when it comes to music.&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>I need new music. For</title>
       <link>https://greg.langmead.info/posts/2002-03-26-i-need-new-music-for/</link>
       <pubDate>Tue, 26 Mar 2002 02:09:51 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/posts/2002-03-26-i-need-new-music-for/</guid>
-      <description>&lt;p&gt;I need new music. For years I&amp;rsquo;ve been listening to a core group of bands: XTC, Beatles, Squeeze, Joe Jackson, various solo Beatles, R.E.M., Billy Joel and They Might Be Giants, with smaller amounts of the B-52&amp;rsquo;s, Indigo Girls, and a little Classical (mostly Mozart, Bach and Beethoven of course).&lt;/p&gt;</description>
+      <description>&lt;p&gt;I need new music. For years I&amp;rsquo;ve been listening to a core group of bands: XTC, Beatles, Squeeze, Joe Jackson, various solo Beatles, R.E.M., Billy Joel and They Might Be Giants, with smaller amounts of the B-52&amp;rsquo;s, Indigo Girls, and a little Classical (mostly Mozart, Bach and Beethoven of course).&lt;/p&gt;
+&lt;p&gt;In the last few years, I&amp;rsquo;ve started to change a little bit.  I&amp;rsquo;ve dipped my toes into new music and I have been really well rewarded. Radiohead, Jude, and David Yazbek are the biggest successes. Alanis Morisette not so much, really. I just started another push into the water with Badly Drawn Boy, Owsley, and Apples in Stereo.  Those didn&amp;rsquo;t impress me much.&lt;/p&gt;
+&lt;p&gt;I need to strike out in a completely new direction, into some genre that I&amp;rsquo;m completely ignorant of. The best thing about Radiohead, Jude and Yazbek is the originality, or rather the difference from my usual fare, whichever. But this is exactly what makes finding new music hard: if I know the kind of music, and not the bands, I&amp;rsquo;m stuck. Any suggestions?&lt;/p&gt;
+&lt;p&gt;And while I&amp;rsquo;m at it, I need a fresh look at Classical music. New symphonies by composers I&amp;rsquo;m familiar with, or whole new composers and subgenres. For example, I really like the Mahler I&amp;rsquo;ve heard, but I only have a couple of his symphonies.&lt;/p&gt;
+&lt;p&gt;Since I can&amp;rsquo;t afford to buy too many CDs, I need to be pretty clever about it. This is exactly the purpose to which Napster et al are &lt;em&gt;poorly suited&lt;/em&gt;, because you have to &lt;em&gt;type something in&lt;/em&gt;, not browse. That&amp;rsquo;s the stereotypically male shopping model, and at this point I need more of the female model.&lt;/p&gt;
+&lt;p&gt;One solution I&amp;rsquo;ve had some success with is searching the archives of fan bulletin boards of bands I know I like. If you search for &amp;ldquo;recommend,&amp;rdquo; then you can read postings where the fans suggest music to each other, which makes a lot of sense if you like the band the list is based on. Maybe I&amp;rsquo;ll take a look at more lists besides &lt;a href=&#34;http://www.chalkhills.org&#34;&gt;XTC&amp;rsquo;s&lt;/a&gt;.&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>I recently rented The Lord</title>
       <link>https://greg.langmead.info/posts/2002-03-14-i-recently-rented-the-lord/</link>
       <pubDate>Thu, 14 Mar 2002 02:07:34 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/posts/2002-03-14-i-recently-rented-the-lord/</guid>
-      <description>&lt;p&gt;I recently rented &lt;em&gt;The Lord of the Rings&lt;/em&gt; in audiobook format, on CD, from &lt;a href=&#34;http://www.recordedbooks.com&#34;&gt;Recorded Books&lt;/a&gt;. They make, sell, and rent audiobooks. When you rent, they send you the books in a box-within-a-box. The inner box is for sending it back, so there is very little hassle.&lt;/p&gt;</description>
+      <description>&lt;p&gt;I recently rented &lt;em&gt;The Lord of the Rings&lt;/em&gt; in audiobook format, on CD, from &lt;a href=&#34;http://www.recordedbooks.com&#34;&gt;Recorded Books&lt;/a&gt;. They make, sell, and rent audiobooks. When you rent, they send you the books in a box-within-a-box. The inner box is for sending it back, so there is very little hassle.&lt;/p&gt;
+&lt;p&gt;Don&amp;rsquo;t tell them, but I am ripping the whole set into MP3 format, so that I can listen on my &lt;a href=&#34;http://www.apple.com/ipod&#34;&gt;iPod&lt;/a&gt;. I am not doing it to steal the books, or put them up on Limewire, I just want to put the data in my own bucket, as it were. It&amp;rsquo;s &lt;em&gt;very&lt;/em&gt; relaxing to kick back and listen to a book, so I recommend poring over the selection at Recorded Books.&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>I was thinking about Close</title>
       <link>https://greg.langmead.info/posts/2002-03-02-i-was-thinking-about-close/</link>
       <pubDate>Sat, 02 Mar 2002 21:33:17 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/posts/2002-03-02-i-was-thinking-about-close/</guid>
-      <description>&lt;p&gt;I was thinking about &lt;em&gt;Close Encounters of the Third Kind&lt;/em&gt; the other day. I was pretty young, so take this with a grain of salt, but here&amp;rsquo;s what I was thinking. At the beginning, a mood of chaos is set when as-yet-unintroduced high-ranking officials meet in a remote location where a World War II plane (boat?) has been found.  They arrive in a helicopter, and part of the fun and tension of the scene is the landing of this loud helicopter. It really is exciting, because, you know, you don&amp;rsquo;t see helicopters land every day.  These guys must really be important, and there must be quite a bit of urgency!&lt;/p&gt;</description>
+      <description>&lt;p&gt;I was thinking about &lt;em&gt;Close Encounters of the Third Kind&lt;/em&gt; the other day. I was pretty young, so take this with a grain of salt, but here&amp;rsquo;s what I was thinking. At the beginning, a mood of chaos is set when as-yet-unintroduced high-ranking officials meet in a remote location where a World War II plane (boat?) has been found.  They arrive in a helicopter, and part of the fun and tension of the scene is the landing of this loud helicopter. It really is exciting, because, you know, you don&amp;rsquo;t see helicopters land every day.  These guys must really be important, and there must be quite a bit of urgency!&lt;/p&gt;
+&lt;p&gt;Nowadays, having helicopters land in movies is totally cliche. I will never again feel like it is significant for characters to use helicopters, so the device is useless.  I just say to myself, &amp;ldquo;Okay, here these guys are. They&amp;rsquo;re army dudes, there are three of them&amp;hellip;&amp;rdquo; whatever.  This is a very general problem with imitation, really.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m against imitation.&lt;/p&gt;
+&lt;p&gt;I suppose it&amp;rsquo;s crucial for there to be certain kinds of imitation in certain cases, but &lt;em&gt;I&lt;/em&gt; would like to strive not to use it. I would rather be the innovator who creates &lt;em&gt;Close Encounters&lt;/em&gt; than the joker who just creates knock-offs.  Plus, the really significant experiences of my life were never repeats, they were new! It is hard and elusive to communicate something in a truly new way, but very worthwile and satisfying to both parties. So, please, could we all try to innovate a little more?&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>There is a lot of</title>
       <link>https://greg.langmead.info/posts/2002-02-28-there-is-a-lot-of/</link>
       <pubDate>Thu, 28 Feb 2002 21:32:06 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/posts/2002-02-28-there-is-a-lot-of/</guid>
-      <description>&lt;p&gt;There is a lot of buzz about a book called &lt;a href=&#34;http://www.gonzomarkets.com/cluetrain&#34;&gt;The Cluetrain Manifesto&lt;/a&gt;. I can&amp;rsquo;t tell if it&amp;rsquo;s about dotcoms, or about social forces in the Internet Age. But, they provided the whole book online, so I ciphoned it onto my Palm and I&amp;rsquo;m going to read it. I&amp;rsquo;ll keep you posted.&lt;/p&gt;</description>
+      <description>&lt;p&gt;There is a lot of buzz about a book called &lt;a href=&#34;http://www.gonzomarkets.com/cluetrain&#34;&gt;The Cluetrain Manifesto&lt;/a&gt;. I can&amp;rsquo;t tell if it&amp;rsquo;s about dotcoms, or about social forces in the Internet Age. But, they provided the whole book online, so I ciphoned it onto my Palm and I&amp;rsquo;m going to read it. I&amp;rsquo;ll keep you posted.&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>Speaking of books, here is</title>
       <link>https://greg.langmead.info/posts/2002-02-28-speaking-of-books-here-is/</link>
       <pubDate>Thu, 28 Feb 2002 21:26:36 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/posts/2002-02-28-speaking-of-books-here-is/</guid>
-      <description>&lt;p&gt;Speaking of books, here is my reading list for the coming months:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://www.amazon.com/exec/obidos/ASIN/0451524934/qid=1014952968/sr=8-1/ref=sr_8_67_1/102-2574653-3061724&#34;&gt;&lt;em&gt;1984&lt;/em&gt;&lt;/a&gt;, by George Orwell&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://www.oreilly.com/~stevet/fdnc/index.html&#34;&gt;&lt;em&gt;The Future Does Not Compute: Overcoming the Machines in our Midst&lt;/em&gt;&lt;/a&gt;, by Steve Talbott. (See also &lt;a href=&#34;http://www.oreilly.com/~stevet/netfuture/faq.html&#34;&gt;the FAQ&lt;/a&gt; for his excellent ongoing email newsletter &amp;ldquo;Netfuture.&amp;rdquo;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://www.amazon.com/exec/obidos/ASIN/0312863551/qid=1014953271/sr=1-1/ref=sr_1_1/102-2574653-3061724&#34;&gt;&lt;em&gt;The Moon is a Harsh Mistress&lt;/em&gt;&lt;/a&gt;, by Robert Heinlein&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://www.amazon.com/exec/obidos/ASIN/0195106466/qid=1014953344/sr=1-2/ref=sr_1_2/102-2574653-3061724&#34;&gt;&lt;em&gt;Shadows of the Mind: A Search for the Missing Science of Consciousness&lt;/em&gt;&lt;/a&gt;, by Roger Penrose&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://www.amazon.com/exec/obidos/ASIN/0553575384/qid=1014953389/sr=1-1/ref=sr_1_1/102-2574653-3061724&#34;&gt;&lt;em&gt;To Say Nothing of the Dog&lt;/em&gt;&lt;/a&gt;, by Connie Willis&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+      <description>&lt;p&gt;Speaking of books, here is my reading list for the coming months:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.amazon.com/exec/obidos/ASIN/0451524934/qid=1014952968/sr=8-1/ref=sr_8_67_1/102-2574653-3061724&#34;&gt;&lt;em&gt;1984&lt;/em&gt;&lt;/a&gt;, by George Orwell&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.oreilly.com/~stevet/fdnc/index.html&#34;&gt;&lt;em&gt;The Future Does Not Compute: Overcoming the Machines in our Midst&lt;/em&gt;&lt;/a&gt;, by Steve Talbott. (See also &lt;a href=&#34;http://www.oreilly.com/~stevet/netfuture/faq.html&#34;&gt;the FAQ&lt;/a&gt; for his excellent ongoing email newsletter &amp;ldquo;Netfuture.&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.amazon.com/exec/obidos/ASIN/0312863551/qid=1014953271/sr=1-1/ref=sr_1_1/102-2574653-3061724&#34;&gt;&lt;em&gt;The Moon is a Harsh Mistress&lt;/em&gt;&lt;/a&gt;, by Robert Heinlein&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.amazon.com/exec/obidos/ASIN/0195106466/qid=1014953344/sr=1-2/ref=sr_1_2/102-2574653-3061724&#34;&gt;&lt;em&gt;Shadows of the Mind: A Search for the Missing Science of Consciousness&lt;/em&gt;&lt;/a&gt;, by Roger Penrose&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.amazon.com/exec/obidos/ASIN/0553575384/qid=1014953389/sr=1-1/ref=sr_1_1/102-2574653-3061724&#34;&gt;&lt;em&gt;To Say Nothing of the Dog&lt;/em&gt;&lt;/a&gt;, by Connie Willis&lt;/li&gt;
+&lt;/ul&gt;
+</description>
     </item>
+    
     <item>
       <title>Alison came up with an</title>
       <link>https://greg.langmead.info/posts/2002-02-28-alison-came-up-with-an/</link>
       <pubDate>Thu, 28 Feb 2002 21:25:00 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/posts/2002-02-28-alison-came-up-with-an/</guid>
-      <description>&lt;p&gt;Alison came up with an interesting quote in her dissertation research on 12th century France:&lt;/p&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;p&gt;As I hear more and more about this time period from Alison, I see why she studies history. It sheds light forward onto our own time. Would you describe our current ways of thinking as &amp;ldquo;eschewing univocal interpretations,&amp;rdquo; because I wouldn&amp;rsquo;t. I forget who said the following but I agree and I guess so would the scholars of 1100: the older I get, the more I learn that not only is it okay to hold contradictory beliefs, but the deepest, most important elements of life are bound up in such opposing truths.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Alison came up with an interesting quote in her dissertation research on 12th century France:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;As I hear more and more about this time period from Alison, I see why she studies history. It sheds light forward onto our own time. Would you describe our current ways of thinking as &amp;ldquo;eschewing univocal interpretations,&amp;rdquo; because I wouldn&amp;rsquo;t. I forget who said the following but I agree and I guess so would the scholars of 1100: the older I get, the more I learn that not only is it okay to hold contradictory beliefs, but the deepest, most important elements of life are bound up in such opposing truths.&lt;/p&gt;
+&lt;p&gt;*Stephan Borgehammar, &amp;ldquo;A Monastic Conception of the Liturgical Year,&amp;rdquo; in &lt;em&gt;The Liturgy of the Medieval Church&lt;/em&gt;, ed. Thomas J Heffernan and E. Ann Matter (Kalamazoo, MI: Medieval Institute Publications, Western Michigan University, 2001), 18.&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>Jingo Bells, Jingo Bells...</title>
       <link>https://greg.langmead.info/posts/2002-02-09-jingo-bells-jingo-bells/</link>
       <pubDate>Sat, 09 Feb 2002 01:34:13 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/posts/2002-02-09-jingo-bells-jingo-bells/</guid>
-      <description>&lt;p&gt;I was really looking forward to the opening ceremonies of the Winter Olympics tonight, but over the last few days I&amp;rsquo;ve been growing increasingly uneasy about what I might see there. As it turned out, after the initial voice-overs by Messrs. McKay (co-alum of my high school!) and Costas, I turned off the television. I&amp;rsquo;m only going to tune in when events I want to see are on.&lt;/p&gt;</description>
+      <description>&lt;p&gt;I was really looking forward to the opening ceremonies of the Winter Olympics tonight, but over the last few days I&amp;rsquo;ve been growing increasingly uneasy about what I might see there. As it turned out, after the initial voice-overs by Messrs. McKay (co-alum of my high school!) and Costas, I turned off the television. I&amp;rsquo;m only going to tune in when events I want to see are on.&lt;/p&gt;
+&lt;p&gt;My problem is nationalism, and the two forms it has taken since September 11th. First, is the lower-brow flag waving habit. There was actually a fight over allowing the flag from the top of the WTC to make an appearance during the ceremonies. Give me a break! If it wasn&amp;rsquo;t that important before 9/11, then it is exactly that important today, no more and no less. All people really mean when they wave these things around is &amp;ldquo;I&amp;rsquo;m part of something bigger than I am and I don&amp;rsquo;t have to assert my identity for a few minutes! Hooray!&amp;rdquo; My good friend Carl Sagan has a pretty good understanding of what&amp;rsquo;s going on here: the pre-human part of our brain controls this emotion. In fact, it&amp;rsquo;s reptilian. Don&amp;rsquo;t follow leaders or symbols blindly, you&amp;rsquo;re better than that.&lt;/p&gt;
+&lt;p&gt;The second and much worse problem is what Bob Costas said (paraphrasing): &amp;ldquo;America was thrust unexpectedly into the middle of history.&amp;rdquo; There is real feeling that this is an emotional time, and that to ham it up and make it one of the overtones of the Olympics is only natural. Bullshit! Events like what happened in NYC and in DC on the 11th happen ALL THE TIME, ALL OVER THE WORLD, AND HAVE DONE SO FOR MILLENIA. The fact is, we&amp;rsquo;re just not used to it, but that doesn&amp;rsquo;t elevate it over the concerns of other nations. There have been earthquakes in the last two years that have killed more people than those planes did, ten times over. There have been devastating wars and strife for all of history. To take this one event and treat it with so much melodrama just drives home to me that we, as a nation, do not care about anyone other than ourselves. It kind of makes you begin to understand the feelings of anger that pervade the third world&amp;hellip;&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>Aging</title>
       <link>https://greg.langmead.info/posts/1999-01-29-aging/</link>
       <pubDate>Fri, 29 Jan 1999 04:11:53 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/posts/1999-01-29-aging/</guid>
-      <description>&lt;p&gt;&lt;img alt=&#34;1998Banner&#34; src=&#34;http://greg.langmead.info/wp-content/uploads/2008/03/banner.gif&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;Note, this was written before I had a blog. I recovered it from the Internet Archive. Back in graduate school I had a “musings” section of my site and those essays are in the same spirit as this blog so I’ve added them with retroactive datestamps.&lt;/em&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;img alt=&#34;1998Banner&#34; src=&#34;http://greg.langmead.info/wp-content/uploads/2008/03/banner.gif&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Note, this was written before I had a blog. I recovered it from the Internet Archive. Back in graduate school I had a “musings” section of my site and those essays are in the same spirit as this blog so I’ve added them with retroactive datestamps.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The three constants in the universe, so I&amp;rsquo;m told, are the speed of light, death, and taxes. I can&amp;rsquo;t really do anything about the speed of light, and I feel quite powerless to affect taxes, as I live in a city that charges almost as much in income tax as the state it&amp;rsquo;s in (Hint: this state is the most populous on the east coast and charges a &lt;strong&gt;buttload&lt;/strong&gt; in both income and sales tax, and the city shares its name). So, that leaves death. Now there I can at least do some explaining.&lt;/p&gt;
+&lt;p&gt;I have an analytical mind (nooooooo!). I like to reason things out, and so as my tiny being tries to grasp the true nature of life and death, it grabs on to little morsels. This particular morsel I want to share is so tiny, so not helpful, that it&amp;rsquo;s almost a waste. But it seems to explain a lot to me anyway, so I&amp;rsquo;ll carry on&amp;hellip;&lt;/p&gt;
+&lt;p&gt;The issue at hand is the following.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Resolved&lt;/strong&gt;: People tend to feel their life slipping past them faster and faster as they get older. Middle-aged folks may even feel decades slip by at a time. As our store of patience grows, so does our tendency to allow time to pass in large chunks. Our lives speed up.&lt;/p&gt;
+&lt;p&gt;The solution to this paradox is the following logical deduction: If &lt;em&gt;a &amp;lt; b&lt;/em&gt; then &lt;em&gt;c/a &amp;gt; c/b&lt;/em&gt;. (Okay, okay, so long as &lt;em&gt;c&lt;/em&gt; is positive.) The way to read that more relevantly is, &amp;ldquo;If you are younger than me (&lt;em&gt;a &amp;lt; b&lt;/em&gt;) then &lt;em&gt;c&lt;/em&gt; days seems longer to you than to me (&lt;em&gt;c/a &amp;gt; c/b&lt;/em&gt;).&amp;rdquo; So the fractions&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;c/a&lt;/em&gt; and &lt;em&gt;c/b&lt;/em&gt; represent the fraction of our total lives so far that waiting for &lt;em&gt;c&lt;/em&gt; days represents. For example, if you are four years old, then waiting for a toy for a week represents waiting around 0.5% of the total amount of time you have ever existed. If I am 40, then a week is only 0.05% of my total lifespan. Said another way, waiting 10 weeks feels the same to me as waiting a week does for you, the four-year-old. And plus I&amp;rsquo;m waiting for a video game and not a toy!&lt;/p&gt;
+&lt;p&gt;All the math is meant to confuse you into thinking I&amp;rsquo;m right. Certainly you can&amp;rsquo;t argue that the equations don&amp;rsquo;t lie. What was left unsaid is the basic hypothesis here: we measure the size of periods of time in relation to our own total experience of time. As we gain familiarity with time&amp;rsquo;s flow, that is, as we age, we can let more of it trickle by in one gulp without thinking too much about it. But I feel it&amp;rsquo;s more precise than that: our sense of how long a month or a year is is proportional to our age. That means that a one-day-old baby (awww) feels as much time go by in its second day of life as I will between now and when I&amp;rsquo;m 50. Wow. And to think mommy gets most of that day alone with baby in the hospital. I&amp;rsquo;m jealous.&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>Titanic</title>
       <link>https://greg.langmead.info/posts/1998-04-17-titanic/</link>
       <pubDate>Fri, 17 Apr 1998 17:43:32 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/posts/1998-04-17-titanic/</guid>
-      <description>&lt;p&gt;&lt;img alt=&#34;1998Banner&#34; src=&#34;http://greg.langmead.info/wp-content/uploads/2008/03/banner.gif&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;Note, this was written before I had a blog. I recovered it from the Internet Archive. Back in graduate school I had a &amp;ldquo;musings&amp;rdquo; section of my site and those essays are in the same spirit as this blog so I&amp;rsquo;ve added them with retroactive datestamps.&lt;/em&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;img alt=&#34;1998Banner&#34; src=&#34;http://greg.langmead.info/wp-content/uploads/2008/03/banner.gif&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Note, this was written before I had a blog. I recovered it from the Internet Archive. Back in graduate school I had a &amp;ldquo;musings&amp;rdquo; section of my site and those essays are in the same spirit as this blog so I&amp;rsquo;ve added them with retroactive datestamps.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;I recently saw the movie &lt;em&gt;Titanic&lt;/em&gt;, directed by James Cameron. It provoked thoughts of many kinds, and I&amp;rsquo;m not entirely sure why. Part of it had to do with the moviemaking itself, which I&amp;rsquo;ll get to last. But part of it had to do with the story, as it was told, and the problem of negativity in our society.&lt;/p&gt;
+&lt;p&gt;As many people will tell you, &lt;em&gt;Titanic&lt;/em&gt; can be broken down as follows: an hour and a quarter of plot to get you involved, followed by two hours of sinking. The first part was very enjoyable. Basically, if you remember &lt;em&gt;Romeo and Juliet&lt;/em&gt;, then you get the idea. Upper-class girl (17 years old! practically statutory rape) meets lower-class boy during suicide attempt off back of ship, where lower-class members of society hang out. Desperate for personal attention and true human interaction, she falls madly in love with him. He draws a picture of her naked, they become the first to do it in the back of a car, then the ship sinks and he dies.&lt;/p&gt;
+&lt;p&gt;Anyway, during the actual sinking, our young couple no longer form the focus of the movie. Instead, we are shown, in a style of moviemaking deliberately intended to smack of realism and documentary, how 2200 people from different segments of society would react to a crisis of this magnitude, as they scramble to get aboard enough lifeboats to save 1100 of them (but which end up only filled with 700). As Cameron (who also wrote the screenplay) shows us personal failure after personal failure, I found myself clicking my tongue along with it saying &amp;ldquo;Christ, what an ass,&amp;rdquo; or &amp;ldquo;I can&amp;rsquo;t believe that guy did that,&amp;rdquo; or &amp;ldquo;Yep. That&amp;rsquo;s how people would react all right.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;But it&amp;rsquo;s not true.&lt;/p&gt;
+&lt;p&gt;Cameron shows too many negative moments, and almost no positive ones. I believe that there was just as much generosity and heroism to be found during this hell as there was animal behavior. Yes, people probably did keep others out of their lifeboat with an oar. Yes, the crew probably did tend to buckle under the pressure, but is there evidence that one of them started shooting people? (Of course, then that crew member blows his own head off in a grisley scene meant purely to shock. Shame on James.) Were there only cowardly men like the one that snuck onto a boat, praying he wouldn&amp;rsquo;t be noticed, or were there also men who would have gladly sacrificed their place for another?&lt;/p&gt;
+&lt;p&gt;Cameron did provide counterpoint to these regrettable acts. He shows tender moments of parting between loved ones. And more parting between loved ones. And more. But no acts of bravery, no acts of self-sacrifice, no true human spirit coming through. The conclusion: James Cameron thinks there are no such people, except the fictional ones like Jack Dawson (our hero) who reside in a special world carved out for those who love like only fictional characters can do. No less than Romeo himself (no coincidence that whats-his-name was also in the recent MTV-videoesque version of &lt;em&gt;Romeo and Juliet&lt;/em&gt;) could give of himself to save the life of a loved one. Bullshit. Lots of that was going on, I&amp;rsquo;m sure. Why aren&amp;rsquo;t we being shown those stories too? Not just the brave goodbyes, but the ones who stopped to help a panicked woman get on her boat, the ones that offered solace and hope when there really was none, the women that chose to stay with their loved ones instead of being rescued. (Incidentally, wasn&amp;rsquo;t that Irish woman (from Terminator 2) with her two kids both on a lifeboat and in her cabin when it finally sank?)&lt;/p&gt;
+&lt;p&gt;Why was the movie made that way? Why is it so negative? I am not sure, but I bet it has to do with making as much money from the movie as possible. That was obviously their motivation for doing every single thing they did. James Cameron is famously obsessive as a moviemaker. But take a look at his movies: they are pure candy. No grand themes, no elevating stories, no lovable characters. Just two-dimensional everything. Grab-your-attention, edge-of-your-seet, nonstop action. But in the process, he manages to beat every last shred of humanity from the story. The only reason for showing tenderness or real compassion is to set us up for the big disappointment when whoever it was gets blown away, or drowns, or freezes to death with her frozen baby in her arms (especially inappropriate, I thought).&lt;/p&gt;
+&lt;p&gt;It doesn&amp;rsquo;t seem such a great idea to use base ideas such as these to make a movie. It tends to make us unhappy, and who needs that? I don&amp;rsquo;t want to go see someone tell me that people suck, that we&amp;rsquo;re a bunch of bastards, to show me how he thinks I&amp;rsquo;d react when placed on a sinking ship. Cameron has lowered our expectations of ourselves, and yet the movie will sell very well. We are used to seeing ourselves lowered in this way: take a look at the local news, or take a look at the way we act towards strangers, or take a look at how no one seems to stop bringing up the Holocaust, or even worse, bringing up the fact that that&amp;rsquo;s nothing compared to the number of Russians killed. &amp;ldquo;But if we forget about it, we&amp;rsquo;re doomed to repeat it one day,&amp;rdquo; they say. Exactly my point. Nice positive outlook on humanity, isn&amp;rsquo;t it. It&amp;rsquo;s not hip to be down on people, it&amp;rsquo;s the most negative possible activity.&lt;/p&gt;
+&lt;p&gt;As for my opinions on the moviemaking itself (from a technical standpoint), something really jumped out at me as I made my way home on the subway. As you may know, computer animation was extensively used in this movie. How else could there be complete fly-bys of a beautiful model of the Titanic, complete with actors moving about on deck? A flyover by a nonexistent camera over a ship that sunk 84 years ago with people that were never there walking around on it. This concept is so striking that there were, by my count, at least 10 of these scenes in the movie.&lt;/p&gt;
+&lt;p&gt;The point is clear: with the aid of computer technology, absolutely anything you could possibly imagine can be convincingly placed on film. Did you see Mouse Hunt? You actually felt like you were the mouse running around in the nooks and crannies of the house, something that would have been impossible with a real camera (or a real house, for that matter). Or Star Wars: Special Edition. George Lucas even says in an interview that things that were impossible in 1980 were doable now, even easy (I added the easy part).&lt;/p&gt;
+&lt;p&gt;Computer animation is not easy, but it is straightforward. Interfaces for 3D software is constantly growing more sophisticated. And this same software (Infini-D, Strata Studio, Ray Dream Studio, 3D Studio Max, Lightwave, SoftImage, etc.) is getting cheaper. You can get your hands on powerful 3D software for doing simple animations for $100.&lt;/p&gt;
+&lt;p&gt;Wait a minute. Say that again? You mean millions of people have access to software only mildly crippled compared to what they made &lt;em&gt;Titanic&lt;/em&gt; with? That&amp;rsquo;s right. And just think how much cheaper and better this software will be in a few years. It&amp;rsquo;s inevitable in the computer industry that price will drop while ease of use and power will increase.&lt;/p&gt;
+&lt;p&gt;That&amp;rsquo;s when it hit me.&lt;/p&gt;
+&lt;p&gt;I imagined a software program so easy to use that in a matter of moments I could have a 3D animation of exactly the idea in my head. Or a dream I had. Or something I saw. I could wake up, say &amp;ldquo;What a nightmare,&amp;rdquo; and show my wife exactly what the dream was. I could immediately &lt;em&gt;show&lt;/em&gt; the person I was talking to the geometric shape I was studying. I would no longer have to wave my arms saying &amp;ldquo;big purple blobby thing with whiskers sort of and spots around the outside with a lever coming out crosswise from the center.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;What I&amp;rsquo;m having a hard time explaining here is that we might one day have a vehicle for showing exactly what&amp;rsquo;s in our minds, in 3 dimensions (4, including the potential for animation), instantly. What will this do to moviemaking?&lt;/p&gt;
+&lt;p&gt;Regardless of whether I end up being able to show everyone my purple monster, sooner or later the folks that make movies will get fed up using their new power to just make things that look real. Enough dinosaurs, Godzillas, apes, mice, Titanics, explosions, space ships, and shields that come out of nowhere to encase a hero in metal. They&amp;rsquo;ll get more abstract. More creative. They&amp;rsquo;ll be able to express more subtle ideas than mere realism. They&amp;rsquo;ll be able to use the new medium like artists have been doing for millenia: they&amp;rsquo;ll be able to speak directly to our emotions.&lt;/p&gt;
+&lt;p&gt;I just hope it happens after James Cameron retires.&lt;/p&gt;
+</description>
     </item>
+    
   </channel>
 </rss>

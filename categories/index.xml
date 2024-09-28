@@ -1,47 +1,60 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Long Head</title>
     <link>https://greg.langmead.info/categories/</link>
     <description>Recent content in Categories on Long Head</description>
-    <generator>Hugo</generator>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 28 Aug 2023 17:33:15 -0400</lastBuildDate>
-    <atom:link href="https://greg.langmead.info/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+	    <atom:link href="https://greg.langmead.info/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>Tech</title>
       <link>https://greg.langmead.info/category/tech/</link>
       <pubDate>Mon, 28 Aug 2023 17:33:15 -0400</pubDate>
+      
       <guid>https://greg.langmead.info/category/tech/</guid>
       <description></description>
     </item>
+    
     <item>
       <title>Misc</title>
       <link>https://greg.langmead.info/category/misc/</link>
       <pubDate>Mon, 05 Nov 2018 12:36:54 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/category/misc/</guid>
       <description></description>
     </item>
+    
     <item>
       <title>Personal</title>
       <link>https://greg.langmead.info/category/personal/</link>
       <pubDate>Tue, 23 Jun 2015 02:21:22 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/category/personal/</guid>
       <description></description>
     </item>
+    
     <item>
       <title>Mac Stuff</title>
       <link>https://greg.langmead.info/category/mac-stuff/</link>
       <pubDate>Mon, 30 Nov 2009 15:04:16 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/category/mac-stuff/</guid>
       <description></description>
     </item>
+    
     <item>
       <title>Games</title>
       <link>https://greg.langmead.info/category/games/</link>
       <pubDate>Sun, 17 Aug 2008 05:17:07 +0000</pubDate>
+      
       <guid>https://greg.langmead.info/category/games/</guid>
       <description></description>
     </item>
+    
   </channel>
 </rss>
