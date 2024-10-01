@@ -172,17 +172,7 @@ differential geometry&lt;/h1&gt;
 &lt;p&gt;Derivatives in the infinitesimal context are about computing and
 making use of the effect of functions on tangent vectors. Tangent
 vectors are limits of finite paths, and derivatives are computed by
-taking the limit of functions applied to limits of paths. The derivative
-&lt;span class=&#34;math inline&#34;&gt;\(df\)&lt;/span&gt; of a smooth function on a smooth
-manifold &lt;span class=&#34;math inline&#34;&gt;\(f:M\to
-\ensuremath{\mathbb{R}}\)&lt;/span&gt; is emergent from &lt;span
-class=&#34;math inline&#34;&gt;\(f\)&lt;/span&gt; itself, a rerrangement of its
-structure. The process is almost reversible. This fact, that &lt;span
-class=&#34;math inline&#34;&gt;\(df\)&lt;/span&gt; is entailed in &lt;span
-class=&#34;math inline&#34;&gt;\(f\)&lt;/span&gt; reflects the impoverished nature of
-&lt;span class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{R}}\)&lt;/span&gt;. Its own
-tangent spaces look just like it. Not much changes when we map between
-two smooth manifolds.&lt;/p&gt;
+taking the limit of functions applied to limits of paths.&lt;/p&gt;
 &lt;p&gt;We will explore the story of derivatives but in a non-infinitesimal
 context (which we view as simpler – just don’t pass to the limit) and
 where the codomain is a higher type. We will focus on&lt;/p&gt;
