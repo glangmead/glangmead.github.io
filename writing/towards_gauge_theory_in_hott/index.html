@@ -470,33 +470,34 @@
 id="toc-introduction-discrete-differential-geometry"><span
 class="toc-section-number">1</span> Introduction: Discrete differential
 geometry</a></li>
-<li><a href="#examples" id="toc-examples"><span
-class="toc-section-number">2</span> Examples</a>
+<li><a href="#central-h-spaces" id="toc-central-h-spaces"><span
+class="toc-section-number">2</span> Central H-spaces</a></li>
+<li><a href="#combinatorial-manifolds"
+id="toc-combinatorial-manifolds"><span
+class="toc-section-number">3</span> Combinatorial manifolds</a>
 <ul>
 <li><a href="#the-octahedron" id="toc-the-octahedron"><span
-class="toc-section-number">2.1</span> The octahedron</a>
+class="toc-section-number">3.1</span> The octahedron</a>
 <ul>
 <li><a href="#the-higher-inductive-type-oo"
 id="toc-the-higher-inductive-type-oo"><span
-class="toc-section-number">2.1.1</span> The higher inductive type <span
+class="toc-section-number">3.1.1</span> The higher inductive type <span
 class="math inline">\(\ensuremath{\mathbb{O}}\)</span></a></li>
 <li><a href="#link-xbox-and-xdisk" id="toc-link-xbox-and-xdisk"><span
-class="toc-section-number">2.1.2</span> <span
+class="toc-section-number">3.1.2</span> <span
 class="math inline">\(\mathsf{link}\)</span>, <span
 class="math inline">\(\mathsf{xbox}\)</span>, and <span
 class="math inline">\(\mathsf{xdisk}\)</span></a></li>
 <li><a href="#extending-link" id="toc-extending-link"><span
-class="toc-section-number">2.1.3</span> Extending <span
+class="toc-section-number">3.1.3</span> Extending <span
 class="math inline">\(\mathsf{link}\)</span></a></li>
 </ul></li>
 <li><a href="#the-torus" id="toc-the-torus"><span
-class="toc-section-number">2.2</span> The torus</a></li>
-<li><a href="#combinatorial-manifolds"
-id="toc-combinatorial-manifolds"><span
-class="toc-section-number">2.3</span> Combinatorial manifolds</a></li>
+class="toc-section-number">3.2</span> The torus</a></li>
+<li><a href="#combinatorial-manifolds-1"
+id="toc-combinatorial-manifolds-1"><span
+class="toc-section-number">3.3</span> Combinatorial manifolds</a></li>
 </ul></li>
-<li><a href="#central-h-spaces" id="toc-central-h-spaces"><span
-class="toc-section-number">3</span> Central H-spaces</a></li>
 <li><a href="#why-this-is-geometry" id="toc-why-this-is-geometry"><span
 class="toc-section-number">4</span> Why this is geometry</a>
 <ul>
@@ -552,87 +553,141 @@ role="doc-biblioref">Talbott, 1995</a>)</span></p>
 id="introduction-discrete-differential-geometry"><span
 class="header-section-number">1</span> Introduction: Discrete
 differential geometry</h1>
-<p>The observation that sparks the following discussion is this: if we
-can manage to reformulate differential geometry in discrete terms (i.e.
-finite, without infinitesimals) then we may also be able to construct it
-synthetically in homotopy type theory. Furthermore, if we do capture
-geometry in HoTT then there’s a chance that it can become clearer and
-smaller. We would then have new tools, a new audience, and a new program
-to (re)explore geometry, gauge theory, low dimensional topology, and
-mathematical physics.</p>
-<p>Applied mathematicians and computer scientists have been developing
-discrete differential geometry (DDG) for many years. The 2003 Ph.D.
-thesis of Anil Hirani <span class="citation" data-cites="hiranidec"> (<a
-href="#ref-hiranidec" role="doc-biblioref">Hirani, 2003</a>)</span> (see
-also the multi-author follow-up <span class="citation"
-data-cites="desbrundec"> (<a href="#ref-desbrundec"
-role="doc-biblioref">Desbrun <em>et al.</em>, 2005</a>)</span>) defines
-finite versions of vector fields, differential forms, the wedge product,
-the Hodge star, and several differential operators (exterior derivative,
-div, grad, curl, Laplace-Beltrami, Lie derivative). Hirani and others
-cite Whitney’s 1957 book <em>Geometric Integration Theory</em><span
-class="citation" data-cites="whitney1957"> (<a href="#ref-whitney1957"
-role="doc-biblioref">Whitney, 1957</a>)</span> which develops a theory
-of cochains by integrating smooth forms over chains. In 2004 Melvil
-Leok, Jerrold Marsden, and Alan Weinstein <span class="citation"
-data-cites="leok"> (<a href="#ref-leok" role="doc-biblioref">Leok <em>et
-al.</em>, 2005</a>)</span> defined discrete connections on principal
-bundles. This is probably the work most spiritually similar to this
-paper. The motivation for the above constructions was applied
-mathematics: modeling the differential equations of mechanics and fluid
-mechanics with the so-called “finite element” methods. The theory has
-been adopted and extended by the computer graphics community as well
-(see Keenan Crane’s course notes <span class="citation"
-data-cites="crane_ddg"> (<a href="#ref-crane_ddg"
-role="doc-biblioref">Crane <em>et al.</em>, 2013</a>)</span> for a
-gentle survey).</p>
-<p>The applied category theory community has begun to develop category
-theoretic foundations and software libraries to increase the reusability
-and compositionality of finite element methods in science and
-engineering problems. See for example recent work to bring discrete
-exterior calculus into the AlgebraicJulia library <span class="citation"
-data-cites="morris_decapodes"> (<a href="#ref-morris_decapodes"
-role="doc-biblioref">Morris <em>et al.</em>, 2024</a>)</span> <span
-class="citation" data-cites="patterson_diffeq"> (<a
-href="#ref-patterson_diffeq" role="doc-biblioref">Patterson <em>et
-al.</em>, 2022</a>)</span>.</p>
-<p>For these classically-minded applied mathematicians DDG is defined on
-combinatorial manifolds such as simplicial complexes, of any finite
-dimension. The 0-cells play the role of points, the 1-cells are path
-segments, and so on. They define <span
-class="math inline">\(n\)</span>-forms as functions on the <span
-class="math inline">\(n\)</span>-dimensional faces of the manifold into
-the real numbers, which is then extended by linearity to arbitrary <span
-class="math inline">\(n\)</span>-chains. Exterior differentiation is
-defined by Stokes theorem (which is no longer a theorem in this
-setting), by which we mean the following.</p>
+<p>Derivatives in the infinitesimal context are about computing and
+making use of the effect of functions on tangent vectors. Tangent
+vectors are limits of finite paths, and derivatives are computed by
+taking the limit of functions applied to limits of paths. The derivative
+<span class="math inline">\(df\)</span> of a smooth function on a smooth
+manifold <span class="math inline">\(f:M\to
+\ensuremath{\mathbb{R}}\)</span> is emergent from <span
+class="math inline">\(f\)</span> itself, a rerrangement of its
+structure. The process is almost reversible. This fact, that <span
+class="math inline">\(df\)</span> is entailed in <span
+class="math inline">\(f\)</span> reflects the impoverished nature of
+<span class="math inline">\(\ensuremath{\mathbb{R}}\)</span>. Its own
+tangent spaces look just like it. Not much changes when we map between
+two smooth manifolds.</p>
+<p>We will explore the story of derivatives but in a non-infinitesimal
+context (which we view as simpler – just don’t pass to the limit) and
+where the codomain is a higher type. We will focus on</p>
+<ul>
+<li><p>combinatorial 2-manifolds</p></li>
+<li><p>their tangent bundles</p></li>
+<li><p>vector fields</p></li>
+</ul>
+<p>in order to define</p>
+<ul>
+<li><p>connections</p></li>
+<li><p>curvature</p></li>
+<li><p>the index of a vector field</p></li>
+</ul>
+<p>and prove</p>
+<ul>
+<li><p>the Gauss-Bonnet theorem</p></li>
+<li><p>the Poincaré-Hopf theorem</p></li>
+<li><p>the Leibniz formula</p></li>
+</ul>
+<p>Some orienting remarks: classical math treats each dimension
+separately: functions, 1-forms, 2-forms and so on. But homotopy type
+theory unifies these. Also, HoTT types are higher groupoids, so we don’t
+so much <em>glue</em> two faces along a common edge as <em>compose</em>
+them. Finally, it’s important to note that there is complete symmetry
+between the vertical and the horizontal, between families <span
+class="math inline">\(P\to M\)</span> over <span
+class="math inline">\(M\)</span> and maps <span
+class="math inline">\(M\to B\)</span> into a classifying type.</p>
+<h1 data-number="2" id="central-h-spaces"><span
+class="header-section-number">2</span> Central H-spaces</h1>
+<ul>
+<li><p>introduce torsors</p></li>
+<li><p>show subtlety how <span class="math inline">\(BG\)</span> doesn’t
+classify stuff since it has extra properties</p></li>
+<li><p>draw</p>
+<p><img src="./6a4feec92d142f0ad0daeaca4306a46f9aaa33a5.png"
+alt="image" /></p></li>
+<li><p>H-spaces paper result equating this to a universal cover of a
+component of the universe. (It should feel significant that <span
+class="math inline">\(BS^1\simeq
+\mathrm{BAut}_1(S^1)\)</span>.)</p></li>
+</ul>
+<p>Classical 2-dimensional smooth geometry tells us to seek a type of
+torsors of the circle <span class="math inline">\(S^1\)</span>. The
+theory of torsors in HoTT that we will draw on involves central types
+and deloopings, as presented in Buchholtz et al <span class="citation"
+data-cites="buchholtz2023central"> (<a href="#ref-buchholtz2023central"
+role="doc-biblioref">Buchholtz <em>et al.</em>, 2023</a>)</span>.</p>
 <div class="mydef">
-<p><strong>Definition 1</strong>. <em>(Exterior derivative in DDG.) Let
-<span class="math inline">\(\omega\)</span> be an <span
-class="math inline">\(n-1\)</span>-form on a combinatorial manifold
-<span class="math inline">\(M\)</span>, and let <span
-class="math inline">\(\Omega\)</span> be an <span
-class="math inline">\(n\)</span>-face of <span
-class="math inline">\(M\)</span>. Let <span
-class="math inline">\(\partial\)</span> be the boundary operator on
-faces. The exterior derivative <span class="math inline">\(d\)</span> is
-defined by <span class="math display">\[d\omega(\Omega) =
-\omega(\partial\Omega).\]</span></em></p>
+<p><strong>Definition 1</strong>. <em>A pointed type <span
+class="math inline">\(A\)</span> is <em>central</em> if the evaluation
+map <span class="math display">\[f\mapsto f(\mathrm{pt}):(A\to
+A)_{(\ensuremath{\text{id}})} \to A\]</span> from the connected
+component of <span class="math inline">\(\ensuremath{\text{id}}\)</span>
+is an equivalence.</em></p>
 </div>
-<p>We will take the following path. We will use DDG as a stepping stone
-between smooth geometry and HoTT. We will learn how to see the finite
-analogues of infinitesimal constructions, and then use the syntax of
-type theory to re-present them. It won’t always be a two-step process!
-Sometimes even the smooth arguments are made with finite combinatorial
-methods, and then a limit is taken. This is especially true where the
-Gauss-Bonnet and Poincaré-Hopf theorems are concerned. <span
-class="math display">\[\mathrm{Differential\
-geometry}\longrightarrow\mathrm{Discrete\ differential\
-geometry}\longrightarrow \mathrm{Homotopy\ type\ theory}\]</span></p>
-<h1 data-number="2" id="examples"><span
-class="header-section-number">2</span> Examples</h1>
+<div class="mydef">
+<p><strong>Definition 2</strong>. <em>An <em>action</em> of a central
+type <span class="math inline">\(A\)</span> on a type <span
+class="math inline">\(X\)</span> is a map <span
+class="math inline">\(\alpha:A\times X\to X\)</span> such that <span
+class="math inline">\(\alpha(\mathrm{pt}, x)=x\)</span> for all <span
+class="math inline">\(x:X\)</span>. If <span
+class="math inline">\(X\)</span> has an <span
+class="math inline">\(A\)</span>-action, we say it is <em>an <span
+class="math inline">\(A\)</span>-torsor</em> if it is merely inhabited
+and and <span class="math inline">\(\alpha(-,x):A\to X\)</span> is an
+equivalence for every <span class="math inline">\(x:X\)</span>.</em></p>
+</div>
+<p>The type of <span class="math inline">\(A\)</span>-torsors is thus
+<span
+class="math display">\[\mathsf{Tor}_A:=\sum_{X:\mathcal{U}}\sum_{\alpha:A\times
+X\to X}
+(\alpha(\mathrm{pt},-)=\ensuremath{\text{id}}_X)\times||X||_{-1}\times\prod_{x:X}\mathsf{is\_equiv}(\alpha(-,x))\]</span>
+and we can add a basepoint to <span
+class="math inline">\(\mathsf{Tor}_A\)</span> by choosing <span
+class="math inline">\(A\)</span> itself, as a term in the universe which
+satisfies the requirements.</p>
+<p>Another way to look at <span class="math inline">\(A\)</span>’s
+neighborhood in the universe is the following.</p>
+<div class="mydef">
+<p><strong>Definition 3</strong>. <em>If <span
+class="math inline">\(X:\mathcal{U}\)</span> is any type, the type <span
+class="math inline">\(\mathrm{BAut}_1(X)\)</span> is given by <span
+class="math display">\[\mathrm{BAut}_1(X)\stackrel{\mathrm{def}}{=}\sum_{Y:\mathcal{U}}||Y=X||_0.\]</span>
+The 1 in the name indicates that the type is 1-connected, being the
+universal cover of the connected component <span
+class="math inline">\(\mathcal{U}_{(X)}\)</span> of <span
+class="math inline">\(X\)</span>, also denoted <span
+class="math inline">\(\mathrm{BAut}(X)\stackrel{\mathrm{def}}{=}\sum_{Y:\mathcal{U}}||Y=X||_{-1}\)</span>.</em></p>
+</div>
+<p>The type <span class="math inline">\(\mathrm{BAut}_1(A)\)</span> with
+<span class="math inline">\(A\)</span> a central space is the type we
+are looking for. It is both equivalent to the type of <span
+class="math inline">\(A\)</span>-torsors, and it is an Eilenberg-Mac
+Lane space <span class="math inline">\(K(A,1)\)</span>. The following
+propositions make the link.</p>
+<div class="myprop">
+<p><strong>Proposition 1</strong>. <em>Let <span
+class="math inline">\(G\)</span> be an abelian group (a set meeting the
+classical definition) and let <span
+class="math inline">\(n&gt;0\)</span>. If a central type <span
+class="math inline">\(A\)</span> is a <span
+class="math inline">\(K(G,n)\)</span> then <span
+class="math inline">\(\mathrm{BAut}_1(A)\)</span> is a <span
+class="math inline">\(K(G,n+1)\)</span>.</em></p>
+</div>
+<div class="mythm">
+<p><strong>Theorem 1</strong>. <em>There is an equivalence <span
+class="math inline">\(\mathsf{Tor}_A\simeq\mathrm{BAut}_1(A).\)</span></em></p>
+</div>
+<p>Why do we already know then that this type is a delooping? Go on to
+discuss the pointed types and how they are contractible. Then move to S1
+in particular, and polygons.</p>
+<h1 data-number="3" id="combinatorial-manifolds"><span
+class="header-section-number">3</span> Combinatorial manifolds</h1>
 <p>TODO:</p>
 <ol>
+<li><p>Can this be shortened with a unified <em>local</em>
+discussion?</p></li>
 <li><p>Color-code each continuous cycle on the flat torus and the 3d
 torus, and use that to demonstrate how the curvature acts
 (begun).</p></li>
@@ -641,17 +696,17 @@ permutation of hexagons with geometric analogy, but what is actually
 being said? Why is this making contact with anything? Does it have to
 wait for the proof of Poincaré-Hopf and Gauss-Bonnet?</p></li>
 </ol>
-<h2 data-number="2.1" id="the-octahedron"><span
-class="header-section-number">2.1</span> The octahedron</h2>
+<h2 data-number="3.1" id="the-octahedron"><span
+class="header-section-number">3.1</span> The octahedron</h2>
 <p>We will define some higher inductive types to serve as domain and
 codomain of these motivating examples.</p>
-<h3 data-number="2.1.1" id="the-higher-inductive-type-oo"><span
-class="header-section-number">2.1.1</span> The higher inductive type
+<h3 data-number="3.1.1" id="the-higher-inductive-type-oo"><span
+class="header-section-number">3.1.1</span> The higher inductive type
 <span class="math inline">\(\ensuremath{\mathbb{O}}\)</span></h3>
 <p>First we need a square, which will be a stand-in for a circle that
 can support a notion of a quarter-rotation.</p>
 <div class="mydef">
-<p><strong>Definition 2</strong>. <em>The higher inductive type <span
+<p><strong>Definition 4</strong>. <em>The higher inductive type <span
 class="math inline">\(C_4\)</span> (where C stands for “circle”). <span
 class="math display">\[\begin{aligned}
 C_4 &amp;: \mathsf{Type}\\
@@ -671,7 +726,7 @@ class="math inline">\(C_4\)</span>.</figcaption>
 join of the two-element sets <span class="math inline">\(\{c_1, c_3\}*
 \{c_2, c_4\}\)</span>.</p>
 <div class="mydef">
-<p><strong>Definition 3</strong>. <em>The HIT <span
+<p><strong>Definition 5</strong>. <em>The HIT <span
 class="math inline">\(\ensuremath{\mathbb{O}}_0\)</span> is just 6
 points, intended as the 0-skeleton of an octahedron, with vertices named
 after the colors on the faces of a Rubik’s Cube. <span
@@ -679,7 +734,7 @@ class="math display">\[w, y, b, r, g, o :
 \ensuremath{\mathbb{O}}_0\]</span></em></p>
 </div>
 <div class="mydef">
-<p><strong>Definition 4</strong>. <em>The HIT <span
+<p><strong>Definition 6</strong>. <em>The HIT <span
 class="math inline">\(\ensuremath{\mathbb{O}}_1\)</span> is the
 1-skeleton of an octahedron. <span
 class="math display">\[\begin{aligned}
@@ -699,7 +754,7 @@ ob &amp;: o=b
 \end{aligned}\]</span></em></p>
 </div>
 <div class="mydef">
-<p><strong>Definition 5</strong>. <em>The HIT <span
+<p><strong>Definition 7</strong>. <em>The HIT <span
 class="math inline">\(\ensuremath{\mathbb{O}}\)</span> is an octahedron:
 <span class="math display">\[\begin{aligned}
 w, y, b, r, g, o &amp;: \ensuremath{\mathbb{O}}\\
@@ -736,8 +791,8 @@ class="math inline">\(\ensuremath{\mathbb{O}}_0\xrightarrow[]{i_0}
 \ensuremath{\mathbb{O}}_1\xrightarrow[]{i_1}
 \ensuremath{\mathbb{O}}\)</span> that include each skeleton into the
 next-higher-dimensional skeleton.</p>
-<h3 data-number="2.1.2" id="link-xbox-and-xdisk"><span
-class="header-section-number">2.1.2</span> <span
+<h3 data-number="3.1.2" id="link-xbox-and-xdisk"><span
+class="header-section-number">3.1.2</span> <span
 class="math inline">\(\mathsf{link}\)</span>, <span
 class="math inline">\(\mathsf{xbox}\)</span>, and <span
 class="math inline">\(\mathsf{xdisk}\)</span></h3>
@@ -757,7 +812,7 @@ have a link that is merely equivalent to <span
 class="math inline">\(C_4\)</span>. So first we need notation for a
 connected component of the universe:</p>
 <div class="mydef">
-<p><strong>Definition 6</strong>. <em>If we have <span
+<p><strong>Definition 8</strong>. <em>If we have <span
 class="math inline">\(X:\mathsf{Type}\)</span> then we define <span
 class="math inline">\(\mathrm{BAut}X\stackrel{\mathrm{def}}{=}\sum_{Y:\mathsf{Type}}
 ||X=Y||_{-1}\)</span>.</em></p>
@@ -772,7 +827,7 @@ class="math inline">\(\mathsf{link}:\ensuremath{\mathbb{O}}_0\to\mathrm{BAut}C_4
 Extending this later on to the 1-skeleton and 2-skeleton will take us
 into differential geometry!</p>
 <div class="mydef">
-<p><strong>Definition 7</strong>. <em><span
+<p><strong>Definition 9</strong>. <em><span
 class="math inline">\(\mathsf{link}:\ensuremath{\mathbb{O}}_0\to\mathrm{BAut}C_4\)</span>
 is given by induction: <span class="math display">\[\begin{aligned}
 \mathsf{link}(w) &amp;= brgo \\
@@ -802,7 +857,7 @@ square notation with a fifth letter to indicate the center of the xbox.
 For example, we can define an xbox <span
 class="math inline">\(C_{4c}\)</span> as follows:</p>
 <div class="mydef">
-<p><strong>Definition 8</strong>. <em>The higher inductive type <span
+<p><strong>Definition 10</strong>. <em>The higher inductive type <span
 class="math inline">\(C_{4c}\)</span> with center <span
 class="math inline">\(c\)</span>, also denoted <span
 class="math inline">\(c_1c_2c_3c_4c\)</span>. <span
@@ -823,7 +878,7 @@ c_4c &amp;: c_4 = c
 class="math inline">\(\mathsf{xbox}:\ensuremath{\mathbb{O}}_0\to\mathsf{Type}\)</span>
 similarly to <span class="math inline">\(\mathsf{link}\)</span>.</p>
 <div class="mydef">
-<p><strong>Definition 9</strong>. <em><span
+<p><strong>Definition 11</strong>. <em><span
 class="math inline">\(\mathsf{xbox}:\ensuremath{\mathbb{O}}_0\to\mathrm{BAut}C_{4c}\)</span>
 is given by induction: <span class="math display">\[\begin{aligned}
 \mathsf{xbox}(w) &amp;= brgow \\
@@ -837,7 +892,7 @@ is given by induction: <span class="math display">\[\begin{aligned}
 <p>Finally we want to consider the 2-type that fills in the faces of the
 xbox. This is a contractible type we will call an <em>xdisk</em>.</p>
 <div class="mydef">
-<p><strong>Definition 10</strong>. <em>The higher inductive type <span
+<p><strong>Definition 12</strong>. <em>The higher inductive type <span
 class="math inline">\(C_{4c\mathsf{xdisk}}\)</span> with center <span
 class="math inline">\(c\)</span>, also denoted <span
 class="math inline">\(c_1c_2c_3c_4c_\mathsf{xdisk}\)</span>. <span
@@ -867,7 +922,7 @@ class="math inline">\(\mathsf{xdisk}:\ensuremath{\mathbb{O}}_0\to\mathrm{BAut}C_
 by filling in the triangles in <span
 class="math inline">\(\mathsf{xbox}\)</span>.</p>
 <div class="mydef">
-<p><strong>Definition 11</strong>. <em><span
+<p><strong>Definition 13</strong>. <em><span
 class="math inline">\(\mathsf{xdisk}:\ensuremath{\mathbb{O}}_0\to\mathrm{BAut}C_{4c\mathsf{xdisk}}\)</span>
 is given by induction: <span class="math display">\[\begin{aligned}
 \mathsf{xbox}(w) &amp;= brgow_\mathsf{xdisk}\\
@@ -878,8 +933,8 @@ is given by induction: <span class="math display">\[\begin{aligned}
 \mathsf{xbox}(o) &amp;= wgybo_\mathsf{xdisk}
 \end{aligned}\]</span></em></p>
 </div>
-<h3 data-number="2.1.3" id="extending-link"><span
-class="header-section-number">2.1.3</span> Extending <span
+<h3 data-number="3.1.3" id="extending-link"><span
+class="header-section-number">3.1.3</span> Extending <span
 class="math inline">\(\mathsf{link}\)</span></h3>
 <p>Note that <span class="math inline">\(\mathrm{BAut}C_4\)</span> is of
 homotopy dimension at least 2, just as <span
@@ -897,7 +952,7 @@ of rotation. Then <span class="math inline">\(g\mapsto w\)</span> and
 <span class="math inline">\(b\mapsto y\)</span>.</p>
 <p>The full map on the 1-skeleton is:</p>
 <div class="mydef">
-<p><strong>Definition 12</strong>. <em>Define <span
+<p><strong>Definition 14</strong>. <em>Define <span
 class="math inline">\(T_1:\ensuremath{\mathbb{O}}\to\mathrm{BAut}C_4\)</span>
 on just the 1-skeleton by extending <span
 class="math inline">\(\mathsf{link}\)</span> as follows: Transport away
@@ -950,7 +1005,7 @@ your fingers are pointing, then slide your hand to an equatorial face,
 then along the equator, then back to the top. The answer is: you come
 back rotated clockwise by a quarter-turn.</p>
 <div class="mydef">
-<p><strong>Definition 13</strong>. <em>The map <span
+<p><strong>Definition 15</strong>. <em>The map <span
 class="math inline">\(R:C_4\to C_4\)</span> rotates by one quarter turn,
 one “click":</em></p>
 <ul>
@@ -984,7 +1039,7 @@ homotopy from <span
 class="math inline">\(\ensuremath{\mathsf{refl}}_{T_1(w)}\)</span> to
 <span class="math inline">\(T_1(wb\cdot br\cdot rw)\)</span>.</p>
 <div class="mydef">
-<p><strong>Definition 14</strong>. <em>Define <span
+<p><strong>Definition 16</strong>. <em>Define <span
 class="math inline">\(T_2:\ensuremath{\mathbb{O}}\to\mathrm{BAut}C_4\)</span>
 by extending <span class="math inline">\(T_1\)</span> to the faces as
 follows:</em></p>
@@ -1017,8 +1072,8 @@ class="math inline">\(\ensuremath{\mathbb{O}}\)</span> would then map to
 a homotopy between the identity and two full rotations. This makes
 visible in HoTT the link between curvature and the euler characteristic
 (which is 2 for the octahedron).</p>
-<h2 data-number="2.2" id="the-torus"><span
-class="header-section-number">2.2</span> The torus</h2>
+<h2 data-number="3.2" id="the-torus"><span
+class="header-section-number">3.2</span> The torus</h2>
 <p>We can define a combinatorial torus as a similar HIT. This time each
 vertex will have six neighbors. So all the links will be merely equal to
 <span class="math inline">\(C_6\)</span> which is a hexagonal version of
@@ -1125,8 +1180,8 @@ circle comes back rotated just a few degrees counterclockwise. Use your
 imagination to discretize the smooth circle onto the points of the
 mesh.</figcaption>
 </figure>
-<h2 data-number="2.3" id="combinatorial-manifolds"><span
-class="header-section-number">2.3</span> Combinatorial manifolds</h2>
+<h2 data-number="3.3" id="combinatorial-manifolds-1"><span
+class="header-section-number">3.3</span> Combinatorial manifolds</h2>
 <p>(This section is not quite off the ground.)</p>
 <p>The combinatorial structure we have in mind is a nerve of a good open
 cover. What do we know about which smooth manifolds have such covers?
@@ -1160,92 +1215,6 @@ class="math inline">\(k\)</span>-handles; see page 107 of
 Kirby-Siebenmann. This probably holds in the noncompact case as well,
 though I don’t know a reference.</p>
 </blockquote>
-<h1 data-number="3" id="central-h-spaces"><span
-class="header-section-number">3</span> Central H-spaces</h1>
-<ul>
-<li><p>introduce torsors</p></li>
-<li><p>show subtlety how <span class="math inline">\(BG\)</span> doesn’t
-classify stuff since it has extra properties</p></li>
-<li><p>draw</p>
-<p><img src="./6a4feec92d142f0ad0daeaca4306a46f9aaa33a5.png"
-alt="image" /></p></li>
-<li><p>H-spaces paper result equating this to a universal cover of a
-component of the universe. (It should feel significant that <span
-class="math inline">\(BS^1\simeq
-\mathrm{BAut}_1(S^1)\)</span>.)</p></li>
-</ul>
-<p>Classical 2-dimensional smooth geometry tells us to seek a type of
-torsors of the circle <span class="math inline">\(S^1\)</span>. The
-theory of torsors in HoTT that we will draw on involves central types
-and deloopings, as presented in Buchholtz et al <span class="citation"
-data-cites="buchholtz2023central"> (<a href="#ref-buchholtz2023central"
-role="doc-biblioref">Buchholtz <em>et al.</em>, 2023</a>)</span>.</p>
-<div class="mydef">
-<p><strong>Definition 15</strong>. <em>A pointed type <span
-class="math inline">\(A\)</span> is <em>central</em> if the evaluation
-map <span class="math display">\[f\mapsto f(\mathrm{pt}):(A\to
-A)_{(\ensuremath{\text{id}})} \to A\]</span> from the connected
-component of <span class="math inline">\(\ensuremath{\text{id}}\)</span>
-is an equivalence.</em></p>
-</div>
-<div class="mydef">
-<p><strong>Definition 16</strong>. <em>An <em>action</em> of a central
-type <span class="math inline">\(A\)</span> on a type <span
-class="math inline">\(X\)</span> is a map <span
-class="math inline">\(\alpha:A\times X\to X\)</span> such that <span
-class="math inline">\(\alpha(\mathrm{pt}, x)=x\)</span> for all <span
-class="math inline">\(x:X\)</span>. If <span
-class="math inline">\(X\)</span> has an <span
-class="math inline">\(A\)</span>-action, we say it is <em>an <span
-class="math inline">\(A\)</span>-torsor</em> if it is merely inhabited
-and and <span class="math inline">\(\alpha(-,x):A\to X\)</span> is an
-equivalence for every <span class="math inline">\(x:X\)</span>.</em></p>
-</div>
-<p>The type of <span class="math inline">\(A\)</span>-torsors is thus
-<span
-class="math display">\[\mathsf{Tor}_A:=\sum_{X:\mathcal{U}}\sum_{\alpha:A\times
-X\to X}
-(\alpha(\mathrm{pt},-)=\ensuremath{\text{id}}_X)\times||X||_{-1}\times\prod_{x:X}\mathsf{is\_equiv}(\alpha(-,x))\]</span>
-and we can add a basepoint to <span
-class="math inline">\(\mathsf{Tor}_A\)</span> by choosing <span
-class="math inline">\(A\)</span> itself, as a term in the universe which
-satisfies the requirements.</p>
-<p>Another way to look at <span class="math inline">\(A\)</span>’s
-neighborhood in the universe is the following.</p>
-<div class="mydef">
-<p><strong>Definition 17</strong>. <em>If <span
-class="math inline">\(X:\mathcal{U}\)</span> is any type, the type <span
-class="math inline">\(\mathrm{BAut}_1(X)\)</span> is given by <span
-class="math display">\[\mathrm{BAut}_1(X)\stackrel{\mathrm{def}}{=}\sum_{Y:\mathcal{U}}||Y=X||_0.\]</span>
-The 1 in the name indicates that the type is 1-connected, being the
-universal cover of the connected component <span
-class="math inline">\(\mathcal{U}_{(X)}\)</span> of <span
-class="math inline">\(X\)</span>, also denoted <span
-class="math inline">\(\mathrm{BAut}(X)\stackrel{\mathrm{def}}{=}\sum_{Y:\mathcal{U}}||Y=X||_{-1}\)</span>.</em></p>
-</div>
-<p>The type <span class="math inline">\(\mathrm{BAut}_1(A)\)</span> with
-<span class="math inline">\(A\)</span> a central space is the type we
-are looking for. It is both equivalent to the type of <span
-class="math inline">\(A\)</span>-torsors, and it is an Eilenberg-Mac
-Lane space <span class="math inline">\(K(A,1)\)</span>. The following
-propositions make the link.</p>
-<div class="myprop">
-<p><strong>Proposition 1</strong>. <em>Let <span
-class="math inline">\(G\)</span> be an abelian group (a set meeting the
-classical definition) and let <span
-class="math inline">\(n&gt;0\)</span>. If a central type <span
-class="math inline">\(A\)</span> is a <span
-class="math inline">\(K(G,n)\)</span> then <span
-class="math inline">\(\mathrm{BAut}_1(A)\)</span> is a <span
-class="math inline">\(K(G,n+1)\)</span>.</em></p>
-</div>
-<div class="mythm">
-<p><strong>Theorem 1</strong>. <em>There is an equivalence <span
-class="math inline">\(\mathsf{Tor}_A\simeq\mathrm{BAut}_1(A).\)</span></em></p>
-</div>
-<p>Why do we already know then that this type is a delooping? Go on to
-discuss the pointed types and how they are contractible. Then move to S1
-in particular, and polygons.</p>
 <h1 data-number="4" id="why-this-is-geometry"><span
 class="header-section-number">4</span> Why this is geometry</h1>
 <p>How can we double check that we are describing the intended theory of
@@ -1359,7 +1328,7 @@ served by examples, do look at it and return to this point.</p>
 class="header-section-number">4.2</span> Connections as splittings</h2>
 <p>The classical story goes like this.</p>
 <div class="mydef">
-<p><strong>Definition 18</strong>. <em>The <em>vertical bundle</em>
+<p><strong>Definition 17</strong>. <em>The <em>vertical bundle</em>
 <span class="math inline">\(VP\)</span> of a principal bundle <span
 class="math inline">\(\pi:P\to M\)</span> with Lie group <span
 class="math inline">\(G\)</span> is the kernel of the derivative <span
@@ -1374,7 +1343,7 @@ class="math inline">\(V_pP\)</span> to <span
 class="math inline">\(V_{\phi(p)}P\)</span>, where of course <span
 class="math inline">\(\pi(p)=\pi(\phi(p))\)</span>.</p>
 <div class="mydef">
-<p><strong>Definition 19</strong>. <em>An <em>Ehresmann connection</em>
+<p><strong>Definition 18</strong>. <em>An <em>Ehresmann connection</em>
 on a principal bundle <span class="math inline">\(\pi:P\to M\)</span>
 with Lie group <span class="math inline">\(G\)</span> is a splitting
 <span class="math inline">\(TP=VP\oplus HP\)</span> at every point of
@@ -1418,7 +1387,7 @@ y}\mathrm{tr}(p):f(x)=f(y)\)</span>. We can use this to define a type of
 <em>dependent paths</em>, also called <em>pathovers</em> or <em>paths
 over</em> a given path.</p>
 <div class="mydef">
-<p><strong>Definition 20</strong>. <em>With the above context and points
+<p><strong>Definition 19</strong>. <em>With the above context and points
 <span class="math inline">\(a:f(x), b:f(y)\)</span> the type of
 <em>dependent paths over <span class="math inline">\(p\)</span></em>
 with endpoints <span class="math inline">\(a, b\)</span> is denoted
@@ -1766,7 +1735,7 @@ field</em>, and again, a notion of curvature. To prove both and relate
 them it helps to equate the Euler characteristic to the index of a
 special vector field.</p>
 <div class="mydef">
-<p><strong>Definition 21</strong>. <em>A vector field is a section <span
+<p><strong>Definition 20</strong>. <em>A vector field is a section <span
 class="math inline">\(X\)</span> of the disk bundle. A zero of <span
 class="math inline">\(X\)</span> is a vertex <span
 class="math inline">\(x\)</span> where <span
@@ -1782,7 +1751,7 @@ the fibers. So a second vector field can be lifted to the classifying
 map to pointed types, which is contractible. That’s really all that’s
 going on in these classical proofs!</p>
 <div class="mydef">
-<p><strong>Definition 22</strong>. <em>The index of a vector field at a
+<p><strong>Definition 21</strong>. <em>The index of a vector field at a
 zero is given by transport composed with exp.</em></p>
 </div>
 <div class="mythm">
@@ -1818,23 +1787,6 @@ class="smallcaps">Rijke</span>, E. (2023) <a
 href="https://arxiv.org/abs/2301.02636">Central h-spaces and banded
 types</a>.
 </div>
-<div id="ref-crane_ddg" class="csl-entry" role="listitem">
-<span class="smallcaps">Crane</span>, K., <span
-class="smallcaps">Goes</span>, F. de, <span
-class="smallcaps">Desbrun</span>, M., &amp; <span
-class="smallcaps">Schröder</span>, P. (2013) <a
-href="{https://www.cs.cmu.edu/~kmcrane/Projects/DDG/}">Digital geometry
-processing with discrete exterior calculus</a>. <em>ACM SIGGRAPH 2013
-courses</em>, <em>SIGGRAPH ’13</em>. New York, NY, USA: ACM.
-</div>
-<div id="ref-desbrundec" class="csl-entry" role="listitem">
-<span class="smallcaps">Desbrun</span>, M., <span
-class="smallcaps">Hirani</span>, A.N., <span
-class="smallcaps">Leok</span>, M., &amp; <span
-class="smallcaps">Marsden</span>, J.E. (2005) <a
-href="https://arxiv.org/abs/math/0508341">Discrete exterior
-calculus</a>.
-</div>
 <div id="ref-freedman_quinn" class="csl-entry" role="listitem">
 <span class="smallcaps">Freedman</span>, M.H. &amp; <span
 class="smallcaps">Quinn</span>, F. (1990) <em><a
@@ -1847,47 +1799,17 @@ href="https://books.google.com/books?id=8zVCDwAAQBAJ">Mathematical gauge
 theory: With applications to the standard model of particle
 physics</a></em>, Universitext. Springer International Publishing.
 </div>
-<div id="ref-hiranidec" class="csl-entry" role="listitem">
-<span class="smallcaps">Hirani</span>, A.N. (2003) Discrete exterior
-calculus (PhD thesis).
-</div>
 <div id="ref-kirby_siebenmann" class="csl-entry" role="listitem">
 <span class="smallcaps">Kirby</span>, R.C. &amp; <span
 class="smallcaps">Siebenmann</span>, L.C. (1977) <em>Foundational essays
 on topological manifolds, smoothings, and triangulations</em>, Annals of
 mathematics studies. Princeton University Press.
 </div>
-<div id="ref-leok" class="csl-entry" role="listitem">
-<span class="smallcaps">Leok</span>, M., <span
-class="smallcaps">Marsden</span>, J.E., &amp; <span
-class="smallcaps">Weinstein</span>, A.D. (2005) <a
-href="https://arxiv.org/abs/math/0508338">A discrete theory of
-connections on principal bundles</a>.
-</div>
-<div id="ref-morris_decapodes" class="csl-entry" role="listitem">
-<span class="smallcaps">Morris</span>, L., <span
-class="smallcaps">Baas</span>, A., <span class="smallcaps">Arias</span>,
-J., <span class="smallcaps">Gatlin</span>, M., <span
-class="smallcaps">Patterson</span>, E., &amp; <span
-class="smallcaps">Fairbanks</span>, J.P. (2024) <a
-href="https://arxiv.org/abs/2401.17432">Decapodes: A diagrammatic tool
-for representing, composing, and computing spatialized partial
-differential equations</a>.
-</div>
 <div id="ref-needham" class="csl-entry" role="listitem">
 <span class="smallcaps">Needham</span>, T. (2021) <em><a
 href="https://books.google.com/books?id=Mc0QEAAAQBAJ">Visual
 differential geometry and forms: A mathematical drama in five
 acts</a></em>. Princeton University Press.
-</div>
-<div id="ref-patterson_diffeq" class="csl-entry" role="listitem">
-<span class="smallcaps">Patterson</span>, E., <span
-class="smallcaps">Baas</span>, A., <span
-class="smallcaps">Hosgood</span>, T., &amp; <span
-class="smallcaps">Fairbanks</span>, J. (2022) <a
-href="https://doi.org/10.3934/mine.2023036">A diagrammatic view of
-differential equations in physics</a>. <em>Mathematics in
-Engineering</em>, <strong>5</strong>, 1–59.
 </div>
 <div id="ref-shulman_cohesion" class="csl-entry" role="listitem">
 <span class="smallcaps">Shulman</span>, M. (2017) <a
@@ -1906,11 +1828,6 @@ not compute: Transcending the machines in our midst</a></em>. O’Reilly
 Institute for Advanced Study: <a
 href="https://homotopytypetheory.org/book"
 class="uri">https://homotopytypetheory.org/book</a>.
-</div>
-<div id="ref-whitney1957" class="csl-entry" role="listitem">
-<span class="smallcaps">Whitney</span>, H. (1957) <em><a
-href="http://www.jstor.org/stable/j.ctt183q1bm">Geometric integration
-theory</a></em>. Princeton University Press.
 </div>
 </div>
 <section id="footnotes" class="footnotes footnotes-end-of-document"

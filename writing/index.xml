@@ -86,33 +86,34 @@
 id=&#34;toc-introduction-discrete-differential-geometry&#34;&gt;&lt;span
 class=&#34;toc-section-number&#34;&gt;1&lt;/span&gt; Introduction: Discrete differential
 geometry&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#examples&#34; id=&#34;toc-examples&#34;&gt;&lt;span
-class=&#34;toc-section-number&#34;&gt;2&lt;/span&gt; Examples&lt;/a&gt;
+&lt;li&gt;&lt;a href=&#34;#central-h-spaces&#34; id=&#34;toc-central-h-spaces&#34;&gt;&lt;span
+class=&#34;toc-section-number&#34;&gt;2&lt;/span&gt; Central H-spaces&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#combinatorial-manifolds&#34;
+id=&#34;toc-combinatorial-manifolds&#34;&gt;&lt;span
+class=&#34;toc-section-number&#34;&gt;3&lt;/span&gt; Combinatorial manifolds&lt;/a&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#the-octahedron&#34; id=&#34;toc-the-octahedron&#34;&gt;&lt;span
-class=&#34;toc-section-number&#34;&gt;2.1&lt;/span&gt; The octahedron&lt;/a&gt;
+class=&#34;toc-section-number&#34;&gt;3.1&lt;/span&gt; The octahedron&lt;/a&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#the-higher-inductive-type-oo&#34;
 id=&#34;toc-the-higher-inductive-type-oo&#34;&gt;&lt;span
-class=&#34;toc-section-number&#34;&gt;2.1.1&lt;/span&gt; The higher inductive type &lt;span
+class=&#34;toc-section-number&#34;&gt;3.1.1&lt;/span&gt; The higher inductive type &lt;span
 class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{O}}\)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#link-xbox-and-xdisk&#34; id=&#34;toc-link-xbox-and-xdisk&#34;&gt;&lt;span
-class=&#34;toc-section-number&#34;&gt;2.1.2&lt;/span&gt; &lt;span
+class=&#34;toc-section-number&#34;&gt;3.1.2&lt;/span&gt; &lt;span
 class=&#34;math inline&#34;&gt;\(\mathsf{link}\)&lt;/span&gt;, &lt;span
 class=&#34;math inline&#34;&gt;\(\mathsf{xbox}\)&lt;/span&gt;, and &lt;span
 class=&#34;math inline&#34;&gt;\(\mathsf{xdisk}\)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#extending-link&#34; id=&#34;toc-extending-link&#34;&gt;&lt;span
-class=&#34;toc-section-number&#34;&gt;2.1.3&lt;/span&gt; Extending &lt;span
+class=&#34;toc-section-number&#34;&gt;3.1.3&lt;/span&gt; Extending &lt;span
 class=&#34;math inline&#34;&gt;\(\mathsf{link}\)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#the-torus&#34; id=&#34;toc-the-torus&#34;&gt;&lt;span
-class=&#34;toc-section-number&#34;&gt;2.2&lt;/span&gt; The torus&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#combinatorial-manifolds&#34;
-id=&#34;toc-combinatorial-manifolds&#34;&gt;&lt;span
-class=&#34;toc-section-number&#34;&gt;2.3&lt;/span&gt; Combinatorial manifolds&lt;/a&gt;&lt;/li&gt;
+class=&#34;toc-section-number&#34;&gt;3.2&lt;/span&gt; The torus&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#combinatorial-manifolds-1&#34;
+id=&#34;toc-combinatorial-manifolds-1&#34;&gt;&lt;span
+class=&#34;toc-section-number&#34;&gt;3.3&lt;/span&gt; Combinatorial manifolds&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#central-h-spaces&#34; id=&#34;toc-central-h-spaces&#34;&gt;&lt;span
-class=&#34;toc-section-number&#34;&gt;3&lt;/span&gt; Central H-spaces&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#why-this-is-geometry&#34; id=&#34;toc-why-this-is-geometry&#34;&gt;&lt;span
 class=&#34;toc-section-number&#34;&gt;4&lt;/span&gt; Why this is geometry&lt;/a&gt;
 &lt;ul&gt;
@@ -168,87 +169,141 @@ role=&#34;doc-biblioref&#34;&gt;Talbott, 1995&lt;/a&gt;)&lt;/span&gt;&lt;/p&gt;
 id=&#34;introduction-discrete-differential-geometry&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;1&lt;/span&gt; Introduction: Discrete
 differential geometry&lt;/h1&gt;
-&lt;p&gt;The observation that sparks the following discussion is this: if we
-can manage to reformulate differential geometry in discrete terms (i.e.
-finite, without infinitesimals) then we may also be able to construct it
-synthetically in homotopy type theory. Furthermore, if we do capture
-geometry in HoTT then there’s a chance that it can become clearer and
-smaller. We would then have new tools, a new audience, and a new program
-to (re)explore geometry, gauge theory, low dimensional topology, and
-mathematical physics.&lt;/p&gt;
-&lt;p&gt;Applied mathematicians and computer scientists have been developing
-discrete differential geometry (DDG) for many years. The 2003 Ph.D.
-thesis of Anil Hirani &lt;span class=&#34;citation&#34; data-cites=&#34;hiranidec&#34;&gt; (&lt;a
-href=&#34;#ref-hiranidec&#34; role=&#34;doc-biblioref&#34;&gt;Hirani, 2003&lt;/a&gt;)&lt;/span&gt; (see
-also the multi-author follow-up &lt;span class=&#34;citation&#34;
-data-cites=&#34;desbrundec&#34;&gt; (&lt;a href=&#34;#ref-desbrundec&#34;
-role=&#34;doc-biblioref&#34;&gt;Desbrun &lt;em&gt;et al.&lt;/em&gt;, 2005&lt;/a&gt;)&lt;/span&gt;) defines
-finite versions of vector fields, differential forms, the wedge product,
-the Hodge star, and several differential operators (exterior derivative,
-div, grad, curl, Laplace-Beltrami, Lie derivative). Hirani and others
-cite Whitney’s 1957 book &lt;em&gt;Geometric Integration Theory&lt;/em&gt;&lt;span
-class=&#34;citation&#34; data-cites=&#34;whitney1957&#34;&gt; (&lt;a href=&#34;#ref-whitney1957&#34;
-role=&#34;doc-biblioref&#34;&gt;Whitney, 1957&lt;/a&gt;)&lt;/span&gt; which develops a theory
-of cochains by integrating smooth forms over chains. In 2004 Melvil
-Leok, Jerrold Marsden, and Alan Weinstein &lt;span class=&#34;citation&#34;
-data-cites=&#34;leok&#34;&gt; (&lt;a href=&#34;#ref-leok&#34; role=&#34;doc-biblioref&#34;&gt;Leok &lt;em&gt;et
-al.&lt;/em&gt;, 2005&lt;/a&gt;)&lt;/span&gt; defined discrete connections on principal
-bundles. This is probably the work most spiritually similar to this
-paper. The motivation for the above constructions was applied
-mathematics: modeling the differential equations of mechanics and fluid
-mechanics with the so-called “finite element” methods. The theory has
-been adopted and extended by the computer graphics community as well
-(see Keenan Crane’s course notes &lt;span class=&#34;citation&#34;
-data-cites=&#34;crane_ddg&#34;&gt; (&lt;a href=&#34;#ref-crane_ddg&#34;
-role=&#34;doc-biblioref&#34;&gt;Crane &lt;em&gt;et al.&lt;/em&gt;, 2013&lt;/a&gt;)&lt;/span&gt; for a
-gentle survey).&lt;/p&gt;
-&lt;p&gt;The applied category theory community has begun to develop category
-theoretic foundations and software libraries to increase the reusability
-and compositionality of finite element methods in science and
-engineering problems. See for example recent work to bring discrete
-exterior calculus into the AlgebraicJulia library &lt;span class=&#34;citation&#34;
-data-cites=&#34;morris_decapodes&#34;&gt; (&lt;a href=&#34;#ref-morris_decapodes&#34;
-role=&#34;doc-biblioref&#34;&gt;Morris &lt;em&gt;et al.&lt;/em&gt;, 2024&lt;/a&gt;)&lt;/span&gt; &lt;span
-class=&#34;citation&#34; data-cites=&#34;patterson_diffeq&#34;&gt; (&lt;a
-href=&#34;#ref-patterson_diffeq&#34; role=&#34;doc-biblioref&#34;&gt;Patterson &lt;em&gt;et
-al.&lt;/em&gt;, 2022&lt;/a&gt;)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;For these classically-minded applied mathematicians DDG is defined on
-combinatorial manifolds such as simplicial complexes, of any finite
-dimension. The 0-cells play the role of points, the 1-cells are path
-segments, and so on. They define &lt;span
-class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;-forms as functions on the &lt;span
-class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;-dimensional faces of the manifold into
-the real numbers, which is then extended by linearity to arbitrary &lt;span
-class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;-chains. Exterior differentiation is
-defined by Stokes theorem (which is no longer a theorem in this
-setting), by which we mean the following.&lt;/p&gt;
+&lt;p&gt;Derivatives in the infinitesimal context are about computing and
+making use of the effect of functions on tangent vectors. Tangent
+vectors are limits of finite paths, and derivatives are computed by
+taking the limit of functions applied to limits of paths. The derivative
+&lt;span class=&#34;math inline&#34;&gt;\(df\)&lt;/span&gt; of a smooth function on a smooth
+manifold &lt;span class=&#34;math inline&#34;&gt;\(f:M\to
+\ensuremath{\mathbb{R}}\)&lt;/span&gt; is emergent from &lt;span
+class=&#34;math inline&#34;&gt;\(f\)&lt;/span&gt; itself, a rerrangement of its
+structure. The process is almost reversible. This fact, that &lt;span
+class=&#34;math inline&#34;&gt;\(df\)&lt;/span&gt; is entailed in &lt;span
+class=&#34;math inline&#34;&gt;\(f\)&lt;/span&gt; reflects the impoverished nature of
+&lt;span class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{R}}\)&lt;/span&gt;. Its own
+tangent spaces look just like it. Not much changes when we map between
+two smooth manifolds.&lt;/p&gt;
+&lt;p&gt;We will explore the story of derivatives but in a non-infinitesimal
+context (which we view as simpler – just don’t pass to the limit) and
+where the codomain is a higher type. We will focus on&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;combinatorial 2-manifolds&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;their tangent bundles&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;vector fields&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;in order to define&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;connections&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;curvature&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;the index of a vector field&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;and prove&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;the Gauss-Bonnet theorem&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;the Poincaré-Hopf theorem&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;the Leibniz formula&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Some orienting remarks: classical math treats each dimension
+separately: functions, 1-forms, 2-forms and so on. But homotopy type
+theory unifies these. Also, HoTT types are higher groupoids, so we don’t
+so much &lt;em&gt;glue&lt;/em&gt; two faces along a common edge as &lt;em&gt;compose&lt;/em&gt;
+them. Finally, it’s important to note that there is complete symmetry
+between the vertical and the horizontal, between families &lt;span
+class=&#34;math inline&#34;&gt;\(P\to M\)&lt;/span&gt; over &lt;span
+class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; and maps &lt;span
+class=&#34;math inline&#34;&gt;\(M\to B\)&lt;/span&gt; into a classifying type.&lt;/p&gt;
+&lt;h1 data-number=&#34;2&#34; id=&#34;central-h-spaces&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;2&lt;/span&gt; Central H-spaces&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;introduce torsors&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;show subtlety how &lt;span class=&#34;math inline&#34;&gt;\(BG\)&lt;/span&gt; doesn’t
+classify stuff since it has extra properties&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;draw&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./6a4feec92d142f0ad0daeaca4306a46f9aaa33a5.png&#34;
+alt=&#34;image&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;H-spaces paper result equating this to a universal cover of a
+component of the universe. (It should feel significant that &lt;span
+class=&#34;math inline&#34;&gt;\(BS^1\simeq
+\mathrm{BAut}_1(S^1)\)&lt;/span&gt;.)&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Classical 2-dimensional smooth geometry tells us to seek a type of
+torsors of the circle &lt;span class=&#34;math inline&#34;&gt;\(S^1\)&lt;/span&gt;. The
+theory of torsors in HoTT that we will draw on involves central types
+and deloopings, as presented in Buchholtz et al &lt;span class=&#34;citation&#34;
+data-cites=&#34;buchholtz2023central&#34;&gt; (&lt;a href=&#34;#ref-buchholtz2023central&#34;
+role=&#34;doc-biblioref&#34;&gt;Buchholtz &lt;em&gt;et al.&lt;/em&gt;, 2023&lt;/a&gt;)&lt;/span&gt;.&lt;/p&gt;
 &lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 1&lt;/strong&gt;. &lt;em&gt;(Exterior derivative in DDG.) Let
-&lt;span class=&#34;math inline&#34;&gt;\(\omega\)&lt;/span&gt; be an &lt;span
-class=&#34;math inline&#34;&gt;\(n-1\)&lt;/span&gt;-form on a combinatorial manifold
-&lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt;, and let &lt;span
-class=&#34;math inline&#34;&gt;\(\Omega\)&lt;/span&gt; be an &lt;span
-class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;-face of &lt;span
-class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt;. Let &lt;span
-class=&#34;math inline&#34;&gt;\(\partial\)&lt;/span&gt; be the boundary operator on
-faces. The exterior derivative &lt;span class=&#34;math inline&#34;&gt;\(d\)&lt;/span&gt; is
-defined by &lt;span class=&#34;math display&#34;&gt;\[d\omega(\Omega) =
-\omega(\partial\Omega).\]&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Definition 1&lt;/strong&gt;. &lt;em&gt;A pointed type &lt;span
+class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; is &lt;em&gt;central&lt;/em&gt; if the evaluation
+map &lt;span class=&#34;math display&#34;&gt;\[f\mapsto f(\mathrm{pt}):(A\to
+A)_{(\ensuremath{\text{id}})} \to A\]&lt;/span&gt; from the connected
+component of &lt;span class=&#34;math inline&#34;&gt;\(\ensuremath{\text{id}}\)&lt;/span&gt;
+is an equivalence.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;p&gt;We will take the following path. We will use DDG as a stepping stone
-between smooth geometry and HoTT. We will learn how to see the finite
-analogues of infinitesimal constructions, and then use the syntax of
-type theory to re-present them. It won’t always be a two-step process!
-Sometimes even the smooth arguments are made with finite combinatorial
-methods, and then a limit is taken. This is especially true where the
-Gauss-Bonnet and Poincaré-Hopf theorems are concerned. &lt;span
-class=&#34;math display&#34;&gt;\[\mathrm{Differential\
-geometry}\longrightarrow\mathrm{Discrete\ differential\
-geometry}\longrightarrow \mathrm{Homotopy\ type\ theory}\]&lt;/span&gt;&lt;/p&gt;
-&lt;h1 data-number=&#34;2&#34; id=&#34;examples&#34;&gt;&lt;span
-class=&#34;header-section-number&#34;&gt;2&lt;/span&gt; Examples&lt;/h1&gt;
+&lt;div class=&#34;mydef&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Definition 2&lt;/strong&gt;. &lt;em&gt;An &lt;em&gt;action&lt;/em&gt; of a central
+type &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; on a type &lt;span
+class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; is a map &lt;span
+class=&#34;math inline&#34;&gt;\(\alpha:A\times X\to X\)&lt;/span&gt; such that &lt;span
+class=&#34;math inline&#34;&gt;\(\alpha(\mathrm{pt}, x)=x\)&lt;/span&gt; for all &lt;span
+class=&#34;math inline&#34;&gt;\(x:X\)&lt;/span&gt;. If &lt;span
+class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; has an &lt;span
+class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt;-action, we say it is &lt;em&gt;an &lt;span
+class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt;-torsor&lt;/em&gt; if it is merely inhabited
+and and &lt;span class=&#34;math inline&#34;&gt;\(\alpha(-,x):A\to X\)&lt;/span&gt; is an
+equivalence for every &lt;span class=&#34;math inline&#34;&gt;\(x:X\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;The type of &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt;-torsors is thus
+&lt;span
+class=&#34;math display&#34;&gt;\[\mathsf{Tor}_A:=\sum_{X:\mathcal{U}}\sum_{\alpha:A\times
+X\to X}
+(\alpha(\mathrm{pt},-)=\ensuremath{\text{id}}_X)\times||X||_{-1}\times\prod_{x:X}\mathsf{is\_equiv}(\alpha(-,x))\]&lt;/span&gt;
+and we can add a basepoint to &lt;span
+class=&#34;math inline&#34;&gt;\(\mathsf{Tor}_A\)&lt;/span&gt; by choosing &lt;span
+class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; itself, as a term in the universe which
+satisfies the requirements.&lt;/p&gt;
+&lt;p&gt;Another way to look at &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt;’s
+neighborhood in the universe is the following.&lt;/p&gt;
+&lt;div class=&#34;mydef&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Definition 3&lt;/strong&gt;. &lt;em&gt;If &lt;span
+class=&#34;math inline&#34;&gt;\(X:\mathcal{U}\)&lt;/span&gt; is any type, the type &lt;span
+class=&#34;math inline&#34;&gt;\(\mathrm{BAut}_1(X)\)&lt;/span&gt; is given by &lt;span
+class=&#34;math display&#34;&gt;\[\mathrm{BAut}_1(X)\stackrel{\mathrm{def}}{=}\sum_{Y:\mathcal{U}}||Y=X||_0.\]&lt;/span&gt;
+The 1 in the name indicates that the type is 1-connected, being the
+universal cover of the connected component &lt;span
+class=&#34;math inline&#34;&gt;\(\mathcal{U}_{(X)}\)&lt;/span&gt; of &lt;span
+class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt;, also denoted &lt;span
+class=&#34;math inline&#34;&gt;\(\mathrm{BAut}(X)\stackrel{\mathrm{def}}{=}\sum_{Y:\mathcal{U}}||Y=X||_{-1}\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;The type &lt;span class=&#34;math inline&#34;&gt;\(\mathrm{BAut}_1(A)\)&lt;/span&gt; with
+&lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; a central space is the type we
+are looking for. It is both equivalent to the type of &lt;span
+class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt;-torsors, and it is an Eilenberg-Mac
+Lane space &lt;span class=&#34;math inline&#34;&gt;\(K(A,1)\)&lt;/span&gt;. The following
+propositions make the link.&lt;/p&gt;
+&lt;div class=&#34;myprop&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Proposition 1&lt;/strong&gt;. &lt;em&gt;Let &lt;span
+class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; be an abelian group (a set meeting the
+classical definition) and let &lt;span
+class=&#34;math inline&#34;&gt;\(n&amp;gt;0\)&lt;/span&gt;. If a central type &lt;span
+class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; is a &lt;span
+class=&#34;math inline&#34;&gt;\(K(G,n)\)&lt;/span&gt; then &lt;span
+class=&#34;math inline&#34;&gt;\(\mathrm{BAut}_1(A)\)&lt;/span&gt; is a &lt;span
+class=&#34;math inline&#34;&gt;\(K(G,n+1)\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;mythm&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Theorem 1&lt;/strong&gt;. &lt;em&gt;There is an equivalence &lt;span
+class=&#34;math inline&#34;&gt;\(\mathsf{Tor}_A\simeq\mathrm{BAut}_1(A).\)&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Why do we already know then that this type is a delooping? Go on to
+discuss the pointed types and how they are contractible. Then move to S1
+in particular, and polygons.&lt;/p&gt;
+&lt;h1 data-number=&#34;3&#34; id=&#34;combinatorial-manifolds&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;3&lt;/span&gt; Combinatorial manifolds&lt;/h1&gt;
 &lt;p&gt;TODO:&lt;/p&gt;
 &lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Can this be shortened with a unified &lt;em&gt;local&lt;/em&gt;
+discussion?&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Color-code each continuous cycle on the flat torus and the 3d
 torus, and use that to demonstrate how the curvature acts
 (begun).&lt;/p&gt;&lt;/li&gt;
@@ -257,17 +312,17 @@ permutation of hexagons with geometric analogy, but what is actually
 being said? Why is this making contact with anything? Does it have to
 wait for the proof of Poincaré-Hopf and Gauss-Bonnet?&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2 data-number=&#34;2.1&#34; id=&#34;the-octahedron&#34;&gt;&lt;span
-class=&#34;header-section-number&#34;&gt;2.1&lt;/span&gt; The octahedron&lt;/h2&gt;
+&lt;h2 data-number=&#34;3.1&#34; id=&#34;the-octahedron&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;3.1&lt;/span&gt; The octahedron&lt;/h2&gt;
 &lt;p&gt;We will define some higher inductive types to serve as domain and
 codomain of these motivating examples.&lt;/p&gt;
-&lt;h3 data-number=&#34;2.1.1&#34; id=&#34;the-higher-inductive-type-oo&#34;&gt;&lt;span
-class=&#34;header-section-number&#34;&gt;2.1.1&lt;/span&gt; The higher inductive type
+&lt;h3 data-number=&#34;3.1.1&#34; id=&#34;the-higher-inductive-type-oo&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;3.1.1&lt;/span&gt; The higher inductive type
 &lt;span class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{O}}\)&lt;/span&gt;&lt;/h3&gt;
 &lt;p&gt;First we need a square, which will be a stand-in for a circle that
 can support a notion of a quarter-rotation.&lt;/p&gt;
 &lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 2&lt;/strong&gt;. &lt;em&gt;The higher inductive type &lt;span
+&lt;p&gt;&lt;strong&gt;Definition 4&lt;/strong&gt;. &lt;em&gt;The higher inductive type &lt;span
 class=&#34;math inline&#34;&gt;\(C_4\)&lt;/span&gt; (where C stands for “circle”). &lt;span
 class=&#34;math display&#34;&gt;\[\begin{aligned}
 C_4 &amp;amp;: \mathsf{Type}\\
@@ -287,7 +342,7 @@ class=&#34;math inline&#34;&gt;\(C_4\)&lt;/span&gt;.&lt;/figcaption&gt;
 join of the two-element sets &lt;span class=&#34;math inline&#34;&gt;\(\{c_1, c_3\}*
 \{c_2, c_4\}\)&lt;/span&gt;.&lt;/p&gt;
 &lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 3&lt;/strong&gt;. &lt;em&gt;The HIT &lt;span
+&lt;p&gt;&lt;strong&gt;Definition 5&lt;/strong&gt;. &lt;em&gt;The HIT &lt;span
 class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{O}}_0\)&lt;/span&gt; is just 6
 points, intended as the 0-skeleton of an octahedron, with vertices named
 after the colors on the faces of a Rubik’s Cube. &lt;span
@@ -295,7 +350,7 @@ class=&#34;math display&#34;&gt;\[w, y, b, r, g, o :
 \ensuremath{\mathbb{O}}_0\]&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 4&lt;/strong&gt;. &lt;em&gt;The HIT &lt;span
+&lt;p&gt;&lt;strong&gt;Definition 6&lt;/strong&gt;. &lt;em&gt;The HIT &lt;span
 class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{O}}_1\)&lt;/span&gt; is the
 1-skeleton of an octahedron. &lt;span
 class=&#34;math display&#34;&gt;\[\begin{aligned}
@@ -315,7 +370,7 @@ ob &amp;amp;: o=b
 \end{aligned}\]&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 5&lt;/strong&gt;. &lt;em&gt;The HIT &lt;span
+&lt;p&gt;&lt;strong&gt;Definition 7&lt;/strong&gt;. &lt;em&gt;The HIT &lt;span
 class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{O}}\)&lt;/span&gt; is an octahedron:
 &lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
 w, y, b, r, g, o &amp;amp;: \ensuremath{\mathbb{O}}\\
@@ -352,8 +407,8 @@ class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{O}}_0\xrightarrow[]{i_0}
 \ensuremath{\mathbb{O}}_1\xrightarrow[]{i_1}
 \ensuremath{\mathbb{O}}\)&lt;/span&gt; that include each skeleton into the
 next-higher-dimensional skeleton.&lt;/p&gt;
-&lt;h3 data-number=&#34;2.1.2&#34; id=&#34;link-xbox-and-xdisk&#34;&gt;&lt;span
-class=&#34;header-section-number&#34;&gt;2.1.2&lt;/span&gt; &lt;span
+&lt;h3 data-number=&#34;3.1.2&#34; id=&#34;link-xbox-and-xdisk&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;3.1.2&lt;/span&gt; &lt;span
 class=&#34;math inline&#34;&gt;\(\mathsf{link}\)&lt;/span&gt;, &lt;span
 class=&#34;math inline&#34;&gt;\(\mathsf{xbox}\)&lt;/span&gt;, and &lt;span
 class=&#34;math inline&#34;&gt;\(\mathsf{xdisk}\)&lt;/span&gt;&lt;/h3&gt;
@@ -373,7 +428,7 @@ have a link that is merely equivalent to &lt;span
 class=&#34;math inline&#34;&gt;\(C_4\)&lt;/span&gt;. So first we need notation for a
 connected component of the universe:&lt;/p&gt;
 &lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 6&lt;/strong&gt;. &lt;em&gt;If we have &lt;span
+&lt;p&gt;&lt;strong&gt;Definition 8&lt;/strong&gt;. &lt;em&gt;If we have &lt;span
 class=&#34;math inline&#34;&gt;\(X:\mathsf{Type}\)&lt;/span&gt; then we define &lt;span
 class=&#34;math inline&#34;&gt;\(\mathrm{BAut}X\stackrel{\mathrm{def}}{=}\sum_{Y:\mathsf{Type}}
 ||X=Y||_{-1}\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
@@ -388,7 +443,7 @@ class=&#34;math inline&#34;&gt;\(\mathsf{link}:\ensuremath{\mathbb{O}}_0\to\math
 Extending this later on to the 1-skeleton and 2-skeleton will take us
 into differential geometry!&lt;/p&gt;
 &lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 7&lt;/strong&gt;. &lt;em&gt;&lt;span
+&lt;p&gt;&lt;strong&gt;Definition 9&lt;/strong&gt;. &lt;em&gt;&lt;span
 class=&#34;math inline&#34;&gt;\(\mathsf{link}:\ensuremath{\mathbb{O}}_0\to\mathrm{BAut}C_4\)&lt;/span&gt;
 is given by induction: &lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
 \mathsf{link}(w) &amp;amp;= brgo \\
@@ -418,7 +473,7 @@ square notation with a fifth letter to indicate the center of the xbox.
 For example, we can define an xbox &lt;span
 class=&#34;math inline&#34;&gt;\(C_{4c}\)&lt;/span&gt; as follows:&lt;/p&gt;
 &lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 8&lt;/strong&gt;. &lt;em&gt;The higher inductive type &lt;span
+&lt;p&gt;&lt;strong&gt;Definition 10&lt;/strong&gt;. &lt;em&gt;The higher inductive type &lt;span
 class=&#34;math inline&#34;&gt;\(C_{4c}\)&lt;/span&gt; with center &lt;span
 class=&#34;math inline&#34;&gt;\(c\)&lt;/span&gt;, also denoted &lt;span
 class=&#34;math inline&#34;&gt;\(c_1c_2c_3c_4c\)&lt;/span&gt;. &lt;span
@@ -439,7 +494,7 @@ c_4c &amp;amp;: c_4 = c
 class=&#34;math inline&#34;&gt;\(\mathsf{xbox}:\ensuremath{\mathbb{O}}_0\to\mathsf{Type}\)&lt;/span&gt;
 similarly to &lt;span class=&#34;math inline&#34;&gt;\(\mathsf{link}\)&lt;/span&gt;.&lt;/p&gt;
 &lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 9&lt;/strong&gt;. &lt;em&gt;&lt;span
+&lt;p&gt;&lt;strong&gt;Definition 11&lt;/strong&gt;. &lt;em&gt;&lt;span
 class=&#34;math inline&#34;&gt;\(\mathsf{xbox}:\ensuremath{\mathbb{O}}_0\to\mathrm{BAut}C_{4c}\)&lt;/span&gt;
 is given by induction: &lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
 \mathsf{xbox}(w) &amp;amp;= brgow \\
@@ -453,7 +508,7 @@ is given by induction: &lt;span class=&#34;math display&#34;&gt;\[\begin{aligned
 &lt;p&gt;Finally we want to consider the 2-type that fills in the faces of the
 xbox. This is a contractible type we will call an &lt;em&gt;xdisk&lt;/em&gt;.&lt;/p&gt;
 &lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 10&lt;/strong&gt;. &lt;em&gt;The higher inductive type &lt;span
+&lt;p&gt;&lt;strong&gt;Definition 12&lt;/strong&gt;. &lt;em&gt;The higher inductive type &lt;span
 class=&#34;math inline&#34;&gt;\(C_{4c\mathsf{xdisk}}\)&lt;/span&gt; with center &lt;span
 class=&#34;math inline&#34;&gt;\(c\)&lt;/span&gt;, also denoted &lt;span
 class=&#34;math inline&#34;&gt;\(c_1c_2c_3c_4c_\mathsf{xdisk}\)&lt;/span&gt;. &lt;span
@@ -483,7 +538,7 @@ class=&#34;math inline&#34;&gt;\(\mathsf{xdisk}:\ensuremath{\mathbb{O}}_0\to\mat
 by filling in the triangles in &lt;span
 class=&#34;math inline&#34;&gt;\(\mathsf{xbox}\)&lt;/span&gt;.&lt;/p&gt;
 &lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 11&lt;/strong&gt;. &lt;em&gt;&lt;span
+&lt;p&gt;&lt;strong&gt;Definition 13&lt;/strong&gt;. &lt;em&gt;&lt;span
 class=&#34;math inline&#34;&gt;\(\mathsf{xdisk}:\ensuremath{\mathbb{O}}_0\to\mathrm{BAut}C_{4c\mathsf{xdisk}}\)&lt;/span&gt;
 is given by induction: &lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
 \mathsf{xbox}(w) &amp;amp;= brgow_\mathsf{xdisk}\\
@@ -494,8 +549,8 @@ is given by induction: &lt;span class=&#34;math display&#34;&gt;\[\begin{aligned
 \mathsf{xbox}(o) &amp;amp;= wgybo_\mathsf{xdisk}
 \end{aligned}\]&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;h3 data-number=&#34;2.1.3&#34; id=&#34;extending-link&#34;&gt;&lt;span
-class=&#34;header-section-number&#34;&gt;2.1.3&lt;/span&gt; Extending &lt;span
+&lt;h3 data-number=&#34;3.1.3&#34; id=&#34;extending-link&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;3.1.3&lt;/span&gt; Extending &lt;span
 class=&#34;math inline&#34;&gt;\(\mathsf{link}\)&lt;/span&gt;&lt;/h3&gt;
 &lt;p&gt;Note that &lt;span class=&#34;math inline&#34;&gt;\(\mathrm{BAut}C_4\)&lt;/span&gt; is of
 homotopy dimension at least 2, just as &lt;span
@@ -513,7 +568,7 @@ of rotation. Then &lt;span class=&#34;math inline&#34;&gt;\(g\mapsto w\)&lt;/spa
 &lt;span class=&#34;math inline&#34;&gt;\(b\mapsto y\)&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;The full map on the 1-skeleton is:&lt;/p&gt;
 &lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 12&lt;/strong&gt;. &lt;em&gt;Define &lt;span
+&lt;p&gt;&lt;strong&gt;Definition 14&lt;/strong&gt;. &lt;em&gt;Define &lt;span
 class=&#34;math inline&#34;&gt;\(T_1:\ensuremath{\mathbb{O}}\to\mathrm{BAut}C_4\)&lt;/span&gt;
 on just the 1-skeleton by extending &lt;span
 class=&#34;math inline&#34;&gt;\(\mathsf{link}\)&lt;/span&gt; as follows: Transport away
@@ -566,7 +621,7 @@ your fingers are pointing, then slide your hand to an equatorial face,
 then along the equator, then back to the top. The answer is: you come
 back rotated clockwise by a quarter-turn.&lt;/p&gt;
 &lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 13&lt;/strong&gt;. &lt;em&gt;The map &lt;span
+&lt;p&gt;&lt;strong&gt;Definition 15&lt;/strong&gt;. &lt;em&gt;The map &lt;span
 class=&#34;math inline&#34;&gt;\(R:C_4\to C_4\)&lt;/span&gt; rotates by one quarter turn,
 one “click&#34;:&lt;/em&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -600,7 +655,7 @@ homotopy from &lt;span
 class=&#34;math inline&#34;&gt;\(\ensuremath{\mathsf{refl}}_{T_1(w)}\)&lt;/span&gt; to
 &lt;span class=&#34;math inline&#34;&gt;\(T_1(wb\cdot br\cdot rw)\)&lt;/span&gt;.&lt;/p&gt;
 &lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 14&lt;/strong&gt;. &lt;em&gt;Define &lt;span
+&lt;p&gt;&lt;strong&gt;Definition 16&lt;/strong&gt;. &lt;em&gt;Define &lt;span
 class=&#34;math inline&#34;&gt;\(T_2:\ensuremath{\mathbb{O}}\to\mathrm{BAut}C_4\)&lt;/span&gt;
 by extending &lt;span class=&#34;math inline&#34;&gt;\(T_1\)&lt;/span&gt; to the faces as
 follows:&lt;/em&gt;&lt;/p&gt;
@@ -633,8 +688,8 @@ class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{O}}\)&lt;/span&gt; would th
 a homotopy between the identity and two full rotations. This makes
 visible in HoTT the link between curvature and the euler characteristic
 (which is 2 for the octahedron).&lt;/p&gt;
-&lt;h2 data-number=&#34;2.2&#34; id=&#34;the-torus&#34;&gt;&lt;span
-class=&#34;header-section-number&#34;&gt;2.2&lt;/span&gt; The torus&lt;/h2&gt;
+&lt;h2 data-number=&#34;3.2&#34; id=&#34;the-torus&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;3.2&lt;/span&gt; The torus&lt;/h2&gt;
 &lt;p&gt;We can define a combinatorial torus as a similar HIT. This time each
 vertex will have six neighbors. So all the links will be merely equal to
 &lt;span class=&#34;math inline&#34;&gt;\(C_6\)&lt;/span&gt; which is a hexagonal version of
@@ -741,8 +796,8 @@ circle comes back rotated just a few degrees counterclockwise. Use your
 imagination to discretize the smooth circle onto the points of the
 mesh.&lt;/figcaption&gt;
 &lt;/figure&gt;
-&lt;h2 data-number=&#34;2.3&#34; id=&#34;combinatorial-manifolds&#34;&gt;&lt;span
-class=&#34;header-section-number&#34;&gt;2.3&lt;/span&gt; Combinatorial manifolds&lt;/h2&gt;
+&lt;h2 data-number=&#34;3.3&#34; id=&#34;combinatorial-manifolds-1&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;3.3&lt;/span&gt; Combinatorial manifolds&lt;/h2&gt;
 &lt;p&gt;(This section is not quite off the ground.)&lt;/p&gt;
 &lt;p&gt;The combinatorial structure we have in mind is a nerve of a good open
 cover. What do we know about which smooth manifolds have such covers?
@@ -776,92 +831,6 @@ class=&#34;math inline&#34;&gt;\(k\)&lt;/span&gt;-handles; see page 107 of
 Kirby-Siebenmann. This probably holds in the noncompact case as well,
 though I don’t know a reference.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h1 data-number=&#34;3&#34; id=&#34;central-h-spaces&#34;&gt;&lt;span
-class=&#34;header-section-number&#34;&gt;3&lt;/span&gt; Central H-spaces&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;introduce torsors&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;show subtlety how &lt;span class=&#34;math inline&#34;&gt;\(BG\)&lt;/span&gt; doesn’t
-classify stuff since it has extra properties&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;draw&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;./6a4feec92d142f0ad0daeaca4306a46f9aaa33a5.png&#34;
-alt=&#34;image&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;H-spaces paper result equating this to a universal cover of a
-component of the universe. (It should feel significant that &lt;span
-class=&#34;math inline&#34;&gt;\(BS^1\simeq
-\mathrm{BAut}_1(S^1)\)&lt;/span&gt;.)&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Classical 2-dimensional smooth geometry tells us to seek a type of
-torsors of the circle &lt;span class=&#34;math inline&#34;&gt;\(S^1\)&lt;/span&gt;. The
-theory of torsors in HoTT that we will draw on involves central types
-and deloopings, as presented in Buchholtz et al &lt;span class=&#34;citation&#34;
-data-cites=&#34;buchholtz2023central&#34;&gt; (&lt;a href=&#34;#ref-buchholtz2023central&#34;
-role=&#34;doc-biblioref&#34;&gt;Buchholtz &lt;em&gt;et al.&lt;/em&gt;, 2023&lt;/a&gt;)&lt;/span&gt;.&lt;/p&gt;
-&lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 15&lt;/strong&gt;. &lt;em&gt;A pointed type &lt;span
-class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; is &lt;em&gt;central&lt;/em&gt; if the evaluation
-map &lt;span class=&#34;math display&#34;&gt;\[f\mapsto f(\mathrm{pt}):(A\to
-A)_{(\ensuremath{\text{id}})} \to A\]&lt;/span&gt; from the connected
-component of &lt;span class=&#34;math inline&#34;&gt;\(\ensuremath{\text{id}}\)&lt;/span&gt;
-is an equivalence.&lt;/em&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 16&lt;/strong&gt;. &lt;em&gt;An &lt;em&gt;action&lt;/em&gt; of a central
-type &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; on a type &lt;span
-class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; is a map &lt;span
-class=&#34;math inline&#34;&gt;\(\alpha:A\times X\to X\)&lt;/span&gt; such that &lt;span
-class=&#34;math inline&#34;&gt;\(\alpha(\mathrm{pt}, x)=x\)&lt;/span&gt; for all &lt;span
-class=&#34;math inline&#34;&gt;\(x:X\)&lt;/span&gt;. If &lt;span
-class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; has an &lt;span
-class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt;-action, we say it is &lt;em&gt;an &lt;span
-class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt;-torsor&lt;/em&gt; if it is merely inhabited
-and and &lt;span class=&#34;math inline&#34;&gt;\(\alpha(-,x):A\to X\)&lt;/span&gt; is an
-equivalence for every &lt;span class=&#34;math inline&#34;&gt;\(x:X\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;The type of &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt;-torsors is thus
-&lt;span
-class=&#34;math display&#34;&gt;\[\mathsf{Tor}_A:=\sum_{X:\mathcal{U}}\sum_{\alpha:A\times
-X\to X}
-(\alpha(\mathrm{pt},-)=\ensuremath{\text{id}}_X)\times||X||_{-1}\times\prod_{x:X}\mathsf{is\_equiv}(\alpha(-,x))\]&lt;/span&gt;
-and we can add a basepoint to &lt;span
-class=&#34;math inline&#34;&gt;\(\mathsf{Tor}_A\)&lt;/span&gt; by choosing &lt;span
-class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; itself, as a term in the universe which
-satisfies the requirements.&lt;/p&gt;
-&lt;p&gt;Another way to look at &lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt;’s
-neighborhood in the universe is the following.&lt;/p&gt;
-&lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 17&lt;/strong&gt;. &lt;em&gt;If &lt;span
-class=&#34;math inline&#34;&gt;\(X:\mathcal{U}\)&lt;/span&gt; is any type, the type &lt;span
-class=&#34;math inline&#34;&gt;\(\mathrm{BAut}_1(X)\)&lt;/span&gt; is given by &lt;span
-class=&#34;math display&#34;&gt;\[\mathrm{BAut}_1(X)\stackrel{\mathrm{def}}{=}\sum_{Y:\mathcal{U}}||Y=X||_0.\]&lt;/span&gt;
-The 1 in the name indicates that the type is 1-connected, being the
-universal cover of the connected component &lt;span
-class=&#34;math inline&#34;&gt;\(\mathcal{U}_{(X)}\)&lt;/span&gt; of &lt;span
-class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt;, also denoted &lt;span
-class=&#34;math inline&#34;&gt;\(\mathrm{BAut}(X)\stackrel{\mathrm{def}}{=}\sum_{Y:\mathcal{U}}||Y=X||_{-1}\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;The type &lt;span class=&#34;math inline&#34;&gt;\(\mathrm{BAut}_1(A)\)&lt;/span&gt; with
-&lt;span class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; a central space is the type we
-are looking for. It is both equivalent to the type of &lt;span
-class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt;-torsors, and it is an Eilenberg-Mac
-Lane space &lt;span class=&#34;math inline&#34;&gt;\(K(A,1)\)&lt;/span&gt;. The following
-propositions make the link.&lt;/p&gt;
-&lt;div class=&#34;myprop&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Proposition 1&lt;/strong&gt;. &lt;em&gt;Let &lt;span
-class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; be an abelian group (a set meeting the
-classical definition) and let &lt;span
-class=&#34;math inline&#34;&gt;\(n&amp;gt;0\)&lt;/span&gt;. If a central type &lt;span
-class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; is a &lt;span
-class=&#34;math inline&#34;&gt;\(K(G,n)\)&lt;/span&gt; then &lt;span
-class=&#34;math inline&#34;&gt;\(\mathrm{BAut}_1(A)\)&lt;/span&gt; is a &lt;span
-class=&#34;math inline&#34;&gt;\(K(G,n+1)\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;mythm&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Theorem 1&lt;/strong&gt;. &lt;em&gt;There is an equivalence &lt;span
-class=&#34;math inline&#34;&gt;\(\mathsf{Tor}_A\simeq\mathrm{BAut}_1(A).\)&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;Why do we already know then that this type is a delooping? Go on to
-discuss the pointed types and how they are contractible. Then move to S1
-in particular, and polygons.&lt;/p&gt;
 &lt;h1 data-number=&#34;4&#34; id=&#34;why-this-is-geometry&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;4&lt;/span&gt; Why this is geometry&lt;/h1&gt;
 &lt;p&gt;How can we double check that we are describing the intended theory of
@@ -975,7 +944,7 @@ served by examples, do look at it and return to this point.&lt;/p&gt;
 class=&#34;header-section-number&#34;&gt;4.2&lt;/span&gt; Connections as splittings&lt;/h2&gt;
 &lt;p&gt;The classical story goes like this.&lt;/p&gt;
 &lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 18&lt;/strong&gt;. &lt;em&gt;The &lt;em&gt;vertical bundle&lt;/em&gt;
+&lt;p&gt;&lt;strong&gt;Definition 17&lt;/strong&gt;. &lt;em&gt;The &lt;em&gt;vertical bundle&lt;/em&gt;
 &lt;span class=&#34;math inline&#34;&gt;\(VP\)&lt;/span&gt; of a principal bundle &lt;span
 class=&#34;math inline&#34;&gt;\(\pi:P\to M\)&lt;/span&gt; with Lie group &lt;span
 class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; is the kernel of the derivative &lt;span
@@ -990,7 +959,7 @@ class=&#34;math inline&#34;&gt;\(V_pP\)&lt;/span&gt; to &lt;span
 class=&#34;math inline&#34;&gt;\(V_{\phi(p)}P\)&lt;/span&gt;, where of course &lt;span
 class=&#34;math inline&#34;&gt;\(\pi(p)=\pi(\phi(p))\)&lt;/span&gt;.&lt;/p&gt;
 &lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 19&lt;/strong&gt;. &lt;em&gt;An &lt;em&gt;Ehresmann connection&lt;/em&gt;
+&lt;p&gt;&lt;strong&gt;Definition 18&lt;/strong&gt;. &lt;em&gt;An &lt;em&gt;Ehresmann connection&lt;/em&gt;
 on a principal bundle &lt;span class=&#34;math inline&#34;&gt;\(\pi:P\to M\)&lt;/span&gt;
 with Lie group &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; is a splitting
 &lt;span class=&#34;math inline&#34;&gt;\(TP=VP\oplus HP\)&lt;/span&gt; at every point of
@@ -1034,7 +1003,7 @@ y}\mathrm{tr}(p):f(x)=f(y)\)&lt;/span&gt;. We can use this to define a type of
 &lt;em&gt;dependent paths&lt;/em&gt;, also called &lt;em&gt;pathovers&lt;/em&gt; or &lt;em&gt;paths
 over&lt;/em&gt; a given path.&lt;/p&gt;
 &lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 20&lt;/strong&gt;. &lt;em&gt;With the above context and points
+&lt;p&gt;&lt;strong&gt;Definition 19&lt;/strong&gt;. &lt;em&gt;With the above context and points
 &lt;span class=&#34;math inline&#34;&gt;\(a:f(x), b:f(y)\)&lt;/span&gt; the type of
 &lt;em&gt;dependent paths over &lt;span class=&#34;math inline&#34;&gt;\(p\)&lt;/span&gt;&lt;/em&gt;
 with endpoints &lt;span class=&#34;math inline&#34;&gt;\(a, b\)&lt;/span&gt; is denoted
@@ -1382,7 +1351,7 @@ field&lt;/em&gt;, and again, a notion of curvature. To prove both and relate
 them it helps to equate the Euler characteristic to the index of a
 special vector field.&lt;/p&gt;
 &lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 21&lt;/strong&gt;. &lt;em&gt;A vector field is a section &lt;span
+&lt;p&gt;&lt;strong&gt;Definition 20&lt;/strong&gt;. &lt;em&gt;A vector field is a section &lt;span
 class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; of the disk bundle. A zero of &lt;span
 class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; is a vertex &lt;span
 class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt; where &lt;span
@@ -1398,7 +1367,7 @@ the fibers. So a second vector field can be lifted to the classifying
 map to pointed types, which is contractible. That’s really all that’s
 going on in these classical proofs!&lt;/p&gt;
 &lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 22&lt;/strong&gt;. &lt;em&gt;The index of a vector field at a
+&lt;p&gt;&lt;strong&gt;Definition 21&lt;/strong&gt;. &lt;em&gt;The index of a vector field at a
 zero is given by transport composed with exp.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;mythm&#34;&gt;
@@ -1434,23 +1403,6 @@ class=&#34;smallcaps&#34;&gt;Rijke&lt;/span&gt;, E. (2023) &lt;a
 href=&#34;https://arxiv.org/abs/2301.02636&#34;&gt;Central h-spaces and banded
 types&lt;/a&gt;.
 &lt;/div&gt;
-&lt;div id=&#34;ref-crane_ddg&#34; class=&#34;csl-entry&#34; role=&#34;listitem&#34;&gt;
-&lt;span class=&#34;smallcaps&#34;&gt;Crane&lt;/span&gt;, K., &lt;span
-class=&#34;smallcaps&#34;&gt;Goes&lt;/span&gt;, F. de, &lt;span
-class=&#34;smallcaps&#34;&gt;Desbrun&lt;/span&gt;, M., &amp;amp; &lt;span
-class=&#34;smallcaps&#34;&gt;Schröder&lt;/span&gt;, P. (2013) &lt;a
-href=&#34;{https://www.cs.cmu.edu/~kmcrane/Projects/DDG/}&#34;&gt;Digital geometry
-processing with discrete exterior calculus&lt;/a&gt;. &lt;em&gt;ACM SIGGRAPH 2013
-courses&lt;/em&gt;, &lt;em&gt;SIGGRAPH ’13&lt;/em&gt;. New York, NY, USA: ACM.
-&lt;/div&gt;
-&lt;div id=&#34;ref-desbrundec&#34; class=&#34;csl-entry&#34; role=&#34;listitem&#34;&gt;
-&lt;span class=&#34;smallcaps&#34;&gt;Desbrun&lt;/span&gt;, M., &lt;span
-class=&#34;smallcaps&#34;&gt;Hirani&lt;/span&gt;, A.N., &lt;span
-class=&#34;smallcaps&#34;&gt;Leok&lt;/span&gt;, M., &amp;amp; &lt;span
-class=&#34;smallcaps&#34;&gt;Marsden&lt;/span&gt;, J.E. (2005) &lt;a
-href=&#34;https://arxiv.org/abs/math/0508341&#34;&gt;Discrete exterior
-calculus&lt;/a&gt;.
-&lt;/div&gt;
 &lt;div id=&#34;ref-freedman_quinn&#34; class=&#34;csl-entry&#34; role=&#34;listitem&#34;&gt;
 &lt;span class=&#34;smallcaps&#34;&gt;Freedman&lt;/span&gt;, M.H. &amp;amp; &lt;span
 class=&#34;smallcaps&#34;&gt;Quinn&lt;/span&gt;, F. (1990) &lt;em&gt;&lt;a
@@ -1463,47 +1415,17 @@ href=&#34;https://books.google.com/books?id=8zVCDwAAQBAJ&#34;&gt;Mathematical ga
 theory: With applications to the standard model of particle
 physics&lt;/a&gt;&lt;/em&gt;, Universitext. Springer International Publishing.
 &lt;/div&gt;
-&lt;div id=&#34;ref-hiranidec&#34; class=&#34;csl-entry&#34; role=&#34;listitem&#34;&gt;
-&lt;span class=&#34;smallcaps&#34;&gt;Hirani&lt;/span&gt;, A.N. (2003) Discrete exterior
-calculus (PhD thesis).
-&lt;/div&gt;
 &lt;div id=&#34;ref-kirby_siebenmann&#34; class=&#34;csl-entry&#34; role=&#34;listitem&#34;&gt;
 &lt;span class=&#34;smallcaps&#34;&gt;Kirby&lt;/span&gt;, R.C. &amp;amp; &lt;span
 class=&#34;smallcaps&#34;&gt;Siebenmann&lt;/span&gt;, L.C. (1977) &lt;em&gt;Foundational essays
 on topological manifolds, smoothings, and triangulations&lt;/em&gt;, Annals of
 mathematics studies. Princeton University Press.
 &lt;/div&gt;
-&lt;div id=&#34;ref-leok&#34; class=&#34;csl-entry&#34; role=&#34;listitem&#34;&gt;
-&lt;span class=&#34;smallcaps&#34;&gt;Leok&lt;/span&gt;, M., &lt;span
-class=&#34;smallcaps&#34;&gt;Marsden&lt;/span&gt;, J.E., &amp;amp; &lt;span
-class=&#34;smallcaps&#34;&gt;Weinstein&lt;/span&gt;, A.D. (2005) &lt;a
-href=&#34;https://arxiv.org/abs/math/0508338&#34;&gt;A discrete theory of
-connections on principal bundles&lt;/a&gt;.
-&lt;/div&gt;
-&lt;div id=&#34;ref-morris_decapodes&#34; class=&#34;csl-entry&#34; role=&#34;listitem&#34;&gt;
-&lt;span class=&#34;smallcaps&#34;&gt;Morris&lt;/span&gt;, L., &lt;span
-class=&#34;smallcaps&#34;&gt;Baas&lt;/span&gt;, A., &lt;span class=&#34;smallcaps&#34;&gt;Arias&lt;/span&gt;,
-J., &lt;span class=&#34;smallcaps&#34;&gt;Gatlin&lt;/span&gt;, M., &lt;span
-class=&#34;smallcaps&#34;&gt;Patterson&lt;/span&gt;, E., &amp;amp; &lt;span
-class=&#34;smallcaps&#34;&gt;Fairbanks&lt;/span&gt;, J.P. (2024) &lt;a
-href=&#34;https://arxiv.org/abs/2401.17432&#34;&gt;Decapodes: A diagrammatic tool
-for representing, composing, and computing spatialized partial
-differential equations&lt;/a&gt;.
-&lt;/div&gt;
 &lt;div id=&#34;ref-needham&#34; class=&#34;csl-entry&#34; role=&#34;listitem&#34;&gt;
 &lt;span class=&#34;smallcaps&#34;&gt;Needham&lt;/span&gt;, T. (2021) &lt;em&gt;&lt;a
 href=&#34;https://books.google.com/books?id=Mc0QEAAAQBAJ&#34;&gt;Visual
 differential geometry and forms: A mathematical drama in five
 acts&lt;/a&gt;&lt;/em&gt;. Princeton University Press.
-&lt;/div&gt;
-&lt;div id=&#34;ref-patterson_diffeq&#34; class=&#34;csl-entry&#34; role=&#34;listitem&#34;&gt;
-&lt;span class=&#34;smallcaps&#34;&gt;Patterson&lt;/span&gt;, E., &lt;span
-class=&#34;smallcaps&#34;&gt;Baas&lt;/span&gt;, A., &lt;span
-class=&#34;smallcaps&#34;&gt;Hosgood&lt;/span&gt;, T., &amp;amp; &lt;span
-class=&#34;smallcaps&#34;&gt;Fairbanks&lt;/span&gt;, J. (2022) &lt;a
-href=&#34;https://doi.org/10.3934/mine.2023036&#34;&gt;A diagrammatic view of
-differential equations in physics&lt;/a&gt;. &lt;em&gt;Mathematics in
-Engineering&lt;/em&gt;, &lt;strong&gt;5&lt;/strong&gt;, 1–59.
 &lt;/div&gt;
 &lt;div id=&#34;ref-shulman_cohesion&#34; class=&#34;csl-entry&#34; role=&#34;listitem&#34;&gt;
 &lt;span class=&#34;smallcaps&#34;&gt;Shulman&lt;/span&gt;, M. (2017) &lt;a
@@ -1522,11 +1444,6 @@ not compute: Transcending the machines in our midst&lt;/a&gt;&lt;/em&gt;. O’Re
 Institute for Advanced Study: &lt;a
 href=&#34;https://homotopytypetheory.org/book&#34;
 class=&#34;uri&#34;&gt;https://homotopytypetheory.org/book&lt;/a&gt;.
-&lt;/div&gt;
-&lt;div id=&#34;ref-whitney1957&#34; class=&#34;csl-entry&#34; role=&#34;listitem&#34;&gt;
-&lt;span class=&#34;smallcaps&#34;&gt;Whitney&lt;/span&gt;, H. (1957) &lt;em&gt;&lt;a
-href=&#34;http://www.jstor.org/stable/j.ctt183q1bm&#34;&gt;Geometric integration
-theory&lt;/a&gt;&lt;/em&gt;. Princeton University Press.
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;section id=&#34;footnotes&#34; class=&#34;footnotes footnotes-end-of-document&#34;
