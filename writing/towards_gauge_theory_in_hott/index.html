@@ -469,7 +469,13 @@
 <li><a href="#overview" id="toc-overview"><span
 class="toc-section-number">1</span> Overview</a></li>
 <li><a href="#torsors" id="toc-torsors"><span
-class="toc-section-number">2</span> Torsors</a></li>
+class="toc-section-number">2</span> Torsors</a>
+<ul>
+<li><a href="#univalent-replacement-for-torsors"
+id="toc-univalent-replacement-for-torsors"><span
+class="toc-section-number">2.1</span> Univalent replacement for
+torsors</a></li>
+</ul></li>
 <li><a href="#combinatorial-manifolds"
 id="toc-combinatorial-manifolds"><span
 class="toc-section-number">3</span> Combinatorial manifolds</a>
@@ -486,8 +492,8 @@ class="math inline">\(\mathsf{link}\)</span></a></li>
 <li><a href="#the-torus" id="toc-the-torus"><span
 class="toc-section-number">3.2</span> The torus</a></li>
 </ul></li>
-<li><a href="#why-this-is-geometry" id="toc-why-this-is-geometry"><span
-class="toc-section-number">4</span> Why this is geometry</a>
+<li><a href="#higher-geometry" id="toc-higher-geometry"><span
+class="toc-section-number">4</span> Higher geometry</a>
 <ul>
 <li><a href="#higher-maps-contain-connections"
 id="toc-higher-maps-contain-connections"><span
@@ -626,7 +632,8 @@ classical structure and properties). A <em><span
 class="math inline">\(G\)</span>-set</em> is a set <span
 class="math inline">\(X\)</span> equipped with a homomorphism <span
 class="math inline">\(\phi:G\to\mathrm{Aut}(X)\)</span>. If in addition
-we have <span class="math display">\[||X||_{-1}\times
+we have a term <span
+class="math display">\[\mathsf{is\_torsor}:||X||_{-1}\times
 \prod_{g:G}\mathsf{is\_equiv}(\phi(-,x):G\to X)\]</span> then we call
 this data a <em><span class="math inline">\(G\)</span>-torsor</em>.
 Denote the type of <span class="math inline">\(G\)</span>-torsors by
@@ -653,18 +660,71 @@ class="math inline">\(G\)</span>-set <span
 class="math inline">\((X,\phi)\)</span> is a <span
 class="math inline">\(G\)</span>-torsor if and only if there merely
 exists a <span class="math inline">\(G\)</span>-equivariant equivalence
-<span class="math inline">\(*\to_G X\)</span>.</em></p>
+<span class="math inline">\(*\to_G X\)</span>.0◻</em></p>
 </div>
 <div class="mycor">
 <p><strong>Corollary 1</strong>. <em>The pointed type <span
 class="math inline">\((TG,*)\)</span> is a <span
-class="math inline">\(K(G,1)\)</span>.</em></p>
+class="math inline">\(\mathrm{K}(G,1)\)</span>.0◻</em></p>
 </div>
-<p>Let <span
-class="math inline">\(\ensuremath{\mathrm{pr}}_1:TG\to\mathcal{U}\)</span>
-be the projection to the underlying type of a given torsor. This map
-loses the structure of the <span class="math inline">\(G\)</span>-set
-and retains just the set. Then ff</p>
+<h2 data-number="2.1" id="univalent-replacement-for-torsors"><span
+class="header-section-number">2.1</span> Univalent replacement for
+torsors</h2>
+<p>The homotopy type theory of cohomology and bundles tells us that the
+type of <span class="math inline">\(G\)</span>-bundles on a type <span
+class="math inline">\(M\)</span> is the type <span
+class="math inline">\(M\to\mathrm{K}(G,1)\)</span>. So we will start
+there as well. But this is a type of structured types, a connected
+component of <span class="math inline">\(G\)</span>-sets rather than a
+connected component of the universe. The paths <em>in the universe</em>
+between two <span class="math inline">\(G\)</span>-sets is equivalent to
+the type of equivalences between the <em>underlying types</em>, not just
+the equivariant equivalences.</p>
+<p>We’ll resolve this problem with the following discussion, following
+Scoccola<span class="citation" data-cites="sco"> (<a href="#ref-sco"
+role="doc-biblioref">Scoccola, 2020</a>)</span>. We will state the
+definitions and theorems for a general <span
+class="math inline">\(\mathrm{K}(G,n)\)</span> but we will be focusing
+on <span class="math inline">\(n=1\)</span> in this note.</p>
+<div class="mydef">
+<p><strong>Definition 2</strong>. <em>Let <span
+class="math inline">\(\mathrm{EM}(G,n)\stackrel{\mathrm{def}}{=}\mathrm{BAut}(\mathrm{K}(G,1))\stackrel{\mathrm{def}}{=}\sum_{Y:\mathcal{U}}||Y\simeq
+\mathrm{K}(G,n)||_{-1}\)</span>. A <span
+class="math inline">\(\mathrm{K}(G,n)-bundle\)</span> on a type <span
+class="math inline">\(M\)</span> is the fiber of a map <span
+class="math inline">\(M\to\mathrm{EM}(G,n)\)</span>.</em></p>
+</div>
+<p>Scoccola uses the action on the universe of suspension and of
+forgetting a point to form the composition <span
+class="math display">\[\mathrm{EM}(G,n)\xrightarrow[]{\Sigma}
+\mathrm{EM}_{\bullet\bullet}(G,n)\xrightarrow[]{F_\bullet}\mathrm{EM_{\bullet}}(G,n)\]</span>
+from types to types with two points (north and south), to pointed types
+(by forgetting the south point).</p>
+<div class="mydef">
+<p><strong>Definition 3</strong>. <em>Given <span
+class="math inline">\(f:M\to\mathrm{EM}(G,n)\)</span>, the
+<em>associated action of <span class="math inline">\(M\)</span> on <span
+class="math inline">\(G\)</span></em>, denoted by <span
+class="math inline">\(f_\bullet\)</span> is defined to be <span
+class="math inline">\(f_\bullet=F_\bullet\circ\Sigma\circ
+f\)</span>.</em></p>
+</div>
+<div class="mythm">
+<p><strong>Theorem 1</strong>. <em>(Scoccola<span class="citation"
+data-cites="sco"> (<a href="#ref-sco" role="doc-biblioref">Scoccola,
+2020</a>)</span> Proposition 2.39). A <span
+class="math inline">\(\mathrm{K}(G,n)\)</span> bundle <span
+class="math inline">\(f:M\to\mathrm{EM}(G,n)\)</span> is equivalent to a
+map in <span class="math inline">\(M\to\mathrm{K}(G,n+1)\)</span>, and
+so is a principal fibration, if and only if the associated action <span
+class="math inline">\(f_\bullet\)</span> is contractible.</em></p>
+</div>
+<p>And so we can continue to work with the classifying space <span
+class="math inline">\(\mathrm{EM}(G,1)\)</span> and study <span
+class="math inline">\(\mathrm{K}(G,1)\)</span>-fibrations, and then
+later add the extra propositional requirement when it is needed to prove
+that we are working with <span
+class="math inline">\(M\to\mathrm{K}(G,2)\)</span>.</p>
 <h1 data-number="3" id="combinatorial-manifolds"><span
 class="header-section-number">3</span> Combinatorial manifolds</h1>
 <p>We will adapt to higher inductive types in a straightforward manner
@@ -673,7 +733,7 @@ example the classic book by Kirby and Siebenmann<span class="citation"
 data-cites="kirby_siebenmann"> (<a href="#ref-kirby_siebenmann"
 role="doc-biblioref">Kirby &amp; Siebenmann, 1977</a>)</span>.</p>
 <div class="mydef">
-<p><strong>Definition 2</strong>. <em>In an abstract simplicial complex
+<p><strong>Definition 4</strong>. <em>In an abstract simplicial complex
 <span class="math inline">\(X\)</span>, the <em>link</em> of a vertex
 <span class="math inline">\(v\)</span> is the set containing every face
 <span class="math inline">\(f\in X\)</span> such that <span
@@ -682,7 +742,7 @@ class="math inline">\(f\cup v\)</span> is a face of <span
 class="math inline">\(X\)</span>.</em></p>
 </div>
 <div class="mydef">
-<p><strong>Definition 3</strong>. <em>A <em>combinatorial manfiold</em>
+<p><strong>Definition 5</strong>. <em>A <em>combinatorial manfiold</em>
 (or <em>combinatorial triangulation</em>) of dimension <span
 class="math inline">\(n\)</span> is a simplicial complex of dimension
 <span class="math inline">\(n\)</span> such that the link of every
@@ -706,7 +766,7 @@ constructor of the corresponding HoTT dimension. We will begin with a
 type that is important both for the domain and the codomain of mere
 circles: a square.</p>
 <div class="mydef">
-<p><strong>Definition 4</strong>. <em>The higher inductive type <span
+<p><strong>Definition 6</strong>. <em>The higher inductive type <span
 class="math inline">\(C_4\)</span> (where C stands for “circle”). <span
 class="math display">\[\begin{aligned}
 C_4 &amp;: \mathsf{Type}\\
@@ -727,7 +787,7 @@ join of the two-element sets <span class="math inline">\(\{c_1, c_3\}*
 \{c_2, c_4\}\)</span>. The circle itself is a non-example since it lacks
 the second vertex of the edge:</p>
 <div class="mydef">
-<p><strong>Definition 5</strong>. <em>The higher inductive type <span
+<p><strong>Definition 7</strong>. <em>The higher inductive type <span
 class="math inline">\(S^1\)</span>: <span
 class="math display">\[\begin{aligned}
 S^1&amp;:\mathsf{Type}\\
@@ -759,7 +819,7 @@ adopt the convention that a subscript indicates the dimension of a
 subskeleton of a complex. For instance, we have <span
 class="math inline">\(\mathsf{base}:S^1_0\)</span>.</p>
 <div class="mydef">
-<p><strong>Definition 6</strong>. <em>The HIT <span
+<p><strong>Definition 8</strong>. <em>The HIT <span
 class="math inline">\(\ensuremath{\mathbb{O}}_0\)</span> is just 6
 points, intended as the 0-skeleton of an octahedron, with vertices named
 after the colors on the faces of a puzzle cube. <span
@@ -767,7 +827,7 @@ class="math display">\[w, y, b, r, g, o :
 \ensuremath{\mathbb{O}}_0\]</span></em></p>
 </div>
 <div class="mydef">
-<p><strong>Definition 7</strong>. <em>The HIT <span
+<p><strong>Definition 9</strong>. <em>The HIT <span
 class="math inline">\(\ensuremath{\mathbb{O}}_1\)</span> is the
 1-skeleton of an octahedron. <span
 class="math display">\[\begin{aligned}
@@ -781,7 +841,7 @@ yr &amp;: y=r
 \end{aligned}\]</span></em></p>
 </div>
 <div class="mydef">
-<p><strong>Definition 8</strong>. <em>The HIT <span
+<p><strong>Definition 10</strong>. <em>The HIT <span
 class="math inline">\(\ensuremath{\mathbb{O}}\)</span> is an octahedron:
 <span class="math display">\[\begin{aligned}
 w, y, b, r, g, o &amp;: \ensuremath{\mathbb{O}}\\
@@ -819,7 +879,7 @@ class="header-section-number">3.1.1</span> The function <span
 class="math inline">\(\mathsf{link}\)</span></h3>
 <p>Taking the link of a vertex gives us a map to the universe.</p>
 <div class="mydef">
-<p><strong>Definition 9</strong>. <em><span
+<p><strong>Definition 11</strong>. <em><span
 class="math inline">\(\mathsf{link}:\ensuremath{\mathbb{O}}_0\to\mathrm{BAut}C_4\)</span>
 is given by induction: <span class="math display">\[\begin{aligned}
 \mathsf{link}(w) &amp;= brgo &amp; \mathsf{link}(r) &amp;= wbyg \\
@@ -850,7 +910,7 @@ of rotation. Then <span class="math inline">\(g\mapsto w\)</span> and
 <span class="math inline">\(b\mapsto y\)</span>.</p>
 <p>The full map on the 1-skeleton is:</p>
 <div class="mydef">
-<p><strong>Definition 10</strong>. <em>Define <span
+<p><strong>Definition 12</strong>. <em>Define <span
 class="math inline">\(T_1:\ensuremath{\mathbb{O}}_1\to\mathrm{BAut}C_4\)</span>
 on just the 1-skeleton by extending <span
 class="math inline">\(\mathsf{link}\)</span> as follows: Transport away
@@ -903,7 +963,7 @@ your fingers are pointing, then slide your hand to an equatorial face,
 then along the equator, then back to the top. The answer is: you come
 back rotated clockwise by a quarter-turn.</p>
 <div class="mydef">
-<p><strong>Definition 11</strong>. <em>The map <span
+<p><strong>Definition 13</strong>. <em>The map <span
 class="math inline">\(R:C_4\to C_4\)</span> rotates by one quarter turn,
 one “click":</em></p>
 <div class="multicols">
@@ -940,7 +1000,7 @@ homotopy from <span
 class="math inline">\(\ensuremath{\mathsf{refl}}_{T_1(w)}\)</span> to
 <span class="math inline">\(T_1(wb\cdot br\cdot rw)\)</span>.</p>
 <div class="mydef">
-<p><strong>Definition 12</strong>. <em>Define <span
+<p><strong>Definition 14</strong>. <em>Define <span
 class="math inline">\(T_2:\ensuremath{\mathbb{O}}\to\mathrm{BAut}C_4\)</span>
 by extending <span class="math inline">\(T_1\)</span> to the faces as
 follows:</em></p>
@@ -1020,31 +1080,6 @@ triangles. We could then transport along a single edge, and map between
 two circles that each have many segments, approximating to arbitrary
 precision any real-world application. The theory and practice of
 refinements is extensive and includes computer graphics research.</p>
-<p>But given an arbitrary edge on our impoverished 3d-embedded torus,
-how should we decide how to map the hexagons at the endpoints? The goal
-is of course to approximate the actual geometry of transport on a curved
-torus, so we should learn a little about that. Which is comforting –
-we’re trying to capture geometry, so it’s good that we need to use
-some!</p>
-<p>Of all the edges on our shape, the ones that are not very similar to
-geodesics are the squares in front and back. The two diamonds clearly
-correspond to highly symmetric geodesics, and less clearly there are
-four other cycles that are close enough to geodesics that if we drew the
-edges curved, they’d be actual geodesics on the torus they were hugging
-(Figure <a href="#fig:torus_geodesic" data-reference-type="ref"
-data-reference="fig:torus_geodesic">5</a>).</p>
-<figure id="fig:torus_geodesic_smooth">
-<img src="torus_geodesic.png" />
-<figcaption>A geodesic on a torus with inner radius 1 and outer radius
-3.</figcaption>
-</figure>
-<figure id="fig:torus_geodesic">
-<img src="./7d047294f53d293e80beb650d3b5a012878e882c.png" />
-<figcaption>This path is very similar to an actual geodesic on an actual
-torus. There are three other analogous ones, one that also passes
-through the top and bottom of the outer diamond, and two that are 90
-degree rotations of those two.</figcaption>
-</figure>
 <figure id="fig:torus_twist">
 <img src="./d63aceba26abea8e763fa0be466d7187c82eb65f.png" />
 <img src="./853c33a104add763b36b0af4a934ff7701f99bc1.png" />
@@ -1061,9 +1096,10 @@ the least twisty. If we use the flat torus diagram to help us, then we
 can identify the outer and inner diamond, which are three of the
 vertical black lines, as geodesics, as well as all of the diagonal
 lines, which are the ones in Figure <a href="#fig:torus_geodesic"
-data-reference-type="ref" data-reference="fig:torus_geodesic">5</a>.
-That leaves only the black vertical lines that go around the front and
-back squares. Those are not geodesics, and some twisting will take place
+data-reference-type="ref"
+data-reference="fig:torus_geodesic">[fig:torus_geodesic]</a>. That
+leaves only the black vertical lines that go around the front and back
+squares. Those are not geodesics, and some twisting will take place
 there.</p>
 <p>I am talking about twisting on individual edges, but that’s not a
 concept with standalone meaning since the hexagons are torsors. I’m
@@ -1084,12 +1120,8 @@ circle comes back rotated just a few degrees counterclockwise. Use your
 imagination to discretize the smooth circle onto the points of the
 mesh.</figcaption>
 </figure>
-<h1 data-number="4" id="why-this-is-geometry"><span
-class="header-section-number">4</span> Why this is geometry</h1>
-<p>How can we double check that we are describing the intended theory of
-geometry? In this section we will enumerate a wishlist of facts that we
-believe characterize the subject, and then provide evidence for some of
-them.</p>
+<h1 data-number="4" id="higher-geometry"><span
+class="header-section-number">4</span> Higher geometry</h1>
 <p>Here are the translations that are covered in the current paper:
 <span class="math display">\[\begin{aligned}
 &amp; \text{\small Connections are infinitesimal splittings of a} &amp;
@@ -1111,16 +1143,6 @@ contractible loops is } \ensuremath{\mathsf{refl}}\\
 &amp; \text{\small automorphisms) acts on the space of connections.}
 &amp; \quad&amp;\text{\small the splitting of paths in sigma types.} \\
 \end{aligned}\]</span></p>
-<p>And here are questions to explore in the future:</p>
-<ol>
-<li><p>There’s a notion of <em>tensorial</em> that holds for forms but
-not for connections.</p></li>
-<li><p>Where is the Grassmannian structure of wedge product?</p></li>
-<li><p>The Gauss-Bonnet theorem holds, relating the curvature of a
-2-manifold to the Euler characteristic.</p></li>
-<li><p>More generally, characteristic classes of bundles can be computed
-using a connection (Chern-Weil theory).</p></li>
-</ol>
 <h2 data-number="4.1" id="higher-maps-contain-connections"><span
 class="header-section-number">4.1</span> Higher maps contain
 connections</h2>
@@ -1197,7 +1219,7 @@ served by examples, do look at it and return to this point.</p>
 class="header-section-number">4.2</span> Connections as splittings</h2>
 <p>The classical story goes like this.</p>
 <div class="mydef">
-<p><strong>Definition 13</strong>. <em>The <em>vertical bundle</em>
+<p><strong>Definition 15</strong>. <em>The <em>vertical bundle</em>
 <span class="math inline">\(VP\)</span> of a principal bundle <span
 class="math inline">\(\pi:P\to M\)</span> with Lie group <span
 class="math inline">\(G\)</span> is the kernel of the derivative <span
@@ -1212,7 +1234,7 @@ class="math inline">\(V_pP\)</span> to <span
 class="math inline">\(V_{\phi(p)}P\)</span>, where of course <span
 class="math inline">\(\pi(p)=\pi(\phi(p))\)</span>.</p>
 <div class="mydef">
-<p><strong>Definition 14</strong>. <em>An <em>Ehresmann connection</em>
+<p><strong>Definition 16</strong>. <em>An <em>Ehresmann connection</em>
 on a principal bundle <span class="math inline">\(\pi:P\to M\)</span>
 with Lie group <span class="math inline">\(G\)</span> is a splitting
 <span class="math inline">\(TP=VP\oplus HP\)</span> at every point of
@@ -1256,7 +1278,7 @@ y}\mathrm{tr}(p):f(x)=f(y)\)</span>. We can use this to define a type of
 <em>dependent paths</em>, also called <em>pathovers</em> or <em>paths
 over</em> a given path.</p>
 <div class="mydef">
-<p><strong>Definition 15</strong>. <em>With the above context and points
+<p><strong>Definition 17</strong>. <em>With the above context and points
 <span class="math inline">\(a:f(x), b:f(y)\)</span> the type of
 <em>dependent paths over <span class="math inline">\(p\)</span></em>
 with endpoints <span class="math inline">\(a, b\)</span> is denoted
@@ -1273,7 +1295,7 @@ the term “path over”), including composition, and associativity
 thereof.</p>
 <p>We recall now the identity type of sigma types:</p>
 <div id="thm:idsit" class="mythm">
-<p><strong>Theorem 1</strong>. <em>(HoTT book Theorem 2.7.2 <span
+<p><strong>Theorem 2</strong>. <em>(HoTT book Theorem 2.7.2 <span
 class="citation" data-cites="hottbook"> (<a href="#ref-hottbook"
 role="doc-biblioref">Univalent Foundations Program, 2013</a>)</span>) If
 <span class="math inline">\(f:M\to \mathcal{U}\)</span> is a type family
@@ -1420,7 +1442,7 @@ there are two effects: the effect of sliding along the fiber, and the
 effect of the rate of change of the gauge transformation. In classical
 geometry you’ll see formulas like this:</p>
 <div class="mythm">
-<p><strong>Theorem 2</strong>. <em>Let <span class="math inline">\(P\to
+<p><strong>Theorem 3</strong>. <em>Let <span class="math inline">\(P\to
 M\)</span> be a principal bundle and <span
 class="math inline">\(A\in\Omega^1(M,\mathfrak{g})\)</span> a connection
 1-form on <span class="math inline">\(P\)</span>. Suppose that <span
@@ -1486,7 +1508,7 @@ acts fiberwise. We want to compute the action of <span
 class="math inline">\(\ensuremath{\mathsf{ap}}(H&#39;)\)</span> on the
 horizontal-vertical decomposition of paths from Theorem <a
 href="#thm:idsit" data-reference-type="ref"
-data-reference="thm:idsit">1</a> by computing <span
+data-reference="thm:idsit">2</a> by computing <span
 class="math inline">\(\omega\circ\ensuremath{\mathsf{ap}}(H&#39;)=\ensuremath{\mathrm{pr}}_2\circ\mathsf{split}\circ\ensuremath{\mathsf{ap}}(H&#39;)\)</span>.</p>
 <p>Denote <span class="math inline">\(\sum_{a:M}f(a)\)</span> by <span
 class="math inline">\(P\)</span>. We’ll adopt a convention of roman
@@ -1604,7 +1626,7 @@ field</em>, and again, a notion of curvature. To prove both and relate
 them it helps to equate the Euler characteristic to the index of a
 special vector field.</p>
 <div class="mydef">
-<p><strong>Definition 16</strong>. <em>A vector field is a section <span
+<p><strong>Definition 18</strong>. <em>A vector field is a section <span
 class="math inline">\(X\)</span> of the disk bundle. A zero of <span
 class="math inline">\(X\)</span> is a vertex <span
 class="math inline">\(x\)</span> where <span
@@ -1620,23 +1642,23 @@ the fibers. So a second vector field can be lifted to the classifying
 map to pointed types, which is contractible. That’s really all that’s
 going on in these classical proofs!</p>
 <div class="mydef">
-<p><strong>Definition 17</strong>. <em>The index of a vector field at a
+<p><strong>Definition 19</strong>. <em>The index of a vector field at a
 zero is given by transport composed with exp.</em></p>
 </div>
 <div class="mythm">
-<p><strong>Theorem 3</strong>. <em>The total index is independent of the
+<p><strong>Theorem 4</strong>. <em>The total index is independent of the
 vector field.</em></p>
 </div>
 <div class="mythm">
-<p><strong>Theorem 4</strong>. <em>(Poincaré-Hopf) The total index is
+<p><strong>Theorem 5</strong>. <em>(Poincaré-Hopf) The total index is
 equal to the total curvature.</em></p>
 </div>
 <div class="mythm">
-<p><strong>Theorem 5</strong>. <em>The total index is equal to the Euler
+<p><strong>Theorem 6</strong>. <em>The total index is equal to the Euler
 characteristic.</em></p>
 </div>
 <div class="mythm">
-<p><strong>Theorem 6</strong>. <em>(Gauss-Bonnet) The total curvature is
+<p><strong>Theorem 7</strong>. <em>(Gauss-Bonnet) The total curvature is
 equal to the Euler characteristic.</em></p>
 </div>
 <div id="refs" class="references csl-bib-body hanging-indent"
@@ -1665,6 +1687,12 @@ mathematics studies. Princeton University Press.
 href="https://books.google.com/books?id=Mc0QEAAAQBAJ">Visual
 differential geometry and forms: A mathematical drama in five
 acts</a></em>. Princeton University Press.
+</div>
+<div id="ref-sco" class="csl-entry" role="listitem">
+<span class="smallcaps">Scoccola</span>, L. (2020) <a
+href="https://doi.org/10.1017/s0960129520000146">Nilpotent types and
+fracture squares in homotopy type theory</a>. <em>Mathematical
+Structures in Computer Science</em>, <strong>30</strong>, 511–544.
 </div>
 <div id="ref-shulman_cohesion" class="csl-entry" role="listitem">
 <span class="smallcaps">Shulman</span>, M. (2017) <a
