@@ -91,6 +91,8 @@ class=&#34;toc-section-number&#34;&gt;2&lt;/span&gt; Torsors&lt;/a&gt;
 id=&#34;toc-univalent-replacement-for-torsors&#34;&gt;&lt;span
 class=&#34;toc-section-number&#34;&gt;2.1&lt;/span&gt; Univalent replacement for
 torsors&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#pathovers&#34; id=&#34;toc-pathovers&#34;&gt;&lt;span
+class=&#34;toc-section-number&#34;&gt;2.2&lt;/span&gt; Pathovers&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#combinatorial-manifolds&#34;
 id=&#34;toc-combinatorial-manifolds&#34;&gt;&lt;span
@@ -341,6 +343,30 @@ class=&#34;math inline&#34;&gt;\(\mathrm{K}(G,1)\)&lt;/span&gt;-fibrations, and 
 later add the extra propositional requirement when it is needed to prove
 that we are working with &lt;span
 class=&#34;math inline&#34;&gt;\(M\to\mathrm{K}(G,2)\)&lt;/span&gt;.&lt;/p&gt;
+&lt;h2 data-number=&#34;2.2&#34; id=&#34;pathovers&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;2.2&lt;/span&gt; Pathovers&lt;/h2&gt;
+&lt;p&gt;Suppose we have &lt;span
+class=&#34;math inline&#34;&gt;\(T:M\to\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)&lt;/span&gt;.
+Paths in a sigma type &lt;span
+class=&#34;math inline&#34;&gt;\(\sum_{x:M}T(x)\)&lt;/span&gt; are given by pairs of
+paths: a path &lt;span class=&#34;math inline&#34;&gt;\(p:x=_M y\)&lt;/span&gt; in the base,
+and a pathover &lt;span
+class=&#34;math inline&#34;&gt;\(p&amp;#39;:\mathrm{tr}_p(x&amp;#39;)=_{T(y)}y&amp;#39;\)&lt;/span&gt;
+between &lt;span class=&#34;math inline&#34;&gt;\(x&amp;#39;:T(x)\)&lt;/span&gt; and &lt;span
+class=&#34;math inline&#34;&gt;\(y&amp;#39;:T(y)\)&lt;/span&gt; in the fibers. We can’t
+directl compare &lt;span class=&#34;math inline&#34;&gt;\(x&amp;#39;\)&lt;/span&gt; and &lt;span
+class=&#34;math inline&#34;&gt;\(y&amp;#39;\)&lt;/span&gt; since they are of different types,
+so we apply transport to one of them (which is asymmetrical, but
+equivalent to the alternatives). We say &lt;span
+class=&#34;math inline&#34;&gt;\(p&amp;#39;\)&lt;/span&gt; lies over &lt;span
+class=&#34;math inline&#34;&gt;\(p\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;The individual fibers of &lt;span class=&#34;math inline&#34;&gt;\(T\)&lt;/span&gt; are
+polygons (the link of the vertex of which it is the fiber). Given a path
+&lt;span class=&#34;math inline&#34;&gt;\(p:x=_M y\)&lt;/span&gt; in &lt;span
+class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt;, one of its pathovers consists of a
+path in &lt;span class=&#34;math inline&#34;&gt;\(T(y)\)&lt;/span&gt;. And given a face in
+&lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt;, a faceover is a homotopy from a
+pathover to refl.&lt;/p&gt;
 &lt;h1 data-number=&#34;3&#34; id=&#34;combinatorial-manifolds&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;3&lt;/span&gt; Combinatorial manifolds&lt;/h1&gt;
 &lt;p&gt;We will adapt to higher inductive types in a straightforward manner
