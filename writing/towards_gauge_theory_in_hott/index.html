@@ -517,11 +517,10 @@ class="toc-section-number">4.1.3</span> Gauge transformations</a></li>
 <li><a href="#vector-fields" id="toc-vector-fields"><span
 class="toc-section-number">4.2</span> Vector fields</a></li>
 </ul></li>
-<li><a
-href="#gauss-bonnet-vector-fields-and-the-poincaruxe9-hopf-theorem"
-id="toc-gauss-bonnet-vector-fields-and-the-poincaruxe9-hopf-theorem"><span
-class="toc-section-number">5</span> Gauss-Bonnet, Vector Fields, and the
-Poincaré-Hopf Theorem</a>
+<li><a href="#gauss-bonnet-poincaruxe9-hopf-leibniz"
+id="toc-gauss-bonnet-poincaruxe9-hopf-leibniz"><span
+class="toc-section-number">5</span> Gauss-Bonnet, Poincaré-Hopf,
+Leibniz</a>
 <ul>
 <li><a href="#the-leibniz-product-rule"
 id="toc-the-leibniz-product-rule"><span
@@ -1194,7 +1193,7 @@ data-reference="fig:flattorus">4</a>. But let’s not use that extra
 information, and instead let’s start talking about loops around
 faces.</p>
 <figure id="fig:dense_circle">
-<embed src="dense_circle.pdf" style="width:2.77778in" />
+<img src="dense_circle.png" style="width:2.77778in" />
 <figcaption>To better approximate small transport angles, we would
 refine the mesh and instead of the link we would use circle-like paths
 that include more triangles, and have many edges. Imagine transporting
@@ -1281,15 +1280,13 @@ of the paths.</p>
 <p>Classically, curvature is a property of the connection. It is
 computed either on infinitesimal loops, or on the infinitesimal surface
 bounded by the loop. In fact it is “the derivative of the connection”
-morally speaking. Getting into the details would wreck the simplicity
-we’re going for<a href="#fn1" class="footnote-ref" id="fnref1"
-role="doc-noteref"><sup>1</sup></a>. We will look for curvature by
-examining <span class="math inline">\(f\)</span> on 1-dimensional loops.
-If <span class="math inline">\(M\)</span> is at least a 2-type and if we
-want to claim that <span class="math inline">\(f\)</span> classifies a
-bundle with connection, then we will be required to map the 2-faces of
-<span class="math inline">\(M\)</span> (the 2-dimesional constructors)
-to a path from <span
+morally speaking. We will look for curvature by examining <span
+class="math inline">\(f\)</span> on 1-dimensional loops. If <span
+class="math inline">\(M\)</span> is at least a 2-type and if we want to
+claim that <span class="math inline">\(f\)</span> classifies a bundle
+with connection, then we will be required to map the 2-faces of <span
+class="math inline">\(M\)</span> (the 2-dimesional constructors) to a
+path from <span
 class="math inline">\(\ensuremath{\mathsf{refl}}\)</span> to the image
 of a bounding loop. So at dimension 2 we will impose that constraint.
 Since <span class="math inline">\(\mathrm{BAut}_1(S^1)\)</span> is
@@ -1558,10 +1555,77 @@ pointing of some of the fibers. This aligns with the classical picture
 of a choice of nonzero vector at each point, except for some points
 where the vector field vanishes. We will have to omit such vanishing
 points from the domain, and so the function is a partial function.</p>
-<h1 data-number="5"
-id="gauss-bonnet-vector-fields-and-the-poincaruxe9-hopf-theorem"><span
-class="header-section-number">5</span> Gauss-Bonnet, Vector Fields, and
-the Poincaré-Hopf Theorem</h1>
+<div class="mydef">
+<p><strong>Definition 20</strong>. <em>If <span
+class="math inline">\(M\)</span> is a combinatorial manifold and <span
+class="math inline">\(Z\subset M_0\)</span> is a set of vertices in
+<span class="math inline">\(M\)</span> with members <span
+class="math inline">\(Z=\{z_0,\ldots,z_n\}\)</span>, then denote by
+<span class="math inline">\(M\setminus Z\)</span> the type given by
+omitting the vertices in <span class="math inline">\(Z\)</span> from the
+constructors in all dimensions where they appeared. Call the points of
+<span class="math inline">\(Z\)</span> <em>isolated</em> if we have
+<span class="math inline">\(\prod_{z:Z}\mathsf{link}(z)\cap
+Z=\emptyset\)</span>. In the isolated case <span
+class="math inline">\(M\setminus Z\)</span> has boundary circles where
+each vertex was removed.</em></p>
+</div>
+<div class="mydef">
+<p><strong>Definition 21</strong>. <em>Let <span
+class="math inline">\(M\)</span> be a combinatorial manifold and <span
+class="math inline">\(Z\)</span> an isolated set of vertices. A
+<em>vector field on <span class="math inline">\(M\)</span> with zero set
+<span class="math inline">\(Z\)</span></em> is a partial section of
+<span class="math inline">\(P\)</span>, i.e. a term <span
+class="math inline">\(X:\prod_{x:M\setminus Z}T(x)\)</span>. The
+<em>exponential map</em> <span class="math inline">\(\exp:P\to
+M\)</span> is the map sending points in a fiber to the corresponding
+point in the link of the base point: <span class="math inline">\(\exp(x,
+y:\mathsf{link}(x))=y\)</span>. In diagram form we have:</em></p>
+</div>
+<p>Note that <span class="math inline">\(\exp\)</span> is different from
+<span class="math inline">\(\ensuremath{\mathrm{pr}}_1\)</span> since it
+spreads a fiber out onto the manifold. The composition <span
+class="math inline">\(\exp\circ X\)</span> is a map <span
+class="math inline">\(M\setminus Z\to M\)</span>, and can be thought of
+as the flow of the vector field. It can be extended to a map <span
+class="math inline">\(M\to M\)</span> by taking the identity map on
+<span class="math inline">\(Z\)</span>.</p>
+<p>The vector field <span class="math inline">\(X\)</span> is a map on
+all dimensions of <span class="math inline">\(M\setminus Z\)</span>, not
+just the vertices. HoTT tells us that <span
+class="math inline">\(X\)</span> also selects an “edgeover” for each
+edge, and “faceover” for each face. And these can be composed, so that
+we have an entire 2-groupoid <span class="math inline">\(X(M\setminus
+Z)\)</span> inside <span class="math inline">\(P\)</span>. If <span
+class="math inline">\(e_{12}:v_1=_M v_2\)</span> then <span
+class="math inline">\(X(e_{12}):\mathrm{tr}_{e_{12}}(X(v_1))=X(v_2)\)</span>,
+which is a path in <span class="math inline">\(T(v_2)\)</span> that ends
+at the selected point <span
+class="math inline">\(X(v_2):T(v_2)\)</span>. The same goes for loops:
+given a loop <span class="math inline">\(\ell:v_1=_M v_1\)</span> we
+have <span
+class="math inline">\(X(\ell):\mathrm{tr}_\ell(X(v_1))=X(v_2)\)</span>,
+a path ending at <span class="math inline">\(X(v_2):T(v_2)\)</span>. It
+doesn’t need to be a loop upstairs but it might be. Of course we always
+have <span
+class="math inline">\(X(\ensuremath{\mathsf{refl}}_{v})=\ensuremath{\mathsf{refl}}(X(v))\)</span>.</p>
+<p>Faceovers are paths from <span
+class="math inline">\(\ensuremath{\mathsf{refl}}_{X(v)}\)</span> to a
+path <span class="math inline">\(a=X(v)\)</span> in some fiber <span
+class="math inline">\(T(v)\)</span>. This amounts to contracting the
+endpoint <span class="math inline">\(a\)</span> back to <span
+class="math inline">\(X(v)\)</span> along the path, like a tape measure.
+In so doing we have squeezed a face of the manifold into the polygonal
+fiber <span class="math inline">\(X(v)\)</span>.</p>
+<div class="mydef">
+<p><strong>Definition 22</strong>. <em>The <em>index</em> of <span
+class="math inline">\(X\)</span> is the winding number of
+something.</em></p>
+</div>
+<h1 data-number="5" id="gauss-bonnet-poincaruxe9-hopf-leibniz"><span
+class="header-section-number">5</span> Gauss-Bonnet, Poincaré-Hopf,
+Leibniz</h1>
 <h2 data-number="5.1" id="the-leibniz-product-rule"><span
 class="header-section-number">5.1</span> The Leibniz (product) rule</h2>
 <p>The Leibniz rule for exterior differentiation states that if <span
@@ -1685,15 +1749,6 @@ class="math inline">\(C^1\)</span></span>-complexes. <em>Annals of
 Mathematics</em>, 809–824.
 </div>
 </div>
-<section id="footnotes" class="footnotes footnotes-end-of-document"
-role="doc-endnotes">
-<hr />
-<ol>
-<li id="fn1"><p>I’m picking and choosing where to tell the story fully
-twice (see the next section) and where to simply look for motivation.<a
-href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section>
 </body>
 </html>
 

@@ -133,11 +133,10 @@ class=&#34;toc-section-number&#34;&gt;4.1.3&lt;/span&gt; Gauge transformations&l
 &lt;li&gt;&lt;a href=&#34;#vector-fields&#34; id=&#34;toc-vector-fields&#34;&gt;&lt;span
 class=&#34;toc-section-number&#34;&gt;4.2&lt;/span&gt; Vector fields&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a
-href=&#34;#gauss-bonnet-vector-fields-and-the-poincaruxe9-hopf-theorem&#34;
-id=&#34;toc-gauss-bonnet-vector-fields-and-the-poincaruxe9-hopf-theorem&#34;&gt;&lt;span
-class=&#34;toc-section-number&#34;&gt;5&lt;/span&gt; Gauss-Bonnet, Vector Fields, and the
-Poincaré-Hopf Theorem&lt;/a&gt;
+&lt;li&gt;&lt;a href=&#34;#gauss-bonnet-poincaruxe9-hopf-leibniz&#34;
+id=&#34;toc-gauss-bonnet-poincaruxe9-hopf-leibniz&#34;&gt;&lt;span
+class=&#34;toc-section-number&#34;&gt;5&lt;/span&gt; Gauss-Bonnet, Poincaré-Hopf,
+Leibniz&lt;/a&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#the-leibniz-product-rule&#34;
 id=&#34;toc-the-leibniz-product-rule&#34;&gt;&lt;span
@@ -810,7 +809,7 @@ data-reference=&#34;fig:flattorus&#34;&gt;4&lt;/a&gt;. But let’s not use that 
 information, and instead let’s start talking about loops around
 faces.&lt;/p&gt;
 &lt;figure id=&#34;fig:dense_circle&#34;&gt;
-&lt;embed src=&#34;dense_circle.pdf&#34; style=&#34;width:2.77778in&#34; /&gt;
+&lt;img src=&#34;dense_circle.png&#34; style=&#34;width:2.77778in&#34; /&gt;
 &lt;figcaption&gt;To better approximate small transport angles, we would
 refine the mesh and instead of the link we would use circle-like paths
 that include more triangles, and have many edges. Imagine transporting
@@ -897,15 +896,13 @@ of the paths.&lt;/p&gt;
 &lt;p&gt;Classically, curvature is a property of the connection. It is
 computed either on infinitesimal loops, or on the infinitesimal surface
 bounded by the loop. In fact it is “the derivative of the connection”
-morally speaking. Getting into the details would wreck the simplicity
-we’re going for&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;
-role=&#34;doc-noteref&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;. We will look for curvature by
-examining &lt;span class=&#34;math inline&#34;&gt;\(f\)&lt;/span&gt; on 1-dimensional loops.
-If &lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; is at least a 2-type and if we
-want to claim that &lt;span class=&#34;math inline&#34;&gt;\(f\)&lt;/span&gt; classifies a
-bundle with connection, then we will be required to map the 2-faces of
-&lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; (the 2-dimesional constructors)
-to a path from &lt;span
+morally speaking. We will look for curvature by examining &lt;span
+class=&#34;math inline&#34;&gt;\(f\)&lt;/span&gt; on 1-dimensional loops. If &lt;span
+class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; is at least a 2-type and if we want to
+claim that &lt;span class=&#34;math inline&#34;&gt;\(f\)&lt;/span&gt; classifies a bundle
+with connection, then we will be required to map the 2-faces of &lt;span
+class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; (the 2-dimesional constructors) to a
+path from &lt;span
 class=&#34;math inline&#34;&gt;\(\ensuremath{\mathsf{refl}}\)&lt;/span&gt; to the image
 of a bounding loop. So at dimension 2 we will impose that constraint.
 Since &lt;span class=&#34;math inline&#34;&gt;\(\mathrm{BAut}_1(S^1)\)&lt;/span&gt; is
@@ -1174,10 +1171,77 @@ pointing of some of the fibers. This aligns with the classical picture
 of a choice of nonzero vector at each point, except for some points
 where the vector field vanishes. We will have to omit such vanishing
 points from the domain, and so the function is a partial function.&lt;/p&gt;
-&lt;h1 data-number=&#34;5&#34;
-id=&#34;gauss-bonnet-vector-fields-and-the-poincaruxe9-hopf-theorem&#34;&gt;&lt;span
-class=&#34;header-section-number&#34;&gt;5&lt;/span&gt; Gauss-Bonnet, Vector Fields, and
-the Poincaré-Hopf Theorem&lt;/h1&gt;
+&lt;div class=&#34;mydef&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Definition 20&lt;/strong&gt;. &lt;em&gt;If &lt;span
+class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; is a combinatorial manifold and &lt;span
+class=&#34;math inline&#34;&gt;\(Z\subset M_0\)&lt;/span&gt; is a set of vertices in
+&lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; with members &lt;span
+class=&#34;math inline&#34;&gt;\(Z=\{z_0,\ldots,z_n\}\)&lt;/span&gt;, then denote by
+&lt;span class=&#34;math inline&#34;&gt;\(M\setminus Z\)&lt;/span&gt; the type given by
+omitting the vertices in &lt;span class=&#34;math inline&#34;&gt;\(Z\)&lt;/span&gt; from the
+constructors in all dimensions where they appeared. Call the points of
+&lt;span class=&#34;math inline&#34;&gt;\(Z\)&lt;/span&gt; &lt;em&gt;isolated&lt;/em&gt; if we have
+&lt;span class=&#34;math inline&#34;&gt;\(\prod_{z:Z}\mathsf{link}(z)\cap
+Z=\emptyset\)&lt;/span&gt;. In the isolated case &lt;span
+class=&#34;math inline&#34;&gt;\(M\setminus Z\)&lt;/span&gt; has boundary circles where
+each vertex was removed.&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;mydef&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Definition 21&lt;/strong&gt;. &lt;em&gt;Let &lt;span
+class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; be a combinatorial manifold and &lt;span
+class=&#34;math inline&#34;&gt;\(Z\)&lt;/span&gt; an isolated set of vertices. A
+&lt;em&gt;vector field on &lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; with zero set
+&lt;span class=&#34;math inline&#34;&gt;\(Z\)&lt;/span&gt;&lt;/em&gt; is a partial section of
+&lt;span class=&#34;math inline&#34;&gt;\(P\)&lt;/span&gt;, i.e. a term &lt;span
+class=&#34;math inline&#34;&gt;\(X:\prod_{x:M\setminus Z}T(x)\)&lt;/span&gt;. The
+&lt;em&gt;exponential map&lt;/em&gt; &lt;span class=&#34;math inline&#34;&gt;\(\exp:P\to
+M\)&lt;/span&gt; is the map sending points in a fiber to the corresponding
+point in the link of the base point: &lt;span class=&#34;math inline&#34;&gt;\(\exp(x,
+y:\mathsf{link}(x))=y\)&lt;/span&gt;. In diagram form we have:&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Note that &lt;span class=&#34;math inline&#34;&gt;\(\exp\)&lt;/span&gt; is different from
+&lt;span class=&#34;math inline&#34;&gt;\(\ensuremath{\mathrm{pr}}_1\)&lt;/span&gt; since it
+spreads a fiber out onto the manifold. The composition &lt;span
+class=&#34;math inline&#34;&gt;\(\exp\circ X\)&lt;/span&gt; is a map &lt;span
+class=&#34;math inline&#34;&gt;\(M\setminus Z\to M\)&lt;/span&gt;, and can be thought of
+as the flow of the vector field. It can be extended to a map &lt;span
+class=&#34;math inline&#34;&gt;\(M\to M\)&lt;/span&gt; by taking the identity map on
+&lt;span class=&#34;math inline&#34;&gt;\(Z\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;The vector field &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; is a map on
+all dimensions of &lt;span class=&#34;math inline&#34;&gt;\(M\setminus Z\)&lt;/span&gt;, not
+just the vertices. HoTT tells us that &lt;span
+class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; also selects an “edgeover” for each
+edge, and “faceover” for each face. And these can be composed, so that
+we have an entire 2-groupoid &lt;span class=&#34;math inline&#34;&gt;\(X(M\setminus
+Z)\)&lt;/span&gt; inside &lt;span class=&#34;math inline&#34;&gt;\(P\)&lt;/span&gt;. If &lt;span
+class=&#34;math inline&#34;&gt;\(e_{12}:v_1=_M v_2\)&lt;/span&gt; then &lt;span
+class=&#34;math inline&#34;&gt;\(X(e_{12}):\mathrm{tr}_{e_{12}}(X(v_1))=X(v_2)\)&lt;/span&gt;,
+which is a path in &lt;span class=&#34;math inline&#34;&gt;\(T(v_2)\)&lt;/span&gt; that ends
+at the selected point &lt;span
+class=&#34;math inline&#34;&gt;\(X(v_2):T(v_2)\)&lt;/span&gt;. The same goes for loops:
+given a loop &lt;span class=&#34;math inline&#34;&gt;\(\ell:v_1=_M v_1\)&lt;/span&gt; we
+have &lt;span
+class=&#34;math inline&#34;&gt;\(X(\ell):\mathrm{tr}_\ell(X(v_1))=X(v_2)\)&lt;/span&gt;,
+a path ending at &lt;span class=&#34;math inline&#34;&gt;\(X(v_2):T(v_2)\)&lt;/span&gt;. It
+doesn’t need to be a loop upstairs but it might be. Of course we always
+have &lt;span
+class=&#34;math inline&#34;&gt;\(X(\ensuremath{\mathsf{refl}}_{v})=\ensuremath{\mathsf{refl}}(X(v))\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Faceovers are paths from &lt;span
+class=&#34;math inline&#34;&gt;\(\ensuremath{\mathsf{refl}}_{X(v)}\)&lt;/span&gt; to a
+path &lt;span class=&#34;math inline&#34;&gt;\(a=X(v)\)&lt;/span&gt; in some fiber &lt;span
+class=&#34;math inline&#34;&gt;\(T(v)\)&lt;/span&gt;. This amounts to contracting the
+endpoint &lt;span class=&#34;math inline&#34;&gt;\(a\)&lt;/span&gt; back to &lt;span
+class=&#34;math inline&#34;&gt;\(X(v)\)&lt;/span&gt; along the path, like a tape measure.
+In so doing we have squeezed a face of the manifold into the polygonal
+fiber &lt;span class=&#34;math inline&#34;&gt;\(X(v)\)&lt;/span&gt;.&lt;/p&gt;
+&lt;div class=&#34;mydef&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Definition 22&lt;/strong&gt;. &lt;em&gt;The &lt;em&gt;index&lt;/em&gt; of &lt;span
+class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; is the winding number of
+something.&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;h1 data-number=&#34;5&#34; id=&#34;gauss-bonnet-poincaruxe9-hopf-leibniz&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;5&lt;/span&gt; Gauss-Bonnet, Poincaré-Hopf,
+Leibniz&lt;/h1&gt;
 &lt;h2 data-number=&#34;5.1&#34; id=&#34;the-leibniz-product-rule&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;5.1&lt;/span&gt; The Leibniz (product) rule&lt;/h2&gt;
 &lt;p&gt;The Leibniz rule for exterior differentiation states that if &lt;span
@@ -1301,15 +1365,6 @@ class=&#34;math inline&#34;&gt;\(C^1\)&lt;/span&gt;&lt;/span&gt;-complexes. &lt;
 Mathematics&lt;/em&gt;, 809–824.
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;section id=&#34;footnotes&#34; class=&#34;footnotes footnotes-end-of-document&#34;
-role=&#34;doc-endnotes&#34;&gt;
-&lt;hr /&gt;
-&lt;ol&gt;
-&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;I’m picking and choosing where to tell the story fully
-twice (see the next section) and where to simply look for motivation.&lt;a
-href=&#34;#fnref1&#34; class=&#34;footnote-back&#34; role=&#34;doc-backlink&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/section&gt;
 &lt;/body&gt;
 &lt;/html&gt;
 </description>
