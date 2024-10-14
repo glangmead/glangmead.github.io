@@ -98,37 +98,40 @@ class=&#34;toc-section-number&#34;&gt;2.2&lt;/span&gt; Pathovers&lt;/a&gt;&lt;/l
 id=&#34;toc-combinatorial-manifolds&#34;&gt;&lt;span
 class=&#34;toc-section-number&#34;&gt;3&lt;/span&gt; Combinatorial manifolds&lt;/a&gt;
 &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#higher-simplicial-complexes&#34;
+id=&#34;toc-higher-simplicial-complexes&#34;&gt;&lt;span
+class=&#34;toc-section-number&#34;&gt;3.1&lt;/span&gt; Higher simplicial
+complexes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#polygons&#34; id=&#34;toc-polygons&#34;&gt;&lt;span
+class=&#34;toc-section-number&#34;&gt;3.2&lt;/span&gt; Polygons&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#the-higher-inductive-type-oo&#34;
 id=&#34;toc-the-higher-inductive-type-oo&#34;&gt;&lt;span
-class=&#34;toc-section-number&#34;&gt;3.1&lt;/span&gt; The higher inductive type &lt;span
-class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{O}}\)&lt;/span&gt;&lt;/a&gt;
-&lt;ul&gt;
+class=&#34;toc-section-number&#34;&gt;3.3&lt;/span&gt; The higher inductive type &lt;span
+class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{O}}\)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#the-function-link&#34; id=&#34;toc-the-function-link&#34;&gt;&lt;span
-class=&#34;toc-section-number&#34;&gt;3.1.1&lt;/span&gt; The function &lt;span
+class=&#34;toc-section-number&#34;&gt;3.4&lt;/span&gt; The function &lt;span
 class=&#34;math inline&#34;&gt;\(\mathsf{link}\)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#the-torus&#34; id=&#34;toc-the-torus&#34;&gt;&lt;span
-class=&#34;toc-section-number&#34;&gt;3.2&lt;/span&gt; The torus&lt;/a&gt;&lt;/li&gt;
+class=&#34;toc-section-number&#34;&gt;3.5&lt;/span&gt; The torus&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#higher-geometry&#34; id=&#34;toc-higher-geometry&#34;&gt;&lt;span
 class=&#34;toc-section-number&#34;&gt;4&lt;/span&gt; Higher geometry&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#higher-maps-contain-connections&#34;
-id=&#34;toc-higher-maps-contain-connections&#34;&gt;&lt;span
-class=&#34;toc-section-number&#34;&gt;4.1&lt;/span&gt; Higher maps contain
-connections&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#connections&#34; id=&#34;toc-connections&#34;&gt;&lt;span
+class=&#34;toc-section-number&#34;&gt;4.1&lt;/span&gt; Connections&lt;/a&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#connections-as-splittings&#34;
 id=&#34;toc-connections-as-splittings&#34;&gt;&lt;span
-class=&#34;toc-section-number&#34;&gt;4.2&lt;/span&gt; Connections as splittings&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#the-leibniz-product-rule&#34;
-id=&#34;toc-the-leibniz-product-rule&#34;&gt;&lt;span
-class=&#34;toc-section-number&#34;&gt;4.3&lt;/span&gt; The Leibniz (product)
-rule&lt;/a&gt;&lt;/li&gt;
+class=&#34;toc-section-number&#34;&gt;4.1.1&lt;/span&gt; Connections as
+splittings&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#covering-spaces&#34; id=&#34;toc-covering-spaces&#34;&gt;&lt;span
-class=&#34;toc-section-number&#34;&gt;4.4&lt;/span&gt; Covering spaces&lt;/a&gt;&lt;/li&gt;
+class=&#34;toc-section-number&#34;&gt;4.1.2&lt;/span&gt; Covering spaces&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#gauge-transformations&#34;
 id=&#34;toc-gauge-transformations&#34;&gt;&lt;span
-class=&#34;toc-section-number&#34;&gt;4.5&lt;/span&gt; Gauge transformations&lt;/a&gt;&lt;/li&gt;
+class=&#34;toc-section-number&#34;&gt;4.1.3&lt;/span&gt; Gauge transformations&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#vector-fields&#34; id=&#34;toc-vector-fields&#34;&gt;&lt;span
+class=&#34;toc-section-number&#34;&gt;4.2&lt;/span&gt; Vector fields&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a
 href=&#34;#gauss-bonnet-vector-fields-and-the-poincaruxe9-hopf-theorem&#34;
@@ -136,13 +139,10 @@ id=&#34;toc-gauss-bonnet-vector-fields-and-the-poincaruxe9-hopf-theorem&#34;&gt;
 class=&#34;toc-section-number&#34;&gt;5&lt;/span&gt; Gauss-Bonnet, Vector Fields, and the
 Poincaré-Hopf Theorem&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#discrete-vector-fields&#34;
-id=&#34;toc-discrete-vector-fields&#34;&gt;&lt;span
-class=&#34;toc-section-number&#34;&gt;5.1&lt;/span&gt; Discrete vector fields&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#the-index-of-a-fixed-point&#34;
-id=&#34;toc-the-index-of-a-fixed-point&#34;&gt;&lt;span
-class=&#34;toc-section-number&#34;&gt;5.2&lt;/span&gt; The index of a fixed
-point&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#the-leibniz-product-rule&#34;
+id=&#34;toc-the-leibniz-product-rule&#34;&gt;&lt;span
+class=&#34;toc-section-number&#34;&gt;5.1&lt;/span&gt; The Leibniz (product)
+rule&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/nav&gt;
@@ -354,7 +354,7 @@ and a pathover &lt;span
 class=&#34;math inline&#34;&gt;\(p&amp;#39;:\mathrm{tr}_p(x&amp;#39;)=_{T(y)}y&amp;#39;\)&lt;/span&gt;
 between &lt;span class=&#34;math inline&#34;&gt;\(x&amp;#39;:T(x)\)&lt;/span&gt; and &lt;span
 class=&#34;math inline&#34;&gt;\(y&amp;#39;:T(y)\)&lt;/span&gt; in the fibers. We can’t
-directl compare &lt;span class=&#34;math inline&#34;&gt;\(x&amp;#39;\)&lt;/span&gt; and &lt;span
+directly compare &lt;span class=&#34;math inline&#34;&gt;\(x&amp;#39;\)&lt;/span&gt; and &lt;span
 class=&#34;math inline&#34;&gt;\(y&amp;#39;\)&lt;/span&gt; since they are of different types,
 so we apply transport to one of them (which is asymmetrical, but
 equivalent to the alternatives). We say &lt;span
@@ -373,9 +373,27 @@ class=&#34;header-section-number&#34;&gt;3&lt;/span&gt; Combinatorial manifolds&
 the classical construction of &lt;em&gt;combinatorial manifolds&lt;/em&gt;. See for
 example the classic book by Kirby and Siebenmann&lt;span class=&#34;citation&#34;
 data-cites=&#34;kirby_siebenmann&#34;&gt; (&lt;a href=&#34;#ref-kirby_siebenmann&#34;
-role=&#34;doc-biblioref&#34;&gt;Kirby &amp;amp; Siebenmann, 1977&lt;/a&gt;)&lt;/span&gt;.&lt;/p&gt;
+role=&#34;doc-biblioref&#34;&gt;Kirby &amp;amp; Siebenmann, 1977&lt;/a&gt;)&lt;/span&gt;. These are
+a subclass of simplicial complexes.&lt;/p&gt;
 &lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 4&lt;/strong&gt;. &lt;em&gt;In an abstract simplicial complex
+&lt;p&gt;&lt;strong&gt;Definition 4&lt;/strong&gt;. &lt;em&gt;An &lt;em&gt;abstract simplicial
+complex&lt;/em&gt; &lt;span class=&#34;math inline&#34;&gt;\(S\)&lt;/span&gt; consists of a set
+&lt;span class=&#34;math inline&#34;&gt;\(S_0\)&lt;/span&gt; of vertices, and for each &lt;span
+class=&#34;math inline&#34;&gt;\(k&amp;gt;0\)&lt;/span&gt; a set &lt;span
+class=&#34;math inline&#34;&gt;\(S_k\)&lt;/span&gt; of subsets of &lt;span
+class=&#34;math inline&#34;&gt;\(S_0\)&lt;/span&gt; of cardinality &lt;span
+class=&#34;math inline&#34;&gt;\(k+1\)&lt;/span&gt;, such that any &lt;span
+class=&#34;math inline&#34;&gt;\((j+1)\)&lt;/span&gt;-element subset of &lt;span
+class=&#34;math inline&#34;&gt;\(S_k\)&lt;/span&gt; is an element of &lt;span
+class=&#34;math inline&#34;&gt;\(S_j\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Note that we don’t require all subsets of &lt;span
+class=&#34;math inline&#34;&gt;\(S_0\)&lt;/span&gt; to be included – that would make
+&lt;span class=&#34;math inline&#34;&gt;\(S\)&lt;/span&gt; an individual simplex. A
+simplicial complex is a family of simplices that are identified along
+various faces.&lt;/p&gt;
+&lt;div class=&#34;mydef&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Definition 5&lt;/strong&gt;. &lt;em&gt;In an abstract simplicial complex
 &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt;, the &lt;em&gt;link&lt;/em&gt; of a vertex
 &lt;span class=&#34;math inline&#34;&gt;\(v\)&lt;/span&gt; is the set containing every face
 &lt;span class=&#34;math inline&#34;&gt;\(f\in X\)&lt;/span&gt; such that &lt;span
@@ -384,7 +402,7 @@ class=&#34;math inline&#34;&gt;\(f\cup v\)&lt;/span&gt; is a face of &lt;span
 class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 5&lt;/strong&gt;. &lt;em&gt;A &lt;em&gt;combinatorial manfiold&lt;/em&gt;
+&lt;p&gt;&lt;strong&gt;Definition 6&lt;/strong&gt;. &lt;em&gt;A &lt;em&gt;combinatorial manfiold&lt;/em&gt;
 (or &lt;em&gt;combinatorial triangulation&lt;/em&gt;) of dimension &lt;span
 class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; is a simplicial complex of dimension
 &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; such that the link of every
@@ -402,13 +420,53 @@ class=&#34;citation&#34; data-cites=&#34;whitehead_triangulation&#34;&gt; (&lt;a
 href=&#34;#ref-whitehead_triangulation&#34; role=&#34;doc-biblioref&#34;&gt;Whitehead,
 1940&lt;/a&gt;)&lt;/span&gt;. So it appears reasonably well motivated to study this
 class of objects.&lt;/p&gt;
+&lt;figure id=&#34;fig:torus_wiki_triangulation&#34;&gt;
+&lt;img src=&#34;Torus-triang.png&#34; style=&#34;width:2.77778in&#34; /&gt;
+&lt;figcaption&gt;A torus with an interesting triangulation, from Wikipedia.
+The links have various vertex counts from 5-7. Clearly a constant value
+of 6 would also work. (By Ag2gaeh - Own work, CC BY-SA 3.0,
+https://commons.wikimedia.org/w/index.php?curid=30856793)&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;h2 data-number=&#34;3.1&#34; id=&#34;higher-simplicial-complexes&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;3.1&lt;/span&gt; Higher simplicial
+complexes&lt;/h2&gt;
 &lt;p&gt;To convert a simplicial complex to a higher inductive type, we will
-simply convert the data in each classical dimension to a path
-constructor of the corresponding HoTT dimension. We will begin with a
-type that is important both for the domain and the codomain of mere
-circles: a square.&lt;/p&gt;
+convert the data in each classical dimension to a path constructor of
+the corresponding HoTT dimension. In order to specify the directionality
+of all the edges and faces, we need to first choose an ordering for each
+set in &lt;span class=&#34;math inline&#34;&gt;\(S\)&lt;/span&gt;:&lt;/p&gt;
 &lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 6&lt;/strong&gt;. &lt;em&gt;The higher inductive type &lt;span
+&lt;p&gt;&lt;strong&gt;Definition 7&lt;/strong&gt;. &lt;em&gt;The higher inductive type &lt;span
+class=&#34;math inline&#34;&gt;\(S&amp;#39;\)&lt;/span&gt; corresponding to the abstract
+simplicial complex &lt;span class=&#34;math inline&#34;&gt;\(S\)&lt;/span&gt; is given
+by&lt;/em&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;choosing an order for the elements of each &lt;span
+class=&#34;math inline&#34;&gt;\(S_k\)&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;vertices: a function &lt;span
+class=&#34;math inline&#34;&gt;\(\mathsf{v_0}:S_0\to S&amp;#39;\)&lt;/span&gt; serving as the
+0-dimensional constructors&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;edges: a function &lt;span
+class=&#34;math inline&#34;&gt;\(\mathsf{v_1}:S_1\to S&amp;#39;\)&lt;/span&gt; sending &lt;span
+class=&#34;math inline&#34;&gt;\(\{a, b\}\mapsto
+\mathsf{v_0}(a)=\mathsf{v_0}(b)\)&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;at dimension &lt;span class=&#34;math inline&#34;&gt;\(k\)&lt;/span&gt;, if &lt;span
+class=&#34;math inline&#34;&gt;\(S_k=\{S_{k1},\ldots,S_{kn}\}\)&lt;/span&gt;, a path from
+&lt;span class=&#34;math inline&#34;&gt;\(\ensuremath{\mathsf{refl}}_{S_{k1}}\)&lt;/span&gt;
+to the concatenation &lt;span
+class=&#34;math inline&#34;&gt;\(\mathsf{v_{k-1}}(S_{k1})\cdot\mathsf{v_{k-1}}(S_{k2})\cdot\cdots\cdot\mathsf{v_{k-1}}(S_{kn}))\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;p&gt;Classical constructions such as face maps, degeneracy maps, and
+boundary will not be needed since homotopy type theory provides related
+tools (&lt;span class=&#34;math inline&#34;&gt;\(\ensuremath{\mathsf{refl}}\)&lt;/span&gt;,
+groupoid operations). Now for some examples.&lt;/p&gt;
+&lt;h2 data-number=&#34;3.2&#34; id=&#34;polygons&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;3.2&lt;/span&gt; Polygons&lt;/h2&gt;
+&lt;p&gt;We will begin with a type that is important both for the domain and
+the codomain of mere circles: a square.&lt;/p&gt;
+&lt;div class=&#34;mydef&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Definition 8&lt;/strong&gt;. &lt;em&gt;The higher inductive type &lt;span
 class=&#34;math inline&#34;&gt;\(C_4\)&lt;/span&gt; (where C stands for “circle”). &lt;span
 class=&#34;math display&#34;&gt;\[\begin{aligned}
 C_4 &amp;amp;: \mathsf{Type}\\
@@ -429,7 +487,7 @@ join of the two-element sets &lt;span class=&#34;math inline&#34;&gt;\(\{c_1, c_
 \{c_2, c_4\}\)&lt;/span&gt;. The circle itself is a non-example since it lacks
 the second vertex of the edge:&lt;/p&gt;
 &lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 7&lt;/strong&gt;. &lt;em&gt;The higher inductive type &lt;span
+&lt;p&gt;&lt;strong&gt;Definition 9&lt;/strong&gt;. &lt;em&gt;The higher inductive type &lt;span
 class=&#34;math inline&#34;&gt;\(S^1\)&lt;/span&gt;: &lt;span
 class=&#34;math display&#34;&gt;\[\begin{aligned}
 S^1&amp;amp;:\mathsf{Type}\\
@@ -453,15 +511,15 @@ different choices of vertex.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Corollary 2&lt;/strong&gt;. &lt;em&gt;We have &lt;span
 class=&#34;math inline&#34;&gt;\((C_4,||\ell||_{-1}):\mathrm{EM}(\ensuremath{\mathbb{Z}},1).\)&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;h2 data-number=&#34;3.1&#34; id=&#34;the-higher-inductive-type-oo&#34;&gt;&lt;span
-class=&#34;header-section-number&#34;&gt;3.1&lt;/span&gt; The higher inductive type &lt;span
+&lt;h2 data-number=&#34;3.3&#34; id=&#34;the-higher-inductive-type-oo&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;3.3&lt;/span&gt; The higher inductive type &lt;span
 class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{O}}\)&lt;/span&gt;&lt;/h2&gt;
 &lt;p&gt;We will create our first combinatorial manifold, a 2-sphere. We will
 adopt the convention that a subscript indicates the dimension of a
 subskeleton of a complex. For instance, we have &lt;span
 class=&#34;math inline&#34;&gt;\(\mathsf{base}:S^1_0\)&lt;/span&gt;.&lt;/p&gt;
 &lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 8&lt;/strong&gt;. &lt;em&gt;The HIT &lt;span
+&lt;p&gt;&lt;strong&gt;Definition 10&lt;/strong&gt;. &lt;em&gt;The HIT &lt;span
 class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{O}}_0\)&lt;/span&gt; is just 6
 points, intended as the 0-skeleton of an octahedron, with vertices named
 after the colors on the faces of a puzzle cube. &lt;span
@@ -469,7 +527,7 @@ class=&#34;math display&#34;&gt;\[w, y, b, r, g, o :
 \ensuremath{\mathbb{O}}_0\]&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 9&lt;/strong&gt;. &lt;em&gt;The HIT &lt;span
+&lt;p&gt;&lt;strong&gt;Definition 11&lt;/strong&gt;. &lt;em&gt;The HIT &lt;span
 class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{O}}_1\)&lt;/span&gt; is the
 1-skeleton of an octahedron. &lt;span
 class=&#34;math display&#34;&gt;\[\begin{aligned}
@@ -483,7 +541,7 @@ yr &amp;amp;: y=r
 \end{aligned}\]&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 10&lt;/strong&gt;. &lt;em&gt;The HIT &lt;span
+&lt;p&gt;&lt;strong&gt;Definition 12&lt;/strong&gt;. &lt;em&gt;The HIT &lt;span
 class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{O}}\)&lt;/span&gt; is an octahedron:
 &lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
 w, y, b, r, g, o &amp;amp;: \ensuremath{\mathbb{O}}\\
@@ -516,12 +574,12 @@ class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{O}}_0\xrightarrow[]{i_0}
 \ensuremath{\mathbb{O}}_1\xrightarrow[]{i_1}
 \ensuremath{\mathbb{O}}\)&lt;/span&gt; that include each skeleton into the
 next-higher-dimensional skeleton.&lt;/p&gt;
-&lt;h3 data-number=&#34;3.1.1&#34; id=&#34;the-function-link&#34;&gt;&lt;span
-class=&#34;header-section-number&#34;&gt;3.1.1&lt;/span&gt; The function &lt;span
-class=&#34;math inline&#34;&gt;\(\mathsf{link}\)&lt;/span&gt;&lt;/h3&gt;
+&lt;h2 data-number=&#34;3.4&#34; id=&#34;the-function-link&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;3.4&lt;/span&gt; The function &lt;span
+class=&#34;math inline&#34;&gt;\(\mathsf{link}\)&lt;/span&gt;&lt;/h2&gt;
 &lt;p&gt;Taking the link of a vertex gives us a map to the universe.&lt;/p&gt;
 &lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 11&lt;/strong&gt;. &lt;em&gt;&lt;span
+&lt;p&gt;&lt;strong&gt;Definition 13&lt;/strong&gt;. &lt;em&gt;&lt;span
 class=&#34;math inline&#34;&gt;\(\mathsf{link}:\ensuremath{\mathbb{O}}_0\to\mathrm{BAut}C_4\)&lt;/span&gt;
 is given by induction: &lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
 \mathsf{link}(w) &amp;amp;= brgo &amp;amp; \mathsf{link}(r) &amp;amp;= wbyg \\
@@ -552,7 +610,7 @@ of rotation. Then &lt;span class=&#34;math inline&#34;&gt;\(g\mapsto w\)&lt;/spa
 &lt;span class=&#34;math inline&#34;&gt;\(b\mapsto y\)&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;The full map on the 1-skeleton is:&lt;/p&gt;
 &lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 12&lt;/strong&gt;. &lt;em&gt;Define &lt;span
+&lt;p&gt;&lt;strong&gt;Definition 14&lt;/strong&gt;. &lt;em&gt;Define &lt;span
 class=&#34;math inline&#34;&gt;\(T_1:\ensuremath{\mathbb{O}}_1\to\mathrm{BAut}C_4\)&lt;/span&gt;
 on just the 1-skeleton by extending &lt;span
 class=&#34;math inline&#34;&gt;\(\mathsf{link}\)&lt;/span&gt; as follows: Transport away
@@ -599,13 +657,13 @@ class=&#34;math inline&#34;&gt;\(T_1\)&lt;/span&gt; does to triangular paths suc
 circulates around the boundary of face &lt;span
 class=&#34;math inline&#34;&gt;\(wbr\)&lt;/span&gt;). You can see it if you imagine
 Figure &lt;a href=&#34;#fig:triangle_of_equators&#34; data-reference-type=&#34;ref&#34;
-data-reference=&#34;fig:triangle_of_equators&#34;&gt;1&lt;/a&gt; as the frames of a short
+data-reference=&#34;fig:triangle_of_equators&#34;&gt;2&lt;/a&gt; as the frames of a short
 movie. Or you can place your palm over the top of a cube and note where
 your fingers are pointing, then slide your hand to an equatorial face,
 then along the equator, then back to the top. The answer is: you come
 back rotated clockwise by a quarter-turn.&lt;/p&gt;
 &lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 13&lt;/strong&gt;. &lt;em&gt;The map &lt;span
+&lt;p&gt;&lt;strong&gt;Definition 15&lt;/strong&gt;. &lt;em&gt;The map &lt;span
 class=&#34;math inline&#34;&gt;\(R:C_4\to C_4\)&lt;/span&gt; rotates by one quarter turn,
 one “click&#34;:&lt;/em&gt;&lt;/p&gt;
 &lt;div class=&#34;multicols&#34;&gt;
@@ -642,7 +700,7 @@ homotopy from &lt;span
 class=&#34;math inline&#34;&gt;\(\ensuremath{\mathsf{refl}}_{T_1(w)}\)&lt;/span&gt; to
 &lt;span class=&#34;math inline&#34;&gt;\(T_1(wb\cdot br\cdot rw)\)&lt;/span&gt;.&lt;/p&gt;
 &lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 14&lt;/strong&gt;. &lt;em&gt;Define &lt;span
+&lt;p&gt;&lt;strong&gt;Definition 16&lt;/strong&gt;. &lt;em&gt;Define &lt;span
 class=&#34;math inline&#34;&gt;\(T_2:\ensuremath{\mathbb{O}}\to\mathrm{BAut}C_4\)&lt;/span&gt;
 by extending &lt;span class=&#34;math inline&#34;&gt;\(T_1\)&lt;/span&gt; to the faces as
 follows:&lt;/em&gt;&lt;/p&gt;
@@ -676,26 +734,26 @@ identity and clockwise rotation by a quarter turn. Concatenating the
 eight faces in the 2-groupoid &lt;span
 class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{O}}\)&lt;/span&gt; would then map to
 a homotopy between the identity and two full rotations. This makes
-visible in HoTT the link between curvature and the euler characteristic
+visible in HoTT the link between curvature and the Euler characteristic
 (which is 2 for the octahedron).&lt;/p&gt;
-&lt;h2 data-number=&#34;3.2&#34; id=&#34;the-torus&#34;&gt;&lt;span
-class=&#34;header-section-number&#34;&gt;3.2&lt;/span&gt; The torus&lt;/h2&gt;
+&lt;h2 data-number=&#34;3.5&#34; id=&#34;the-torus&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;3.5&lt;/span&gt; The torus&lt;/h2&gt;
 &lt;p&gt;We can define a combinatorial torus as a similar HIT. This time each
 vertex will have six neighbors. So all the links will be merely equal to
 &lt;span class=&#34;math inline&#34;&gt;\(C_6\)&lt;/span&gt; which is a hexagonal version of
 &lt;span class=&#34;math inline&#34;&gt;\(C_4\)&lt;/span&gt;. See Figure &lt;a
 href=&#34;#fig:torus&#34; data-reference-type=&#34;ref&#34;
-data-reference=&#34;fig:torus&#34;&gt;2&lt;/a&gt;.&lt;/p&gt;
+data-reference=&#34;fig:torus&#34;&gt;3&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;To help parse this figure, imagine instead Figure &lt;a
 href=&#34;#fig:flattorus&#34; data-reference-type=&#34;ref&#34;
-data-reference=&#34;fig:flattorus&#34;&gt;3&lt;/a&gt;. We take this simple
+data-reference=&#34;fig:flattorus&#34;&gt;4&lt;/a&gt;. We take this simple
 alternating-triangle pattern, then glue the left and right edges, then
 bend into Figure &lt;a href=&#34;#fig:torus&#34; data-reference-type=&#34;ref&#34;
-data-reference=&#34;fig:torus&#34;&gt;2&lt;/a&gt;. The fact that each column in Figure &lt;a
+data-reference=&#34;fig:torus&#34;&gt;3&lt;/a&gt;. The fact that each column in Figure &lt;a
 href=&#34;#fig:flattorus&#34; data-reference-type=&#34;ref&#34;
-data-reference=&#34;fig:flattorus&#34;&gt;3&lt;/a&gt; has four dots corresponds to the
+data-reference=&#34;fig:flattorus&#34;&gt;4&lt;/a&gt; has four dots corresponds to the
 torus in Figure &lt;a href=&#34;#fig:torus&#34; data-reference-type=&#34;ref&#34;
-data-reference=&#34;fig:torus&#34;&gt;2&lt;/a&gt; having a square in front, diamonds in
+data-reference=&#34;fig:torus&#34;&gt;3&lt;/a&gt; having a square in front, diamonds in
 the middle, and a square in back.&lt;/p&gt;
 &lt;figure id=&#34;fig:torus&#34;&gt;
 &lt;img src=&#34;./0087b249788a090ea395f319a1aa6bb257b59103.png&#34; /&gt;
@@ -748,7 +806,7 @@ concept with standalone meaning since the hexagons are torsors. I’m
 impicitly using the flat torus to makes the hexagons all pointed, by
 pointing them at the top as they appear in Figure &lt;a
 href=&#34;#fig:flattorus&#34; data-reference-type=&#34;ref&#34;
-data-reference=&#34;fig:flattorus&#34;&gt;3&lt;/a&gt;. But let’s not use that extra
+data-reference=&#34;fig:flattorus&#34;&gt;4&lt;/a&gt;. But let’s not use that extra
 information, and instead let’s start talking about loops around
 faces.&lt;/p&gt;
 &lt;figure id=&#34;fig:dense_circle&#34;&gt;
@@ -785,9 +843,8 @@ contractible loops is } \ensuremath{\mathsf{refl}}\\
 &amp;amp; \text{\small automorphisms) acts on the space of connections.}
 &amp;amp; \quad&amp;amp;\text{\small the splitting of paths in sigma types.} \\
 \end{aligned}\]&lt;/span&gt;&lt;/p&gt;
-&lt;h2 data-number=&#34;4.1&#34; id=&#34;higher-maps-contain-connections&#34;&gt;&lt;span
-class=&#34;header-section-number&#34;&gt;4.1&lt;/span&gt; Higher maps contain
-connections&lt;/h2&gt;
+&lt;h2 data-number=&#34;4.1&#34; id=&#34;connections&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;4.1&lt;/span&gt; Connections&lt;/h2&gt;
 &lt;p&gt;To hew close to the intended context of the term “connection” we will
 examine manifold-like types mapping into bundle-classifying-like types.
 The novelty here, compared to other HoTT investigations, is the focus on
@@ -857,11 +914,12 @@ truncation map &lt;span class=&#34;math inline&#34;&gt;\(M\to||M||_2\)&lt;/span&
 that’s the top dimension.&lt;/p&gt;
 &lt;p&gt;There is an example at the end of this paper. For those who are best
 served by examples, do look at it and return to this point.&lt;/p&gt;
-&lt;h2 data-number=&#34;4.2&#34; id=&#34;connections-as-splittings&#34;&gt;&lt;span
-class=&#34;header-section-number&#34;&gt;4.2&lt;/span&gt; Connections as splittings&lt;/h2&gt;
+&lt;h3 data-number=&#34;4.1.1&#34; id=&#34;connections-as-splittings&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;4.1.1&lt;/span&gt; Connections as
+splittings&lt;/h3&gt;
 &lt;p&gt;The classical story goes like this.&lt;/p&gt;
 &lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 15&lt;/strong&gt;. &lt;em&gt;The &lt;em&gt;vertical bundle&lt;/em&gt;
+&lt;p&gt;&lt;strong&gt;Definition 17&lt;/strong&gt;. &lt;em&gt;The &lt;em&gt;vertical bundle&lt;/em&gt;
 &lt;span class=&#34;math inline&#34;&gt;\(VP\)&lt;/span&gt; of a principal bundle &lt;span
 class=&#34;math inline&#34;&gt;\(\pi:P\to M\)&lt;/span&gt; with Lie group &lt;span
 class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; is the kernel of the derivative &lt;span
@@ -876,7 +934,7 @@ class=&#34;math inline&#34;&gt;\(V_pP\)&lt;/span&gt; to &lt;span
 class=&#34;math inline&#34;&gt;\(V_{\phi(p)}P\)&lt;/span&gt;, where of course &lt;span
 class=&#34;math inline&#34;&gt;\(\pi(p)=\pi(\phi(p))\)&lt;/span&gt;.&lt;/p&gt;
 &lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 16&lt;/strong&gt;. &lt;em&gt;An &lt;em&gt;Ehresmann connection&lt;/em&gt;
+&lt;p&gt;&lt;strong&gt;Definition 18&lt;/strong&gt;. &lt;em&gt;An &lt;em&gt;Ehresmann connection&lt;/em&gt;
 on a principal bundle &lt;span class=&#34;math inline&#34;&gt;\(\pi:P\to M\)&lt;/span&gt;
 with Lie group &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; is a splitting
 &lt;span class=&#34;math inline&#34;&gt;\(TP=VP\oplus HP\)&lt;/span&gt; at every point of
@@ -920,7 +978,7 @@ y}\mathrm{tr}(p):f(x)=f(y)\)&lt;/span&gt;. We can use this to define a type of
 &lt;em&gt;dependent paths&lt;/em&gt;, also called &lt;em&gt;pathovers&lt;/em&gt; or &lt;em&gt;paths
 over&lt;/em&gt; a given path.&lt;/p&gt;
 &lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 17&lt;/strong&gt;. &lt;em&gt;With the above context and points
+&lt;p&gt;&lt;strong&gt;Definition 19&lt;/strong&gt;. &lt;em&gt;With the above context and points
 &lt;span class=&#34;math inline&#34;&gt;\(a:f(x), b:f(y)\)&lt;/span&gt; the type of
 &lt;em&gt;dependent paths over &lt;span class=&#34;math inline&#34;&gt;\(p\)&lt;/span&gt;&lt;/em&gt;
 with endpoints &lt;span class=&#34;math inline&#34;&gt;\(a, b\)&lt;/span&gt; is denoted
@@ -960,80 +1018,8 @@ class=&#34;math inline&#34;&gt;\(\omega\stackrel{\mathrm{def}}{=}\ensuremath{\ma
 the projection onto the vertical component. And thus in HoTT we can see
 the equivalence of transport and lifting of paths into horizontal and
 vertical components.&lt;/p&gt;
-&lt;h2 data-number=&#34;4.3&#34; id=&#34;the-leibniz-product-rule&#34;&gt;&lt;span
-class=&#34;header-section-number&#34;&gt;4.3&lt;/span&gt; The Leibniz (product) rule&lt;/h2&gt;
-&lt;p&gt;The Leibniz rule for exterior differentiation states that if &lt;span
-class=&#34;math inline&#34;&gt;\(f, g:M\to \ensuremath{\mathbb{R}}\)&lt;/span&gt; are two
-smooth functions to the real numbers then &lt;span
-class=&#34;math inline&#34;&gt;\(d(fg) = fdg + gdf\)&lt;/span&gt;. Here &lt;span
-class=&#34;math inline&#34;&gt;\(fg\)&lt;/span&gt; is the function formed by taking the
-pointwise product of &lt;span class=&#34;math inline&#34;&gt;\(f\)&lt;/span&gt; and &lt;span
-class=&#34;math inline&#34;&gt;\(g\)&lt;/span&gt;. This is an interaction between
-multiplication in &lt;span
-class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{R}}\)&lt;/span&gt; and the action on
-vectors of smooth functions (the 1-forms &lt;span
-class=&#34;math inline&#34;&gt;\(df\)&lt;/span&gt; and &lt;span
-class=&#34;math inline&#34;&gt;\(dg\)&lt;/span&gt;).&lt;/p&gt;
-&lt;p&gt;To examine this situation in HoTT we need type-theoretic functions
-&lt;span class=&#34;math inline&#34;&gt;\(f, g:M\to B\)&lt;/span&gt; from some type &lt;span
-class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; to a central H-space &lt;span
-class=&#34;math inline&#34;&gt;\(B\)&lt;/span&gt;. Let &lt;span
-class=&#34;math inline&#34;&gt;\(\mu:B\to B\to B\)&lt;/span&gt; be the H-space
-multiplication. How does &lt;span class=&#34;math inline&#34;&gt;\(\mu\)&lt;/span&gt; act on
-paths? Suppose we have &lt;span class=&#34;math inline&#34;&gt;\(a, a&amp;#39;, b,
-b&amp;#39;:B\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(p:a=_B a&amp;#39;, q:b=_B
-b&amp;#39;\)&lt;/span&gt;. Then we also have homotopies &lt;span
-class=&#34;math inline&#34;&gt;\(\mu(p, -):\mu(a, -)=_{B\to B}\mu(a&amp;#39;,
--)\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(\mu(-,q):\mu(-,b)=_{B\to
-B}\mu(-,b&amp;#39;).\)&lt;/span&gt; Since &lt;span class=&#34;math inline&#34;&gt;\(\mu(a,
--):B=B\)&lt;/span&gt; is an (unpointed) equivalence of &lt;span
-class=&#34;math inline&#34;&gt;\(B\)&lt;/span&gt;, and similarly for &lt;span
-class=&#34;math inline&#34;&gt;\(\mu(b, -)\)&lt;/span&gt; and so on, this data assembles
-into the following diagram of higher groupoid morphisms:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;./d183777157a8a3e2d296890f77fb0c2aee7abf41.png&#34;
-alt=&#34;image&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;And so the two homotopies can be horizontally composed to give a path
-&lt;span class=&#34;math display&#34;&gt;\[\mu(p,-)\star\mu(-,q): \mu(a,
-b)=\mu(a&amp;#39;,b&amp;#39;).\]&lt;/span&gt; Horizontal composition is given by &lt;span
-class=&#34;math display&#34;&gt;\[\mu(p,-)\star\mu(-,q)\stackrel{\mathrm{def}}{=}(\mu(p,-)\cdot_r
-\mu(-,b))\cdot(\mu(a&amp;#39;, -)\cdot_l\mu(-, q))\]&lt;/span&gt; where &lt;span
-class=&#34;math display&#34;&gt;\[\mu(p,-)\cdot_r\mu(-,b):\mu(a,b)=\mu(a&amp;#39;,b)\]&lt;/span&gt;
-and &lt;span
-class=&#34;math display&#34;&gt;\[\mu(a&amp;#39;,-)\cdot_l\mu(-,q):\mu(a&amp;#39;,b)=\mu(a&amp;#39;,b&amp;#39;)\]&lt;/span&gt;
-are defined by path induction. See the HoTT book Theorem 2.1.6 on the
-Eckmann-Hilton argument&lt;span class=&#34;citation&#34; data-cites=&#34;hottbook&#34;&gt; (&lt;a
-href=&#34;#ref-hottbook&#34; role=&#34;doc-biblioref&#34;&gt;Univalent Foundations Program,
-2013&lt;/a&gt;)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;We can recognize the process of using whiskering to form horizontal
-composition in the Leibniz rule.&lt;/p&gt;
-&lt;p&gt;Quick aside: moving from infinitesimal calculus to finite groupoid
-algebra actually involves two changes. The first is the change from
-vectors to paths, forms to functions and so on. But it’s also the case
-that tangent vectors have just the one basepoint, whereas paths have two
-endpoints. You can see this play out in this example, where &lt;span
-class=&#34;math inline&#34;&gt;\(a\)&lt;/span&gt; and &lt;span
-class=&#34;math inline&#34;&gt;\(a&amp;#39;\)&lt;/span&gt; were distinct points (and &lt;span
-class=&#34;math inline&#34;&gt;\(b\)&lt;/span&gt; and &lt;span
-class=&#34;math inline&#34;&gt;\(b&amp;#39;\)&lt;/span&gt;).&lt;/p&gt;
-&lt;p&gt;The horizontal composition we build lives entirely in &lt;span
-class=&#34;math inline&#34;&gt;\(B\)&lt;/span&gt; and we didn’t make use of &lt;span
-class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; yet. The Leibniz rule will be a
-pointwise version of what’s going on in &lt;span
-class=&#34;math inline&#34;&gt;\(B\)&lt;/span&gt;. Denote by &lt;span
-class=&#34;math inline&#34;&gt;\(\mu\circ(f,g):M\to B\)&lt;/span&gt; the map which sends
-&lt;span class=&#34;math inline&#34;&gt;\(x\mapsto \mu(f(x),g(x))\)&lt;/span&gt;.&lt;/p&gt;
-&lt;div class=&#34;mylemma&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Lemma 4&lt;/strong&gt;. &lt;em&gt;Given &lt;span class=&#34;math inline&#34;&gt;\(f,
-g:M\to B\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(p:x=_M y\)&lt;/span&gt; then
-&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
-\ensuremath{\mathsf{ap}}(\mu\circ(f,g))(p)&amp;amp;=\mu(f(p),-)\star\mu(-,g(p))\\
-&amp;amp;=\left[\mu(f(p),-)\cdot_r \mu(-,g(x))\right]\cdot
-\left[\mu(f(y),-)\cdot_l\mu(-,g(p))\right]\\
-&amp;amp;:\mu(f(x),g(x))=\mu(f(y),g(y))
-\end{aligned}\]&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;h2 data-number=&#34;4.4&#34; id=&#34;covering-spaces&#34;&gt;&lt;span
-class=&#34;header-section-number&#34;&gt;4.4&lt;/span&gt; Covering spaces&lt;/h2&gt;
+&lt;h3 data-number=&#34;4.1.2&#34; id=&#34;covering-spaces&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;4.1.2&lt;/span&gt; Covering spaces&lt;/h3&gt;
 &lt;p&gt;If &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; is a 0-truncated group such
 as &lt;span class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{Z}}\)&lt;/span&gt; then the
 type of torsors (delooping) &lt;span class=&#34;math inline&#34;&gt;\(BG\)&lt;/span&gt; is
@@ -1044,8 +1030,8 @@ So transport functions are set isomorphisms, and the transport of any
 contractible loop in &lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; will be
 &lt;span class=&#34;math inline&#34;&gt;\(\ensuremath{\mathsf{refl}}\)&lt;/span&gt; (the
 identity) of the fiber, which is what we mean by flat.&lt;/p&gt;
-&lt;h2 data-number=&#34;4.5&#34; id=&#34;gauge-transformations&#34;&gt;&lt;span
-class=&#34;header-section-number&#34;&gt;4.5&lt;/span&gt; Gauge transformations&lt;/h2&gt;
+&lt;h3 data-number=&#34;4.1.3&#34; id=&#34;gauge-transformations&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;4.1.3&lt;/span&gt; Gauge transformations&lt;/h3&gt;
 &lt;p&gt;A &lt;em&gt;gauge transformation&lt;/em&gt; is a term inherited from physics.
 It’s an automorphism of a principal bundle &lt;span
 class=&#34;math inline&#34;&gt;\(P\to M\)&lt;/span&gt;, meaning a homeomorphism of &lt;span
@@ -1170,7 +1156,7 @@ Using the lemma below we can if we wish rewrite this as &lt;span
 class=&#34;math display&#34;&gt;\[\omega(\ensuremath{\mathsf{ap}}(H&amp;#39;)(\pi)):H(b)\left[\mathrm{tr}_p(\alpha)=\beta\right]\]&lt;/span&gt;
 which uses only &lt;span class=&#34;math inline&#34;&gt;\(H(b)\)&lt;/span&gt;.&lt;/p&gt;
 &lt;div class=&#34;mylemma&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Lemma 5&lt;/strong&gt;. &lt;em&gt;Given a function &lt;span
+&lt;p&gt;&lt;strong&gt;Lemma 4&lt;/strong&gt;. &lt;em&gt;Given a function &lt;span
 class=&#34;math inline&#34;&gt;\(f:M\to\mathcal{U}\)&lt;/span&gt; and homotopy &lt;span
 class=&#34;math inline&#34;&gt;\(H:f\sim f\)&lt;/span&gt; the following square commutes
 and so in the type family we have &lt;span
@@ -1179,129 +1165,90 @@ class=&#34;math inline&#34;&gt;\(\mathrm{tr}(H(x)\cdot f(p)) =
 &lt;/div&gt;
 &lt;p&gt;&lt;img src=&#34;./d75a6e58297fe05a808990d9551f5e2751b819cb.png&#34;
 alt=&#34;image&#34; /&gt;&lt;/p&gt;
+&lt;h2 data-number=&#34;4.2&#34; id=&#34;vector-fields&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;4.2&lt;/span&gt; Vector fields&lt;/h2&gt;
+&lt;p&gt;A vector field is a partial function &lt;span
+class=&#34;math inline&#34;&gt;\(T_\bullet:M\to\mathrm{EM_{\bullet}}(\ensuremath{\mathbb{Z}},1)\)&lt;/span&gt;
+that lifts &lt;span class=&#34;math inline&#34;&gt;\(T\)&lt;/span&gt;. In other words, a
+pointing of some of the fibers. This aligns with the classical picture
+of a choice of nonzero vector at each point, except for some points
+where the vector field vanishes. We will have to omit such vanishing
+points from the domain, and so the function is a partial function.&lt;/p&gt;
 &lt;h1 data-number=&#34;5&#34;
 id=&#34;gauss-bonnet-vector-fields-and-the-poincaruxe9-hopf-theorem&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;5&lt;/span&gt; Gauss-Bonnet, Vector Fields, and
 the Poincaré-Hopf Theorem&lt;/h1&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Given Chern-Weil, we can hypothesize that Pfaffians and
-determinants can be made from the path groupoid structure.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Theorem 1: Gauss-Bonnet: curvature vs euler characteristic
-(2-d)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Theorem 2: Gauss-Bonnet-Chern (2n-d, Pfaffian/Euler class,
-1944)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Theorem 3: Poincaré-Hopf: v.f. index is indep of v.f., and is
-euler characteristic via a specific v.f.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Non-theorem: v.f. on torus is the gradient of a Morse function.
-Bringing in Morse theory is future work.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;use&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;./c3761762270c966dd7a8eff7ff9572271448d824.png&#34;
-alt=&#34;image&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 data-number=&#34;5.1&#34; id=&#34;discrete-vector-fields&#34;&gt;&lt;span
-class=&#34;header-section-number&#34;&gt;5.1&lt;/span&gt; Discrete vector fields&lt;/h2&gt;
-&lt;p&gt;If &lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; is a combinatorial manifold
-and we form a type family over &lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt;
-using &lt;span class=&#34;math inline&#34;&gt;\(\mathsf{link}\)&lt;/span&gt;, &lt;span
-class=&#34;math inline&#34;&gt;\(\mathsf{xbox}\)&lt;/span&gt;, or &lt;span
-class=&#34;math inline&#34;&gt;\(\mathsf{xdisk}\)&lt;/span&gt; then what we want to
-examine next is the dependent function type of this family, which are
-equivalent to sections of the sigma type. These sections will play the
-role of vector fields.&lt;/p&gt;
-&lt;p&gt;Introduce the notation &lt;span
-class=&#34;math inline&#34;&gt;\(P_f\stackrel{\mathrm{def}}{=}\sum_{x:M}f(x)\)&lt;/span&gt;
+&lt;h2 data-number=&#34;5.1&#34; id=&#34;the-leibniz-product-rule&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;5.1&lt;/span&gt; The Leibniz (product) rule&lt;/h2&gt;
+&lt;p&gt;The Leibniz rule for exterior differentiation states that if &lt;span
+class=&#34;math inline&#34;&gt;\(f, g:M\to \ensuremath{\mathbb{R}}\)&lt;/span&gt; are two
+smooth functions to the real numbers then &lt;span
+class=&#34;math inline&#34;&gt;\(d(fg) = fdg + gdf\)&lt;/span&gt;. Here &lt;span
+class=&#34;math inline&#34;&gt;\(fg\)&lt;/span&gt; is the function formed by taking the
+pointwise product of &lt;span class=&#34;math inline&#34;&gt;\(f\)&lt;/span&gt; and &lt;span
+class=&#34;math inline&#34;&gt;\(g\)&lt;/span&gt;. This is an interaction between
+multiplication in &lt;span
+class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{R}}\)&lt;/span&gt; and the action on
+vectors of smooth functions (the 1-forms &lt;span
+class=&#34;math inline&#34;&gt;\(df\)&lt;/span&gt; and &lt;span
+class=&#34;math inline&#34;&gt;\(dg\)&lt;/span&gt;).&lt;/p&gt;
+&lt;p&gt;To examine this situation in HoTT we need type-theoretic functions
+&lt;span class=&#34;math inline&#34;&gt;\(f, g:M\to B\)&lt;/span&gt; from some type &lt;span
+class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; to a central H-space &lt;span
+class=&#34;math inline&#34;&gt;\(B\)&lt;/span&gt;. Let &lt;span
+class=&#34;math inline&#34;&gt;\(\mu:B\to B\to B\)&lt;/span&gt; be the H-space
+multiplication. How does &lt;span class=&#34;math inline&#34;&gt;\(\mu\)&lt;/span&gt; act on
+paths? Suppose we have &lt;span class=&#34;math inline&#34;&gt;\(a, a&amp;#39;, b,
+b&amp;#39;:B\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(p:a=_B a&amp;#39;, q:b=_B
+b&amp;#39;\)&lt;/span&gt;. Then we also have homotopies &lt;span
+class=&#34;math inline&#34;&gt;\(\mu(p, -):\mu(a, -)=_{B\to B}\mu(a&amp;#39;,
+-)\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(\mu(-,q):\mu(-,b)=_{B\to
+B}\mu(-,b&amp;#39;).\)&lt;/span&gt; Since &lt;span class=&#34;math inline&#34;&gt;\(\mu(a,
+-):B=B\)&lt;/span&gt; is an (unpointed) equivalence of &lt;span
+class=&#34;math inline&#34;&gt;\(B\)&lt;/span&gt;, and similarly for &lt;span
+class=&#34;math inline&#34;&gt;\(\mu(b, -)\)&lt;/span&gt; and so on, this data assembles
+into the following diagram of higher groupoid morphisms:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./d183777157a8a3e2d296890f77fb0c2aee7abf41.png&#34;
+alt=&#34;image&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;And so the two homotopies can be horizontally composed to give a path
+&lt;span class=&#34;math display&#34;&gt;\[\mu(p,-)\star\mu(-,q): \mu(a,
+b)=\mu(a&amp;#39;,b&amp;#39;).\]&lt;/span&gt; Horizontal composition is given by &lt;span
+class=&#34;math display&#34;&gt;\[\mu(p,-)\star\mu(-,q)\stackrel{\mathrm{def}}{=}(\mu(p,-)\cdot_r
+\mu(-,b))\cdot(\mu(a&amp;#39;, -)\cdot_l\mu(-, q))\]&lt;/span&gt; where &lt;span
+class=&#34;math display&#34;&gt;\[\mu(p,-)\cdot_r\mu(-,b):\mu(a,b)=\mu(a&amp;#39;,b)\]&lt;/span&gt;
 and &lt;span
-class=&#34;math inline&#34;&gt;\(V_f\stackrel{\mathrm{def}}{=}\prod_{x:M}f(x)\)&lt;/span&gt;.
-We will also refer to the 0-skeleton of &lt;span
-class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; as &lt;span
-class=&#34;math inline&#34;&gt;\(M_0\)&lt;/span&gt; and the 1-skeleton as &lt;span
-class=&#34;math inline&#34;&gt;\(M_1\)&lt;/span&gt;. We’ll be interested in &lt;span
-class=&#34;math inline&#34;&gt;\(P_\mathsf{xbox}\)&lt;/span&gt; (the xbox bundle over
-&lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt;) and &lt;span
-class=&#34;math inline&#34;&gt;\(V_\mathsf{xbox}\)&lt;/span&gt; (the type of sections
-thereof). Since &lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; is a HIT, then to
-specify a map &lt;span class=&#34;math inline&#34;&gt;\(X:V_\mathsf{xbox}\)&lt;/span&gt; we
-need to supply a point in each fiber, and for each path &lt;span
-class=&#34;math inline&#34;&gt;\(p:x=_M y\)&lt;/span&gt; in &lt;span
-class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; a path &lt;span
-class=&#34;math inline&#34;&gt;\(X(p):p_* X(x)=_{\mathsf{xbox}(y)}
-X(y)\)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;Since &lt;span class=&#34;math inline&#34;&gt;\(\mathsf{xbox}\)&lt;/span&gt; is defined
-using the neighboring points and paths of &lt;span
-class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt;, we can exponentiate &lt;span
-class=&#34;math inline&#34;&gt;\(P_\mathsf{xbox}\)&lt;/span&gt;, forming a map &lt;span
-class=&#34;math inline&#34;&gt;\(\exp:P_\mathsf{xbox}\to M\)&lt;/span&gt;: just map the
-xboxes back onto where they came from in &lt;span
-class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt;. This is the finite version of
-exponentiating a tangent space. It’s very different from the projection
-map &lt;span class=&#34;math inline&#34;&gt;\(\ensuremath{\mathrm{pr}}_1\)&lt;/span&gt;
-since it spreads the fibers out along &lt;span
-class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;Hence we also have a map &lt;span class=&#34;math inline&#34;&gt;\(\exp\circ X:M\to
-M\)&lt;/span&gt; which is in general not an equivalence but can be. We can
-think of it as the &lt;em&gt;flow&lt;/em&gt; given by &lt;span
-class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt;, the analogue of integrating a vector
-field for some finite time.&lt;/p&gt;
-&lt;h2 data-number=&#34;5.2&#34; id=&#34;the-index-of-a-fixed-point&#34;&gt;&lt;span
-class=&#34;header-section-number&#34;&gt;5.2&lt;/span&gt; The index of a fixed point&lt;/h2&gt;
-&lt;p&gt;Suppose that &lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt; satisfies &lt;span
-class=&#34;math inline&#34;&gt;\(X(x)=\ensuremath{\mathsf{refl}}_x\)&lt;/span&gt;, and so
-&lt;span class=&#34;math inline&#34;&gt;\(\exp\circ X(x)=x\)&lt;/span&gt; and &lt;span
-class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt; is a fixed point of the flow.
-Combinatorial manifolds are finite and decidable so this equation makes
-sense. In such a situation we can form a map &lt;span
-class=&#34;math inline&#34;&gt;\(\mathrm{tr}\circ
-X\circ\exp:\mathsf{link}(x)\to\mathsf{link}(x).\)&lt;/span&gt; Starting with a
-point in &lt;span class=&#34;math inline&#34;&gt;\(\mathsf{link}(x)\)&lt;/span&gt; we
-exponentiate to the actual neighboring point in &lt;span
-class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt;, take the value of &lt;span
-class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; on this other point (some neighbor of
-this neighbor, possibly &lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt;), and
-transport that back to &lt;span
-class=&#34;math inline&#34;&gt;\(\mathsf{link}(x)\)&lt;/span&gt;. Such a map has a
-degree, and that degree is a discrete version of what is called the
-&lt;em&gt;index&lt;/em&gt; of the vector field at a fixed point.&lt;/p&gt;
-&lt;p&gt;To prove the Gauss-Bonnet theorem one needs a notion of &lt;em&gt;Euler
-characteristic&lt;/em&gt; and a notion of curvature. To prove the
-Poincaré-Hopf theorem, one needs a notion of &lt;em&gt;the index of a vector
-field&lt;/em&gt;, and again, a notion of curvature. To prove both and relate
-them it helps to equate the Euler characteristic to the index of a
-special vector field.&lt;/p&gt;
-&lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 18&lt;/strong&gt;. &lt;em&gt;A vector field is a section &lt;span
-class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; of the disk bundle. A zero of &lt;span
-class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; is a vertex &lt;span
-class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt; where &lt;span
-class=&#34;math inline&#34;&gt;\(X(x)=x:\mathsf{disk}(x)\)&lt;/span&gt;, the center of
-the disk.&lt;/em&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;The following proofs follow the explanations given in &lt;span
-class=&#34;citation&#34; data-cites=&#34;needham&#34;&gt; (&lt;a href=&#34;#ref-needham&#34;
-role=&#34;doc-biblioref&#34;&gt;Needham, 2021&lt;/a&gt;)&lt;/span&gt;. But as we might hope,
-the proofs can be brought into HoTT in a much abbreviated form!&lt;/p&gt;
-&lt;p&gt;Note that &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; is a pointing of all
-the fibers. So a second vector field can be lifted to the classifying
-map to pointed types, which is contractible. That’s really all that’s
-going on in these classical proofs!&lt;/p&gt;
-&lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 19&lt;/strong&gt;. &lt;em&gt;The index of a vector field at a
-zero is given by transport composed with exp.&lt;/em&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;mythm&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Theorem 4&lt;/strong&gt;. &lt;em&gt;The total index is independent of the
-vector field.&lt;/em&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;mythm&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Theorem 5&lt;/strong&gt;. &lt;em&gt;(Poincaré-Hopf) The total index is
-equal to the total curvature.&lt;/em&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;mythm&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Theorem 6&lt;/strong&gt;. &lt;em&gt;The total index is equal to the Euler
-characteristic.&lt;/em&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;mythm&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Theorem 7&lt;/strong&gt;. &lt;em&gt;(Gauss-Bonnet) The total curvature is
-equal to the Euler characteristic.&lt;/em&gt;&lt;/p&gt;
+class=&#34;math display&#34;&gt;\[\mu(a&amp;#39;,-)\cdot_l\mu(-,q):\mu(a&amp;#39;,b)=\mu(a&amp;#39;,b&amp;#39;)\]&lt;/span&gt;
+are defined by path induction. See the HoTT book Theorem 2.1.6 on the
+Eckmann-Hilton argument&lt;span class=&#34;citation&#34; data-cites=&#34;hottbook&#34;&gt; (&lt;a
+href=&#34;#ref-hottbook&#34; role=&#34;doc-biblioref&#34;&gt;Univalent Foundations Program,
+2013&lt;/a&gt;)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;We can recognize the process of using whiskering to form horizontal
+composition in the Leibniz rule.&lt;/p&gt;
+&lt;p&gt;Quick aside: moving from infinitesimal calculus to finite groupoid
+algebra actually involves two changes. The first is the change from
+vectors to paths, forms to functions and so on. But it’s also the case
+that tangent vectors have just the one basepoint, whereas paths have two
+endpoints. You can see this play out in this example, where &lt;span
+class=&#34;math inline&#34;&gt;\(a\)&lt;/span&gt; and &lt;span
+class=&#34;math inline&#34;&gt;\(a&amp;#39;\)&lt;/span&gt; were distinct points (and &lt;span
+class=&#34;math inline&#34;&gt;\(b\)&lt;/span&gt; and &lt;span
+class=&#34;math inline&#34;&gt;\(b&amp;#39;\)&lt;/span&gt;).&lt;/p&gt;
+&lt;p&gt;The horizontal composition we build lives entirely in &lt;span
+class=&#34;math inline&#34;&gt;\(B\)&lt;/span&gt; and we didn’t make use of &lt;span
+class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; yet. The Leibniz rule will be a
+pointwise version of what’s going on in &lt;span
+class=&#34;math inline&#34;&gt;\(B\)&lt;/span&gt;. Denote by &lt;span
+class=&#34;math inline&#34;&gt;\(\mu\circ(f,g):M\to B\)&lt;/span&gt; the map which sends
+&lt;span class=&#34;math inline&#34;&gt;\(x\mapsto \mu(f(x),g(x))\)&lt;/span&gt;.&lt;/p&gt;
+&lt;div class=&#34;mylemma&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Lemma 5&lt;/strong&gt;. &lt;em&gt;Given &lt;span class=&#34;math inline&#34;&gt;\(f,
+g:M\to B\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(p:x=_M y\)&lt;/span&gt; then
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+\ensuremath{\mathsf{ap}}(\mu\circ(f,g))(p)&amp;amp;=\mu(f(p),-)\star\mu(-,g(p))\\
+&amp;amp;=\left[\mu(f(p),-)\cdot_r \mu(-,g(x))\right]\cdot
+\left[\mu(f(y),-)\cdot_l\mu(-,g(p))\right]\\
+&amp;amp;:\mu(f(x),g(x))=\mu(f(y),g(y))
+\end{aligned}\]&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;refs&#34; class=&#34;references csl-bib-body hanging-indent&#34;
 data-entry-spacing=&#34;0&#34; role=&#34;list&#34;&gt;
@@ -1323,12 +1270,6 @@ physics&lt;/a&gt;&lt;/em&gt;, Universitext. Springer International Publishing.
 class=&#34;smallcaps&#34;&gt;Siebenmann&lt;/span&gt;, L.C. (1977) &lt;em&gt;Foundational essays
 on topological manifolds, smoothings, and triangulations&lt;/em&gt;, Annals of
 mathematics studies. Princeton University Press.
-&lt;/div&gt;
-&lt;div id=&#34;ref-needham&#34; class=&#34;csl-entry&#34; role=&#34;listitem&#34;&gt;
-&lt;span class=&#34;smallcaps&#34;&gt;Needham&lt;/span&gt;, T. (2021) &lt;em&gt;&lt;a
-href=&#34;https://books.google.com/books?id=Mc0QEAAAQBAJ&#34;&gt;Visual
-differential geometry and forms: A mathematical drama in five
-acts&lt;/a&gt;&lt;/em&gt;. Princeton University Press.
 &lt;/div&gt;
 &lt;div id=&#34;ref-sco&#34; class=&#34;csl-entry&#34; role=&#34;listitem&#34;&gt;
 &lt;span class=&#34;smallcaps&#34;&gt;Scoccola&lt;/span&gt;, L. (2020) &lt;a
