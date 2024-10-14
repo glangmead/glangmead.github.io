@@ -1180,8 +1180,9 @@ class=&#34;math inline&#34;&gt;\(Z=\{z_0,\ldots,z_n\}\)&lt;/span&gt;, then denot
 &lt;span class=&#34;math inline&#34;&gt;\(M\setminus Z\)&lt;/span&gt; the type given by
 omitting the vertices in &lt;span class=&#34;math inline&#34;&gt;\(Z\)&lt;/span&gt; from the
 constructors in all dimensions where they appeared. Call the points of
-&lt;span class=&#34;math inline&#34;&gt;\(Z\)&lt;/span&gt; &lt;em&gt;isolated&lt;/em&gt; if we have
-&lt;span class=&#34;math inline&#34;&gt;\(\prod_{z:Z}\mathsf{link}(z)\cap
+&lt;span class=&#34;math inline&#34;&gt;\(Z\)&lt;/span&gt; &lt;em&gt;isolated&lt;/em&gt; if no two of
+them are neighbors, i.e. we have &lt;span
+class=&#34;math inline&#34;&gt;\(\prod_{z:Z}\mathsf{link}(z)\cap
 Z=\emptyset\)&lt;/span&gt;. In the isolated case &lt;span
 class=&#34;math inline&#34;&gt;\(M\setminus Z\)&lt;/span&gt; has boundary circles where
 each vertex was removed.&lt;/em&gt;&lt;/p&gt;
@@ -1199,6 +1200,8 @@ M\)&lt;/span&gt; is the map sending points in a fiber to the corresponding
 point in the link of the base point: &lt;span class=&#34;math inline&#34;&gt;\(\exp(x,
 y:\mathsf{link}(x))=y\)&lt;/span&gt;. In diagram form we have:&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;./fc87b1f4ebdcf8643d212b096faa49c9692f7171.png&#34;
+alt=&#34;image&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Note that &lt;span class=&#34;math inline&#34;&gt;\(\exp\)&lt;/span&gt; is different from
 &lt;span class=&#34;math inline&#34;&gt;\(\ensuremath{\mathrm{pr}}_1\)&lt;/span&gt; since it
 spreads a fiber out onto the manifold. The composition &lt;span
