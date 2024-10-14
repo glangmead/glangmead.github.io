@@ -133,15 +133,26 @@ class=&#34;toc-section-number&#34;&gt;4.1.3&lt;/span&gt; Gauge transformations&l
 &lt;li&gt;&lt;a href=&#34;#vector-fields&#34; id=&#34;toc-vector-fields&#34;&gt;&lt;span
 class=&#34;toc-section-number&#34;&gt;4.2&lt;/span&gt; Vector fields&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#gauss-bonnet-poincaruxe9-hopf-leibniz&#34;
-id=&#34;toc-gauss-bonnet-poincaruxe9-hopf-leibniz&#34;&gt;&lt;span
-class=&#34;toc-section-number&#34;&gt;5&lt;/span&gt; Gauss-Bonnet, Poincaré-Hopf,
-Leibniz&lt;/a&gt;
+&lt;li&gt;&lt;a href=&#34;#leibniz-gauss-bonnet-poincaruxe9-hopf&#34;
+id=&#34;toc-leibniz-gauss-bonnet-poincaruxe9-hopf&#34;&gt;&lt;span
+class=&#34;toc-section-number&#34;&gt;5&lt;/span&gt; Leibniz, Gauss-Bonnet,
+Poincaré-Hopf&lt;/a&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#the-leibniz-product-rule&#34;
 id=&#34;toc-the-leibniz-product-rule&#34;&gt;&lt;span
 class=&#34;toc-section-number&#34;&gt;5.1&lt;/span&gt; The Leibniz (product)
 rule&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#the-total-curvature&#34; id=&#34;toc-the-total-curvature&#34;&gt;&lt;span
+class=&#34;toc-section-number&#34;&gt;5.2&lt;/span&gt; The total curvature&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#the-total-index&#34; id=&#34;toc-the-total-index&#34;&gt;&lt;span
+class=&#34;toc-section-number&#34;&gt;5.3&lt;/span&gt; The total index&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#equality-of-total-index-and-total-curvature&#34;
+id=&#34;toc-equality-of-total-index-and-total-curvature&#34;&gt;&lt;span
+class=&#34;toc-section-number&#34;&gt;5.4&lt;/span&gt; Equality of total index and total
+curvature&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#identification-with-euler-characteristic&#34;
+id=&#34;toc-identification-with-euler-characteristic&#34;&gt;Identification with
+Euler characteristic&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/nav&gt;
@@ -1242,9 +1253,9 @@ fiber &lt;span class=&#34;math inline&#34;&gt;\(X(v)\)&lt;/span&gt;.&lt;/p&gt;
 class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; is the winding number of
 something.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;h1 data-number=&#34;5&#34; id=&#34;gauss-bonnet-poincaruxe9-hopf-leibniz&#34;&gt;&lt;span
-class=&#34;header-section-number&#34;&gt;5&lt;/span&gt; Gauss-Bonnet, Poincaré-Hopf,
-Leibniz&lt;/h1&gt;
+&lt;h1 data-number=&#34;5&#34; id=&#34;leibniz-gauss-bonnet-poincaruxe9-hopf&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;5&lt;/span&gt; Leibniz, Gauss-Bonnet,
+Poincaré-Hopf&lt;/h1&gt;
 &lt;h2 data-number=&#34;5.1&#34; id=&#34;the-leibniz-product-rule&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;5.1&lt;/span&gt; The Leibniz (product) rule&lt;/h2&gt;
 &lt;p&gt;The Leibniz rule for exterior differentiation states that if &lt;span
@@ -1317,6 +1328,17 @@ g:M\to B\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(p:x=_M y\)
 &amp;amp;:\mu(f(x),g(x))=\mu(f(y),g(y))
 \end{aligned}\]&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
+&lt;h2 data-number=&#34;5.2&#34; id=&#34;the-total-curvature&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;5.2&lt;/span&gt; The total curvature&lt;/h2&gt;
+&lt;h2 data-number=&#34;5.3&#34; id=&#34;the-total-index&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;5.3&lt;/span&gt; The total index&lt;/h2&gt;
+&lt;h2 data-number=&#34;5.4&#34;
+id=&#34;equality-of-total-index-and-total-curvature&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;5.4&lt;/span&gt; Equality of total index and
+total curvature&lt;/h2&gt;
+&lt;h2 class=&#34;unnumbered&#34;
+id=&#34;identification-with-euler-characteristic&#34;&gt;Identification with Euler
+characteristic&lt;/h2&gt;
 &lt;div id=&#34;refs&#34; class=&#34;references csl-bib-body hanging-indent&#34;
 data-entry-spacing=&#34;0&#34; role=&#34;list&#34;&gt;
 &lt;div id=&#34;ref-Symmetry&#34; class=&#34;csl-entry&#34; role=&#34;listitem&#34;&gt;
