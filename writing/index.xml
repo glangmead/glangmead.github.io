@@ -151,8 +151,9 @@ id=&#34;toc-equality-of-total-index-and-total-curvature&#34;&gt;&lt;span
 class=&#34;toc-section-number&#34;&gt;5.4&lt;/span&gt; Equality of total index and total
 curvature&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#identification-with-euler-characteristic&#34;
-id=&#34;toc-identification-with-euler-characteristic&#34;&gt;Identification with
-Euler characteristic&lt;/a&gt;&lt;/li&gt;
+id=&#34;toc-identification-with-euler-characteristic&#34;&gt;&lt;span
+class=&#34;toc-section-number&#34;&gt;5.5&lt;/span&gt; Identification with Euler
+characteristic&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/nav&gt;
@@ -316,7 +317,7 @@ class=&#34;math inline&#34;&gt;\(\mathrm{K}(G,n)\)&lt;/span&gt; but we will be f
 on &lt;span class=&#34;math inline&#34;&gt;\(n=1\)&lt;/span&gt; in this note.&lt;/p&gt;
 &lt;div class=&#34;mydef&#34;&gt;
 &lt;p&gt;&lt;strong&gt;Definition 2&lt;/strong&gt;. &lt;em&gt;Let &lt;span
-class=&#34;math inline&#34;&gt;\(\mathrm{EM}(G,n)\stackrel{\mathrm{def}}{=}\mathrm{BAut}(\mathrm{K}(G,1))\stackrel{\mathrm{def}}{=}\sum_{Y:\mathcal{U}}||Y\simeq
+class=&#34;math inline&#34;&gt;\(\mathrm{EM}(G,n)\stackrel{\mathrm{def}}{=}\mathrm{BAut}(\mathrm{K}(G,n))\stackrel{\mathrm{def}}{=}\sum_{Y:\mathcal{U}}||Y\simeq
 \mathrm{K}(G,n)||_{-1}\)&lt;/span&gt;. A &lt;span
 class=&#34;math inline&#34;&gt;\(\mathrm{K}(G,n)-bundle\)&lt;/span&gt; on a type &lt;span
 class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; is the fiber of a map &lt;span
@@ -855,73 +856,11 @@ contractible loops is } \ensuremath{\mathsf{refl}}\\
 \end{aligned}\]&lt;/span&gt;&lt;/p&gt;
 &lt;h2 data-number=&#34;4.1&#34; id=&#34;connections&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;4.1&lt;/span&gt; Connections&lt;/h2&gt;
-&lt;p&gt;To hew close to the intended context of the term “connection” we will
-examine manifold-like types mapping into bundle-classifying-like types.
-The novelty here, compared to other HoTT investigations, is the focus on
-combinatorial types to stand in for manifolds.&lt;/p&gt;
-&lt;p&gt;In recent times it has been believed in the HoTT community that maps
-from a discrete type to a discrete classifying space can encode only the
-connections that a classical mathematician would call &lt;em&gt;flat&lt;/em&gt;
-(zero curvature). In this context the word &lt;em&gt;discrete&lt;/em&gt; means
-having the discrete topology, in the sense of cohesion&lt;span
-class=&#34;citation&#34; data-cites=&#34;shulman_cohesion&#34;&gt; (&lt;a
-href=&#34;#ref-shulman_cohesion&#34; role=&#34;doc-biblioref&#34;&gt;Shulman,
-2017&lt;/a&gt;)&lt;/span&gt;. This is not the case! We will show that if the
-codomain is a classifying space of &lt;span
-class=&#34;math inline&#34;&gt;\(S^1\)&lt;/span&gt; or other group of homotopy dimension
-at least 1, then non-flat connections appear despite the type &lt;span
-class=&#34;math inline&#34;&gt;\(S^1\)&lt;/span&gt; being topologically discrete. Another
-common meaning of the shorthand “discrete” is to indicate a 0-truncated
-type, i.e. a set, as opposed to a type with higher homotopical
-structures. We will show that indeed if the codomain classifies sets,
-which is the case for example with the classifying space &lt;span
-class=&#34;math inline&#34;&gt;\(B\ensuremath{\mathbb{Z}}\)&lt;/span&gt;, the delooping
-of &lt;span class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{Z}}\)&lt;/span&gt;, then
-connections are flat. (The type we denote by &lt;span
-class=&#34;math inline&#34;&gt;\(\mathbb{S}^1\stackrel{\mathrm{def}}{=}\{(x,
-y)|x^2+y^2=1\}\)&lt;/span&gt; is a set and is not topologically discrete. We
-will not be discussing it at all in this paper.)&lt;/p&gt;
-&lt;p&gt;The DDG philosophy tells us to look at HITs that are polytope-like. A
-polytope &lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; will have finitely many
-0-dimesional (point) constructors &lt;span
-class=&#34;math inline&#34;&gt;\(\{m_0^i\}\)&lt;/span&gt;, finitely many 1-dimesnional
-constructors &lt;span
-class=&#34;math inline&#34;&gt;\(\{m_1^{ij}:m_0^i=m_0^j\}\)&lt;/span&gt;, and so on. Type
-families &lt;span class=&#34;math inline&#34;&gt;\(f:M\to \mathcal{U}\)&lt;/span&gt; on this
-type specify where each of these constructors is sent. In DDG parlance,
-&lt;span class=&#34;math inline&#34;&gt;\(f\)&lt;/span&gt; restricted to the 0-dimensional
-constructors of &lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; is a 0-form and
-&lt;span class=&#34;math inline&#34;&gt;\(f\)&lt;/span&gt; restricted to the 1-dimensional
-constructors (not the 1-skeleton but just the 1-dimensional parts,
-whatever that means in HoTT) is a 1-form, and so on.&lt;/p&gt;
-&lt;p&gt;A principal &lt;span class=&#34;math inline&#34;&gt;\(S^1\)&lt;/span&gt; bundle is a
-family of &lt;span class=&#34;math inline&#34;&gt;\(S^1\)&lt;/span&gt; torsors and so we
-will often be focusing on the function type &lt;span
-class=&#34;math inline&#34;&gt;\(M\to \mathrm{BAut}_1(S^1)\)&lt;/span&gt;. The novel
-claim here is that &lt;span class=&#34;math inline&#34;&gt;\(M\to
-\mathrm{BAut}_1(S^1)\)&lt;/span&gt; contains more than just all the principal
-&lt;span class=&#34;math inline&#34;&gt;\(S^1\)&lt;/span&gt;-bundles: it also contains all
-the connections on all the bundles. Every connection is present, both
-curved and flat, because we have complete freedom to specify the images
-of the paths.&lt;/p&gt;
-&lt;p&gt;Classically, curvature is a property of the connection. It is
-computed either on infinitesimal loops, or on the infinitesimal surface
-bounded by the loop. In fact it is “the derivative of the connection”
-morally speaking. We will look for curvature by examining &lt;span
-class=&#34;math inline&#34;&gt;\(f\)&lt;/span&gt; on 1-dimensional loops. If &lt;span
-class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; is at least a 2-type and if we want to
-claim that &lt;span class=&#34;math inline&#34;&gt;\(f\)&lt;/span&gt; classifies a bundle
-with connection, then we will be required to map the 2-faces of &lt;span
-class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; (the 2-dimesional constructors) to a
-path from &lt;span
-class=&#34;math inline&#34;&gt;\(\ensuremath{\mathsf{refl}}\)&lt;/span&gt; to the image
-of a bounding loop. So at dimension 2 we will impose that constraint.
-Since &lt;span class=&#34;math inline&#34;&gt;\(\mathrm{BAut}_1(S^1)\)&lt;/span&gt; is
-2-truncated, &lt;span class=&#34;math inline&#34;&gt;\(f\)&lt;/span&gt; factors through the
-truncation map &lt;span class=&#34;math inline&#34;&gt;\(M\to||M||_2\)&lt;/span&gt; and so
-that’s the top dimension.&lt;/p&gt;
-&lt;p&gt;There is an example at the end of this paper. For those who are best
-served by examples, do look at it and return to this point.&lt;/p&gt;
+&lt;p&gt;The action on paths of the function &lt;span
+class=&#34;math inline&#34;&gt;\(T:M\to
+\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)&lt;/span&gt; is what is called a
+connection. We’ll spend some time drawing more complete parallels with
+the classical story, both to provide some evidence and to educate.&lt;/p&gt;
 &lt;h3 data-number=&#34;4.1.1&#34; id=&#34;connections-as-splittings&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;4.1.1&lt;/span&gt; Connections as
 splittings&lt;/h3&gt;
@@ -1181,7 +1120,8 @@ that lifts &lt;span class=&#34;math inline&#34;&gt;\(T\)&lt;/span&gt;. In other 
 pointing of some of the fibers. This aligns with the classical picture
 of a choice of nonzero vector at each point, except for some points
 where the vector field vanishes. We will have to omit such vanishing
-points from the domain, and so the function is a partial function.&lt;/p&gt;
+points from the domain because we are very opinionated that the codomain
+be mere circles, and so the function is a partial function.&lt;/p&gt;
 &lt;div class=&#34;mydef&#34;&gt;
 &lt;p&gt;&lt;strong&gt;Definition 20&lt;/strong&gt;. &lt;em&gt;If &lt;span
 class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; is a combinatorial manifold and &lt;span
@@ -1250,9 +1190,20 @@ In so doing we have squeezed a face of the manifold into the polygonal
 fiber &lt;span class=&#34;math inline&#34;&gt;\(X(v)\)&lt;/span&gt;.&lt;/p&gt;
 &lt;div class=&#34;mydef&#34;&gt;
 &lt;p&gt;&lt;strong&gt;Definition 22&lt;/strong&gt;. &lt;em&gt;The &lt;em&gt;index&lt;/em&gt; of &lt;span
-class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; is the winding number of
-something.&lt;/em&gt;&lt;/p&gt;
+class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; at an isolated vertex &lt;span
+class=&#34;math inline&#34;&gt;\(z:Z\)&lt;/span&gt; is the degree of the map &lt;span
+class=&#34;math inline&#34;&gt;\(\exp\circ\mathrm{tr}:\mathsf{link}(z)\to\mathsf{link}(z)\)&lt;/span&gt;.
+The map &lt;span class=&#34;math inline&#34;&gt;\(\mathrm{tr}\)&lt;/span&gt; transports
+&lt;span class=&#34;math inline&#34;&gt;\(P\)&lt;/span&gt; and &lt;span
+class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; along the spokes joining the link to
+the point &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;. Although &lt;span
+class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt; is not in the domain of &lt;span
+class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt;, the hypothesis of &lt;span
+class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt; being isolated implies that the link is
+in the domain.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
+&lt;p&gt;Need pictures here. Show the classical examples of index +1 and
+-1.&lt;/p&gt;
 &lt;h1 data-number=&#34;5&#34; id=&#34;leibniz-gauss-bonnet-poincaruxe9-hopf&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;5&lt;/span&gt; Leibniz, Gauss-Bonnet,
 Poincaré-Hopf&lt;/h1&gt;
@@ -1330,15 +1281,36 @@ g:M\to B\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(p:x=_M y\)
 &lt;/div&gt;
 &lt;h2 data-number=&#34;5.2&#34; id=&#34;the-total-curvature&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;5.2&lt;/span&gt; The total curvature&lt;/h2&gt;
+&lt;p&gt;On the 2-face &lt;span class=&#34;math inline&#34;&gt;\(F\)&lt;/span&gt; bounding a loop
+&lt;span class=&#34;math inline&#34;&gt;\(\ell:v=_M v\)&lt;/span&gt; the map &lt;span
+class=&#34;math inline&#34;&gt;\(T:M\to\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)&lt;/span&gt;
+assigns a homotopy &lt;span
+class=&#34;math inline&#34;&gt;\(T(F):\ensuremath{\mathsf{refl}}_v=T(\ell)\)&lt;/span&gt;,
+where &lt;span class=&#34;math inline&#34;&gt;\(T(\ell)\)&lt;/span&gt; is an automorphism of
+&lt;span class=&#34;math inline&#34;&gt;\(T(v)\)&lt;/span&gt;. The various 2-faces can be
+composed as terms of the 2-groupoid &lt;span
+class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt;, and we will call the composition &lt;span
+class=&#34;math inline&#34;&gt;\(T(M):T(v)=T(v)\)&lt;/span&gt; the &lt;em&gt;total
+curvature&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;When the fibers are torsors we need loops to see what &lt;span
+class=&#34;math inline&#34;&gt;\(T\)&lt;/span&gt; is doing.&lt;/p&gt;
 &lt;h2 data-number=&#34;5.3&#34; id=&#34;the-total-index&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;5.3&lt;/span&gt; The total index&lt;/h2&gt;
+&lt;p&gt;When the fibers are pointed then loops are pointed automorphisms of
+mere circles, which are integers.&lt;/p&gt;
 &lt;h2 data-number=&#34;5.4&#34;
 id=&#34;equality-of-total-index-and-total-curvature&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;5.4&lt;/span&gt; Equality of total index and
 total curvature&lt;/h2&gt;
-&lt;h2 class=&#34;unnumbered&#34;
-id=&#34;identification-with-euler-characteristic&#34;&gt;Identification with Euler
+&lt;p&gt;When we use the dependent action on paths, we obtain paths between
+the transport from the connection and the swirling of the vector field,
+and these cancel.&lt;/p&gt;
+&lt;h2 data-number=&#34;5.5&#34;
+id=&#34;identification-with-euler-characteristic&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;5.5&lt;/span&gt; Identification with Euler
 characteristic&lt;/h2&gt;
+&lt;p&gt;Combinatorial manifolds are intuitive objects that connect directly
+to the classical definition of Euler characteristic.&lt;/p&gt;
 &lt;div id=&#34;refs&#34; class=&#34;references csl-bib-body hanging-indent&#34;
 data-entry-spacing=&#34;0&#34; role=&#34;list&#34;&gt;
 &lt;div id=&#34;ref-Symmetry&#34; class=&#34;csl-entry&#34; role=&#34;listitem&#34;&gt;

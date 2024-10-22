@@ -535,8 +535,9 @@ id="toc-equality-of-total-index-and-total-curvature"><span
 class="toc-section-number">5.4</span> Equality of total index and total
 curvature</a></li>
 <li><a href="#identification-with-euler-characteristic"
-id="toc-identification-with-euler-characteristic">Identification with
-Euler characteristic</a></li>
+id="toc-identification-with-euler-characteristic"><span
+class="toc-section-number">5.5</span> Identification with Euler
+characteristic</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -700,7 +701,7 @@ class="math inline">\(\mathrm{K}(G,n)\)</span> but we will be focusing
 on <span class="math inline">\(n=1\)</span> in this note.</p>
 <div class="mydef">
 <p><strong>Definition 2</strong>. <em>Let <span
-class="math inline">\(\mathrm{EM}(G,n)\stackrel{\mathrm{def}}{=}\mathrm{BAut}(\mathrm{K}(G,1))\stackrel{\mathrm{def}}{=}\sum_{Y:\mathcal{U}}||Y\simeq
+class="math inline">\(\mathrm{EM}(G,n)\stackrel{\mathrm{def}}{=}\mathrm{BAut}(\mathrm{K}(G,n))\stackrel{\mathrm{def}}{=}\sum_{Y:\mathcal{U}}||Y\simeq
 \mathrm{K}(G,n)||_{-1}\)</span>. A <span
 class="math inline">\(\mathrm{K}(G,n)-bundle\)</span> on a type <span
 class="math inline">\(M\)</span> is the fiber of a map <span
@@ -1239,73 +1240,11 @@ contractible loops is } \ensuremath{\mathsf{refl}}\\
 \end{aligned}\]</span></p>
 <h2 data-number="4.1" id="connections"><span
 class="header-section-number">4.1</span> Connections</h2>
-<p>To hew close to the intended context of the term “connection” we will
-examine manifold-like types mapping into bundle-classifying-like types.
-The novelty here, compared to other HoTT investigations, is the focus on
-combinatorial types to stand in for manifolds.</p>
-<p>In recent times it has been believed in the HoTT community that maps
-from a discrete type to a discrete classifying space can encode only the
-connections that a classical mathematician would call <em>flat</em>
-(zero curvature). In this context the word <em>discrete</em> means
-having the discrete topology, in the sense of cohesion<span
-class="citation" data-cites="shulman_cohesion"> (<a
-href="#ref-shulman_cohesion" role="doc-biblioref">Shulman,
-2017</a>)</span>. This is not the case! We will show that if the
-codomain is a classifying space of <span
-class="math inline">\(S^1\)</span> or other group of homotopy dimension
-at least 1, then non-flat connections appear despite the type <span
-class="math inline">\(S^1\)</span> being topologically discrete. Another
-common meaning of the shorthand “discrete” is to indicate a 0-truncated
-type, i.e. a set, as opposed to a type with higher homotopical
-structures. We will show that indeed if the codomain classifies sets,
-which is the case for example with the classifying space <span
-class="math inline">\(B\ensuremath{\mathbb{Z}}\)</span>, the delooping
-of <span class="math inline">\(\ensuremath{\mathbb{Z}}\)</span>, then
-connections are flat. (The type we denote by <span
-class="math inline">\(\mathbb{S}^1\stackrel{\mathrm{def}}{=}\{(x,
-y)|x^2+y^2=1\}\)</span> is a set and is not topologically discrete. We
-will not be discussing it at all in this paper.)</p>
-<p>The DDG philosophy tells us to look at HITs that are polytope-like. A
-polytope <span class="math inline">\(M\)</span> will have finitely many
-0-dimesional (point) constructors <span
-class="math inline">\(\{m_0^i\}\)</span>, finitely many 1-dimesnional
-constructors <span
-class="math inline">\(\{m_1^{ij}:m_0^i=m_0^j\}\)</span>, and so on. Type
-families <span class="math inline">\(f:M\to \mathcal{U}\)</span> on this
-type specify where each of these constructors is sent. In DDG parlance,
-<span class="math inline">\(f\)</span> restricted to the 0-dimensional
-constructors of <span class="math inline">\(M\)</span> is a 0-form and
-<span class="math inline">\(f\)</span> restricted to the 1-dimensional
-constructors (not the 1-skeleton but just the 1-dimensional parts,
-whatever that means in HoTT) is a 1-form, and so on.</p>
-<p>A principal <span class="math inline">\(S^1\)</span> bundle is a
-family of <span class="math inline">\(S^1\)</span> torsors and so we
-will often be focusing on the function type <span
-class="math inline">\(M\to \mathrm{BAut}_1(S^1)\)</span>. The novel
-claim here is that <span class="math inline">\(M\to
-\mathrm{BAut}_1(S^1)\)</span> contains more than just all the principal
-<span class="math inline">\(S^1\)</span>-bundles: it also contains all
-the connections on all the bundles. Every connection is present, both
-curved and flat, because we have complete freedom to specify the images
-of the paths.</p>
-<p>Classically, curvature is a property of the connection. It is
-computed either on infinitesimal loops, or on the infinitesimal surface
-bounded by the loop. In fact it is “the derivative of the connection”
-morally speaking. We will look for curvature by examining <span
-class="math inline">\(f\)</span> on 1-dimensional loops. If <span
-class="math inline">\(M\)</span> is at least a 2-type and if we want to
-claim that <span class="math inline">\(f\)</span> classifies a bundle
-with connection, then we will be required to map the 2-faces of <span
-class="math inline">\(M\)</span> (the 2-dimesional constructors) to a
-path from <span
-class="math inline">\(\ensuremath{\mathsf{refl}}\)</span> to the image
-of a bounding loop. So at dimension 2 we will impose that constraint.
-Since <span class="math inline">\(\mathrm{BAut}_1(S^1)\)</span> is
-2-truncated, <span class="math inline">\(f\)</span> factors through the
-truncation map <span class="math inline">\(M\to||M||_2\)</span> and so
-that’s the top dimension.</p>
-<p>There is an example at the end of this paper. For those who are best
-served by examples, do look at it and return to this point.</p>
+<p>The action on paths of the function <span
+class="math inline">\(T:M\to
+\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)</span> is what is called a
+connection. We’ll spend some time drawing more complete parallels with
+the classical story, both to provide some evidence and to educate.</p>
 <h3 data-number="4.1.1" id="connections-as-splittings"><span
 class="header-section-number">4.1.1</span> Connections as
 splittings</h3>
@@ -1565,7 +1504,8 @@ that lifts <span class="math inline">\(T\)</span>. In other words, a
 pointing of some of the fibers. This aligns with the classical picture
 of a choice of nonzero vector at each point, except for some points
 where the vector field vanishes. We will have to omit such vanishing
-points from the domain, and so the function is a partial function.</p>
+points from the domain because we are very opinionated that the codomain
+be mere circles, and so the function is a partial function.</p>
 <div class="mydef">
 <p><strong>Definition 20</strong>. <em>If <span
 class="math inline">\(M\)</span> is a combinatorial manifold and <span
@@ -1634,9 +1574,20 @@ In so doing we have squeezed a face of the manifold into the polygonal
 fiber <span class="math inline">\(X(v)\)</span>.</p>
 <div class="mydef">
 <p><strong>Definition 22</strong>. <em>The <em>index</em> of <span
-class="math inline">\(X\)</span> is the winding number of
-something.</em></p>
+class="math inline">\(X\)</span> at an isolated vertex <span
+class="math inline">\(z:Z\)</span> is the degree of the map <span
+class="math inline">\(\exp\circ\mathrm{tr}:\mathsf{link}(z)\to\mathsf{link}(z)\)</span>.
+The map <span class="math inline">\(\mathrm{tr}\)</span> transports
+<span class="math inline">\(P\)</span> and <span
+class="math inline">\(X\)</span> along the spokes joining the link to
+the point <span class="math inline">\(z\)</span>. Although <span
+class="math inline">\(z\)</span> is not in the domain of <span
+class="math inline">\(X\)</span>, the hypothesis of <span
+class="math inline">\(z\)</span> being isolated implies that the link is
+in the domain.</em></p>
 </div>
+<p>Need pictures here. Show the classical examples of index +1 and
+-1.</p>
 <h1 data-number="5" id="leibniz-gauss-bonnet-poincaruxe9-hopf"><span
 class="header-section-number">5</span> Leibniz, Gauss-Bonnet,
 Poincaré-Hopf</h1>
@@ -1714,15 +1665,36 @@ g:M\to B\)</span> and <span class="math inline">\(p:x=_M y\)</span> then
 </div>
 <h2 data-number="5.2" id="the-total-curvature"><span
 class="header-section-number">5.2</span> The total curvature</h2>
+<p>On the 2-face <span class="math inline">\(F\)</span> bounding a loop
+<span class="math inline">\(\ell:v=_M v\)</span> the map <span
+class="math inline">\(T:M\to\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)</span>
+assigns a homotopy <span
+class="math inline">\(T(F):\ensuremath{\mathsf{refl}}_v=T(\ell)\)</span>,
+where <span class="math inline">\(T(\ell)\)</span> is an automorphism of
+<span class="math inline">\(T(v)\)</span>. The various 2-faces can be
+composed as terms of the 2-groupoid <span
+class="math inline">\(M\)</span>, and we will call the composition <span
+class="math inline">\(T(M):T(v)=T(v)\)</span> the <em>total
+curvature</em>.</p>
+<p>When the fibers are torsors we need loops to see what <span
+class="math inline">\(T\)</span> is doing.</p>
 <h2 data-number="5.3" id="the-total-index"><span
 class="header-section-number">5.3</span> The total index</h2>
+<p>When the fibers are pointed then loops are pointed automorphisms of
+mere circles, which are integers.</p>
 <h2 data-number="5.4"
 id="equality-of-total-index-and-total-curvature"><span
 class="header-section-number">5.4</span> Equality of total index and
 total curvature</h2>
-<h2 class="unnumbered"
-id="identification-with-euler-characteristic">Identification with Euler
+<p>When we use the dependent action on paths, we obtain paths between
+the transport from the connection and the swirling of the vector field,
+and these cancel.</p>
+<h2 data-number="5.5"
+id="identification-with-euler-characteristic"><span
+class="header-section-number">5.5</span> Identification with Euler
 characteristic</h2>
+<p>Combinatorial manifolds are intuitive objects that connect directly
+to the classical definition of Euler characteristic.</p>
 <div id="refs" class="references csl-bib-body hanging-indent"
 data-entry-spacing="0" role="list">
 <div id="ref-Symmetry" class="csl-entry" role="listitem">
