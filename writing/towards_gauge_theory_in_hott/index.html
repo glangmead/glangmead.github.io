@@ -1680,21 +1680,94 @@ curvature</em>.</p>
 class="math inline">\(T\)</span> is doing.</p>
 <h2 data-number="5.3" id="the-total-index"><span
 class="header-section-number">5.3</span> The total index</h2>
-<p>When the fibers are pointed then loops are pointed automorphisms of
-mere circles, which are integers.</p>
+<p>If we have <span class="math inline">\(M\setminus Z\)</span> for some
+isolated set of verticies <span class="math inline">\(Z\)</span>, then
+for each <span class="math inline">\(z:Z\)</span> we can compose all the
+faces which contain <span class="math inline">\(z\)</span>, forming a
+new face. In this way we produce an equivalent type <span
+class="math inline">\(M_Z\simeq M\)</span> but which is no longer
+combinatorial since we have erased some of the edges from some of the
+neighborhoods.</p>
+<p>If <span class="math inline">\(X\)</span> is a vector field with
+isolated zeroes on <span class="math inline">\(Z\)</span>, then <span
+class="math inline">\(M_Z\)</span> is a convenient replacement for <span
+class="math inline">\(M\)</span> because <span
+class="math inline">\(X\)</span> is a partial function defined on all of
+<span class="math inline">\(M_Z\)</span> except for a collection of
+faces, each of which bounds one of the zeroes of <span
+class="math inline">\(Z\)</span>.</p>
+<p>If the combinatorial manifold was imported into type theory via some
+process of sampling or other, perhpaps more theoretical construction,
+then we should allow for zeroes to occur on verticies, edges, or faces.
+We can reduce the case of a zero on a vertex or edge to that of a face
+with the replacement method just described. The original combinatorial
+neighborhood structure continues to live in the fibers of <span
+class="math inline">\(T\)</span>, it’s only the base manifold that has
+been replaced.</p>
+<p>The action of <span class="math inline">\(X\)</span> around loops in
+<span class="math inline">\(M_Z\)</span> respects the inverting of
+paths, i.e. traversing them backwards. Therefore in order to perform
+calculations we must also know the direction of the paths.</p>
+<div class="mydef">
+<p><strong>Definition 23</strong>. <em>Given a connected loop <span
+class="math inline">\(\ell:a=_{M_Z}a\)</span> in <span
+class="math inline">\(M_Z\)</span> that is running in the clockwise
+direction around a face of <span class="math inline">\(M_Z\)</span>
+(i.e. the face is to the right of the path), we call the winding number
+of <span class="math inline">\(X(\ell)\)</span> the <em>index</em> of
+<span class="math inline">\(X\)</span> around <span
+class="math inline">\(\ell\)</span>. If we drop the clockwise
+requirement, then the winding number is also known as the
+<em>degree</em> of the map <span class="math inline">\(X\)</span> on
+<span class="math inline">\(\ell\)</span>. In other words index can be
+thought of as “clockwise degree.”</em></p>
+</div>
 <h2 data-number="5.4"
 id="equality-of-total-index-and-total-curvature"><span
 class="header-section-number">5.4</span> Equality of total index and
 total curvature</h2>
-<p>When we use the dependent action on paths, we obtain paths between
-the transport from the connection and the swirling of the vector field,
-and these cancel.</p>
+<p>If we compute <span class="math inline">\(\mathrm{tr}_\ell
+X(a)=X(a)\)</span> around every face boundary in <span
+class="math inline">\(M_Z\)</span> then we can describe that in two
+ways. In homotopy type theory this is “the 1-skeleton-over,” the
+pathover for the concatenation of every loop. It is also the total
+difference between the curvature around every loop, and the vector
+field. It is also zero.</p>
+<div class="mythm">
+<p><strong>Theorem 4</strong>. <em>The total pathover of all face
+boundaries is <span
+class="math inline">\(\ensuremath{\mathsf{refl}}_*\)</span>, hence the
+total curvature is equal to the total index of <span
+class="math inline">\(X\)</span>.</em></p>
+</div>
+<p><em>Proof.</em> When we concatenate every loop we visit every edge
+twice in opposite directions. ◻</p>
+<div class="mycor">
+<p><strong>Corollary 3</strong>. <em>The total index of a vector field
+with isolated zeroes is independent of the vector field.</em></p>
+</div>
+<div class="mycor">
+<p><strong>Corollary 4</strong>. <em>The total curvature is an
+integer.</em></p>
+</div>
+<p>The last step is to link this value to the Euler characteristic.</p>
 <h2 data-number="5.5"
 id="identification-with-euler-characteristic"><span
 class="header-section-number">5.5</span> Identification with Euler
 characteristic</h2>
 <p>Combinatorial manifolds are intuitive objects that connect directly
-to the classical definition of Euler characteristic.</p>
+to the classical definition of Euler characteristic. We can argue using
+Morse theory, the study of smooth real-valued functions on smooth
+manifolds and their singularities. Classically the gradient of a Morse
+function is a vector field that can be used to decompose the manifold
+into its <em>handlebody decomposition</em>. This would be an excellent
+story to pursue in future work.</p>
+<p>Imagine a combinatorial manifold of a genus g oriented surface
+standing upright with the holes forming a vertical sequence. Now install
+a vector field that points downward whenever possible. This vector field
+will have a zero at the top and bottom, and one at the top and bottom of
+each hole. The top and bottom will be index 1, and ones around the holes
+will be index -1.</p>
 <div id="refs" class="references csl-bib-body hanging-indent"
 data-entry-spacing="0" role="list">
 <div id="ref-Symmetry" class="csl-entry" role="listitem">

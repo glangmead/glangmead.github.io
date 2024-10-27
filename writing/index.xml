@@ -1296,21 +1296,94 @@ curvature&lt;/em&gt;.&lt;/p&gt;
 class=&#34;math inline&#34;&gt;\(T\)&lt;/span&gt; is doing.&lt;/p&gt;
 &lt;h2 data-number=&#34;5.3&#34; id=&#34;the-total-index&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;5.3&lt;/span&gt; The total index&lt;/h2&gt;
-&lt;p&gt;When the fibers are pointed then loops are pointed automorphisms of
-mere circles, which are integers.&lt;/p&gt;
+&lt;p&gt;If we have &lt;span class=&#34;math inline&#34;&gt;\(M\setminus Z\)&lt;/span&gt; for some
+isolated set of verticies &lt;span class=&#34;math inline&#34;&gt;\(Z\)&lt;/span&gt;, then
+for each &lt;span class=&#34;math inline&#34;&gt;\(z:Z\)&lt;/span&gt; we can compose all the
+faces which contain &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;, forming a
+new face. In this way we produce an equivalent type &lt;span
+class=&#34;math inline&#34;&gt;\(M_Z\simeq M\)&lt;/span&gt; but which is no longer
+combinatorial since we have erased some of the edges from some of the
+neighborhoods.&lt;/p&gt;
+&lt;p&gt;If &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; is a vector field with
+isolated zeroes on &lt;span class=&#34;math inline&#34;&gt;\(Z\)&lt;/span&gt;, then &lt;span
+class=&#34;math inline&#34;&gt;\(M_Z\)&lt;/span&gt; is a convenient replacement for &lt;span
+class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; because &lt;span
+class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; is a partial function defined on all of
+&lt;span class=&#34;math inline&#34;&gt;\(M_Z\)&lt;/span&gt; except for a collection of
+faces, each of which bounds one of the zeroes of &lt;span
+class=&#34;math inline&#34;&gt;\(Z\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;If the combinatorial manifold was imported into type theory via some
+process of sampling or other, perhpaps more theoretical construction,
+then we should allow for zeroes to occur on verticies, edges, or faces.
+We can reduce the case of a zero on a vertex or edge to that of a face
+with the replacement method just described. The original combinatorial
+neighborhood structure continues to live in the fibers of &lt;span
+class=&#34;math inline&#34;&gt;\(T\)&lt;/span&gt;, it’s only the base manifold that has
+been replaced.&lt;/p&gt;
+&lt;p&gt;The action of &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; around loops in
+&lt;span class=&#34;math inline&#34;&gt;\(M_Z\)&lt;/span&gt; respects the inverting of
+paths, i.e. traversing them backwards. Therefore in order to perform
+calculations we must also know the direction of the paths.&lt;/p&gt;
+&lt;div class=&#34;mydef&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Definition 23&lt;/strong&gt;. &lt;em&gt;Given a connected loop &lt;span
+class=&#34;math inline&#34;&gt;\(\ell:a=_{M_Z}a\)&lt;/span&gt; in &lt;span
+class=&#34;math inline&#34;&gt;\(M_Z\)&lt;/span&gt; that is running in the clockwise
+direction around a face of &lt;span class=&#34;math inline&#34;&gt;\(M_Z\)&lt;/span&gt;
+(i.e. the face is to the right of the path), we call the winding number
+of &lt;span class=&#34;math inline&#34;&gt;\(X(\ell)\)&lt;/span&gt; the &lt;em&gt;index&lt;/em&gt; of
+&lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; around &lt;span
+class=&#34;math inline&#34;&gt;\(\ell\)&lt;/span&gt;. If we drop the clockwise
+requirement, then the winding number is also known as the
+&lt;em&gt;degree&lt;/em&gt; of the map &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; on
+&lt;span class=&#34;math inline&#34;&gt;\(\ell\)&lt;/span&gt;. In other words index can be
+thought of as “clockwise degree.”&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
 &lt;h2 data-number=&#34;5.4&#34;
 id=&#34;equality-of-total-index-and-total-curvature&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;5.4&lt;/span&gt; Equality of total index and
 total curvature&lt;/h2&gt;
-&lt;p&gt;When we use the dependent action on paths, we obtain paths between
-the transport from the connection and the swirling of the vector field,
-and these cancel.&lt;/p&gt;
+&lt;p&gt;If we compute &lt;span class=&#34;math inline&#34;&gt;\(\mathrm{tr}_\ell
+X(a)=X(a)\)&lt;/span&gt; around every face boundary in &lt;span
+class=&#34;math inline&#34;&gt;\(M_Z\)&lt;/span&gt; then we can describe that in two
+ways. In homotopy type theory this is “the 1-skeleton-over,” the
+pathover for the concatenation of every loop. It is also the total
+difference between the curvature around every loop, and the vector
+field. It is also zero.&lt;/p&gt;
+&lt;div class=&#34;mythm&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Theorem 4&lt;/strong&gt;. &lt;em&gt;The total pathover of all face
+boundaries is &lt;span
+class=&#34;math inline&#34;&gt;\(\ensuremath{\mathsf{refl}}_*\)&lt;/span&gt;, hence the
+total curvature is equal to the total index of &lt;span
+class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;em&gt;Proof.&lt;/em&gt; When we concatenate every loop we visit every edge
+twice in opposite directions. ◻&lt;/p&gt;
+&lt;div class=&#34;mycor&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Corollary 3&lt;/strong&gt;. &lt;em&gt;The total index of a vector field
+with isolated zeroes is independent of the vector field.&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;mycor&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Corollary 4&lt;/strong&gt;. &lt;em&gt;The total curvature is an
+integer.&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;The last step is to link this value to the Euler characteristic.&lt;/p&gt;
 &lt;h2 data-number=&#34;5.5&#34;
 id=&#34;identification-with-euler-characteristic&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;5.5&lt;/span&gt; Identification with Euler
 characteristic&lt;/h2&gt;
 &lt;p&gt;Combinatorial manifolds are intuitive objects that connect directly
-to the classical definition of Euler characteristic.&lt;/p&gt;
+to the classical definition of Euler characteristic. We can argue using
+Morse theory, the study of smooth real-valued functions on smooth
+manifolds and their singularities. Classically the gradient of a Morse
+function is a vector field that can be used to decompose the manifold
+into its &lt;em&gt;handlebody decomposition&lt;/em&gt;. This would be an excellent
+story to pursue in future work.&lt;/p&gt;
+&lt;p&gt;Imagine a combinatorial manifold of a genus g oriented surface
+standing upright with the holes forming a vertical sequence. Now install
+a vector field that points downward whenever possible. This vector field
+will have a zero at the top and bottom, and one at the top and bottom of
+each hole. The top and bottom will be index 1, and ones around the holes
+will be index -1.&lt;/p&gt;
 &lt;div id=&#34;refs&#34; class=&#34;references csl-bib-body hanging-indent&#34;
 data-entry-spacing=&#34;0&#34; role=&#34;list&#34;&gt;
 &lt;div id=&#34;ref-Symmetry&#34; class=&#34;csl-entry&#34; role=&#34;listitem&#34;&gt;
