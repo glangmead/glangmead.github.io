@@ -348,12 +348,19 @@ map in &lt;span class=&#34;math inline&#34;&gt;\(M\to\mathrm{K}(G,n+1)\)&lt;/spa
 so is a principal fibration, if and only if the associated action &lt;span
 class=&#34;math inline&#34;&gt;\(f_\bullet\)&lt;/span&gt; is contractible.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
+&lt;p&gt;Note that &lt;span
+class=&#34;math inline&#34;&gt;\(\mathrm{EM_{\bullet}}(G,n)\simeq
+\mathrm{K}(\mathrm{Aut}G,1)\)&lt;/span&gt;. In the special case of &lt;span
+class=&#34;math inline&#34;&gt;\(\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)&lt;/span&gt;
+the conditions of the theorem are met when &lt;span
+class=&#34;math inline&#34;&gt;\(f_\bullet:M\to\mathrm{K}(\mathrm{Aut}\ensuremath{\mathbb{Z}},
+1)\)&lt;/span&gt; is contractible. This amounts to a choice of direction for
+all the circles, and so deserves to be renamed that &lt;span
+class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; is &lt;em&gt;orientable&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;And so we can continue to work with the classifying space &lt;span
 class=&#34;math inline&#34;&gt;\(\mathrm{EM}(G,1)\)&lt;/span&gt; and study &lt;span
-class=&#34;math inline&#34;&gt;\(\mathrm{K}(G,1)\)&lt;/span&gt;-fibrations, and then
-later add the extra propositional requirement when it is needed to prove
-that we are working with &lt;span
-class=&#34;math inline&#34;&gt;\(M\to\mathrm{K}(G,2)\)&lt;/span&gt;.&lt;/p&gt;
+class=&#34;math inline&#34;&gt;\(\mathrm{K}(G,1)\)&lt;/span&gt;-fibrations, knowing that
+if the manifold is oriented then these are principal bundles.&lt;/p&gt;
 &lt;h2 data-number=&#34;2.2&#34; id=&#34;pathovers&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;2.2&lt;/span&gt; Pathovers&lt;/h2&gt;
 &lt;p&gt;Suppose we have &lt;span
