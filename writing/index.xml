@@ -119,22 +119,14 @@ class=&#34;toc-section-number&#34;&gt;3.5&lt;/span&gt; The torus&lt;/a&gt;&lt;/l
 &lt;li&gt;&lt;a href=&#34;#vector-fields&#34; id=&#34;toc-vector-fields&#34;&gt;&lt;span
 class=&#34;toc-section-number&#34;&gt;3.6&lt;/span&gt; Vector fields&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#higher-geometry&#34; id=&#34;toc-higher-geometry&#34;&gt;&lt;span
-class=&#34;toc-section-number&#34;&gt;4&lt;/span&gt; Higher geometry&lt;/a&gt;
+&lt;li&gt;&lt;a href=&#34;#the-connection-to-connections&#34;
+id=&#34;toc-the-connection-to-connections&#34;&gt;&lt;span
+class=&#34;toc-section-number&#34;&gt;4&lt;/span&gt; The connection to connections&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#connections&#34; id=&#34;toc-connections&#34;&gt;&lt;span
-class=&#34;toc-section-number&#34;&gt;4.1&lt;/span&gt; Connections&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#connections-as-splittings&#34;
-id=&#34;toc-connections-as-splittings&#34;&gt;&lt;span
-class=&#34;toc-section-number&#34;&gt;4.1.1&lt;/span&gt; Connections as
-splittings&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#covering-spaces&#34; id=&#34;toc-covering-spaces&#34;&gt;&lt;span
-class=&#34;toc-section-number&#34;&gt;4.1.2&lt;/span&gt; Covering spaces&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#gauge-transformations&#34;
-id=&#34;toc-gauge-transformations&#34;&gt;&lt;span
-class=&#34;toc-section-number&#34;&gt;4.1.3&lt;/span&gt; Gauge transformations&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#classical-version&#34; id=&#34;toc-classical-version&#34;&gt;&lt;span
+class=&#34;toc-section-number&#34;&gt;4.1&lt;/span&gt; Classical version&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#type-theory-version&#34; id=&#34;toc-type-theory-version&#34;&gt;&lt;span
+class=&#34;toc-section-number&#34;&gt;4.2&lt;/span&gt; Type theory version&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#leibniz-gauss-bonnet-poincaruxe9-hopf&#34;
 id=&#34;toc-leibniz-gauss-bonnet-poincaruxe9-hopf&#34;&gt;&lt;span
@@ -265,8 +257,8 @@ class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; be a group (a set with the usu
 classical structure and properties). A &lt;strong&gt;&lt;span
 class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt;-set&lt;/strong&gt; is a set &lt;span
 class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; equipped with a homomorphism &lt;span
-class=&#34;math inline&#34;&gt;\(\phi:G\to\mathrm{Aut}(X)\)&lt;/span&gt;. If in addition
-we have a term &lt;span
+class=&#34;math inline&#34;&gt;\(\phi:G\to\mathop{\mathrm{Aut}}(X)\)&lt;/span&gt;. If in
+addition we have a term &lt;span
 class=&#34;math display&#34;&gt;\[\mathsf{is\_torsor}:||X||_{-1}\times
 \prod_{g:G}\mathsf{is\_equiv}(\phi(-,x):G\to X)\]&lt;/span&gt; then we call
 this data a &lt;strong&gt;&lt;span
@@ -356,10 +348,11 @@ class=&#34;math inline&#34;&gt;\(f_\bullet\)&lt;/span&gt; is contractible.&lt;/e
 &lt;/div&gt;
 &lt;p&gt;Note that &lt;span
 class=&#34;math inline&#34;&gt;\(\mathrm{EM_{\bullet}}(G,n)\simeq
-\mathrm{K}(\mathrm{Aut}G,1)\)&lt;/span&gt;. In the special case of &lt;span
+\mathrm{K}(\mathop{\mathrm{Aut}}G,1)\)&lt;/span&gt;. In the special case of
+&lt;span
 class=&#34;math inline&#34;&gt;\(\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)&lt;/span&gt;
 the conditions of the theorem are met when &lt;span
-class=&#34;math inline&#34;&gt;\(f_\bullet:M\to\mathrm{K}(\mathrm{Aut}\ensuremath{\mathbb{Z}},
+class=&#34;math inline&#34;&gt;\(f_\bullet:M\to\mathrm{K}(\mathop{\mathrm{Aut}}\ensuremath{\mathbb{Z}},
 1)\)&lt;/span&gt; is contractible. This amounts to a choice of direction for
 all the circles, and so deserves to be renamed that &lt;span
 class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; is &lt;em&gt;orientable&lt;/em&gt;.&lt;/p&gt;
@@ -947,8 +940,9 @@ in the domain.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;Need pictures here. Show the classical examples of index +1 and
 -1.&lt;/p&gt;
-&lt;h1 data-number=&#34;4&#34; id=&#34;higher-geometry&#34;&gt;&lt;span
-class=&#34;header-section-number&#34;&gt;4&lt;/span&gt; Higher geometry&lt;/h1&gt;
+&lt;h1 data-number=&#34;4&#34; id=&#34;the-connection-to-connections&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;4&lt;/span&gt; The connection to
+connections&lt;/h1&gt;
 &lt;p&gt;There are no theorems in this section. We don’t have two definitions
 of connections in HoTT that we can prove are equivalent. Instead we’ll
 compare some key features of the classical theory to the system we have
@@ -956,19 +950,57 @@ sketched above. It is my hope that differential geometers could onboard
 into HoTT through this work, and that someone new to geometry could
 learn it here as well. In both cases a dictionary of sorts would be
 helpful.&lt;/p&gt;
-&lt;h2 data-number=&#34;4.1&#34; id=&#34;connections&#34;&gt;&lt;span
-class=&#34;header-section-number&#34;&gt;4.1&lt;/span&gt; Connections&lt;/h2&gt;
-&lt;p&gt;The action on paths of the function &lt;span
-class=&#34;math inline&#34;&gt;\(T:M\to
-\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)&lt;/span&gt; is what is called a
-connection. We’ll spend some time drawing more complete parallels with
-the classical story, both to provide some evidence and to educate.&lt;/p&gt;
-&lt;h3 data-number=&#34;4.1.1&#34; id=&#34;connections-as-splittings&#34;&gt;&lt;span
-class=&#34;header-section-number&#34;&gt;4.1.1&lt;/span&gt; Connections as
-splittings&lt;/h3&gt;
-&lt;p&gt;The classical story goes like this.&lt;/p&gt;
+&lt;h2 data-number=&#34;4.1&#34; id=&#34;classical-version&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;4.1&lt;/span&gt; Classical version&lt;/h2&gt;
 &lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 20&lt;/strong&gt;. &lt;em&gt;The &lt;strong&gt;vertical
+&lt;p&gt;&lt;strong&gt;Definition 20&lt;/strong&gt;. &lt;em&gt;A &lt;strong&gt;principal
+bundle&lt;/strong&gt; is a smooth map &lt;span class=&#34;math inline&#34;&gt;\(\pi:P\to
+M\)&lt;/span&gt; between smooth manifolds such that&lt;/em&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;All the fibers of &lt;span class=&#34;math inline&#34;&gt;\(\pi\)&lt;/span&gt;
+are equivalent as a smooth manifold to a fixed Lie group &lt;span
+class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;There is a smooth &lt;span
+class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt;-action &lt;span
+class=&#34;math inline&#34;&gt;\(P\times G\to P\)&lt;/span&gt; on the right that acts on
+fibers, and does so freely and transitively.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;There exists an open cover &lt;span
+class=&#34;math inline&#34;&gt;\(\{U_i\}\)&lt;/span&gt; of &lt;span
+class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; and equivariant diffeomorphisms &lt;span
+class=&#34;math inline&#34;&gt;\(\phi_i:P|_{U_i}\to U_i\times G\)&lt;/span&gt; (i.e.
+&lt;span class=&#34;math inline&#34;&gt;\(\phi_i(p\cdot g)= \phi_i(p)\cdot
+g\)&lt;/span&gt;).&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;p&gt;Physicists call principal bundle automorphisms “gauge
+transformations”:&lt;/p&gt;
+&lt;div class=&#34;mydef&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Definition 21&lt;/strong&gt;. &lt;em&gt;A &lt;strong&gt;gauge
+transformation&lt;/strong&gt; is a map &lt;span class=&#34;math inline&#34;&gt;\(\Phi:P\to
+P\)&lt;/span&gt; commuting with the projection to &lt;span
+class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; and which is &lt;span
+class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt;-equivariant, i.e. &lt;span
+class=&#34;math inline&#34;&gt;\(\Phi(p\cdot g) = \Phi(p)\cdot g\)&lt;/span&gt;. Denote
+the group of gauge transformations by &lt;span
+class=&#34;math inline&#34;&gt;\(\mathop{\mathrm{Aut}}P\)&lt;/span&gt;. In the literature
+it is sometimes denoted &lt;span
+class=&#34;math inline&#34;&gt;\(\mathscr{G}(P)\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Informally, a connection on a principal bundle is a local splitting
+of the total space of the tangent bundle &lt;span
+class=&#34;math inline&#34;&gt;\(TP\)&lt;/span&gt; into a horizontal component (pointing
+along &lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt;) and vertical component
+(pointing along the fibers of &lt;span class=&#34;math inline&#34;&gt;\(P\)&lt;/span&gt;).
+The splitting is required to be equivariant. Such a splitting produces,
+and is in fact produced by, a function lifting paths &lt;span
+class=&#34;math inline&#34;&gt;\(\alpha:[0,1]\to M\)&lt;/span&gt; uniquely into &lt;span
+class=&#34;math inline&#34;&gt;\(P\)&lt;/span&gt; given a starting point above &lt;span
+class=&#34;math inline&#34;&gt;\(\alpha(0)\)&lt;/span&gt;. Homotopy type theory was
+inspired in the first place to imitate this structure, so it’s no
+surprise to see this relationship once we pass to the discrete situation
+native to HoTT and leave smoothness behind. In a bit more detail:&lt;/p&gt;
+&lt;div class=&#34;mydef&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Definition 22&lt;/strong&gt;. &lt;em&gt;The &lt;strong&gt;vertical
 bundle&lt;/strong&gt; &lt;span class=&#34;math inline&#34;&gt;\(VP\)&lt;/span&gt; of a principal
 bundle &lt;span class=&#34;math inline&#34;&gt;\(\pi:P\to M\)&lt;/span&gt; with Lie group
 &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; is the kernel of the derivative
@@ -976,35 +1008,36 @@ bundle &lt;span class=&#34;math inline&#34;&gt;\(\pi:P\to M\)&lt;/span&gt; with 
 &lt;/div&gt;
 &lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(VP\)&lt;/span&gt; can be visualized as the
 collection of tangent vectors that point along the fibers. It should be
-clear that the group &lt;span class=&#34;math inline&#34;&gt;\(\mathrm{Aut}P\)&lt;/span&gt;
-acts on &lt;span class=&#34;math inline&#34;&gt;\(VP\)&lt;/span&gt;: an automorphism &lt;span
-class=&#34;math inline&#34;&gt;\(\phi:P\to P\)&lt;/span&gt; sends &lt;span
-class=&#34;math inline&#34;&gt;\(V_pP\)&lt;/span&gt; to &lt;span
-class=&#34;math inline&#34;&gt;\(V_{\phi(p)}P\)&lt;/span&gt;, where of course &lt;span
-class=&#34;math inline&#34;&gt;\(\pi(p)=\pi(\phi(p))\)&lt;/span&gt;.&lt;/p&gt;
+clear that at each point of &lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; the
+group &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; acts on &lt;span
+class=&#34;math inline&#34;&gt;\(VP\)&lt;/span&gt;, sending vertical vectors to vertical
+vectors. In other words, &lt;span
+class=&#34;math inline&#34;&gt;\(\mathop{\mathrm{Aut}}P\)&lt;/span&gt; acts on &lt;span
+class=&#34;math inline&#34;&gt;\(VP\)&lt;/span&gt;.&lt;/p&gt;
 &lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 21&lt;/strong&gt;. &lt;em&gt;An &lt;strong&gt;Ehresmann
+&lt;p&gt;&lt;strong&gt;Definition 23&lt;/strong&gt;. &lt;em&gt;An &lt;strong&gt;Ehresmann
 connection&lt;/strong&gt; on a principal bundle &lt;span
 class=&#34;math inline&#34;&gt;\(\pi:P\to M\)&lt;/span&gt; with Lie group &lt;span
 class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; is a splitting &lt;span
 class=&#34;math inline&#34;&gt;\(TP=VP\oplus HP\)&lt;/span&gt; at every point of &lt;span
-class=&#34;math inline&#34;&gt;\(P\)&lt;/span&gt; into vertical and “horizontal”
-subspaces, which is preserved by the action of &lt;span
-class=&#34;math inline&#34;&gt;\(\mathrm{Aut}P\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
+class=&#34;math inline&#34;&gt;\(P\)&lt;/span&gt; into vertical and complementary
+“horizontal” subspaces, which is preserved by the action of &lt;span
+class=&#34;math inline&#34;&gt;\(\mathop{\mathrm{Aut}}P\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;Being preserved by the action of &lt;span
-class=&#34;math inline&#34;&gt;\(\mathrm{Aut}P\)&lt;/span&gt; means that the
+class=&#34;math inline&#34;&gt;\(\mathop{\mathrm{Aut}}P\)&lt;/span&gt; implies that the
 complementary horizontal subspaces in a given fiber of &lt;span
 class=&#34;math inline&#34;&gt;\(\pi:P\to M\)&lt;/span&gt; are determined by the
 splitting at any single point in the fiber. The action of &lt;span
 class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; on this fiber can then push the
 splitting around to all the other points.&lt;/p&gt;
-&lt;p&gt;The motivation for this definition is that we now have an isomorphism
-&lt;span class=&#34;math inline&#34;&gt;\(T_p\pi:H_pP\to T_{\pi(p)}M\)&lt;/span&gt; between
-each horizontal space and the tangent space below it in &lt;span
-class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt;. This means that given a tangent vector
-at &lt;span class=&#34;math inline&#34;&gt;\(x:M\)&lt;/span&gt; and a point &lt;span
-class=&#34;math inline&#34;&gt;\(p\)&lt;/span&gt; in &lt;span
+&lt;p&gt;The utility and parsimony of this definition relates to the
+solvability of ordinary differential equations. We now have an
+isomorphism &lt;span class=&#34;math inline&#34;&gt;\(T_p\pi:H_pP\to
+T_{\pi(p)}M\)&lt;/span&gt; between each horizontal space and the tangent space
+below it in &lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt;. This means that
+given a tangent vector at &lt;span class=&#34;math inline&#34;&gt;\(x:M\)&lt;/span&gt; and a
+point &lt;span class=&#34;math inline&#34;&gt;\(p\)&lt;/span&gt; in &lt;span
 class=&#34;math inline&#34;&gt;\(\pi^{-1}(x)\)&lt;/span&gt; we can uniquely lift the
 tangent vector to a horizontal vector at &lt;span
 class=&#34;math inline&#34;&gt;\(p\)&lt;/span&gt;. We can also lift vector fields and
@@ -1014,114 +1047,46 @@ for &lt;span class=&#34;math inline&#34;&gt;\(\gamma(0)\)&lt;/span&gt; and then 
 tangent vectors of &lt;span class=&#34;math inline&#34;&gt;\(\gamma\)&lt;/span&gt; and prove
 that you can integrate the lift of that vector field upstairs in &lt;span
 class=&#34;math inline&#34;&gt;\(HP\)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;Then, armed with the lifting of paths one immediately obtains
-isomorphisms between the fibers of &lt;span
-class=&#34;math inline&#34;&gt;\(P\)&lt;/span&gt;. So the Ehresmann connection, the
+&lt;p&gt;Armed with the lifting of paths one immediately obtains isomorphisms
+between the fibers of &lt;span class=&#34;math inline&#34;&gt;\(P\)&lt;/span&gt;: given a
+path in &lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; we can map the starting
+point of a lift to the ending point. So the Ehresmann connection, the
 lifting of paths, and transport isomorphisms between fibers are all
 recapitulations of the structure that the connection adds to the
 bundle.&lt;/p&gt;
-&lt;p&gt;Moving now to HoTT, fix a type &lt;span
-class=&#34;math inline&#34;&gt;\(M:\mathcal{U}\)&lt;/span&gt; and a type family &lt;span
-class=&#34;math inline&#34;&gt;\(f:M\to\mathcal{U}\)&lt;/span&gt;. Path induction gives
-us the transport isomorphism &lt;span class=&#34;math inline&#34;&gt;\(\prod_{p:x=_M
-y}\mathrm{tr}(p):f(x)=f(y)\)&lt;/span&gt;. We can use this to define a type of
-&lt;em&gt;dependent paths&lt;/em&gt;, also called &lt;em&gt;pathovers&lt;/em&gt; or &lt;em&gt;paths
-over&lt;/em&gt; a given path.&lt;/p&gt;
-&lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 22&lt;/strong&gt;. &lt;em&gt;With the above context and points
-&lt;span class=&#34;math inline&#34;&gt;\(a:f(x), b:f(y)\)&lt;/span&gt; the type of
-&lt;strong&gt;dependent paths over &lt;span
-class=&#34;math inline&#34;&gt;\(p\)&lt;/span&gt;&lt;/strong&gt; with endpoints &lt;span
-class=&#34;math inline&#34;&gt;\(a, b\)&lt;/span&gt; is denoted &lt;span
-class=&#34;math display&#34;&gt;\[a\xrightarrow[{p}]{=}b.\]&lt;/span&gt; By induction we
-can assume &lt;span class=&#34;math inline&#34;&gt;\(p\)&lt;/span&gt; is &lt;span
-class=&#34;math inline&#34;&gt;\(\ensuremath{\mathsf{refl}}_a\)&lt;/span&gt; in which
-case &lt;span class=&#34;math inline&#34;&gt;\(a\xrightarrow[{p}]{=}b\)&lt;/span&gt; is
-&lt;span class=&#34;math inline&#34;&gt;\(a=_{f(x)}a\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&#34;mynote&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Note 1&lt;/strong&gt;. &lt;em&gt;Recall that torsors have a physical
+interpretation as a quantity without a specified unit, such as mass,
+length, or time. When we choose a base point in a torsor it becomes the
+standard torsor &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; acting on itself
+(for example, the additive real numbers). A physicist is looking for
+properties or laws that are independent of such a choice. In the 20th
+century physicists further wondered about choices of units that vary
+from point to point, and began searching for laws that are invariant
+under this much larger space of transformations. And so they and we are
+led to explore quotienting by the action of the group of gauge
+transformations, and in particular the space of connections “mod gauge.”
+In this scenario the base manifold &lt;span
+class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; is spacetime, and a gauge
+transformation is a smoothly varying choice of gauge (units) at each
+point.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;p&gt;See &lt;span class=&#34;citation&#34; data-cites=&#34;Symmetry&#34;&gt; (&lt;a
-href=&#34;#ref-Symmetry&#34; role=&#34;doc-biblioref&#34;&gt;Bezem &lt;em&gt;et al.&lt;/em&gt;,
-2023&lt;/a&gt;)&lt;/span&gt; for more discussion of dependent paths (where they use
-the term “path over”), including composition, and associativity
-thereof.&lt;/p&gt;
-&lt;p&gt;We recall now the identity type of sigma types:&lt;/p&gt;
-&lt;div id=&#34;thm:idsit&#34; class=&#34;mythm&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Theorem 2&lt;/strong&gt;. &lt;em&gt;(HoTT book Theorem 2.7.2 &lt;span
-class=&#34;citation&#34; data-cites=&#34;hottbook&#34;&gt; (&lt;a href=&#34;#ref-hottbook&#34;
-role=&#34;doc-biblioref&#34;&gt;Univalent Foundations Program, 2013&lt;/a&gt;)&lt;/span&gt;) If
-&lt;span class=&#34;math inline&#34;&gt;\(f:M\to \mathcal{U}\)&lt;/span&gt; is a type family
-and &lt;span class=&#34;math inline&#34;&gt;\(w,w&amp;#39;:\sum_{x:M}f(x)\)&lt;/span&gt; then
-there is an equivalence &lt;span
-class=&#34;math display&#34;&gt;\[\mathsf{split}:(w=w&amp;#39;)\simeq
-\sum_{p:\ensuremath{\mathrm{pr}}_1(w)=_M\ensuremath{\mathrm{pr}}_1(w&amp;#39;)}
-\left[\mathrm{tr}(p)(\ensuremath{\mathrm{pr}}_2(w))\right] =
-\ensuremath{\mathrm{pr}}_2(w&amp;#39;).\]&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;In particular, given &lt;span class=&#34;math inline&#34;&gt;\(p:x=_M y\)&lt;/span&gt;
-and &lt;span class=&#34;math inline&#34;&gt;\(w:f(x)\)&lt;/span&gt; we have &lt;span
-class=&#34;math inline&#34;&gt;\(w\xrightarrow[{p}]{=}tr(p)(w)\simeq
-tr(p)(w)=_{f(y)}tr(p)(w)\)&lt;/span&gt; which has the term &lt;span
-class=&#34;math inline&#34;&gt;\(\ensuremath{\mathsf{refl}}\)&lt;/span&gt; which we can
-call “the horizontal lift of &lt;span class=&#34;math inline&#34;&gt;\(p\)&lt;/span&gt;
-starting at &lt;span class=&#34;math inline&#34;&gt;\(w\)&lt;/span&gt;.” We can imitate the
-classical definition of a connection by defining &lt;span
-class=&#34;math inline&#34;&gt;\(\omega\stackrel{\mathrm{def}}{=}\ensuremath{\mathrm{pr}}_2\circ\mathsf{split}\)&lt;/span&gt;,
-the projection onto the vertical component. And thus in HoTT we can see
-the equivalence of transport and lifting of paths into horizontal and
-vertical components.&lt;/p&gt;
-&lt;h3 data-number=&#34;4.1.2&#34; id=&#34;covering-spaces&#34;&gt;&lt;span
-class=&#34;header-section-number&#34;&gt;4.1.2&lt;/span&gt; Covering spaces&lt;/h3&gt;
-&lt;p&gt;If &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; is a 0-truncated group such
-as &lt;span class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{Z}}\)&lt;/span&gt; then the
-type of torsors (delooping) &lt;span class=&#34;math inline&#34;&gt;\(BG\)&lt;/span&gt; is
-1-truncated. If &lt;span class=&#34;math inline&#34;&gt;\(f:M\to BG\)&lt;/span&gt; is a type
-family then &lt;span class=&#34;math inline&#34;&gt;\(\sum_{x:M}f(x)\)&lt;/span&gt; has
-fibers that are sets (&lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt;-torsors).
-So transport functions are set isomorphisms, and the transport of any
-contractible loop in &lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; will be
-&lt;span class=&#34;math inline&#34;&gt;\(\ensuremath{\mathsf{refl}}\)&lt;/span&gt; (the
-identity) of the fiber, which is what we mean by flat.&lt;/p&gt;
-&lt;h3 data-number=&#34;4.1.3&#34; id=&#34;gauge-transformations&#34;&gt;&lt;span
-class=&#34;header-section-number&#34;&gt;4.1.3&lt;/span&gt; Gauge transformations&lt;/h3&gt;
-&lt;p&gt;A &lt;em&gt;gauge transformation&lt;/em&gt; is a term inherited from physics.
-It’s an automorphism of a principal bundle &lt;span
-class=&#34;math inline&#34;&gt;\(P\to M\)&lt;/span&gt;, meaning a homeomorphism of &lt;span
-class=&#34;math inline&#34;&gt;\(P\)&lt;/span&gt; that commutes with the projection to
-&lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; and so acts on each fiber. It is
-further required to be equivariant under the action of the group &lt;span
-class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt;, and so it’s very similar to the act of
-multiplying each fiber by a continuously varying element of &lt;span
-class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;In HoTT if the bundle is classified by &lt;span
-class=&#34;math inline&#34;&gt;\(f:M\to \mathcal{U}\)&lt;/span&gt; then an automorphism
-is a homotopy &lt;span class=&#34;math inline&#34;&gt;\(f\sim f\)&lt;/span&gt; and the group
-of gauge transformations is the loop space &lt;span
-class=&#34;math inline&#34;&gt;\(\Omega_f(M\to \mathcal{U})\)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;Recall that torsors have a physical interpretation as a quantity
-without a specified unit, such as mass, length, or time. When we choose
-a base point in a torsor it becomes the standard torsor &lt;span
-class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; acting on itself (for example, the
-additive real numbers). A physicist is looking for properties or laws
-that are independent of such a choice. In the 20th century physicists
-further wondered about choices of units that vary from point to point,
-and began searching for laws that are invariant under this much larger
-space of transformations. And so they and we are led to explore
-quotienting by the action of the group of gauge transformations, and in
-particular the space of connections “mod gauge.” In this scenario the
-base manifold &lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; is spacetime, and a
-gauge transformation is a smoothly varying choice of gauge (units) at
-each point.&lt;/p&gt;
-&lt;p&gt;Gauge transformations act on connections. When we view connections as
-infinitesimal splittings of &lt;span class=&#34;math inline&#34;&gt;\(TP\)&lt;/span&gt; into
-vertical and horizontal sub-bundles, a gauge transformation that is
-constant in the neighborhood of a point will not change the splitting,
-it will just shift the fiber rigidly along itself, but one that is
-changing rapidly near a point will tilt the horizontal subspaces. So
-there are two effects: the effect of sliding along the fiber, and the
-effect of the rate of change of the gauge transformation. In classical
-geometry you’ll see formulas like this:&lt;/p&gt;
+&lt;p&gt;Given a bundle &lt;span class=&#34;math inline&#34;&gt;\(\pi:P\to M\)&lt;/span&gt; there
+is a space of connections &lt;span
+class=&#34;math inline&#34;&gt;\(\mathscr{A}(P)\)&lt;/span&gt;. We could slightly tilt
+all the horizontal subspaces, in a variable way from point to point, and
+obtain another connection. The group &lt;span
+class=&#34;math inline&#34;&gt;\(\mathop{\mathrm{Aut}}P\)&lt;/span&gt; acts on this
+space. For example, a gauge transformation that is constant in the
+neighborhood of a point will not change the splitting, it will just
+shift the fiber rigidly along itself. But at the other extreme, a gauge
+transformation that is changing rapidly near a point will tilt the
+horizontal subspaces rapidly. So there are two effects: the effect of
+sliding along the fiber, and the effect of the rate of change of the
+gauge transformation. In classical geometry you’ll see formulas like
+this:&lt;/p&gt;
 &lt;div class=&#34;mythm&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Theorem 3&lt;/strong&gt;. &lt;em&gt;Let &lt;span class=&#34;math inline&#34;&gt;\(P\to
+&lt;p&gt;&lt;strong&gt;Theorem 2&lt;/strong&gt;. &lt;em&gt;Let &lt;span class=&#34;math inline&#34;&gt;\(P\to
 M\)&lt;/span&gt; be a principal bundle and &lt;span
 class=&#34;math inline&#34;&gt;\(A\in\Omega^1(M,\mathfrak{g})\)&lt;/span&gt; a connection
 1-form on &lt;span class=&#34;math inline&#34;&gt;\(P\)&lt;/span&gt;. Suppose that &lt;span
@@ -1172,6 +1137,62 @@ i.e. the contribution from the gauge transformation &lt;span
 class=&#34;math inline&#34;&gt;\(H\)&lt;/span&gt; that comes from the rapidity of change
 from point to point. This term will be large when &lt;span
 class=&#34;math inline&#34;&gt;\(H_U\)&lt;/span&gt; has a large derivative.&lt;/p&gt;
+&lt;h2 data-number=&#34;4.2&#34; id=&#34;type-theory-version&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;4.2&lt;/span&gt; Type theory version&lt;/h2&gt;
+&lt;p&gt;Moving now to HoTT, fix a type &lt;span
+class=&#34;math inline&#34;&gt;\(M:\mathcal{U}\)&lt;/span&gt; and a type family &lt;span
+class=&#34;math inline&#34;&gt;\(f:M\to\mathcal{U}\)&lt;/span&gt;. Path induction gives
+us the transport isomorphism &lt;span class=&#34;math inline&#34;&gt;\(\prod_{p:x=_M
+y}\mathrm{tr}(p):f(x)=f(y)\)&lt;/span&gt;. We can use this to define a type of
+&lt;em&gt;dependent paths&lt;/em&gt;, also called &lt;em&gt;pathovers&lt;/em&gt; or &lt;em&gt;paths
+over&lt;/em&gt; a given path.&lt;/p&gt;
+&lt;div class=&#34;mydef&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Definition 24&lt;/strong&gt;. &lt;em&gt;With the above context and points
+&lt;span class=&#34;math inline&#34;&gt;\(a:f(x), b:f(y)\)&lt;/span&gt; the type of
+&lt;strong&gt;dependent paths over &lt;span
+class=&#34;math inline&#34;&gt;\(p\)&lt;/span&gt;&lt;/strong&gt; with endpoints &lt;span
+class=&#34;math inline&#34;&gt;\(a, b\)&lt;/span&gt; is denoted &lt;span
+class=&#34;math display&#34;&gt;\[a\xrightarrow[{p}]{=}b.\]&lt;/span&gt; By induction we
+can assume &lt;span class=&#34;math inline&#34;&gt;\(p\)&lt;/span&gt; is &lt;span
+class=&#34;math inline&#34;&gt;\(\ensuremath{\mathsf{refl}}_a\)&lt;/span&gt; in which
+case &lt;span class=&#34;math inline&#34;&gt;\(a\xrightarrow[{p}]{=}b\)&lt;/span&gt; is
+&lt;span class=&#34;math inline&#34;&gt;\(a=_{f(x)}a\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;See &lt;span class=&#34;citation&#34; data-cites=&#34;Symmetry&#34;&gt; (&lt;a
+href=&#34;#ref-Symmetry&#34; role=&#34;doc-biblioref&#34;&gt;Bezem &lt;em&gt;et al.&lt;/em&gt;,
+2023&lt;/a&gt;)&lt;/span&gt; for more discussion of dependent paths (where they use
+the term “path over”), including composition, and associativity
+thereof.&lt;/p&gt;
+&lt;p&gt;We recall now the identity type of sigma types:&lt;/p&gt;
+&lt;div id=&#34;thm:idsit&#34; class=&#34;mythm&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Theorem 3&lt;/strong&gt;. &lt;em&gt;(HoTT book Theorem 2.7.2 &lt;span
+class=&#34;citation&#34; data-cites=&#34;hottbook&#34;&gt; (&lt;a href=&#34;#ref-hottbook&#34;
+role=&#34;doc-biblioref&#34;&gt;Univalent Foundations Program, 2013&lt;/a&gt;)&lt;/span&gt;) If
+&lt;span class=&#34;math inline&#34;&gt;\(f:M\to \mathcal{U}\)&lt;/span&gt; is a type family
+and &lt;span class=&#34;math inline&#34;&gt;\(w,w&amp;#39;:\sum_{x:M}f(x)\)&lt;/span&gt; then
+there is an equivalence &lt;span
+class=&#34;math display&#34;&gt;\[\mathsf{split}:(w=w&amp;#39;)\simeq
+\sum_{p:\ensuremath{\mathrm{pr}}_1(w)=_M\ensuremath{\mathrm{pr}}_1(w&amp;#39;)}
+\left[\mathrm{tr}(p)(\ensuremath{\mathrm{pr}}_2(w))\right] =
+\ensuremath{\mathrm{pr}}_2(w&amp;#39;).\]&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;In particular, given &lt;span class=&#34;math inline&#34;&gt;\(p:x=_M y\)&lt;/span&gt;
+and &lt;span class=&#34;math inline&#34;&gt;\(w:f(x)\)&lt;/span&gt; we have &lt;span
+class=&#34;math inline&#34;&gt;\(w\xrightarrow[{p}]{=}tr(p)(w)\simeq
+tr(p)(w)=_{f(y)}tr(p)(w)\)&lt;/span&gt; which has the term &lt;span
+class=&#34;math inline&#34;&gt;\(\ensuremath{\mathsf{refl}}\)&lt;/span&gt; which we can
+call “the horizontal lift of &lt;span class=&#34;math inline&#34;&gt;\(p\)&lt;/span&gt;
+starting at &lt;span class=&#34;math inline&#34;&gt;\(w\)&lt;/span&gt;.” We can imitate the
+classical definition of a connection by defining &lt;span
+class=&#34;math inline&#34;&gt;\(\omega\stackrel{\mathrm{def}}{=}\ensuremath{\mathrm{pr}}_2\circ\mathsf{split}\)&lt;/span&gt;,
+the projection onto the vertical component. And thus in HoTT we can see
+the equivalence of transport and lifting of paths into horizontal and
+vertical components.&lt;/p&gt;
+&lt;p&gt;In HoTT if the bundle is classified by &lt;span
+class=&#34;math inline&#34;&gt;\(f:M\to \mathcal{U}\)&lt;/span&gt; then an automorphism
+is a homotopy &lt;span class=&#34;math inline&#34;&gt;\(f\sim f\)&lt;/span&gt; and the group
+of gauge transformations is the loop space &lt;span
+class=&#34;math inline&#34;&gt;\(\Omega_f(M\to \mathcal{U})\)&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;In HoTT the connection’s parallel transport is visible as the
 transport function, and the horizontal-vertical splitting is visible in
 the decomposition of paths in the sigma type (total space) into pairs of
@@ -1187,7 +1208,7 @@ acts fiberwise. We want to compute the action of &lt;span
 class=&#34;math inline&#34;&gt;\(\ensuremath{\mathsf{ap}}(H&amp;#39;)\)&lt;/span&gt; on the
 horizontal-vertical decomposition of paths from Theorem &lt;a
 href=&#34;#thm:idsit&#34; data-reference-type=&#34;ref&#34;
-data-reference=&#34;thm:idsit&#34;&gt;2&lt;/a&gt; by computing &lt;span
+data-reference=&#34;thm:idsit&#34;&gt;3&lt;/a&gt; by computing &lt;span
 class=&#34;math inline&#34;&gt;\(\omega\circ\ensuremath{\mathsf{ap}}(H&amp;#39;)=\ensuremath{\mathrm{pr}}_2\circ\mathsf{split}\circ\ensuremath{\mathsf{ap}}(H&amp;#39;)\)&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;Denote &lt;span class=&#34;math inline&#34;&gt;\(\sum_{a:M}f(a)\)&lt;/span&gt; by &lt;span
 class=&#34;math inline&#34;&gt;\(P\)&lt;/span&gt;. We’ll adopt a convention of roman
@@ -1304,8 +1325,23 @@ composed as terms of the 2-groupoid &lt;span
 class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt;, and we will call the composition &lt;span
 class=&#34;math inline&#34;&gt;\(T(M):T(v)=T(v)\)&lt;/span&gt; the &lt;em&gt;total
 curvature&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;When the fibers are torsors we need loops to see what &lt;span
-class=&#34;math inline&#34;&gt;\(T\)&lt;/span&gt; is doing.&lt;/p&gt;
+&lt;div class=&#34;mynote&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Note 2&lt;/strong&gt;. &lt;em&gt;If &lt;span
+class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; is a 0-truncated group such as &lt;span
+class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{Z}}\)&lt;/span&gt; then the type
+&lt;span class=&#34;math inline&#34;&gt;\(BG\)&lt;/span&gt; of torsors is 1-truncated. If
+&lt;span class=&#34;math inline&#34;&gt;\(f:M\to BG\)&lt;/span&gt; is a type family then
+&lt;span class=&#34;math inline&#34;&gt;\(\sum_{x:M}f(x)\)&lt;/span&gt; has fibers that are
+sets (&lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt;-torsors). So transport
+functions are set isomorphisms, and the transport of any contractible
+loop in &lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; will be &lt;span
+class=&#34;math inline&#34;&gt;\(\ensuremath{\mathsf{refl}}\)&lt;/span&gt; (the identity)
+of the fiber, which is what we mean by the term &lt;strong&gt;flat&lt;/strong&gt;.
+Transport around non-contractible loops may map to nontrivial fiber
+automorphisms. In this way the theory of covering spaces is a lower
+dimensional version of the story of mere-circle principal
+bundles.&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
 &lt;h2 data-number=&#34;5.3&#34; id=&#34;the-total-index&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;5.3&lt;/span&gt; The total index&lt;/h2&gt;
 &lt;p&gt;If we have &lt;span class=&#34;math inline&#34;&gt;\(M\setminus Z\)&lt;/span&gt; for some
@@ -1337,7 +1373,7 @@ been replaced.&lt;/p&gt;
 paths, i.e. traversing them backwards. Therefore in order to perform
 calculations we must also know the direction of the paths.&lt;/p&gt;
 &lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 23&lt;/strong&gt;. &lt;em&gt;Given a connected loop &lt;span
+&lt;p&gt;&lt;strong&gt;Definition 25&lt;/strong&gt;. &lt;em&gt;Given a connected loop &lt;span
 class=&#34;math inline&#34;&gt;\(\ell:a=_{M_Z}a\)&lt;/span&gt; in &lt;span
 class=&#34;math inline&#34;&gt;\(M_Z\)&lt;/span&gt; that is running in the clockwise
 direction around a face of &lt;span class=&#34;math inline&#34;&gt;\(M_Z\)&lt;/span&gt;

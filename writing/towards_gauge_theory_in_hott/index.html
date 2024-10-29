@@ -503,22 +503,14 @@ class="toc-section-number">3.5</span> The torus</a></li>
 <li><a href="#vector-fields" id="toc-vector-fields"><span
 class="toc-section-number">3.6</span> Vector fields</a></li>
 </ul></li>
-<li><a href="#higher-geometry" id="toc-higher-geometry"><span
-class="toc-section-number">4</span> Higher geometry</a>
+<li><a href="#the-connection-to-connections"
+id="toc-the-connection-to-connections"><span
+class="toc-section-number">4</span> The connection to connections</a>
 <ul>
-<li><a href="#connections" id="toc-connections"><span
-class="toc-section-number">4.1</span> Connections</a>
-<ul>
-<li><a href="#connections-as-splittings"
-id="toc-connections-as-splittings"><span
-class="toc-section-number">4.1.1</span> Connections as
-splittings</a></li>
-<li><a href="#covering-spaces" id="toc-covering-spaces"><span
-class="toc-section-number">4.1.2</span> Covering spaces</a></li>
-<li><a href="#gauge-transformations"
-id="toc-gauge-transformations"><span
-class="toc-section-number">4.1.3</span> Gauge transformations</a></li>
-</ul></li>
+<li><a href="#classical-version" id="toc-classical-version"><span
+class="toc-section-number">4.1</span> Classical version</a></li>
+<li><a href="#type-theory-version" id="toc-type-theory-version"><span
+class="toc-section-number">4.2</span> Type theory version</a></li>
 </ul></li>
 <li><a href="#leibniz-gauss-bonnet-poincaruxe9-hopf"
 id="toc-leibniz-gauss-bonnet-poincaruxe9-hopf"><span
@@ -649,8 +641,8 @@ class="math inline">\(G\)</span> be a group (a set with the usual
 classical structure and properties). A <strong><span
 class="math inline">\(G\)</span>-set</strong> is a set <span
 class="math inline">\(X\)</span> equipped with a homomorphism <span
-class="math inline">\(\phi:G\to\mathrm{Aut}(X)\)</span>. If in addition
-we have a term <span
+class="math inline">\(\phi:G\to\mathop{\mathrm{Aut}}(X)\)</span>. If in
+addition we have a term <span
 class="math display">\[\mathsf{is\_torsor}:||X||_{-1}\times
 \prod_{g:G}\mathsf{is\_equiv}(\phi(-,x):G\to X)\]</span> then we call
 this data a <strong><span
@@ -740,10 +732,11 @@ class="math inline">\(f_\bullet\)</span> is contractible.</em></p>
 </div>
 <p>Note that <span
 class="math inline">\(\mathrm{EM_{\bullet}}(G,n)\simeq
-\mathrm{K}(\mathrm{Aut}G,1)\)</span>. In the special case of <span
+\mathrm{K}(\mathop{\mathrm{Aut}}G,1)\)</span>. In the special case of
+<span
 class="math inline">\(\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)</span>
 the conditions of the theorem are met when <span
-class="math inline">\(f_\bullet:M\to\mathrm{K}(\mathrm{Aut}\ensuremath{\mathbb{Z}},
+class="math inline">\(f_\bullet:M\to\mathrm{K}(\mathop{\mathrm{Aut}}\ensuremath{\mathbb{Z}},
 1)\)</span> is contractible. This amounts to a choice of direction for
 all the circles, and so deserves to be renamed that <span
 class="math inline">\(M\)</span> is <em>orientable</em>.</p>
@@ -1331,8 +1324,9 @@ in the domain.</em></p>
 </div>
 <p>Need pictures here. Show the classical examples of index +1 and
 -1.</p>
-<h1 data-number="4" id="higher-geometry"><span
-class="header-section-number">4</span> Higher geometry</h1>
+<h1 data-number="4" id="the-connection-to-connections"><span
+class="header-section-number">4</span> The connection to
+connections</h1>
 <p>There are no theorems in this section. We don’t have two definitions
 of connections in HoTT that we can prove are equivalent. Instead we’ll
 compare some key features of the classical theory to the system we have
@@ -1340,19 +1334,57 @@ sketched above. It is my hope that differential geometers could onboard
 into HoTT through this work, and that someone new to geometry could
 learn it here as well. In both cases a dictionary of sorts would be
 helpful.</p>
-<h2 data-number="4.1" id="connections"><span
-class="header-section-number">4.1</span> Connections</h2>
-<p>The action on paths of the function <span
-class="math inline">\(T:M\to
-\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)</span> is what is called a
-connection. We’ll spend some time drawing more complete parallels with
-the classical story, both to provide some evidence and to educate.</p>
-<h3 data-number="4.1.1" id="connections-as-splittings"><span
-class="header-section-number">4.1.1</span> Connections as
-splittings</h3>
-<p>The classical story goes like this.</p>
+<h2 data-number="4.1" id="classical-version"><span
+class="header-section-number">4.1</span> Classical version</h2>
 <div class="mydef">
-<p><strong>Definition 20</strong>. <em>The <strong>vertical
+<p><strong>Definition 20</strong>. <em>A <strong>principal
+bundle</strong> is a smooth map <span class="math inline">\(\pi:P\to
+M\)</span> between smooth manifolds such that</em></p>
+<ol>
+<li><p><em>All the fibers of <span class="math inline">\(\pi\)</span>
+are equivalent as a smooth manifold to a fixed Lie group <span
+class="math inline">\(G\)</span>.</em></p></li>
+<li><p><em>There is a smooth <span
+class="math inline">\(G\)</span>-action <span
+class="math inline">\(P\times G\to P\)</span> on the right that acts on
+fibers, and does so freely and transitively.</em></p></li>
+<li><p><em>There exists an open cover <span
+class="math inline">\(\{U_i\}\)</span> of <span
+class="math inline">\(M\)</span> and equivariant diffeomorphisms <span
+class="math inline">\(\phi_i:P|_{U_i}\to U_i\times G\)</span> (i.e.
+<span class="math inline">\(\phi_i(p\cdot g)= \phi_i(p)\cdot
+g\)</span>).</em></p></li>
+</ol>
+</div>
+<p>Physicists call principal bundle automorphisms “gauge
+transformations”:</p>
+<div class="mydef">
+<p><strong>Definition 21</strong>. <em>A <strong>gauge
+transformation</strong> is a map <span class="math inline">\(\Phi:P\to
+P\)</span> commuting with the projection to <span
+class="math inline">\(M\)</span> and which is <span
+class="math inline">\(G\)</span>-equivariant, i.e. <span
+class="math inline">\(\Phi(p\cdot g) = \Phi(p)\cdot g\)</span>. Denote
+the group of gauge transformations by <span
+class="math inline">\(\mathop{\mathrm{Aut}}P\)</span>. In the literature
+it is sometimes denoted <span
+class="math inline">\(\mathscr{G}(P)\)</span>.</em></p>
+</div>
+<p>Informally, a connection on a principal bundle is a local splitting
+of the total space of the tangent bundle <span
+class="math inline">\(TP\)</span> into a horizontal component (pointing
+along <span class="math inline">\(M\)</span>) and vertical component
+(pointing along the fibers of <span class="math inline">\(P\)</span>).
+The splitting is required to be equivariant. Such a splitting produces,
+and is in fact produced by, a function lifting paths <span
+class="math inline">\(\alpha:[0,1]\to M\)</span> uniquely into <span
+class="math inline">\(P\)</span> given a starting point above <span
+class="math inline">\(\alpha(0)\)</span>. Homotopy type theory was
+inspired in the first place to imitate this structure, so it’s no
+surprise to see this relationship once we pass to the discrete situation
+native to HoTT and leave smoothness behind. In a bit more detail:</p>
+<div class="mydef">
+<p><strong>Definition 22</strong>. <em>The <strong>vertical
 bundle</strong> <span class="math inline">\(VP\)</span> of a principal
 bundle <span class="math inline">\(\pi:P\to M\)</span> with Lie group
 <span class="math inline">\(G\)</span> is the kernel of the derivative
@@ -1360,35 +1392,36 @@ bundle <span class="math inline">\(\pi:P\to M\)</span> with Lie group
 </div>
 <p><span class="math inline">\(VP\)</span> can be visualized as the
 collection of tangent vectors that point along the fibers. It should be
-clear that the group <span class="math inline">\(\mathrm{Aut}P\)</span>
-acts on <span class="math inline">\(VP\)</span>: an automorphism <span
-class="math inline">\(\phi:P\to P\)</span> sends <span
-class="math inline">\(V_pP\)</span> to <span
-class="math inline">\(V_{\phi(p)}P\)</span>, where of course <span
-class="math inline">\(\pi(p)=\pi(\phi(p))\)</span>.</p>
+clear that at each point of <span class="math inline">\(M\)</span> the
+group <span class="math inline">\(G\)</span> acts on <span
+class="math inline">\(VP\)</span>, sending vertical vectors to vertical
+vectors. In other words, <span
+class="math inline">\(\mathop{\mathrm{Aut}}P\)</span> acts on <span
+class="math inline">\(VP\)</span>.</p>
 <div class="mydef">
-<p><strong>Definition 21</strong>. <em>An <strong>Ehresmann
+<p><strong>Definition 23</strong>. <em>An <strong>Ehresmann
 connection</strong> on a principal bundle <span
 class="math inline">\(\pi:P\to M\)</span> with Lie group <span
 class="math inline">\(G\)</span> is a splitting <span
 class="math inline">\(TP=VP\oplus HP\)</span> at every point of <span
-class="math inline">\(P\)</span> into vertical and “horizontal”
-subspaces, which is preserved by the action of <span
-class="math inline">\(\mathrm{Aut}P\)</span>.</em></p>
+class="math inline">\(P\)</span> into vertical and complementary
+“horizontal” subspaces, which is preserved by the action of <span
+class="math inline">\(\mathop{\mathrm{Aut}}P\)</span>.</em></p>
 </div>
 <p>Being preserved by the action of <span
-class="math inline">\(\mathrm{Aut}P\)</span> means that the
+class="math inline">\(\mathop{\mathrm{Aut}}P\)</span> implies that the
 complementary horizontal subspaces in a given fiber of <span
 class="math inline">\(\pi:P\to M\)</span> are determined by the
 splitting at any single point in the fiber. The action of <span
 class="math inline">\(G\)</span> on this fiber can then push the
 splitting around to all the other points.</p>
-<p>The motivation for this definition is that we now have an isomorphism
-<span class="math inline">\(T_p\pi:H_pP\to T_{\pi(p)}M\)</span> between
-each horizontal space and the tangent space below it in <span
-class="math inline">\(M\)</span>. This means that given a tangent vector
-at <span class="math inline">\(x:M\)</span> and a point <span
-class="math inline">\(p\)</span> in <span
+<p>The utility and parsimony of this definition relates to the
+solvability of ordinary differential equations. We now have an
+isomorphism <span class="math inline">\(T_p\pi:H_pP\to
+T_{\pi(p)}M\)</span> between each horizontal space and the tangent space
+below it in <span class="math inline">\(M\)</span>. This means that
+given a tangent vector at <span class="math inline">\(x:M\)</span> and a
+point <span class="math inline">\(p\)</span> in <span
 class="math inline">\(\pi^{-1}(x)\)</span> we can uniquely lift the
 tangent vector to a horizontal vector at <span
 class="math inline">\(p\)</span>. We can also lift vector fields and
@@ -1398,114 +1431,46 @@ for <span class="math inline">\(\gamma(0)\)</span> and then lift the
 tangent vectors of <span class="math inline">\(\gamma\)</span> and prove
 that you can integrate the lift of that vector field upstairs in <span
 class="math inline">\(HP\)</span>.</p>
-<p>Then, armed with the lifting of paths one immediately obtains
-isomorphisms between the fibers of <span
-class="math inline">\(P\)</span>. So the Ehresmann connection, the
+<p>Armed with the lifting of paths one immediately obtains isomorphisms
+between the fibers of <span class="math inline">\(P\)</span>: given a
+path in <span class="math inline">\(M\)</span> we can map the starting
+point of a lift to the ending point. So the Ehresmann connection, the
 lifting of paths, and transport isomorphisms between fibers are all
 recapitulations of the structure that the connection adds to the
 bundle.</p>
-<p>Moving now to HoTT, fix a type <span
-class="math inline">\(M:\mathcal{U}\)</span> and a type family <span
-class="math inline">\(f:M\to\mathcal{U}\)</span>. Path induction gives
-us the transport isomorphism <span class="math inline">\(\prod_{p:x=_M
-y}\mathrm{tr}(p):f(x)=f(y)\)</span>. We can use this to define a type of
-<em>dependent paths</em>, also called <em>pathovers</em> or <em>paths
-over</em> a given path.</p>
-<div class="mydef">
-<p><strong>Definition 22</strong>. <em>With the above context and points
-<span class="math inline">\(a:f(x), b:f(y)\)</span> the type of
-<strong>dependent paths over <span
-class="math inline">\(p\)</span></strong> with endpoints <span
-class="math inline">\(a, b\)</span> is denoted <span
-class="math display">\[a\xrightarrow[{p}]{=}b.\]</span> By induction we
-can assume <span class="math inline">\(p\)</span> is <span
-class="math inline">\(\ensuremath{\mathsf{refl}}_a\)</span> in which
-case <span class="math inline">\(a\xrightarrow[{p}]{=}b\)</span> is
-<span class="math inline">\(a=_{f(x)}a\)</span>.</em></p>
+<div class="mynote">
+<p><strong>Note 1</strong>. <em>Recall that torsors have a physical
+interpretation as a quantity without a specified unit, such as mass,
+length, or time. When we choose a base point in a torsor it becomes the
+standard torsor <span class="math inline">\(G\)</span> acting on itself
+(for example, the additive real numbers). A physicist is looking for
+properties or laws that are independent of such a choice. In the 20th
+century physicists further wondered about choices of units that vary
+from point to point, and began searching for laws that are invariant
+under this much larger space of transformations. And so they and we are
+led to explore quotienting by the action of the group of gauge
+transformations, and in particular the space of connections “mod gauge.”
+In this scenario the base manifold <span
+class="math inline">\(M\)</span> is spacetime, and a gauge
+transformation is a smoothly varying choice of gauge (units) at each
+point.</em></p>
 </div>
-<p>See <span class="citation" data-cites="Symmetry"> (<a
-href="#ref-Symmetry" role="doc-biblioref">Bezem <em>et al.</em>,
-2023</a>)</span> for more discussion of dependent paths (where they use
-the term “path over”), including composition, and associativity
-thereof.</p>
-<p>We recall now the identity type of sigma types:</p>
-<div id="thm:idsit" class="mythm">
-<p><strong>Theorem 2</strong>. <em>(HoTT book Theorem 2.7.2 <span
-class="citation" data-cites="hottbook"> (<a href="#ref-hottbook"
-role="doc-biblioref">Univalent Foundations Program, 2013</a>)</span>) If
-<span class="math inline">\(f:M\to \mathcal{U}\)</span> is a type family
-and <span class="math inline">\(w,w&#39;:\sum_{x:M}f(x)\)</span> then
-there is an equivalence <span
-class="math display">\[\mathsf{split}:(w=w&#39;)\simeq
-\sum_{p:\ensuremath{\mathrm{pr}}_1(w)=_M\ensuremath{\mathrm{pr}}_1(w&#39;)}
-\left[\mathrm{tr}(p)(\ensuremath{\mathrm{pr}}_2(w))\right] =
-\ensuremath{\mathrm{pr}}_2(w&#39;).\]</span></em></p>
-</div>
-<p>In particular, given <span class="math inline">\(p:x=_M y\)</span>
-and <span class="math inline">\(w:f(x)\)</span> we have <span
-class="math inline">\(w\xrightarrow[{p}]{=}tr(p)(w)\simeq
-tr(p)(w)=_{f(y)}tr(p)(w)\)</span> which has the term <span
-class="math inline">\(\ensuremath{\mathsf{refl}}\)</span> which we can
-call “the horizontal lift of <span class="math inline">\(p\)</span>
-starting at <span class="math inline">\(w\)</span>.” We can imitate the
-classical definition of a connection by defining <span
-class="math inline">\(\omega\stackrel{\mathrm{def}}{=}\ensuremath{\mathrm{pr}}_2\circ\mathsf{split}\)</span>,
-the projection onto the vertical component. And thus in HoTT we can see
-the equivalence of transport and lifting of paths into horizontal and
-vertical components.</p>
-<h3 data-number="4.1.2" id="covering-spaces"><span
-class="header-section-number">4.1.2</span> Covering spaces</h3>
-<p>If <span class="math inline">\(G\)</span> is a 0-truncated group such
-as <span class="math inline">\(\ensuremath{\mathbb{Z}}\)</span> then the
-type of torsors (delooping) <span class="math inline">\(BG\)</span> is
-1-truncated. If <span class="math inline">\(f:M\to BG\)</span> is a type
-family then <span class="math inline">\(\sum_{x:M}f(x)\)</span> has
-fibers that are sets (<span class="math inline">\(G\)</span>-torsors).
-So transport functions are set isomorphisms, and the transport of any
-contractible loop in <span class="math inline">\(M\)</span> will be
-<span class="math inline">\(\ensuremath{\mathsf{refl}}\)</span> (the
-identity) of the fiber, which is what we mean by flat.</p>
-<h3 data-number="4.1.3" id="gauge-transformations"><span
-class="header-section-number">4.1.3</span> Gauge transformations</h3>
-<p>A <em>gauge transformation</em> is a term inherited from physics.
-It’s an automorphism of a principal bundle <span
-class="math inline">\(P\to M\)</span>, meaning a homeomorphism of <span
-class="math inline">\(P\)</span> that commutes with the projection to
-<span class="math inline">\(M\)</span> and so acts on each fiber. It is
-further required to be equivariant under the action of the group <span
-class="math inline">\(G\)</span>, and so it’s very similar to the act of
-multiplying each fiber by a continuously varying element of <span
-class="math inline">\(G\)</span>.</p>
-<p>In HoTT if the bundle is classified by <span
-class="math inline">\(f:M\to \mathcal{U}\)</span> then an automorphism
-is a homotopy <span class="math inline">\(f\sim f\)</span> and the group
-of gauge transformations is the loop space <span
-class="math inline">\(\Omega_f(M\to \mathcal{U})\)</span>.</p>
-<p>Recall that torsors have a physical interpretation as a quantity
-without a specified unit, such as mass, length, or time. When we choose
-a base point in a torsor it becomes the standard torsor <span
-class="math inline">\(G\)</span> acting on itself (for example, the
-additive real numbers). A physicist is looking for properties or laws
-that are independent of such a choice. In the 20th century physicists
-further wondered about choices of units that vary from point to point,
-and began searching for laws that are invariant under this much larger
-space of transformations. And so they and we are led to explore
-quotienting by the action of the group of gauge transformations, and in
-particular the space of connections “mod gauge.” In this scenario the
-base manifold <span class="math inline">\(M\)</span> is spacetime, and a
-gauge transformation is a smoothly varying choice of gauge (units) at
-each point.</p>
-<p>Gauge transformations act on connections. When we view connections as
-infinitesimal splittings of <span class="math inline">\(TP\)</span> into
-vertical and horizontal sub-bundles, a gauge transformation that is
-constant in the neighborhood of a point will not change the splitting,
-it will just shift the fiber rigidly along itself, but one that is
-changing rapidly near a point will tilt the horizontal subspaces. So
-there are two effects: the effect of sliding along the fiber, and the
-effect of the rate of change of the gauge transformation. In classical
-geometry you’ll see formulas like this:</p>
+<p>Given a bundle <span class="math inline">\(\pi:P\to M\)</span> there
+is a space of connections <span
+class="math inline">\(\mathscr{A}(P)\)</span>. We could slightly tilt
+all the horizontal subspaces, in a variable way from point to point, and
+obtain another connection. The group <span
+class="math inline">\(\mathop{\mathrm{Aut}}P\)</span> acts on this
+space. For example, a gauge transformation that is constant in the
+neighborhood of a point will not change the splitting, it will just
+shift the fiber rigidly along itself. But at the other extreme, a gauge
+transformation that is changing rapidly near a point will tilt the
+horizontal subspaces rapidly. So there are two effects: the effect of
+sliding along the fiber, and the effect of the rate of change of the
+gauge transformation. In classical geometry you’ll see formulas like
+this:</p>
 <div class="mythm">
-<p><strong>Theorem 3</strong>. <em>Let <span class="math inline">\(P\to
+<p><strong>Theorem 2</strong>. <em>Let <span class="math inline">\(P\to
 M\)</span> be a principal bundle and <span
 class="math inline">\(A\in\Omega^1(M,\mathfrak{g})\)</span> a connection
 1-form on <span class="math inline">\(P\)</span>. Suppose that <span
@@ -1556,6 +1521,62 @@ i.e. the contribution from the gauge transformation <span
 class="math inline">\(H\)</span> that comes from the rapidity of change
 from point to point. This term will be large when <span
 class="math inline">\(H_U\)</span> has a large derivative.</p>
+<h2 data-number="4.2" id="type-theory-version"><span
+class="header-section-number">4.2</span> Type theory version</h2>
+<p>Moving now to HoTT, fix a type <span
+class="math inline">\(M:\mathcal{U}\)</span> and a type family <span
+class="math inline">\(f:M\to\mathcal{U}\)</span>. Path induction gives
+us the transport isomorphism <span class="math inline">\(\prod_{p:x=_M
+y}\mathrm{tr}(p):f(x)=f(y)\)</span>. We can use this to define a type of
+<em>dependent paths</em>, also called <em>pathovers</em> or <em>paths
+over</em> a given path.</p>
+<div class="mydef">
+<p><strong>Definition 24</strong>. <em>With the above context and points
+<span class="math inline">\(a:f(x), b:f(y)\)</span> the type of
+<strong>dependent paths over <span
+class="math inline">\(p\)</span></strong> with endpoints <span
+class="math inline">\(a, b\)</span> is denoted <span
+class="math display">\[a\xrightarrow[{p}]{=}b.\]</span> By induction we
+can assume <span class="math inline">\(p\)</span> is <span
+class="math inline">\(\ensuremath{\mathsf{refl}}_a\)</span> in which
+case <span class="math inline">\(a\xrightarrow[{p}]{=}b\)</span> is
+<span class="math inline">\(a=_{f(x)}a\)</span>.</em></p>
+</div>
+<p>See <span class="citation" data-cites="Symmetry"> (<a
+href="#ref-Symmetry" role="doc-biblioref">Bezem <em>et al.</em>,
+2023</a>)</span> for more discussion of dependent paths (where they use
+the term “path over”), including composition, and associativity
+thereof.</p>
+<p>We recall now the identity type of sigma types:</p>
+<div id="thm:idsit" class="mythm">
+<p><strong>Theorem 3</strong>. <em>(HoTT book Theorem 2.7.2 <span
+class="citation" data-cites="hottbook"> (<a href="#ref-hottbook"
+role="doc-biblioref">Univalent Foundations Program, 2013</a>)</span>) If
+<span class="math inline">\(f:M\to \mathcal{U}\)</span> is a type family
+and <span class="math inline">\(w,w&#39;:\sum_{x:M}f(x)\)</span> then
+there is an equivalence <span
+class="math display">\[\mathsf{split}:(w=w&#39;)\simeq
+\sum_{p:\ensuremath{\mathrm{pr}}_1(w)=_M\ensuremath{\mathrm{pr}}_1(w&#39;)}
+\left[\mathrm{tr}(p)(\ensuremath{\mathrm{pr}}_2(w))\right] =
+\ensuremath{\mathrm{pr}}_2(w&#39;).\]</span></em></p>
+</div>
+<p>In particular, given <span class="math inline">\(p:x=_M y\)</span>
+and <span class="math inline">\(w:f(x)\)</span> we have <span
+class="math inline">\(w\xrightarrow[{p}]{=}tr(p)(w)\simeq
+tr(p)(w)=_{f(y)}tr(p)(w)\)</span> which has the term <span
+class="math inline">\(\ensuremath{\mathsf{refl}}\)</span> which we can
+call “the horizontal lift of <span class="math inline">\(p\)</span>
+starting at <span class="math inline">\(w\)</span>.” We can imitate the
+classical definition of a connection by defining <span
+class="math inline">\(\omega\stackrel{\mathrm{def}}{=}\ensuremath{\mathrm{pr}}_2\circ\mathsf{split}\)</span>,
+the projection onto the vertical component. And thus in HoTT we can see
+the equivalence of transport and lifting of paths into horizontal and
+vertical components.</p>
+<p>In HoTT if the bundle is classified by <span
+class="math inline">\(f:M\to \mathcal{U}\)</span> then an automorphism
+is a homotopy <span class="math inline">\(f\sim f\)</span> and the group
+of gauge transformations is the loop space <span
+class="math inline">\(\Omega_f(M\to \mathcal{U})\)</span>.</p>
 <p>In HoTT the connection’s parallel transport is visible as the
 transport function, and the horizontal-vertical splitting is visible in
 the decomposition of paths in the sigma type (total space) into pairs of
@@ -1571,7 +1592,7 @@ acts fiberwise. We want to compute the action of <span
 class="math inline">\(\ensuremath{\mathsf{ap}}(H&#39;)\)</span> on the
 horizontal-vertical decomposition of paths from Theorem <a
 href="#thm:idsit" data-reference-type="ref"
-data-reference="thm:idsit">2</a> by computing <span
+data-reference="thm:idsit">3</a> by computing <span
 class="math inline">\(\omega\circ\ensuremath{\mathsf{ap}}(H&#39;)=\ensuremath{\mathrm{pr}}_2\circ\mathsf{split}\circ\ensuremath{\mathsf{ap}}(H&#39;)\)</span>.</p>
 <p>Denote <span class="math inline">\(\sum_{a:M}f(a)\)</span> by <span
 class="math inline">\(P\)</span>. We’ll adopt a convention of roman
@@ -1688,8 +1709,23 @@ composed as terms of the 2-groupoid <span
 class="math inline">\(M\)</span>, and we will call the composition <span
 class="math inline">\(T(M):T(v)=T(v)\)</span> the <em>total
 curvature</em>.</p>
-<p>When the fibers are torsors we need loops to see what <span
-class="math inline">\(T\)</span> is doing.</p>
+<div class="mynote">
+<p><strong>Note 2</strong>. <em>If <span
+class="math inline">\(G\)</span> is a 0-truncated group such as <span
+class="math inline">\(\ensuremath{\mathbb{Z}}\)</span> then the type
+<span class="math inline">\(BG\)</span> of torsors is 1-truncated. If
+<span class="math inline">\(f:M\to BG\)</span> is a type family then
+<span class="math inline">\(\sum_{x:M}f(x)\)</span> has fibers that are
+sets (<span class="math inline">\(G\)</span>-torsors). So transport
+functions are set isomorphisms, and the transport of any contractible
+loop in <span class="math inline">\(M\)</span> will be <span
+class="math inline">\(\ensuremath{\mathsf{refl}}\)</span> (the identity)
+of the fiber, which is what we mean by the term <strong>flat</strong>.
+Transport around non-contractible loops may map to nontrivial fiber
+automorphisms. In this way the theory of covering spaces is a lower
+dimensional version of the story of mere-circle principal
+bundles.</em></p>
+</div>
 <h2 data-number="5.3" id="the-total-index"><span
 class="header-section-number">5.3</span> The total index</h2>
 <p>If we have <span class="math inline">\(M\setminus Z\)</span> for some
@@ -1721,7 +1757,7 @@ been replaced.</p>
 paths, i.e. traversing them backwards. Therefore in order to perform
 calculations we must also know the direction of the paths.</p>
 <div class="mydef">
-<p><strong>Definition 23</strong>. <em>Given a connected loop <span
+<p><strong>Definition 25</strong>. <em>Given a connected loop <span
 class="math inline">\(\ell:a=_{M_Z}a\)</span> in <span
 class="math inline">\(M_Z\)</span> that is running in the clockwise
 direction around a face of <span class="math inline">\(M_Z\)</span>
