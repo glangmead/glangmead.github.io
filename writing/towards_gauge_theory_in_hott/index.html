@@ -1250,25 +1250,16 @@ circular link. We’ll end up working around that when we need to.</p>
 the edges and faces containing that vertex.</figcaption>
 </figure>
 <figure id="fig:flattorus_clock">
-<img src="./ac62298baff5166619de96040342770fbc30b2e8.png" />
-<figcaption>An index 1 vector field around the missing
-point.</figcaption>
-</figure>
-<figure id="fig:flattorus_counterclock">
-<img src="./845ee6436e9f05730057a784e94eaf7419a541f7.png" />
-<figcaption>Another index 1 vector field around the missing point. It
-circulates counterclockwise, but if you move clockwise the vector field
-does too.</figcaption>
-</figure>
-<figure id="fig:flattorus_negindex">
-<img src="./e95884d39e8a61e691ce96050774436ef496b46d.png" />
-<figcaption>An index -1 vector field around the missing point. If you
-move clockwise the vector field spins counterclockwise.</figcaption>
-</figure>
-<figure id="fig:flattorus_zeroindex">
-<img src="./3c8820f9a5d08b7ec624753d4634c5a966121454.png" />
-<figcaption>An index01 vector field around the missing point. The vector
-field doesn’t complete a full rotation.</figcaption>
+<img src="./3c1c247ee44b290ad1cae8faba26f11c365316d1.png" />
+<img src="./f0bde818681f1f507312d4c352a43b02f4b3cc67.png" />
+<img src="./2cc51cc7047ba751dbd02e829750e1e5d2a429a9.png" />
+<img src="./50a79b2e0f474fda3a513a401476c73d0c558f41.png" />
+<figcaption>Four vector fields around a zero. The first has index 1 and
+circulates clockwise. The second also has index 1 despite circulating
+counterclockwise, because if you trace a clockwise path the vector also
+rotates clockwise. The third has index -1 since it circulates
+counterclockwise as you trace a clockwise path. The fourth has index
+0.</figcaption>
 </figure>
 <div class="mydef">
 <p><strong>Definition 18</strong>. <em>Let <span
@@ -1342,27 +1333,13 @@ in the domain.</em></p>
 -1.</p>
 <h1 data-number="4" id="higher-geometry"><span
 class="header-section-number">4</span> Higher geometry</h1>
-<p>Here are the translations that are covered in the current paper:
-<span class="math display">\[\begin{aligned}
-&amp; \text{\small Connections are infinitesimal splittings of a} &amp;
-\quad &amp;\text{\small Paths in a sigma type are equivalent to
-a}        \\
-&amp; \text{\small principal bundle.} &amp; \quad&amp;\text{\small pair
-of paths.}        \\ \hline
-&amp; \text{\small Differentials satisfy the Leibniz (product) rule.}
-&amp;\quad  &amp;\text{\small Horizontal composition in an H-space is}
-\\
-&amp;  &amp;  \quad&amp;\text{\small performed in two steps.} \\ \hline
-&amp; \text{\small Connections with 0-truncated groups are
-covering}        &amp;\quad &amp;\text{\small Transport around
-contractible loops is } \ensuremath{\mathsf{refl}}\\
-&amp; \text{\small spaces with unique flat connection.}        &amp;
-\quad&amp;\text{\small when fibers are sets.}             \\ \hline
-&amp; \text{\small The group of gauge transformations (bundle}
-&amp;\quad &amp;\text{\small Homotopies of classifying maps respect } \\
-&amp; \text{\small automorphisms) acts on the space of connections.}
-&amp; \quad&amp;\text{\small the splitting of paths in sigma types.} \\
-\end{aligned}\]</span></p>
+<p>There are no theorems in this section. We don’t have two definitions
+of connections in HoTT that we can prove are equivalent. Instead we’ll
+compare some key features of the classical theory to the system we have
+sketched above. It is my hope that differential geometers could onboard
+into HoTT through this work, and that someone new to geometry could
+learn it here as well. In both cases a dictionary of sorts would be
+helpful.</p>
 <h2 data-number="4.1" id="connections"><span
 class="header-section-number">4.1</span> Connections</h2>
 <p>The action on paths of the function <span

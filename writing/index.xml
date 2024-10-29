@@ -866,25 +866,16 @@ circular link. We’ll end up working around that when we need to.&lt;/p&gt;
 the edges and faces containing that vertex.&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;figure id=&#34;fig:flattorus_clock&#34;&gt;
-&lt;img src=&#34;./ac62298baff5166619de96040342770fbc30b2e8.png&#34; /&gt;
-&lt;figcaption&gt;An index 1 vector field around the missing
-point.&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;figure id=&#34;fig:flattorus_counterclock&#34;&gt;
-&lt;img src=&#34;./845ee6436e9f05730057a784e94eaf7419a541f7.png&#34; /&gt;
-&lt;figcaption&gt;Another index 1 vector field around the missing point. It
-circulates counterclockwise, but if you move clockwise the vector field
-does too.&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;figure id=&#34;fig:flattorus_negindex&#34;&gt;
-&lt;img src=&#34;./e95884d39e8a61e691ce96050774436ef496b46d.png&#34; /&gt;
-&lt;figcaption&gt;An index -1 vector field around the missing point. If you
-move clockwise the vector field spins counterclockwise.&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;figure id=&#34;fig:flattorus_zeroindex&#34;&gt;
-&lt;img src=&#34;./3c8820f9a5d08b7ec624753d4634c5a966121454.png&#34; /&gt;
-&lt;figcaption&gt;An index01 vector field around the missing point. The vector
-field doesn’t complete a full rotation.&lt;/figcaption&gt;
+&lt;img src=&#34;./3c1c247ee44b290ad1cae8faba26f11c365316d1.png&#34; /&gt;
+&lt;img src=&#34;./f0bde818681f1f507312d4c352a43b02f4b3cc67.png&#34; /&gt;
+&lt;img src=&#34;./2cc51cc7047ba751dbd02e829750e1e5d2a429a9.png&#34; /&gt;
+&lt;img src=&#34;./50a79b2e0f474fda3a513a401476c73d0c558f41.png&#34; /&gt;
+&lt;figcaption&gt;Four vector fields around a zero. The first has index 1 and
+circulates clockwise. The second also has index 1 despite circulating
+counterclockwise, because if you trace a clockwise path the vector also
+rotates clockwise. The third has index -1 since it circulates
+counterclockwise as you trace a clockwise path. The fourth has index
+0.&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;div class=&#34;mydef&#34;&gt;
 &lt;p&gt;&lt;strong&gt;Definition 18&lt;/strong&gt;. &lt;em&gt;Let &lt;span
@@ -958,27 +949,13 @@ in the domain.&lt;/em&gt;&lt;/p&gt;
 -1.&lt;/p&gt;
 &lt;h1 data-number=&#34;4&#34; id=&#34;higher-geometry&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;4&lt;/span&gt; Higher geometry&lt;/h1&gt;
-&lt;p&gt;Here are the translations that are covered in the current paper:
-&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
-&amp;amp; \text{\small Connections are infinitesimal splittings of a} &amp;amp;
-\quad &amp;amp;\text{\small Paths in a sigma type are equivalent to
-a}        \\
-&amp;amp; \text{\small principal bundle.} &amp;amp; \quad&amp;amp;\text{\small pair
-of paths.}        \\ \hline
-&amp;amp; \text{\small Differentials satisfy the Leibniz (product) rule.}
-&amp;amp;\quad  &amp;amp;\text{\small Horizontal composition in an H-space is}
-\\
-&amp;amp;  &amp;amp;  \quad&amp;amp;\text{\small performed in two steps.} \\ \hline
-&amp;amp; \text{\small Connections with 0-truncated groups are
-covering}        &amp;amp;\quad &amp;amp;\text{\small Transport around
-contractible loops is } \ensuremath{\mathsf{refl}}\\
-&amp;amp; \text{\small spaces with unique flat connection.}        &amp;amp;
-\quad&amp;amp;\text{\small when fibers are sets.}             \\ \hline
-&amp;amp; \text{\small The group of gauge transformations (bundle}
-&amp;amp;\quad &amp;amp;\text{\small Homotopies of classifying maps respect } \\
-&amp;amp; \text{\small automorphisms) acts on the space of connections.}
-&amp;amp; \quad&amp;amp;\text{\small the splitting of paths in sigma types.} \\
-\end{aligned}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;There are no theorems in this section. We don’t have two definitions
+of connections in HoTT that we can prove are equivalent. Instead we’ll
+compare some key features of the classical theory to the system we have
+sketched above. It is my hope that differential geometers could onboard
+into HoTT through this work, and that someone new to geometry could
+learn it here as well. In both cases a dictionary of sorts would be
+helpful.&lt;/p&gt;
 &lt;h2 data-number=&#34;4.1&#34; id=&#34;connections&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;4.1&lt;/span&gt; Connections&lt;/h2&gt;
 &lt;p&gt;The action on paths of the function &lt;span
