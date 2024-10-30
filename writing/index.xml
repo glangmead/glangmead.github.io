@@ -1073,70 +1073,63 @@ point.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;Given a bundle &lt;span class=&#34;math inline&#34;&gt;\(\pi:P\to M\)&lt;/span&gt; there
 is a space of connections &lt;span
-class=&#34;math inline&#34;&gt;\(\mathscr{A}(P)\)&lt;/span&gt;. We could slightly tilt
-all the horizontal subspaces, in a variable way from point to point, and
-obtain another connection. The group &lt;span
+class=&#34;math inline&#34;&gt;\(\mathscr{A}(P)\)&lt;/span&gt;. The group &lt;span
 class=&#34;math inline&#34;&gt;\(\mathop{\mathrm{Aut}}P\)&lt;/span&gt; acts on this
 space. For example, a gauge transformation that is constant in the
 neighborhood of a point will not change the splitting, it will just
 shift the fiber rigidly along itself. But at the other extreme, a gauge
 transformation that is changing rapidly near a point will tilt the
-horizontal subspaces rapidly. So there are two effects: the effect of
-sliding along the fiber, and the effect of the rate of change of the
-gauge transformation. In classical geometry you’ll see formulas like
-this:&lt;/p&gt;
-&lt;div class=&#34;mythm&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Theorem 2&lt;/strong&gt;. &lt;em&gt;Let &lt;span class=&#34;math inline&#34;&gt;\(P\to
-M\)&lt;/span&gt; be a principal bundle and &lt;span
-class=&#34;math inline&#34;&gt;\(A\in\Omega^1(M,\mathfrak{g})\)&lt;/span&gt; a connection
-1-form on &lt;span class=&#34;math inline&#34;&gt;\(P\)&lt;/span&gt;. Suppose that &lt;span
-class=&#34;math inline&#34;&gt;\(H\in \mathscr{G}(P)\)&lt;/span&gt; is a bundle
-automorphism. Then &lt;span class=&#34;math inline&#34;&gt;\(H^*A\)&lt;/span&gt; is a
-connection 1-form and in a neighborhood &lt;span
-class=&#34;math inline&#34;&gt;\(U\)&lt;/span&gt; of a point &lt;span
-class=&#34;math inline&#34;&gt;\(x\in M\)&lt;/span&gt; we can write &lt;span
-class=&#34;math inline&#34;&gt;\(H\)&lt;/span&gt; as a function &lt;span
-class=&#34;math inline&#34;&gt;\(H_U:U\to G\)&lt;/span&gt; where &lt;span
-class=&#34;math inline&#34;&gt;\(H_U(x)\in G\)&lt;/span&gt; is a group element
-multiplying the fiber at &lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt;, and
-then we have &lt;span
-class=&#34;math display&#34;&gt;\[H^*A=\mathrm{Ad}_{H_U(x)^{-1}}\circ A +
-H_U^*(\mu_G)\]&lt;/span&gt; where &lt;span
-class=&#34;math inline&#34;&gt;\(\mu_G:\Omega^1(G,\mathfrak{g})\)&lt;/span&gt; is the
-Maurer-Cartan form on &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;This theorem is a combination of Theorems 5.2.2 and 5.4.4 in the
-excellent recent book on gauge theory for mathematicians interested in
-physics by Mark Hamilton&lt;span class=&#34;citation&#34;
-data-cites=&#34;hamilton2017&#34;&gt; (&lt;a href=&#34;#ref-hamilton2017&#34;
-role=&#34;doc-biblioref&#34;&gt;Hamilton, 2017&lt;/a&gt;)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;It’s not so important to fully understand this formula because we
-will re-explain it in HoTT terms in a moment. But notice that &lt;span
-class=&#34;math inline&#34;&gt;\(H^*A\)&lt;/span&gt; (the action of the gauge
-transformation on the connection 1-form) has contributions from two
-terms (both of which are vertical — connections always map onto the
-vertical bundle). The first is the adjoint action at the specific point
-&lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt;. This is always what we expect
-when we shift the base point in a torsor and look at the resulting group
-(or in this case, the Lie algebra). The second term involves the
-Maurer-Cartan form, which is the derivative of subtraction in the group.
-It takes tangent vectors at &lt;span class=&#34;math inline&#34;&gt;\(g:G\)&lt;/span&gt; to
-a tangent vector at the identity (the Lie algebra, denoted &lt;span
-class=&#34;math inline&#34;&gt;\(\mathfrak{g}\)&lt;/span&gt;) by differentiating the
-action of multiplication by &lt;span class=&#34;math inline&#34;&gt;\(g^{-1}\)&lt;/span&gt;.
-If we think in terms of finite-length paths, then imagine a path &lt;span
-class=&#34;math inline&#34;&gt;\(p:g=g&amp;#39;\)&lt;/span&gt; and the function &lt;span
-class=&#34;math inline&#34;&gt;\((g^{-1}\cdot -)\)&lt;/span&gt;. The function will act on
-the path to give a path &lt;span class=&#34;math inline&#34;&gt;\(g^{-1}\cdot
-p:e=(g&amp;#39;\cdot g^{-1})\)&lt;/span&gt; that starts at the identity. So the
-Maurer-Cartan form shifts paths to start at the identity by subtracting
-off the start point. Our Maurer-Cartan term is the pullback of the
-Maurer-Cartan form by &lt;span class=&#34;math inline&#34;&gt;\(H\)&lt;/span&gt; which
-records how &lt;span class=&#34;math inline&#34;&gt;\(H\)&lt;/span&gt; acts infinitesimally,
-i.e. the contribution from the gauge transformation &lt;span
-class=&#34;math inline&#34;&gt;\(H\)&lt;/span&gt; that comes from the rapidity of change
-from point to point. This term will be large when &lt;span
-class=&#34;math inline&#34;&gt;\(H_U\)&lt;/span&gt; has a large derivative.&lt;/p&gt;
+horizontal subspaces rapidly. The field of &lt;strong&gt;gauge theory&lt;/strong&gt;
+begins with a study of the quotient space &lt;span
+class=&#34;math inline&#34;&gt;\(\mathscr{A}(P)/\mathop{\mathrm{Aut}}P\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;A prominent train of thought when mathematicians were wrestling with
+curvature and gauge theory was to frame connections and curvature in
+terms of splittings of certain sequences. Atiyah and Bott (&lt;span
+class=&#34;citation&#34; data-cites=&#34;atiyah1983yang&#34;&gt; (&lt;a
+href=&#34;#ref-atiyah1983yang&#34; role=&#34;doc-biblioref&#34;&gt;Atiyah &amp;amp; Bott,
+1983&lt;/a&gt;)&lt;/span&gt; equation 3.4) describe the space of vector fields on a
+total space &lt;span class=&#34;math inline&#34;&gt;\(P\)&lt;/span&gt; as a Lie algebra
+extension of &lt;span class=&#34;math inline&#34;&gt;\(\Gamma TM\)&lt;/span&gt; by &lt;span
+class=&#34;math inline&#34;&gt;\(\Gamma \mathrm{ad}P\)&lt;/span&gt;, respectively the Lie
+algebra of vector fields on the base and vertical vector fields on &lt;span
+class=&#34;math inline&#34;&gt;\(P\)&lt;/span&gt;. A non-flat connection will fail to
+split this sequence because horizontal vector fields may have a
+non-horizontal component when taking the Lie bracket. This extension is
+referred to as the &lt;em&gt;Atiyah sequence&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;In this century mathematicians in HoTT and HoTT-adjacent fields
+considered the &lt;em&gt;integrated Atiyah sequence&lt;/em&gt;, including Urs
+Schreiber&lt;span class=&#34;citation&#34; data-cites=&#34;urs_atiyah&#34;&gt; (&lt;a
+href=&#34;#ref-urs_atiyah&#34; role=&#34;doc-biblioref&#34;&gt;nLab authors,
+2024&lt;/a&gt;)&lt;/span&gt;&lt;span class=&#34;citation&#34; data-cites=&#34;urs_atiyah_blog&#34;&gt; (&lt;a
+href=&#34;#ref-urs_atiyah_blog&#34; role=&#34;doc-biblioref&#34;&gt;Schreiber,
+2006&lt;/a&gt;)&lt;/span&gt;. This is the groupoidal version of the Atiyah sequence:
+start with a path groupoid &lt;span
+class=&#34;math inline&#34;&gt;\(\mathcal{P}(M)\)&lt;/span&gt; of the base manifold
+(either its fundamental groupoid of homotopy classes of paths, or the
+path groupoid of thin homotopy classes, more suitable for geometry). We
+examine extensions of &lt;span
+class=&#34;math inline&#34;&gt;\(\mathcal{P}(M)\)&lt;/span&gt; by &lt;span
+class=&#34;math inline&#34;&gt;\(\mathop{\mathrm{Aut}}P\)&lt;/span&gt;, mixing these
+horizontal and vertical components into a groupoid on &lt;span
+class=&#34;math inline&#34;&gt;\(P\)&lt;/span&gt; that acts via isomorphisms of the
+fibers.&lt;/p&gt;
+&lt;p&gt;Once the situation was framed in terms of groupoid extensions,
+Schreier theory could be used as a lens as well. David Jaz Myers showed
+that in the case of higher groups we have an equivalence between the
+type of extensions of a group &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; by
+&lt;span class=&#34;math inline&#34;&gt;\(F\)&lt;/span&gt; and the actions of &lt;span
+class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; on a delooping &lt;span
+class=&#34;math inline&#34;&gt;\(BF\)&lt;/span&gt;: &lt;span
+class=&#34;math display&#34;&gt;\[\mathrm{Ext}(G; F) \simeq (BG
+\,\cdot\!\to\mathrm{BAut}(BF))\]&lt;/span&gt; (see &lt;span class=&#34;citation&#34;
+data-cites=&#34;myersthesis&#34;&gt; (&lt;a href=&#34;#ref-myersthesis&#34;
+role=&#34;doc-biblioref&#34;&gt;Myers, 2022&lt;/a&gt;)&lt;/span&gt; Theorem 2.5.7). Our type of
+classifying maps &lt;span
+class=&#34;math inline&#34;&gt;\(M\to\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)&lt;/span&gt;
+can be seen as the type of groupoid extensions of &lt;span
+class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; itself by the group &lt;span
+class=&#34;math inline&#34;&gt;\(S^1\)&lt;/span&gt;, confirming and combining these
+threads.&lt;/p&gt;
 &lt;h2 data-number=&#34;4.2&#34; id=&#34;type-theory-version&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;4.2&lt;/span&gt; Type theory version&lt;/h2&gt;
 &lt;p&gt;Moving now to HoTT, fix a type &lt;span
@@ -1165,7 +1158,7 @@ the term “path over”), including composition, and associativity
 thereof.&lt;/p&gt;
 &lt;p&gt;We recall now the identity type of sigma types:&lt;/p&gt;
 &lt;div id=&#34;thm:idsit&#34; class=&#34;mythm&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Theorem 3&lt;/strong&gt;. &lt;em&gt;(HoTT book Theorem 2.7.2 &lt;span
+&lt;p&gt;&lt;strong&gt;Theorem 2&lt;/strong&gt;. &lt;em&gt;(HoTT book Theorem 2.7.2 &lt;span
 class=&#34;citation&#34; data-cites=&#34;hottbook&#34;&gt; (&lt;a href=&#34;#ref-hottbook&#34;
 role=&#34;doc-biblioref&#34;&gt;Univalent Foundations Program, 2013&lt;/a&gt;)&lt;/span&gt;) If
 &lt;span class=&#34;math inline&#34;&gt;\(f:M\to \mathcal{U}\)&lt;/span&gt; is a type family
@@ -1208,7 +1201,7 @@ acts fiberwise. We want to compute the action of &lt;span
 class=&#34;math inline&#34;&gt;\(\ensuremath{\mathsf{ap}}(H&amp;#39;)\)&lt;/span&gt; on the
 horizontal-vertical decomposition of paths from Theorem &lt;a
 href=&#34;#thm:idsit&#34; data-reference-type=&#34;ref&#34;
-data-reference=&#34;thm:idsit&#34;&gt;3&lt;/a&gt; by computing &lt;span
+data-reference=&#34;thm:idsit&#34;&gt;2&lt;/a&gt; by computing &lt;span
 class=&#34;math inline&#34;&gt;\(\omega\circ\ensuremath{\mathsf{ap}}(H&amp;#39;)=\ensuremath{\mathrm{pr}}_2\circ\mathsf{split}\circ\ensuremath{\mathsf{ap}}(H&amp;#39;)\)&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;Denote &lt;span class=&#34;math inline&#34;&gt;\(\sum_{a:M}f(a)\)&lt;/span&gt; by &lt;span
 class=&#34;math inline&#34;&gt;\(P\)&lt;/span&gt;. We’ll adopt a convention of roman
@@ -1237,11 +1230,51 @@ class=&#34;math inline&#34;&gt;\(\mathrm{tr}(H(x)\cdot f(p)) =
 &lt;/div&gt;
 &lt;p&gt;&lt;img src=&#34;./d75a6e58297fe05a808990d9551f5e2751b819cb.png&#34;
 alt=&#34;image&#34; /&gt;&lt;/p&gt;
+&lt;div class=&#34;mythm&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Theorem 3&lt;/strong&gt;. &lt;em&gt;The following are equivalent for a
+map &lt;span
+class=&#34;math inline&#34;&gt;\(T:M\to\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)&lt;/span&gt;:&lt;/em&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;span class=&#34;math inline&#34;&gt;\(P\)&lt;/span&gt; is a trivial
+bundle.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;The dependent sum &lt;span
+class=&#34;math inline&#34;&gt;\(\sum_{x:M}Tx\)&lt;/span&gt; is equivalent to a
+non-dependent sum.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;There exists a total lifting &lt;span
+class=&#34;math inline&#34;&gt;\(T_\bullet\)&lt;/span&gt; to pointed types.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;span class=&#34;math inline&#34;&gt;\(T\)&lt;/span&gt; is
+contractible.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div class=&#34;mythm&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Theorem 4&lt;/strong&gt;. &lt;em&gt;The following are equivalent for a
+map &lt;span
+class=&#34;math inline&#34;&gt;\(T:M\to\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)&lt;/span&gt;:&lt;/em&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;The connection on &lt;span
+class=&#34;math inline&#34;&gt;\(\sum_{x:M}Tx\)&lt;/span&gt; is flat.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;The identity type of the dependent sum &lt;span
+class=&#34;math inline&#34;&gt;\(\sum_{x:M}Tx\)&lt;/span&gt; is a non-depedent
+sum.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;The associated extension &lt;span
+class=&#34;math inline&#34;&gt;\(T&amp;#39;:\mathrm{Ext}(M;S^1)\)&lt;/span&gt; is
+split.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
 &lt;h1 data-number=&#34;5&#34; id=&#34;leibniz-gauss-bonnet-poincaruxe9-hopf&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;5&lt;/span&gt; Leibniz, Gauss-Bonnet,
 Poincaré-Hopf&lt;/h1&gt;
 &lt;h2 data-number=&#34;5.1&#34; id=&#34;the-leibniz-product-rule&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;5.1&lt;/span&gt; The Leibniz (product) rule&lt;/h2&gt;
+&lt;p&gt;This is a slight aside in the context of this note, but it belongs
+here anyway because it follows from the slogan “&lt;span
+class=&#34;math inline&#34;&gt;\(\ensuremath{\mathsf{ap}}\)&lt;/span&gt; is &lt;span
+class=&#34;math inline&#34;&gt;\(d\)&lt;/span&gt;”, i.e. that calculus and differential
+geometry are visible in type theory through the action on paths, which
+is a finite version of the infinitesimal tangent vector. If we think we
+have some new understanding of the operator &lt;span
+class=&#34;math inline&#34;&gt;\(d\)&lt;/span&gt;, then we should test it by finding the
+Leibniz rule.&lt;/p&gt;
 &lt;p&gt;The Leibniz rule for exterior differentiation states that if &lt;span
 class=&#34;math inline&#34;&gt;\(f, g:M\to \ensuremath{\mathbb{R}}\)&lt;/span&gt; are two
 smooth functions to the real numbers then &lt;span
@@ -1399,7 +1432,7 @@ pathover for the concatenation of every loop. It is also the total
 difference between the curvature around every loop, and the vector
 field. It is also zero.&lt;/p&gt;
 &lt;div class=&#34;mythm&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Theorem 4&lt;/strong&gt;. &lt;em&gt;The total pathover of all face
+&lt;p&gt;&lt;strong&gt;Theorem 5&lt;/strong&gt;. &lt;em&gt;The total pathover of all face
 boundaries is &lt;span
 class=&#34;math inline&#34;&gt;\(\ensuremath{\mathsf{refl}}_*\)&lt;/span&gt;, hence the
 total curvature is equal to the total index of &lt;span
@@ -1435,6 +1468,13 @@ each hole. The top and bottom will be index 1, and ones around the holes
 will be index -1.&lt;/p&gt;
 &lt;div id=&#34;refs&#34; class=&#34;references csl-bib-body hanging-indent&#34;
 data-entry-spacing=&#34;0&#34; role=&#34;list&#34;&gt;
+&lt;div id=&#34;ref-atiyah1983yang&#34; class=&#34;csl-entry&#34; role=&#34;listitem&#34;&gt;
+&lt;span class=&#34;smallcaps&#34;&gt;Atiyah&lt;/span&gt;, M.F. &amp;amp; &lt;span
+class=&#34;smallcaps&#34;&gt;Bott&lt;/span&gt;, R. (1983) The yang-mills equations over
+riemann surfaces. &lt;em&gt;Philosophical Transactions of the Royal Society of
+London. Series A, Mathematical and Physical Sciences&lt;/em&gt;,
+&lt;strong&gt;308&lt;/strong&gt;, 523–615.
+&lt;/div&gt;
 &lt;div id=&#34;ref-Symmetry&#34; class=&#34;csl-entry&#34; role=&#34;listitem&#34;&gt;
 &lt;span class=&#34;smallcaps&#34;&gt;Bezem&lt;/span&gt;, M., &lt;span
 class=&#34;smallcaps&#34;&gt;Buchholtz&lt;/span&gt;, U., &lt;span
@@ -1442,17 +1482,25 @@ class=&#34;smallcaps&#34;&gt;Cagne&lt;/span&gt;, P., &lt;span
 class=&#34;smallcaps&#34;&gt;Dundas&lt;/span&gt;, B.I., &amp;amp; &lt;span
 class=&#34;smallcaps&#34;&gt;Grayson&lt;/span&gt;, D.R. (2023) Symmetry.
 &lt;/div&gt;
-&lt;div id=&#34;ref-hamilton2017&#34; class=&#34;csl-entry&#34; role=&#34;listitem&#34;&gt;
-&lt;span class=&#34;smallcaps&#34;&gt;Hamilton&lt;/span&gt;, M.J.D. (2017) &lt;em&gt;&lt;a
-href=&#34;https://books.google.com/books?id=8zVCDwAAQBAJ&#34;&gt;Mathematical gauge
-theory: With applications to the standard model of particle
-physics&lt;/a&gt;&lt;/em&gt;, Universitext. Springer International Publishing.
-&lt;/div&gt;
 &lt;div id=&#34;ref-kirby_siebenmann&#34; class=&#34;csl-entry&#34; role=&#34;listitem&#34;&gt;
 &lt;span class=&#34;smallcaps&#34;&gt;Kirby&lt;/span&gt;, R.C. &amp;amp; &lt;span
 class=&#34;smallcaps&#34;&gt;Siebenmann&lt;/span&gt;, L.C. (1977) &lt;em&gt;Foundational essays
 on topological manifolds, smoothings, and triangulations&lt;/em&gt;, Annals of
 mathematics studies. Princeton University Press.
+&lt;/div&gt;
+&lt;div id=&#34;ref-myersthesis&#34; class=&#34;csl-entry&#34; role=&#34;listitem&#34;&gt;
+&lt;span class=&#34;smallcaps&#34;&gt;Myers&lt;/span&gt;, D.J. (2022) &lt;a
+href=&#34;http://jhir.library.jhu.edu/handle/1774.2/67618&#34;&gt;Symmetry,
+geometry, modality&lt;/a&gt; (PhD thesis).
+&lt;/div&gt;
+&lt;div id=&#34;ref-urs_atiyah&#34; class=&#34;csl-entry&#34; role=&#34;listitem&#34;&gt;
+&lt;span class=&#34;smallcaps&#34;&gt;nLab authors&lt;/span&gt; (2024) &lt;span&gt;A&lt;/span&gt;tiyah
+&lt;span&gt;L&lt;/span&gt;ie groupoid.
+&lt;/div&gt;
+&lt;div id=&#34;ref-urs_atiyah_blog&#34; class=&#34;csl-entry&#34; role=&#34;listitem&#34;&gt;
+&lt;span class=&#34;smallcaps&#34;&gt;Schreiber&lt;/span&gt;, U. (2006) &lt;a
+href=&#34;https://golem.ph.utexas.edu/category/2006/09/nconnections_and_higher_schrei.html&#34;&gt;N-transport
+and higher schreier theory&lt;/a&gt;.
 &lt;/div&gt;
 &lt;div id=&#34;ref-sco&#34; class=&#34;csl-entry&#34; role=&#34;listitem&#34;&gt;
 &lt;span class=&#34;smallcaps&#34;&gt;Scoccola&lt;/span&gt;, L. (2020) &lt;a

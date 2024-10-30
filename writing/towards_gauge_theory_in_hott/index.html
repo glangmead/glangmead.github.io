@@ -1457,70 +1457,63 @@ point.</em></p>
 </div>
 <p>Given a bundle <span class="math inline">\(\pi:P\to M\)</span> there
 is a space of connections <span
-class="math inline">\(\mathscr{A}(P)\)</span>. We could slightly tilt
-all the horizontal subspaces, in a variable way from point to point, and
-obtain another connection. The group <span
+class="math inline">\(\mathscr{A}(P)\)</span>. The group <span
 class="math inline">\(\mathop{\mathrm{Aut}}P\)</span> acts on this
 space. For example, a gauge transformation that is constant in the
 neighborhood of a point will not change the splitting, it will just
 shift the fiber rigidly along itself. But at the other extreme, a gauge
 transformation that is changing rapidly near a point will tilt the
-horizontal subspaces rapidly. So there are two effects: the effect of
-sliding along the fiber, and the effect of the rate of change of the
-gauge transformation. In classical geometry you’ll see formulas like
-this:</p>
-<div class="mythm">
-<p><strong>Theorem 2</strong>. <em>Let <span class="math inline">\(P\to
-M\)</span> be a principal bundle and <span
-class="math inline">\(A\in\Omega^1(M,\mathfrak{g})\)</span> a connection
-1-form on <span class="math inline">\(P\)</span>. Suppose that <span
-class="math inline">\(H\in \mathscr{G}(P)\)</span> is a bundle
-automorphism. Then <span class="math inline">\(H^*A\)</span> is a
-connection 1-form and in a neighborhood <span
-class="math inline">\(U\)</span> of a point <span
-class="math inline">\(x\in M\)</span> we can write <span
-class="math inline">\(H\)</span> as a function <span
-class="math inline">\(H_U:U\to G\)</span> where <span
-class="math inline">\(H_U(x)\in G\)</span> is a group element
-multiplying the fiber at <span class="math inline">\(x\)</span>, and
-then we have <span
-class="math display">\[H^*A=\mathrm{Ad}_{H_U(x)^{-1}}\circ A +
-H_U^*(\mu_G)\]</span> where <span
-class="math inline">\(\mu_G:\Omega^1(G,\mathfrak{g})\)</span> is the
-Maurer-Cartan form on <span class="math inline">\(G\)</span>.</em></p>
-</div>
-<p>This theorem is a combination of Theorems 5.2.2 and 5.4.4 in the
-excellent recent book on gauge theory for mathematicians interested in
-physics by Mark Hamilton<span class="citation"
-data-cites="hamilton2017"> (<a href="#ref-hamilton2017"
-role="doc-biblioref">Hamilton, 2017</a>)</span>.</p>
-<p>It’s not so important to fully understand this formula because we
-will re-explain it in HoTT terms in a moment. But notice that <span
-class="math inline">\(H^*A\)</span> (the action of the gauge
-transformation on the connection 1-form) has contributions from two
-terms (both of which are vertical — connections always map onto the
-vertical bundle). The first is the adjoint action at the specific point
-<span class="math inline">\(x\)</span>. This is always what we expect
-when we shift the base point in a torsor and look at the resulting group
-(or in this case, the Lie algebra). The second term involves the
-Maurer-Cartan form, which is the derivative of subtraction in the group.
-It takes tangent vectors at <span class="math inline">\(g:G\)</span> to
-a tangent vector at the identity (the Lie algebra, denoted <span
-class="math inline">\(\mathfrak{g}\)</span>) by differentiating the
-action of multiplication by <span class="math inline">\(g^{-1}\)</span>.
-If we think in terms of finite-length paths, then imagine a path <span
-class="math inline">\(p:g=g&#39;\)</span> and the function <span
-class="math inline">\((g^{-1}\cdot -)\)</span>. The function will act on
-the path to give a path <span class="math inline">\(g^{-1}\cdot
-p:e=(g&#39;\cdot g^{-1})\)</span> that starts at the identity. So the
-Maurer-Cartan form shifts paths to start at the identity by subtracting
-off the start point. Our Maurer-Cartan term is the pullback of the
-Maurer-Cartan form by <span class="math inline">\(H\)</span> which
-records how <span class="math inline">\(H\)</span> acts infinitesimally,
-i.e. the contribution from the gauge transformation <span
-class="math inline">\(H\)</span> that comes from the rapidity of change
-from point to point. This term will be large when <span
-class="math inline">\(H_U\)</span> has a large derivative.</p>
+horizontal subspaces rapidly. The field of <strong>gauge theory</strong>
+begins with a study of the quotient space <span
+class="math inline">\(\mathscr{A}(P)/\mathop{\mathrm{Aut}}P\)</span>.</p>
+<p>A prominent train of thought when mathematicians were wrestling with
+curvature and gauge theory was to frame connections and curvature in
+terms of splittings of certain sequences. Atiyah and Bott (<span
+class="citation" data-cites="atiyah1983yang"> (<a
+href="#ref-atiyah1983yang" role="doc-biblioref">Atiyah &amp; Bott,
+1983</a>)</span> equation 3.4) describe the space of vector fields on a
+total space <span class="math inline">\(P\)</span> as a Lie algebra
+extension of <span class="math inline">\(\Gamma TM\)</span> by <span
+class="math inline">\(\Gamma \mathrm{ad}P\)</span>, respectively the Lie
+algebra of vector fields on the base and vertical vector fields on <span
+class="math inline">\(P\)</span>. A non-flat connection will fail to
+split this sequence because horizontal vector fields may have a
+non-horizontal component when taking the Lie bracket. This extension is
+referred to as the <em>Atiyah sequence</em>.</p>
+<p>In this century mathematicians in HoTT and HoTT-adjacent fields
+considered the <em>integrated Atiyah sequence</em>, including Urs
+Schreiber<span class="citation" data-cites="urs_atiyah"> (<a
+href="#ref-urs_atiyah" role="doc-biblioref">nLab authors,
+2024</a>)</span><span class="citation" data-cites="urs_atiyah_blog"> (<a
+href="#ref-urs_atiyah_blog" role="doc-biblioref">Schreiber,
+2006</a>)</span>. This is the groupoidal version of the Atiyah sequence:
+start with a path groupoid <span
+class="math inline">\(\mathcal{P}(M)\)</span> of the base manifold
+(either its fundamental groupoid of homotopy classes of paths, or the
+path groupoid of thin homotopy classes, more suitable for geometry). We
+examine extensions of <span
+class="math inline">\(\mathcal{P}(M)\)</span> by <span
+class="math inline">\(\mathop{\mathrm{Aut}}P\)</span>, mixing these
+horizontal and vertical components into a groupoid on <span
+class="math inline">\(P\)</span> that acts via isomorphisms of the
+fibers.</p>
+<p>Once the situation was framed in terms of groupoid extensions,
+Schreier theory could be used as a lens as well. David Jaz Myers showed
+that in the case of higher groups we have an equivalence between the
+type of extensions of a group <span class="math inline">\(G\)</span> by
+<span class="math inline">\(F\)</span> and the actions of <span
+class="math inline">\(G\)</span> on a delooping <span
+class="math inline">\(BF\)</span>: <span
+class="math display">\[\mathrm{Ext}(G; F) \simeq (BG
+\,\cdot\!\to\mathrm{BAut}(BF))\]</span> (see <span class="citation"
+data-cites="myersthesis"> (<a href="#ref-myersthesis"
+role="doc-biblioref">Myers, 2022</a>)</span> Theorem 2.5.7). Our type of
+classifying maps <span
+class="math inline">\(M\to\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)</span>
+can be seen as the type of groupoid extensions of <span
+class="math inline">\(M\)</span> itself by the group <span
+class="math inline">\(S^1\)</span>, confirming and combining these
+threads.</p>
 <h2 data-number="4.2" id="type-theory-version"><span
 class="header-section-number">4.2</span> Type theory version</h2>
 <p>Moving now to HoTT, fix a type <span
@@ -1549,7 +1542,7 @@ the term “path over”), including composition, and associativity
 thereof.</p>
 <p>We recall now the identity type of sigma types:</p>
 <div id="thm:idsit" class="mythm">
-<p><strong>Theorem 3</strong>. <em>(HoTT book Theorem 2.7.2 <span
+<p><strong>Theorem 2</strong>. <em>(HoTT book Theorem 2.7.2 <span
 class="citation" data-cites="hottbook"> (<a href="#ref-hottbook"
 role="doc-biblioref">Univalent Foundations Program, 2013</a>)</span>) If
 <span class="math inline">\(f:M\to \mathcal{U}\)</span> is a type family
@@ -1592,7 +1585,7 @@ acts fiberwise. We want to compute the action of <span
 class="math inline">\(\ensuremath{\mathsf{ap}}(H&#39;)\)</span> on the
 horizontal-vertical decomposition of paths from Theorem <a
 href="#thm:idsit" data-reference-type="ref"
-data-reference="thm:idsit">3</a> by computing <span
+data-reference="thm:idsit">2</a> by computing <span
 class="math inline">\(\omega\circ\ensuremath{\mathsf{ap}}(H&#39;)=\ensuremath{\mathrm{pr}}_2\circ\mathsf{split}\circ\ensuremath{\mathsf{ap}}(H&#39;)\)</span>.</p>
 <p>Denote <span class="math inline">\(\sum_{a:M}f(a)\)</span> by <span
 class="math inline">\(P\)</span>. We’ll adopt a convention of roman
@@ -1621,11 +1614,51 @@ class="math inline">\(\mathrm{tr}(H(x)\cdot f(p)) =
 </div>
 <p><img src="./d75a6e58297fe05a808990d9551f5e2751b819cb.png"
 alt="image" /></p>
+<div class="mythm">
+<p><strong>Theorem 3</strong>. <em>The following are equivalent for a
+map <span
+class="math inline">\(T:M\to\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)</span>:</em></p>
+<ol>
+<li><p><em><span class="math inline">\(P\)</span> is a trivial
+bundle.</em></p></li>
+<li><p><em>The dependent sum <span
+class="math inline">\(\sum_{x:M}Tx\)</span> is equivalent to a
+non-dependent sum.</em></p></li>
+<li><p><em>There exists a total lifting <span
+class="math inline">\(T_\bullet\)</span> to pointed types.</em></p></li>
+<li><p><em><span class="math inline">\(T\)</span> is
+contractible.</em></p></li>
+</ol>
+</div>
+<div class="mythm">
+<p><strong>Theorem 4</strong>. <em>The following are equivalent for a
+map <span
+class="math inline">\(T:M\to\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)</span>:</em></p>
+<ol>
+<li><p><em>The connection on <span
+class="math inline">\(\sum_{x:M}Tx\)</span> is flat.</em></p></li>
+<li><p><em>The identity type of the dependent sum <span
+class="math inline">\(\sum_{x:M}Tx\)</span> is a non-depedent
+sum.</em></p></li>
+<li><p><em>The associated extension <span
+class="math inline">\(T&#39;:\mathrm{Ext}(M;S^1)\)</span> is
+split.</em></p></li>
+</ol>
+</div>
 <h1 data-number="5" id="leibniz-gauss-bonnet-poincaruxe9-hopf"><span
 class="header-section-number">5</span> Leibniz, Gauss-Bonnet,
 Poincaré-Hopf</h1>
 <h2 data-number="5.1" id="the-leibniz-product-rule"><span
 class="header-section-number">5.1</span> The Leibniz (product) rule</h2>
+<p>This is a slight aside in the context of this note, but it belongs
+here anyway because it follows from the slogan “<span
+class="math inline">\(\ensuremath{\mathsf{ap}}\)</span> is <span
+class="math inline">\(d\)</span>”, i.e. that calculus and differential
+geometry are visible in type theory through the action on paths, which
+is a finite version of the infinitesimal tangent vector. If we think we
+have some new understanding of the operator <span
+class="math inline">\(d\)</span>, then we should test it by finding the
+Leibniz rule.</p>
 <p>The Leibniz rule for exterior differentiation states that if <span
 class="math inline">\(f, g:M\to \ensuremath{\mathbb{R}}\)</span> are two
 smooth functions to the real numbers then <span
@@ -1783,7 +1816,7 @@ pathover for the concatenation of every loop. It is also the total
 difference between the curvature around every loop, and the vector
 field. It is also zero.</p>
 <div class="mythm">
-<p><strong>Theorem 4</strong>. <em>The total pathover of all face
+<p><strong>Theorem 5</strong>. <em>The total pathover of all face
 boundaries is <span
 class="math inline">\(\ensuremath{\mathsf{refl}}_*\)</span>, hence the
 total curvature is equal to the total index of <span
@@ -1819,6 +1852,13 @@ each hole. The top and bottom will be index 1, and ones around the holes
 will be index -1.</p>
 <div id="refs" class="references csl-bib-body hanging-indent"
 data-entry-spacing="0" role="list">
+<div id="ref-atiyah1983yang" class="csl-entry" role="listitem">
+<span class="smallcaps">Atiyah</span>, M.F. &amp; <span
+class="smallcaps">Bott</span>, R. (1983) The yang-mills equations over
+riemann surfaces. <em>Philosophical Transactions of the Royal Society of
+London. Series A, Mathematical and Physical Sciences</em>,
+<strong>308</strong>, 523–615.
+</div>
 <div id="ref-Symmetry" class="csl-entry" role="listitem">
 <span class="smallcaps">Bezem</span>, M., <span
 class="smallcaps">Buchholtz</span>, U., <span
@@ -1826,17 +1866,25 @@ class="smallcaps">Cagne</span>, P., <span
 class="smallcaps">Dundas</span>, B.I., &amp; <span
 class="smallcaps">Grayson</span>, D.R. (2023) Symmetry.
 </div>
-<div id="ref-hamilton2017" class="csl-entry" role="listitem">
-<span class="smallcaps">Hamilton</span>, M.J.D. (2017) <em><a
-href="https://books.google.com/books?id=8zVCDwAAQBAJ">Mathematical gauge
-theory: With applications to the standard model of particle
-physics</a></em>, Universitext. Springer International Publishing.
-</div>
 <div id="ref-kirby_siebenmann" class="csl-entry" role="listitem">
 <span class="smallcaps">Kirby</span>, R.C. &amp; <span
 class="smallcaps">Siebenmann</span>, L.C. (1977) <em>Foundational essays
 on topological manifolds, smoothings, and triangulations</em>, Annals of
 mathematics studies. Princeton University Press.
+</div>
+<div id="ref-myersthesis" class="csl-entry" role="listitem">
+<span class="smallcaps">Myers</span>, D.J. (2022) <a
+href="http://jhir.library.jhu.edu/handle/1774.2/67618">Symmetry,
+geometry, modality</a> (PhD thesis).
+</div>
+<div id="ref-urs_atiyah" class="csl-entry" role="listitem">
+<span class="smallcaps">nLab authors</span> (2024) <span>A</span>tiyah
+<span>L</span>ie groupoid.
+</div>
+<div id="ref-urs_atiyah_blog" class="csl-entry" role="listitem">
+<span class="smallcaps">Schreiber</span>, U. (2006) <a
+href="https://golem.ph.utexas.edu/category/2006/09/nconnections_and_higher_schrei.html">N-transport
+and higher schreier theory</a>.
 </div>
 <div id="ref-sco" class="csl-entry" role="listitem">
 <span class="smallcaps">Scoccola</span>, L. (2020) <a
