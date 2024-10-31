@@ -508,9 +508,18 @@ id="toc-the-connection-to-connections"><span
 class="toc-section-number">4</span> The connection to connections</a>
 <ul>
 <li><a href="#classical-version" id="toc-classical-version"><span
-class="toc-section-number">4.1</span> Classical version</a></li>
+class="toc-section-number">4.1</span> Classical version</a>
+<ul>
+<li><a href="#gauge-theory" id="toc-gauge-theory"><span
+class="toc-section-number">4.1.1</span> Gauge theory</a></li>
+</ul></li>
 <li><a href="#type-theory-version" id="toc-type-theory-version"><span
-class="toc-section-number">4.2</span> Type theory version</a></li>
+class="toc-section-number">4.2</span> Type theory version</a>
+<ul>
+<li><a href="#gauge-theory-revisited"
+id="toc-gauge-theory-revisited"><span
+class="toc-section-number">4.2.1</span> Gauge theory revisited</a></li>
+</ul></li>
 </ul></li>
 <li><a href="#leibniz-gauss-bonnet-poincaruxe9-hopf"
 id="toc-leibniz-gauss-bonnet-poincaruxe9-hopf"><span
@@ -699,7 +708,7 @@ class="math inline">\(\mathrm{K}(G,n)\)</span> but we will be focusing
 on <span class="math inline">\(n=1\)</span> in this note.</p>
 <div class="mydef">
 <p><strong>Definition 2</strong>. <em>Let <span
-class="math inline">\(\mathrm{EM}(G,n)\stackrel{\mathrm{def}}{=}\mathrm{BAut}(\mathrm{K}(G,n))\stackrel{\mathrm{def}}{=}\sum_{Y:\mathcal{U}}||Y\simeq
+class="math inline">\(\mathrm{EM}(G,n)\stackrel{\mathrm{def}}{=}\mathop{\mathrm{BAut}}(\mathrm{K}(G,n))\stackrel{\mathrm{def}}{=}\sum_{Y:\mathcal{U}}||Y\simeq
 \mathrm{K}(G,n)||_{-1}\)</span>. A <span
 class="math inline">\(\mathrm{K}(G,n)-bundle\)</span> on a type <span
 class="math inline">\(M\)</span> is the fiber of a map <span
@@ -1434,10 +1443,10 @@ class="math inline">\(HP\)</span>.</p>
 <p>Armed with the lifting of paths one immediately obtains isomorphisms
 between the fibers of <span class="math inline">\(P\)</span>: given a
 path in <span class="math inline">\(M\)</span> we can map the starting
-point of a lift to the ending point. So the Ehresmann connection, the
-lifting of paths, and transport isomorphisms between fibers are all
-recapitulations of the structure that the connection adds to the
-bundle.</p>
+point of a lift to the ending point. So the three constructions: the
+Ehresmann connection, the lifting of paths, and transport isomorphisms
+between fibers are all recapitulations of the structure that the
+connection adds to the bundle.</p>
 <div class="mynote">
 <p><strong>Note 1</strong>. <em>Recall that torsors have a physical
 interpretation as a quantity without a specified unit, such as mass,
@@ -1455,6 +1464,8 @@ class="math inline">\(M\)</span> is spacetime, and a gauge
 transformation is a smoothly varying choice of gauge (units) at each
 point.</em></p>
 </div>
+<h3 data-number="4.1.1" id="gauge-theory"><span
+class="header-section-number">4.1.1</span> Gauge theory</h3>
 <p>Given a bundle <span class="math inline">\(\pi:P\to M\)</span> there
 is a space of connections <span
 class="math inline">\(\mathscr{A}(P)\)</span>. The group <span
@@ -1466,54 +1477,29 @@ transformation that is changing rapidly near a point will tilt the
 horizontal subspaces rapidly. The field of <strong>gauge theory</strong>
 begins with a study of the quotient space <span
 class="math inline">\(\mathscr{A}(P)/\mathop{\mathrm{Aut}}P\)</span>.</p>
-<p>A prominent train of thought when mathematicians were wrestling with
-curvature and gauge theory was to frame connections and curvature in
-terms of splittings of certain sequences. Atiyah and Bott (<span
-class="citation" data-cites="atiyah1983yang"> (<a
-href="#ref-atiyah1983yang" role="doc-biblioref">Atiyah &amp; Bott,
-1983</a>)</span> equation 3.4) describe the space of vector fields on a
-total space <span class="math inline">\(P\)</span> as a Lie algebra
-extension of <span class="math inline">\(\Gamma TM\)</span> by <span
-class="math inline">\(\Gamma \mathrm{ad}P\)</span>, respectively the Lie
-algebra of vector fields on the base and vertical vector fields on <span
-class="math inline">\(P\)</span>. A non-flat connection will fail to
-split this sequence because horizontal vector fields may have a
-non-horizontal component when taking the Lie bracket. This extension is
-referred to as the <em>Atiyah sequence</em>.</p>
+<p>We can characterize connections and curvature in terms of splittings
+of certain sequences. Atiyah and Bott (<span class="citation"
+data-cites="atiyah1983yang"> (<a href="#ref-atiyah1983yang"
+role="doc-biblioref">Atiyah &amp; Bott, 1983</a>)</span> equation 3.4)
+describe the space of vector fields on a total space <span
+class="math inline">\(P\)</span> as a Lie algebra extension of <span
+class="math inline">\(\Gamma TM\)</span> by <span
+class="math inline">\(\Gamma \mathop{\mathrm{ad}}P\)</span>,
+respectively the Lie algebra of vector fields on the base and vertical
+vector fields on <span class="math inline">\(P\)</span>. A non-flat
+connection will fail to split this sequence because horizontal vector
+fields may have a non-horizontal component when taking the Lie bracket.
+This extension is referred to as the <em>Atiyah sequence</em>.</p>
 <p>In this century mathematicians in HoTT and HoTT-adjacent fields
-considered the <em>integrated Atiyah sequence</em>, including Urs
+sought an <em>integrated Atiyah sequence</em>, including Urs
 Schreiber<span class="citation" data-cites="urs_atiyah"> (<a
 href="#ref-urs_atiyah" role="doc-biblioref">nLab authors,
 2024</a>)</span><span class="citation" data-cites="urs_atiyah_blog"> (<a
 href="#ref-urs_atiyah_blog" role="doc-biblioref">Schreiber,
-2006</a>)</span>. This is the groupoidal version of the Atiyah sequence:
-start with a path groupoid <span
-class="math inline">\(\mathcal{P}(M)\)</span> of the base manifold
-(either its fundamental groupoid of homotopy classes of paths, or the
-path groupoid of thin homotopy classes, more suitable for geometry). We
-examine extensions of <span
-class="math inline">\(\mathcal{P}(M)\)</span> by <span
-class="math inline">\(\mathop{\mathrm{Aut}}P\)</span>, mixing these
-horizontal and vertical components into a groupoid on <span
-class="math inline">\(P\)</span> that acts via isomorphisms of the
-fibers.</p>
-<p>Once the situation was framed in terms of groupoid extensions,
-Schreier theory could be used as a lens as well. David Jaz Myers showed
-that in the case of higher groups we have an equivalence between the
-type of extensions of a group <span class="math inline">\(G\)</span> by
-<span class="math inline">\(F\)</span> and the actions of <span
-class="math inline">\(G\)</span> on a delooping <span
-class="math inline">\(BF\)</span>: <span
-class="math display">\[\mathrm{Ext}(G; F) \simeq (BG
-\,\cdot\!\to\mathrm{BAut}(BF))\]</span> (see <span class="citation"
-data-cites="myersthesis"> (<a href="#ref-myersthesis"
-role="doc-biblioref">Myers, 2022</a>)</span> Theorem 2.5.7). Our type of
-classifying maps <span
-class="math inline">\(M\to\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)</span>
-can be seen as the type of groupoid extensions of <span
-class="math inline">\(M\)</span> itself by the group <span
-class="math inline">\(S^1\)</span>, confirming and combining these
-threads.</p>
+2006</a>)</span>. This would be a Lie groupoidal version of the Atiyah
+sequence on Lie algebras. If a groupoid extension could be examined, a
+link could be sought to Schreier theory. We’ll return to these ideas in
+the next section.</p>
 <h2 data-number="4.2" id="type-theory-version"><span
 class="header-section-number">4.2</span> Type theory version</h2>
 <p>Moving now to HoTT, fix a type <span
@@ -1619,8 +1605,9 @@ alt="image" /></p>
 map <span
 class="math inline">\(T:M\to\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)</span>:</em></p>
 <ol>
-<li><p><em><span class="math inline">\(P\)</span> is a trivial
-bundle.</em></p></li>
+<li><p><em>The principal bundle <span
+class="math inline">\(P\stackrel{\mathrm{def}}{=}\sum_{x:M}Tx\)</span>
+is a trivial bundle.</em></p></li>
 <li><p><em>The dependent sum <span
 class="math inline">\(\sum_{x:M}Tx\)</span> is equivalent to a
 non-dependent sum.</em></p></li>
@@ -1637,14 +1624,52 @@ class="math inline">\(T:M\to\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)</span>:</em
 <ol>
 <li><p><em>The connection on <span
 class="math inline">\(\sum_{x:M}Tx\)</span> is flat.</em></p></li>
-<li><p><em>The identity type of the dependent sum <span
-class="math inline">\(\sum_{x:M}Tx\)</span> is a non-depedent
-sum.</em></p></li>
-<li><p><em>The associated extension <span
-class="math inline">\(T&#39;:\mathrm{Ext}(M;S^1)\)</span> is
-split.</em></p></li>
+<li><p><em><span class="math inline">\(T\)</span> factors through the
+1-truncation <span class="math inline">\(||M||_1\)</span>.</em></p></li>
 </ol>
 </div>
+<h3 data-number="4.2.1" id="gauge-theory-revisited"><span
+class="header-section-number">4.2.1</span> Gauge theory revisited</h3>
+<p>David Jaz Myers showed that in the case of higher groups we have an
+equivalence between the type of extensions of a group <span
+class="math inline">\(G\)</span> by <span
+class="math inline">\(F\)</span> and the actions of <span
+class="math inline">\(G\)</span> on a delooping <span
+class="math inline">\(BF\)</span>: <span
+class="math display">\[\mathrm{Ext}(G; F) \simeq (BG
+\,\cdot\!\to\mathop{\mathrm{BAut}}(BF))\]</span> (see <span
+class="citation" data-cites="myersthesis"> (<a href="#ref-myersthesis"
+role="doc-biblioref">Myers, 2022</a>)</span> Theorem 2.5.7). Our type of
+classifying maps <span
+class="math inline">\(M\to\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)</span>
+can be seen as the type of groupoid extensions of <span
+class="math inline">\(\pi_1(M)\)</span> by the group <span
+class="math inline">\(S^1\)</span>. What a lovely reframing of principal
+bundles.</p>
+<p>So what is the finite version of the Lie algebra of vector fields?
+Vector fields are infinitesimal automorphisms, and so automorphisms are
+what we are looking for. Given a map <span
+class="math inline">\(f:A\to\mathcal{U}\)</span> of a pointed type <span
+class="math inline">\(A\)</span> we obtain a fiber sequence <span
+class="math display">\[f=f\xrightarrow[]{\mathrm{ev}}
+\sum_{a:A}fa=\sum_{a:A}fa \xrightarrow[]{\ensuremath{\mathrm{pr}}_1}
+A=A\]</span> which maps a homotopy <span
+class="math inline">\(H:\prod_{a:A}fa=fa\)</span> to the automorphism of
+the sigma type given by applying each path <span
+class="math inline">\(fa=fa\)</span> as a function on each fiber. These
+correspond to the gauge transformations. The second map is given by
+projecting the automorphism of <span
+class="math inline">\(\sum_{a:A}fa\)</span> to the first component.
+These are the automorphisms which do not necessarily cover the identity
+of <span class="math inline">\(M\)</span>. In our case this construction
+gives <span class="math display">\[T=T\to P=P\to M=M.\]</span></p>
+<p>Where can we observe the Lie bracket of vector fields, and the
+classical fact that curvature is an obstruction to the splitting of this
+sequence of groups? A splitting of this sequence of groups would be a
+way to take an isomorphism of <span class="math inline">\(M\)</span> and
+obtain an isomorphism of <span class="math inline">\(P\)</span>, in a
+way that respects multiplication in the group (composition of
+isomorphisms).</p>
 <h1 data-number="5" id="leibniz-gauss-bonnet-poincaruxe9-hopf"><span
 class="header-section-number">5</span> Leibniz, Gauss-Bonnet,
 Poincaré-Hopf</h1>
@@ -1731,34 +1756,39 @@ g:M\to B\)</span> and <span class="math inline">\(p:x=_M y\)</span> then
 </div>
 <h2 data-number="5.2" id="the-total-curvature"><span
 class="header-section-number">5.2</span> The total curvature</h2>
-<p>On the 2-face <span class="math inline">\(F\)</span> bounding a loop
-<span class="math inline">\(\ell:v=_M v\)</span> the map <span
+<div class="mydef">
+<p><strong>Definition 25</strong>. <em>Let <span
+class="math inline">\(F(M)\)</span> denote the groupoid of faces of
+<span class="math inline">\(M\)</span> generated by the faces in its
+constructor. Let <span class="math inline">\(V:\prod_{f:F(M)}f\)</span>
+be a selected vertex of every face, and let <span
+class="math inline">\(\partial:\prod_{f:F(M)}Vf=_M Vf\)</span> be the
+clockwise boundary path around a face. Let <span
+class="math inline">\(v\)</span> be the basepoint of <span
+class="math inline">\(M\)</span>. Then in particular we have <span
+class="math inline">\(M:F(M)\)</span> the concatenation of all faces
+(i.e. <span class="math inline">\(M\)</span> itself), and we have <span
+class="math inline">\(\partial(M):v=_M v\)</span> which is the
+concatenation of all boundaries.</em></p>
+</div>
+<p>Observe that each generating edge of <span
+class="math inline">\(M\)</span> is visited once in each direction in
+the concatenation <span class="math inline">\(\partial(M)\)</span>.</p>
+<p>The map <span class="math inline">\(T\)</span> can be examined on
+each face. On a face <span class="math inline">\(f\)</span> bounding a
+loop <span class="math inline">\(\ell:v=_M v\)</span> the map <span
 class="math inline">\(T:M\to\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)</span>
 assigns a homotopy <span
-class="math inline">\(T(F):\ensuremath{\mathsf{refl}}_v=T(\ell)\)</span>,
+class="math inline">\(T(f):\ensuremath{\mathsf{refl}}_v=T(\ell)\)</span>,
 where <span class="math inline">\(T(\ell)\)</span> is an automorphism of
-<span class="math inline">\(T(v)\)</span>. The various 2-faces can be
-composed as terms of the 2-groupoid <span
-class="math inline">\(M\)</span>, and we will call the composition <span
-class="math inline">\(T(M):T(v)=T(v)\)</span> the <em>total
-curvature</em>.</p>
-<div class="mynote">
-<p><strong>Note 2</strong>. <em>If <span
-class="math inline">\(G\)</span> is a 0-truncated group such as <span
-class="math inline">\(\ensuremath{\mathbb{Z}}\)</span> then the type
-<span class="math inline">\(BG\)</span> of torsors is 1-truncated. If
-<span class="math inline">\(f:M\to BG\)</span> is a type family then
-<span class="math inline">\(\sum_{x:M}f(x)\)</span> has fibers that are
-sets (<span class="math inline">\(G\)</span>-torsors). So transport
-functions are set isomorphisms, and the transport of any contractible
-loop in <span class="math inline">\(M\)</span> will be <span
-class="math inline">\(\ensuremath{\mathsf{refl}}\)</span> (the identity)
-of the fiber, which is what we mean by the term <strong>flat</strong>.
-Transport around non-contractible loops may map to nontrivial fiber
-automorphisms. In this way the theory of covering spaces is a lower
-dimensional version of the story of mere-circle principal
-bundles.</em></p>
-</div>
+<span class="math inline">\(T(v)\)</span>. On the composition of all
+faces we have <span class="math inline">\(T(M):T(v)=T(v)\)</span>, the
+<strong>total curvature</strong>.</p>
+<p>It is crucial that <span class="math inline">\(T(M)\)</span> can be
+nontrivial (i.e. not <span
+class="math inline">\(\ensuremath{\mathsf{refl}}_v\)</span>) even though
+it’s computed by transporting across every edge in <span
+class="math inline">\(\partial(M)\)</span> once in each direction!</p>
 <h2 data-number="5.3" id="the-total-index"><span
 class="header-section-number">5.3</span> The total index</h2>
 <p>If we have <span class="math inline">\(M\setminus Z\)</span> for some
@@ -1768,65 +1798,83 @@ faces which contain <span class="math inline">\(z\)</span>, forming a
 new face. In this way we produce an equivalent type <span
 class="math inline">\(M_Z\simeq M\)</span> but which is no longer
 combinatorial since we have erased some of the edges from some of the
-neighborhoods.</p>
+neighborhoods. See Figure <a href="#fig:torus_morse"
+data-reference-type="ref" data-reference="fig:torus_morse">10</a> where
+the outlined hexagons are the composition of the six triangular faces
+around a zero.</p>
 <p>If <span class="math inline">\(X\)</span> is a vector field with
-isolated zeroes on <span class="math inline">\(Z\)</span>, then <span
+isolated zeros on <span class="math inline">\(Z\)</span>, then <span
 class="math inline">\(M_Z\)</span> is a convenient replacement for <span
 class="math inline">\(M\)</span> because <span
 class="math inline">\(X\)</span> is a partial function defined on all of
 <span class="math inline">\(M_Z\)</span> except for a collection of
-faces, each of which bounds one of the zeroes of <span
+faces, each of which bounds one of the zeros of <span
 class="math inline">\(Z\)</span>.</p>
-<p>If the combinatorial manifold was imported into type theory via some
-process of sampling or other, perhpaps more theoretical construction,
-then we should allow for zeroes to occur on verticies, edges, or faces.
-We can reduce the case of a zero on a vertex or edge to that of a face
-with the replacement method just described. The original combinatorial
-neighborhood structure continues to live in the fibers of <span
-class="math inline">\(T\)</span>, it’s only the base manifold that has
-been replaced.</p>
-<p>The action of <span class="math inline">\(X\)</span> around loops in
-<span class="math inline">\(M_Z\)</span> respects the inverting of
-paths, i.e. traversing them backwards. Therefore in order to perform
-calculations we must also know the direction of the paths.</p>
-<div class="mydef">
-<p><strong>Definition 25</strong>. <em>Given a connected loop <span
-class="math inline">\(\ell:a=_{M_Z}a\)</span> in <span
-class="math inline">\(M_Z\)</span> that is running in the clockwise
-direction around a face of <span class="math inline">\(M_Z\)</span>
-(i.e. the face is to the right of the path), we call the winding number
-of <span class="math inline">\(X(\ell)\)</span> the
-<strong>index</strong> of <span class="math inline">\(X\)</span> around
-<span class="math inline">\(\ell\)</span>. If we drop the clockwise
-requirement, then the winding number is also known as the
-<strong>degree</strong> of the map <span
-class="math inline">\(X\)</span> on <span
-class="math inline">\(\ell\)</span>. In other words index can be thought
-of as “clockwise degree.”</em></p>
+<div class="mynote">
+<p><strong>Note 2</strong>. <em>If the combinatorial manifold was
+imported into type theory via some process of sampling or other,
+perhpaps more theoretical, construction then we should allow for zeros
+to occur on verticies, edges, or faces. We can reduce the case of a zero
+on a vertex or edge to that of a face with the replacement method just
+described. The original combinatorial neighborhood structure continues
+to live in the fibers of <span class="math inline">\(T\)</span>, it’s
+only the base manifold that has been replaced.</em></p>
 </div>
+<div class="mydef">
+<p><strong>Definition 26</strong>. <em>Given a face <span
+class="math inline">\(f:F(M\setminus Z)\)</span>, define <strong>the
+index of <span class="math inline">\(X\)</span> on <span
+class="math inline">\(f\)</span></strong> to be the winding number (also
+called the degree) of <span class="math inline">\(X(\partial
+f)\)</span>. The <strong>total index</strong> of <span
+class="math inline">\(X\)</span> on <span
+class="math inline">\(M\setminus Z\)</span> is the index of <span
+class="math inline">\(X\)</span> on <span
+class="math inline">\(\partial(M\setminus Z)\)</span>.</em></p>
+</div>
+<p>The index computation skips some faces of <span
+class="math inline">\(M\)</span> and can most definitely be nonzero.</p>
 <h2 data-number="5.4"
 id="equality-of-total-index-and-total-curvature"><span
 class="header-section-number">5.4</span> Equality of total index and
 total curvature</h2>
-<p>If we compute <span class="math inline">\(\mathrm{tr}_\ell
-X(a)=X(a)\)</span> around every face boundary in <span
-class="math inline">\(M_Z\)</span> then we can describe that in two
-ways. In homotopy type theory this is “the 1-skeleton-over,” the
-pathover for the concatenation of every loop. It is also the total
-difference between the curvature around every loop, and the vector
-field. It is also zero.</p>
+<p>Here we closely follow the classical proof of Hopf<span
+class="citation" data-cites="hopf"> (<a href="#ref-hopf"
+role="doc-biblioref">Hopf, 1983</a>)</span>, presented in detail in
+Needham<span class="citation" data-cites="needham"> (<a
+href="#ref-needham" role="doc-biblioref">Needham, 2021</a>)</span>.</p>
 <div class="mythm">
-<p><strong>Theorem 5</strong>. <em>The total pathover of all face
-boundaries is <span
-class="math inline">\(\ensuremath{\mathsf{refl}}_*\)</span>, hence the
-total curvature is equal to the total index of <span
+<p><strong>Theorem 5</strong>. <em>The total curvature’s winding number
+is equal to the total index of <span
 class="math inline">\(X\)</span>.</em></p>
 </div>
-<p><em>Proof.</em> When we concatenate every loop we visit every edge
-twice in opposite directions. ◻</p>
+<p><em>Proof.</em> Let <span class="math inline">\(L\)</span> be a fixed
+pointed polygon. We can consider <span class="math inline">\(X\)</span>
+to map each vertex of <span class="math inline">\(M_Z\)</span> to <span
+class="math inline">\(L\)</span>. On each face of <span
+class="math inline">\(M_Z\)</span> (no faces are omitted) we traverse
+the boundary, which is in the domain of both <span
+class="math inline">\(T\)</span> and of <span
+class="math inline">\(X\)</span>. So we avoid the complication that
+<span class="math inline">\(X\)</span> is not defined on some of the
+faces by remaining on the 1-skeleton. For a given edge <span
+class="math inline">\(e_{12}:v_1=_{M_Z} v_2\)</span> the function <span
+class="math inline">\(\mathrm{tr}_{e_{12}}X(v_1)=X(v_2)\)</span> is a
+path in <span class="math inline">\(L\)</span>. We will traverse every
+edge twice, once in each direction, which will cancel to give <span
+class="math inline">\(\ensuremath{\mathsf{refl}}_v\)</span>. In
+particular the boundaries around the zeros of <span
+class="math inline">\(X\)</span> are themselves traversed twice in
+opposite directions, canceling the total index. ◻</p>
+<p>The fact that the index was already an integer, whereas the curvature
+was a rotation, accounts for the factor of <span
+class="math inline">\(2\pi\)</span> in some classical statement of this
+theorem (e.g. <span class="citation" data-cites="needham"> (<a
+href="#ref-needham" role="doc-biblioref">Needham, 2021</a>)</span>
+section 26.3).</p>
 <div class="mycor">
 <p><strong>Corollary 3</strong>. <em>The total index of a vector field
-with isolated zeroes is independent of the vector field.</em></p>
+with isolated zeros is independent of the vector field.</em></p>
 </div>
 <div class="mycor">
 <p><strong>Corollary 4</strong>. <em>The total curvature is an
@@ -1849,7 +1897,19 @@ standing upright with the holes forming a vertical sequence. Now install
 a vector field that points downward whenever possible. This vector field
 will have a zero at the top and bottom, and one at the top and bottom of
 each hole. The top and bottom will be index 1, and ones around the holes
-will be index -1.</p>
+will be index -1. We include some sketches in the case of a torus. This
+illustrates how we obtain the formula for genus <span
+class="math inline">\(g\)</span>: <span
+class="math inline">\(\chi(M)=2-2g\)</span>.</p>
+<figure id="fig:torus_morse">
+<img src="torus_morse_grad.png" style="width:5.55556in" />
+<figcaption>A sketch of downward flow on the torus.</figcaption>
+</figure>
+<figure id="fig:torus_morse_skel">
+<img src="./bb41db25296489955c59f084af621a8734853d5b.png" />
+<figcaption>Schematic of the zeros of the downward flow of a
+torus.</figcaption>
+</figure>
 <div id="refs" class="references csl-bib-body hanging-indent"
 data-entry-spacing="0" role="list">
 <div id="ref-atiyah1983yang" class="csl-entry" role="listitem">
@@ -1866,6 +1926,12 @@ class="smallcaps">Cagne</span>, P., <span
 class="smallcaps">Dundas</span>, B.I., &amp; <span
 class="smallcaps">Grayson</span>, D.R. (2023) Symmetry.
 </div>
+<div id="ref-hopf" class="csl-entry" role="listitem">
+<span class="smallcaps">Hopf</span>, H. (1983) <a
+href="https://api.semanticscholar.org/CorpusID:117042538">Differential
+geometry in the large: Seminar lectures, new york university, 1946 and
+stanford university, 1956</a>.
+</div>
 <div id="ref-kirby_siebenmann" class="csl-entry" role="listitem">
 <span class="smallcaps">Kirby</span>, R.C. &amp; <span
 class="smallcaps">Siebenmann</span>, L.C. (1977) <em>Foundational essays
@@ -1876,6 +1942,12 @@ mathematics studies. Princeton University Press.
 <span class="smallcaps">Myers</span>, D.J. (2022) <a
 href="http://jhir.library.jhu.edu/handle/1774.2/67618">Symmetry,
 geometry, modality</a> (PhD thesis).
+</div>
+<div id="ref-needham" class="csl-entry" role="listitem">
+<span class="smallcaps">Needham</span>, T. (2021) <em><a
+href="https://books.google.com/books?id=Mc0QEAAAQBAJ">Visual
+differential geometry and forms: A mathematical drama in five
+acts</a></em>. Princeton University Press.
 </div>
 <div id="ref-urs_atiyah" class="csl-entry" role="listitem">
 <span class="smallcaps">nLab authors</span> (2024) <span>A</span>tiyah

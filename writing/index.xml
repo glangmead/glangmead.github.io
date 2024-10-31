@@ -124,9 +124,18 @@ id=&#34;toc-the-connection-to-connections&#34;&gt;&lt;span
 class=&#34;toc-section-number&#34;&gt;4&lt;/span&gt; The connection to connections&lt;/a&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#classical-version&#34; id=&#34;toc-classical-version&#34;&gt;&lt;span
-class=&#34;toc-section-number&#34;&gt;4.1&lt;/span&gt; Classical version&lt;/a&gt;&lt;/li&gt;
+class=&#34;toc-section-number&#34;&gt;4.1&lt;/span&gt; Classical version&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#gauge-theory&#34; id=&#34;toc-gauge-theory&#34;&gt;&lt;span
+class=&#34;toc-section-number&#34;&gt;4.1.1&lt;/span&gt; Gauge theory&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#type-theory-version&#34; id=&#34;toc-type-theory-version&#34;&gt;&lt;span
-class=&#34;toc-section-number&#34;&gt;4.2&lt;/span&gt; Type theory version&lt;/a&gt;&lt;/li&gt;
+class=&#34;toc-section-number&#34;&gt;4.2&lt;/span&gt; Type theory version&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#gauge-theory-revisited&#34;
+id=&#34;toc-gauge-theory-revisited&#34;&gt;&lt;span
+class=&#34;toc-section-number&#34;&gt;4.2.1&lt;/span&gt; Gauge theory revisited&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#leibniz-gauss-bonnet-poincaruxe9-hopf&#34;
 id=&#34;toc-leibniz-gauss-bonnet-poincaruxe9-hopf&#34;&gt;&lt;span
@@ -315,7 +324,7 @@ class=&#34;math inline&#34;&gt;\(\mathrm{K}(G,n)\)&lt;/span&gt; but we will be f
 on &lt;span class=&#34;math inline&#34;&gt;\(n=1\)&lt;/span&gt; in this note.&lt;/p&gt;
 &lt;div class=&#34;mydef&#34;&gt;
 &lt;p&gt;&lt;strong&gt;Definition 2&lt;/strong&gt;. &lt;em&gt;Let &lt;span
-class=&#34;math inline&#34;&gt;\(\mathrm{EM}(G,n)\stackrel{\mathrm{def}}{=}\mathrm{BAut}(\mathrm{K}(G,n))\stackrel{\mathrm{def}}{=}\sum_{Y:\mathcal{U}}||Y\simeq
+class=&#34;math inline&#34;&gt;\(\mathrm{EM}(G,n)\stackrel{\mathrm{def}}{=}\mathop{\mathrm{BAut}}(\mathrm{K}(G,n))\stackrel{\mathrm{def}}{=}\sum_{Y:\mathcal{U}}||Y\simeq
 \mathrm{K}(G,n)||_{-1}\)&lt;/span&gt;. A &lt;span
 class=&#34;math inline&#34;&gt;\(\mathrm{K}(G,n)-bundle\)&lt;/span&gt; on a type &lt;span
 class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; is the fiber of a map &lt;span
@@ -1050,10 +1059,10 @@ class=&#34;math inline&#34;&gt;\(HP\)&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;Armed with the lifting of paths one immediately obtains isomorphisms
 between the fibers of &lt;span class=&#34;math inline&#34;&gt;\(P\)&lt;/span&gt;: given a
 path in &lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; we can map the starting
-point of a lift to the ending point. So the Ehresmann connection, the
-lifting of paths, and transport isomorphisms between fibers are all
-recapitulations of the structure that the connection adds to the
-bundle.&lt;/p&gt;
+point of a lift to the ending point. So the three constructions: the
+Ehresmann connection, the lifting of paths, and transport isomorphisms
+between fibers are all recapitulations of the structure that the
+connection adds to the bundle.&lt;/p&gt;
 &lt;div class=&#34;mynote&#34;&gt;
 &lt;p&gt;&lt;strong&gt;Note 1&lt;/strong&gt;. &lt;em&gt;Recall that torsors have a physical
 interpretation as a quantity without a specified unit, such as mass,
@@ -1071,6 +1080,8 @@ class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; is spacetime, and a gauge
 transformation is a smoothly varying choice of gauge (units) at each
 point.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
+&lt;h3 data-number=&#34;4.1.1&#34; id=&#34;gauge-theory&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;4.1.1&lt;/span&gt; Gauge theory&lt;/h3&gt;
 &lt;p&gt;Given a bundle &lt;span class=&#34;math inline&#34;&gt;\(\pi:P\to M\)&lt;/span&gt; there
 is a space of connections &lt;span
 class=&#34;math inline&#34;&gt;\(\mathscr{A}(P)\)&lt;/span&gt;. The group &lt;span
@@ -1082,54 +1093,29 @@ transformation that is changing rapidly near a point will tilt the
 horizontal subspaces rapidly. The field of &lt;strong&gt;gauge theory&lt;/strong&gt;
 begins with a study of the quotient space &lt;span
 class=&#34;math inline&#34;&gt;\(\mathscr{A}(P)/\mathop{\mathrm{Aut}}P\)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;A prominent train of thought when mathematicians were wrestling with
-curvature and gauge theory was to frame connections and curvature in
-terms of splittings of certain sequences. Atiyah and Bott (&lt;span
-class=&#34;citation&#34; data-cites=&#34;atiyah1983yang&#34;&gt; (&lt;a
-href=&#34;#ref-atiyah1983yang&#34; role=&#34;doc-biblioref&#34;&gt;Atiyah &amp;amp; Bott,
-1983&lt;/a&gt;)&lt;/span&gt; equation 3.4) describe the space of vector fields on a
-total space &lt;span class=&#34;math inline&#34;&gt;\(P\)&lt;/span&gt; as a Lie algebra
-extension of &lt;span class=&#34;math inline&#34;&gt;\(\Gamma TM\)&lt;/span&gt; by &lt;span
-class=&#34;math inline&#34;&gt;\(\Gamma \mathrm{ad}P\)&lt;/span&gt;, respectively the Lie
-algebra of vector fields on the base and vertical vector fields on &lt;span
-class=&#34;math inline&#34;&gt;\(P\)&lt;/span&gt;. A non-flat connection will fail to
-split this sequence because horizontal vector fields may have a
-non-horizontal component when taking the Lie bracket. This extension is
-referred to as the &lt;em&gt;Atiyah sequence&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;We can characterize connections and curvature in terms of splittings
+of certain sequences. Atiyah and Bott (&lt;span class=&#34;citation&#34;
+data-cites=&#34;atiyah1983yang&#34;&gt; (&lt;a href=&#34;#ref-atiyah1983yang&#34;
+role=&#34;doc-biblioref&#34;&gt;Atiyah &amp;amp; Bott, 1983&lt;/a&gt;)&lt;/span&gt; equation 3.4)
+describe the space of vector fields on a total space &lt;span
+class=&#34;math inline&#34;&gt;\(P\)&lt;/span&gt; as a Lie algebra extension of &lt;span
+class=&#34;math inline&#34;&gt;\(\Gamma TM\)&lt;/span&gt; by &lt;span
+class=&#34;math inline&#34;&gt;\(\Gamma \mathop{\mathrm{ad}}P\)&lt;/span&gt;,
+respectively the Lie algebra of vector fields on the base and vertical
+vector fields on &lt;span class=&#34;math inline&#34;&gt;\(P\)&lt;/span&gt;. A non-flat
+connection will fail to split this sequence because horizontal vector
+fields may have a non-horizontal component when taking the Lie bracket.
+This extension is referred to as the &lt;em&gt;Atiyah sequence&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;In this century mathematicians in HoTT and HoTT-adjacent fields
-considered the &lt;em&gt;integrated Atiyah sequence&lt;/em&gt;, including Urs
+sought an &lt;em&gt;integrated Atiyah sequence&lt;/em&gt;, including Urs
 Schreiber&lt;span class=&#34;citation&#34; data-cites=&#34;urs_atiyah&#34;&gt; (&lt;a
 href=&#34;#ref-urs_atiyah&#34; role=&#34;doc-biblioref&#34;&gt;nLab authors,
 2024&lt;/a&gt;)&lt;/span&gt;&lt;span class=&#34;citation&#34; data-cites=&#34;urs_atiyah_blog&#34;&gt; (&lt;a
 href=&#34;#ref-urs_atiyah_blog&#34; role=&#34;doc-biblioref&#34;&gt;Schreiber,
-2006&lt;/a&gt;)&lt;/span&gt;. This is the groupoidal version of the Atiyah sequence:
-start with a path groupoid &lt;span
-class=&#34;math inline&#34;&gt;\(\mathcal{P}(M)\)&lt;/span&gt; of the base manifold
-(either its fundamental groupoid of homotopy classes of paths, or the
-path groupoid of thin homotopy classes, more suitable for geometry). We
-examine extensions of &lt;span
-class=&#34;math inline&#34;&gt;\(\mathcal{P}(M)\)&lt;/span&gt; by &lt;span
-class=&#34;math inline&#34;&gt;\(\mathop{\mathrm{Aut}}P\)&lt;/span&gt;, mixing these
-horizontal and vertical components into a groupoid on &lt;span
-class=&#34;math inline&#34;&gt;\(P\)&lt;/span&gt; that acts via isomorphisms of the
-fibers.&lt;/p&gt;
-&lt;p&gt;Once the situation was framed in terms of groupoid extensions,
-Schreier theory could be used as a lens as well. David Jaz Myers showed
-that in the case of higher groups we have an equivalence between the
-type of extensions of a group &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; by
-&lt;span class=&#34;math inline&#34;&gt;\(F\)&lt;/span&gt; and the actions of &lt;span
-class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; on a delooping &lt;span
-class=&#34;math inline&#34;&gt;\(BF\)&lt;/span&gt;: &lt;span
-class=&#34;math display&#34;&gt;\[\mathrm{Ext}(G; F) \simeq (BG
-\,\cdot\!\to\mathrm{BAut}(BF))\]&lt;/span&gt; (see &lt;span class=&#34;citation&#34;
-data-cites=&#34;myersthesis&#34;&gt; (&lt;a href=&#34;#ref-myersthesis&#34;
-role=&#34;doc-biblioref&#34;&gt;Myers, 2022&lt;/a&gt;)&lt;/span&gt; Theorem 2.5.7). Our type of
-classifying maps &lt;span
-class=&#34;math inline&#34;&gt;\(M\to\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)&lt;/span&gt;
-can be seen as the type of groupoid extensions of &lt;span
-class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; itself by the group &lt;span
-class=&#34;math inline&#34;&gt;\(S^1\)&lt;/span&gt;, confirming and combining these
-threads.&lt;/p&gt;
+2006&lt;/a&gt;)&lt;/span&gt;. This would be a Lie groupoidal version of the Atiyah
+sequence on Lie algebras. If a groupoid extension could be examined, a
+link could be sought to Schreier theory. We’ll return to these ideas in
+the next section.&lt;/p&gt;
 &lt;h2 data-number=&#34;4.2&#34; id=&#34;type-theory-version&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;4.2&lt;/span&gt; Type theory version&lt;/h2&gt;
 &lt;p&gt;Moving now to HoTT, fix a type &lt;span
@@ -1235,8 +1221,9 @@ alt=&#34;image&#34; /&gt;&lt;/p&gt;
 map &lt;span
 class=&#34;math inline&#34;&gt;\(T:M\to\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)&lt;/span&gt;:&lt;/em&gt;&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;span class=&#34;math inline&#34;&gt;\(P\)&lt;/span&gt; is a trivial
-bundle.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;The principal bundle &lt;span
+class=&#34;math inline&#34;&gt;\(P\stackrel{\mathrm{def}}{=}\sum_{x:M}Tx\)&lt;/span&gt;
+is a trivial bundle.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;em&gt;The dependent sum &lt;span
 class=&#34;math inline&#34;&gt;\(\sum_{x:M}Tx\)&lt;/span&gt; is equivalent to a
 non-dependent sum.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
@@ -1253,14 +1240,52 @@ class=&#34;math inline&#34;&gt;\(T:M\to\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)&
 &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;&lt;em&gt;The connection on &lt;span
 class=&#34;math inline&#34;&gt;\(\sum_{x:M}Tx\)&lt;/span&gt; is flat.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;em&gt;The identity type of the dependent sum &lt;span
-class=&#34;math inline&#34;&gt;\(\sum_{x:M}Tx\)&lt;/span&gt; is a non-depedent
-sum.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;em&gt;The associated extension &lt;span
-class=&#34;math inline&#34;&gt;\(T&amp;#39;:\mathrm{Ext}(M;S^1)\)&lt;/span&gt; is
-split.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;span class=&#34;math inline&#34;&gt;\(T\)&lt;/span&gt; factors through the
+1-truncation &lt;span class=&#34;math inline&#34;&gt;\(||M||_1\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
+&lt;h3 data-number=&#34;4.2.1&#34; id=&#34;gauge-theory-revisited&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;4.2.1&lt;/span&gt; Gauge theory revisited&lt;/h3&gt;
+&lt;p&gt;David Jaz Myers showed that in the case of higher groups we have an
+equivalence between the type of extensions of a group &lt;span
+class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; by &lt;span
+class=&#34;math inline&#34;&gt;\(F\)&lt;/span&gt; and the actions of &lt;span
+class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; on a delooping &lt;span
+class=&#34;math inline&#34;&gt;\(BF\)&lt;/span&gt;: &lt;span
+class=&#34;math display&#34;&gt;\[\mathrm{Ext}(G; F) \simeq (BG
+\,\cdot\!\to\mathop{\mathrm{BAut}}(BF))\]&lt;/span&gt; (see &lt;span
+class=&#34;citation&#34; data-cites=&#34;myersthesis&#34;&gt; (&lt;a href=&#34;#ref-myersthesis&#34;
+role=&#34;doc-biblioref&#34;&gt;Myers, 2022&lt;/a&gt;)&lt;/span&gt; Theorem 2.5.7). Our type of
+classifying maps &lt;span
+class=&#34;math inline&#34;&gt;\(M\to\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)&lt;/span&gt;
+can be seen as the type of groupoid extensions of &lt;span
+class=&#34;math inline&#34;&gt;\(\pi_1(M)\)&lt;/span&gt; by the group &lt;span
+class=&#34;math inline&#34;&gt;\(S^1\)&lt;/span&gt;. What a lovely reframing of principal
+bundles.&lt;/p&gt;
+&lt;p&gt;So what is the finite version of the Lie algebra of vector fields?
+Vector fields are infinitesimal automorphisms, and so automorphisms are
+what we are looking for. Given a map &lt;span
+class=&#34;math inline&#34;&gt;\(f:A\to\mathcal{U}\)&lt;/span&gt; of a pointed type &lt;span
+class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; we obtain a fiber sequence &lt;span
+class=&#34;math display&#34;&gt;\[f=f\xrightarrow[]{\mathrm{ev}}
+\sum_{a:A}fa=\sum_{a:A}fa \xrightarrow[]{\ensuremath{\mathrm{pr}}_1}
+A=A\]&lt;/span&gt; which maps a homotopy &lt;span
+class=&#34;math inline&#34;&gt;\(H:\prod_{a:A}fa=fa\)&lt;/span&gt; to the automorphism of
+the sigma type given by applying each path &lt;span
+class=&#34;math inline&#34;&gt;\(fa=fa\)&lt;/span&gt; as a function on each fiber. These
+correspond to the gauge transformations. The second map is given by
+projecting the automorphism of &lt;span
+class=&#34;math inline&#34;&gt;\(\sum_{a:A}fa\)&lt;/span&gt; to the first component.
+These are the automorphisms which do not necessarily cover the identity
+of &lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt;. In our case this construction
+gives &lt;span class=&#34;math display&#34;&gt;\[T=T\to P=P\to M=M.\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Where can we observe the Lie bracket of vector fields, and the
+classical fact that curvature is an obstruction to the splitting of this
+sequence of groups? A splitting of this sequence of groups would be a
+way to take an isomorphism of &lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; and
+obtain an isomorphism of &lt;span class=&#34;math inline&#34;&gt;\(P\)&lt;/span&gt;, in a
+way that respects multiplication in the group (composition of
+isomorphisms).&lt;/p&gt;
 &lt;h1 data-number=&#34;5&#34; id=&#34;leibniz-gauss-bonnet-poincaruxe9-hopf&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;5&lt;/span&gt; Leibniz, Gauss-Bonnet,
 Poincaré-Hopf&lt;/h1&gt;
@@ -1347,34 +1372,39 @@ g:M\to B\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(p:x=_M y\)
 &lt;/div&gt;
 &lt;h2 data-number=&#34;5.2&#34; id=&#34;the-total-curvature&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;5.2&lt;/span&gt; The total curvature&lt;/h2&gt;
-&lt;p&gt;On the 2-face &lt;span class=&#34;math inline&#34;&gt;\(F\)&lt;/span&gt; bounding a loop
-&lt;span class=&#34;math inline&#34;&gt;\(\ell:v=_M v\)&lt;/span&gt; the map &lt;span
+&lt;div class=&#34;mydef&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Definition 25&lt;/strong&gt;. &lt;em&gt;Let &lt;span
+class=&#34;math inline&#34;&gt;\(F(M)\)&lt;/span&gt; denote the groupoid of faces of
+&lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; generated by the faces in its
+constructor. Let &lt;span class=&#34;math inline&#34;&gt;\(V:\prod_{f:F(M)}f\)&lt;/span&gt;
+be a selected vertex of every face, and let &lt;span
+class=&#34;math inline&#34;&gt;\(\partial:\prod_{f:F(M)}Vf=_M Vf\)&lt;/span&gt; be the
+clockwise boundary path around a face. Let &lt;span
+class=&#34;math inline&#34;&gt;\(v\)&lt;/span&gt; be the basepoint of &lt;span
+class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt;. Then in particular we have &lt;span
+class=&#34;math inline&#34;&gt;\(M:F(M)\)&lt;/span&gt; the concatenation of all faces
+(i.e. &lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; itself), and we have &lt;span
+class=&#34;math inline&#34;&gt;\(\partial(M):v=_M v\)&lt;/span&gt; which is the
+concatenation of all boundaries.&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Observe that each generating edge of &lt;span
+class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; is visited once in each direction in
+the concatenation &lt;span class=&#34;math inline&#34;&gt;\(\partial(M)\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;The map &lt;span class=&#34;math inline&#34;&gt;\(T\)&lt;/span&gt; can be examined on
+each face. On a face &lt;span class=&#34;math inline&#34;&gt;\(f\)&lt;/span&gt; bounding a
+loop &lt;span class=&#34;math inline&#34;&gt;\(\ell:v=_M v\)&lt;/span&gt; the map &lt;span
 class=&#34;math inline&#34;&gt;\(T:M\to\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)&lt;/span&gt;
 assigns a homotopy &lt;span
-class=&#34;math inline&#34;&gt;\(T(F):\ensuremath{\mathsf{refl}}_v=T(\ell)\)&lt;/span&gt;,
+class=&#34;math inline&#34;&gt;\(T(f):\ensuremath{\mathsf{refl}}_v=T(\ell)\)&lt;/span&gt;,
 where &lt;span class=&#34;math inline&#34;&gt;\(T(\ell)\)&lt;/span&gt; is an automorphism of
-&lt;span class=&#34;math inline&#34;&gt;\(T(v)\)&lt;/span&gt;. The various 2-faces can be
-composed as terms of the 2-groupoid &lt;span
-class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt;, and we will call the composition &lt;span
-class=&#34;math inline&#34;&gt;\(T(M):T(v)=T(v)\)&lt;/span&gt; the &lt;em&gt;total
-curvature&lt;/em&gt;.&lt;/p&gt;
-&lt;div class=&#34;mynote&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Note 2&lt;/strong&gt;. &lt;em&gt;If &lt;span
-class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; is a 0-truncated group such as &lt;span
-class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{Z}}\)&lt;/span&gt; then the type
-&lt;span class=&#34;math inline&#34;&gt;\(BG\)&lt;/span&gt; of torsors is 1-truncated. If
-&lt;span class=&#34;math inline&#34;&gt;\(f:M\to BG\)&lt;/span&gt; is a type family then
-&lt;span class=&#34;math inline&#34;&gt;\(\sum_{x:M}f(x)\)&lt;/span&gt; has fibers that are
-sets (&lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt;-torsors). So transport
-functions are set isomorphisms, and the transport of any contractible
-loop in &lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; will be &lt;span
-class=&#34;math inline&#34;&gt;\(\ensuremath{\mathsf{refl}}\)&lt;/span&gt; (the identity)
-of the fiber, which is what we mean by the term &lt;strong&gt;flat&lt;/strong&gt;.
-Transport around non-contractible loops may map to nontrivial fiber
-automorphisms. In this way the theory of covering spaces is a lower
-dimensional version of the story of mere-circle principal
-bundles.&lt;/em&gt;&lt;/p&gt;
-&lt;/div&gt;
+&lt;span class=&#34;math inline&#34;&gt;\(T(v)\)&lt;/span&gt;. On the composition of all
+faces we have &lt;span class=&#34;math inline&#34;&gt;\(T(M):T(v)=T(v)\)&lt;/span&gt;, the
+&lt;strong&gt;total curvature&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;It is crucial that &lt;span class=&#34;math inline&#34;&gt;\(T(M)\)&lt;/span&gt; can be
+nontrivial (i.e. not &lt;span
+class=&#34;math inline&#34;&gt;\(\ensuremath{\mathsf{refl}}_v\)&lt;/span&gt;) even though
+it’s computed by transporting across every edge in &lt;span
+class=&#34;math inline&#34;&gt;\(\partial(M)\)&lt;/span&gt; once in each direction!&lt;/p&gt;
 &lt;h2 data-number=&#34;5.3&#34; id=&#34;the-total-index&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;5.3&lt;/span&gt; The total index&lt;/h2&gt;
 &lt;p&gt;If we have &lt;span class=&#34;math inline&#34;&gt;\(M\setminus Z\)&lt;/span&gt; for some
@@ -1384,65 +1414,83 @@ faces which contain &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;, 
 new face. In this way we produce an equivalent type &lt;span
 class=&#34;math inline&#34;&gt;\(M_Z\simeq M\)&lt;/span&gt; but which is no longer
 combinatorial since we have erased some of the edges from some of the
-neighborhoods.&lt;/p&gt;
+neighborhoods. See Figure &lt;a href=&#34;#fig:torus_morse&#34;
+data-reference-type=&#34;ref&#34; data-reference=&#34;fig:torus_morse&#34;&gt;10&lt;/a&gt; where
+the outlined hexagons are the composition of the six triangular faces
+around a zero.&lt;/p&gt;
 &lt;p&gt;If &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; is a vector field with
-isolated zeroes on &lt;span class=&#34;math inline&#34;&gt;\(Z\)&lt;/span&gt;, then &lt;span
+isolated zeros on &lt;span class=&#34;math inline&#34;&gt;\(Z\)&lt;/span&gt;, then &lt;span
 class=&#34;math inline&#34;&gt;\(M_Z\)&lt;/span&gt; is a convenient replacement for &lt;span
 class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; because &lt;span
 class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; is a partial function defined on all of
 &lt;span class=&#34;math inline&#34;&gt;\(M_Z\)&lt;/span&gt; except for a collection of
-faces, each of which bounds one of the zeroes of &lt;span
+faces, each of which bounds one of the zeros of &lt;span
 class=&#34;math inline&#34;&gt;\(Z\)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;If the combinatorial manifold was imported into type theory via some
-process of sampling or other, perhpaps more theoretical construction,
-then we should allow for zeroes to occur on verticies, edges, or faces.
-We can reduce the case of a zero on a vertex or edge to that of a face
-with the replacement method just described. The original combinatorial
-neighborhood structure continues to live in the fibers of &lt;span
-class=&#34;math inline&#34;&gt;\(T\)&lt;/span&gt;, it’s only the base manifold that has
-been replaced.&lt;/p&gt;
-&lt;p&gt;The action of &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; around loops in
-&lt;span class=&#34;math inline&#34;&gt;\(M_Z\)&lt;/span&gt; respects the inverting of
-paths, i.e. traversing them backwards. Therefore in order to perform
-calculations we must also know the direction of the paths.&lt;/p&gt;
-&lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 25&lt;/strong&gt;. &lt;em&gt;Given a connected loop &lt;span
-class=&#34;math inline&#34;&gt;\(\ell:a=_{M_Z}a\)&lt;/span&gt; in &lt;span
-class=&#34;math inline&#34;&gt;\(M_Z\)&lt;/span&gt; that is running in the clockwise
-direction around a face of &lt;span class=&#34;math inline&#34;&gt;\(M_Z\)&lt;/span&gt;
-(i.e. the face is to the right of the path), we call the winding number
-of &lt;span class=&#34;math inline&#34;&gt;\(X(\ell)\)&lt;/span&gt; the
-&lt;strong&gt;index&lt;/strong&gt; of &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; around
-&lt;span class=&#34;math inline&#34;&gt;\(\ell\)&lt;/span&gt;. If we drop the clockwise
-requirement, then the winding number is also known as the
-&lt;strong&gt;degree&lt;/strong&gt; of the map &lt;span
-class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; on &lt;span
-class=&#34;math inline&#34;&gt;\(\ell\)&lt;/span&gt;. In other words index can be thought
-of as “clockwise degree.”&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&#34;mynote&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Note 2&lt;/strong&gt;. &lt;em&gt;If the combinatorial manifold was
+imported into type theory via some process of sampling or other,
+perhpaps more theoretical, construction then we should allow for zeros
+to occur on verticies, edges, or faces. We can reduce the case of a zero
+on a vertex or edge to that of a face with the replacement method just
+described. The original combinatorial neighborhood structure continues
+to live in the fibers of &lt;span class=&#34;math inline&#34;&gt;\(T\)&lt;/span&gt;, it’s
+only the base manifold that has been replaced.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
+&lt;div class=&#34;mydef&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Definition 26&lt;/strong&gt;. &lt;em&gt;Given a face &lt;span
+class=&#34;math inline&#34;&gt;\(f:F(M\setminus Z)\)&lt;/span&gt;, define &lt;strong&gt;the
+index of &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; on &lt;span
+class=&#34;math inline&#34;&gt;\(f\)&lt;/span&gt;&lt;/strong&gt; to be the winding number (also
+called the degree) of &lt;span class=&#34;math inline&#34;&gt;\(X(\partial
+f)\)&lt;/span&gt;. The &lt;strong&gt;total index&lt;/strong&gt; of &lt;span
+class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; on &lt;span
+class=&#34;math inline&#34;&gt;\(M\setminus Z\)&lt;/span&gt; is the index of &lt;span
+class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; on &lt;span
+class=&#34;math inline&#34;&gt;\(\partial(M\setminus Z)\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;The index computation skips some faces of &lt;span
+class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; and can most definitely be nonzero.&lt;/p&gt;
 &lt;h2 data-number=&#34;5.4&#34;
 id=&#34;equality-of-total-index-and-total-curvature&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;5.4&lt;/span&gt; Equality of total index and
 total curvature&lt;/h2&gt;
-&lt;p&gt;If we compute &lt;span class=&#34;math inline&#34;&gt;\(\mathrm{tr}_\ell
-X(a)=X(a)\)&lt;/span&gt; around every face boundary in &lt;span
-class=&#34;math inline&#34;&gt;\(M_Z\)&lt;/span&gt; then we can describe that in two
-ways. In homotopy type theory this is “the 1-skeleton-over,” the
-pathover for the concatenation of every loop. It is also the total
-difference between the curvature around every loop, and the vector
-field. It is also zero.&lt;/p&gt;
+&lt;p&gt;Here we closely follow the classical proof of Hopf&lt;span
+class=&#34;citation&#34; data-cites=&#34;hopf&#34;&gt; (&lt;a href=&#34;#ref-hopf&#34;
+role=&#34;doc-biblioref&#34;&gt;Hopf, 1983&lt;/a&gt;)&lt;/span&gt;, presented in detail in
+Needham&lt;span class=&#34;citation&#34; data-cites=&#34;needham&#34;&gt; (&lt;a
+href=&#34;#ref-needham&#34; role=&#34;doc-biblioref&#34;&gt;Needham, 2021&lt;/a&gt;)&lt;/span&gt;.&lt;/p&gt;
 &lt;div class=&#34;mythm&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Theorem 5&lt;/strong&gt;. &lt;em&gt;The total pathover of all face
-boundaries is &lt;span
-class=&#34;math inline&#34;&gt;\(\ensuremath{\mathsf{refl}}_*\)&lt;/span&gt;, hence the
-total curvature is equal to the total index of &lt;span
+&lt;p&gt;&lt;strong&gt;Theorem 5&lt;/strong&gt;. &lt;em&gt;The total curvature’s winding number
+is equal to the total index of &lt;span
 class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;p&gt;&lt;em&gt;Proof.&lt;/em&gt; When we concatenate every loop we visit every edge
-twice in opposite directions. ◻&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Proof.&lt;/em&gt; Let &lt;span class=&#34;math inline&#34;&gt;\(L\)&lt;/span&gt; be a fixed
+pointed polygon. We can consider &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt;
+to map each vertex of &lt;span class=&#34;math inline&#34;&gt;\(M_Z\)&lt;/span&gt; to &lt;span
+class=&#34;math inline&#34;&gt;\(L\)&lt;/span&gt;. On each face of &lt;span
+class=&#34;math inline&#34;&gt;\(M_Z\)&lt;/span&gt; (no faces are omitted) we traverse
+the boundary, which is in the domain of both &lt;span
+class=&#34;math inline&#34;&gt;\(T\)&lt;/span&gt; and of &lt;span
+class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt;. So we avoid the complication that
+&lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; is not defined on some of the
+faces by remaining on the 1-skeleton. For a given edge &lt;span
+class=&#34;math inline&#34;&gt;\(e_{12}:v_1=_{M_Z} v_2\)&lt;/span&gt; the function &lt;span
+class=&#34;math inline&#34;&gt;\(\mathrm{tr}_{e_{12}}X(v_1)=X(v_2)\)&lt;/span&gt; is a
+path in &lt;span class=&#34;math inline&#34;&gt;\(L\)&lt;/span&gt;. We will traverse every
+edge twice, once in each direction, which will cancel to give &lt;span
+class=&#34;math inline&#34;&gt;\(\ensuremath{\mathsf{refl}}_v\)&lt;/span&gt;. In
+particular the boundaries around the zeros of &lt;span
+class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; are themselves traversed twice in
+opposite directions, canceling the total index. ◻&lt;/p&gt;
+&lt;p&gt;The fact that the index was already an integer, whereas the curvature
+was a rotation, accounts for the factor of &lt;span
+class=&#34;math inline&#34;&gt;\(2\pi\)&lt;/span&gt; in some classical statement of this
+theorem (e.g. &lt;span class=&#34;citation&#34; data-cites=&#34;needham&#34;&gt; (&lt;a
+href=&#34;#ref-needham&#34; role=&#34;doc-biblioref&#34;&gt;Needham, 2021&lt;/a&gt;)&lt;/span&gt;
+section 26.3).&lt;/p&gt;
 &lt;div class=&#34;mycor&#34;&gt;
 &lt;p&gt;&lt;strong&gt;Corollary 3&lt;/strong&gt;. &lt;em&gt;The total index of a vector field
-with isolated zeroes is independent of the vector field.&lt;/em&gt;&lt;/p&gt;
+with isolated zeros is independent of the vector field.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;mycor&#34;&gt;
 &lt;p&gt;&lt;strong&gt;Corollary 4&lt;/strong&gt;. &lt;em&gt;The total curvature is an
@@ -1465,7 +1513,19 @@ standing upright with the holes forming a vertical sequence. Now install
 a vector field that points downward whenever possible. This vector field
 will have a zero at the top and bottom, and one at the top and bottom of
 each hole. The top and bottom will be index 1, and ones around the holes
-will be index -1.&lt;/p&gt;
+will be index -1. We include some sketches in the case of a torus. This
+illustrates how we obtain the formula for genus &lt;span
+class=&#34;math inline&#34;&gt;\(g\)&lt;/span&gt;: &lt;span
+class=&#34;math inline&#34;&gt;\(\chi(M)=2-2g\)&lt;/span&gt;.&lt;/p&gt;
+&lt;figure id=&#34;fig:torus_morse&#34;&gt;
+&lt;img src=&#34;torus_morse_grad.png&#34; style=&#34;width:5.55556in&#34; /&gt;
+&lt;figcaption&gt;A sketch of downward flow on the torus.&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure id=&#34;fig:torus_morse_skel&#34;&gt;
+&lt;img src=&#34;./bb41db25296489955c59f084af621a8734853d5b.png&#34; /&gt;
+&lt;figcaption&gt;Schematic of the zeros of the downward flow of a
+torus.&lt;/figcaption&gt;
+&lt;/figure&gt;
 &lt;div id=&#34;refs&#34; class=&#34;references csl-bib-body hanging-indent&#34;
 data-entry-spacing=&#34;0&#34; role=&#34;list&#34;&gt;
 &lt;div id=&#34;ref-atiyah1983yang&#34; class=&#34;csl-entry&#34; role=&#34;listitem&#34;&gt;
@@ -1482,6 +1542,12 @@ class=&#34;smallcaps&#34;&gt;Cagne&lt;/span&gt;, P., &lt;span
 class=&#34;smallcaps&#34;&gt;Dundas&lt;/span&gt;, B.I., &amp;amp; &lt;span
 class=&#34;smallcaps&#34;&gt;Grayson&lt;/span&gt;, D.R. (2023) Symmetry.
 &lt;/div&gt;
+&lt;div id=&#34;ref-hopf&#34; class=&#34;csl-entry&#34; role=&#34;listitem&#34;&gt;
+&lt;span class=&#34;smallcaps&#34;&gt;Hopf&lt;/span&gt;, H. (1983) &lt;a
+href=&#34;https://api.semanticscholar.org/CorpusID:117042538&#34;&gt;Differential
+geometry in the large: Seminar lectures, new york university, 1946 and
+stanford university, 1956&lt;/a&gt;.
+&lt;/div&gt;
 &lt;div id=&#34;ref-kirby_siebenmann&#34; class=&#34;csl-entry&#34; role=&#34;listitem&#34;&gt;
 &lt;span class=&#34;smallcaps&#34;&gt;Kirby&lt;/span&gt;, R.C. &amp;amp; &lt;span
 class=&#34;smallcaps&#34;&gt;Siebenmann&lt;/span&gt;, L.C. (1977) &lt;em&gt;Foundational essays
@@ -1492,6 +1558,12 @@ mathematics studies. Princeton University Press.
 &lt;span class=&#34;smallcaps&#34;&gt;Myers&lt;/span&gt;, D.J. (2022) &lt;a
 href=&#34;http://jhir.library.jhu.edu/handle/1774.2/67618&#34;&gt;Symmetry,
 geometry, modality&lt;/a&gt; (PhD thesis).
+&lt;/div&gt;
+&lt;div id=&#34;ref-needham&#34; class=&#34;csl-entry&#34; role=&#34;listitem&#34;&gt;
+&lt;span class=&#34;smallcaps&#34;&gt;Needham&lt;/span&gt;, T. (2021) &lt;em&gt;&lt;a
+href=&#34;https://books.google.com/books?id=Mc0QEAAAQBAJ&#34;&gt;Visual
+differential geometry and forms: A mathematical drama in five
+acts&lt;/a&gt;&lt;/em&gt;. Princeton University Press.
 &lt;/div&gt;
 &lt;div id=&#34;ref-urs_atiyah&#34; class=&#34;csl-entry&#34; role=&#34;listitem&#34;&gt;
 &lt;span class=&#34;smallcaps&#34;&gt;nLab authors&lt;/span&gt; (2024) &lt;span&gt;A&lt;/span&gt;tiyah
