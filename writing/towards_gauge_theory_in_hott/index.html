@@ -592,11 +592,11 @@ the connected component in the universe of the Eilenberg-MacLane space
 <span
 class="math inline">\(\mathrm{K}(\ensuremath{\mathbb{Z}},1)\)</span>
 which we will take to be <span class="math inline">\(S^1\)</span>, and
-where <span class="math inline">\(M:\mathsf{Comb2Mfd}\)</span> is a
-combinatorial manifold of dimension 2, which is a simplicial complex
-encoded in a higher inductive type, such that each vertex has a
-neighborhood that looks like a disk with a discrete circle boundary
-(i.e. a polygon). We can call terms <span
+where <span class="math inline">\(M\)</span> is a combinatorial manifold
+of dimension 2, which is a simplicial complex encoded in a higher
+inductive type, such that each vertex has a neighborhood that looks like
+a disk with a discrete circle boundary (i.e. a polygon). We can call
+terms <span
 class="math inline">\(C:\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)</span>
 “mere circles.”</p>
 <p>Note that <span
@@ -608,26 +608,18 @@ will serve as the circle bundle of the tangent bundle of the manifold,
 i.e. the principal bundle consisting of nonzero tangent vectors.</p>
 <p>Now consider the type <span
 class="math inline">\(\mathrm{EM_{\bullet}}(\ensuremath{\mathbb{Z}},1)\stackrel{\mathrm{def}}{=}\sum_{Y:\mathrm{EM}(\ensuremath{\mathbb{Z}},1)}Y\)</span>
-of pointed mere circles. We have the pullback <span
-class="math display">\[\begin{tikzcd}[cramped]
-  {P\stackrel{\mathrm{def}}{=}\sum_{C:TM}C} &amp;
-{\mathrm{EM}_\bullet(\mathbb{Z},1)} \\
-  M &amp; {\mathrm{EM}(\mathbb{Z},1)}
-  \arrow[&quot;{\overline{T}}&quot;, from=1-1, to=1-2]
-  \arrow[&quot;{\mathrm{pr}_1}&quot;&#39;, from=1-1, to=2-1]
-  \arrow[&quot;\lrcorner&quot;{anchor=center, pos=0.125}, draw=none,
-from=1-1, to=2-2]
-  \arrow[&quot;{\mathrm{pr}_1}&quot;&#39;, from=1-2, to=2-2]
-  \arrow[&quot;T&quot;, from=2-1, to=2-2]
-\end{tikzcd}\]</span> from the univalent fibration on the right, forming
-the usual fiber of <span class="math inline">\(T\)</span> as a sigma
-type. Such classifying maps are not always principal bundles; there is
-an extra condition on <span class="math inline">\(T\)</span> that we
-will get into later. For now it’s important only that we are mapping
-into a univalent fibration so that we can make use of type theory.
-Univalent fibrations are always equivalent to a projection of a type of
-pointed types to some connected component of the universe<span
-class="citation" data-cites="christensen_univalence"> (<a
+of pointed mere circles. We have the pullback</p>
+<p><img src="./74450eed5fb2f88dbc562cb7b364d5fc183485f8.png"
+alt="image" /></p>
+<p>from the univalent fibration on the right, forming the usual fiber of
+<span class="math inline">\(T\)</span> as a sigma type. Such classifying
+maps are not always principal bundles; there is an extra condition on
+<span class="math inline">\(T\)</span> that we will get into later. For
+now it’s important only that we are mapping into a univalent fibration
+so that we can make use of type theory. Univalent fibrations are always
+equivalent to a projection of a type of pointed types to some connected
+component of the universe<span class="citation"
+data-cites="christensen_univalence"> (<a
 href="#ref-christensen_univalence" role="doc-biblioref">Christensen,
 2015</a>)</span>.</p>
 <p>We will investigate that the data in dimensions 1 and 2 of <span
