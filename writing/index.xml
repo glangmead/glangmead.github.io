@@ -307,7 +307,7 @@ type of &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt;-equivariant m
 class=&#34;math inline&#34;&gt;\(X\to_G Y\)&lt;/span&gt;.&lt;/p&gt;
 &lt;div class=&#34;mylemma&#34;&gt;
 &lt;p&gt;&lt;strong&gt;Lemma 1&lt;/strong&gt;. &lt;em&gt;There is a natural equivalence &lt;span
-class=&#34;math inline&#34;&gt;\((X=_{TG}Y) \simeq (X\to_G Y)\)&lt;/span&gt;.0◻&lt;/em&gt;&lt;/p&gt;
+class=&#34;math inline&#34;&gt;\((X=_{TG}Y) \simeq (X\to_G Y)\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;Denote by &lt;span class=&#34;math inline&#34;&gt;\(*\)&lt;/span&gt; the torsor given by
 &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; actions on its underlying set by
@@ -320,12 +320,12 @@ class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt;-set &lt;span
 class=&#34;math inline&#34;&gt;\((X,\phi)\)&lt;/span&gt; is a &lt;span
 class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt;-torsor if and only if there merely
 exists a &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt;-equivariant equivalence
-&lt;span class=&#34;math inline&#34;&gt;\(*\to_G X\)&lt;/span&gt;.0◻&lt;/em&gt;&lt;/p&gt;
+&lt;span class=&#34;math inline&#34;&gt;\(*\to_G X\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;mycor&#34;&gt;
 &lt;p&gt;&lt;strong&gt;Corollary 1&lt;/strong&gt;. &lt;em&gt;The pointed type &lt;span
 class=&#34;math inline&#34;&gt;\((TG,*)\)&lt;/span&gt; is a &lt;span
-class=&#34;math inline&#34;&gt;\(\mathrm{K}(G,1)\)&lt;/span&gt;.0◻&lt;/em&gt;&lt;/p&gt;
+class=&#34;math inline&#34;&gt;\(\mathrm{K}(G,1)\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;h2 data-number=&#34;2.1&#34; id=&#34;univalent-replacement-for-torsors&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;2.1&lt;/span&gt; Univalent replacement for
@@ -764,7 +764,7 @@ back rotated clockwise by a quarter-turn.&lt;/p&gt;
 class=&#34;math inline&#34;&gt;\(R:C_4\to C_4\)&lt;/span&gt; rotates by one quarter turn,
 one “click&#34;:&lt;/em&gt;&lt;/p&gt;
 &lt;div class=&#34;multicols&#34;&gt;
-&lt;p&gt;&lt;em&gt;&lt;span&gt;2&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;
+
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;span class=&#34;math inline&#34;&gt;\(R(c_1) =
 c_2\)&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
@@ -803,7 +803,7 @@ class=&#34;math inline&#34;&gt;\(T_2:\ensuremath{\mathbb{O}}\to\mathrm{EM}(\ensu
 by extending &lt;span class=&#34;math inline&#34;&gt;\(T_1\)&lt;/span&gt; to the faces as
 follows:&lt;/em&gt;&lt;/p&gt;
 &lt;div class=&#34;multicols&#34;&gt;
-&lt;p&gt;&lt;em&gt;&lt;span&gt;2&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;
+
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;span
 class=&#34;math inline&#34;&gt;\(T_2(wbr)=H_R\)&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
