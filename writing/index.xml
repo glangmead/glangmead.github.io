@@ -269,10 +269,18 @@ class=&#34;header-section-number&#34;&gt;1.1&lt;/span&gt; Future work&lt;/h2&gt;
 &lt;p&gt;The results of this note can be extended in many directions. There
 are higher-dimensional generalizations of Gauss-Bonnet, including the
 theory of characteristic classes and Chern-Weil theory (which links
-characteristic classes to connections and curvature). Results from gauge
-theory could be imported into HoTT, as well as results from surgery
-theory and other topological constructions that may be especially
-amenable to this discrete setting. Finally, a theory that reintroduces
+characteristic classes to connections and curvature). These would
+involve working with nonabelian groups like &lt;span
+class=&#34;math inline&#34;&gt;\(SO(n)\)&lt;/span&gt; and sphere bundles. Results from
+gauge theory could be imported into HoTT, as well as results from
+surgery theory and other topological constructions that may be
+especially amenable to this discrete setting. Relationships with
+computer graphics and discrete differential geometry&lt;span
+class=&#34;citation&#34; data-cites=&#34;crane_ddg&#34;&gt; (&lt;a href=&#34;#ref-crane_ddg&#34;
+role=&#34;doc-biblioref&#34;&gt;Crane &lt;em&gt;et al.&lt;/em&gt;, 2013&lt;/a&gt;)&lt;/span&gt;&lt;span
+class=&#34;citation&#34; data-cites=&#34;crane_connections&#34;&gt; (&lt;a
+href=&#34;#ref-crane_connections&#34; role=&#34;doc-biblioref&#34;&gt;Crane,
+2010&lt;/a&gt;)&lt;/span&gt; could be explored. Finally, a theory that reintroduces
 smoothness could allow more formal versions of the analogies explored
 here.&lt;/p&gt;
 &lt;h1 data-number=&#34;2&#34; id=&#34;torsors-and-principal-bundles&#34;&gt;&lt;span
@@ -1611,6 +1619,20 @@ class=&#34;smallcaps&#34;&gt;Grayson&lt;/span&gt;, D.R. (2023) Symmetry.
 &lt;div id=&#34;ref-christensen_univalence&#34; class=&#34;csl-entry&#34; role=&#34;listitem&#34;&gt;
 &lt;span class=&#34;smallcaps&#34;&gt;Christensen&lt;/span&gt;, D. (2015) A characterization
 of univalent fibrations.
+&lt;/div&gt;
+&lt;div id=&#34;ref-crane_connections&#34; class=&#34;csl-entry&#34; role=&#34;listitem&#34;&gt;
+&lt;span class=&#34;smallcaps&#34;&gt;Crane&lt;/span&gt;, K. (2010) &lt;a
+href=&#34;http://resolver.caltech.edu/CaltechTHESIS:05282010-102307125&#34;&gt;Discrete
+connections for geometry processing&lt;/a&gt; (Master’s thesis).
+&lt;/div&gt;
+&lt;div id=&#34;ref-crane_ddg&#34; class=&#34;csl-entry&#34; role=&#34;listitem&#34;&gt;
+&lt;span class=&#34;smallcaps&#34;&gt;Crane&lt;/span&gt;, K., &lt;span
+class=&#34;smallcaps&#34;&gt;Goes&lt;/span&gt;, F. de, &lt;span
+class=&#34;smallcaps&#34;&gt;Desbrun&lt;/span&gt;, M., &amp;amp; &lt;span
+class=&#34;smallcaps&#34;&gt;Schröder&lt;/span&gt;, P. (2013) &lt;a
+href=&#34;{https://www.cs.cmu.edu/~kmcrane/Projects/DDG/}&#34;&gt;Digital geometry
+processing with discrete exterior calculus&lt;/a&gt;. &lt;em&gt;ACM SIGGRAPH 2013
+courses&lt;/em&gt;, &lt;em&gt;SIGGRAPH ’13&lt;/em&gt;. New York, NY, USA: ACM.
 &lt;/div&gt;
 &lt;div id=&#34;ref-hopf&#34; class=&#34;csl-entry&#34; role=&#34;listitem&#34;&gt;
 &lt;span class=&#34;smallcaps&#34;&gt;Hopf&lt;/span&gt;, H. (1983) &lt;a
