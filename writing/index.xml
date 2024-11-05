@@ -358,9 +358,9 @@ on &lt;span class=&#34;math inline&#34;&gt;\(n=1\)&lt;/span&gt; in this note.&lt
 &lt;div class=&#34;mydef&#34;&gt;
 &lt;p&gt;&lt;strong&gt;Definition 2&lt;/strong&gt;. &lt;em&gt;Let &lt;span
 class=&#34;math inline&#34;&gt;\(\mathrm{EM}(G,n)\stackrel{\mathrm{def}}{=}\mathop{\mathrm{BAut}}(\mathrm{K}(G,n))\stackrel{\mathrm{def}}{=}\sum_{Y:\mathcal{U}}||Y\simeq
-\mathrm{K}(G,n)||_{-1}\)&lt;/span&gt;. A &lt;span
-class=&#34;math inline&#34;&gt;\(\mathrm{K}(G,n)-bundle\)&lt;/span&gt; on a type &lt;span
-class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; is the fiber of a map &lt;span
+\mathrm{K}(G,n)||_{-1}\)&lt;/span&gt;. A &lt;strong&gt;&lt;span
+class=&#34;math inline&#34;&gt;\(\mathrm{K}(G,n)\)&lt;/span&gt;-bundle&lt;/strong&gt; on a type
+&lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; is the fiber of a map &lt;span
 class=&#34;math inline&#34;&gt;\(M\to\mathrm{EM}(G,n)\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;Scoccola uses two self-maps on the universe: suspension &lt;span
