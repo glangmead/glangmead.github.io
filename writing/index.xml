@@ -23,7 +23,7 @@
   &lt;meta charset=&#34;utf-8&#34; /&gt;
   &lt;meta name=&#34;generator&#34; content=&#34;pandoc&#34; /&gt;
   &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0, user-scalable=yes&#34; /&gt;
-  &lt;meta name=&#34;dcterms.date&#34; content=&#34;2023-12-20&#34; /&gt;
+  &lt;meta name=&#34;dcterms.date&#34; content=&#34;2024-11-01&#34; /&gt;
   &lt;style&gt;
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -363,11 +363,13 @@ class=&#34;math inline&#34;&gt;\(\mathrm{K}(G,n)\)&lt;/span&gt;-bundle&lt;/stron
 &lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; is the fiber of a map &lt;span
 class=&#34;math inline&#34;&gt;\(M\to\mathrm{EM}(G,n)\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;p&gt;Scoccola uses two self-maps on the universe: suspension &lt;span
-class=&#34;math inline&#34;&gt;\(\Sigma\)&lt;/span&gt; and forgetting a point &lt;span
-class=&#34;math inline&#34;&gt;\(F_\bullet\)&lt;/span&gt; to form the composition &lt;span
-class=&#34;math display&#34;&gt;\[\mathrm{EM}(G,n)\xrightarrow[]{\Sigma}
-\mathrm{EM}_{\bullet\bullet}(G,n)\xrightarrow[]{F_\bullet}\mathrm{EM_{\bullet}}(G,n)\]&lt;/span&gt;
+&lt;p&gt;Scoccola uses two self-maps on the universe: suspension followed by
+&lt;span class=&#34;math inline&#34;&gt;\((n+1)\)&lt;/span&gt;-truncation &lt;span
+class=&#34;math inline&#34;&gt;\(||\Sigma||_{n+1}\)&lt;/span&gt; and forgetting a point
+&lt;span class=&#34;math inline&#34;&gt;\(F_\bullet\)&lt;/span&gt; to form the composition
+&lt;span
+class=&#34;math display&#34;&gt;\[\mathrm{EM}(G,n)\xrightarrow[]{||\Sigma||_{n+1}}
+\mathrm{EM}_{\bullet\bullet}(G,n+1)\xrightarrow[]{F_\bullet}\mathrm{EM_{\bullet}}(G,n+1)\]&lt;/span&gt;
 from types to types with two points (north and south), to pointed types
 (by forgetting the south point).&lt;/p&gt;
 &lt;div class=&#34;mydef&#34;&gt;
@@ -376,7 +378,7 @@ class=&#34;math inline&#34;&gt;\(f:M\to\mathrm{EM}(G,n)\)&lt;/span&gt;, the
 &lt;strong&gt;associated action of &lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; on
 &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt;&lt;/strong&gt;, denoted by &lt;span
 class=&#34;math inline&#34;&gt;\(f_\bullet\)&lt;/span&gt; is defined to be &lt;span
-class=&#34;math inline&#34;&gt;\(f_\bullet=F_\bullet\circ\Sigma\circ
+class=&#34;math inline&#34;&gt;\(f_\bullet=F_\bullet\circ||\Sigma||_{n+1}\circ
 f\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;mythm&#34;&gt;

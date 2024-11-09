@@ -446,7 +446,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="dcterms.date" content="2023-12-20" />
+  <meta name="dcterms.date" content="2024-11-01" />
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -786,11 +786,13 @@ class="math inline">\(\mathrm{K}(G,n)\)</span>-bundle</strong> on a type
 <span class="math inline">\(M\)</span> is the fiber of a map <span
 class="math inline">\(M\to\mathrm{EM}(G,n)\)</span>.</em></p>
 </div>
-<p>Scoccola uses two self-maps on the universe: suspension <span
-class="math inline">\(\Sigma\)</span> and forgetting a point <span
-class="math inline">\(F_\bullet\)</span> to form the composition <span
-class="math display">\[\mathrm{EM}(G,n)\xrightarrow[]{\Sigma}
-\mathrm{EM}_{\bullet\bullet}(G,n)\xrightarrow[]{F_\bullet}\mathrm{EM_{\bullet}}(G,n)\]</span>
+<p>Scoccola uses two self-maps on the universe: suspension followed by
+<span class="math inline">\((n+1)\)</span>-truncation <span
+class="math inline">\(||\Sigma||_{n+1}\)</span> and forgetting a point
+<span class="math inline">\(F_\bullet\)</span> to form the composition
+<span
+class="math display">\[\mathrm{EM}(G,n)\xrightarrow[]{||\Sigma||_{n+1}}
+\mathrm{EM}_{\bullet\bullet}(G,n+1)\xrightarrow[]{F_\bullet}\mathrm{EM_{\bullet}}(G,n+1)\]</span>
 from types to types with two points (north and south), to pointed types
 (by forgetting the south point).</p>
 <div class="mydef">
@@ -799,7 +801,7 @@ class="math inline">\(f:M\to\mathrm{EM}(G,n)\)</span>, the
 <strong>associated action of <span class="math inline">\(M\)</span> on
 <span class="math inline">\(G\)</span></strong>, denoted by <span
 class="math inline">\(f_\bullet\)</span> is defined to be <span
-class="math inline">\(f_\bullet=F_\bullet\circ\Sigma\circ
+class="math inline">\(f_\bullet=F_\bullet\circ||\Sigma||_{n+1}\circ
 f\)</span>.</em></p>
 </div>
 <div class="mythm">
