@@ -392,15 +392,20 @@ so is a principal fibration, if and only if the associated action &lt;span
 class=&#34;math inline&#34;&gt;\(f_\bullet\)&lt;/span&gt; is contractible.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;Note that &lt;span
-class=&#34;math inline&#34;&gt;\(\mathrm{EM_{\bullet}}(G,n)\simeq
-\mathrm{K}(\mathop{\mathrm{Aut}}G,1)\)&lt;/span&gt;. In the special case of
-&lt;span
+class=&#34;math inline&#34;&gt;\(\mathrm{EM_{\bullet}}(G,n+1)\simeq
+\mathrm{K}(\mathop{\mathrm{Aut}}G,1)\)&lt;/span&gt; (independent of &lt;span
+class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;). In the special case of &lt;span
 class=&#34;math inline&#34;&gt;\(\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)&lt;/span&gt;
 the conditions of the theorem are met when &lt;span
 class=&#34;math inline&#34;&gt;\(f_\bullet:M\to\mathrm{K}(\mathop{\mathrm{Aut}}\ensuremath{\mathbb{Z}},
 1)\)&lt;/span&gt; is contractible. This amounts to a choice of direction for
-all the circles, and so deserves to be renamed that &lt;span
-class=&#34;math inline&#34;&gt;\(f\)&lt;/span&gt; is &lt;em&gt;orientable&lt;/em&gt;.&lt;/p&gt;
+all the circles, and so deserves the name “&lt;span
+class=&#34;math inline&#34;&gt;\(f\)&lt;/span&gt; is &lt;em&gt;orientable&lt;/em&gt;.” In addition
+&lt;span class=&#34;math inline&#34;&gt;\(f_\bullet\)&lt;/span&gt; deserves to be called the
+first Stiefel-Whitney class of &lt;span class=&#34;math inline&#34;&gt;\(f\)&lt;/span&gt;,
+and the requirement here is that it vanishes. Reinterpreting more of the
+theory of characteristic classes would be an enlightening future
+project.&lt;/p&gt;
 &lt;p&gt;And so we can continue to work with the classifying space &lt;span
 class=&#34;math inline&#34;&gt;\(\mathrm{EM}(G,1)\)&lt;/span&gt; and study &lt;span
 class=&#34;math inline&#34;&gt;\(\mathrm{K}(G,1)\)&lt;/span&gt;-fibrations, knowing that
@@ -1238,7 +1243,7 @@ class=&#34;math inline&#34;&gt;\(\omega(\pi):\mathrm{tr}_p(\alpha)=\beta\)&lt;/s
 class=&#34;math inline&#34;&gt;\(\ensuremath{\mathsf{ap}}(H&amp;#39;)(\pi):(a,H(a)(\alpha))=_P(b,H(b)(\beta))\)&lt;/span&gt;
 which is still a path over &lt;span class=&#34;math inline&#34;&gt;\(p\)&lt;/span&gt;.
 Applying &lt;span class=&#34;math inline&#34;&gt;\(\omega\)&lt;/span&gt; we get &lt;span
-class=&#34;math display&#34;&gt;\[\omega(\ensuremath{\mathsf{ap}}(H&amp;#39;)(\pi)):\mathrm{tr}_p(H(a)(\alpha))=(H(b)(\beta))\]&lt;/span&gt;.
+class=&#34;math display&#34;&gt;\[\omega(\ensuremath{\mathsf{ap}}(H&amp;#39;)(\pi)):\mathrm{tr}_p(H(a)(\alpha))=(H(b)(\beta)).\]&lt;/span&gt;
 Using the lemma below we can if we wish rewrite this as &lt;span
 class=&#34;math display&#34;&gt;\[\omega(\ensuremath{\mathsf{ap}}(H&amp;#39;)(\pi)):H(b)\left[\mathrm{tr}_p(\alpha)=\beta\right]\]&lt;/span&gt;
 which uses only &lt;span class=&#34;math inline&#34;&gt;\(H(b)\)&lt;/span&gt;. This is the
