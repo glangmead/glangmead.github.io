@@ -424,11 +424,25 @@ the name “&lt;span class=&#34;math inline&#34;&gt;\(f\)&lt;/span&gt; is
 &lt;em&gt;orientable&lt;/em&gt;.” In addition &lt;span
 class=&#34;math inline&#34;&gt;\(f_\bullet\)&lt;/span&gt; deserves to be called the first
 Stiefel-Whitney class of &lt;span class=&#34;math inline&#34;&gt;\(f\)&lt;/span&gt;, and the
-requirement here is that it vanishes. Reinterpreting more of the theory
-of characteristic classes would be an enlightening future project.&lt;/p&gt;
-&lt;p&gt;And so we can continue to work with the univalent fibration &lt;span
-class=&#34;math inline&#34;&gt;\(\mathrm{EM}(G,1)\)&lt;/span&gt; and still know that we
-are also studying principal &lt;span
+requirement here is that it vanishes.&lt;/p&gt;
+&lt;div class=&#34;mynote&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Note 1&lt;/strong&gt;. &lt;em&gt;Reinterpreting more of the theory of
+characteristic classes would be an enlightening future project. Defining
+a Chern class and Euler class in 2 dimensions is a goal of this note,
+but we will not prove all the various laws these classes satisfy (the
+Whitney sum formula and so on). Nonabelian matrix Lie groups such as
+&lt;span class=&#34;math inline&#34;&gt;\(SO(n)\)&lt;/span&gt; and &lt;span
+class=&#34;math inline&#34;&gt;\(SU(n)\)&lt;/span&gt; are not fully imported into
+homotopy type theory, but recall that some classical results from the
+theory of characteristic classes are obtained by replacing the group
+with a maximal torus, which should be a smaller leap from what is
+presented here&lt;span class=&#34;citation&#34; data-cites=&#34;splitting_principle&#34;&gt;
+(&lt;a href=&#34;#ref-splitting_principle&#34; role=&#34;doc-biblioref&#34;&gt;nLab authors,
+2024a&lt;/a&gt;)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;In summary, we can continue to work with the univalent fibration
+&lt;span class=&#34;math inline&#34;&gt;\(\mathrm{EM}(G,1)\)&lt;/span&gt; and still know
+that we are also studying principal &lt;span
 class=&#34;math inline&#34;&gt;\(\mathrm{K}(G,1)\)&lt;/span&gt;-fibrations, if the bundle
 is orientable.&lt;/p&gt;
 &lt;h2 data-number=&#34;2.2&#34; id=&#34;pathovers-in-principal-bundles&#34;&gt;&lt;span
@@ -1138,7 +1152,7 @@ horizontal subspaces rapidly. The field of &lt;strong&gt;gauge theory&lt;/strong
 begins with a study of the quotient space &lt;span
 class=&#34;math inline&#34;&gt;\(\mathscr{A}(P)/\mathop{\mathrm{Aut}}P\)&lt;/span&gt;.&lt;/p&gt;
 &lt;div class=&#34;mynote&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Note 1&lt;/strong&gt;. &lt;em&gt;Recall that torsors have a physical
+&lt;p&gt;&lt;strong&gt;Note 2&lt;/strong&gt;. &lt;em&gt;Recall that torsors have a physical
 interpretation as a quantity without a specified unit, such as mass,
 length, or time. When we choose a base point in a torsor it becomes the
 standard torsor &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt; acting on itself
@@ -1173,8 +1187,8 @@ This extension is referred to as the &lt;em&gt;Atiyah sequence&lt;/em&gt;.&lt;/p
 sought an &lt;em&gt;integrated Atiyah sequence&lt;/em&gt;, including Urs
 Schreiber&lt;span class=&#34;citation&#34; data-cites=&#34;urs_atiyah&#34;&gt; (&lt;a
 href=&#34;#ref-urs_atiyah&#34; role=&#34;doc-biblioref&#34;&gt;nLab authors,
-2024&lt;/a&gt;)&lt;/span&gt;&lt;span class=&#34;citation&#34; data-cites=&#34;urs_atiyah_blog&#34;&gt; (&lt;a
-href=&#34;#ref-urs_atiyah_blog&#34; role=&#34;doc-biblioref&#34;&gt;Schreiber,
+2024b&lt;/a&gt;)&lt;/span&gt;&lt;span class=&#34;citation&#34; data-cites=&#34;urs_atiyah_blog&#34;&gt;
+(&lt;a href=&#34;#ref-urs_atiyah_blog&#34; role=&#34;doc-biblioref&#34;&gt;Schreiber,
 2006&lt;/a&gt;)&lt;/span&gt;. This would be a Lie groupoidal version of the Atiyah
 sequence on Lie algebras. If a groupoid extension could be examined, a
 link could be sought to Schreier theory. We’ll return to these ideas in
@@ -1527,7 +1541,7 @@ class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; is a partial function defined 
 faces, each of which bounds one of the zeros of &lt;span
 class=&#34;math inline&#34;&gt;\(Z\)&lt;/span&gt;.&lt;/p&gt;
 &lt;div class=&#34;mynote&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Note 2&lt;/strong&gt;. &lt;em&gt;If the combinatorial manifold was
+&lt;p&gt;&lt;strong&gt;Note 3&lt;/strong&gt;. &lt;em&gt;If the combinatorial manifold was
 imported into type theory via some process of sampling or other,
 perhpaps more theoretical, construction then we should allow for zeros
 to occur on verticies, edges, or faces. We can reduce the case of a zero
@@ -1686,8 +1700,11 @@ differential geometry and forms: A mathematical drama in five
 acts&lt;/a&gt;&lt;/em&gt;. Princeton University Press.
 &lt;/div&gt;
 &lt;div id=&#34;ref-urs_atiyah&#34; class=&#34;csl-entry&#34; role=&#34;listitem&#34;&gt;
-&lt;span class=&#34;smallcaps&#34;&gt;nLab authors&lt;/span&gt; (2024) &lt;span&gt;A&lt;/span&gt;tiyah
+&lt;span class=&#34;smallcaps&#34;&gt;nLab authors&lt;/span&gt; (2024b) &lt;span&gt;A&lt;/span&gt;tiyah
 &lt;span&gt;L&lt;/span&gt;ie groupoid.
+&lt;/div&gt;
+&lt;div id=&#34;ref-splitting_principle&#34; class=&#34;csl-entry&#34; role=&#34;listitem&#34;&gt;
+&lt;span class=&#34;smallcaps&#34;&gt;nLab authors&lt;/span&gt; (2024a) Splitting principle.
 &lt;/div&gt;
 &lt;div id=&#34;ref-urs_atiyah_blog&#34; class=&#34;csl-entry&#34; role=&#34;listitem&#34;&gt;
 &lt;span class=&#34;smallcaps&#34;&gt;Schreiber&lt;/span&gt;, U. (2006) &lt;a
