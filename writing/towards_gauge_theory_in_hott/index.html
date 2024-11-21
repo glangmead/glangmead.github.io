@@ -522,24 +522,30 @@ class="toc-section-number">2.1</span> Bundles of mere circles</a></li>
 class="toc-section-number">2.2</span> Pathovers in circle
 bundles</a></li>
 </ul></li>
+<li><a href="#polytopes-and-combinatorial-manifolds"
+id="toc-polytopes-and-combinatorial-manifolds"><span
+class="toc-section-number">3</span> Polytopes and combinatorial
+manifolds</a>
+<ul>
+<li><a href="#polytopes" id="toc-polytopes"><span
+class="toc-section-number">3.1</span> Polytopes</a></li>
 <li><a href="#combinatorial-manifolds"
 id="toc-combinatorial-manifolds"><span
-class="toc-section-number">3</span> Combinatorial manifolds</a>
-<ul>
+class="toc-section-number">3.2</span> Combinatorial manifolds</a></li>
 <li><a href="#higher-inductive-combinatorial-manifolds"
 id="toc-higher-inductive-combinatorial-manifolds"><span
-class="toc-section-number">3.1</span> Higher inductive combinatorial
+class="toc-section-number">3.3</span> Higher inductive combinatorial
 manifolds</a></li>
 <li><a href="#sec:polygons" id="toc-sec:polygons"><span
-class="toc-section-number">3.2</span> Polygons</a></li>
+class="toc-section-number">3.4</span> Polygons</a></li>
 <li><a href="#the-higher-inductive-type-oo"
 id="toc-the-higher-inductive-type-oo"><span
-class="toc-section-number">3.3</span> The higher inductive type <span
+class="toc-section-number">3.5</span> The higher inductive type <span
 class="math inline">\(\ensuremath{\mathbb{O}}\)</span></a></li>
 <li><a
 href="#groupoid-operations-on-higher-inductive-combinatorial-manifolds"
 id="toc-groupoid-operations-on-higher-inductive-combinatorial-manifolds"><span
-class="toc-section-number">3.4</span> Groupoid operations on higher
+class="toc-section-number">3.6</span> Groupoid operations on higher
 inductive combinatorial manifolds</a></li>
 </ul></li>
 <li><a href="#connections-and-vector-fields"
@@ -583,14 +589,16 @@ class="toc-section-number">5.1.1</span> Gauge theory</a></li>
 </ul>
 </nav>
 <h1 class="unnumbered" id="abstract">Abstract</h1>
-<p>Homotopy type theory can capture some concepts of differential
+<p>Higher inductive types can capture some concepts of differential
 geometry in two dimensions including connections, curvature, and vector
-fields. We show this by focusing on combinatorial manifolds, which are
-discrete in the sense of real cohesion<span class="citation"
-data-cites="shulman_cohesion"> (<a href="#ref-shulman_cohesion"
-role="doc-biblioref">Shulman, 2017</a>)</span>, and drawing inspiration
-from the field of discrete differential geometry. We prove the
-Gauss-Bonnet theorem and Poincaré-Hopf theorem in this setting.</p>
+fields. We define connections on higher inductive types. We then define
+tangent bundles and vector fields by looking at the special subclass of
+combinatorial manifolds, which are discrete in the sense of real
+cohesion<span class="citation" data-cites="shulman_cohesion"> (<a
+href="#ref-shulman_cohesion" role="doc-biblioref">Shulman,
+2017</a>)</span>, drawing inspiration from the field of discrete
+differential geometry. We prove the Gauss-Bonnet theorem and
+Poincaré-Hopf theorem for combinatorial manifolds.</p>
 <blockquote>
 <p>“It is always ourselves we work on, whether we realize it or not.
 There is no other work to be done in the world.” — Stephen Talbott,
@@ -633,7 +641,7 @@ terms <span
 class="math inline">\(C:\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)</span>
 “mere circles.”</p>
 <p>We will see in Section <a href="#sec:polygons"
-data-reference-type="ref" data-reference="sec:polygons">3.2</a> that
+data-reference-type="ref" data-reference="sec:polygons">3.4</a> that
 <span
 class="math inline">\(\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)</span>
 contains all the polygons. We will construct a map <span
@@ -709,20 +717,21 @@ bundles</h1>
 appropriate classifying space of torsors to map into.</p>
 <div class="mydef">
 <p><strong>Definition 1</strong>. <em>Let <span
-class="math inline">\(G\)</span> be a group (a set with the usual
-classical structure and properties). A <strong><span
+class="math inline">\(G\)</span> be a group with identity element <span
+class="math inline">\(e\)</span> (with the usual classical structure and
+properties). A <strong><span
 class="math inline">\(G\)</span>-set</strong> is a set <span
 class="math inline">\(X\)</span> equipped with a homomorphism <span
-class="math inline">\(\phi:G\to\mathop{\mathrm{Aut}}(X)\)</span>. If in
-addition we have a term <span
+class="math inline">\(\phi:(G,e)\to\mathop{\mathrm{Aut}}(X)\)</span>. If
+in addition we have a term <span
 class="math display">\[\mathsf{is\_torsor}:||X||_{-1}\times
-\prod_{g:G}\mathsf{is\_equiv}(\phi(-,x):G\to X)\]</span> then we call
-this data a <strong><span
+\prod_{x:X}\mathsf{is\_equiv}(\phi(-,x):(G,e)\to (X,x))\]</span> then we
+call this data a <strong><span
 class="math inline">\(G\)</span>-torsor</strong>. Denote the type of
 <span class="math inline">\(G\)</span>-torsors by <span
-class="math inline">\(TG\)</span>.</em></p>
+class="math inline">\(BG\)</span>.</em></p>
 </div>
-<p>If <span class="math inline">\((X,\phi),(Y,\psi):TG\)</span> then a
+<p>If <span class="math inline">\((X,\phi),(Y,\psi):BG\)</span> then a
 <span class="math inline">\(G\)</span>-equivariant map is a function
 <span class="math inline">\(f:X\to Y\)</span> such that <span
 class="math inline">\(f(\phi(g,x))=\psi(g,f(x))\)</span>. Denote the
@@ -730,13 +739,13 @@ type of <span class="math inline">\(G\)</span>-equivariant maps by <span
 class="math inline">\(X\to_G Y\)</span>.</p>
 <div class="mylemma">
 <p><strong>Lemma 1</strong>. <em>There is a natural equivalence <span
-class="math inline">\((X=_{TG}Y) \simeq (X\to_G Y)\)</span>.</em></p>
+class="math inline">\((X=_{BG}Y) \simeq (X\to_G Y)\)</span>.</em></p>
 </div>
 <p>Denote by <span class="math inline">\(*\)</span> the torsor given by
 <span class="math inline">\(G\)</span> actions on its underlying set by
 left-translation. This serves as a basepoint for <span
-class="math inline">\(TG\)</span> and we have a group isomorphism <span
-class="math inline">\(\Omega TG\simeq G\)</span>.</p>
+class="math inline">\(BG\)</span> and we have a group isomorphism <span
+class="math inline">\(\Omega BG\simeq G\)</span>.</p>
 <div class="mylemma">
 <p><strong>Lemma 2</strong>. <em>A <span
 class="math inline">\(G\)</span>-set <span
@@ -747,7 +756,7 @@ exists a <span class="math inline">\(G\)</span>-equivariant equivalence
 </div>
 <div class="mycor">
 <p><strong>Corollary 1</strong>. <em>The pointed type <span
-class="math inline">\((TG,*)\)</span> is a <span
+class="math inline">\((BG,*)\)</span> is a <span
 class="math inline">\(\mathrm{K}(G,1)\)</span>.</em></p>
 </div>
 <p>In particular, to classify principal <span
@@ -913,8 +922,195 @@ class="math inline">\(\mathsf{apd}\)</span>: <span
 class="math inline">\(\mathsf{apd}(X)(p):\mathsf{tr}(p)(X(a))=X(b)\)</span>
 which is a pathover between the two values of the section over the
 basepoints of the path <span class="math inline">\(p\)</span>.</p>
-<h1 data-number="3" id="combinatorial-manifolds"><span
-class="header-section-number">3</span> Combinatorial manifolds</h1>
+<h1 data-number="3" id="polytopes-and-combinatorial-manifolds"><span
+class="header-section-number">3</span> Polytopes and combinatorial
+manifolds</h1>
+<p>We will use two types of classical combinatorial structures:
+<em>abstract polytopes</em> and <em>combinatorial manifolds</em>. The
+latter is a subtype of the former. Abstract polytopes (or just
+“polytopes” in this note) encompass polygons, polyhedra, and
+higher-dimensional versions. They exclude certain undesirable shapes
+such as two triangles that meet at one vertex. But they aren’t
+necessarily simplicial either:</p>
+<pre><code>Minimal HITs:
+
+def S1:
+base: S1
+loop: base=base
+
+def S2:
+N: S2
+surf: refl_N = refl_N
+
+def torus:
+b:torus
+p,q:b=b
+donut:p.q=q.p
+
+
+the map R (realization) R(S2):U lossy map
+
+R(C_4) has an equivalence to R(S1)
+perhaps this is R(the map C_4-&gt;S1, the strict one)
+C_4-&gt;S1 is a strict map
+S1-&gt;C_4 is non-strict, uses generated data, uses data from R(C_4)
+
+def OO:
+6 vertices
+12 edges
+8 faces
+
+f:S2-&gt;OO 
+T:OO-&gt;EM(Z,1)
+
+def OO_w:
+5 vertices
+8 edges
+5 faces: four bottom triangles, and a square refl_b=loop &quot;brgob&quot;
+
+g:S2-&gt;OO_w
+
+compose f and g^{-1} to give OO equiv OO_w
+
+Tof(base) is (C_4, is_equiv_s1)
+inside this is a twice rotation around C_4 and a homotopy to id(C_4)
+
+&quot;strict morphism of HITs&quot;: ctors to ctors
+
+Imagine only having X:U, or X:*-&gt; U
+
+Claim: we cannot see the one-notch &quot;90 degree&quot; rotation of C_4 at the level of types.
+
+-- Connections --
+Type X w/ 1-skel X_1
+HIT gives skeletal filtration
+functions naturally given as per-skeleton steps
+there are constraints/obstructions:
+obstruction to extend map T from vertices a, b to path e:a=b is that T(a) and T(b) are in same connected component
+say 2-cell F contracts a loop L: F:L=refl_v some vertex v
+we have a choice of v for each face F
+then T(F) must be in same component as refl_v (refl_v:\pi_1 X with basepoint v)
+T(F) is merely refl, and holonomy is merely refl, and connection on this face F is merely flat
+curvature is a function from 2-cells to \pi_1(X,v)
+T(v):U
+T(L):T(v)=T(v)
+
+T(F):refl_{T(v)}=T(L)
+the class ||T(L)||:\pi_1(U,T(v)) is an obstruction to having T(F), to extending T to F
+
+The hierarchy of maps extending to higher skeletons, which we call connections of dimension 1, 2, etc.
+This works for ANY HIT.
+The combinatorial manifold structure is just one special case that gives me a specific map T.</code></pre>
+<h2 data-number="3.1" id="polytopes"><span
+class="header-section-number">3.1</span> Polytopes</h2>
+<div class="mydef">
+<p><strong>Definition 4</strong>. <em>A <strong>finite abstract
+polytope</strong> <span class="math inline">\(\mathcal{P}\)</span> of
+dimension <span class="math inline">\(n\)</span> is a finite poset <span
+class="math inline">\(P\)</span> equipped with</em></p>
+<ul>
+<li><p><em>two elements <span class="math inline">\(p_{\mathrm{min}},
+p_{\mathrm{max}}:P\)</span></em></p></li>
+<li><p><em>a <em>rank</em> function <span class="math inline">\(r:P\to
+\ensuremath{\mathbb{Z}}\)</span></em></p></li>
+</ul>
+<p><em>and properties</em></p>
+<ul>
+<li><p><em>a proof that <span class="math inline">\(a\leq b\to r(a)\leq
+r(b)\)</span></em></p></li>
+<li><p><em>a proof that <span
+class="math inline">\(p_{\mathrm{min}}\)</span> is minimal: <span
+class="math inline">\(\prod_{p:P}p\geq
+p_{\mathrm{min}}\)</span></em></p></li>
+<li><p><em>a proof that <span
+class="math inline">\(p_{\mathrm{max}}\)</span> is maximal: <span
+class="math inline">\(\prod_{p:P}p\leq
+p_{\mathrm{max}}\)</span></em></p></li>
+<li><p><em>a proof that <span class="math inline">\(r(p_{\mathrm{min}})
+= -1\)</span> (so that non-minimal elements have rank at least
+0)</em></p></li>
+<li><p><em>a proof that <span class="math inline">\(r(p_{\mathrm{max}})
+= n+1\)</span> (so that non-maximal elements have rank at most <span
+class="math inline">\(n\)</span>)</em></p></li>
+<li><p><em>a proof that rank “counts containment”: <span
+class="math inline">\(\prod_{a,b:P}(a\leq b)\times
+(\mathsf{is\_empty}\sum_{c:P}(a\leq c\leq b))\to
+b=a+1\)</span></em></p></li>
+<li><p><em>a proof of <em>strong connectedness</em> (all intervals are
+connected via a chain of containment): <span
+class="math inline">\(\prod_{a,b:P\setminus\{p_{\mathrm{min}},
+p_{\mathrm{max}}\}}\left(\sum_{x:P}a\leq x\leq b\text{ is
+connected}\right)\)</span></em></p></li>
+<li><p><em>a proof of the <em>diamond condition</em> that between two
+elements that differ by two ranks lie exactly two elements: <span
+class="math inline">\(\prod_{a,b:P}(r(b)-r(a)=2)\to \#(\sum_{c:P}a\leq
+c\leq b)=4\)</span> (of which <span class="math inline">\(a\)</span> and
+<span class="math inline">\(b\)</span> are two).</em></p></li>
+</ul>
+</div>
+<p>The diamond condition captures that two edges meet at a vertex, two
+faces meet at one edge, and so on. See the Hasse diagram (a graph of the
+poset with rank represented on the <span
+class="math inline">\(y\)</span>-axis) of a tetrahedron in Figure <a
+href="#fig:hasse_tetrahedron" data-reference-type="ref"
+data-reference="fig:hasse_tetrahedron">2</a> and the square pyramid
+(which will arise later as an octahedron minus its south pole) in
+Figure <a href="#fig:hasse_pyramid" data-reference-type="ref"
+data-reference="fig:hasse_pyramid">3</a>.</p>
+<figure id="fig:hasse_tetrahedron">
+<img src="hasse_tetrahedron.png" style="width:2.77778in" />
+<figcaption>A finite abstract polytope representation of a tetrahedron,
+in the form of its “Hasse diagram” (from polytope.miraheze.org, public
+domain).</figcaption>
+</figure>
+<figure id="fig:hasse_pyramid">
+<img src="pyramid.png" style="width:4.86111in" />
+<figcaption>The Hasse diagram of a square pyramid (from wikimedia.org,
+public domain).</figcaption>
+</figure>
+<p>Next we will map abstract polytopes to higher inductive types. The
+poset structure will generate the paths, so the rank will correspond to
+the dimension. But as usual in a HIT we will need to make a choice of
+direction for each path constructor, which wasn’t necessary in the
+polytope setting. We will restrict to dimension at most 2.</p>
+<div class="mydef">
+<p><strong>Definition 5</strong>. <em>A <strong>higher inductive
+polytope (HIP) of dimension at most 2</strong> <span
+class="math inline">\(\mathscr{P}\)</span> for a polytope <span
+class="math inline">\(\mathcal{P}\)</span> of dimension at most 2 is a
+type with constructor data given by</em></p>
+<ol>
+<li><p><em>For each rank 0 element <span
+class="math inline">\(v\)</span> a term <span
+class="math inline">\(V:\mathscr{P}\)</span>.</em></p></li>
+<li><p><em>For each rank 1 element <span
+class="math inline">\(e\)</span> and rank 1 pair <span
+class="math inline">\(v_1,v_2\leq e\)</span> (cardinality 2 by the
+diamond condition) a path <span
+class="math inline">\(E:V_1=V_2\)</span>.</em></p></li>
+<li><p><em>For each rank 2 element <span
+class="math inline">\(f\)</span> containing edges <span
+class="math inline">\(e_1,\ldots,e_n\)</span> containing a cycle of
+vertex pairs <span
+class="math inline">\(\{\{v_{11},v_{12}\},\ldots,\{v_{n1},v_{n2}=v_{11}\}\}\)</span>
+a 2-path <span class="math inline">\(F:E_1\cdot\ldots\cdot
+E_n=\ensuremath{\mathsf{refl}}_{v_{11}}\)</span>.</em></p></li>
+</ol>
+</div>
+<div class="mydef">
+<p><strong>Definition 6</strong>. <em>Given a HIT of dimension at most 2
+we have the <strong>skeleta</strong> <span
+class="math inline">\(\mathscr{P}_0,\mathscr{P}_1,\mathscr{P}_2\)</span>
+where <span class="math inline">\(\mathscr{P}_i\)</span> is the HIT
+generated by using the constructors up to dimension <span
+class="math inline">\(i\)</span>. The HIT also provides a chain of
+inclusions of skeleta <span
+class="math inline">\(\mathscr{P}_0\to\mathscr{P}_1\to\mathscr{P}_2\)</span>.</em></p>
+</div>
+<p>If <span class="math inline">\(Z:\mathcal{U}\)</span> is a type then
+to define a map</p>
+<h2 data-number="3.2" id="combinatorial-manifolds"><span
+class="header-section-number">3.2</span> Combinatorial manifolds</h2>
 <p>We will adapt to higher inductive types in a straightforward manner
 the classical construction of <em>combinatorial manifolds</em>. See for
 example the classic book by Kirby and Siebenmann<span class="citation"
@@ -922,7 +1118,7 @@ data-cites="kirby_siebenmann"> (<a href="#ref-kirby_siebenmann"
 role="doc-biblioref">Kirby &amp; Siebenmann, 1977</a>)</span>. These are
 a subclass of simplicial complexes.</p>
 <div class="mydef">
-<p><strong>Definition 4</strong>. <em>An <strong>abstract simplicial
+<p><strong>Definition 7</strong>. <em>An <strong>abstract simplicial
 complex <span class="math inline">\(M\)</span> of dimension <span
 class="math inline">\(n\)</span></strong> consists of a set <span
 class="math inline">\(M_0\)</span> of vertices, and for each <span
@@ -947,7 +1143,7 @@ class="math inline">\(M_0\)</span> to be included – that would make
 simplicial complex is a family of simplices that are identified along
 various faces.</p>
 <div class="mydef">
-<p><strong>Definition 5</strong>. <em>In an abstract simplicial complex
+<p><strong>Definition 8</strong>. <em>In an abstract simplicial complex
 <span class="math inline">\(M\)</span> of dimension <span
 class="math inline">\(n\)</span>, the <strong>link</strong> of a vertex
 <span class="math inline">\(v\)</span> is the <span
@@ -961,7 +1157,7 @@ class="math inline">\(M\)</span>.</em></p>
 <p>The link is all the neighboring vertices of <span
 class="math inline">\(v\)</span> and the codimension 1 faces joining
 those to each other. See for example Figure <a href="#fig:link"
-data-reference-type="ref" data-reference="fig:link">2</a>.</p>
+data-reference-type="ref" data-reference="fig:link">4</a>.</p>
 <figure id="fig:link">
 <img src="./77310e6013360f123738b3984e7a97ecabc90011.png" />
 <figcaption>The link of <span class="math inline">\(v\)</span> in this
@@ -971,7 +1167,7 @@ class="math inline">\(\{ab,bc,cd,de,ef,fa\}\)</span>, forming a
 hexagon.</figcaption>
 </figure>
 <div class="mydef">
-<p><strong>Definition 6</strong>. <em>A <strong>combinatorial
+<p><strong>Definition 9</strong>. <em>A <strong>combinatorial
 manifold</strong> (or <strong>combinatorial triangulation</strong>) of
 dimension <span class="math inline">\(n\)</span> is a simplicial complex
 of dimension <span class="math inline">\(n\)</span> such that the link
@@ -985,11 +1181,11 @@ are sets).</em></p>
 </div>
 <p>In a 2-dimensional combinatorial manifold the link is a polygon. See
 Figures <a href="#fig:sphere_triangulation" data-reference-type="ref"
-data-reference="fig:sphere_triangulation">3</a>, <a
+data-reference="fig:sphere_triangulation">5</a>, <a
 href="#fig:torus_wiki_triangulation" data-reference-type="ref"
-data-reference="fig:torus_wiki_triangulation">4</a>, and <a
+data-reference="fig:torus_wiki_triangulation">6</a>, and <a
 href="#fig:genus3_wiki_triangulation" data-reference-type="ref"
-data-reference="fig:genus3_wiki_triangulation">5</a> for some examples
+data-reference="fig:genus3_wiki_triangulation">7</a> for some examples
 of 2-dimensional combinatorial manifolds of genus 0, 1, and 3.</p>
 <p>A classical 1940 result of Whitehead, building on Cairn, states that
 every smooth manifold admits a combinatorial triangulation<span
@@ -1016,15 +1212,15 @@ Ag2gaeh</a> - Own work, CC BY-SA 3.0.)</figcaption>
 href="https://commons.wikimedia.org/wiki/File:Tri-brezel.svg">By
 Ag2gaeh</a> - Own work, CC BY-SA 3.0.)</figcaption>
 </figure>
-<h2 data-number="3.1"
+<h2 data-number="3.3"
 id="higher-inductive-combinatorial-manifolds"><span
-class="header-section-number">3.1</span> Higher inductive combinatorial
+class="header-section-number">3.3</span> Higher inductive combinatorial
 manifolds</h2>
 <p>We will convert a simplicial complex <span
 class="math inline">\(M\)</span> of dimension at most 2 to a higher
 inductive type, in two steps.</p>
 <div class="mydef">
-<p><strong>Definition 7</strong>. <em>Define <span
+<p><strong>Definition 10</strong>. <em>Define <span
 class="math inline">\(\mathsf{CombMfd_2}\)</span> to be the type of
 <strong>higher inductive constructors of combinatorial manifolds of
 dimension at most 2</strong> and let <span
@@ -1054,7 +1250,7 @@ class="citation" data-cites="warn_pushouts"> (<a
 href="#ref-warn_pushouts" role="doc-biblioref">Wärn,
 2024</a>)</span>.</p>
 <div class="mydef">
-<p><strong>Definition 8</strong>. <em>Denote by <span
+<p><strong>Definition 11</strong>. <em>Denote by <span
 class="math inline">\(\mathcal{R}:\mathsf{CombMfd_2}\to\mathsf{Type}\)</span>
 the process of generating a type from the HIT data (which we refer to as
 <strong>realization</strong>). Note that <span
@@ -1069,13 +1265,13 @@ class="math inline">\(\mathcal{R}\)</span> because we will mostly study
 functions and phenomena on <span
 class="math inline">\(\mathcal{H}(M)\)</span> for some simplicial
 complex <span class="math inline">\(M\)</span>.</p>
-<h2 data-number="3.2" id="sec:polygons"><span
-class="header-section-number">3.2</span> Polygons</h2>
+<h2 data-number="3.4" id="sec:polygons"><span
+class="header-section-number">3.4</span> Polygons</h2>
 <p>We will now start looking at some examples, first by defining a type
 that is important both for the domain and the codomain of mere circles:
 a square.</p>
 <div class="mydef">
-<p><strong>Definition 9</strong>. <em>The higher inductive type <span
+<p><strong>Definition 12</strong>. <em>The higher inductive type <span
 class="math inline">\(C_4\)</span> (where C stands for “circle”). <span
 class="math display">\[\begin{aligned}
 C_4 &amp;: \mathsf{Type}\\
@@ -1094,7 +1290,7 @@ class="math inline">\(C_4\)</span>.</figcaption>
 <p>The standard HoTT circle itself is a non-example of a combinatorial
 manifold since it lacks the second vertex of the edge:</p>
 <div class="mydef">
-<p><strong>Definition 10</strong>. <em>The higher inductive type <span
+<p><strong>Definition 13</strong>. <em>The higher inductive type <span
 class="math inline">\(S^1\)</span>: <span
 class="math display">\[\begin{aligned}
 S^1&amp;:\mathsf{Type}\\
@@ -1132,7 +1328,7 @@ terms</p>
 class="math inline">\(4ei:s_1(\ell(c_i))=c_i\)</span></p></li>
 <li><p><span
 class="math inline">\(4eij:\mathsf{apd}(c_ic_j)(4ei)=4ej\)</span>, i.e.
-<span class="math inline">\(4eij: s_1(\ell(c_ic_j))\cdot 4ei\cdot
+<span class="math inline">\(4eij: s_1(\ell(c_ic_j))^{-1}\cdot 4ei\cdot
 c_ic_j=4ej\)</span>.</p></li>
 </ol>
 <p>where in the second goal we used a result about <span
@@ -1166,7 +1362,7 @@ induction on <span class="math inline">\(S^1\)</span>, by defining.</p>
 class="math inline">\(e4b:\ell(s_1(\mathsf{base}))=\mathsf{base}\)</span></p></li>
 <li><p><span
 class="math inline">\(e4l:\mathsf{apd}(\mathsf{loop})(e4b)=e4b\)</span>,
-i.e. <span class="math inline">\(e4l:\ell(s_1(\mathsf{loop}))\cdot
+i.e. <span class="math inline">\(e4l:\ell(s_1(\mathsf{loop}))^{-1}\cdot
 e4b\cdot e4b\)</span>.</p></li>
 </ol>
 <p>These goals are fulfilled by</p>
@@ -1203,18 +1399,18 @@ universe.</p>
 number of vertices varies across the surface. For example we can see
 hexagons and pentagons in Figure <a href="#fig:sphere_triangulation"
 data-reference-type="ref"
-data-reference="fig:sphere_triangulation">3</a>. This presumably
+data-reference="fig:sphere_triangulation">5</a>. This presumably
 introduces only a minor practical inconvenience and doesn’t materially
 affect the discussion to come.</p>
-<h2 data-number="3.3" id="the-higher-inductive-type-oo"><span
-class="header-section-number">3.3</span> The higher inductive type <span
+<h2 data-number="3.5" id="the-higher-inductive-type-oo"><span
+class="header-section-number">3.5</span> The higher inductive type <span
 class="math inline">\(\ensuremath{\mathbb{O}}\)</span></h2>
 <p>We will create our first combinatorial surface, a 2-sphere. We will
 adopt the convention that a subscript indicates the dimension of a
 subskeleton of a complex. For instance, we have <span
 class="math inline">\(\mathsf{base}:S^1_0\)</span>.</p>
 <div class="mydef">
-<p><strong>Definition 11</strong>. <em>The HIT <span
+<p><strong>Definition 14</strong>. <em>The HIT <span
 class="math inline">\(\ensuremath{\mathbb{O}}_0\)</span> is just 6
 points, intended as the 0-skeleton of an octahedron, with vertices named
 after the colors on the faces of a famous Central European puzzle cube.
@@ -1222,7 +1418,7 @@ after the colors on the faces of a famous Central European puzzle cube.
 \ensuremath{\mathbb{O}}_0\]</span></em></p>
 </div>
 <div class="mydef">
-<p><strong>Definition 12</strong>. <em>The HIT <span
+<p><strong>Definition 15</strong>. <em>The HIT <span
 class="math inline">\(\ensuremath{\mathbb{O}}_1\)</span> is the
 1-skeleton of an octahedron. <span
 class="math display">\[\begin{aligned}
@@ -1236,7 +1432,7 @@ yr &amp;: y=r
 \end{aligned}\]</span></em></p>
 </div>
 <div class="mydef">
-<p><strong>Definition 13</strong>. <em>The HIT <span
+<p><strong>Definition 16</strong>. <em>The HIT <span
 class="math inline">\(\ensuremath{\mathbb{O}}\)</span> is an octahedron:
 <span class="math display">\[\begin{aligned}
 w, y, b, r, g, o &amp;: \ensuremath{\mathbb{O}}\\
@@ -1269,9 +1465,9 @@ class="math inline">\(\ensuremath{\mathbb{O}}_0\xrightarrow[]{i_0}
 \ensuremath{\mathbb{O}}_1\xrightarrow[]{i_1}
 \ensuremath{\mathbb{O}}\)</span> that include each skeleton into the
 next-higher-dimensional skeleton.</p>
-<h2 data-number="3.4"
+<h2 data-number="3.6"
 id="groupoid-operations-on-higher-inductive-combinatorial-manifolds"><span
-class="header-section-number">3.4</span> Groupoid operations on higher
+class="header-section-number">3.6</span> Groupoid operations on higher
 inductive combinatorial manifolds</h2>
 <p>Let <span class="math inline">\(M:\mathsf{SimpCompSet_2}\)</span> be
 a combinatorial 2-manifold and <span
@@ -1283,11 +1479,11 @@ are 2-paths in the HoTT sense. If two faces <span
 class="math inline">\(bca\)</span> and <span
 class="math inline">\(bdc\)</span> share the edge <span
 class="math inline">\(bc\)</span> (see Figure <a href="#fig:concat"
-data-reference-type="ref" data-reference="fig:concat">6</a>), then we
+data-reference-type="ref" data-reference="fig:concat">8</a>), then we
 can define an operation that combines the combinatorics of simplices
 with the higher groupoid operations generated by our HIT.</p>
 <p>Consider Figure <a href="#fig:concat" data-reference-type="ref"
-data-reference="fig:concat">6</a> and the 2-paths <span
+data-reference="fig:concat">8</a> and the 2-paths <span
 class="math inline">\(bac: ba\cdot ac=bc\)</span> and <span
 class="math inline">\(bdc: bd\cdot dc = bc\)</span>. The 2-path
 concatenation <span class="math inline">\(bac\cdot bdc^{-1}\)</span> is
@@ -1315,7 +1511,7 @@ play the role of the “fundamental homology class” from classical
 topology, which is an object on which 2-forms can be evaluated to
 compute their value on the whole manifold.</p>
 <div id="def:totalface" class="mydef">
-<p><strong>Definition 14</strong>. <em>If we have a combinatorial
+<p><strong>Definition 17</strong>. <em>If we have a combinatorial
 manifold <span
 class="math inline">\(\ensuremath{\mathbb{M}}:\mathsf{CombMfd_2}\)</span>
 (or a combinatorial manifold minus some isolated zeros <span
@@ -1336,7 +1532,7 @@ face!</p>
 related to <span class="math inline">\(\ensuremath{\mathbb{M}}\)</span>
 but without some of the point constructors. Figure <a
 href="#fig:hex_concat" data-reference-type="ref"
-data-reference="fig:hex_concat">7</a> illustrates the equivalence.</p>
+data-reference="fig:hex_concat">9</a> illustrates the equivalence.</p>
 <figure id="fig:hex_concat">
 <img src="hex_concat.png" style="width:2.77778in" />
 <figcaption>Concatenating the six triangles in the approrpiate way
@@ -1345,7 +1541,7 @@ class="math inline">\(\ensuremath{\mathsf{refl}}_v=\ensuremath{\mathsf{refl}}_v\
 and removes the vertex at the center.</figcaption>
 </figure>
 <div class="mydef">
-<p><strong>Definition 15</strong>. <em>If <span
+<p><strong>Definition 18</strong>. <em>If <span
 class="math inline">\(\ensuremath{\mathbb{M}}:\mathsf{CombMfd_2}\)</span>
 is a combinatorial manifold and <span class="math inline">\(Z\subset
 \ensuremath{\mathbb{M}}_0\)</span> is a set of vertices in <span
@@ -1363,13 +1559,13 @@ class="math inline">\(\ensuremath{\mathbb{M}}\setminus Z\)</span> has
 boundary circles where each vertex was removed.</em></p>
 </div>
 <div id="def:replacement" class="mydef">
-<p><strong>Definition 16</strong>. <em>If we have <span
+<p><strong>Definition 19</strong>. <em>If we have <span
 class="math inline">\(\ensuremath{\mathbb{M}}\setminus Z\)</span> for
 some isolated set of verticies <span class="math inline">\(Z\)</span>,
 then for each <span class="math inline">\(z:Z\)</span> we can compose
 all the faces which contain <span class="math inline">\(z\)</span>,
 forming a new face (see Figure <a href="#fig:hex_concat"
-data-reference-type="ref" data-reference="fig:hex_concat">7</a>). In
+data-reference-type="ref" data-reference="fig:hex_concat">9</a>). In
 this way we produce a HIT called <span
 class="math inline">\(\ensuremath{\mathbb{M}}_Z\)</span>, which is no
 longer combinatorial. We call <span
@@ -1388,7 +1584,7 @@ class="math inline">\(\mathcal{R}(\ensuremath{\mathbb{M}})=_\mathsf{Type}\mathca
 <p><em>Proof.</em> We will prove that concatenating two faces of <span
 class="math inline">\(\ensuremath{\mathbb{M}}\)</span> as in Figure <a
 href="#fig:concat" data-reference-type="ref"
-data-reference="fig:concat">6</a> produces an equivalent type. Let <span
+data-reference="fig:concat">8</a> produces an equivalent type. Let <span
 class="math inline">\(A\)</span> be the constructor given on the left
 that includes the edge <span class="math inline">\(bc\)</span>, and
 <span class="math inline">\(B\)</span> the constructor on the right. We
@@ -1468,7 +1664,7 @@ meant to be like the circle bundle of a tangent bundle. And so we will
 begin with the intrinsic data of the link at each point: taking the link
 of a vertex gives us a map from vertices to polygons.</p>
 <div class="mydef">
-<p><strong>Definition 17</strong>. <em><span
+<p><strong>Definition 20</strong>. <em><span
 class="math inline">\(T_0\stackrel{\mathrm{def}}{=}\mathop{\mathrm{\mathsf{link}}}:\ensuremath{\mathbb{O}}_0\to\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)</span>
 is given by: <span class="math display">\[\begin{aligned}
 \mathop{\mathrm{\mathsf{link}}}(w) &amp;= brgo &amp;
@@ -1499,7 +1695,7 @@ action on paths is its own structure. Two functions on the octahedron
 could agree on points but differ on edges. We are going to identify this
 1-dimensional freedom with a connection:</p>
 <div id="def:connection" class="mydef">
-<p><strong>Definition 18</strong>. <em>A <strong>connection</strong> on
+<p><strong>Definition 21</strong>. <em>A <strong>connection</strong> on
 a higher combinatorial manifold is an extension of a circle bundle from
 the 0-skeleton to the 1-skeleton.</em></p>
 </div>
@@ -1513,7 +1709,7 @@ class="math inline">\(o\mapsto o\)</span> because those lie on the axis
 of rotation. Then <span class="math inline">\(g\mapsto w\)</span> and
 <span class="math inline">\(b\mapsto y\)</span>.</p>
 <div class="mydef">
-<p><strong>Definition 19</strong>. <em>Define <span
+<p><strong>Definition 22</strong>. <em>Define <span
 class="math inline">\(T_1:\ensuremath{\mathbb{O}}_1\to\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)</span>
 on just the 1-skeleton by extending <span
 class="math inline">\(T_0\)</span> as follows: Transport away from <span
@@ -1560,13 +1756,13 @@ class="math inline">\(T_1\)</span> does to triangular paths such as
 circulates around the boundary of face <span
 class="math inline">\(wbr\)</span>). You can see it if you imagine
 Figure <a href="#fig:triangle_of_equators" data-reference-type="ref"
-data-reference="fig:triangle_of_equators">8</a> as the frames of a short
-movie. Or you can place your palm over the top of a cube and note where
-your fingers are pointing, then slide your hand to an equatorial face,
-then along the equator, then back to the top. The answer is: you come
-back rotated clockwise by a quarter-turn.</p>
+data-reference="fig:triangle_of_equators">10</a> as the frames of a
+short movie. Or you can place your palm over the top of a cube and note
+where your fingers are pointing, then slide your hand to an equatorial
+face, then along the equator, then back to the top. The answer is: you
+come back rotated clockwise by a quarter-turn.</p>
 <div class="mydef">
-<p><strong>Definition 20</strong>. <em>The map <span
+<p><strong>Definition 23</strong>. <em>The map <span
 class="math inline">\(R:C_4\to C_4\)</span> rotates by one quarter turn,
 one “click":</em></p>
 <div class="multicols">
@@ -1608,7 +1804,7 @@ class="math inline">\(\ensuremath{\mathsf{refl}}_{T_1(w)}\)</span> to
 <span class="math inline">\(T_1(wb\cdot br\cdot rw)\)</span>. Here
 <em>there is no additional freedom</em>.</p>
 <div class="mydef">
-<p><strong>Definition 21</strong>. <em>Define <span
+<p><strong>Definition 24</strong>. <em>Define <span
 class="math inline">\(T_2:\ensuremath{\mathbb{O}}\to\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)</span>
 by extending <span class="math inline">\(T_1\)</span> to the faces as
 follows:</em></p>
@@ -1643,7 +1839,7 @@ space <span
 class="math inline">\(C_4=_{\mathrm{EM}(\ensuremath{\mathbb{Z}},1)}C_4\)</span>.</em></p>
 </div>
 <div id="def:curvature" class="mydef">
-<p><strong>Definition 22</strong>. <em>The <strong>curvature of a
+<p><strong>Definition 25</strong>. <em>The <strong>curvature of a
 connection</strong> on a type family <span
 class="math inline">\(T:\ensuremath{\mathbb{M}}\to\mathcal{U}\)</span>
 at a vertex <span class="math inline">\(v\)</span> of a 2-face <span
@@ -1672,7 +1868,7 @@ concatenate the curvature on two or more faces. This would correspond to
 integrating the curvature 2-form over a larger 2-cell, including
 integrating over a total face to compute <em>total curvature</em>. Look
 again at Figure <a href="#fig:concat" data-reference-type="ref"
-data-reference="fig:concat">6</a> where we concatenated two faces that
+data-reference="fig:concat">8</a> where we concatenated two faces that
 share an edge. HoTT maps respect groupoid operations, so we have <span
 class="math inline">\(T_2(abc\cdot bdc) = T_2(abdc)\)</span>. We can
 double-check this by comparing transport around a 4-gon like <span
@@ -1724,17 +1920,17 @@ vertex will have six neighbors. So all the links will be merely equal to
 <span class="math inline">\(C_6\)</span> which is a hexagonal version of
 <span class="math inline">\(C_4\)</span>. See Figure <a
 href="#fig:torus" data-reference-type="ref"
-data-reference="fig:torus">9</a>.</p>
+data-reference="fig:torus">11</a>.</p>
 <p>To help parse this figure, imagine instead Figure <a
 href="#fig:flattorus" data-reference-type="ref"
-data-reference="fig:flattorus">10</a>. We take this simple
+data-reference="fig:flattorus">12</a>. We take this simple
 alternating-triangle pattern, then glue the left and right edges, then
 bend into Figure <a href="#fig:torus" data-reference-type="ref"
-data-reference="fig:torus">9</a>. The fact that each column in Figure <a
-href="#fig:flattorus" data-reference-type="ref"
-data-reference="fig:flattorus">10</a> has four dots corresponds to the
+data-reference="fig:torus">11</a>. The fact that each column in
+Figure <a href="#fig:flattorus" data-reference-type="ref"
+data-reference="fig:flattorus">12</a> has four dots corresponds to the
 torus in Figure <a href="#fig:torus" data-reference-type="ref"
-data-reference="fig:torus">9</a> having a square in front, diamonds in
+data-reference="fig:torus">11</a> having a square in front, diamonds in
 the middle, and a square in back.</p>
 <figure id="fig:torus">
 <img src="./0087b249788a090ea395f319a1aa6bb257b59103.png" />
@@ -1772,7 +1968,7 @@ we can instead compute with a vector field.</p>
 <h2 data-number="4.4" id="vector-fields"><span
 class="header-section-number">4.4</span> Vector fields</h2>
 <div class="mydef">
-<p><strong>Definition 23</strong>. <em>A <strong>partial
+<p><strong>Definition 26</strong>. <em>A <strong>partial
 function</strong> <span class="math inline">\(f:A\to B\)</span> is a
 function <span class="math inline">\(f:A\to B+\star\)</span>, the
 disjoint union of <span class="math inline">\(B\)</span> with the
@@ -1797,7 +1993,7 @@ class="math inline">\(\star\)</span>. This lets us continue to work with
 class="math inline">\(\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)</span>
 instead of a type of tangent spaces.</p>
 <p>Figure <a href="#fig:flattorus_zero" data-reference-type="ref"
-data-reference="fig:flattorus_zero">11</a> illustrates what removing the
+data-reference="fig:flattorus_zero">13</a> illustrates what removing the
 preimage of <span class="math inline">\(\star\)</span> looks like. The
 resulting type is no longer a combinatorial manifold, since it fails the
 condition about every point having a circular link.</p>
@@ -1807,7 +2003,7 @@ condition about every point having a circular link.</p>
 the edges and faces containing that vertex.</figcaption>
 </figure>
 <div class="mydef">
-<p><strong>Definition 24</strong>. <em>Let <span
+<p><strong>Definition 27</strong>. <em>Let <span
 class="math inline">\(\ensuremath{\mathbb{M}}:\mathsf{CombMfd_2}\)</span>
 be a combinatorial manifold and <span class="math inline">\(Z\)</span>
 an isolated set of vertices. A <strong>vector field <span
@@ -1838,14 +2034,14 @@ class="math inline">\(\ensuremath{\mathbb{M}}\setminus Z\to
 the vector field.</p>
 <p>Let’s see a few examples.</p>
 <div class="mydef">
-<p><strong>Definition 25</strong>. <em>The <strong>spinning vector
+<p><strong>Definition 28</strong>. <em>The <strong>spinning vector
 field</strong> <span class="math inline">\(X_{\mathrm{spin}}\)</span> on
 <span class="math inline">\(\ensuremath{\mathbb{O}}\setminus\{w,
 y\}\)</span> is given by the following data. We compose with <span
 class="math inline">\(\exp\)</span> to keep the notation directly in
 <span class="math inline">\(\ensuremath{\mathbb{O}}\)</span>. See
 Figure <a href="#fig:sphere_spin" data-reference-type="ref"
-data-reference="fig:sphere_spin">12</a> <span
+data-reference="fig:sphere_spin">14</a> <span
 class="math display">\[\begin{aligned}
 \exp\circ X_{\mathrm{spin}}(b)  &amp;=r   \\
 \exp\circ X_{\mathrm{spin}}(r)  &amp;=g   \\
@@ -1878,14 +2074,14 @@ around the equator. <span class="math inline">\(w\)</span> and <span
 class="math inline">\(y\)</span> are zeros.</figcaption>
 </figure>
 <div class="mydef">
-<p><strong>Definition 26</strong>. <em>The <strong>downward vector
+<p><strong>Definition 29</strong>. <em>The <strong>downward vector
 field</strong> <span class="math inline">\(X_{\mathrm{down}}\)</span> on
 <span class="math inline">\(\ensuremath{\mathbb{O}}\setminus\{w,
 y\}\)</span> is given by the following data, where again we compose with
 <span class="math inline">\(\exp\)</span> to keep the notation directly
 in <span class="math inline">\(\ensuremath{\mathbb{O}}\)</span>. See
 Figure <a href="#fig:sphere_downward" data-reference-type="ref"
-data-reference="fig:sphere_downward">13</a> <span
+data-reference="fig:sphere_downward">15</a> <span
 class="math display">\[\begin{aligned}
 \exp\circ X_{\mathrm{spin}}(b)  &amp;=y   \\
 \exp\circ X_{\mathrm{spin}}(r)  &amp;=y   \\
@@ -1917,7 +2113,7 @@ role="doc-biblioref">Buchholtz &amp; (Favonia), 2018</a>)</span>, where
 they indeed require that degree agrees with winding number for maps
 <span class="math inline">\(S^1\to S^1\)</span>.</p>
 <div class="mydef">
-<p><strong>Definition 27</strong>. <em>Let <span
+<p><strong>Definition 30</strong>. <em>Let <span
 class="math inline">\(\ensuremath{\mathbb{M}}:\mathsf{CombMfd_2}\)</span>
 and let <span
 class="math inline">\(T:\ensuremath{\mathbb{M}}\to\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)</span>
@@ -1955,15 +2151,15 @@ like? We can see an example on the torus with its downward vector
 field.</p>
 <p>On the torus we can also consider both a spinning vector field and a
 downward vector field. Figure <a href="#fig:spin_torus"
-data-reference-type="ref" data-reference="fig:spin_torus">14</a> shows
+data-reference-type="ref" data-reference="fig:spin_torus">16</a> shows
 one way to spin the torus, and in this case there are no zeros so the
 index is the degree of a map from the empty set, which is 0 (as it
 factors through a constant map).</p>
 <p>Figure <a href="#fig:morse_torus" data-reference-type="ref"
-data-reference="fig:morse_torus">15</a> shows a downward flow with four
+data-reference="fig:morse_torus">17</a> shows a downward flow with four
 zeros. Although this is a picture of the flat torus, the vector field is
 derived from the shape of Figure <a href="#fig:torus"
-data-reference-type="ref" data-reference="fig:torus">9</a> where we
+data-reference-type="ref" data-reference="fig:torus">11</a> where we
 actually have a notion of up and down. We see at the position labeled
 (outer, top of diamonds), i.e. the top of the torus, an everywhere
 outward pointing vector field. At (outer, bottom of diamonds) we see an
@@ -1999,7 +2195,7 @@ role="doc-biblioref">Hopf, 1983</a>)</span>, presented in detail in
 Needham<span class="citation" data-cites="needham"> (<a
 href="#ref-needham" role="doc-biblioref">Needham, 2021</a>)</span>.</p>
 <div id="def:enumeration" class="mydef">
-<p><strong>Definition 28</strong>. <em>An <strong>enumeration</strong>
+<p><strong>Definition 31</strong>. <em>An <strong>enumeration</strong>
 of a principal bundle with connection and vector field on a higher
 combinatorial manifold consists of the following data:</em></p>
 <ul>
@@ -2012,7 +2208,7 @@ with isolated zeros <span class="math inline">\(Z\)</span></em></p></li>
 <li><p><em>a total face of the replacement <span
 class="math inline">\(\ensuremath{\mathbb{M}}_Z\)</span> (Definition <a
 href="#def:totalface" data-reference-type="ref"
-data-reference="def:totalface">14</a>), that is</em></p>
+data-reference="def:totalface">17</a>), that is</em></p>
 <ul>
 <li><p><em>a basepoint <span
 class="math inline">\(a:\ensuremath{\mathbb{M}}_Z\)</span></em></p></li>
@@ -2085,7 +2281,7 @@ class="math inline">\(Y\)</span> is only defined on some of these faces.
 We will define a new function on all the <span
 class="math inline">\(\{f_i\}\)</span>.</p>
 <div class="mydef">
-<p><strong>Definition 29</strong>. <em>The <strong>coupling map</strong>
+<p><strong>Definition 32</strong>. <em>The <strong>coupling map</strong>
 <span class="math inline">\(C:\ensuremath{\mathbb{M}}_Z\to Ta\)</span>
 is defined to be <span class="math inline">\(Y\)</span> on <span
 class="math inline">\(\ensuremath{\mathbb{M}}\setminus Z\)</span> and on
@@ -2130,7 +2326,7 @@ total “the difference between the total index and the total
 curvature.”</p>
 <p>Recall now that we made some arbitrary choices in Definition <a
 href="#def:enumeration" data-reference-type="ref"
-data-reference="def:enumeration">28</a> of an enumeration, and hence the
+data-reference="def:enumeration">31</a> of an enumeration, and hence the
 function <span class="math inline">\(C\)</span>. But since <span
 class="math inline">\(C\)</span> is unconditionally constant, the space
 of extra data is contractible.</p>
@@ -2163,7 +2359,7 @@ have a zero at the top and bottom, and one at the top and bottom of each
 hole. The top and bottom will have zeros of (classical) index 1, and
 zeros in the holes will have index –1. We include some sketches in the
 case of a torus (Figure <a href="#fig:torus_morse_skel"
-data-reference-type="ref" data-reference="fig:torus_morse_skel">16</a>).
+data-reference-type="ref" data-reference="fig:torus_morse_skel">18</a>).
 This illustrates how we obtain the formula for genus <span
 class="math inline">\(g\)</span>: <span
 class="math inline">\(\chi(M)=2-2g\)</span>. If we choose the
@@ -2221,7 +2417,7 @@ find more analogies with what we defined in previous sections.</p>
 <h2 data-number="5.1" id="classical-connections"><span
 class="header-section-number">5.1</span> Classical connections</h2>
 <div class="mydef">
-<p><strong>Definition 30</strong>. <em>A <strong>principal
+<p><strong>Definition 33</strong>. <em>A <strong>principal
 bundle</strong> is a smooth map <span class="math inline">\(\pi:P\to
 M\)</span> between smooth manifolds such that</em></p>
 <ol>
@@ -2243,7 +2439,7 @@ g\)</span>).</em></p></li>
 <p>Physicists call principal bundle automorphisms “gauge
 transformations”:</p>
 <div class="mydef">
-<p><strong>Definition 31</strong>. <em>A <strong>gauge
+<p><strong>Definition 34</strong>. <em>A <strong>gauge
 transformation</strong> is a map <span class="math inline">\(\Phi:P\to
 P\)</span> commuting with the projection to <span
 class="math inline">\(M\)</span> and which is <span
@@ -2255,7 +2451,7 @@ it is sometimes denoted <span
 class="math inline">\(\mathscr{G}(P)\)</span>.</em></p>
 </div>
 <div class="mydef">
-<p><strong>Definition 32</strong>. <em>The <strong>vertical
+<p><strong>Definition 35</strong>. <em>The <strong>vertical
 bundle</strong> <span class="math inline">\(VP\)</span> of a principal
 bundle <span class="math inline">\(\pi:P\to M\)</span> with Lie group
 <span class="math inline">\(G\)</span> is the kernel of the derivative
@@ -2270,7 +2466,7 @@ vectors. In other words, <span
 class="math inline">\(\mathop{\mathrm{Aut}}P\)</span> acts on <span
 class="math inline">\(VP\)</span>.</p>
 <div class="mydef">
-<p><strong>Definition 33</strong>. <em>An <strong>Ehresmann
+<p><strong>Definition 36</strong>. <em>An <strong>Ehresmann
 connection</strong> on a principal bundle <span
 class="math inline">\(\pi:P\to M\)</span> with Lie group <span
 class="math inline">\(G\)</span> is a splitting <span
