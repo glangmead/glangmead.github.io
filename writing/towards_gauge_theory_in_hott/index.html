@@ -1093,7 +1093,130 @@ class="math inline">\(C_n\)</span> be the polygon 1-dimensional HIT with
 class="math inline">\(C_2\simeq C_1\)</span> and in fact <span
 class="math inline">\(C_n\simeq C_{n-1}\)</span>.</em></p>
 </div>
-<p><em>Proof.</em> (TBD, sketched in my notebook.) ◻</p>
+<p><em>Proof.</em> (Compare to <span class="citation"
+data-cites="hottbook"> (<a href="#ref-hottbook"
+role="doc-biblioref">Univalent Foundations Program, 2013</a>)</span>
+Lemma 6.5.1.) In the case of <span class="math inline">\(C_1\)</span> we
+will denote its constructors by <span
+class="math inline">\(\ensuremath{\mathsf{base}}\)</span> and <span
+class="math inline">\(\ensuremath{\mathsf{loop}}\)</span>. For <span
+class="math inline">\(C_2\)</span> we will denote the points by <span
+class="math inline">\(v_1, v_2\)</span> and the edges by <span
+class="math inline">\(\ell_{12}, r_{21}\)</span>. For <span
+class="math inline">\(C_3\)</span> and higher we will denote the points
+by <span class="math inline">\(v_1,\ldots,v_n\)</span> and the edges by
+<span class="math inline">\(e_{ij}:v_i=v_j\)</span> where <span
+class="math inline">\(j=i+1\)</span> except for <span
+class="math inline">\(e_{n1}\)</span>.</p>
+<p>First we will define <span class="math inline">\(f:C_2\to
+C_1\)</span> and <span class="math inline">\(g:C_1\to C_2\)</span>, then
+prove they are inverses. <span class="math display">\[\begin{aligned}
+f(v_1)=f(v_2)&amp;=\ensuremath{\mathsf{base}}&amp;\quad
+g(\ensuremath{\mathsf{base}})&amp;=v_1\\
+f(\ell_{12})&amp;=\ensuremath{\mathsf{loop}}&amp;\quad
+g(\ensuremath{\mathsf{loop}})&amp;=\ell_{12}\cdot r_{21}\\
+f(r_{21}) &amp;=
+\ensuremath{\mathsf{refl}}_{\ensuremath{\mathsf{base}}}&amp; &amp; \\
+\end{aligned}\]</span></p>
+<p>We need to show that <span class="math inline">\(f\circ g\sim
+\ensuremath{\text{id}}_{C_1}\)</span> and <span
+class="math inline">\(g\circ f\sim\ensuremath{\text{id}}_{C_2}\)</span>.
+Think of <span class="math inline">\(f\)</span> as sliding <span
+class="math inline">\(v_2\)</span> along <span
+class="math inline">\(r_{21}\)</span> to coalesce with <span
+class="math inline">\(v_1\)</span>. This may help understand why the
+unfortunately intricate proof is working.</p>
+<p>We need terms <span
+class="math inline">\(p:\prod_{a:C_1}f(g(a))=a\)</span> and <span
+class="math inline">\(q:\prod_{a:C_2}g(f(a))=a\)</span>. We will proceed
+by induction, defining appropriate paths on point constructors and then
+checking a condition on path constructors that confirms that the
+built-in transport of these type families respects the definition on
+points.</p>
+<p>In general, given functions <span
+class="math inline">\(\phi,\psi:A\to B\)</span> between two arbitrary
+types, and the type family of paths <span
+class="math inline">\(\alpha:A\to\mathcal{U}, a:A\mapsto
+\phi(a)=\psi(a)\)</span>, transport is given by concatenating the three
+obvious paths: <span
+class="math display">\[\mathsf{tr}(p:a=a&#39;)(q:\phi(a)=\psi(a)) =
+\phi(p)^{-1}\cdot q\cdot \psi(p)\]</span> which gives a path in <span
+class="math inline">\(\phi(a&#39;)=\psi(a&#39;)\)</span> by connecting
+dots between the terms <span class="math inline">\(\phi(a&#39;),
+\phi(a), \psi(a), \psi(a&#39;)\)</span>.</p>
+<p>Looking first at <span class="math inline">\(g\circ f\)</span>, which
+shrinks <span class="math inline">\(r_{21}\)</span>, we have the
+following data to work with: <span
+class="math display">\[\begin{aligned}
+g(f(v_1))=g(f(v_2))&amp;=v_1\\
+g(f(\ell_{12}))&amp;=\ell_{12}\cdot r_{21}\\
+g(f(r_{21})) &amp;= \ensuremath{\mathsf{refl}}_{v_1}.
+\end{aligned}\]</span> We then need to supply a homotopy from this data
+to <span class="math inline">\(\ensuremath{\text{id}}_{C_2}\)</span>,
+which consists of a section and pathovers over <span
+class="math inline">\(C_2\)</span>: <span
+class="math display">\[\begin{aligned}
+p_1&amp;:g(f(v_1))=v_1\\
+p_2&amp;:g(f(v_1))=v_2\\
+H_\ell&amp;:\mathsf{tr}(\ell_{12})(p_1)=p_2\\
+H_r&amp;:\mathsf{tr}(r_{21})(p_2)=p_1.
+\end{aligned}\]</span> which simplifies to <span
+class="math display">\[\begin{aligned}
+p_1&amp;:v_1=v_1\\
+p_2&amp;:v_1=v_2\\
+H_\ell&amp;:g(f(\ell_{12}))^{-1}\cdot p_1\cdot \ell_{12}=p_2\\
+H_r&amp;:=g(f(r_{21}))^{-1}\cdot p_2\cdot r_{21}= p_1
+\end{aligned}\]</span> and then to <span
+class="math display">\[\begin{aligned}
+p_1&amp;:v_1=v_1\\
+p_2&amp;:v_1=v_2\\
+H_\ell&amp;:(\ell_{12}\cdot r_{21})^{-1}\cdot p_1\cdot \ell_{12}=p_2\\
+H_r&amp;:\ensuremath{\mathsf{refl}}_{v_1}\cdot p_2\cdot r_{21}= p_1
+\end{aligned}\]</span></p>
+<p>To solve all of these constraints we can choose <span
+class="math inline">\(p_1\stackrel{\mathrm{def}}{=}\ensuremath{\mathsf{refl}}_{v_1}\)</span>,
+which by consulting either <span class="math inline">\(H_\ell\)</span>
+or <span class="math inline">\(H_r\)</span> requires that we take <span
+class="math inline">\(p_2\stackrel{\mathrm{def}}{=}{r_{21}}^{-1}\)</span>.</p>
+<p>Now examining <span class="math inline">\(f\circ g\)</span>, we have
+<span class="math display">\[\begin{aligned}
+f(g(\ensuremath{\mathsf{base}}))&amp;=\ensuremath{\mathsf{base}}&amp;\\
+f(g(\ensuremath{\mathsf{loop}}))&amp;=f(\ell_{12}\cdot
+r_{21})=\ensuremath{\mathsf{loop}}
+\end{aligned}\]</span> and so we have an easy proof that this is the
+identity.</p>
+<p>The proof of the more general case <span class="math inline">\(C_n
+\simeq C_{n-1}\)</span> is very similar. Take the maps <span
+class="math inline">\(f:C_n\to C_{n-1}\)</span>, <span
+class="math inline">\(g:C_{n-1}\to C_n\)</span> to be <span
+class="math display">\[\begin{aligned}
+f(v_i)=v_i&amp;\quad(i=1,\ldots,n-1) &amp;
+g(v_i)&amp;=v_i&amp;\quad(i=1,\ldots,n-1)\\
+f(v_n)=v_1&amp;\quad&amp;
+g(e_{i,i+1})&amp;=e_{i,i+1}&amp;\quad(i=1,\ldots,n-2)\\
+f(e_{i,i+1})=e_{i,i+1}&amp;\quad(i=1,\ldots,n-1)&amp;
+g(e_{n-1,1})&amp;=e_{n-1,n}\cdot e_{n,1}&amp;\\
+f(e_{n-1,n})=e_{n-1,1}&amp;&amp;&amp;&amp;\\
+f(e_{n,1})=\ensuremath{\mathsf{refl}}_{v_1}&amp;&amp;&amp;&amp;
+\end{aligned}\]</span> where <span class="math inline">\(f\)</span>
+should be thought of as shrinking <span
+class="math inline">\(e_{n,1}\)</span> so that <span
+class="math inline">\(v_n\)</span> coalesces into <span
+class="math inline">\(v_1\)</span>.</p>
+<p>The proof that <span class="math inline">\(g\circ
+f\sim\ensuremath{\text{id}}_{C_n}\)</span> proceeds as follows: the
+composition is definitionally the identity except <span
+class="math display">\[\begin{aligned}
+g(f(v_n))&amp;=v_1\\
+g(f(e_{n-1,n}))&amp;=e_{n-1,n}\cdot e_{n,1}\\
+g(f(e_{n,1}))&amp;= \ensuremath{\mathsf{refl}}_{v_1}.
+\end{aligned}\]</span> Guided by our previous experience we choose <span
+class="math inline">\({e_{n,1}}^{-1}:g(f(v_n))=v_n\)</span>, and define
+the pathovers by transport.</p>
+<p>The proof that <span class="math inline">\(f\circ
+g\sim\ensuremath{\text{id}}_{C_{n-1}}\)</span> requires only noting that
+<span class="math inline">\(f(g(e_{n-1,1}))=f(e_{n-1,n}\cdot
+e_{n,1})=e_{n-1,1}\cdot\ensuremath{\mathsf{refl}}_{v_1}=e_{n-1,1}\)</span>. ◻</p>
 <p>With the lemma we can prove that all the polygons are merely equal to
 <span class="math inline">\(S^1\)</span> and hence are in <span
 class="math inline">\(\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)</span>.</p>
@@ -1451,6 +1574,13 @@ real-cohesive homotopy type theory</a>.
 href="https://books.google.com/books?id=KcXaAAAAMAAJ">The future does
 not compute: Transcending the machines in our midst</a></em>. O’Reilly
 &amp; Associates.
+</div>
+<div id="ref-hottbook" class="csl-entry" role="listitem">
+<span class="smallcaps">Univalent Foundations Program</span> (2013)
+<em>Homotopy type theory: Univalent foundations of mathematics</em>.
+Institute for Advanced Study: <a
+href="https://homotopytypetheory.org/book"
+class="uri">https://homotopytypetheory.org/book</a>.
 </div>
 <div id="ref-warn_pushouts" class="csl-entry" role="listitem">
 <span class="smallcaps">Wärn</span>, D. (2024) <a

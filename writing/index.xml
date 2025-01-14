@@ -670,7 +670,130 @@ class=&#34;math inline&#34;&gt;\(C_n\)&lt;/span&gt; be the polygon 1-dimensional
 class=&#34;math inline&#34;&gt;\(C_2\simeq C_1\)&lt;/span&gt; and in fact &lt;span
 class=&#34;math inline&#34;&gt;\(C_n\simeq C_{n-1}\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;p&gt;&lt;em&gt;Proof.&lt;/em&gt; (TBD, sketched in my notebook.) ◻&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Proof.&lt;/em&gt; (Compare to &lt;span class=&#34;citation&#34;
+data-cites=&#34;hottbook&#34;&gt; (&lt;a href=&#34;#ref-hottbook&#34;
+role=&#34;doc-biblioref&#34;&gt;Univalent Foundations Program, 2013&lt;/a&gt;)&lt;/span&gt;
+Lemma 6.5.1.) In the case of &lt;span class=&#34;math inline&#34;&gt;\(C_1\)&lt;/span&gt; we
+will denote its constructors by &lt;span
+class=&#34;math inline&#34;&gt;\(\ensuremath{\mathsf{base}}\)&lt;/span&gt; and &lt;span
+class=&#34;math inline&#34;&gt;\(\ensuremath{\mathsf{loop}}\)&lt;/span&gt;. For &lt;span
+class=&#34;math inline&#34;&gt;\(C_2\)&lt;/span&gt; we will denote the points by &lt;span
+class=&#34;math inline&#34;&gt;\(v_1, v_2\)&lt;/span&gt; and the edges by &lt;span
+class=&#34;math inline&#34;&gt;\(\ell_{12}, r_{21}\)&lt;/span&gt;. For &lt;span
+class=&#34;math inline&#34;&gt;\(C_3\)&lt;/span&gt; and higher we will denote the points
+by &lt;span class=&#34;math inline&#34;&gt;\(v_1,\ldots,v_n\)&lt;/span&gt; and the edges by
+&lt;span class=&#34;math inline&#34;&gt;\(e_{ij}:v_i=v_j\)&lt;/span&gt; where &lt;span
+class=&#34;math inline&#34;&gt;\(j=i+1\)&lt;/span&gt; except for &lt;span
+class=&#34;math inline&#34;&gt;\(e_{n1}\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;First we will define &lt;span class=&#34;math inline&#34;&gt;\(f:C_2\to
+C_1\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(g:C_1\to C_2\)&lt;/span&gt;, then
+prove they are inverses. &lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+f(v_1)=f(v_2)&amp;amp;=\ensuremath{\mathsf{base}}&amp;amp;\quad
+g(\ensuremath{\mathsf{base}})&amp;amp;=v_1\\
+f(\ell_{12})&amp;amp;=\ensuremath{\mathsf{loop}}&amp;amp;\quad
+g(\ensuremath{\mathsf{loop}})&amp;amp;=\ell_{12}\cdot r_{21}\\
+f(r_{21}) &amp;amp;=
+\ensuremath{\mathsf{refl}}_{\ensuremath{\mathsf{base}}}&amp;amp; &amp;amp; \\
+\end{aligned}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;We need to show that &lt;span class=&#34;math inline&#34;&gt;\(f\circ g\sim
+\ensuremath{\text{id}}_{C_1}\)&lt;/span&gt; and &lt;span
+class=&#34;math inline&#34;&gt;\(g\circ f\sim\ensuremath{\text{id}}_{C_2}\)&lt;/span&gt;.
+Think of &lt;span class=&#34;math inline&#34;&gt;\(f\)&lt;/span&gt; as sliding &lt;span
+class=&#34;math inline&#34;&gt;\(v_2\)&lt;/span&gt; along &lt;span
+class=&#34;math inline&#34;&gt;\(r_{21}\)&lt;/span&gt; to coalesce with &lt;span
+class=&#34;math inline&#34;&gt;\(v_1\)&lt;/span&gt;. This may help understand why the
+unfortunately intricate proof is working.&lt;/p&gt;
+&lt;p&gt;We need terms &lt;span
+class=&#34;math inline&#34;&gt;\(p:\prod_{a:C_1}f(g(a))=a\)&lt;/span&gt; and &lt;span
+class=&#34;math inline&#34;&gt;\(q:\prod_{a:C_2}g(f(a))=a\)&lt;/span&gt;. We will proceed
+by induction, defining appropriate paths on point constructors and then
+checking a condition on path constructors that confirms that the
+built-in transport of these type families respects the definition on
+points.&lt;/p&gt;
+&lt;p&gt;In general, given functions &lt;span
+class=&#34;math inline&#34;&gt;\(\phi,\psi:A\to B\)&lt;/span&gt; between two arbitrary
+types, and the type family of paths &lt;span
+class=&#34;math inline&#34;&gt;\(\alpha:A\to\mathcal{U}, a:A\mapsto
+\phi(a)=\psi(a)\)&lt;/span&gt;, transport is given by concatenating the three
+obvious paths: &lt;span
+class=&#34;math display&#34;&gt;\[\mathsf{tr}(p:a=a&amp;#39;)(q:\phi(a)=\psi(a)) =
+\phi(p)^{-1}\cdot q\cdot \psi(p)\]&lt;/span&gt; which gives a path in &lt;span
+class=&#34;math inline&#34;&gt;\(\phi(a&amp;#39;)=\psi(a&amp;#39;)\)&lt;/span&gt; by connecting
+dots between the terms &lt;span class=&#34;math inline&#34;&gt;\(\phi(a&amp;#39;),
+\phi(a), \psi(a), \psi(a&amp;#39;)\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Looking first at &lt;span class=&#34;math inline&#34;&gt;\(g\circ f\)&lt;/span&gt;, which
+shrinks &lt;span class=&#34;math inline&#34;&gt;\(r_{21}\)&lt;/span&gt;, we have the
+following data to work with: &lt;span
+class=&#34;math display&#34;&gt;\[\begin{aligned}
+g(f(v_1))=g(f(v_2))&amp;amp;=v_1\\
+g(f(\ell_{12}))&amp;amp;=\ell_{12}\cdot r_{21}\\
+g(f(r_{21})) &amp;amp;= \ensuremath{\mathsf{refl}}_{v_1}.
+\end{aligned}\]&lt;/span&gt; We then need to supply a homotopy from this data
+to &lt;span class=&#34;math inline&#34;&gt;\(\ensuremath{\text{id}}_{C_2}\)&lt;/span&gt;,
+which consists of a section and pathovers over &lt;span
+class=&#34;math inline&#34;&gt;\(C_2\)&lt;/span&gt;: &lt;span
+class=&#34;math display&#34;&gt;\[\begin{aligned}
+p_1&amp;amp;:g(f(v_1))=v_1\\
+p_2&amp;amp;:g(f(v_1))=v_2\\
+H_\ell&amp;amp;:\mathsf{tr}(\ell_{12})(p_1)=p_2\\
+H_r&amp;amp;:\mathsf{tr}(r_{21})(p_2)=p_1.
+\end{aligned}\]&lt;/span&gt; which simplifies to &lt;span
+class=&#34;math display&#34;&gt;\[\begin{aligned}
+p_1&amp;amp;:v_1=v_1\\
+p_2&amp;amp;:v_1=v_2\\
+H_\ell&amp;amp;:g(f(\ell_{12}))^{-1}\cdot p_1\cdot \ell_{12}=p_2\\
+H_r&amp;amp;:=g(f(r_{21}))^{-1}\cdot p_2\cdot r_{21}= p_1
+\end{aligned}\]&lt;/span&gt; and then to &lt;span
+class=&#34;math display&#34;&gt;\[\begin{aligned}
+p_1&amp;amp;:v_1=v_1\\
+p_2&amp;amp;:v_1=v_2\\
+H_\ell&amp;amp;:(\ell_{12}\cdot r_{21})^{-1}\cdot p_1\cdot \ell_{12}=p_2\\
+H_r&amp;amp;:\ensuremath{\mathsf{refl}}_{v_1}\cdot p_2\cdot r_{21}= p_1
+\end{aligned}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;To solve all of these constraints we can choose &lt;span
+class=&#34;math inline&#34;&gt;\(p_1\stackrel{\mathrm{def}}{=}\ensuremath{\mathsf{refl}}_{v_1}\)&lt;/span&gt;,
+which by consulting either &lt;span class=&#34;math inline&#34;&gt;\(H_\ell\)&lt;/span&gt;
+or &lt;span class=&#34;math inline&#34;&gt;\(H_r\)&lt;/span&gt; requires that we take &lt;span
+class=&#34;math inline&#34;&gt;\(p_2\stackrel{\mathrm{def}}{=}{r_{21}}^{-1}\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Now examining &lt;span class=&#34;math inline&#34;&gt;\(f\circ g\)&lt;/span&gt;, we have
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+f(g(\ensuremath{\mathsf{base}}))&amp;amp;=\ensuremath{\mathsf{base}}&amp;amp;\\
+f(g(\ensuremath{\mathsf{loop}}))&amp;amp;=f(\ell_{12}\cdot
+r_{21})=\ensuremath{\mathsf{loop}}
+\end{aligned}\]&lt;/span&gt; and so we have an easy proof that this is the
+identity.&lt;/p&gt;
+&lt;p&gt;The proof of the more general case &lt;span class=&#34;math inline&#34;&gt;\(C_n
+\simeq C_{n-1}\)&lt;/span&gt; is very similar. Take the maps &lt;span
+class=&#34;math inline&#34;&gt;\(f:C_n\to C_{n-1}\)&lt;/span&gt;, &lt;span
+class=&#34;math inline&#34;&gt;\(g:C_{n-1}\to C_n\)&lt;/span&gt; to be &lt;span
+class=&#34;math display&#34;&gt;\[\begin{aligned}
+f(v_i)=v_i&amp;amp;\quad(i=1,\ldots,n-1) &amp;amp;
+g(v_i)&amp;amp;=v_i&amp;amp;\quad(i=1,\ldots,n-1)\\
+f(v_n)=v_1&amp;amp;\quad&amp;amp;
+g(e_{i,i+1})&amp;amp;=e_{i,i+1}&amp;amp;\quad(i=1,\ldots,n-2)\\
+f(e_{i,i+1})=e_{i,i+1}&amp;amp;\quad(i=1,\ldots,n-1)&amp;amp;
+g(e_{n-1,1})&amp;amp;=e_{n-1,n}\cdot e_{n,1}&amp;amp;\\
+f(e_{n-1,n})=e_{n-1,1}&amp;amp;&amp;amp;&amp;amp;&amp;amp;\\
+f(e_{n,1})=\ensuremath{\mathsf{refl}}_{v_1}&amp;amp;&amp;amp;&amp;amp;&amp;amp;
+\end{aligned}\]&lt;/span&gt; where &lt;span class=&#34;math inline&#34;&gt;\(f\)&lt;/span&gt;
+should be thought of as shrinking &lt;span
+class=&#34;math inline&#34;&gt;\(e_{n,1}\)&lt;/span&gt; so that &lt;span
+class=&#34;math inline&#34;&gt;\(v_n\)&lt;/span&gt; coalesces into &lt;span
+class=&#34;math inline&#34;&gt;\(v_1\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;The proof that &lt;span class=&#34;math inline&#34;&gt;\(g\circ
+f\sim\ensuremath{\text{id}}_{C_n}\)&lt;/span&gt; proceeds as follows: the
+composition is definitionally the identity except &lt;span
+class=&#34;math display&#34;&gt;\[\begin{aligned}
+g(f(v_n))&amp;amp;=v_1\\
+g(f(e_{n-1,n}))&amp;amp;=e_{n-1,n}\cdot e_{n,1}\\
+g(f(e_{n,1}))&amp;amp;= \ensuremath{\mathsf{refl}}_{v_1}.
+\end{aligned}\]&lt;/span&gt; Guided by our previous experience we choose &lt;span
+class=&#34;math inline&#34;&gt;\({e_{n,1}}^{-1}:g(f(v_n))=v_n\)&lt;/span&gt;, and define
+the pathovers by transport.&lt;/p&gt;
+&lt;p&gt;The proof that &lt;span class=&#34;math inline&#34;&gt;\(f\circ
+g\sim\ensuremath{\text{id}}_{C_{n-1}}\)&lt;/span&gt; requires only noting that
+&lt;span class=&#34;math inline&#34;&gt;\(f(g(e_{n-1,1}))=f(e_{n-1,n}\cdot
+e_{n,1})=e_{n-1,1}\cdot\ensuremath{\mathsf{refl}}_{v_1}=e_{n-1,1}\)&lt;/span&gt;. ◻&lt;/p&gt;
 &lt;p&gt;With the lemma we can prove that all the polygons are merely equal to
 &lt;span class=&#34;math inline&#34;&gt;\(S^1\)&lt;/span&gt; and hence are in &lt;span
 class=&#34;math inline&#34;&gt;\(\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)&lt;/span&gt;.&lt;/p&gt;
@@ -1028,6 +1151,13 @@ real-cohesive homotopy type theory&lt;/a&gt;.
 href=&#34;https://books.google.com/books?id=KcXaAAAAMAAJ&#34;&gt;The future does
 not compute: Transcending the machines in our midst&lt;/a&gt;&lt;/em&gt;. O’Reilly
 &amp;amp; Associates.
+&lt;/div&gt;
+&lt;div id=&#34;ref-hottbook&#34; class=&#34;csl-entry&#34; role=&#34;listitem&#34;&gt;
+&lt;span class=&#34;smallcaps&#34;&gt;Univalent Foundations Program&lt;/span&gt; (2013)
+&lt;em&gt;Homotopy type theory: Univalent foundations of mathematics&lt;/em&gt;.
+Institute for Advanced Study: &lt;a
+href=&#34;https://homotopytypetheory.org/book&#34;
+class=&#34;uri&#34;&gt;https://homotopytypetheory.org/book&lt;/a&gt;.
 &lt;/div&gt;
 &lt;div id=&#34;ref-warn_pushouts&#34; class=&#34;csl-entry&#34; role=&#34;listitem&#34;&gt;
 &lt;span class=&#34;smallcaps&#34;&gt;Wärn&lt;/span&gt;, D. (2024) &lt;a
