@@ -568,7 +568,7 @@ Ag2gaeh&lt;/a&gt; - Own work, CC BY-SA 3.0.)&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;figure id=&#34;fig:genus3_wiki_triangulation&#34;&gt;
 &lt;img src=&#34;triangulated_genus3.png&#34; style=&#34;width:2.77778in&#34; /&gt;
-&lt;figcaption&gt;A 3-holes torus with triangulation, from Wikipedia. (&lt;a
+&lt;figcaption&gt;A 3-holed torus with triangulation, from Wikipedia. (&lt;a
 href=&#34;https://commons.wikimedia.org/wiki/File:Tri-brezel.svg&#34;&gt;By
 Ag2gaeh&lt;/a&gt; - Own work, CC BY-SA 3.0.)&lt;/figcaption&gt;
 &lt;/figure&gt;
@@ -632,7 +632,9 @@ that is important both for the domain and the codomain of mere circles:
 a square.&lt;/p&gt;
 &lt;div class=&#34;mydef&#34;&gt;
 &lt;p&gt;&lt;strong&gt;Definition 9&lt;/strong&gt;. &lt;em&gt;The higher inductive type &lt;span
-class=&#34;math inline&#34;&gt;\(C_4\)&lt;/span&gt; (where C stands for “circle”). &lt;span
+class=&#34;math inline&#34;&gt;\(C_4\)&lt;/span&gt; (where C stands for “circle”). See
+Figure &lt;a href=&#34;#fig:c4&#34; data-reference-type=&#34;ref&#34;
+data-reference=&#34;fig:c4&#34;&gt;6&lt;/a&gt;. &lt;span
 class=&#34;math display&#34;&gt;\[\begin{aligned}
 C_4 &amp;amp;: \mathsf{Type}\\
 c_1, c_2, c_3, c_4 &amp;amp;: C_4 \\
@@ -642,7 +644,7 @@ c_3c_4 &amp;amp;: c_3 = c_4 \\
 c_4c_1 &amp;amp;: c_4 = c_1 \\
 \end{aligned}\]&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;figure&gt;
+&lt;figure id=&#34;fig:c4&#34;&gt;
 &lt;img src=&#34;./65e8b23208c0767d91d16d7792f76567c2694e92.png&#34; /&gt;
 &lt;figcaption&gt;The HIT &lt;span
 class=&#34;math inline&#34;&gt;\(C_4\)&lt;/span&gt;.&lt;/figcaption&gt;
@@ -663,6 +665,27 @@ S^1&amp;amp;:\mathsf{Type}\\
 id=&#34;new-in-2025-adding-and-removing-points-from-polygons&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;3.4&lt;/span&gt; New in 2025: Adding and
 removing points from polygons&lt;/h2&gt;
+&lt;p&gt;In general, given functions &lt;span
+class=&#34;math inline&#34;&gt;\(\phi,\psi:A\to B\)&lt;/span&gt; between two arbitrary
+types, and the type family of paths &lt;span
+class=&#34;math inline&#34;&gt;\(\alpha:A\to\mathcal{U}, a:A\mapsto
+\phi(a)=\psi(a)\)&lt;/span&gt;, transport is given by concatenating the three
+obvious paths (see Figure &lt;a href=&#34;#fig:transport_family_of_paths&#34;
+data-reference-type=&#34;ref&#34;
+data-reference=&#34;fig:transport_family_of_paths&#34;&gt;7&lt;/a&gt;): &lt;span
+class=&#34;math display&#34;&gt;\[\mathsf{tr}(p:a=a&amp;#39;)(q:\phi(a)=\psi(a)) =
+\phi(p)^{-1}\cdot q\cdot \psi(p)\]&lt;/span&gt; which gives a path in &lt;span
+class=&#34;math inline&#34;&gt;\(\phi(a&amp;#39;)=\psi(a&amp;#39;)\)&lt;/span&gt; by connecting
+dots between the terms &lt;span class=&#34;math inline&#34;&gt;\(\phi(a&amp;#39;),
+\phi(a), \psi(a), \psi(a&amp;#39;)\)&lt;/span&gt;.&lt;/p&gt;
+&lt;figure id=&#34;fig:transport_family_of_paths&#34;&gt;
+&lt;img src=&#34;./6ae610000a2e2a059c15cd22dddd5a40dad9e098.png&#34; /&gt;
+&lt;figcaption&gt;Transport along &lt;span class=&#34;math inline&#34;&gt;\(p\)&lt;/span&gt; in
+the fibers of a family of paths. The fiber over &lt;span
+class=&#34;math inline&#34;&gt;\(a\)&lt;/span&gt; is &lt;span
+class=&#34;math inline&#34;&gt;\(\phi(a)=\psi(a)\)&lt;/span&gt; where &lt;span
+class=&#34;math inline&#34;&gt;\(\phi,\psi:A\to B\)&lt;/span&gt;.&lt;/figcaption&gt;
+&lt;/figure&gt;
 &lt;div class=&#34;mylemma&#34;&gt;
 &lt;p&gt;&lt;strong&gt;Lemma 3&lt;/strong&gt;. &lt;em&gt;Let &lt;span
 class=&#34;math inline&#34;&gt;\(C_n\)&lt;/span&gt; be the polygon 1-dimensional HIT with
@@ -710,17 +733,6 @@ by induction, defining appropriate paths on point constructors and then
 checking a condition on path constructors that confirms that the
 built-in transport of these type families respects the definition on
 points.&lt;/p&gt;
-&lt;p&gt;In general, given functions &lt;span
-class=&#34;math inline&#34;&gt;\(\phi,\psi:A\to B\)&lt;/span&gt; between two arbitrary
-types, and the type family of paths &lt;span
-class=&#34;math inline&#34;&gt;\(\alpha:A\to\mathcal{U}, a:A\mapsto
-\phi(a)=\psi(a)\)&lt;/span&gt;, transport is given by concatenating the three
-obvious paths: &lt;span
-class=&#34;math display&#34;&gt;\[\mathsf{tr}(p:a=a&amp;#39;)(q:\phi(a)=\psi(a)) =
-\phi(p)^{-1}\cdot q\cdot \psi(p)\]&lt;/span&gt; which gives a path in &lt;span
-class=&#34;math inline&#34;&gt;\(\phi(a&amp;#39;)=\psi(a&amp;#39;)\)&lt;/span&gt; by connecting
-dots between the terms &lt;span class=&#34;math inline&#34;&gt;\(\phi(a&amp;#39;),
-\phi(a), \psi(a), \psi(a&amp;#39;)\)&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;Looking first at &lt;span class=&#34;math inline&#34;&gt;\(g\circ f\)&lt;/span&gt;, which
 shrinks &lt;span class=&#34;math inline&#34;&gt;\(r_{21}\)&lt;/span&gt;, we have the
 following data to work with: &lt;span
@@ -813,7 +825,7 @@ class=&#34;header-section-number&#34;&gt;3.5&lt;/span&gt; New in 2025: The class
 adding of angles is given by horizontal composition&lt;/h2&gt;
 &lt;p&gt;Let me start a new discussion of composing faces. Consider Figure &lt;a
 href=&#34;#fig:horiz_concat&#34; data-reference-type=&#34;ref&#34;
-data-reference=&#34;fig:horiz_concat&#34;&gt;6&lt;/a&gt; and the diamond on the left.
+data-reference=&#34;fig:horiz_concat&#34;&gt;8&lt;/a&gt; and the diamond on the left.
 Denote the clockwise triangular path around the left triangle by &lt;span
 class=&#34;math inline&#34;&gt;\(bcab\)&lt;/span&gt;, and around the right by &lt;span
 class=&#34;math inline&#34;&gt;\(bdcb\)&lt;/span&gt;. These are loops at &lt;span
@@ -924,11 +936,11 @@ are 2-paths in the HoTT sense. If two faces &lt;span
 class=&#34;math inline&#34;&gt;\(bca\)&lt;/span&gt; and &lt;span
 class=&#34;math inline&#34;&gt;\(bdc\)&lt;/span&gt; share the edge &lt;span
 class=&#34;math inline&#34;&gt;\(bc\)&lt;/span&gt; (see Figure &lt;a href=&#34;#fig:concat&#34;
-data-reference-type=&#34;ref&#34; data-reference=&#34;fig:concat&#34;&gt;7&lt;/a&gt;), then we
+data-reference-type=&#34;ref&#34; data-reference=&#34;fig:concat&#34;&gt;9&lt;/a&gt;), then we
 can define an operation that combines the combinatorics of simplices
 with the higher groupoid operations generated by our HIT.&lt;/p&gt;
 &lt;p&gt;Consider Figure &lt;a href=&#34;#fig:concat&#34; data-reference-type=&#34;ref&#34;
-data-reference=&#34;fig:concat&#34;&gt;7&lt;/a&gt; and the 2-paths &lt;span
+data-reference=&#34;fig:concat&#34;&gt;9&lt;/a&gt; and the 2-paths &lt;span
 class=&#34;math inline&#34;&gt;\(bac: ba\cdot ac=bc\)&lt;/span&gt; and &lt;span
 class=&#34;math inline&#34;&gt;\(bdc: bd\cdot dc = bc\)&lt;/span&gt;. The 2-path
 concatenation &lt;span class=&#34;math inline&#34;&gt;\(bac\cdot bdc^{-1}\)&lt;/span&gt; is
@@ -977,7 +989,7 @@ face!&lt;/p&gt;
 related to &lt;span class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{M}}\)&lt;/span&gt;
 but without some of the point constructors. Figure &lt;a
 href=&#34;#fig:hex_concat&#34; data-reference-type=&#34;ref&#34;
-data-reference=&#34;fig:hex_concat&#34;&gt;8&lt;/a&gt; illustrates the equivalence.&lt;/p&gt;
+data-reference=&#34;fig:hex_concat&#34;&gt;10&lt;/a&gt; illustrates the equivalence.&lt;/p&gt;
 &lt;figure id=&#34;fig:hex_concat&#34;&gt;
 &lt;img src=&#34;hex_concat.png&#34; style=&#34;width:2.77778in&#34; /&gt;
 &lt;figcaption&gt;Concatenating the six triangles in the approrpiate way
@@ -1010,7 +1022,7 @@ some isolated set of verticies &lt;span class=&#34;math inline&#34;&gt;\(Z\)&lt;
 then for each &lt;span class=&#34;math inline&#34;&gt;\(z:Z\)&lt;/span&gt; we can compose
 all the faces which contain &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;,
 forming a new face (see Figure &lt;a href=&#34;#fig:hex_concat&#34;
-data-reference-type=&#34;ref&#34; data-reference=&#34;fig:hex_concat&#34;&gt;8&lt;/a&gt;). In
+data-reference-type=&#34;ref&#34; data-reference=&#34;fig:hex_concat&#34;&gt;10&lt;/a&gt;). In
 this way we produce a HIT called &lt;span
 class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{M}}_Z\)&lt;/span&gt;, which is no
 longer combinatorial. We call &lt;span
@@ -1029,7 +1041,7 @@ class=&#34;math inline&#34;&gt;\(\mathcal{R}(\ensuremath{\mathbb{M}})=_\mathsf{T
 &lt;p&gt;&lt;em&gt;Proof.&lt;/em&gt; We will prove that concatenating two faces of &lt;span
 class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{M}}\)&lt;/span&gt; as in Figure &lt;a
 href=&#34;#fig:concat&#34; data-reference-type=&#34;ref&#34;
-data-reference=&#34;fig:concat&#34;&gt;7&lt;/a&gt; produces an equivalent type. Let &lt;span
+data-reference=&#34;fig:concat&#34;&gt;9&lt;/a&gt; produces an equivalent type. Let &lt;span
 class=&#34;math inline&#34;&gt;\(A\)&lt;/span&gt; be the constructor given on the left
 that includes the edge &lt;span class=&#34;math inline&#34;&gt;\(bc\)&lt;/span&gt;, and
 &lt;span class=&#34;math inline&#34;&gt;\(B\)&lt;/span&gt; the constructor on the right. We
