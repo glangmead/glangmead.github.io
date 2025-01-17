@@ -682,8 +682,8 @@ Transport in this family is given by concatenation as follows, where
 class=&#34;math inline&#34;&gt;\(q:\phi(a)=\psi(a)\)&lt;/span&gt; (see Figure &lt;a
 href=&#34;#fig:transport_family_of_paths&#34; data-reference-type=&#34;ref&#34;
 data-reference=&#34;fig:transport_family_of_paths&#34;&gt;7&lt;/a&gt;): &lt;span
-class=&#34;math display&#34;&gt;\[\mathsf{tr}(p)(q:\phi(a)=\psi(a)) =
-\phi(p)^{-1}\cdot q\cdot \psi(p)\]&lt;/span&gt; which gives a path in &lt;span
+class=&#34;math display&#34;&gt;\[\mathsf{tr}(p)(q) = \phi(p)^{-1}\cdot q\cdot
+\psi(p)\]&lt;/span&gt; which gives a path in &lt;span
 class=&#34;math inline&#34;&gt;\(\phi(a&amp;#39;)=\psi(a&amp;#39;)\)&lt;/span&gt; by connecting
 dots between the terms &lt;span class=&#34;math inline&#34;&gt;\(\phi(a&amp;#39;),
 \phi(a), \psi(a), \psi(a&amp;#39;)\)&lt;/span&gt;. This relates a would-be
