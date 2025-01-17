@@ -1084,23 +1084,35 @@ S^1&amp;:\mathsf{Type}\\
 \mathsf{loop}&amp;:\mathsf{base}=\mathsf{base}
 \end{aligned}\]</span></em></p>
 </div>
+<p>Both of these are examples of a type we will call <span
+class="math inline">\(\ensuremath{\mathsf{Gon}}\)</span>, the type of
+<span class="math inline">\(n\)</span>-gons for some natural number
+<span class="math inline">\(n\)</span>, following the pattern of the
+HITs above. We’ll see below that <span
+class="math inline">\(\ensuremath{\mathsf{Gon}}\)</span> is a subtype of
+<span
+class="math inline">\(\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)</span>.</p>
 <h2 data-number="3.4"
 id="new-in-2025-adding-and-removing-points-from-polygons"><span
 class="header-section-number">3.4</span> New in 2025: Adding and
 removing points from polygons</h2>
-<p>In general, given functions <span
-class="math inline">\(\phi,\psi:A\to B\)</span> between two arbitrary
-types, and the type family of paths <span
-class="math inline">\(\alpha:A\to\mathcal{U}, a:A\mapsto
-\phi(a)=\psi(a)\)</span>, transport is given by concatenating the three
-obvious paths (see Figure <a href="#fig:transport_family_of_paths"
-data-reference-type="ref"
+<p>Given functions <span class="math inline">\(\phi,\psi:A\to B\)</span>
+between two arbitrary types we can form the type family of paths <span
+class="math inline">\(\alpha:A\to\mathcal{U},
+\alpha(a)\stackrel{\mathrm{def}}{=}(\phi(a)=_B\psi(a))\)</span>.
+Transport in this family is given by concatenation as follows, where
+<span class="math inline">\(p:a=_A a&#39;\)</span> and <span
+class="math inline">\(q:\phi(a)=\psi(a)\)</span> (see Figure <a
+href="#fig:transport_family_of_paths" data-reference-type="ref"
 data-reference="fig:transport_family_of_paths">7</a>): <span
-class="math display">\[\mathsf{tr}(p:a=a&#39;)(q:\phi(a)=\psi(a)) =
+class="math display">\[\mathsf{tr}(p)(q:\phi(a)=\psi(a)) =
 \phi(p)^{-1}\cdot q\cdot \psi(p)\]</span> which gives a path in <span
 class="math inline">\(\phi(a&#39;)=\psi(a&#39;)\)</span> by connecting
 dots between the terms <span class="math inline">\(\phi(a&#39;),
-\phi(a), \psi(a), \psi(a&#39;)\)</span>.</p>
+\phi(a), \psi(a), \psi(a&#39;)\)</span>. This relates a would-be
+homotopy <span class="math inline">\(\phi\sim\psi\)</span> specified at
+a single point, to a point at the end of a path. We will use this to
+help construct such homotopies.</p>
 <figure id="fig:transport_family_of_paths">
 <img src="./6ae610000a2e2a059c15cd22dddd5a40dad9e098.png" />
 <figcaption>Transport along <span class="math inline">\(p\)</span> in
@@ -1109,7 +1121,7 @@ class="math inline">\(a\)</span> is <span
 class="math inline">\(\phi(a)=\psi(a)\)</span> where <span
 class="math inline">\(\phi,\psi:A\to B\)</span>.</figcaption>
 </figure>
-<div class="mylemma">
+<div id="lem:addpoints" class="mylemma">
 <p><strong>Lemma 3</strong>. <em>Let <span
 class="math inline">\(C_n\)</span> be the polygon 1-dimensional HIT with
 <span class="math inline">\(n\)</span> vertices. Then <span
@@ -1229,13 +1241,26 @@ the pathovers by transport.</p>
 g\sim\ensuremath{\text{id}}_{C_{n-1}}\)</span> requires only noting that
 <span class="math inline">\(f(g(e_{n-1,1}))=f(e_{n-1,n}\cdot
 e_{n,1})=e_{n-1,1}\cdot\ensuremath{\mathsf{refl}}_{v_1}=e_{n-1,1}\)</span>. ◻</p>
-<p>With the lemma we can prove that all the polygons are merely equal to
-<span class="math inline">\(S^1\)</span> and hence are in <span
-class="math inline">\(\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)</span>.</p>
-<p>With the lemma we can define a function on polygons that inserts
-<span class="math inline">\(k\)</span> vertices between each original
-vertex, providing us a map <span class="math inline">\(m_k:C_n\to
-C_{kn}\)</span>.</p>
+<div class="mycor">
+<p><strong>Corollary 2</strong>. <em>All polygons are equivalent to
+<span class="math inline">\(S^1\)</span>, i.e. we have a term in <span
+class="math inline">\(\prod_{n:\ensuremath{\mathbb{N}}}||C_n=S^1||\)</span>,
+and hence <span class="math inline">\(\ensuremath{\mathsf{Gon}}\)</span>
+is a subtype of <span
+class="math inline">\(\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)</span>.</em></p>
+</div>
+<p><em>Proof.</em> We can add <span class="math inline">\(n-1\)</span>
+points to <span class="math inline">\(S^1\)</span> and use Lemma <a
+href="#lem:addpoints" data-reference-type="ref"
+data-reference="lem:addpoints">3</a>. ◻</p>
+<div class="mydef">
+<p><strong>Definition 11</strong>. <em>For <span
+class="math inline">\(k:\ensuremath{\mathbb{N}}\)</span> define <span
+class="math inline">\(m_k:\ensuremath{\mathsf{Gon}}\to\ensuremath{\mathsf{Gon}}\)</span>
+where <span class="math inline">\(m_k:C_n\to C_{kn}\)</span> adds <span
+class="math inline">\(k\)</span> vertices between each of the original
+verticies of <span class="math inline">\(C_n\)</span>.</em></p>
+</div>
 <p>With <span class="math inline">\(m_k\)</span> we can start with a
 surface that has pentagonal plus hexagonal links, and apply <span
 class="math inline">\(m_6\)</span> to the pentagons and <span
@@ -1290,7 +1315,7 @@ adopt the convention that a subscript indicates the dimension of a
 subskeleton of a complex. For instance, we have <span
 class="math inline">\(\mathsf{base}:S^1_0\)</span>.</p>
 <div class="mydef">
-<p><strong>Definition 11</strong>. <em>The HIT <span
+<p><strong>Definition 12</strong>. <em>The HIT <span
 class="math inline">\(\ensuremath{\mathbb{O}}_0\)</span> is just 6
 points, intended as the 0-skeleton of an octahedron, with vertices named
 after the colors on the faces of a famous Central European puzzle cube.
@@ -1298,7 +1323,7 @@ after the colors on the faces of a famous Central European puzzle cube.
 \ensuremath{\mathbb{O}}_0\]</span></em></p>
 </div>
 <div class="mydef">
-<p><strong>Definition 12</strong>. <em>The HIT <span
+<p><strong>Definition 13</strong>. <em>The HIT <span
 class="math inline">\(\ensuremath{\mathbb{O}}_1\)</span> is the
 1-skeleton of an octahedron. <span
 class="math display">\[\begin{aligned}
@@ -1312,7 +1337,7 @@ yr &amp;: y=r
 \end{aligned}\]</span></em></p>
 </div>
 <div class="mydef">
-<p><strong>Definition 13</strong>. <em>The HIT <span
+<p><strong>Definition 14</strong>. <em>The HIT <span
 class="math inline">\(\ensuremath{\mathbb{O}}\)</span> is an octahedron:
 <span class="math display">\[\begin{aligned}
 w, y, b, r, g, o &amp;: \ensuremath{\mathbb{O}}\\
@@ -1391,7 +1416,7 @@ play the role of the “fundamental homology class” from classical
 topology, which is an object on which 2-forms can be evaluated to
 compute their value on the whole manifold.</p>
 <div id="def:totalface" class="mydef">
-<p><strong>Definition 14</strong>. <em>If we have a combinatorial
+<p><strong>Definition 15</strong>. <em>If we have a combinatorial
 manifold <span
 class="math inline">\(\ensuremath{\mathbb{M}}:\mathsf{CombMfd_2}\)</span>
 (or a combinatorial manifold minus some isolated zeros <span
@@ -1421,7 +1446,7 @@ class="math inline">\(\ensuremath{\mathsf{refl}}_v=\ensuremath{\mathsf{refl}}_v\
 and removes the vertex at the center.</figcaption>
 </figure>
 <div class="mydef">
-<p><strong>Definition 15</strong>. <em>If <span
+<p><strong>Definition 16</strong>. <em>If <span
 class="math inline">\(\ensuremath{\mathbb{M}}:\mathsf{CombMfd_2}\)</span>
 is a combinatorial manifold and <span class="math inline">\(Z\subset
 \ensuremath{\mathbb{M}}_0\)</span> is a set of vertices in <span
@@ -1439,7 +1464,7 @@ class="math inline">\(\ensuremath{\mathbb{M}}\setminus Z\)</span> has
 boundary circles where each vertex was removed.</em></p>
 </div>
 <div id="def:replacement" class="mydef">
-<p><strong>Definition 16</strong>. <em>If we have <span
+<p><strong>Definition 17</strong>. <em>If we have <span
 class="math inline">\(\ensuremath{\mathbb{M}}\setminus Z\)</span> for
 some isolated set of verticies <span class="math inline">\(Z\)</span>,
 then for each <span class="math inline">\(z:Z\)</span> we can compose
