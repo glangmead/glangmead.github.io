@@ -717,9 +717,9 @@ class=&#34;math inline&#34;&gt;\(v_1, v_2\)&lt;/span&gt; and the edges by &lt;sp
 class=&#34;math inline&#34;&gt;\(\ell_{12}, r_{21}\)&lt;/span&gt;. For &lt;span
 class=&#34;math inline&#34;&gt;\(C_3\)&lt;/span&gt; and higher we will denote the points
 by &lt;span class=&#34;math inline&#34;&gt;\(v_1,\ldots,v_n\)&lt;/span&gt; and the edges by
-&lt;span class=&#34;math inline&#34;&gt;\(e_{ij}:v_i=v_j\)&lt;/span&gt; where &lt;span
+&lt;span class=&#34;math inline&#34;&gt;\(e_{i,j}:v_i=v_j\)&lt;/span&gt; where &lt;span
 class=&#34;math inline&#34;&gt;\(j=i+1\)&lt;/span&gt; except for &lt;span
-class=&#34;math inline&#34;&gt;\(e_{n1}\)&lt;/span&gt;.&lt;/p&gt;
+class=&#34;math inline&#34;&gt;\(e_{n,1}\)&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;First we will define &lt;span class=&#34;math inline&#34;&gt;\(f:C_2\to
 C_1\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(g:C_1\to C_2\)&lt;/span&gt;, then
 prove they are inverses. &lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
