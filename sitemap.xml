@@ -2,19 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://greg.langmead.info/writing/towards_gauge_theory_in_hott/</loc>
-    <lastmod>2024-11-01T00:00:00+00:00</lastmod>
+    <loc>https://greg.langmead.info/posts/2025-01-18-nazi-seizure-of-power-book-review/</loc>
+    <lastmod>2025-01-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://greg.langmead.info/</loc>
+    <lastmod>2025-01-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://greg.langmead.info/posts/</loc>
+    <lastmod>2025-01-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://greg.langmead.info/writing/towards_gauge_theory_in_hott/</loc>
     <lastmod>2024-11-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://greg.langmead.info/writing/</loc>
     <lastmod>2024-11-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://greg.langmead.info/posts/2024-09-07-adventure-system/</loc>
-    <lastmod>2024-09-07T21:06:01-04:00</lastmod>
-  </url><url>
-    <loc>https://greg.langmead.info/posts/</loc>
     <lastmod>2024-09-07T21:06:01-04:00</lastmod>
   </url><url>
     <loc>https://greg.langmead.info/posts/2024-03-31-wagner-and-tolkien/</loc>
