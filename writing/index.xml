@@ -137,9 +137,9 @@ id=&#34;toc-the-higher-inductive-type-oo&#34;&gt;&lt;span
 class=&#34;toc-section-number&#34;&gt;3.5&lt;/span&gt; The higher inductive type &lt;span
 class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{O}}\)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#connections-and-vector-fields&#34;
-id=&#34;toc-connections-and-vector-fields&#34;&gt;&lt;span
-class=&#34;toc-section-number&#34;&gt;4&lt;/span&gt; Connections and vector fields&lt;/a&gt;
+&lt;li&gt;&lt;a href=&#34;#connections-and-curvature&#34;
+id=&#34;toc-connections-and-curvature&#34;&gt;&lt;span
+class=&#34;toc-section-number&#34;&gt;4&lt;/span&gt; Connections and curvature&lt;/a&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#the-function-t&#34; id=&#34;toc-the-function-t&#34;&gt;&lt;span
 class=&#34;toc-section-number&#34;&gt;4.1&lt;/span&gt; The function &lt;span
@@ -1097,9 +1097,8 @@ class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{O}}_0\xrightarrow[]{i_0}
 \ensuremath{\mathbb{O}}\)&lt;/span&gt; that include each skeleton into the
 next-higher-dimensional skeleton by the obvious inclusion of
 constructors.&lt;/p&gt;
-&lt;h1 data-number=&#34;4&#34; id=&#34;connections-and-vector-fields&#34;&gt;&lt;span
-class=&#34;header-section-number&#34;&gt;4&lt;/span&gt; Connections and vector
-fields&lt;/h1&gt;
+&lt;h1 data-number=&#34;4&#34; id=&#34;connections-and-curvature&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;4&lt;/span&gt; Connections and curvature&lt;/h1&gt;
 &lt;h2 data-number=&#34;4.1&#34; id=&#34;the-function-t&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;4.1&lt;/span&gt; The function &lt;span
 class=&#34;math inline&#34;&gt;\(T\)&lt;/span&gt;&lt;/h2&gt;
