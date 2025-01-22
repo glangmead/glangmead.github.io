@@ -622,12 +622,12 @@ universe must be closed under inductive types.</p>
 <p>Polygons of different cardinality will tangle with transport.</p>
 <p>Greg suggests I could use an isomorphism from a combinatorial
 manifold to a HIT with just one 2-cell to capture “total curvature”:</p>
-<pre><code>def S1:
-base: S1
+<pre><code>def S^1:
+base: S^1
 loop: base=base
 
-def S2:
-N: S2
+def S^2:
+N: S^2
 surf: refl_N = refl_N
 
 def torus:
@@ -636,7 +636,7 @@ p,q:b=b
 donut:p.q=q.p</code></pre>
 <p>The map <span class="math inline">\(\mathcal{R}\)</span>
 (realization) is a lossy map. <span
-class="math inline">\(R(S2):\mathcal{U}\)</span>.</p>
+class="math inline">\(\mathcal{R}(S^2):\mathcal{U}\)</span>.</p>
 <p>“strict morphism of HITs”: map constructors to constructors. <span
 class="math inline">\(C_4\to S^1\)</span> is a strict map.</p>
 <p><span class="math inline">\(\mathcal{R}(C_4)\)</span> has an
@@ -646,7 +646,7 @@ Perhaps this is <span class="math inline">\(\mathcal{R}\)</span>(the map
 <span class="math inline">\(S^1\to C_4\)</span> is non-strict, uses
 generated data, uses data from <span
 class="math inline">\(\mathcal{R}(C_4)\)</span>.</p>
-<p>Claim: we cannot see the one-notch "90 degree" rotation of <span
+<p>Claim: we cannot see the one-notch “90 degree” rotation of <span
 class="math inline">\(C_4\)</span> at the level of types.</p>
 <h3 data-number="0.1.1"
 id="extension-to-next-dimension-as-obstruction-theory"><span
@@ -665,9 +665,9 @@ class="math inline">\(T(a)\)</span> and <span
 class="math inline">\(T(b)\)</span> are in the same connected
 component.</p></li>
 <li><p>say a 2-cell <span class="math inline">\(F\)</span> contracts a
-loop <span class="math inline">\(L:
-F:L=\ensuremath{\mathsf{refl}}_v\)</span> some vertex <span
-class="math inline">\(v\)</span></p></li>
+loop <span class="math inline">\(L\)</span>, i.e. <span
+class="math inline">\(F:L=\ensuremath{\mathsf{refl}}_v\)</span> some
+vertex <span class="math inline">\(v\)</span></p></li>
 <li><p>we have a choice of <span class="math inline">\(v\)</span> for
 each face <span class="math inline">\(F\)</span></p></li>
 <li><p>then <span class="math inline">\(T(F)\)</span> must be in same
@@ -687,7 +687,7 @@ class="math inline">\(\pi_1(X,v)\)</span></p></li>
 <p><span class="math display">\[\begin{aligned}
 T(v)&amp;:U\\
 T(L)&amp;:T(v)=T(v)\\
-T(F)&amp;:refl_{T(v)}=T(L)
+T(F)&amp;:\ensuremath{\mathsf{refl}}_{T(v)}=T(L)
 \end{aligned}\]</span></p>
 <p>The class <span class="math inline">\(||T(L)||:\pi_1(U,T(v))\)</span>
 is an obstruction to having <span class="math inline">\(T(F)\)</span>,
@@ -722,7 +722,7 @@ class="math inline">\(F\)</span>, take <span
 class="math inline">\(F(L):tr_L(F(v))=F(v)\)</span> (<span
 class="math inline">\(\mathsf{apd}\)</span>, dependent action on
 paths).</p>
-<p>Type family <span class="math inline">\(f:A-&gt;U\)</span>, <span
+<p>Type family <span class="math inline">\(f:A\to U\)</span>, <span
 class="math inline">\(\prod_{a:A}fa\)</span> is the type of dependent
 functions. Let <span class="math inline">\(X:\prod_{a:A}fa\)</span>. We
 can apply <span class="math inline">\(X\)</span> to a path <span
@@ -1110,7 +1110,7 @@ class="math inline">\(M_0\)</span> to be included – that would make
 <span class="math inline">\(M\)</span> an individual simplex. A
 simplicial complex is a family of simplices that are identified along
 various faces.</p>
-<div class="mydef">
+<div id="def:link" class="mydef">
 <p><strong>Definition 5</strong>. <em>In an abstract simplicial complex
 <span class="math inline">\(M\)</span> of dimension <span
 class="math inline">\(n\)</span>, the <strong>link</strong> of a vertex
@@ -1120,7 +1120,7 @@ class="math inline">\(m\in M_{n-1}\)</span> such that <span
 class="math inline">\(v\notin m\)</span> and <span
 class="math inline">\(m\cup v\)</span> is an <span
 class="math inline">\(n\)</span>-face of <span
-class="math inline">\(M\)</span>.</em></p>
+class="math inline">\(M\)</span>. </em></p>
 </div>
 <p>The link is all the neighboring vertices of <span
 class="math inline">\(v\)</span> and the codimension 1 faces joining
@@ -1212,8 +1212,11 @@ class="math inline">\(\{a, b, c\}\mapsto \ensuremath{\mathsf{refl}}_a =
 </div>
 <p>We will assume there is a formal theory of such HITs, and that at
 least up to dimension 2 there are no obstructions to simply copying over
-the combinatorial data to the HIT constructors. For recent work on HITs
-see for example David Wärn’s discussion of pushouts<span
+the combinatorial data to the HIT constructors. We will further assume
+that taking the link of a point (Definition <a href="#def:link"
+data-reference-type="ref" data-reference="def:link">5</a>) can be
+imported verbatim to the HIT context without difficulty. For recent work
+on HITs see for example David Wärn’s discussion of pushouts<span
 class="citation" data-cites="warn_pushouts"> (<a
 href="#ref-warn_pushouts" role="doc-biblioref">Wärn,
 2024</a>)</span>.</p>
@@ -1270,7 +1273,7 @@ S^1&amp;:\mathsf{Type}\\
 \end{aligned}\]</span></em></p>
 </div>
 <p>Both of these are examples of a family of HIT data we will call <span
-class="math inline">\(\ensuremath{\mathsf{Gon}}\)</span>, the type of
+class="math inline">\(\ensuremath{\mathsf{Gon}}\)</span>, the set of
 <span class="math inline">\(n\)</span>-gon HITs for some natural number
 <span class="math inline">\(n\)</span>, following the pattern of the
 HITs above. We’ll see below that the realization of an <span
@@ -1281,10 +1284,11 @@ class="math inline">\(n\)</span>-gon is a mere circle, i.e. we have
 id="adding-and-removing-points-from-polygons"><span
 class="header-section-number">3.4</span> Adding and removing points from
 polygons</h2>
-<p>Given functions <span class="math inline">\(\phi,\psi:A\to B\)</span>
-between two arbitrary types we can form the type family of paths <span
-class="math inline">\(\alpha:A\to\mathcal{U},
-\alpha(a)\stackrel{\mathrm{def}}{=}(\phi(a)=_B\psi(a))\)</span>.
+<p>Recall that given functions <span
+class="math inline">\(\phi,\psi:A\to B\)</span> between two arbitrary
+types we can form a type family of paths <span
+class="math inline">\(\alpha:A\to\mathcal{U}\)</span> by <span
+class="math inline">\(\alpha(a)\stackrel{\mathrm{def}}{=}(\phi(a)=_B\psi(a))\)</span>.
 Transport in this family is given by concatenation as follows, where
 <span class="math inline">\(p:a=_A a&#39;\)</span> and <span
 class="math inline">\(q:\phi(a)=\psi(a)\)</span> (see Figure <a
@@ -1447,11 +1451,11 @@ class="math inline">\(k\)</span> vertices between each of the original
 verticies of <span class="math inline">\(C_n\)</span>.</em></p>
 </div>
 <p>With <span class="math inline">\(m_k\)</span> we can start with a
-surface that has pentagonal plus hexagonal links, and apply <span
-class="math inline">\(m_6\)</span> to the pentagons and <span
-class="math inline">\(m_5\)</span> to the hexagons, and have a type
-family that is the tangent bundle (because it comes from the link) but
-where every fiber has 30 vertices.</p>
+collection of pentagons and hexagons and make the collection
+homogeneous: by applying <span class="math inline">\(m_6\)</span> to the
+pentagons and <span class="math inline">\(m_5\)</span> to the hexagons
+we obtain a collection of 30-gons. This will be useful when we work more
+with the link function.</p>
 <h2 data-number="3.5" id="the-higher-inductive-type-oo"><span
 class="header-section-number">3.5</span> The higher inductive type <span
 class="math inline">\(\ensuremath{\mathbb{O}}\)</span></h2>
@@ -1514,7 +1518,8 @@ points, 12 1-paths, 8 2-paths.</figcaption>
 class="math inline">\(\ensuremath{\mathbb{O}}_0\xrightarrow[]{i_0}
 \ensuremath{\mathbb{O}}_1\xrightarrow[]{i_1}
 \ensuremath{\mathbb{O}}\)</span> that include each skeleton into the
-next-higher-dimensional skeleton.</p>
+next-higher-dimensional skeleton by the obvious inclusion of
+constructors.</p>
 <h1 data-number="4" id="connections-and-vector-fields"><span
 class="header-section-number">4</span> Connections and vector
 fields</h1>
