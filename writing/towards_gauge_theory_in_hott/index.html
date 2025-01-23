@@ -588,9 +588,8 @@ id="toc-equality-of-total-index-and-total-curvature"><span
 class="toc-section-number">5.2</span> Equality of total index and total
 curvature</a></li>
 <li><a href="#identification-with-euler-characteristic"
-id="toc-identification-with-euler-characteristic"><span
-class="toc-section-number">5.3</span> Identification with Euler
-characteristic</a></li>
+id="toc-identification-with-euler-characteristic">Identification with
+Euler characteristic</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -1841,7 +1840,7 @@ class="header-section-number">5</span> Vector fields</h1>
 <div class="mydef">
 <p><strong>Definition 21</strong>. <em>A <strong>partial
 function</strong> <span class="math inline">\(f:A\to B\)</span> is a
-function <span class="math inline">\(f:A\to B+\star\)</span>, the
+function <span class="math inline">\(f:A\to B+\mathbb{1}\)</span>, the
 disjoint union of <span class="math inline">\(B\)</span> with the
 1-element type.</em></p>
 </div>
@@ -1853,404 +1852,58 @@ class="math inline">\(T_\bullet:\ensuremath{\mathbb{M}}\to\mathrm{EM_{\bullet}}(
 that lifts <span class="math inline">\(T\)</span>. In other words, a
 pointing of <em>some</em> of the fibers. This aligns with the classical
 picture of a choice of nonzero vector at each point, except for some
-points where the vector field vanishes. So instead of having a notion
-corresponding to the full tangent vector space (one candidate for which
-would be the disk at each point, i.e. <span
-class="math inline">\(\mathop{\mathrm{\mathsf{link}}}\)</span> plus its
-spokes and filler triangles) we are mapping some vertices to their
-circular fibers, and others to <span
-class="math inline">\(\star\)</span>. This lets us continue to work with
-<span
-class="math inline">\(\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)</span>
-instead of a type of tangent spaces.</p>
-<p>Figure <a href="#fig:flattorus_zero" data-reference-type="ref"
-data-reference="fig:flattorus_zero">12</a> illustrates what removing the
-preimage of <span class="math inline">\(\star\)</span> looks like. The
-resulting type is no longer a combinatorial manifold, since it fails the
-condition about every point having a circular link.</p>
-<figure id="fig:flattorus_zero">
-<img src="./2ebf26231a91ccaf5520752551fb7251245820f2.png" />
-<figcaption>The flat torus with one vertex removed. This also removes
-the edges and faces containing that vertex.</figcaption>
-</figure>
+points where the vector field vanishes.</p>
 <div class="mydef">
 <p><strong>Definition 22</strong>. <em>Let <span
 class="math inline">\(\ensuremath{\mathbb{M}}:\mathsf{CombMfd_2}\)</span>
 be a combinatorial manifold and <span class="math inline">\(Z\)</span>
 an isolated set of vertices. A <strong>vector field <span
 class="math inline">\(X\)</span> on <span
-class="math inline">\(\ensuremath{\mathbb{M}}\)</span> with zero set
-<span class="math inline">\(Z\)</span></strong> is a partial section of
+class="math inline">\(\ensuremath{\mathbb{M}}\)</span> (with zero set
+<span class="math inline">\(Z\)</span>)</strong> is a partial section of
 <span class="math inline">\(P\)</span>, i.e. a term <span
 class="math inline">\(X:\prod_{x:\ensuremath{\mathbb{M}}\setminus
 Z}T(x)\)</span> (and eliding the unique term of <span
-class="math inline">\(Z\to\star\)</span>). The <strong>exponential
-map</strong> <span class="math inline">\(\exp:P\to
-\ensuremath{\mathbb{M}}\)</span> is the map sending points in a fiber to
-the corresponding point in the link of the base point: <span
-class="math inline">\(\exp(x,
-y:\mathop{\mathrm{\mathsf{link}}}(x))=y\)</span>. In commutative diagram
-form we have:</em></p>
+class="math inline">\(Z\to\mathbb{1}\)</span>).</em></p>
 </div>
-<p><img src="./880ca98e99aad0682f143283c18acd63ee289776.png"
+<p><img src="./5e7e8b192ba3452d6ed1e8afc33ec3734771c702.png"
 alt="image" /></p>
 <p>where <span class="math inline">\(T_\bullet=\overline{T}\circ
-X\)</span>. Note that <span class="math inline">\(\exp\)</span> is
-different from <span
-class="math inline">\(\ensuremath{\mathrm{pr}}_1\)</span> since it
-spreads a fiber out onto the manifold. The composition <span
-class="math inline">\(\exp\circ X\)</span> is a map <span
-class="math inline">\(\ensuremath{\mathbb{M}}\setminus Z\to
-\ensuremath{\mathbb{M}}\)</span>, and can be thought of as the flow of
-the vector field.</p>
-<p>Let’s see a few examples.</p>
-<div class="mydef">
-<p><strong>Definition 23</strong>. <em>The <strong>spinning vector
-field</strong> <span class="math inline">\(X_{\mathrm{spin}}\)</span> on
-<span class="math inline">\(\ensuremath{\mathbb{O}}\setminus\{w,
-y\}\)</span> is given by the following data. We compose with <span
-class="math inline">\(\exp\)</span> to keep the notation directly in
-<span class="math inline">\(\ensuremath{\mathbb{O}}\)</span>. See
-Figure <a href="#fig:sphere_spin" data-reference-type="ref"
-data-reference="fig:sphere_spin">13</a> <span
-class="math display">\[\begin{aligned}
-\exp\circ X_{\mathrm{spin}}(b)  &amp;=r   \\
-\exp\circ X_{\mathrm{spin}}(r)  &amp;=g   \\
-\exp\circ X_{\mathrm{spin}}(g)  &amp;=o   \\
-\exp\circ X_{\mathrm{spin}}(o)  &amp;=b   \\
-\end{aligned}\]</span> We must also define pathovers and faceovers, i.e.
-<span class="math inline">\(\mathsf{apd}(X_{\mathrm{spin}}\)</span>. For
-example, <span class="math inline">\(X_{\mathrm{spin}}(b)\)</span> is
-the point <span class="math inline">\(r\)</span> in the link <span
-class="math inline">\(woyr\)</span>. Transport along <span
-class="math inline">\(br\)</span> takes the link of <span
-class="math inline">\(b\)</span> to the link of <span
-class="math inline">\(r\)</span>, mapping <span
-class="math inline">\(r:Tb\)</span> to <span
-class="math inline">\(g:Tr\)</span>. This agrees with <span
-class="math inline">\(X_{\mathrm{spin}}(r)\)</span> and so we will
-choose <span
-class="math inline">\(X_{\mathrm{spin}}(br)=\ensuremath{\mathsf{refl}}_g\)</span>
-in <span class="math inline">\(Tr\)</span>. We similarly choose <span
-class="math inline">\(\ensuremath{\mathsf{refl}}\)</span> pathovers for
-the other equatorial edges. And since we have deleted all the faces when
-removing the zeros, there are no faceovers.</em></p>
-</div>
-<figure id="fig:sphere_spin">
-<img src="./6625d7df38f0bac102b699478fd8f8c630e608f3.png" />
-<figcaption>The vector field <span
-class="math inline">\(X_{\mathrm{spin}}\)</span> on <span
-class="math inline">\(\ensuremath{\mathbb{O}}\)</span>, which circulates
-around the equator. <span class="math inline">\(w\)</span> and <span
-class="math inline">\(y\)</span> are zeros.</figcaption>
-</figure>
-<div class="mydef">
-<p><strong>Definition 24</strong>. <em>The <strong>downward vector
-field</strong> <span class="math inline">\(X_{\mathrm{down}}\)</span> on
-<span class="math inline">\(\ensuremath{\mathbb{O}}\setminus\{w,
-y\}\)</span> is given by the following data, where again we compose with
-<span class="math inline">\(\exp\)</span> to keep the notation directly
-in <span class="math inline">\(\ensuremath{\mathbb{O}}\)</span>. See
-Figure <a href="#fig:sphere_downward" data-reference-type="ref"
-data-reference="fig:sphere_downward">14</a> <span
-class="math display">\[\begin{aligned}
-\exp\circ X_{\mathrm{spin}}(b)  &amp;=y   \\
-\exp\circ X_{\mathrm{spin}}(r)  &amp;=y   \\
-\exp\circ X_{\mathrm{spin}}(g)  &amp;=y   \\
-\exp\circ X_{\mathrm{spin}}(o)  &amp;=y   \\
-\end{aligned}\]</span> We also need to select a pathover for each edge
-on the equator. Transport on all these edges takes <span
-class="math inline">\(y\)</span> in one fiber to <span
-class="math inline">\(y\)</span> in the next, so we choose the path
-<span class="math inline">\(\ensuremath{\mathsf{refl}}_y\)</span> in all
-four of these fibers. Again there are no faceovers to map.</em></p>
-</div>
-<figure id="fig:sphere_downward">
-<img src="./5eb21e712199f888c161ccd64d6902ee0211b09f.png" />
-<figcaption>The vector field <span
-class="math inline">\(X_{\mathrm{down}}\)</span> on <span
-class="math inline">\(\ensuremath{\mathbb{O}}\)</span>, which flows
-downward. <span class="math inline">\(w\)</span> and <span
-class="math inline">\(y\)</span> are zeros.</figcaption>
-</figure>
+X\)</span>.</p>
+<p>The lift <span class="math inline">\(T_\bullet\)</span> equips the
+fibers of <span class="math inline">\(T\)</span> with points, and
+provides pointings to the transport maps. (The action of <span
+class="math inline">\(X\)</span> on paths provides the proofs of
+pointedness.)</p>
+<p>The goal now is to recompute the total curvature in the context of
+some vector field <span class="math inline">\(X\)</span> and obtain
+three values:</p>
+<ol>
+<li><p>The total curvature, e.g. in the case of <span
+class="math inline">\(\ensuremath{\mathbb{O}}\)</span> the value <span
+class="math inline">\(R^8\)</span>.</p></li>
+<li><p>The total winding of <span class="math inline">\(X\)</span>,
+which will take the proof of pointedness around all faces in the domain
+of <span class="math inline">\(X\)</span>. Being a loop in a circle,
+this is an integer.</p></li>
+<li><p>A pointed version of curvature, which couples the winding of
+<span class="math inline">\(X\)</span> to the transport, which is a
+total function, and which produces a contractible pointed map, i.e.
+0.</p></li>
+</ol>
+<p>Once we have these, we will unpack how they provide a proof in HoTT
+of the Poincaré-Hopf theorem and the Gauss-Bonnet theorem.</p>
 <h2 data-number="5.1" id="index-of-a-vector-field"><span
 class="header-section-number">5.1</span> Index of a vector field</h2>
-<p>Index should be an integer that computes a winding number “of the
-vector field” around a zero. We can compute an integer from a map by
-taking its <em>degree</em>, which is a construction we will assume that
-we have, for example using <span class="citation"
-data-cites="buchholtz_favonia"> (<a href="#ref-buchholtz_favonia"
-role="doc-biblioref">Buchholtz &amp; (Favonia), 2018</a>)</span>, where
-they indeed require that degree agrees with winding number for maps
-<span class="math inline">\(S^1\to S^1\)</span>.</p>
-<div class="mydef">
-<p><strong>Definition 25</strong>. <em>Let <span
-class="math inline">\(\ensuremath{\mathbb{M}}:\mathsf{CombMfd_2}\)</span>
-and let <span
-class="math inline">\(T:\ensuremath{\mathbb{M}}\to\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)</span>
-be a bundle of circles given on <span
-class="math inline">\(\ensuremath{\mathbb{M}}_0\)</span> by <span
-class="math inline">\(\mathop{\mathrm{\mathsf{link}}}\)</span>. Let
-<span class="math inline">\(z:Z\)</span> be an isolated zero and let
-<span class="math inline">\(\mathop{\mathrm{\mathsf{link}}}z\)</span> be
-its polygonal link in <span
-class="math inline">\(\ensuremath{\mathbb{M}}\)</span>, with a clockwise
-orientation, say with ordered vertices <span
-class="math inline">\(\{l_{z1},\ldots,l_{zn}\}\)</span>. We call the
-degree of the map <span
-class="math inline">\(\mathsf{tr}(\mathop{\mathrm{\mathsf{link}}}z):Tl_{z1}=Tl_{z1}\)</span>
-the <strong>index of <span class="math inline">\(X\)</span> at <span
-class="math inline">\(z\)</span></strong>. It does not depend on which
-vertex we use.</em></p>
-</div>
-<div class="mylemma">
-<p><strong>Lemma 4</strong>. <em>The index of <span
-class="math inline">\(X_{\mathrm{spin}}\)</span> at both <span
-class="math inline">\(y\)</span> and at <span
-class="math inline">\(w\)</span> is 1, and the same is true for <span
-class="math inline">\(X_{\mathrm{down}}\)</span>.</em></p>
-</div>
-<p><em>Proof.</em> <span
-class="math inline">\(\mathsf{apd}(X_{\mathrm{spin}})(br) =
-\ensuremath{\mathsf{refl}}_{X_{\mathrm{spin}}(r)}\)</span> and similarly
-for the other edges and for <span
-class="math inline">\(X_{\mathrm{down}}\)</span>. So <span
-class="math inline">\(\mathsf{apd}\)</span> on the loop around the
-equator is the identity, which has index 1. ◻</p>
-<p>If these vector fields both have index +1, what does index –1 look
-like? We can see an example on the torus with its downward vector
-field.</p>
-<p>On the torus we can also consider both a spinning vector field and a
-downward vector field. Figure <a href="#fig:spin_torus"
-data-reference-type="ref" data-reference="fig:spin_torus">15</a> shows
-one way to spin the torus, and in this case there are no zeros so the
-index is the degree of a map from the empty set, which is 0 (as it
-factors through a constant map).</p>
-<p>Figure <a href="#fig:morse_torus" data-reference-type="ref"
-data-reference="fig:morse_torus">16</a> shows a downward flow with four
-zeros. Although this is a picture of the flat torus, the vector field is
-derived from the shape of Figure <a href="#fig:torus"
-data-reference-type="ref" data-reference="fig:torus">10</a> where we
-actually have a notion of up and down. We see at the position labeled
-(outer, top of diamonds), i.e. the top of the torus, an everywhere
-outward pointing vector field. At (outer, bottom of diamonds) we see an
-inward pointing vector field. But at (hole, top of diamonds), i.e. the
-top of the hole, we see something else. Imagine transport from the
-neighbor to the lower right to the neighbor below, then continuing
-clockwise around the link. If we assume that we define <span
-class="math inline">\(\mathsf{apd}\)</span> on these edges to be
-<em>counterclockwise</em> rotation, then transport around the whole link
-has degree –1. Similarly for the zero at (hole, bottom of diamonds).
-Adding these four indexes we again get 0.</p>
-<p>Summarizing what we’ve seen in our examples, vector fields with
-isolated zeros have an index, and this index tracks with the total
-curvature, and the Euler characteristic.</p>
-<figure id="fig:spin_torus">
-<img src="./4c0a7806623eddc3339372dfa6a5ed1ae5285131.png" />
-<figcaption>A vector field on the torus that spins and has no
-zeros.</figcaption>
-</figure>
-<figure id="fig:morse_torus">
-<img src="./6e23bb5a3f6b64f32381515cf951bdb64c0776e8.png" />
-<figcaption>A vector field on the torus that flows downward, when viewed
-as a donut. The zeros are represented as missing dots. Every dot has one
-outgoing vector.</figcaption>
-</figure>
 <h2 data-number="5.2"
 id="equality-of-total-index-and-total-curvature"><span
 class="header-section-number">5.2</span> Equality of total index and
 total curvature</h2>
-<p>Here we are inspired by the classical proof of Hopf<span
-class="citation" data-cites="hopf"> (<a href="#ref-hopf"
-role="doc-biblioref">Hopf, 1983</a>)</span>, presented in detail in
-Needham<span class="citation" data-cites="needham"> (<a
-href="#ref-needham" role="doc-biblioref">Needham, 2021</a>)</span>.</p>
-<div id="def:enumeration" class="mydef">
-<p><strong>Definition 26</strong>. <em>An <strong>enumeration</strong>
-of a principal bundle with connection and vector field on a higher
-combinatorial manifold consists of the following data:</em></p>
-<ul>
-<li><p><em>a family <span
-class="math inline">\(T:\ensuremath{\mathbb{M}}\to\mathrm{K}(\ensuremath{\mathbb{Z}},2)\)</span>
-on some higher combinatorial manifold</em></p></li>
-<li><p><em>a nonvanishing vector field <span
-class="math inline">\(X:\ensuremath{\mathbb{M}}\setminus Z\to P\)</span>
-with isolated zeros <span class="math inline">\(Z\)</span></em></p></li>
-<li><p><em>a total face of the replacement <span
-class="math inline">\(\ensuremath{\mathbb{M}}_Z\)</span> (Definition <a
-href="#def:totalface" data-reference-type="ref"
-data-reference="def:totalface">[def:totalface]</a>), that is</em></p>
-<ul>
-<li><p><em>a basepoint <span
-class="math inline">\(a:\ensuremath{\mathbb{M}}_Z\)</span></em></p></li>
-<li><p><em>a term <span
-class="math inline">\(f_{\ensuremath{\mathbb{M}}_Z}:\ensuremath{\mathsf{refl}}_a=\ensuremath{\mathsf{refl}}_a\)</span>
-given by</em></p>
-<ul>
-<li><p><em>an ordering of the face constructors <span
-class="math inline">\(\{f_i\}\)</span>, with the sub-list of faces
-denoted <span class="math inline">\(\{f_{zk}\}\)</span> refers to the
-replacement faces at the zeros</em></p></li>
-<li><p><em>a vertex <span class="math inline">\(v_i\)</span> in each
-face</em></p></li>
-<li><p><em>terms <span class="math inline">\(a=v_i\)</span> for each
-face</em></p></li>
-</ul></li>
-</ul></li>
-</ul>
-</div>
-<div class="mynote">
-<p><strong>Note 3</strong>. <em>An enumeration let us work both with
-<span class="math inline">\(\ensuremath{\mathbb{M}}\setminus Z\)</span>
-where the vector field is nonvanishing, while also having access to the
-disks that are missing from <span
-class="math inline">\(\ensuremath{\mathbb{M}}\setminus
-Z\)</span>.</em></p>
-</div>
-<div class="mylemma">
-<p><strong>Lemma 5</strong>. <em>The sub-list of faces <span
-class="math inline">\(\{f_i\}-\{f_{zk}\}\)</span> obtained by skipping
-the replacement faces at the zeros, is an ordering of face constructors
-for <span class="math inline">\(\ensuremath{\mathbb{M}}\setminus
-Z\)</span>.</em></p>
-</div>
-<p><em>Proof.</em> The algorithm that visits each face in order always
-starts and ends at <span class="math inline">\(a\)</span> and so we can
-skip any faces we wish, to obtain an ordering of face constructors for
-the remaining union of faces. ◻</p>
-<p>Note that on <span
-class="math inline">\(\ensuremath{\mathbb{M}}\setminus Z\)</span> the
-vector field <span class="math inline">\(X\)</span> trivializes the
-bundle by mapping into the contractible type of pointed types over <span
-class="math inline">\(\mathrm{K}(\ensuremath{\mathbb{Z}},2)\)</span>. So
-<span class="math inline">\(X\simeq Y:\ensuremath{\mathbb{M}}\setminus
-Z\to (Ta,a)\)</span>, the fixed pointed circle in the fiber of the
-basepoint <span class="math inline">\(a\)</span>.</p>
-<div class="mylemma">
-<p><strong>Lemma 6</strong>. <em>The degree of <span
-class="math inline">\(Y\)</span> is minus the total index of <span
-class="math inline">\(X\)</span>.</em></p>
-</div>
-<p><em>Proof.</em> The ordering of faces <span
-class="math inline">\(\{f_i\}-\{f_{zk}\}\)</span> provides an ordering
-of all the edges, say <span class="math inline">\(\{e_l\}\)</span>. Each
-edge appears an even number of times in this list, traversed in opposite
-directions, except those bounding a replacement face. These
-replacement-bounding edges are traversed an odd number of times and can
-be concatenated to traverse the boundary counterclockwise. Concatenation
-of paths in <span class="math inline">\(S^1\)</span> is abelian, so
-<span class="math inline">\(Y(\{e_l\})\)</span> cancels except on the
-boundary of the replacement faces, which gives a map from the disjoint
-union of boundary circles to <span class="math inline">\(Ta\)</span>,
-with each boundary circle traversed in the counterclockwise direction.
-The orientation gives the minus sign. ◻</p>
-<p>Consider now the total face <span
-class="math inline">\(f_{\ensuremath{\mathbb{M}}_Z}\)</span> of <span
-class="math inline">\(\ensuremath{\mathbb{M}}_Z\)</span> and its
-ordering of faces <span class="math inline">\(\{f_i\}\)</span>. <span
-class="math inline">\(Y\)</span> is only defined on some of these faces.
-We will define a new function on all the <span
-class="math inline">\(\{f_i\}\)</span>.</p>
-<div class="mydef">
-<p><strong>Definition 27</strong>. <em>The <strong>coupling map</strong>
-<span class="math inline">\(C:\ensuremath{\mathbb{M}}_Z\to Ta\)</span>
-is defined to be <span class="math inline">\(Y\)</span> on <span
-class="math inline">\(\ensuremath{\mathbb{M}}\setminus Z\)</span> and on
-the remaining faces it is defined by <span
-class="math inline">\(C(f_i)\stackrel{\mathrm{def}}{=}\mathsf{apd}(X)(\partial
-f_i)\)</span> where <span class="math inline">\(\partial
-f_i:v_i=v_i\)</span> is the clockwise path around the face starting from
-the vertex supplied by the data of the total face.</em></p>
-</div>
-<p>Because <span class="math inline">\(\mathsf{apd}\)</span> uses both
-transport and the value of the vector field, it couples the connection
-with the vector field, hence the name. Of course in HoTT this coupling
-is built into the definition of <span
-class="math inline">\(\mathsf{apd}\)</span>, so that’s another reminder
-that we aren’t straying far from the foundations to find these
-geometrical concepts.</p>
-<p>The fact that <span class="math inline">\(C\)</span> is defined on
-all the faces, by using the value of the vector field only on the
-1-skeleton of <span
-class="math inline">\(\ensuremath{\mathbb{M}}_Z\)</span> where it was
-always defined, lets us make the final part of the argument.</p>
-<div class="mylemma">
-<p><strong>Lemma 7</strong>. <em><span
-class="math inline">\(C:\cup_i\{f_i\}\to Ta\)</span> is equal to a
-constant map.</em></p>
-</div>
-<p><em>Proof.</em> The data of the total face provides an ordering of
-all the edges. Each edge appears an even number of times, traversed in
-opposite directions, including the edges in the replacement faces.
-Concatenation of paths in the polygon <span
-class="math inline">\(Ta\)</span> is abelian, so the paths all
-cancel. ◻</p>
-<p><span class="math inline">\(C\)</span> is similar to <span
-class="math inline">\(X\)</span> and <span
-class="math inline">\(Y\)</span> except that it is a total function. On
-any given edge it computes a path, that is, a homotopy from the function
-<span class="math inline">\(\mathsf{tr}\)</span> to the function <span
-class="math inline">\(X\)</span>, which we can call “the difference
-between transport and the vector field on that edge.” We have found a
-way to add all these homotopies together to get 0. We can call this
-total “the difference between the total index and the total
-curvature.”</p>
-<p>Recall now that we made some arbitrary choices in Definition <a
-href="#def:enumeration" data-reference-type="ref"
-data-reference="def:enumeration">26</a> of an enumeration, and hence the
-function <span class="math inline">\(C\)</span>. But since <span
-class="math inline">\(C\)</span> is unconditionally constant, the space
-of extra data is contractible.</p>
-<div class="mycor">
-<p><strong>Corollary 3</strong>. <em>The total index of a vector field
-with isolated zeros is independent of the vector field.</em></p>
-</div>
-<div class="mycor">
-<p><strong>Corollary 4</strong>. <em>The total curvature is an
-integer.</em></p>
-</div>
-<p>The last step is to link this value to the Euler characteristic.</p>
-<h2 data-number="5.3"
-id="identification-with-euler-characteristic"><span
-class="header-section-number">5.3</span> Identification with Euler
+<h2 class="unnumbered"
+id="identification-with-euler-characteristic">Identification with Euler
 characteristic</h2>
-<p>Here we only point the way. Combinatorial manifolds are intuitive
-objects that connect directly to the classical definition of Euler
-characteristic. We can argue using Morse theory, the study of smooth
-real-valued functions on smooth manifolds and their singularities.
-Classically the gradient of a Morse function is a vector field that can
-be used to decompose the manifold into its <em>handlebody
-decomposition</em>. This would be an excellent story to pursue in future
-work.</p>
-<p>Imagine starting with a classical 2-manifold of genus <span
-class="math inline">\(g\)</span> that has been triangulated. Stand it
-upright with the holes forming a vertical sequence. Now install a vector
-field that points downward whenever possible. This vector field will
-have a zero at the top and bottom, and one at the top and bottom of each
-hole. The top and bottom will have zeros of (classical) index 1, and
-zeros in the holes will have index –1. We include some sketches in the
-case of a torus (Figure <a href="#fig:torus_morse_skel"
-data-reference-type="ref" data-reference="fig:torus_morse_skel">17</a>).
-This illustrates how we obtain the formula for genus <span
-class="math inline">\(g\)</span>: <span
-class="math inline">\(\chi(M)=2-2g\)</span>. If we choose the
-triangulation so that the zeros are at vertices, we should be able to
-import that data into <span
-class="math inline">\(\mathsf{CombMfd_2}\)</span> and reproduce the
-computation using the tools in this note.</p>
-<figure id="fig:torus_morse_skel">
-<img src="./bb41db25296489955c59f084af621a8734853d5b.png" />
-<figcaption>Schematic of the zeros of the downward flow of a
-torus.</figcaption>
-</figure>
 <div id="refs" class="references csl-bib-body hanging-indent"
 data-entry-spacing="0" role="list">
-<div id="ref-buchholtz_favonia" class="csl-entry" role="listitem">
-<span class="smallcaps">Buchholtz</span>, U. &amp; <span
-class="smallcaps">(Favonia)</span>, K.-B.H. (2018) <a
-href="http://arxiv.org/abs/1802.02191">Cellular cohomology in homotopy
-type theory</a>. <em>CoRR</em>, <strong>abs/1802.02191</strong>.
-</div>
 <div id="ref-christensen_univalence" class="csl-entry" role="listitem">
 <span class="smallcaps">Christensen</span>, D. (2015) A characterization
 of univalent fibrations.
