@@ -862,7 +862,7 @@ the pathovers by transport.&lt;/p&gt;
 g\sim\ensuremath{\text{id}}_{C_{n-1}}\)&lt;/span&gt; requires only noting that
 &lt;span class=&#34;math inline&#34;&gt;\(f(g(e_{n-1,1}))=f(e_{n-1,n}\cdot
 e_{n,1})=e_{n-1,1}\cdot\ensuremath{\mathsf{refl}}_{v_1}=e_{n-1,1}\)&lt;/span&gt;. ◻&lt;/p&gt;
-&lt;div class=&#34;mycor&#34;&gt;
+&lt;div id=&#34;cor:gon&#34; class=&#34;mycor&#34;&gt;
 &lt;p&gt;&lt;strong&gt;Corollary 2&lt;/strong&gt;. &lt;em&gt;All polygons are equivalent to
 &lt;span class=&#34;math inline&#34;&gt;\(S^1\)&lt;/span&gt;, i.e. we have a term in &lt;span
 class=&#34;math inline&#34;&gt;\(\prod_{n:\ensuremath{\mathbb{N}}}||C_n=S^1||\)&lt;/span&gt;,
@@ -925,13 +925,13 @@ class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;-simplex in &lt;span
 class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{R}}^n\)&lt;/span&gt; given by &lt;span
 class=&#34;math inline&#34;&gt;\(\{x_1,\ldots,x_n|\sum_i x_i\leq 1\}\)&lt;/span&gt;. Let
 &lt;span class=&#34;math inline&#34;&gt;\(M:\mathsf{SimpCompSet_n}\)&lt;/span&gt;. The
-&lt;strong&gt;geometric realization &lt;span
+&lt;strong&gt;geometric realization&lt;/strong&gt; &lt;span
 class=&#34;math inline&#34;&gt;\(|M|:\mathsf{Top}\)&lt;/span&gt; of &lt;span
-class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt;&lt;/strong&gt; in the category of topological
-spaces is given inductively as follows: &lt;span
+class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; in the category of topological spaces
+is given inductively as follows: &lt;span
 class=&#34;math inline&#34;&gt;\(|M_0|=M_0\)&lt;/span&gt;, and given &lt;span
 class=&#34;math inline&#34;&gt;\(|M_{k-1}|\)&lt;/span&gt; we form &lt;span
-class=&#34;math inline&#34;&gt;\(|M_k|\)&lt;/span&gt; by the pushout&lt;/em&gt;&lt;/p&gt;
+class=&#34;math inline&#34;&gt;\(|M_k|\)&lt;/span&gt; by the pushout in sets&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;&lt;img src=&#34;./f12341344e1eee10c7ac2af715f5c52d98de4971.png&#34;
 alt=&#34;image&#34; /&gt;&lt;/p&gt;
@@ -1026,21 +1026,22 @@ class=&#34;math inline&#34;&gt;\(\mathcal{R}:\mathsf{SimpCompSet_n}\to\mathsf{Ty
 by forming a homotopy pushout of the data, for example in dimension
 2:&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;p&gt;&lt;img src=&#34;./aa970ebff8e4fd8a5791a58d58f9f02cbf54b9e1.png&#34;
+&lt;p&gt;&lt;img src=&#34;./925edd3170010ec3846c7273fc4617a559366bb9.png&#34;
 alt=&#34;image&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;The types &lt;span class=&#34;math inline&#34;&gt;\(C_3\)&lt;/span&gt; and &lt;span
-class=&#34;math inline&#34;&gt;\(X_1\)&lt;/span&gt; are 1-types, &lt;span
-class=&#34;math inline&#34;&gt;\(X_2\)&lt;/span&gt; is a 2-type, and the rest are sets.
-The map &lt;span class=&#34;math inline&#34;&gt;\(\partial_1\)&lt;/span&gt; maps each pair
-&lt;span class=&#34;math inline&#34;&gt;\((e, S^0)\)&lt;/span&gt; to the pair of points this
-edge connects. Similarly, &lt;span
-class=&#34;math inline&#34;&gt;\(\partial_2\)&lt;/span&gt; maps each &lt;span
-class=&#34;math inline&#34;&gt;\((f, C_3)\)&lt;/span&gt; to the triangle that this face
-bounds. The &lt;span class=&#34;math inline&#34;&gt;\(h_i\)&lt;/span&gt; are the proofs of
-commutativity, and the two squares are also both homotopy pushouts. Note
-that the pushouts could be re-expressed as HIT constructors.&lt;/p&gt;
-&lt;p&gt;Using the chain of skeleton inclusions gives us more, it gives us a
-map to &lt;em&gt;presented types&lt;/em&gt;:&lt;/p&gt;
+class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{M}}_1\)&lt;/span&gt; are 1-types,
+&lt;span class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{M}}_2\)&lt;/span&gt; is a
+2-type, and the rest are sets. The map &lt;span
+class=&#34;math inline&#34;&gt;\(\partial_0\)&lt;/span&gt; maps each pair &lt;span
+class=&#34;math inline&#34;&gt;\((e, S^0)\)&lt;/span&gt; to the pair of points this edge
+connects. Similarly, &lt;span class=&#34;math inline&#34;&gt;\(\partial_1\)&lt;/span&gt;
+maps each &lt;span class=&#34;math inline&#34;&gt;\((f, C_3)\)&lt;/span&gt; to the triangle
+that this face bounds. The &lt;span class=&#34;math inline&#34;&gt;\(h_i\)&lt;/span&gt; are
+the proofs of commutativity, and the two squares are also both homotopy
+pushouts. Note that the pushouts could be re-expressed as HIT
+constructors.&lt;/p&gt;
+&lt;p&gt;The horizontal chain of maps in the diagram shows that we have more.
+The construction in fact gives us a map to &lt;em&gt;presented types&lt;/em&gt;:&lt;/p&gt;
 &lt;div class=&#34;mydef&#34;&gt;
 &lt;p&gt;&lt;strong&gt;Definition 12&lt;/strong&gt;. &lt;em&gt;Let &lt;span
 class=&#34;math inline&#34;&gt;\(\mathsf{Type}^n\)&lt;/span&gt; denote the universe of
@@ -1053,6 +1054,36 @@ X_1\xrightarrow[]{f_2}\cdots\xrightarrow[]{f_n} X_n\)&lt;/span&gt; where &lt;spa
 class=&#34;math inline&#34;&gt;\(X_i:\mathsf{Type}^i\)&lt;/span&gt; is an &lt;span
 class=&#34;math inline&#34;&gt;\(i\)&lt;/span&gt;-type.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
+&lt;p&gt;We therefore have a map &lt;span
+class=&#34;math inline&#34;&gt;\(\mathcal{R}:\mathsf{SimpCompSet_n}\to\mathsf{Type}^{[n]}\)&lt;/span&gt;.
+But we can also remember the data of the maps &lt;span
+class=&#34;math inline&#34;&gt;\(M_i\to\ensuremath{\mathbb{M}}_i\)&lt;/span&gt;, so that
+&lt;span class=&#34;math inline&#34;&gt;\(\mathcal{R}\)&lt;/span&gt; takes values in
+diagrams of the form&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./dd6c89ec9d7b363178ecf16defbe12c06e5f8190.png&#34;
+alt=&#34;image&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;which is a natural transformation from the inclusion &lt;span
+class=&#34;math inline&#34;&gt;\(\mathsf{SimpCompSet_n}\to\mathsf{Type}\)&lt;/span&gt; to
+&lt;span class=&#34;math inline&#34;&gt;\(\mathcal{R}\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;The horizontal maps pick out terms for each vertex, edge, face, and
+so on. Each of these higher faces has a designated point coming from the
+pushout, with a family of paths joining that point to the entire
+boundary. This is a hub and spoke model, with the maps &lt;span
+class=&#34;math inline&#34;&gt;\(*_v\)&lt;/span&gt; etc. giving us the hubs.&lt;/p&gt;
+&lt;p&gt;We can add to the diagram the spans that actually define the
+pushouts:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./e6876907414f87b7268d981cebb85feac77cafb2.png&#34;
+alt=&#34;image&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Going forward we will stick with 2-dimensional complexes, where
+forming the link of a vertex gives us a map &lt;span
+class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{M}}_0\to\ensuremath{\mathsf{Gon}}\)&lt;/span&gt;
+exactly when the complex is a combinatorial manifold, which by
+Corollary &lt;a href=&#34;#cor:gon&#34; data-reference-type=&#34;ref&#34;
+data-reference=&#34;cor:gon&#34;&gt;2&lt;/a&gt; means we have a map &lt;span
+class=&#34;math inline&#34;&gt;\(\mathop{\mathrm{\mathsf{link}}}:\ensuremath{\mathbb{M}}_0\to\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)&lt;/span&gt;.
+Extending this map to all of &lt;span
+class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{M}}\)&lt;/span&gt; and exploring
+what we obtain is the main purpose of this note.&lt;/p&gt;
 &lt;p&gt;We will import some of von Raumer&lt;span class=&#34;citation&#34;
 data-cites=&#34;vonraumer_nonabelian&#34;&gt; (&lt;a href=&#34;#ref-vonraumer_nonabelian&#34;
 role=&#34;doc-biblioref&#34;&gt;Raumer, 2015&lt;/a&gt;)&lt;/span&gt;, where he proves that
@@ -1062,10 +1093,17 @@ we obtain a double groupoid.&lt;/p&gt;
 &lt;h2 data-number=&#34;3.5&#34; id=&#34;the-higher-inductive-type-oo&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;3.5&lt;/span&gt; The higher inductive type &lt;span
 class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{O}}\)&lt;/span&gt;&lt;/h2&gt;
-&lt;p&gt;We will create our first combinatorial surface, a 2-sphere. We will
-adopt the convention that a subscript indicates the dimension of a
-subskeleton of a complex. For instance, we have &lt;span
-class=&#34;math inline&#34;&gt;\(\mathsf{base}:S^1_0\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;We will create our first combinatorial surface, an octahedron. In
+&lt;span class=&#34;math inline&#34;&gt;\(\mathsf{SimpCompSet_n}\)&lt;/span&gt; the data of
+the octahedron can be represented with a &lt;em&gt;Hasse diagram&lt;/em&gt;, which
+shows the poset of inclusions in a graded manner, with a special top and
+bottom element (Figure &lt;a href=&#34;#fig:hasse_octohedron&#34;
+data-reference-type=&#34;ref&#34;
+data-reference=&#34;fig:hasse_octohedron&#34;&gt;8&lt;/a&gt;).&lt;/p&gt;
+&lt;figure id=&#34;fig:hasse_octohedron&#34;&gt;
+&lt;img src=&#34;./d5743120eca41fcca336362bde409486e6435ecb.png&#34; /&gt;
+&lt;figcaption&gt;Hasse diagram of an octahedron.&lt;/figcaption&gt;
+&lt;/figure&gt;
 &lt;div class=&#34;mydef&#34;&gt;
 &lt;p&gt;&lt;strong&gt;Definition 13&lt;/strong&gt;. &lt;em&gt;The HIT &lt;span
 class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{O}}_0\)&lt;/span&gt; is just 6
@@ -1226,7 +1264,7 @@ class=&#34;math inline&#34;&gt;\(T_1\)&lt;/span&gt; does to triangular paths suc
 circulates around the boundary of face &lt;span
 class=&#34;math inline&#34;&gt;\(wbr\)&lt;/span&gt;). You can see it if you imagine
 Figure &lt;a href=&#34;#fig:triangle_of_equators&#34; data-reference-type=&#34;ref&#34;
-data-reference=&#34;fig:triangle_of_equators&#34;&gt;8&lt;/a&gt; as the frames of a short
+data-reference=&#34;fig:triangle_of_equators&#34;&gt;9&lt;/a&gt; as the frames of a short
 movie. Or you can place your palm over the top of a cube and note where
 your fingers are pointing, then slide your hand to an equatorial face,
 then along the equator, then back to the top. The answer is: you come
@@ -1334,7 +1372,7 @@ derivative of the connection.”&lt;/em&gt;&lt;/p&gt;
 class=&#34;header-section-number&#34;&gt;4.2&lt;/span&gt; &lt;span
 class=&#34;math inline&#34;&gt;\(T\)&lt;/span&gt; on concatenations of faces&lt;/h2&gt;
 &lt;p&gt;Consider Figure &lt;a href=&#34;#fig:concat&#34; data-reference-type=&#34;ref&#34;
-data-reference=&#34;fig:concat&#34;&gt;9&lt;/a&gt; and the diamond on the left. Denote
+data-reference=&#34;fig:concat&#34;&gt;10&lt;/a&gt; and the diamond on the left. Denote
 the clockwise triangular path around the left triangle by &lt;span
 class=&#34;math inline&#34;&gt;\(bcab\)&lt;/span&gt;, and around the right by &lt;span
 class=&#34;math inline&#34;&gt;\(bdcb\)&lt;/span&gt;. These are loops at &lt;span
@@ -1377,17 +1415,17 @@ vertex will have six neighbors. So all the links will be merely equal to
 &lt;span class=&#34;math inline&#34;&gt;\(C_6\)&lt;/span&gt; which is a hexagonal version of
 &lt;span class=&#34;math inline&#34;&gt;\(C_4\)&lt;/span&gt;. See Figure &lt;a
 href=&#34;#fig:torus&#34; data-reference-type=&#34;ref&#34;
-data-reference=&#34;fig:torus&#34;&gt;10&lt;/a&gt;.&lt;/p&gt;
+data-reference=&#34;fig:torus&#34;&gt;11&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;To help parse this figure, imagine instead Figure &lt;a
 href=&#34;#fig:flattorus&#34; data-reference-type=&#34;ref&#34;
-data-reference=&#34;fig:flattorus&#34;&gt;11&lt;/a&gt;. We take this simple
+data-reference=&#34;fig:flattorus&#34;&gt;12&lt;/a&gt;. We take this simple
 alternating-triangle pattern, then glue the left and right edges, then
 bend into Figure &lt;a href=&#34;#fig:torus&#34; data-reference-type=&#34;ref&#34;
-data-reference=&#34;fig:torus&#34;&gt;10&lt;/a&gt;. The fact that each column in
+data-reference=&#34;fig:torus&#34;&gt;11&lt;/a&gt;. The fact that each column in
 Figure &lt;a href=&#34;#fig:flattorus&#34; data-reference-type=&#34;ref&#34;
-data-reference=&#34;fig:flattorus&#34;&gt;11&lt;/a&gt; has four dots corresponds to the
+data-reference=&#34;fig:flattorus&#34;&gt;12&lt;/a&gt; has four dots corresponds to the
 torus in Figure &lt;a href=&#34;#fig:torus&#34; data-reference-type=&#34;ref&#34;
-data-reference=&#34;fig:torus&#34;&gt;10&lt;/a&gt; having a square in front, diamonds in
+data-reference=&#34;fig:torus&#34;&gt;11&lt;/a&gt; having a square in front, diamonds in
 the middle, and a square in back.&lt;/p&gt;
 &lt;figure id=&#34;fig:torus&#34;&gt;
 &lt;img src=&#34;./0087b249788a090ea395f319a1aa6bb257b59103.png&#34; /&gt;
