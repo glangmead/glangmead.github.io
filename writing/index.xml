@@ -82,24 +82,6 @@
 &lt;nav id=&#34;TOC&#34; role=&#34;doc-toc&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#abstract&#34; id=&#34;toc-abstract&#34;&gt;Abstract&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#notes-so-far-from-mathieu-and-steve&#34;
-id=&#34;toc-notes-so-far-from-mathieu-and-steve&#34;&gt;Notes so far from Mathieu
-and Steve&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#january-24-mathieu&#34; id=&#34;toc-january-24-mathieu&#34;&gt;&lt;span
-class=&#34;toc-section-number&#34;&gt;0.1&lt;/span&gt; January 24, Mathieu&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#november-21-mathieu-and-steve&#34;
-id=&#34;toc-november-21-mathieu-and-steve&#34;&gt;&lt;span
-class=&#34;toc-section-number&#34;&gt;0.2&lt;/span&gt; November 21, Mathieu and Steve&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#extension-to-next-dimension-as-obstruction-theory&#34;
-id=&#34;toc-extension-to-next-dimension-as-obstruction-theory&#34;&gt;&lt;span
-class=&#34;toc-section-number&#34;&gt;0.2.1&lt;/span&gt; Extension to next dimension as
-obstruction theory&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#november-27-mathieu&#34; id=&#34;toc-november-27-mathieu&#34;&gt;&lt;span
-class=&#34;toc-section-number&#34;&gt;0.3&lt;/span&gt; November 27, Mathieu&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#overview&#34; id=&#34;toc-overview&#34;&gt;&lt;span
 class=&#34;toc-section-number&#34;&gt;1&lt;/span&gt; Overview&lt;/a&gt;
 &lt;ul&gt;
@@ -117,24 +99,23 @@ class=&#34;toc-section-number&#34;&gt;2.1&lt;/span&gt; Bundles of mere circles&l
 class=&#34;toc-section-number&#34;&gt;2.2&lt;/span&gt; Pathovers in circle
 bundles&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#combinatorial-manifolds&#34;
-id=&#34;toc-combinatorial-manifolds&#34;&gt;&lt;span
-class=&#34;toc-section-number&#34;&gt;3&lt;/span&gt; Combinatorial manifolds&lt;/a&gt;
+&lt;li&gt;&lt;a href=&#34;#discrete-manifolds&#34; id=&#34;toc-discrete-manifolds&#34;&gt;&lt;span
+class=&#34;toc-section-number&#34;&gt;3&lt;/span&gt; Discrete manifolds&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#sec:polygons&#34; id=&#34;toc-sec:polygons&#34;&gt;&lt;span
-class=&#34;toc-section-number&#34;&gt;3.1&lt;/span&gt; Polygons&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#adding-and-removing-points-from-polygons&#34;
-id=&#34;toc-adding-and-removing-points-from-polygons&#34;&gt;&lt;span
-class=&#34;toc-section-number&#34;&gt;3.2&lt;/span&gt; Adding and removing points from
-polygons&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#abstract-simplicial-complexes&#34;
 id=&#34;toc-abstract-simplicial-complexes&#34;&gt;&lt;span
-class=&#34;toc-section-number&#34;&gt;3.3&lt;/span&gt; Abstract simplicial
+class=&#34;toc-section-number&#34;&gt;3.1&lt;/span&gt; Abstract simplicial
 complexes&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#higher-inductive-combinatorial-manifolds&#34;
 id=&#34;toc-higher-inductive-combinatorial-manifolds&#34;&gt;&lt;span
-class=&#34;toc-section-number&#34;&gt;3.4&lt;/span&gt; Higher inductive combinatorial
+class=&#34;toc-section-number&#34;&gt;3.2&lt;/span&gt; Higher inductive combinatorial
 manifolds&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#sec:polygons&#34; id=&#34;toc-sec:polygons&#34;&gt;&lt;span
+class=&#34;toc-section-number&#34;&gt;3.3&lt;/span&gt; Polygons&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#adding-and-removing-points-from-polygons&#34;
+id=&#34;toc-adding-and-removing-points-from-polygons&#34;&gt;&lt;span
+class=&#34;toc-section-number&#34;&gt;3.4&lt;/span&gt; Adding and removing points from
+polygons&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#the-higher-inductive-type-oo&#34;
 id=&#34;toc-the-higher-inductive-type-oo&#34;&gt;&lt;span
 class=&#34;toc-section-number&#34;&gt;3.5&lt;/span&gt; The higher inductive type &lt;span
@@ -191,159 +172,6 @@ There is no other work to be done in the world.” — Stephen Talbott,
 data-cites=&#34;talbott&#34;&gt; (&lt;a href=&#34;#ref-talbott&#34;
 role=&#34;doc-biblioref&#34;&gt;Talbott, 1995&lt;/a&gt;)&lt;/span&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h1 class=&#34;unnumbered&#34; id=&#34;notes-so-far-from-mathieu-and-steve&#34;&gt;Notes so
-far from Mathieu and Steve&lt;/h1&gt;
-&lt;h2 data-number=&#34;0.1&#34; id=&#34;january-24-mathieu&#34;&gt;&lt;span
-class=&#34;header-section-number&#34;&gt;0.1&lt;/span&gt; January 24, Mathieu&lt;/h2&gt;
-&lt;p&gt;Slicing a type over &lt;span
-class=&#34;math inline&#34;&gt;\(\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)&lt;/span&gt;
-gives us the type of types together with a map to &lt;span
-class=&#34;math inline&#34;&gt;\(\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)&lt;/span&gt;.&lt;/p&gt;
-&lt;h2 data-number=&#34;0.2&#34; id=&#34;november-21-mathieu-and-steve&#34;&gt;&lt;span
-class=&#34;header-section-number&#34;&gt;0.2&lt;/span&gt; November 21, Mathieu and
-Steve&lt;/h2&gt;
-&lt;p&gt;Constructors are present in the HIT, and the HIT is a type. The
-universe must be closed under inductive types.&lt;/p&gt;
-&lt;p&gt;Polygons of different cardinality will tangle with transport.&lt;/p&gt;
-&lt;p&gt;Greg suggests I could use an isomorphism from a combinatorial
-manifold to a HIT with just one 2-cell to capture “total curvature”:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;def S^1:
-base: S^1
-loop: base=base
-
-def S^2:
-N: S^2
-surf: refl_N = refl_N
-
-def torus:
-b:torus
-p,q:b=b
-donut:p.q=q.p&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The map &lt;span class=&#34;math inline&#34;&gt;\(\mathcal{R}\)&lt;/span&gt;
-(realization) is a lossy map. &lt;span
-class=&#34;math inline&#34;&gt;\(\mathcal{R}(S^2):\mathcal{U}\)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;“strict morphism of HITs”: map constructors to constructors. &lt;span
-class=&#34;math inline&#34;&gt;\(C_4\to S^1\)&lt;/span&gt; is a strict map.&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\mathcal{R}(C_4)\)&lt;/span&gt; has an
-equivalence to &lt;span class=&#34;math inline&#34;&gt;\(\mathcal{R}(S^1)\)&lt;/span&gt;.
-Perhaps this is &lt;span class=&#34;math inline&#34;&gt;\(\mathcal{R}\)&lt;/span&gt;(the map
-&lt;span class=&#34;math inline&#34;&gt;\(C_4\to S^1\)&lt;/span&gt;, the strict one). But
-&lt;span class=&#34;math inline&#34;&gt;\(S^1\to C_4\)&lt;/span&gt; is non-strict, uses
-generated data, uses data from &lt;span
-class=&#34;math inline&#34;&gt;\(\mathcal{R}(C_4)\)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;Claim: we cannot see the one-notch “90 degree” rotation of &lt;span
-class=&#34;math inline&#34;&gt;\(C_4\)&lt;/span&gt; at the level of types.&lt;/p&gt;
-&lt;h3 data-number=&#34;0.2.1&#34;
-id=&#34;extension-to-next-dimension-as-obstruction-theory&#34;&gt;&lt;span
-class=&#34;header-section-number&#34;&gt;0.2.1&lt;/span&gt; Extension to next dimension
-as obstruction theory&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Consider a type &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; with
-1-skeleton &lt;span class=&#34;math inline&#34;&gt;\(X_1\)&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;HIT gives skeletal filtration&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;functions naturally given as per-skeleton steps&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;there are constraints/obstructions: obstruction to extend map
-&lt;span class=&#34;math inline&#34;&gt;\(T\)&lt;/span&gt; from vertices &lt;span
-class=&#34;math inline&#34;&gt;\(a, b\)&lt;/span&gt; to path &lt;span
-class=&#34;math inline&#34;&gt;\(e:a=b\)&lt;/span&gt; is that &lt;span
-class=&#34;math inline&#34;&gt;\(T(a)\)&lt;/span&gt; and &lt;span
-class=&#34;math inline&#34;&gt;\(T(b)\)&lt;/span&gt; are in the same connected
-component.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;say a 2-cell &lt;span class=&#34;math inline&#34;&gt;\(F\)&lt;/span&gt; contracts a
-loop &lt;span class=&#34;math inline&#34;&gt;\(L\)&lt;/span&gt;, i.e. &lt;span
-class=&#34;math inline&#34;&gt;\(F:L=\ensuremath{\mathsf{refl}}_v\)&lt;/span&gt; some
-vertex &lt;span class=&#34;math inline&#34;&gt;\(v\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;we have a choice of &lt;span class=&#34;math inline&#34;&gt;\(v\)&lt;/span&gt; for
-each face &lt;span class=&#34;math inline&#34;&gt;\(F\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;then &lt;span class=&#34;math inline&#34;&gt;\(T(F)\)&lt;/span&gt; must be in same
-component as &lt;span
-class=&#34;math inline&#34;&gt;\(\ensuremath{\mathsf{refl}}_v\)&lt;/span&gt; (&lt;span
-class=&#34;math inline&#34;&gt;\(\ensuremath{\mathsf{refl}}_v:\pi_1 X\)&lt;/span&gt; with
-basepoint &lt;span class=&#34;math inline&#34;&gt;\(v\)&lt;/span&gt;)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(T(F)\)&lt;/span&gt; is merely &lt;span
-class=&#34;math inline&#34;&gt;\(\ensuremath{\mathsf{refl}}\)&lt;/span&gt;, and holonomy
-is merely &lt;span
-class=&#34;math inline&#34;&gt;\(\ensuremath{\mathsf{refl}}\)&lt;/span&gt;, and
-connection on this face &lt;span class=&#34;math inline&#34;&gt;\(F\)&lt;/span&gt; is merely
-flat&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;curvature is a function from 2-cells to &lt;span
-class=&#34;math inline&#34;&gt;\(\pi_1(X,v)\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
-T(v)&amp;amp;:U\\
-T(L)&amp;amp;:T(v)=T(v)\\
-T(F)&amp;amp;:\ensuremath{\mathsf{refl}}_{T(v)}=T(L)
-\end{aligned}\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;The class &lt;span class=&#34;math inline&#34;&gt;\(||T(L)||:\pi_1(U,T(v))\)&lt;/span&gt;
-is an obstruction to having &lt;span class=&#34;math inline&#34;&gt;\(T(F)\)&lt;/span&gt;,
-to extending &lt;span class=&#34;math inline&#34;&gt;\(T\)&lt;/span&gt; to &lt;span
-class=&#34;math inline&#34;&gt;\(F\)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;The hierarchy of maps extending to higher skeletons, which we call
-connections of dimension 1, 2, etc. This works for ANY HIT. The
-combinatorial manifold structure is just one special case that gives me
-a specific map &lt;span class=&#34;math inline&#34;&gt;\(T\)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;Then Mathieu drew on the board a patch of a combinatorial manifold
-with links of different vertex cardinalities. Then he wrote some maps
-that might help define the degree/index of a vector field. &lt;img
-src=&#34;board2024.jpg&#34; style=&#34;width:5.55556in&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
-&lt;h2 data-number=&#34;0.3&#34; id=&#34;november-27-mathieu&#34;&gt;&lt;span
-class=&#34;header-section-number&#34;&gt;0.3&lt;/span&gt; November 27, Mathieu&lt;/h2&gt;
-&lt;p&gt;An angle is: a path in &lt;span class=&#34;math inline&#34;&gt;\(S^1\)&lt;/span&gt; from
-&lt;span class=&#34;math inline&#34;&gt;\(\ensuremath{\mathsf{base}}\)&lt;/span&gt;, which
-is equiv to a path in &lt;span
-class=&#34;math inline&#34;&gt;\(\mathop{\mathrm{Aut}}S^1\)&lt;/span&gt; from the
-identity to another automorphism. (automorphism is primary: aut of
-tangent circle).&lt;/p&gt;
-&lt;p&gt;Viewed as automorphisms we can compose them.&lt;/p&gt;
-&lt;p&gt;Viewed as paths, multiply path 2 by the element at the endpoint of
-path 1.&lt;/p&gt;
-&lt;p&gt;Curvature maps a loop in the base to a path in automorphisms of the
-tangent circle at the base.&lt;/p&gt;
-&lt;p&gt;A vector field + a trivialization (“fiducial v.f.” in the book by
-Needham) maps a loop in the base to the tangent circle at the basepoint.
-We can take the index/degree of this.&lt;/p&gt;
-&lt;p&gt;Given a loop &lt;span class=&#34;math inline&#34;&gt;\(L:v=v\)&lt;/span&gt;, v.f. &lt;span
-class=&#34;math inline&#34;&gt;\(F\)&lt;/span&gt;, take &lt;span
-class=&#34;math inline&#34;&gt;\(F(L):tr_L(F(v))=F(v)\)&lt;/span&gt; (&lt;span
-class=&#34;math inline&#34;&gt;\(\mathsf{apd}\)&lt;/span&gt;, dependent action on
-paths).&lt;/p&gt;
-&lt;p&gt;Type family &lt;span class=&#34;math inline&#34;&gt;\(f:A\to U\)&lt;/span&gt;, &lt;span
-class=&#34;math inline&#34;&gt;\(\prod_{a:A}fa\)&lt;/span&gt; is the type of dependent
-functions. Let &lt;span class=&#34;math inline&#34;&gt;\(X:\prod_{a:A}fa\)&lt;/span&gt;. We
-can apply &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; to a path &lt;span
-class=&#34;math inline&#34;&gt;\(p:a=_A b\)&lt;/span&gt;. &lt;span
-class=&#34;math inline&#34;&gt;\(X(p)\)&lt;/span&gt; is a path over &lt;span
-class=&#34;math inline&#34;&gt;\(p\)&lt;/span&gt;. &lt;span
-class=&#34;math display&#34;&gt;\[X(p):tr_p(X(a))=X(b)\]&lt;/span&gt; &lt;span
-class=&#34;math inline&#34;&gt;\(X(a), X(b)\)&lt;/span&gt; are terms of different
-types.&lt;/p&gt;
-&lt;p&gt;Greg reminded about horizontal projection interpretation of covariant
-derivative: covariant derivative of &lt;span
-class=&#34;math inline&#34;&gt;\(F\)&lt;/span&gt; along itself: lift &lt;span
-class=&#34;math inline&#34;&gt;\(F\)&lt;/span&gt; to &lt;span
-class=&#34;math inline&#34;&gt;\(F&amp;#39;\)&lt;/span&gt; horizontal on &lt;span
-class=&#34;math inline&#34;&gt;\(TP (P\to M)\)&lt;/span&gt;, take &lt;span
-class=&#34;math inline&#34;&gt;\([F&amp;#39;, F&amp;#39;]\)&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Tangent bundle &lt;span class=&#34;math inline&#34;&gt;\(TM\to M\)&lt;/span&gt; w/
-connection &lt;span class=&#34;math inline&#34;&gt;\(\omega\)&lt;/span&gt;. Covariant
-derivative of &lt;span class=&#34;math inline&#34;&gt;\(F\)&lt;/span&gt; in the direction of
-&lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt;: &lt;span
-class=&#34;math inline&#34;&gt;\(\nabla_X(F)(x)\)&lt;/span&gt;.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Lift &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; and &lt;span
-class=&#34;math inline&#34;&gt;\(F\)&lt;/span&gt; to horizontal fields &lt;span
-class=&#34;math inline&#34;&gt;\(X&amp;#39;, F&amp;#39;\)&lt;/span&gt; in &lt;span
-class=&#34;math inline&#34;&gt;\(TTM\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Compute &lt;span class=&#34;math inline&#34;&gt;\([X&amp;#39;, F&amp;#39;]\)&lt;/span&gt; to
-&lt;span class=&#34;math inline&#34;&gt;\(TTM\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Decompose &lt;span class=&#34;math inline&#34;&gt;\([X&amp;#39;, F&amp;#39;] = [X,
-F]&amp;#39; + \omega([X&amp;#39;, F&amp;#39;])\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Mathieu would rather use this formulation: &lt;span
-class=&#34;math display&#34;&gt;\[\nabla_X(F) = [X, F] + \omega(X)(F)\]&lt;/span&gt; Now
-take &lt;span class=&#34;math inline&#34;&gt;\(X=F\)&lt;/span&gt;: &lt;span
-class=&#34;math display&#34;&gt;\[\nabla_F(F) = [F, F] + \omega(F)(F) =
-\omega(F)(F)\]&lt;/span&gt;&lt;/p&gt;
 &lt;h1 data-number=&#34;1&#34; id=&#34;overview&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;1&lt;/span&gt; Overview&lt;/h1&gt;
 &lt;p&gt;We will define&lt;/p&gt;
@@ -379,7 +207,7 @@ terms &lt;span
 class=&#34;math inline&#34;&gt;\(C:\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)&lt;/span&gt;
 “mere circles.”&lt;/p&gt;
 &lt;p&gt;We will see in Section &lt;a href=&#34;#sec:polygons&#34;
-data-reference-type=&#34;ref&#34; data-reference=&#34;sec:polygons&#34;&gt;3.1&lt;/a&gt; that
+data-reference-type=&#34;ref&#34; data-reference=&#34;sec:polygons&#34;&gt;3.3&lt;/a&gt; that
 &lt;span
 class=&#34;math inline&#34;&gt;\(\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)&lt;/span&gt;
 contains all the polygons. We will construct a map &lt;span
@@ -660,42 +488,241 @@ class=&#34;math inline&#34;&gt;\(\mathsf{apd}\)&lt;/span&gt;: &lt;span
 class=&#34;math inline&#34;&gt;\(\mathsf{apd}(X)(p):\mathsf{tr}(p)(X(a))=X(b)\)&lt;/span&gt;
 which is a pathover between the two values of the section over the
 basepoints of the path &lt;span class=&#34;math inline&#34;&gt;\(p\)&lt;/span&gt;.&lt;/p&gt;
-&lt;h1 data-number=&#34;3&#34; id=&#34;combinatorial-manifolds&#34;&gt;&lt;span
-class=&#34;header-section-number&#34;&gt;3&lt;/span&gt; Combinatorial manifolds&lt;/h1&gt;
-&lt;p&gt;We will adapt to higher inductive types in a straightforward manner
-the classical construction of &lt;em&gt;combinatorial manifolds&lt;/em&gt;. See for
-example the classic book by Kirby and Siebenmann&lt;span class=&#34;citation&#34;
-data-cites=&#34;kirby_siebenmann&#34;&gt; (&lt;a href=&#34;#ref-kirby_siebenmann&#34;
-role=&#34;doc-biblioref&#34;&gt;Kirby &amp;amp; Siebenmann, 1977&lt;/a&gt;)&lt;/span&gt;. These are
-a subclass of simplicial complexes.&lt;/p&gt;
-&lt;h2 data-number=&#34;3.1&#34; id=&#34;sec:polygons&#34;&gt;&lt;span
-class=&#34;header-section-number&#34;&gt;3.1&lt;/span&gt; Polygons&lt;/h2&gt;
-&lt;p&gt;We will now start looking at some examples, first by defining a type
-that is important both for the domain and the codomain of mere circles:
-a square.&lt;/p&gt;
+&lt;h1 data-number=&#34;3&#34; id=&#34;discrete-manifolds&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;3&lt;/span&gt; Discrete manifolds&lt;/h1&gt;
+&lt;h2 data-number=&#34;3.1&#34; id=&#34;abstract-simplicial-complexes&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;3.1&lt;/span&gt; Abstract simplicial
+complexes&lt;/h2&gt;
 &lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 4&lt;/strong&gt;. &lt;em&gt;The higher inductive type &lt;span
-class=&#34;math inline&#34;&gt;\(C_4\)&lt;/span&gt; (where C stands for “circle”). See
-Figure &lt;a href=&#34;#fig:c4&#34; data-reference-type=&#34;ref&#34;
-data-reference=&#34;fig:c4&#34;&gt;2&lt;/a&gt;. &lt;span
-class=&#34;math display&#34;&gt;\[\begin{aligned}
-C_4 &amp;amp;: \mathsf{Type}\\
-c_1, c_2, c_3, c_4 &amp;amp;: C_4 \\
-c_1c_2 &amp;amp;: c_1 = c_2 \\
-c_2c_3 &amp;amp;: c_2 = c_3 \\
-c_3c_4 &amp;amp;: c_3 = c_4 \\
-c_4c_1 &amp;amp;: c_4 = c_1 \\
-\end{aligned}\]&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Definition 4&lt;/strong&gt;. &lt;em&gt;An &lt;strong&gt;abstract simplicial
+complex &lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; of dimension &lt;span
+class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;&lt;/strong&gt; consists of a set &lt;span
+class=&#34;math inline&#34;&gt;\(M_0\)&lt;/span&gt; of vertices, and for each &lt;span
+class=&#34;math inline&#34;&gt;\(0&amp;lt;k\leq n\)&lt;/span&gt; a set &lt;span
+class=&#34;math inline&#34;&gt;\(M_k\)&lt;/span&gt; of subsets of &lt;span
+class=&#34;math inline&#34;&gt;\(M_0\)&lt;/span&gt; of cardinality &lt;span
+class=&#34;math inline&#34;&gt;\(k+1\)&lt;/span&gt;, such that any &lt;span
+class=&#34;math inline&#34;&gt;\((j+1)\)&lt;/span&gt;-element subset of &lt;span
+class=&#34;math inline&#34;&gt;\(M_k\)&lt;/span&gt; is an element of &lt;span
+class=&#34;math inline&#34;&gt;\(M_j\)&lt;/span&gt;. The elements of &lt;span
+class=&#34;math inline&#34;&gt;\(M_k\)&lt;/span&gt; are called &lt;strong&gt;&lt;span
+class=&#34;math inline&#34;&gt;\(k\)&lt;/span&gt;-faces&lt;/strong&gt;. Denote by &lt;span
+class=&#34;math inline&#34;&gt;\(\mathsf{SimpCompSet_n}\)&lt;/span&gt; the type of
+abstract simplicial complexes of dimension &lt;span
+class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; (where the suffix &lt;span
+class=&#34;math inline&#34;&gt;\(\mathsf{Set}\)&lt;/span&gt; reminds us that this is a
+type of sets). &lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; is automatically
+equipped with a chain of inclusions &lt;span
+class=&#34;math inline&#34;&gt;\(M_0\hookrightarrow
+M_1\hookrightarrow\cdots\hookrightarrow M_n=M\)&lt;/span&gt; where each &lt;span
+class=&#34;math inline&#34;&gt;\(M_k:\mathsf{SimpCompSet_k}\)&lt;/span&gt; is a complex
+in its own right. We call &lt;span class=&#34;math inline&#34;&gt;\(M_k\)&lt;/span&gt; the
+&lt;strong&gt;&lt;span class=&#34;math inline&#34;&gt;\(k\)&lt;/span&gt;-skeleton&lt;/strong&gt; of
+&lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;figure id=&#34;fig:c4&#34;&gt;
-&lt;img src=&#34;./65e8b23208c0767d91d16d7792f76567c2694e92.png&#34; /&gt;
-&lt;figcaption&gt;The HIT &lt;span
-class=&#34;math inline&#34;&gt;\(C_4\)&lt;/span&gt;.&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;p&gt;The standard HoTT circle itself is a non-example of a combinatorial
-manifold since it lacks the second vertex of the edge:&lt;/p&gt;
 &lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 5&lt;/strong&gt;. &lt;em&gt;The higher inductive type &lt;span
+&lt;p&gt;&lt;strong&gt;Definition 5&lt;/strong&gt;. &lt;em&gt;Let &lt;span
+class=&#34;math inline&#34;&gt;\(\Delta^n\)&lt;/span&gt; be the standard &lt;span
+class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;-simplex in &lt;span
+class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{R}}^n\)&lt;/span&gt; given by &lt;span
+class=&#34;math inline&#34;&gt;\(\{x_1,\ldots,x_n|\sum_i x_i\leq 1\}\)&lt;/span&gt;. Let
+&lt;span class=&#34;math inline&#34;&gt;\(M:\mathsf{SimpCompSet_n}\)&lt;/span&gt;. The
+&lt;strong&gt;geometric realization&lt;/strong&gt; &lt;span
+class=&#34;math inline&#34;&gt;\(|M|:\mathsf{Top}\)&lt;/span&gt; of &lt;span
+class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; in the category of topological spaces
+is given inductively as follows: &lt;span
+class=&#34;math inline&#34;&gt;\(|M_0|=M_0\)&lt;/span&gt;, and given &lt;span
+class=&#34;math inline&#34;&gt;\(|M_{k-1}|\)&lt;/span&gt; we form &lt;span
+class=&#34;math inline&#34;&gt;\(|M_k|\)&lt;/span&gt; by the pushout in sets&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;./f12341344e1eee10c7ac2af715f5c52d98de4971.png&#34;
+alt=&#34;image&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;which attaches each &lt;span class=&#34;math inline&#34;&gt;\(k\)&lt;/span&gt;-simplex by
+taking the convex hull of the appropriate &lt;span
+class=&#34;math inline&#34;&gt;\(k+1\)&lt;/span&gt; points in &lt;span
+class=&#34;math inline&#34;&gt;\(|M_{k-1}|\)&lt;/span&gt;. The collection of vertical
+maps on the right gives a sequence of inclusion maps of skeleta &lt;span
+class=&#34;math inline&#34;&gt;\(|M_0|\xrightarrow[]{i_1}|M_1|\xrightarrow[]{i_2}\cdots\xrightarrow[]{i_n}|M_n|=|M|\)&lt;/span&gt;.&lt;/p&gt;
+&lt;div id=&#34;def:link&#34; class=&#34;mydef&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Definition 6&lt;/strong&gt;. &lt;em&gt;In an abstract simplicial complex
+&lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; of dimension &lt;span
+class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;, the &lt;strong&gt;link&lt;/strong&gt; of a vertex
+&lt;span class=&#34;math inline&#34;&gt;\(v\)&lt;/span&gt; is the &lt;span
+class=&#34;math inline&#34;&gt;\(n-1\)&lt;/span&gt;-face containing every face &lt;span
+class=&#34;math inline&#34;&gt;\(m\in M_{n-1}\)&lt;/span&gt; such that &lt;span
+class=&#34;math inline&#34;&gt;\(v\notin m\)&lt;/span&gt; and &lt;span
+class=&#34;math inline&#34;&gt;\(m\cup v\)&lt;/span&gt; is an &lt;span
+class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;-face of &lt;span
+class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt;. &lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;The link is all the neighboring vertices of &lt;span
+class=&#34;math inline&#34;&gt;\(v\)&lt;/span&gt; and the codimension 1 faces joining
+those to each other. See for example Figure &lt;a href=&#34;#fig:link&#34;
+data-reference-type=&#34;ref&#34; data-reference=&#34;fig:link&#34;&gt;2&lt;/a&gt;.&lt;/p&gt;
+&lt;figure id=&#34;fig:link&#34;&gt;
+&lt;img src=&#34;./77310e6013360f123738b3984e7a97ecabc90011.png&#34; /&gt;
+&lt;figcaption&gt;The link of &lt;span class=&#34;math inline&#34;&gt;\(v\)&lt;/span&gt; in this
+complex consists of the vertices &lt;span
+class=&#34;math inline&#34;&gt;\(\{a,b,c,d,e,f\}\)&lt;/span&gt; and the edges &lt;span
+class=&#34;math inline&#34;&gt;\(\{ab,bc,cd,de,ef,fa\}\)&lt;/span&gt;, forming a
+hexagon.&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;div class=&#34;mydef&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Definition 7&lt;/strong&gt;. &lt;em&gt;A &lt;strong&gt;combinatorial
+manifold&lt;/strong&gt; (or &lt;strong&gt;combinatorial triangulation&lt;/strong&gt;) of
+dimension &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; is a simplicial complex
+of dimension &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; such that the link
+of every vertex is a simplicial sphere of dimension &lt;span
+class=&#34;math inline&#34;&gt;\(n-1\)&lt;/span&gt; (i.e. its geometric realization is
+homeomorphic to an &lt;span class=&#34;math inline&#34;&gt;\(n-1\)&lt;/span&gt;-sphere).
+Denote by &lt;span class=&#34;math inline&#34;&gt;\(\mathsf{CombMfdSet_n}\)&lt;/span&gt; the
+type of combinatorial manifolds of dimension &lt;span
+class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; (which the notation again reminds us
+are sets).&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;In a 2-dimensional combinatorial manifold the link is a polygon. See
+Figures &lt;a href=&#34;#fig:sphere_triangulation&#34; data-reference-type=&#34;ref&#34;
+data-reference=&#34;fig:sphere_triangulation&#34;&gt;3&lt;/a&gt;, &lt;a
+href=&#34;#fig:torus_wiki_triangulation&#34; data-reference-type=&#34;ref&#34;
+data-reference=&#34;fig:torus_wiki_triangulation&#34;&gt;4&lt;/a&gt;, and &lt;a
+href=&#34;#fig:genus3_wiki_triangulation&#34; data-reference-type=&#34;ref&#34;
+data-reference=&#34;fig:genus3_wiki_triangulation&#34;&gt;5&lt;/a&gt; for some examples
+of 2-dimensional combinatorial manifolds of genus 0, 1, and 3.&lt;/p&gt;
+&lt;p&gt;A classical 1940 result of Whitehead, building on Cairn, states that
+every smooth manifold admits a combinatorial triangulation&lt;span
+class=&#34;citation&#34; data-cites=&#34;whitehead_triangulation&#34;&gt; (&lt;a
+href=&#34;#ref-whitehead_triangulation&#34; role=&#34;doc-biblioref&#34;&gt;Whitehead,
+1940&lt;/a&gt;)&lt;/span&gt;. So it appears reasonably well motivated to study this
+class of objects. See for example the classic book by Kirby and
+Siebenmann&lt;span class=&#34;citation&#34; data-cites=&#34;kirby_siebenmann&#34;&gt; (&lt;a
+href=&#34;#ref-kirby_siebenmann&#34; role=&#34;doc-biblioref&#34;&gt;Kirby &amp;amp;
+Siebenmann, 1977&lt;/a&gt;)&lt;/span&gt;.&lt;/p&gt;
+&lt;figure id=&#34;fig:sphere_triangulation&#34;&gt;
+&lt;img src=&#34;triangulated_sphere.png&#34; style=&#34;width:2.77778in&#34; /&gt;
+&lt;figcaption&gt;A combinatorial triangulation of a sphere, created with the
+tool &lt;code&gt;stripy&lt;/code&gt;.&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure id=&#34;fig:torus_wiki_triangulation&#34;&gt;
+&lt;img src=&#34;Torus-triang.png&#34; style=&#34;width:2.77778in&#34; /&gt;
+&lt;figcaption&gt;A torus with an interesting triangulation, from Wikipedia.
+The links have various vertex counts from 5-7. Clearly a constant value
+of 6 would also work. (&lt;a
+href=&#34;https://commons.wikimedia.org/w/index.php?curid=30856793&#34;&gt;By
+Ag2gaeh&lt;/a&gt; - Own work, CC BY-SA 3.0.)&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure id=&#34;fig:genus3_wiki_triangulation&#34;&gt;
+&lt;img src=&#34;triangulated_genus3.png&#34; style=&#34;width:2.77778in&#34; /&gt;
+&lt;figcaption&gt;A 3-holed torus with triangulation, from Wikipedia. (&lt;a
+href=&#34;https://commons.wikimedia.org/wiki/File:Tri-brezel.svg&#34;&gt;By
+Ag2gaeh&lt;/a&gt; - Own work, CC BY-SA 3.0.)&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;h2 data-number=&#34;3.2&#34;
+id=&#34;higher-inductive-combinatorial-manifolds&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;3.2&lt;/span&gt; Higher inductive combinatorial
+manifolds&lt;/h2&gt;
+&lt;p&gt;Instead of &lt;span class=&#34;math inline&#34;&gt;\(|M|:\mathsf{Top}\)&lt;/span&gt; we
+can use the simplicial complex to obtain &lt;span
+class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{M}}:\mathsf{Type}\)&lt;/span&gt; by
+forming a homotopy pushout:&lt;/p&gt;
+&lt;div class=&#34;mydef&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Definition 8&lt;/strong&gt;. &lt;em&gt;Define the function
+&lt;strong&gt;realization&lt;/strong&gt; &lt;span
+class=&#34;math inline&#34;&gt;\(\mathcal{R}:\mathsf{SimpCompSet_n}\to\mathsf{Type}\)&lt;/span&gt;
+by forming a homotopy pushout of the data.&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;For example in dimension 1 we could take the triangle with vertices
+&lt;span class=&#34;math inline&#34;&gt;\(\{v_1, v_2, v_3\}\)&lt;/span&gt; and edges &lt;span
+class=&#34;math inline&#34;&gt;\(\{e_{12}, e_{23}, e_{31}\}\)&lt;/span&gt; and form a
+polygon &lt;span class=&#34;math inline&#34;&gt;\(C_3\)&lt;/span&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./c3a716dea641c066daa75853a4f0f4a160eb7286.png&#34;
+alt=&#34;image&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;In dimension 2 we could fill in maps from &lt;span
+class=&#34;math inline&#34;&gt;\(C_3\)&lt;/span&gt; into our higher type by adding
+faces:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./925edd3170010ec3846c7273fc4617a559366bb9.png&#34;
+alt=&#34;image&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;The types &lt;span class=&#34;math inline&#34;&gt;\(C_3\)&lt;/span&gt; and &lt;span
+class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{M}}_1\)&lt;/span&gt; are 1-types,
+&lt;span class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{M}}_2\)&lt;/span&gt; is a
+2-type, and the rest are sets. The map &lt;span
+class=&#34;math inline&#34;&gt;\(\partial_0\)&lt;/span&gt; maps each pair &lt;span
+class=&#34;math inline&#34;&gt;\((e, S^0)\)&lt;/span&gt; to the pair of points this edge
+connects. Similarly, &lt;span class=&#34;math inline&#34;&gt;\(\partial_1\)&lt;/span&gt;
+maps each &lt;span class=&#34;math inline&#34;&gt;\((f, C_3)\)&lt;/span&gt; to the triangle
+that this face bounds. The &lt;span class=&#34;math inline&#34;&gt;\(h_i\)&lt;/span&gt; are
+the proofs of commutativity, and the two squares are also both homotopy
+pushouts. Note that the pushouts could be re-expressed as HIT
+constructors.&lt;/p&gt;
+&lt;p&gt;The horizontal chain of maps in this latter diagram shows that we
+have more. The construction in fact gives us a map to &lt;em&gt;presented
+types&lt;/em&gt;:&lt;/p&gt;
+&lt;div class=&#34;mydef&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Definition 9&lt;/strong&gt;. &lt;em&gt;Let &lt;span
+class=&#34;math inline&#34;&gt;\(\mathsf{Type}^n\)&lt;/span&gt; denote the universe of
+&lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;-types. Denote by &lt;span
+class=&#34;math inline&#34;&gt;\(\mathsf{Type}^{[n]}\)&lt;/span&gt; the type of
+&lt;strong&gt;presented &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;-types&lt;/strong&gt;
+consisting of types and maps &lt;span
+class=&#34;math inline&#34;&gt;\(X_0\xrightarrow[]{f_1}
+X_1\xrightarrow[]{f_2}\cdots\xrightarrow[]{f_n} X_n\)&lt;/span&gt; where &lt;span
+class=&#34;math inline&#34;&gt;\(X_i:\mathsf{Type}^i\)&lt;/span&gt; is an &lt;span
+class=&#34;math inline&#34;&gt;\(i\)&lt;/span&gt;-type.&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;We therefore have a map &lt;span
+class=&#34;math inline&#34;&gt;\(\mathcal{R}:\mathsf{SimpCompSet_n}\to\mathsf{Type}^{[n]}\)&lt;/span&gt;.
+But we can also remember the data of the maps &lt;span
+class=&#34;math inline&#34;&gt;\(M_i\to\ensuremath{\mathbb{M}}_i\)&lt;/span&gt;, so that
+&lt;span class=&#34;math inline&#34;&gt;\(\mathcal{R}\)&lt;/span&gt; takes values in
+diagrams of the form&lt;br /&gt;
+&lt;img src=&#34;./25305a52d833204c6b770fefe988ac3224a36b78.png&#34;
+alt=&#34;image&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;which is a natural transformation from the inclusion &lt;span
+class=&#34;math inline&#34;&gt;\(\mathsf{SimpCompSet_n}\to\mathsf{Type}\)&lt;/span&gt; to
+&lt;span class=&#34;math inline&#34;&gt;\(\mathcal{R}\)&lt;/span&gt;.&lt;/p&gt;
+&lt;div class=&#34;mydef&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Definition 10&lt;/strong&gt;. &lt;em&gt;The type of &lt;strong&gt;marked
+presented &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;-types&lt;/strong&gt; is a
+presented &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;-type together with maps
+from sets forming a commutative diagram as in &lt;a
+href=&#34;#fig:marked_presented_type&#34; data-reference-type=&#34;ref&#34;
+data-reference=&#34;fig:marked_presented_type&#34;&gt;[fig:marked_presented_type]&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;The horizontal maps pick out terms for each vertex, edge, face, and
+so on. Each of these higher faces has a designated point coming from the
+pushout, with a family of paths joining that point to the entire
+boundary. This is a hub and spoke model, with the maps &lt;span
+class=&#34;math inline&#34;&gt;\(*_v\)&lt;/span&gt; etc. giving us the hubs.&lt;/p&gt;
+&lt;p&gt;We can add to the diagram the spans that actually define the
+pushouts:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./e6876907414f87b7268d981cebb85feac77cafb2.png&#34;
+alt=&#34;image&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Going forward we will stick with 2-dimensional complexes, where
+forming the link of a vertex gives us a map &lt;span
+class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{M}}_0\to\ensuremath{\mathsf{Gon}}\)&lt;/span&gt;
+exactly when the complex is a combinatorial manifold, which by
+Corollary &lt;a href=&#34;#cor:gon&#34; data-reference-type=&#34;ref&#34;
+data-reference=&#34;cor:gon&#34;&gt;2&lt;/a&gt; means we have a map &lt;span
+class=&#34;math inline&#34;&gt;\(\mathop{\mathrm{\mathsf{link}}}:\ensuremath{\mathbb{M}}_0\to\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)&lt;/span&gt;.
+Extending this map to all of &lt;span
+class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{M}}\)&lt;/span&gt; and exploring
+what we obtain is the main purpose of this note.&lt;/p&gt;
+&lt;p&gt;We will import some of von Raumer&lt;span class=&#34;citation&#34;
+data-cites=&#34;vonraumer_nonabelian&#34;&gt; (&lt;a href=&#34;#ref-vonraumer_nonabelian&#34;
+role=&#34;doc-biblioref&#34;&gt;Raumer, 2015&lt;/a&gt;)&lt;/span&gt;, where he proves that
+given &lt;span
+class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{M}}:\mathsf{Type}^{[2]}\)&lt;/span&gt;
+we obtain a double groupoid.&lt;/p&gt;
+&lt;h2 data-number=&#34;3.3&#34; id=&#34;sec:polygons&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;3.3&lt;/span&gt; Polygons&lt;/h2&gt;
+&lt;p&gt;The 1-type &lt;span class=&#34;math inline&#34;&gt;\(C_3\)&lt;/span&gt; we created
+earlier by pushing out the combinatorial data of a set-based simplicial
+triangle is clearly an example of a type of marked presented polygons
+&lt;span class=&#34;math inline&#34;&gt;\(C_n, n:\ensuremath{\mathbb{N}}\)&lt;/span&gt;. The
+standard HoTT circle itself is usually given as a HIT and is a
+non-example of a combinatorial manifold since it lacks the second vertex
+of the edge:&lt;/p&gt;
+&lt;div class=&#34;mydef&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Definition 11&lt;/strong&gt;. &lt;em&gt;The higher inductive type &lt;span
 class=&#34;math inline&#34;&gt;\(S^1\)&lt;/span&gt; which we can also call &lt;span
 class=&#34;math inline&#34;&gt;\(C_1\)&lt;/span&gt;: &lt;span
 class=&#34;math display&#34;&gt;\[\begin{aligned}
@@ -704,17 +731,17 @@ S^1&amp;amp;:\mathsf{Type}\\
 \mathsf{loop}&amp;amp;:\mathsf{base}=\mathsf{base}
 \end{aligned}\]&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;p&gt;Both of these are examples of a family of HIT data we will call &lt;span
-class=&#34;math inline&#34;&gt;\(\ensuremath{\mathsf{Gon}}\)&lt;/span&gt;, the set of
-&lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;-gon HITs for some natural number
-&lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;, following the pattern of the
-HITs above. We’ll see below that the realization of an &lt;span
-class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;-gon is a mere circle, i.e. we have
-&lt;span class=&#34;math inline&#34;&gt;\(\mathcal{R}:\ensuremath{\mathsf{Gon}}\to
+&lt;p&gt;Denote by &lt;span
+class=&#34;math inline&#34;&gt;\(\ensuremath{\mathsf{Gon}}\)&lt;/span&gt; the set of
+marked presented &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;-gons for some
+natural number &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;. We’ll see below
+that the realization of an &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;-gon is
+a mere circle, i.e. we have a forgetful map &lt;span
+class=&#34;math inline&#34;&gt;\(\ensuremath{\mathsf{Gon}}\to
 \mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)&lt;/span&gt;.&lt;/p&gt;
-&lt;h2 data-number=&#34;3.2&#34;
+&lt;h2 data-number=&#34;3.4&#34;
 id=&#34;adding-and-removing-points-from-polygons&#34;&gt;&lt;span
-class=&#34;header-section-number&#34;&gt;3.2&lt;/span&gt; Adding and removing points from
+class=&#34;header-section-number&#34;&gt;3.4&lt;/span&gt; Adding and removing points from
 polygons&lt;/h2&gt;
 &lt;p&gt;Recall that given functions &lt;span
 class=&#34;math inline&#34;&gt;\(\phi,\psi:A\to B\)&lt;/span&gt; between two arbitrary
@@ -725,7 +752,7 @@ Transport in this family is given by concatenation as follows, where
 &lt;span class=&#34;math inline&#34;&gt;\(p:a=_A a&amp;#39;\)&lt;/span&gt; and &lt;span
 class=&#34;math inline&#34;&gt;\(q:\phi(a)=\psi(a)\)&lt;/span&gt; (see Figure &lt;a
 href=&#34;#fig:transport_family_of_paths&#34; data-reference-type=&#34;ref&#34;
-data-reference=&#34;fig:transport_family_of_paths&#34;&gt;3&lt;/a&gt;): &lt;span
+data-reference=&#34;fig:transport_family_of_paths&#34;&gt;6&lt;/a&gt;): &lt;span
 class=&#34;math display&#34;&gt;\[\mathsf{tr}(p)(q) = \phi(p)^{-1}\cdot q\cdot
 \psi(p)\]&lt;/span&gt; which gives a path in &lt;span
 class=&#34;math inline&#34;&gt;\(\phi(a&amp;#39;)=\psi(a&amp;#39;)\)&lt;/span&gt; by connecting
@@ -744,8 +771,8 @@ class=&#34;math inline&#34;&gt;\(\phi,\psi:A\to B\)&lt;/span&gt;.&lt;/figcaption
 &lt;/figure&gt;
 &lt;div id=&#34;lem:addpoints&#34; class=&#34;mylemma&#34;&gt;
 &lt;p&gt;&lt;strong&gt;Lemma 3&lt;/strong&gt;. &lt;em&gt;Let &lt;span
-class=&#34;math inline&#34;&gt;\(C_n\)&lt;/span&gt; be the polygon 1-dimensional HIT with
-&lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; vertices. Then &lt;span
+class=&#34;math inline&#34;&gt;\(C_n\)&lt;/span&gt; be the marked presented polygon
+1-type with &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; vertices. Then &lt;span
 class=&#34;math inline&#34;&gt;\(C_2\simeq C_1\)&lt;/span&gt; and in fact &lt;span
 class=&#34;math inline&#34;&gt;\(C_n\simeq C_{n-1}\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
@@ -875,7 +902,7 @@ points to &lt;span class=&#34;math inline&#34;&gt;\(S^1\)&lt;/span&gt; and use L
 href=&#34;#lem:addpoints&#34; data-reference-type=&#34;ref&#34;
 data-reference=&#34;lem:addpoints&#34;&gt;3&lt;/a&gt;. ◻&lt;/p&gt;
 &lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 6&lt;/strong&gt;. &lt;em&gt;For &lt;span
+&lt;p&gt;&lt;strong&gt;Definition 12&lt;/strong&gt;. &lt;em&gt;For &lt;span
 class=&#34;math inline&#34;&gt;\(k:\ensuremath{\mathbb{N}}\)&lt;/span&gt; define &lt;span
 class=&#34;math inline&#34;&gt;\(m_k:\ensuremath{\mathsf{Gon}}\to\ensuremath{\mathsf{Gon}}\)&lt;/span&gt;
 where &lt;span class=&#34;math inline&#34;&gt;\(m_k:C_n\to C_{kn}\)&lt;/span&gt; adds &lt;span
@@ -888,279 +915,34 @@ homogeneous: by applying &lt;span class=&#34;math inline&#34;&gt;\(m_6\)&lt;/spa
 pentagons and &lt;span class=&#34;math inline&#34;&gt;\(m_5\)&lt;/span&gt; to the hexagons
 we obtain a collection of 30-gons. This will be useful when we work more
 with the link function.&lt;/p&gt;
-&lt;h2 data-number=&#34;3.3&#34; id=&#34;abstract-simplicial-complexes&#34;&gt;&lt;span
-class=&#34;header-section-number&#34;&gt;3.3&lt;/span&gt; Abstract simplicial
-complexes&lt;/h2&gt;
-&lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 7&lt;/strong&gt;. &lt;em&gt;An &lt;strong&gt;abstract simplicial
-complex &lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; of dimension &lt;span
-class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;&lt;/strong&gt; consists of a set &lt;span
-class=&#34;math inline&#34;&gt;\(M_0\)&lt;/span&gt; of vertices, and for each &lt;span
-class=&#34;math inline&#34;&gt;\(0&amp;lt;k\leq n\)&lt;/span&gt; a set &lt;span
-class=&#34;math inline&#34;&gt;\(M_k\)&lt;/span&gt; of subsets of &lt;span
-class=&#34;math inline&#34;&gt;\(M_0\)&lt;/span&gt; of cardinality &lt;span
-class=&#34;math inline&#34;&gt;\(k+1\)&lt;/span&gt;, such that any &lt;span
-class=&#34;math inline&#34;&gt;\((j+1)\)&lt;/span&gt;-element subset of &lt;span
-class=&#34;math inline&#34;&gt;\(M_k\)&lt;/span&gt; is an element of &lt;span
-class=&#34;math inline&#34;&gt;\(M_j\)&lt;/span&gt;. The elements of &lt;span
-class=&#34;math inline&#34;&gt;\(M_k\)&lt;/span&gt; are called &lt;strong&gt;&lt;span
-class=&#34;math inline&#34;&gt;\(k\)&lt;/span&gt;-faces&lt;/strong&gt;. Denote by &lt;span
-class=&#34;math inline&#34;&gt;\(\mathsf{SimpCompSet_n}\)&lt;/span&gt; the type of
-abstract simplicial complexes of dimension &lt;span
-class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; (where the suffix &lt;span
-class=&#34;math inline&#34;&gt;\(\mathsf{Set}\)&lt;/span&gt; reminds us that this is a
-type of sets). &lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; is automatically
-equipped with a chain of inclusions &lt;span
-class=&#34;math inline&#34;&gt;\(M_0\hookrightarrow
-M_1\hookrightarrow\cdots\hookrightarrow M_n=M\)&lt;/span&gt; where each &lt;span
-class=&#34;math inline&#34;&gt;\(M_k:\mathsf{SimpCompSet_k}\)&lt;/span&gt; is a complex
-in its own right. We call &lt;span class=&#34;math inline&#34;&gt;\(M_k\)&lt;/span&gt; the
-&lt;strong&gt;&lt;span class=&#34;math inline&#34;&gt;\(k\)&lt;/span&gt;-skeleton&lt;/strong&gt; of
-&lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 8&lt;/strong&gt;. &lt;em&gt;Let &lt;span
-class=&#34;math inline&#34;&gt;\(\Delta^n\)&lt;/span&gt; be the standard &lt;span
-class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;-simplex in &lt;span
-class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{R}}^n\)&lt;/span&gt; given by &lt;span
-class=&#34;math inline&#34;&gt;\(\{x_1,\ldots,x_n|\sum_i x_i\leq 1\}\)&lt;/span&gt;. Let
-&lt;span class=&#34;math inline&#34;&gt;\(M:\mathsf{SimpCompSet_n}\)&lt;/span&gt;. The
-&lt;strong&gt;geometric realization&lt;/strong&gt; &lt;span
-class=&#34;math inline&#34;&gt;\(|M|:\mathsf{Top}\)&lt;/span&gt; of &lt;span
-class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; in the category of topological spaces
-is given inductively as follows: &lt;span
-class=&#34;math inline&#34;&gt;\(|M_0|=M_0\)&lt;/span&gt;, and given &lt;span
-class=&#34;math inline&#34;&gt;\(|M_{k-1}|\)&lt;/span&gt; we form &lt;span
-class=&#34;math inline&#34;&gt;\(|M_k|\)&lt;/span&gt; by the pushout in sets&lt;/em&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;&lt;img src=&#34;./f12341344e1eee10c7ac2af715f5c52d98de4971.png&#34;
-alt=&#34;image&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;which attaches each &lt;span class=&#34;math inline&#34;&gt;\(k\)&lt;/span&gt;-simplex by
-taking the convex hull of the appropriate &lt;span
-class=&#34;math inline&#34;&gt;\(k+1\)&lt;/span&gt; points in &lt;span
-class=&#34;math inline&#34;&gt;\(|M_{k-1}|\)&lt;/span&gt;. The collection of vertical
-maps on the right gives a sequence of inclusion maps of skeleta &lt;span
-class=&#34;math inline&#34;&gt;\(|M_0|\xrightarrow[]{i_1}|M_1|\xrightarrow[]{i_2}\cdots\xrightarrow[]{i_n}|M_n|=|M|\)&lt;/span&gt;.&lt;/p&gt;
-&lt;div id=&#34;def:link&#34; class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 9&lt;/strong&gt;. &lt;em&gt;In an abstract simplicial complex
-&lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; of dimension &lt;span
-class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;, the &lt;strong&gt;link&lt;/strong&gt; of a vertex
-&lt;span class=&#34;math inline&#34;&gt;\(v\)&lt;/span&gt; is the &lt;span
-class=&#34;math inline&#34;&gt;\(n-1\)&lt;/span&gt;-face containing every face &lt;span
-class=&#34;math inline&#34;&gt;\(m\in M_{n-1}\)&lt;/span&gt; such that &lt;span
-class=&#34;math inline&#34;&gt;\(v\notin m\)&lt;/span&gt; and &lt;span
-class=&#34;math inline&#34;&gt;\(m\cup v\)&lt;/span&gt; is an &lt;span
-class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;-face of &lt;span
-class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt;. &lt;/em&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;The link is all the neighboring vertices of &lt;span
-class=&#34;math inline&#34;&gt;\(v\)&lt;/span&gt; and the codimension 1 faces joining
-those to each other. See for example Figure &lt;a href=&#34;#fig:link&#34;
-data-reference-type=&#34;ref&#34; data-reference=&#34;fig:link&#34;&gt;4&lt;/a&gt;.&lt;/p&gt;
-&lt;figure id=&#34;fig:link&#34;&gt;
-&lt;img src=&#34;./77310e6013360f123738b3984e7a97ecabc90011.png&#34; /&gt;
-&lt;figcaption&gt;The link of &lt;span class=&#34;math inline&#34;&gt;\(v\)&lt;/span&gt; in this
-complex consists of the vertices &lt;span
-class=&#34;math inline&#34;&gt;\(\{a,b,c,d,e,f\}\)&lt;/span&gt; and the edges &lt;span
-class=&#34;math inline&#34;&gt;\(\{ab,bc,cd,de,ef,fa\}\)&lt;/span&gt;, forming a
-hexagon.&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 10&lt;/strong&gt;. &lt;em&gt;A &lt;strong&gt;combinatorial
-manifold&lt;/strong&gt; (or &lt;strong&gt;combinatorial triangulation&lt;/strong&gt;) of
-dimension &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; is a simplicial complex
-of dimension &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; such that the link
-of every vertex is a simplicial sphere of dimension &lt;span
-class=&#34;math inline&#34;&gt;\(n-1\)&lt;/span&gt; (i.e. its geometric realization is
-homeomorphic to an &lt;span class=&#34;math inline&#34;&gt;\(n-1\)&lt;/span&gt;-sphere).
-Denote by &lt;span class=&#34;math inline&#34;&gt;\(\mathsf{CombMfdSet_n}\)&lt;/span&gt; the
-type of combinatorial manifolds of dimension &lt;span
-class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; (which the notation again reminds us
-are sets).&lt;/em&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;In a 2-dimensional combinatorial manifold the link is a polygon. See
-Figures &lt;a href=&#34;#fig:sphere_triangulation&#34; data-reference-type=&#34;ref&#34;
-data-reference=&#34;fig:sphere_triangulation&#34;&gt;5&lt;/a&gt;, &lt;a
-href=&#34;#fig:torus_wiki_triangulation&#34; data-reference-type=&#34;ref&#34;
-data-reference=&#34;fig:torus_wiki_triangulation&#34;&gt;6&lt;/a&gt;, and &lt;a
-href=&#34;#fig:genus3_wiki_triangulation&#34; data-reference-type=&#34;ref&#34;
-data-reference=&#34;fig:genus3_wiki_triangulation&#34;&gt;7&lt;/a&gt; for some examples
-of 2-dimensional combinatorial manifolds of genus 0, 1, and 3.&lt;/p&gt;
-&lt;p&gt;A classical 1940 result of Whitehead, building on Cairn, states that
-every smooth manifold admits a combinatorial triangulation&lt;span
-class=&#34;citation&#34; data-cites=&#34;whitehead_triangulation&#34;&gt; (&lt;a
-href=&#34;#ref-whitehead_triangulation&#34; role=&#34;doc-biblioref&#34;&gt;Whitehead,
-1940&lt;/a&gt;)&lt;/span&gt;. So it appears reasonably well motivated to study this
-class of objects.&lt;/p&gt;
-&lt;figure id=&#34;fig:sphere_triangulation&#34;&gt;
-&lt;img src=&#34;triangulated_sphere.png&#34; style=&#34;width:2.77778in&#34; /&gt;
-&lt;figcaption&gt;A combinatorial triangulation of a sphere, created with the
-tool &lt;code&gt;stripy&lt;/code&gt;.&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;figure id=&#34;fig:torus_wiki_triangulation&#34;&gt;
-&lt;img src=&#34;Torus-triang.png&#34; style=&#34;width:2.77778in&#34; /&gt;
-&lt;figcaption&gt;A torus with an interesting triangulation, from Wikipedia.
-The links have various vertex counts from 5-7. Clearly a constant value
-of 6 would also work. (&lt;a
-href=&#34;https://commons.wikimedia.org/w/index.php?curid=30856793&#34;&gt;By
-Ag2gaeh&lt;/a&gt; - Own work, CC BY-SA 3.0.)&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;figure id=&#34;fig:genus3_wiki_triangulation&#34;&gt;
-&lt;img src=&#34;triangulated_genus3.png&#34; style=&#34;width:2.77778in&#34; /&gt;
-&lt;figcaption&gt;A 3-holed torus with triangulation, from Wikipedia. (&lt;a
-href=&#34;https://commons.wikimedia.org/wiki/File:Tri-brezel.svg&#34;&gt;By
-Ag2gaeh&lt;/a&gt; - Own work, CC BY-SA 3.0.)&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;h2 data-number=&#34;3.4&#34;
-id=&#34;higher-inductive-combinatorial-manifolds&#34;&gt;&lt;span
-class=&#34;header-section-number&#34;&gt;3.4&lt;/span&gt; Higher inductive combinatorial
-manifolds&lt;/h2&gt;
-&lt;p&gt;Instead of &lt;span class=&#34;math inline&#34;&gt;\(|M|:\mathsf{Top}\)&lt;/span&gt; we
-can use the simplicial complex to obtain &lt;span
-class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{M}}:\mathsf{Type}\)&lt;/span&gt; by
-forming a homotopy pushout:&lt;/p&gt;
-&lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 11&lt;/strong&gt;. &lt;em&gt;Define the function
-&lt;strong&gt;realization&lt;/strong&gt; &lt;span
-class=&#34;math inline&#34;&gt;\(\mathcal{R}:\mathsf{SimpCompSet_n}\to\mathsf{Type}\)&lt;/span&gt;
-by forming a homotopy pushout of the data, for example in dimension
-2:&lt;/em&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;&lt;img src=&#34;./925edd3170010ec3846c7273fc4617a559366bb9.png&#34;
-alt=&#34;image&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;The types &lt;span class=&#34;math inline&#34;&gt;\(C_3\)&lt;/span&gt; and &lt;span
-class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{M}}_1\)&lt;/span&gt; are 1-types,
-&lt;span class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{M}}_2\)&lt;/span&gt; is a
-2-type, and the rest are sets. The map &lt;span
-class=&#34;math inline&#34;&gt;\(\partial_0\)&lt;/span&gt; maps each pair &lt;span
-class=&#34;math inline&#34;&gt;\((e, S^0)\)&lt;/span&gt; to the pair of points this edge
-connects. Similarly, &lt;span class=&#34;math inline&#34;&gt;\(\partial_1\)&lt;/span&gt;
-maps each &lt;span class=&#34;math inline&#34;&gt;\((f, C_3)\)&lt;/span&gt; to the triangle
-that this face bounds. The &lt;span class=&#34;math inline&#34;&gt;\(h_i\)&lt;/span&gt; are
-the proofs of commutativity, and the two squares are also both homotopy
-pushouts. Note that the pushouts could be re-expressed as HIT
-constructors.&lt;/p&gt;
-&lt;p&gt;The horizontal chain of maps in the diagram shows that we have more.
-The construction in fact gives us a map to &lt;em&gt;presented types&lt;/em&gt;:&lt;/p&gt;
-&lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 12&lt;/strong&gt;. &lt;em&gt;Let &lt;span
-class=&#34;math inline&#34;&gt;\(\mathsf{Type}^n\)&lt;/span&gt; denote the universe of
-&lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;-types. Denote by &lt;span
-class=&#34;math inline&#34;&gt;\(\mathsf{Type}^{[n]}\)&lt;/span&gt; the type of
-&lt;strong&gt;presented &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;-types&lt;/strong&gt;
-consisting of types and maps &lt;span
-class=&#34;math inline&#34;&gt;\(X_0\xrightarrow[]{f_1}
-X_1\xrightarrow[]{f_2}\cdots\xrightarrow[]{f_n} X_n\)&lt;/span&gt; where &lt;span
-class=&#34;math inline&#34;&gt;\(X_i:\mathsf{Type}^i\)&lt;/span&gt; is an &lt;span
-class=&#34;math inline&#34;&gt;\(i\)&lt;/span&gt;-type.&lt;/em&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;We therefore have a map &lt;span
-class=&#34;math inline&#34;&gt;\(\mathcal{R}:\mathsf{SimpCompSet_n}\to\mathsf{Type}^{[n]}\)&lt;/span&gt;.
-But we can also remember the data of the maps &lt;span
-class=&#34;math inline&#34;&gt;\(M_i\to\ensuremath{\mathbb{M}}_i\)&lt;/span&gt;, so that
-&lt;span class=&#34;math inline&#34;&gt;\(\mathcal{R}\)&lt;/span&gt; takes values in
-diagrams of the form&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;./dd6c89ec9d7b363178ecf16defbe12c06e5f8190.png&#34;
-alt=&#34;image&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;which is a natural transformation from the inclusion &lt;span
-class=&#34;math inline&#34;&gt;\(\mathsf{SimpCompSet_n}\to\mathsf{Type}\)&lt;/span&gt; to
-&lt;span class=&#34;math inline&#34;&gt;\(\mathcal{R}\)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;The horizontal maps pick out terms for each vertex, edge, face, and
-so on. Each of these higher faces has a designated point coming from the
-pushout, with a family of paths joining that point to the entire
-boundary. This is a hub and spoke model, with the maps &lt;span
-class=&#34;math inline&#34;&gt;\(*_v\)&lt;/span&gt; etc. giving us the hubs.&lt;/p&gt;
-&lt;p&gt;We can add to the diagram the spans that actually define the
-pushouts:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;./e6876907414f87b7268d981cebb85feac77cafb2.png&#34;
-alt=&#34;image&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;Going forward we will stick with 2-dimensional complexes, where
-forming the link of a vertex gives us a map &lt;span
-class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{M}}_0\to\ensuremath{\mathsf{Gon}}\)&lt;/span&gt;
-exactly when the complex is a combinatorial manifold, which by
-Corollary &lt;a href=&#34;#cor:gon&#34; data-reference-type=&#34;ref&#34;
-data-reference=&#34;cor:gon&#34;&gt;2&lt;/a&gt; means we have a map &lt;span
-class=&#34;math inline&#34;&gt;\(\mathop{\mathrm{\mathsf{link}}}:\ensuremath{\mathbb{M}}_0\to\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)&lt;/span&gt;.
-Extending this map to all of &lt;span
-class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{M}}\)&lt;/span&gt; and exploring
-what we obtain is the main purpose of this note.&lt;/p&gt;
-&lt;p&gt;We will import some of von Raumer&lt;span class=&#34;citation&#34;
-data-cites=&#34;vonraumer_nonabelian&#34;&gt; (&lt;a href=&#34;#ref-vonraumer_nonabelian&#34;
-role=&#34;doc-biblioref&#34;&gt;Raumer, 2015&lt;/a&gt;)&lt;/span&gt;, where he proves that
-given &lt;span
-class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{M}}:\mathsf{Type}^{[2]}\)&lt;/span&gt;
-we obtain a double groupoid.&lt;/p&gt;
 &lt;h2 data-number=&#34;3.5&#34; id=&#34;the-higher-inductive-type-oo&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;3.5&lt;/span&gt; The higher inductive type &lt;span
 class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{O}}\)&lt;/span&gt;&lt;/h2&gt;
 &lt;p&gt;We will create our first combinatorial surface, an octahedron. In
-&lt;span class=&#34;math inline&#34;&gt;\(\mathsf{SimpCompSet_n}\)&lt;/span&gt; the data of
-the octahedron can be represented with a &lt;em&gt;Hasse diagram&lt;/em&gt;, which
-shows the poset of inclusions in a graded manner, with a special top and
-bottom element (Figure &lt;a href=&#34;#fig:hasse_octohedron&#34;
-data-reference-type=&#34;ref&#34;
-data-reference=&#34;fig:hasse_octohedron&#34;&gt;8&lt;/a&gt;).&lt;/p&gt;
+&lt;span class=&#34;math inline&#34;&gt;\(\mathsf{SimpCompSet_n}\)&lt;/span&gt; the
+combinatorial data of the faces can be represented with a &lt;em&gt;Hasse
+diagram&lt;/em&gt;, which shows the poset of inclusions in a graded manner,
+with a special top and bottom element. We give an octahedron in
+Figure &lt;a href=&#34;#fig:hasse_octohedron&#34; data-reference-type=&#34;ref&#34;
+data-reference=&#34;fig:hasse_octohedron&#34;&gt;7&lt;/a&gt;. The names of the vertices
+are short for white, yellow, blue, red, green, and orange, the colors of
+the faces of a Rubik’s cube. The octahedron is the dual of the cube,
+with each vertex corresponding to a face.&lt;/p&gt;
 &lt;figure id=&#34;fig:hasse_octohedron&#34;&gt;
 &lt;img src=&#34;./d5743120eca41fcca336362bde409486e6435ecb.png&#34; /&gt;
-&lt;figcaption&gt;Hasse diagram of an octahedron.&lt;/figcaption&gt;
+&lt;figcaption&gt;Hasse diagram of an octahedron &lt;span
+class=&#34;math inline&#34;&gt;\(O\)&lt;/span&gt;.&lt;/figcaption&gt;
 &lt;/figure&gt;
-&lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 13&lt;/strong&gt;. &lt;em&gt;The HIT &lt;span
-class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{O}}_0\)&lt;/span&gt; is just 6
-points, intended as the 0-skeleton of an octahedron, with vertices named
-after the colors on the faces of a famous Central European puzzle cube.
-&lt;span class=&#34;math display&#34;&gt;\[w, y, b, r, g, o :
-\ensuremath{\mathbb{O}}_0\]&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 14&lt;/strong&gt;. &lt;em&gt;The HIT &lt;span
-class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{O}}_1\)&lt;/span&gt; is the
-1-skeleton of an octahedron. &lt;span
-class=&#34;math display&#34;&gt;\[\begin{aligned}
-w, y, b, r, g, o &amp;amp;: \ensuremath{\mathbb{O}}_1 &amp;amp; yg &amp;amp;: y=g \\
-wb &amp;amp;: w=b &amp;amp; yo &amp;amp;: y=o \\
-wr &amp;amp;: w=r &amp;amp; br &amp;amp;: b=r \\
-wg &amp;amp;: w=g &amp;amp; rg &amp;amp;: r=g \\
-wo &amp;amp;: w=o &amp;amp; go &amp;amp;: g=o \\
-yb &amp;amp;: y=b &amp;amp; ob &amp;amp;: o=b \\
-yr &amp;amp;: y=r
-\end{aligned}\]&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 15&lt;/strong&gt;. &lt;em&gt;The HIT &lt;span
-class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{O}}\)&lt;/span&gt; is an octahedron:
-&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
-w, y, b, r, g, o &amp;amp;: \ensuremath{\mathbb{O}}\\
-wb &amp;amp;: w=b &amp;amp; br &amp;amp;: b=r &amp;amp; wbr &amp;amp;: wb\cdot br\cdot
-wr^{-1} = \ensuremath{\mathsf{refl}}_w \\
-wr &amp;amp;: w=r &amp;amp; rg &amp;amp;: r=g &amp;amp; wrg &amp;amp;: wr\cdot rg\cdot
-wg^{-1} = \ensuremath{\mathsf{refl}}_w \\
-wg &amp;amp;: w=g &amp;amp; go &amp;amp;: g=o &amp;amp; wgo &amp;amp;: wg\cdot go\cdot
-wo^{-1} = \ensuremath{\mathsf{refl}}_w \\
-wo &amp;amp;: w=o &amp;amp; ob &amp;amp;: o=b &amp;amp; wob &amp;amp;: wo\cdot ob\cdot
-wb^{-1} = \ensuremath{\mathsf{refl}}_w \\
-yb &amp;amp;: y=b &amp;amp; &amp;amp; &amp;amp; yrb &amp;amp;: yr\cdot rb\cdot yb^{-1} =
-\ensuremath{\mathsf{refl}}_y \\
-yr &amp;amp;: y=r &amp;amp; &amp;amp; &amp;amp; ygr &amp;amp;: yg\cdot gr\cdot yr^{-1} =
-\ensuremath{\mathsf{refl}}_y \\
-yg &amp;amp;: y=g &amp;amp; &amp;amp; &amp;amp; yog &amp;amp;: yo\cdot og\cdot yg^{-1} =
-\ensuremath{\mathsf{refl}}_y \\
-yo &amp;amp;: y=o &amp;amp; &amp;amp; &amp;amp; ybo &amp;amp;: yb\cdot bo\cdot yo^{-1} =
-\ensuremath{\mathsf{refl}}_y
-\end{aligned}\]&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;/div&gt;
+&lt;p&gt;Applying the map &lt;span class=&#34;math inline&#34;&gt;\(\mathcal{R}\)&lt;/span&gt; to
+&lt;span class=&#34;math inline&#34;&gt;\(O_0\to O_1\to O\)&lt;/span&gt; gives the presented
+type &lt;span class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{O}}_0\to
+\ensuremath{\mathbb{O}}_1\to \ensuremath{\mathbb{O}}\)&lt;/span&gt;.&lt;/p&gt;
 &lt;figure&gt;
 &lt;img src=&#34;./ff7f3a1e9ad288427a1f8fe354f5e5e4112b62fd.png&#34; /&gt;
-&lt;figcaption&gt;The HIT &lt;span
+&lt;figcaption&gt;The presented type &lt;span
 class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{O}}\)&lt;/span&gt; which has 6
 points, 12 1-paths, 8 2-paths.&lt;/figcaption&gt;
 &lt;/figure&gt;
-&lt;p&gt;We have obvious maps &lt;span
-class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{O}}_0\xrightarrow[]{i_0}
-\ensuremath{\mathbb{O}}_1\xrightarrow[]{i_1}
-\ensuremath{\mathbb{O}}\)&lt;/span&gt; that include each skeleton into the
-next-higher-dimensional skeleton by the obvious inclusion of
-constructors.&lt;/p&gt;
 &lt;h1 data-number=&#34;4&#34; id=&#34;connections-and-curvature&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;4&lt;/span&gt; Connections and curvature&lt;/h1&gt;
 &lt;h2 data-number=&#34;4.1&#34; id=&#34;the-function-t&#34;&gt;&lt;span
@@ -1172,7 +954,7 @@ meant to be like the circle bundle of a tangent bundle. And so we will
 begin with the intrinsic data of the link at each point: taking the link
 of a vertex gives us a map from vertices to polygons.&lt;/p&gt;
 &lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 16&lt;/strong&gt;. &lt;em&gt;&lt;span
+&lt;p&gt;&lt;strong&gt;Definition 13&lt;/strong&gt;. &lt;em&gt;&lt;span
 class=&#34;math inline&#34;&gt;\(T_0\stackrel{\mathrm{def}}{=}\mathop{\mathrm{\mathsf{link}}}:\ensuremath{\mathbb{O}}_0\to\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)&lt;/span&gt;
 is given by: &lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
 \mathop{\mathrm{\mathsf{link}}}(w) &amp;amp;= brgo &amp;amp;
@@ -1203,7 +985,7 @@ action on paths is its own structure. Two functions on the octahedron
 could agree on points but differ on edges. We are going to identify this
 1-dimensional freedom with a connection:&lt;/p&gt;
 &lt;div id=&#34;def:connection&#34; class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 17&lt;/strong&gt;. &lt;em&gt;A &lt;strong&gt;connection&lt;/strong&gt; on
+&lt;p&gt;&lt;strong&gt;Definition 14&lt;/strong&gt;. &lt;em&gt;A &lt;strong&gt;connection&lt;/strong&gt; on
 a higher combinatorial manifold is an extension of a circle bundle from
 the 0-skeleton to the 1-skeleton.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
@@ -1217,7 +999,7 @@ class=&#34;math inline&#34;&gt;\(o\mapsto o\)&lt;/span&gt; because those lie on 
 of rotation. Then &lt;span class=&#34;math inline&#34;&gt;\(g\mapsto w\)&lt;/span&gt; and
 &lt;span class=&#34;math inline&#34;&gt;\(b\mapsto y\)&lt;/span&gt;.&lt;/p&gt;
 &lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 18&lt;/strong&gt;. &lt;em&gt;Define &lt;span
+&lt;p&gt;&lt;strong&gt;Definition 15&lt;/strong&gt;. &lt;em&gt;Define &lt;span
 class=&#34;math inline&#34;&gt;\(T_1:\ensuremath{\mathbb{O}}_1\to\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)&lt;/span&gt;
 on just the 1-skeleton by extending &lt;span
 class=&#34;math inline&#34;&gt;\(T_0\)&lt;/span&gt; as follows: Transport away from &lt;span
@@ -1264,13 +1046,13 @@ class=&#34;math inline&#34;&gt;\(T_1\)&lt;/span&gt; does to triangular paths suc
 circulates around the boundary of face &lt;span
 class=&#34;math inline&#34;&gt;\(wbr\)&lt;/span&gt;). You can see it if you imagine
 Figure &lt;a href=&#34;#fig:triangle_of_equators&#34; data-reference-type=&#34;ref&#34;
-data-reference=&#34;fig:triangle_of_equators&#34;&gt;9&lt;/a&gt; as the frames of a short
+data-reference=&#34;fig:triangle_of_equators&#34;&gt;8&lt;/a&gt; as the frames of a short
 movie. Or you can place your palm over the top of a cube and note where
 your fingers are pointing, then slide your hand to an equatorial face,
 then along the equator, then back to the top. The answer is: you come
 back rotated clockwise by a quarter-turn.&lt;/p&gt;
 &lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 19&lt;/strong&gt;. &lt;em&gt;The map &lt;span
+&lt;p&gt;&lt;strong&gt;Definition 16&lt;/strong&gt;. &lt;em&gt;The map &lt;span
 class=&#34;math inline&#34;&gt;\(R:C_4\to C_4\)&lt;/span&gt; rotates by one quarter turn,
 one “click&#34;:&lt;/em&gt;&lt;/p&gt;
 &lt;div class=&#34;multicols&#34;&gt;
@@ -1312,7 +1094,7 @@ class=&#34;math inline&#34;&gt;\(\ensuremath{\mathsf{refl}}_{T_1(w)}\)&lt;/span&
 &lt;span class=&#34;math inline&#34;&gt;\(T_1(wb\cdot br\cdot rw)\)&lt;/span&gt;. Here
 &lt;em&gt;there is no additional freedom&lt;/em&gt;.&lt;/p&gt;
 &lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 20&lt;/strong&gt;. &lt;em&gt;Define &lt;span
+&lt;p&gt;&lt;strong&gt;Definition 17&lt;/strong&gt;. &lt;em&gt;Define &lt;span
 class=&#34;math inline&#34;&gt;\(T_2:\ensuremath{\mathbb{O}}\to\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)&lt;/span&gt;
 by extending &lt;span class=&#34;math inline&#34;&gt;\(T_1\)&lt;/span&gt; to the faces as
 follows:&lt;/em&gt;&lt;/p&gt;
@@ -1347,7 +1129,7 @@ space &lt;span
 class=&#34;math inline&#34;&gt;\(C_4=_{\mathrm{EM}(\ensuremath{\mathbb{Z}},1)}C_4\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;def:curvature&#34; class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 21&lt;/strong&gt;. &lt;em&gt;The &lt;strong&gt;curvature of a
+&lt;p&gt;&lt;strong&gt;Definition 18&lt;/strong&gt;. &lt;em&gt;The &lt;strong&gt;curvature of a
 connection&lt;/strong&gt; on a type family &lt;span
 class=&#34;math inline&#34;&gt;\(T:\ensuremath{\mathbb{M}}\to\mathcal{U}\)&lt;/span&gt;
 at a vertex &lt;span class=&#34;math inline&#34;&gt;\(v\)&lt;/span&gt; of a 2-face &lt;span
@@ -1372,7 +1154,7 @@ derivative of the connection.”&lt;/em&gt;&lt;/p&gt;
 class=&#34;header-section-number&#34;&gt;4.2&lt;/span&gt; &lt;span
 class=&#34;math inline&#34;&gt;\(T\)&lt;/span&gt; on concatenations of faces&lt;/h2&gt;
 &lt;p&gt;Consider Figure &lt;a href=&#34;#fig:concat&#34; data-reference-type=&#34;ref&#34;
-data-reference=&#34;fig:concat&#34;&gt;10&lt;/a&gt; and the diamond on the left. Denote
+data-reference=&#34;fig:concat&#34;&gt;9&lt;/a&gt; and the diamond on the left. Denote
 the clockwise triangular path around the left triangle by &lt;span
 class=&#34;math inline&#34;&gt;\(bcab\)&lt;/span&gt;, and around the right by &lt;span
 class=&#34;math inline&#34;&gt;\(bdcb\)&lt;/span&gt;. These are loops at &lt;span
@@ -1415,17 +1197,17 @@ vertex will have six neighbors. So all the links will be merely equal to
 &lt;span class=&#34;math inline&#34;&gt;\(C_6\)&lt;/span&gt; which is a hexagonal version of
 &lt;span class=&#34;math inline&#34;&gt;\(C_4\)&lt;/span&gt;. See Figure &lt;a
 href=&#34;#fig:torus&#34; data-reference-type=&#34;ref&#34;
-data-reference=&#34;fig:torus&#34;&gt;11&lt;/a&gt;.&lt;/p&gt;
+data-reference=&#34;fig:torus&#34;&gt;10&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;To help parse this figure, imagine instead Figure &lt;a
 href=&#34;#fig:flattorus&#34; data-reference-type=&#34;ref&#34;
-data-reference=&#34;fig:flattorus&#34;&gt;12&lt;/a&gt;. We take this simple
+data-reference=&#34;fig:flattorus&#34;&gt;11&lt;/a&gt;. We take this simple
 alternating-triangle pattern, then glue the left and right edges, then
 bend into Figure &lt;a href=&#34;#fig:torus&#34; data-reference-type=&#34;ref&#34;
-data-reference=&#34;fig:torus&#34;&gt;11&lt;/a&gt;. The fact that each column in
+data-reference=&#34;fig:torus&#34;&gt;10&lt;/a&gt;. The fact that each column in
 Figure &lt;a href=&#34;#fig:flattorus&#34; data-reference-type=&#34;ref&#34;
-data-reference=&#34;fig:flattorus&#34;&gt;12&lt;/a&gt; has four dots corresponds to the
+data-reference=&#34;fig:flattorus&#34;&gt;11&lt;/a&gt; has four dots corresponds to the
 torus in Figure &lt;a href=&#34;#fig:torus&#34; data-reference-type=&#34;ref&#34;
-data-reference=&#34;fig:torus&#34;&gt;11&lt;/a&gt; having a square in front, diamonds in
+data-reference=&#34;fig:torus&#34;&gt;10&lt;/a&gt; having a square in front, diamonds in
 the middle, and a square in back.&lt;/p&gt;
 &lt;figure id=&#34;fig:torus&#34;&gt;
 &lt;img src=&#34;./0087b249788a090ea395f319a1aa6bb257b59103.png&#34; /&gt;
@@ -1480,7 +1262,7 @@ open question.&lt;/p&gt;
 &lt;h1 data-number=&#34;5&#34; id=&#34;vector-fields&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;5&lt;/span&gt; Vector fields&lt;/h1&gt;
 &lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 22&lt;/strong&gt;. &lt;em&gt;A &lt;strong&gt;partial
+&lt;p&gt;&lt;strong&gt;Definition 19&lt;/strong&gt;. &lt;em&gt;A &lt;strong&gt;partial
 function&lt;/strong&gt; &lt;span class=&#34;math inline&#34;&gt;\(f:A\to B\)&lt;/span&gt; is a
 function &lt;span class=&#34;math inline&#34;&gt;\(f:A\to B+\mathbb{1}\)&lt;/span&gt;, the
 disjoint union of &lt;span class=&#34;math inline&#34;&gt;\(B\)&lt;/span&gt; with the
@@ -1496,7 +1278,7 @@ pointing of &lt;em&gt;some&lt;/em&gt; of the fibers. This aligns with the classi
 picture of a choice of nonzero vector at each point, except for some
 points where the vector field vanishes.&lt;/p&gt;
 &lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 23&lt;/strong&gt;. &lt;em&gt;Let &lt;span
+&lt;p&gt;&lt;strong&gt;Definition 20&lt;/strong&gt;. &lt;em&gt;Let &lt;span
 class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{M}}:\mathsf{CombMfd_2}\)&lt;/span&gt;
 be a combinatorial manifold and &lt;span class=&#34;math inline&#34;&gt;\(Z\)&lt;/span&gt;
 an isolated set of vertices. A &lt;strong&gt;vector field &lt;span
