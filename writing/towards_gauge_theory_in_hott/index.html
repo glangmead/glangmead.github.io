@@ -555,11 +555,9 @@ class="math inline">\(T\)</span></a></li>
 id="toc-t-on-concatenations-of-faces"><span
 class="toc-section-number">4.2</span> <span
 class="math inline">\(T\)</span> on concatenations of faces</a></li>
-<li><a href="#the-torus" id="toc-the-torus"><span
-class="toc-section-number">4.3</span> The torus</a></li>
 <li><a href="#existence-of-connections"
 id="toc-existence-of-connections"><span
-class="toc-section-number">4.4</span> Existence of connections</a></li>
+class="toc-section-number">4.3</span> Existence of connections</a></li>
 </ul></li>
 <li><a href="#vector-fields" id="toc-vector-fields"><span
 class="toc-section-number">5</span> Vector fields</a>
@@ -595,6 +593,7 @@ There is no other work to be done in the world.” — Stephen Talbott,
 data-cites="talbott"> (<a href="#ref-talbott"
 role="doc-biblioref">Talbott, 1995</a>)</span></p>
 </blockquote>
+<p>Sections 3, 4, 5 are very new.</p>
 <h1 data-number="1" id="overview"><span
 class="header-section-number">1</span> Overview</h1>
 <p>We will define</p>
@@ -1049,9 +1048,11 @@ class="math inline">\(\ensuremath{\mathbb{M}}:\mathsf{Type}\)</span> by
 forming a homotopy pushout:</p>
 <div class="mydef">
 <p><strong>Definition 8</strong>. <em>Define the function
-<strong>realization</strong> <span
+<strong>(higher) realization</strong> <span
 class="math inline">\(\mathcal{R}:\mathsf{SimpCompSet_n}\to\mathsf{Type}\)</span>
-by forming a homotopy pushout of the data.</em></p>
+by performing a homotopy pushout of the data from the geometric
+realization. The simplex <span class="math inline">\(\Delta^k\)</span>
+is contractible up to homotopy so we can omit it.</em></p>
 </div>
 <p>For example in dimension 1 we could take the triangle with vertices
 <span class="math inline">\(\{v_1, v_2, v_3\}\)</span> and edges <span
@@ -1354,7 +1355,10 @@ with each vertex corresponding to a face.</p>
 <figure id="fig:hasse_octohedron">
 <img src="./d5743120eca41fcca336362bde409486e6435ecb.png" />
 <figcaption>Hasse diagram of an octahedron <span
-class="math inline">\(O\)</span>.</figcaption>
+class="math inline">\(O\)</span>. The row of singletons is <span
+class="math inline">\(O_0\)</span> and above it are <span
+class="math inline">\(O_1\)</span> and <span
+class="math inline">\(O_2\)</span>.</figcaption>
 </figure>
 <p>Applying the map <span class="math inline">\(\mathcal{R}\)</span> to
 <span class="math inline">\(O_0\to O_1\to O\)</span> gives the presented
@@ -1362,7 +1366,7 @@ type <span class="math inline">\(\ensuremath{\mathbb{O}}_0\to
 \ensuremath{\mathbb{O}}_1\to \ensuremath{\mathbb{O}}\)</span>.</p>
 <figure>
 <img src="./ff7f3a1e9ad288427a1f8fe354f5e5e4112b62fd.png" />
-<figcaption>The presented type <span
+<figcaption>The marked presented type <span
 class="math inline">\(\ensuremath{\mathbb{O}}\)</span> which has 6
 points, 12 1-paths, 8 2-paths.</figcaption>
 </figure>
@@ -1553,15 +1557,17 @@ class="math inline">\(C_4=_{\mathrm{EM}(\ensuremath{\mathbb{Z}},1)}C_4\)</span>.
 </div>
 <div id="def:curvature" class="mydef">
 <p><strong>Definition 18</strong>. <em>The <strong>curvature of a
-connection</strong> on a type family <span
+connection</strong> on a family <span
 class="math inline">\(T:\ensuremath{\mathbb{M}}\to\mathcal{U}\)</span>
 at a vertex <span class="math inline">\(v\)</span> of a 2-face <span
 class="math inline">\(f\)</span> with boundary path <span
-class="math inline">\(p_f\)</span> of a higher combinatorial manifold
-<span class="math inline">\(\ensuremath{\mathbb{M}}\)</span> is the
+class="math inline">\(p_f\)</span> of a marked presented type <span
+class="math inline">\(\ensuremath{\mathbb{M}}\)</span> is the
 automorphism <span class="math inline">\(\mathsf{tr}(p_f)(Tv)\)</span>
 together with a homotopy to <span
-class="math inline">\(\ensuremath{\text{id}}_{Tv}\)</span>.</em></p>
+class="math inline">\(\ensuremath{\text{id}}_{Tv}\)</span>. Since
+curvature is a proof that the holonomy is the identity, we may also call
+it a <strong>flatness structure</strong>.</em></p>
 </div>
 <div class="mynote">
 <p><strong>Note 2</strong>. <em>We have defined a function on a cell by
@@ -1576,9 +1582,18 @@ derivative of the connection.”</em></p>
 <h2 data-number="4.2" id="t-on-concatenations-of-faces"><span
 class="header-section-number">4.2</span> <span
 class="math inline">\(T\)</span> on concatenations of faces</h2>
-<p>Consider Figure <a href="#fig:concat" data-reference-type="ref"
-data-reference="fig:concat">9</a> and the diamond on the left. Denote
-the clockwise triangular path around the left triangle by <span
+<p>A marked presented type has a structure rich enough to perform
+1-groupoid and 2-groupoid operations. Consider a subcomplex <span
+class="math inline">\(P\subset M\)</span> and use it as a <em>probe</em>
+by composing with the marking maps into <span
+class="math inline">\(\ensuremath{\mathbb{M}}\)</span>:</p>
+<p><img src="./10c86e8a90e4404aa741d6b3c848320a397721ca.png"
+alt="image" /></p>
+<p>For example consider Figure <a href="#fig:concat"
+data-reference-type="ref" data-reference="fig:concat">9</a> and the
+diamond on the left, which is the image in <span
+class="math inline">\(\ensuremath{\mathbb{M}}\)</span> of a probe.
+Denote the clockwise triangular path around the left triangle by <span
 class="math inline">\(bcab\)</span>, and around the right by <span
 class="math inline">\(bdcb\)</span>. These are loops at <span
 class="math inline">\(b\)</span>. Say that the tangent map <span
@@ -1589,10 +1604,11 @@ class="math inline">\(R\)</span> is some rotation of the 4-sided polygon
 class="math inline">\(T(bdcb)=R\)</span> as well.</p>
 <figure id="fig:concat">
 <img src="concat.png" style="width:3.47222in" />
-<figcaption>Concatenating the triangles <span
+<figcaption>Concatenating the triangular probes <span
 class="math inline">\(bac\)</span> and <span
-class="math inline">\(bdc\)</span> gives the 4-gon <span
-class="math inline">\(abdc\)</span>.</figcaption>
+class="math inline">\(bdc\)</span> in <span
+class="math inline">\(\ensuremath{\mathbb{M}}\)</span> gives the 4-gon
+<span class="math inline">\(abdc\)</span>.</figcaption>
 </figure>
 <p>Since <span class="math inline">\(bcab\)</span> has a filler 2-cell,
 which we will call <span class="math inline">\(f_1\)</span>, we know
@@ -1613,60 +1629,8 @@ visiting all faces of the manifold), we can “sum” the curvature. For our
 ocatahedron where each triangle produces a rotation of <span
 class="math inline">\(R\)</span>, we’d get <span
 class="math inline">\(R^8\)</span>.</p>
-<h2 data-number="4.3" id="the-torus"><span
-class="header-section-number">4.3</span> The torus</h2>
-<p>We can define a combinatorial torus as a similar HIT. This time each
-vertex will have six neighbors. So all the links will be merely equal to
-<span class="math inline">\(C_6\)</span> which is a hexagonal version of
-<span class="math inline">\(C_4\)</span>. See Figure <a
-href="#fig:torus" data-reference-type="ref"
-data-reference="fig:torus">10</a>.</p>
-<p>To help parse this figure, imagine instead Figure <a
-href="#fig:flattorus" data-reference-type="ref"
-data-reference="fig:flattorus">11</a>. We take this simple
-alternating-triangle pattern, then glue the left and right edges, then
-bend into Figure <a href="#fig:torus" data-reference-type="ref"
-data-reference="fig:torus">10</a>. The fact that each column in
-Figure <a href="#fig:flattorus" data-reference-type="ref"
-data-reference="fig:flattorus">11</a> has four dots corresponds to the
-torus in Figure <a href="#fig:torus" data-reference-type="ref"
-data-reference="fig:torus">10</a> having a square in front, diamonds in
-the middle, and a square in back.</p>
-<figure id="fig:torus">
-<img src="./0087b249788a090ea395f319a1aa6bb257b59103.png" />
-<figcaption>Torus embedded in 3-dimensional space. If you see color in
-your rendering then black lines trace four square-shaped paths, red ones
-connect the front square to the middle diamonds, and blue ones connect
-the back path to the middle ones.</figcaption>
-</figure>
-<figure id="fig:flattorus">
-<img src="./d146339e921aa78b9b955b5b565fec3f7fd35f71.png" />
-<figcaption>An inspiration for the torus. Identify the sides and then
-the top, definitionally, to get the actual torus.</figcaption>
-</figure>
-<p>This somewhat arbitrary and unfamiliar model of a torus has the
-helpful property that it is a combinatorial manifold that is somewhat
-minimal while still being representable by a donut shape. But the
-donut-shaped version suggests a very different connection than the flat
-model! Starting with the flat model, we can easily see how to define
-<span class="math inline">\(T_1\)</span> by sliding a link rigidly along
-the page to the link of some adjacent vertex. Then we can see that
-transport around any loop is the identity and so <span
-class="math inline">\(T_2\)</span> is always the identity (together with
-the homotopy <span
-class="math inline">\(\ensuremath{\mathsf{refl}}_\ensuremath{\text{id}}\)</span>
-from the identity to itself). So if we imagine a way to visit every face
-like we did for the octahedron, starting and ending at some basepoint
-<span class="math inline">\(v\)</span>, we expect to see no net rotation
-at all of <span class="math inline">\(Tv\)</span>. Later we will call
-this “total curvature 0.”</p>
-<p>The donut-shaped torus suggests a different connection, one
-determined by the embedding in 3-space that we have represented. But the
-easiest way to think about that bundle and its connection and curvature
-is to wait until we have a proof of the Poincaré-Hopf theorem, so that
-we can instead compute with a vector field.</p>
-<h2 data-number="4.4" id="existence-of-connections"><span
-class="header-section-number">4.4</span> Existence of connections</h2>
+<h2 data-number="4.3" id="existence-of-connections"><span
+class="header-section-number">4.3</span> Existence of connections</h2>
 <p>How confident can we be that we can always define a connection on an
 arbitrary combinatorial manifold? Two things make the octahedron example
 special: the link is a 4-gon at every vertex, and every edge extends to
