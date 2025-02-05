@@ -593,7 +593,6 @@ There is no other work to be done in the world.” — Stephen Talbott,
 data-cites="talbott"> (<a href="#ref-talbott"
 role="doc-biblioref">Talbott, 1995</a>)</span></p>
 </blockquote>
-<p>Sections 3, 4, 5 are very new.</p>
 <h1 data-number="1" id="overview"><span
 class="header-section-number">1</span> Overview</h1>
 <p>We will define</p>
@@ -933,14 +932,15 @@ class="math inline">\(\mathsf{SimpCompSet_n}\)</span> the type of
 abstract simplicial complexes of dimension <span
 class="math inline">\(n\)</span> (where the suffix <span
 class="math inline">\(\mathsf{Set}\)</span> reminds us that this is a
-type of sets). <span class="math inline">\(M\)</span> is automatically
-equipped with a chain of inclusions <span
-class="math inline">\(M_0\hookrightarrow
-M_1\hookrightarrow\cdots\hookrightarrow M_n=M\)</span> where each <span
-class="math inline">\(M_k:\mathsf{SimpCompSet_k}\)</span> is a complex
-in its own right. We call <span class="math inline">\(M_k\)</span> the
-<strong><span class="math inline">\(k\)</span>-skeleton</strong> of
-<span class="math inline">\(M\)</span>.</em></p>
+type of sets). Let <span class="math inline">\(M_{\leq k}=\cup_{i\leq k}
+M_i\)</span> and note that <span class="math inline">\(M_{\leq
+n}=M\)</span>. We call <span class="math inline">\(M_{\leq k}\)</span>
+the <strong><span class="math inline">\(k\)</span>-skeleton</strong> of
+<span class="math inline">\(M\)</span>, and it is a complex in its own
+right. <span class="math inline">\(M\)</span> is automatically equipped
+with a chain of inclusions of the skeleta <span
+class="math inline">\(M_0\hookrightarrow M_{\leq
+1}\hookrightarrow\cdots\hookrightarrow M_{\leq n}=M\)</span>.</em></p>
 </div>
 <div class="mydef">
 <p><strong>Definition 5</strong>. <em>Let <span
@@ -954,32 +954,35 @@ class="math inline">\(|M|:\mathsf{Top}\)</span> of <span
 class="math inline">\(M\)</span> in the category of topological spaces
 is given inductively as follows: <span
 class="math inline">\(|M_0|=M_0\)</span>, and given <span
-class="math inline">\(|M_{k-1}|\)</span> we form <span
-class="math inline">\(|M_k|\)</span> by the pushout in sets</em></p>
+class="math inline">\(|M_{\leq k-1}|\)</span> we form <span
+class="math inline">\(|M_{\leq k}|\)</span> by the pushout in
+sets</em></p>
 </div>
-<p><img src="./f12341344e1eee10c7ac2af715f5c52d98de4971.png"
+<p><img src="./1d466232198fe8eea7faa0f5e8b41a4717b84268.png"
 alt="image" /></p>
 <p>which attaches each <span class="math inline">\(k\)</span>-simplex by
 taking the convex hull of the appropriate <span
 class="math inline">\(k+1\)</span> points in <span
-class="math inline">\(|M_{k-1}|\)</span>. The collection of vertical
-maps on the right gives a sequence of inclusion maps of skeleta <span
-class="math inline">\(|M_0|\xrightarrow[]{i_1}|M_1|\xrightarrow[]{i_2}\cdots\xrightarrow[]{i_n}|M_n|=|M|\)</span>.</p>
+class="math inline">\(|M_{\leq k-1}|\)</span>. The collection of
+vertical maps on the right gives a sequence of inclusion maps of skeleta
+<span class="math inline">\(|M_0|\xrightarrow[]{i_1}|M_{\leq
+1}|\xrightarrow[]{i_2}\cdots\xrightarrow[]{i_n}|M_{\leq
+n}|=|M|\)</span>.</p>
 <div id="def:link" class="mydef">
 <p><strong>Definition 6</strong>. <em>In an abstract simplicial complex
 <span class="math inline">\(M\)</span> of dimension <span
 class="math inline">\(n\)</span>, the <strong>link</strong> of a vertex
 <span class="math inline">\(v\)</span> is the <span
-class="math inline">\(n-1\)</span>-face containing every face <span
-class="math inline">\(m\in M_{n-1}\)</span> such that <span
-class="math inline">\(v\notin m\)</span> and <span
+class="math inline">\(n-1\)</span>-dimensional subcomplex containing
+every face <span class="math inline">\(m\in M_{n-1}\)</span> such that
+<span class="math inline">\(v\notin m\)</span> and <span
 class="math inline">\(m\cup v\)</span> is an <span
 class="math inline">\(n\)</span>-face of <span
 class="math inline">\(M\)</span>. </em></p>
 </div>
-<p>The link is all the neighboring vertices of <span
-class="math inline">\(v\)</span> and the codimension 1 faces joining
-those to each other. See for example Figure <a href="#fig:link"
+<p>The link is easier to understand as all the neighboring vertices of
+<span class="math inline">\(v\)</span> and the subcomplex containing
+these. See for example Figure <a href="#fig:link"
 data-reference-type="ref" data-reference="fig:link">2</a>.</p>
 <figure id="fig:link">
 <img src="./77310e6013360f123738b3984e7a97ecabc90011.png" />
@@ -994,11 +997,12 @@ hexagon.</figcaption>
 manifold</strong> (or <strong>combinatorial triangulation</strong>) of
 dimension <span class="math inline">\(n\)</span> is a simplicial complex
 of dimension <span class="math inline">\(n\)</span> such that the link
-of every vertex is a simplicial sphere of dimension <span
-class="math inline">\(n-1\)</span> (i.e. its geometric realization is
-homeomorphic to an <span class="math inline">\(n-1\)</span>-sphere).
-Denote by <span class="math inline">\(\mathsf{CombMfdSet_n}\)</span> the
-type of combinatorial manifolds of dimension <span
+of every vertex is a <strong>simplicial sphere</strong> of dimension
+<span class="math inline">\(n-1\)</span> (meaning its geometric
+realization is homeomorphic to an <span
+class="math inline">\(n-1\)</span>-sphere). Denote by <span
+class="math inline">\(\mathsf{CombMfdSet_n}\)</span> the type of
+combinatorial manifolds of dimension <span
 class="math inline">\(n\)</span> (which the notation again reminds us
 are sets).</em></p>
 </div>
@@ -1045,7 +1049,7 @@ manifolds</h2>
 <p>Instead of <span class="math inline">\(|M|:\mathsf{Top}\)</span> we
 can use the simplicial complex to obtain <span
 class="math inline">\(\ensuremath{\mathbb{M}}:\mathsf{Type}\)</span> by
-forming a homotopy pushout:</p>
+forming a :</p>
 <div class="mydef">
 <p><strong>Definition 8</strong>. <em>Define the function
 <strong>(higher) realization</strong> <span
@@ -1058,12 +1062,12 @@ is contractible up to homotopy so we can omit it.</em></p>
 <span class="math inline">\(\{v_1, v_2, v_3\}\)</span> and edges <span
 class="math inline">\(\{e_{12}, e_{23}, e_{31}\}\)</span> and form a
 polygon <span class="math inline">\(C_3\)</span>:</p>
-<p><img src="./c3a716dea641c066daa75853a4f0f4a160eb7286.png"
+<p><img src="./252abf37392302d8385255d35015d7aa4c6b1d52.png"
 alt="image" /></p>
 <p>In dimension 2 we could fill in maps from <span
-class="math inline">\(C_3\)</span> into our higher type by adding
-faces:</p>
-<p><img src="./925edd3170010ec3846c7273fc4617a559366bb9.png"
+class="math inline">\(C_3\)</span> into our higher type by adding faces
+(hence reusing the object we just built above):</p>
+<p><img src="./007c0ff944813389cf3fbe8f9e910b6b9a75033f.png"
 alt="image" /></p>
 <p>The types <span class="math inline">\(C_3\)</span> and <span
 class="math inline">\(\ensuremath{\mathbb{M}}_1\)</span> are 1-types,
@@ -1077,49 +1081,40 @@ that this face bounds. The <span class="math inline">\(h_i\)</span> are
 the proofs of commutativity, and the two squares are also both homotopy
 pushouts. Note that the pushouts could be re-expressed as HIT
 constructors.</p>
-<p>The horizontal chain of maps in this latter diagram shows that we
-have more. The construction in fact gives us a map to <em>presented
-types</em>:</p>
+<p><img src="./40950b2895706eb3184eb69349c17f96847b8aff.png"
+alt="image" /></p>
+<p>It’s useful to define types that remember all or some of the data in
+these diagrams:</p>
 <div class="mydef">
-<p><strong>Definition 9</strong>. <em>Let <span
-class="math inline">\(\mathsf{Type}^n\)</span> denote the universe of
-<span class="math inline">\(n\)</span>-types. Denote by <span
+<p><strong>Definition 9</strong>. <em>Denote by <span
 class="math inline">\(\mathsf{Type}^{[n]}\)</span> the type of
-<strong>presented <span class="math inline">\(n\)</span>-types</strong>
-consisting of types and maps <span
-class="math inline">\(X_0\xrightarrow[]{f_1}
-X_1\xrightarrow[]{f_2}\cdots\xrightarrow[]{f_n} X_n\)</span> where <span
-class="math inline">\(X_i:\mathsf{Type}^i\)</span> is an <span
-class="math inline">\(i\)</span>-type.</em></p>
+<strong>presented types of dimension <span
+class="math inline">\(n\)</span></strong>, which consist of a sequence
+<span
+class="math inline">\(\ensuremath{\mathbb{M}}_0\to\ensuremath{\mathbb{M}}_1\to\cdots\to\ensuremath{\mathbb{M}}_n\)</span>
+and the mere existence of <span
+class="math inline">\(M:\mathsf{SimpCompSet_n}\)</span> and maps <span
+class="math inline">\(\partial_i\)</span>, <span
+class="math inline">\(*_i\)</span> and <span
+class="math inline">\(h_i\)</span> as in the previous diagrams.</em></p>
 </div>
-<p>We therefore have a map <span
-class="math inline">\(\mathcal{R}:\mathsf{SimpCompSet_n}\to\mathsf{Type}^{[n]}\)</span>.
-But we can also remember the data of the maps <span
-class="math inline">\(M_i\to\ensuremath{\mathbb{M}}_i\)</span>, so that
-<span class="math inline">\(\mathcal{R}\)</span> takes values in
-diagrams of the form<br />
-<img src="./25305a52d833204c6b770fefe988ac3224a36b78.png"
-alt="image" /></p>
-<p>which is a natural transformation from the inclusion <span
-class="math inline">\(\mathsf{SimpCompSet_n}\to\mathsf{Type}\)</span> to
-<span class="math inline">\(\mathcal{R}\)</span>.</p>
+<p>The name “presented type” is inspired by von Raumer<span
+class="citation" data-cites="vonraumer_nonabelian"> (<a
+href="#ref-vonraumer_nonabelian" role="doc-biblioref">Raumer,
+2015</a>)</span>, where he uses such a structure in dimension 2 to
+construct double groupoids and crossed modules in type theory.</p>
 <div class="mydef">
-<p><strong>Definition 10</strong>. <em>The type of <strong>marked
-presented <span class="math inline">\(n\)</span>-types</strong> is a
-presented <span class="math inline">\(n\)</span>-type together with maps
-from sets forming a commutative diagram as in <a
-href="#fig:marked_presented_type" data-reference-type="ref"
-data-reference="fig:marked_presented_type">[fig:marked_presented_type]</a>.</em></p>
+<p><strong>Definition 10</strong>. <em>Denote by <span
+class="math inline">\(\mathsf{MType}^{[n]}\)</span> the type of
+<strong>marked presented types of dimension <span
+class="math inline">\(n\)</span></strong>, which consists of a complex
+<span class="math inline">\(M:\mathsf{SimpCompSet_n}\)</span> and maps
+<span class="math inline">\(\partial_i\)</span>, <span
+class="math inline">\(*_i\)</span> and <span
+class="math inline">\(h_i\)</span> as in the previous diagrams. We
+clearly have a forgetful map <span
+class="math inline">\(\mathsf{MType}^{[n]}\to\mathsf{Type}^{[n]}\)</span>.</em></p>
 </div>
-<p>The horizontal maps pick out terms for each vertex, edge, face, and
-so on. Each of these higher faces has a designated point coming from the
-pushout, with a family of paths joining that point to the entire
-boundary. This is a hub and spoke model, with the maps <span
-class="math inline">\(*_v\)</span> etc. giving us the hubs.</p>
-<p>We can add to the diagram the spans that actually define the
-pushouts:</p>
-<p><img src="./e6876907414f87b7268d981cebb85feac77cafb2.png"
-alt="image" /></p>
 <p>Going forward we will stick with 2-dimensional complexes, where
 forming the link of a vertex gives us a map <span
 class="math inline">\(\ensuremath{\mathbb{M}}_0\to\ensuremath{\mathsf{Gon}}\)</span>
@@ -1130,12 +1125,6 @@ class="math inline">\(\mathop{\mathrm{\mathsf{link}}}:\ensuremath{\mathbb{M}}_0\
 Extending this map to all of <span
 class="math inline">\(\ensuremath{\mathbb{M}}\)</span> and exploring
 what we obtain is the main purpose of this note.</p>
-<p>We will import some of von Raumer<span class="citation"
-data-cites="vonraumer_nonabelian"> (<a href="#ref-vonraumer_nonabelian"
-role="doc-biblioref">Raumer, 2015</a>)</span>, where he proves that
-given <span
-class="math inline">\(\ensuremath{\mathbb{M}}:\mathsf{Type}^{[2]}\)</span>
-we obtain a double groupoid.</p>
 <h2 data-number="3.3" id="sec:polygons"><span
 class="header-section-number">3.3</span> Polygons</h2>
 <p>The 1-type <span class="math inline">\(C_3\)</span> we created
