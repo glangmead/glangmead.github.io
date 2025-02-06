@@ -128,10 +128,8 @@ class=&#34;toc-section-number&#34;&gt;4&lt;/span&gt; Connections and curvature&l
 &lt;li&gt;&lt;a href=&#34;#the-function-t&#34; id=&#34;toc-the-function-t&#34;&gt;&lt;span
 class=&#34;toc-section-number&#34;&gt;4.1&lt;/span&gt; The function &lt;span
 class=&#34;math inline&#34;&gt;\(T\)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#t-on-concatenations-of-faces&#34;
-id=&#34;toc-t-on-concatenations-of-faces&#34;&gt;&lt;span
-class=&#34;toc-section-number&#34;&gt;4.2&lt;/span&gt; &lt;span
-class=&#34;math inline&#34;&gt;\(T\)&lt;/span&gt; on concatenations of faces&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#total-curvature&#34; id=&#34;toc-total-curvature&#34;&gt;&lt;span
+class=&#34;toc-section-number&#34;&gt;4.2&lt;/span&gt; Total curvature&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#existence-of-connections&#34;
 id=&#34;toc-existence-of-connections&#34;&gt;&lt;span
 class=&#34;toc-section-number&#34;&gt;4.3&lt;/span&gt; Existence of connections&lt;/a&gt;&lt;/li&gt;
@@ -1145,56 +1143,57 @@ class=&#34;math inline&#34;&gt;\(\partial\)&lt;/span&gt; is recognizable in &lt;
 class=&#34;math inline&#34;&gt;\(T_2\)&lt;/span&gt;, and we might say “curvature is the
 derivative of the connection.”&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;h2 data-number=&#34;4.2&#34; id=&#34;t-on-concatenations-of-faces&#34;&gt;&lt;span
-class=&#34;header-section-number&#34;&gt;4.2&lt;/span&gt; &lt;span
-class=&#34;math inline&#34;&gt;\(T\)&lt;/span&gt; on concatenations of faces&lt;/h2&gt;
-&lt;p&gt;A marked presented type has a structure rich enough to perform
-1-groupoid and 2-groupoid operations. Consider a subcomplex &lt;span
-class=&#34;math inline&#34;&gt;\(P\subset M\)&lt;/span&gt; and use it as a &lt;em&gt;probe&lt;/em&gt;
-by composing with the marking maps into &lt;span
-class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{M}}\)&lt;/span&gt;:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;./10c86e8a90e4404aa741d6b3c848320a397721ca.png&#34;
-alt=&#34;image&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;For example consider Figure &lt;a href=&#34;#fig:concat&#34;
-data-reference-type=&#34;ref&#34; data-reference=&#34;fig:concat&#34;&gt;9&lt;/a&gt; and the
-diamond on the left, which is the image in &lt;span
-class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{M}}\)&lt;/span&gt; of a probe.
-Denote the clockwise triangular path around the left triangle by &lt;span
-class=&#34;math inline&#34;&gt;\(bcab\)&lt;/span&gt;, and around the right by &lt;span
-class=&#34;math inline&#34;&gt;\(bdcb\)&lt;/span&gt;. These are loops at &lt;span
-class=&#34;math inline&#34;&gt;\(b\)&lt;/span&gt;. Say that the tangent map &lt;span
-class=&#34;math inline&#34;&gt;\(T\)&lt;/span&gt; satisfies &lt;span
-class=&#34;math inline&#34;&gt;\(T(bcab)=R\)&lt;/span&gt; where &lt;span
-class=&#34;math inline&#34;&gt;\(R\)&lt;/span&gt; is some rotation of the 4-sided polygon
-&lt;span class=&#34;math inline&#34;&gt;\(Tb\)&lt;/span&gt;, and similarly &lt;span
-class=&#34;math inline&#34;&gt;\(T(bdcb)=R\)&lt;/span&gt; as well.&lt;/p&gt;
-&lt;figure id=&#34;fig:concat&#34;&gt;
-&lt;img src=&#34;concat.png&#34; style=&#34;width:3.47222in&#34; /&gt;
-&lt;figcaption&gt;Concatenating the triangular probes &lt;span
-class=&#34;math inline&#34;&gt;\(bac\)&lt;/span&gt; and &lt;span
-class=&#34;math inline&#34;&gt;\(bdc\)&lt;/span&gt; in &lt;span
-class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{M}}\)&lt;/span&gt; gives the 4-gon
-&lt;span class=&#34;math inline&#34;&gt;\(abdc\)&lt;/span&gt;.&lt;/figcaption&gt;
+&lt;h2 data-number=&#34;4.2&#34; id=&#34;total-curvature&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;4.2&lt;/span&gt; Total curvature&lt;/h2&gt;
+&lt;div class=&#34;mydef&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Definition 19&lt;/strong&gt;. &lt;em&gt;The &lt;strong&gt;triangular lasso
+&lt;span class=&#34;math inline&#34;&gt;\(L:\mathsf{Type}\)&lt;/span&gt; with tail of length
+&lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;&lt;/strong&gt; (Figure &lt;a
+href=&#34;#fig:lasso&#34; data-reference-type=&#34;ref&#34;
+data-reference=&#34;fig:lasso&#34;&gt;9&lt;/a&gt;) is a 1-type given by:&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;a set of tail vertices &lt;span
+class=&#34;math inline&#34;&gt;\(p_1,\ldots,p_n\)&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;triangle vertices &lt;span class=&#34;math inline&#34;&gt;\(v_1, v_2,
+v_3\)&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;tail edges &lt;span class=&#34;math inline&#34;&gt;\(e_i:p_i=_L p_{i-1},
+i=1,\ldots,n-1\)&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;edge &lt;span class=&#34;math inline&#34;&gt;\(e_n:p_n=_L
+v_1\)&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;triangle edges &lt;span class=&#34;math inline&#34;&gt;\(e_ij:v_i=_L
+v_j\)&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;The loop determined by the lasso is the concatenation along the
+tail towards the triangle, then around the triangle clockwise, then
+backward along the tail:&lt;span class=&#34;math display&#34;&gt;\[e_1\cdot\cdots\cdot
+e_n\cdot e_{12}\cdot e_{23} \cdot e_{31}\cdot e_n^{-1}\cdot\cdots\cdot
+e_1^{-1}\]&lt;/span&gt;. Define the special case &lt;span
+class=&#34;math inline&#34;&gt;\(n=0\)&lt;/span&gt; to have an empty tail with &lt;span
+class=&#34;math inline&#34;&gt;\(p_1\stackrel{\mathrm{def}}{=}v_1\)&lt;/span&gt; and
+&lt;span
+class=&#34;math inline&#34;&gt;\(e_1\stackrel{\mathrm{def}}{=}\ensuremath{\mathsf{refl}}_{v_1}\)&lt;/span&gt;,
+so includes only the triangle.&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;figure id=&#34;fig:lasso&#34;&gt;
+&lt;img src=&#34;./748d05094387f685137edfab16e2a2f1b8a82659.png&#34; /&gt;
+&lt;figcaption&gt;The lasso &lt;span class=&#34;math inline&#34;&gt;\(L\)&lt;/span&gt;, a triangle
+with a tail, for probing manifolds.&lt;/figcaption&gt;
 &lt;/figure&gt;
-&lt;p&gt;Since &lt;span class=&#34;math inline&#34;&gt;\(bcab\)&lt;/span&gt; has a filler 2-cell,
-which we will call &lt;span class=&#34;math inline&#34;&gt;\(f_1\)&lt;/span&gt;, we know
-that &lt;span class=&#34;math inline&#34;&gt;\(T(f_1)=H_R\)&lt;/span&gt; where &lt;span
-class=&#34;math inline&#34;&gt;\(H_R:R=\ensuremath{\mathsf{refl}}\)&lt;/span&gt; is a
-path in &lt;span class=&#34;math inline&#34;&gt;\(\mathop{\mathrm{Aut}}(Tb)\)&lt;/span&gt;
-from &lt;span class=&#34;math inline&#34;&gt;\(R\)&lt;/span&gt; to the identity. Similarly
-if &lt;span class=&#34;math inline&#34;&gt;\(f_2\)&lt;/span&gt; is the filler for &lt;span
-class=&#34;math inline&#34;&gt;\(bdcb\)&lt;/span&gt; then &lt;span
-class=&#34;math inline&#34;&gt;\(T(f_2)=H_R\)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;The two faces can be horizontally composed giving &lt;span
-class=&#34;math inline&#34;&gt;\(f_1\star f_2\)&lt;/span&gt;, which fills the diamond
-&lt;span class=&#34;math inline&#34;&gt;\(bdcab\)&lt;/span&gt;. Then we also obtain &lt;span
-class=&#34;math inline&#34;&gt;\(T(f_1\star
-f_2):R^2=\ensuremath{\text{id}}\)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;In this way, given an explicit ordering of the faces (a “plan” for
-visiting all faces of the manifold), we can “sum” the curvature. For our
-ocatahedron where each triangle produces a rotation of &lt;span
-class=&#34;math inline&#34;&gt;\(R\)&lt;/span&gt;, we’d get &lt;span
-class=&#34;math inline&#34;&gt;\(R^8\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;The purpose of this type is to probe combinatorial manifolds in an
+organized fashion, by mapping &lt;span class=&#34;math inline&#34;&gt;\(L\)&lt;/span&gt;
+into the type &lt;span
+class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{M}}\)&lt;/span&gt;. If &lt;span
+class=&#34;math inline&#34;&gt;\(\pi_1,\ldots,\pi_k:L\to
+\ensuremath{\mathbb{M}}\)&lt;/span&gt; are &lt;span
+class=&#34;math inline&#34;&gt;\(k\)&lt;/span&gt; distinct probes, and &lt;span
+class=&#34;math inline&#34;&gt;\(\pi_i(p_1)=*_\ensuremath{\mathbb{M}}\)&lt;/span&gt; is a
+fixed basepoint for all &lt;span class=&#34;math inline&#34;&gt;\(i\)&lt;/span&gt;, then we
+have &lt;span
+class=&#34;math inline&#34;&gt;\(\pi_i(L):\Omega_*(\ensuremath{\mathbb{M}})\)&lt;/span&gt;
+and we can concatenate all the loops &lt;span
+class=&#34;math inline&#34;&gt;\(\pi_1(L)\cdot\cdots\cdot\pi_k(L)\)&lt;/span&gt;. This is
+the construction that will allow us to compute classical sums: total
+curvature and total index.&lt;/p&gt;
 &lt;h2 data-number=&#34;4.3&#34; id=&#34;existence-of-connections&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;4.3&lt;/span&gt; Existence of connections&lt;/h2&gt;
 &lt;p&gt;How confident can we be that we can always define a connection on an
@@ -1215,7 +1214,7 @@ open question.&lt;/p&gt;
 &lt;h1 data-number=&#34;5&#34; id=&#34;vector-fields&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;5&lt;/span&gt; Vector fields&lt;/h1&gt;
 &lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 19&lt;/strong&gt;. &lt;em&gt;A &lt;strong&gt;partial
+&lt;p&gt;&lt;strong&gt;Definition 20&lt;/strong&gt;. &lt;em&gt;A &lt;strong&gt;partial
 function&lt;/strong&gt; &lt;span class=&#34;math inline&#34;&gt;\(f:A\to B\)&lt;/span&gt; is a
 function &lt;span class=&#34;math inline&#34;&gt;\(f:A\to B+\mathbb{1}\)&lt;/span&gt;, the
 disjoint union of &lt;span class=&#34;math inline&#34;&gt;\(B\)&lt;/span&gt; with the
@@ -1231,7 +1230,7 @@ pointing of &lt;em&gt;some&lt;/em&gt; of the fibers. This aligns with the classi
 picture of a choice of nonzero vector at each point, except for some
 points where the vector field vanishes.&lt;/p&gt;
 &lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 20&lt;/strong&gt;. &lt;em&gt;Let &lt;span
+&lt;p&gt;&lt;strong&gt;Definition 21&lt;/strong&gt;. &lt;em&gt;Let &lt;span
 class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{M}}:\mathsf{CombMfd_2}\)&lt;/span&gt;
 be a combinatorial manifold and &lt;span class=&#34;math inline&#34;&gt;\(Z\)&lt;/span&gt;
 an isolated set of vertices. A &lt;strong&gt;vector field &lt;span

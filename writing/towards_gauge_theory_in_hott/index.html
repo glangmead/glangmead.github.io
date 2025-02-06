@@ -551,10 +551,8 @@ class="toc-section-number">4</span> Connections and curvature</a>
 <li><a href="#the-function-t" id="toc-the-function-t"><span
 class="toc-section-number">4.1</span> The function <span
 class="math inline">\(T\)</span></a></li>
-<li><a href="#t-on-concatenations-of-faces"
-id="toc-t-on-concatenations-of-faces"><span
-class="toc-section-number">4.2</span> <span
-class="math inline">\(T\)</span> on concatenations of faces</a></li>
+<li><a href="#total-curvature" id="toc-total-curvature"><span
+class="toc-section-number">4.2</span> Total curvature</a></li>
 <li><a href="#existence-of-connections"
 id="toc-existence-of-connections"><span
 class="toc-section-number">4.3</span> Existence of connections</a></li>
@@ -1568,56 +1566,57 @@ class="math inline">\(\partial\)</span> is recognizable in <span
 class="math inline">\(T_2\)</span>, and we might say “curvature is the
 derivative of the connection.”</em></p>
 </div>
-<h2 data-number="4.2" id="t-on-concatenations-of-faces"><span
-class="header-section-number">4.2</span> <span
-class="math inline">\(T\)</span> on concatenations of faces</h2>
-<p>A marked presented type has a structure rich enough to perform
-1-groupoid and 2-groupoid operations. Consider a subcomplex <span
-class="math inline">\(P\subset M\)</span> and use it as a <em>probe</em>
-by composing with the marking maps into <span
-class="math inline">\(\ensuremath{\mathbb{M}}\)</span>:</p>
-<p><img src="./10c86e8a90e4404aa741d6b3c848320a397721ca.png"
-alt="image" /></p>
-<p>For example consider Figure <a href="#fig:concat"
-data-reference-type="ref" data-reference="fig:concat">9</a> and the
-diamond on the left, which is the image in <span
-class="math inline">\(\ensuremath{\mathbb{M}}\)</span> of a probe.
-Denote the clockwise triangular path around the left triangle by <span
-class="math inline">\(bcab\)</span>, and around the right by <span
-class="math inline">\(bdcb\)</span>. These are loops at <span
-class="math inline">\(b\)</span>. Say that the tangent map <span
-class="math inline">\(T\)</span> satisfies <span
-class="math inline">\(T(bcab)=R\)</span> where <span
-class="math inline">\(R\)</span> is some rotation of the 4-sided polygon
-<span class="math inline">\(Tb\)</span>, and similarly <span
-class="math inline">\(T(bdcb)=R\)</span> as well.</p>
-<figure id="fig:concat">
-<img src="concat.png" style="width:3.47222in" />
-<figcaption>Concatenating the triangular probes <span
-class="math inline">\(bac\)</span> and <span
-class="math inline">\(bdc\)</span> in <span
-class="math inline">\(\ensuremath{\mathbb{M}}\)</span> gives the 4-gon
-<span class="math inline">\(abdc\)</span>.</figcaption>
+<h2 data-number="4.2" id="total-curvature"><span
+class="header-section-number">4.2</span> Total curvature</h2>
+<div class="mydef">
+<p><strong>Definition 19</strong>. <em>The <strong>triangular lasso
+<span class="math inline">\(L:\mathsf{Type}\)</span> with tail of length
+<span class="math inline">\(n\)</span></strong> (Figure <a
+href="#fig:lasso" data-reference-type="ref"
+data-reference="fig:lasso">9</a>) is a 1-type given by:</em></p>
+<ul>
+<li><p><em>a set of tail vertices <span
+class="math inline">\(p_1,\ldots,p_n\)</span></em></p></li>
+<li><p><em>triangle vertices <span class="math inline">\(v_1, v_2,
+v_3\)</span></em></p></li>
+<li><p><em>tail edges <span class="math inline">\(e_i:p_i=_L p_{i-1},
+i=1,\ldots,n-1\)</span></em></p></li>
+<li><p><em>edge <span class="math inline">\(e_n:p_n=_L
+v_1\)</span></em></p></li>
+<li><p><em>triangle edges <span class="math inline">\(e_ij:v_i=_L
+v_j\)</span></em></p></li>
+</ul>
+<p><em>The loop determined by the lasso is the concatenation along the
+tail towards the triangle, then around the triangle clockwise, then
+backward along the tail:<span class="math display">\[e_1\cdot\cdots\cdot
+e_n\cdot e_{12}\cdot e_{23} \cdot e_{31}\cdot e_n^{-1}\cdot\cdots\cdot
+e_1^{-1}\]</span>. Define the special case <span
+class="math inline">\(n=0\)</span> to have an empty tail with <span
+class="math inline">\(p_1\stackrel{\mathrm{def}}{=}v_1\)</span> and
+<span
+class="math inline">\(e_1\stackrel{\mathrm{def}}{=}\ensuremath{\mathsf{refl}}_{v_1}\)</span>,
+so includes only the triangle.</em></p>
+</div>
+<figure id="fig:lasso">
+<img src="./748d05094387f685137edfab16e2a2f1b8a82659.png" />
+<figcaption>The lasso <span class="math inline">\(L\)</span>, a triangle
+with a tail, for probing manifolds.</figcaption>
 </figure>
-<p>Since <span class="math inline">\(bcab\)</span> has a filler 2-cell,
-which we will call <span class="math inline">\(f_1\)</span>, we know
-that <span class="math inline">\(T(f_1)=H_R\)</span> where <span
-class="math inline">\(H_R:R=\ensuremath{\mathsf{refl}}\)</span> is a
-path in <span class="math inline">\(\mathop{\mathrm{Aut}}(Tb)\)</span>
-from <span class="math inline">\(R\)</span> to the identity. Similarly
-if <span class="math inline">\(f_2\)</span> is the filler for <span
-class="math inline">\(bdcb\)</span> then <span
-class="math inline">\(T(f_2)=H_R\)</span>.</p>
-<p>The two faces can be horizontally composed giving <span
-class="math inline">\(f_1\star f_2\)</span>, which fills the diamond
-<span class="math inline">\(bdcab\)</span>. Then we also obtain <span
-class="math inline">\(T(f_1\star
-f_2):R^2=\ensuremath{\text{id}}\)</span>.</p>
-<p>In this way, given an explicit ordering of the faces (a “plan” for
-visiting all faces of the manifold), we can “sum” the curvature. For our
-ocatahedron where each triangle produces a rotation of <span
-class="math inline">\(R\)</span>, we’d get <span
-class="math inline">\(R^8\)</span>.</p>
+<p>The purpose of this type is to probe combinatorial manifolds in an
+organized fashion, by mapping <span class="math inline">\(L\)</span>
+into the type <span
+class="math inline">\(\ensuremath{\mathbb{M}}\)</span>. If <span
+class="math inline">\(\pi_1,\ldots,\pi_k:L\to
+\ensuremath{\mathbb{M}}\)</span> are <span
+class="math inline">\(k\)</span> distinct probes, and <span
+class="math inline">\(\pi_i(p_1)=*_\ensuremath{\mathbb{M}}\)</span> is a
+fixed basepoint for all <span class="math inline">\(i\)</span>, then we
+have <span
+class="math inline">\(\pi_i(L):\Omega_*(\ensuremath{\mathbb{M}})\)</span>
+and we can concatenate all the loops <span
+class="math inline">\(\pi_1(L)\cdot\cdots\cdot\pi_k(L)\)</span>. This is
+the construction that will allow us to compute classical sums: total
+curvature and total index.</p>
 <h2 data-number="4.3" id="existence-of-connections"><span
 class="header-section-number">4.3</span> Existence of connections</h2>
 <p>How confident can we be that we can always define a connection on an
@@ -1638,7 +1637,7 @@ open question.</p>
 <h1 data-number="5" id="vector-fields"><span
 class="header-section-number">5</span> Vector fields</h1>
 <div class="mydef">
-<p><strong>Definition 19</strong>. <em>A <strong>partial
+<p><strong>Definition 20</strong>. <em>A <strong>partial
 function</strong> <span class="math inline">\(f:A\to B\)</span> is a
 function <span class="math inline">\(f:A\to B+\mathbb{1}\)</span>, the
 disjoint union of <span class="math inline">\(B\)</span> with the
@@ -1654,7 +1653,7 @@ pointing of <em>some</em> of the fibers. This aligns with the classical
 picture of a choice of nonzero vector at each point, except for some
 points where the vector field vanishes.</p>
 <div class="mydef">
-<p><strong>Definition 20</strong>. <em>Let <span
+<p><strong>Definition 21</strong>. <em>Let <span
 class="math inline">\(\ensuremath{\mathbb{M}}:\mathsf{CombMfd_2}\)</span>
 be a combinatorial manifold and <span class="math inline">\(Z\)</span>
 an isolated set of vertices. A <strong>vector field <span
