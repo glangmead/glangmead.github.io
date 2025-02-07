@@ -624,7 +624,7 @@ manifolds&lt;/h2&gt;
 &lt;p&gt;Instead of &lt;span class=&#34;math inline&#34;&gt;\(|M|:\mathsf{Top}\)&lt;/span&gt; we
 can use the simplicial complex to obtain &lt;span
 class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{M}}:\mathsf{Type}\)&lt;/span&gt; by
-forming a :&lt;/p&gt;
+forming a sequence of homotopy pushouts:&lt;/p&gt;
 &lt;div class=&#34;mydef&#34;&gt;
 &lt;p&gt;&lt;strong&gt;Definition 8&lt;/strong&gt;. &lt;em&gt;Define the function
 &lt;strong&gt;(higher) realization&lt;/strong&gt; &lt;span
@@ -656,6 +656,16 @@ that this face bounds. The &lt;span class=&#34;math inline&#34;&gt;\(h_i\)&lt;/s
 the proofs of commutativity, and the two squares are also both homotopy
 pushouts. Note that the pushouts could be re-expressed as HIT
 constructors.&lt;/p&gt;
+&lt;p&gt;Whereas in geometric realization we use both &lt;span
+class=&#34;math inline&#34;&gt;\(\Delta^i\)&lt;/span&gt; and &lt;span
+class=&#34;math inline&#34;&gt;\(\partial\Delta^i\)&lt;/span&gt; to attach simplices, in
+this homotopy picture we need an explicit construction of “&lt;span
+class=&#34;math inline&#34;&gt;\(\partial\Delta^i\)&lt;/span&gt;” as a type equivalent to
+an &lt;span class=&#34;math inline&#34;&gt;\(i-1\)&lt;/span&gt;-dimensional sphere and the
+filling of this sphere with &lt;span
+class=&#34;math inline&#34;&gt;\(i\)&lt;/span&gt;-dimensional stuff has moved into the
+proof of commutativity. So in dimension &lt;span
+class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; the picture would be&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;./40950b2895706eb3184eb69349c17f96847b8aff.png&#34;
 alt=&#34;image&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;It’s useful to define types that remember all or some of the data in
@@ -690,6 +700,15 @@ class=&#34;math inline&#34;&gt;\(h_i\)&lt;/span&gt; as in the previous diagrams.
 clearly have a forgetful map &lt;span
 class=&#34;math inline&#34;&gt;\(\mathsf{MType}^{[n]}\to\mathsf{Type}^{[n]}\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
+&lt;p&gt;The maps &lt;span
+class=&#34;math inline&#34;&gt;\(*_i:M_i\to\ensuremath{\mathbb{M}}_i\)&lt;/span&gt; pick
+out hub terms for each vertex, edge, face, and so on. Each of these
+higher faces has this designated point and a family of paths joining
+that point to the entire boundary. This is a hub and spoke model, with
+the maps &lt;span class=&#34;math inline&#34;&gt;\(*_v\)&lt;/span&gt; etc. giving us the
+hubs. When we work with &lt;span
+class=&#34;math inline&#34;&gt;\(\mathsf{MType}^{[n]}\)&lt;/span&gt; we may access the
+vertices and faces, and the explicit paths inside the pushouts.&lt;/p&gt;
 &lt;p&gt;Going forward we will stick with 2-dimensional complexes, where
 forming the link of a vertex gives us a map &lt;span
 class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{M}}_0\to\ensuremath{\mathsf{Gon}}\)&lt;/span&gt;

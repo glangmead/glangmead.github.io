@@ -1047,7 +1047,7 @@ manifolds</h2>
 <p>Instead of <span class="math inline">\(|M|:\mathsf{Top}\)</span> we
 can use the simplicial complex to obtain <span
 class="math inline">\(\ensuremath{\mathbb{M}}:\mathsf{Type}\)</span> by
-forming a :</p>
+forming a sequence of homotopy pushouts:</p>
 <div class="mydef">
 <p><strong>Definition 8</strong>. <em>Define the function
 <strong>(higher) realization</strong> <span
@@ -1079,6 +1079,16 @@ that this face bounds. The <span class="math inline">\(h_i\)</span> are
 the proofs of commutativity, and the two squares are also both homotopy
 pushouts. Note that the pushouts could be re-expressed as HIT
 constructors.</p>
+<p>Whereas in geometric realization we use both <span
+class="math inline">\(\Delta^i\)</span> and <span
+class="math inline">\(\partial\Delta^i\)</span> to attach simplices, in
+this homotopy picture we need an explicit construction of “<span
+class="math inline">\(\partial\Delta^i\)</span>” as a type equivalent to
+an <span class="math inline">\(i-1\)</span>-dimensional sphere and the
+filling of this sphere with <span
+class="math inline">\(i\)</span>-dimensional stuff has moved into the
+proof of commutativity. So in dimension <span
+class="math inline">\(n\)</span> the picture would be</p>
 <p><img src="./40950b2895706eb3184eb69349c17f96847b8aff.png"
 alt="image" /></p>
 <p>It’s useful to define types that remember all or some of the data in
@@ -1113,6 +1123,15 @@ class="math inline">\(h_i\)</span> as in the previous diagrams. We
 clearly have a forgetful map <span
 class="math inline">\(\mathsf{MType}^{[n]}\to\mathsf{Type}^{[n]}\)</span>.</em></p>
 </div>
+<p>The maps <span
+class="math inline">\(*_i:M_i\to\ensuremath{\mathbb{M}}_i\)</span> pick
+out hub terms for each vertex, edge, face, and so on. Each of these
+higher faces has this designated point and a family of paths joining
+that point to the entire boundary. This is a hub and spoke model, with
+the maps <span class="math inline">\(*_v\)</span> etc. giving us the
+hubs. When we work with <span
+class="math inline">\(\mathsf{MType}^{[n]}\)</span> we may access the
+vertices and faces, and the explicit paths inside the pushouts.</p>
 <p>Going forward we will stick with 2-dimensional complexes, where
 forming the link of a vertex gives us a map <span
 class="math inline">\(\ensuremath{\mathbb{M}}_0\to\ensuremath{\mathsf{Gon}}\)</span>
