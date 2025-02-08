@@ -491,11 +491,12 @@ class=&#34;header-section-number&#34;&gt;3.1&lt;/span&gt; Abstract simplicial
 complexes&lt;/h2&gt;
 &lt;div class=&#34;mydef&#34;&gt;
 &lt;p&gt;&lt;strong&gt;Definition 4&lt;/strong&gt;. &lt;em&gt;An &lt;strong&gt;abstract simplicial
-complex &lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; of dimension &lt;span
-class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;&lt;/strong&gt; consists of a set &lt;span
-class=&#34;math inline&#34;&gt;\(M_0\)&lt;/span&gt; of vertices, and for each &lt;span
-class=&#34;math inline&#34;&gt;\(0&amp;lt;k\leq n\)&lt;/span&gt; a set &lt;span
-class=&#34;math inline&#34;&gt;\(M_k\)&lt;/span&gt; of subsets of &lt;span
+complex &lt;span
+class=&#34;math inline&#34;&gt;\(M\stackrel{\mathrm{def}}{=}[M_0,\ldots,M_n]\)&lt;/span&gt;
+of dimension &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;&lt;/strong&gt; is
+consisting of a set &lt;span class=&#34;math inline&#34;&gt;\(M_0\)&lt;/span&gt; of
+vertices, and for each &lt;span class=&#34;math inline&#34;&gt;\(0&amp;lt;k\leq n\)&lt;/span&gt;
+a set &lt;span class=&#34;math inline&#34;&gt;\(M_k\)&lt;/span&gt; of subsets of &lt;span
 class=&#34;math inline&#34;&gt;\(M_0\)&lt;/span&gt; of cardinality &lt;span
 class=&#34;math inline&#34;&gt;\(k+1\)&lt;/span&gt;, such that any &lt;span
 class=&#34;math inline&#34;&gt;\((j+1)\)&lt;/span&gt;-element subset of &lt;span
@@ -507,13 +508,13 @@ class=&#34;math inline&#34;&gt;\(\mathsf{SimpCompSet_n}\)&lt;/span&gt; the type 
 abstract simplicial complexes of dimension &lt;span
 class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; (where the suffix &lt;span
 class=&#34;math inline&#34;&gt;\(\mathsf{Set}\)&lt;/span&gt; reminds us that this is a
-type of sets). Let &lt;span class=&#34;math inline&#34;&gt;\(M_{\leq k}=\cup_{i\leq k}
-M_i\)&lt;/span&gt; and note that &lt;span class=&#34;math inline&#34;&gt;\(M_{\leq
+type of sets). and note that &lt;span class=&#34;math inline&#34;&gt;\(M_{\leq
 n}=M\)&lt;/span&gt;. We call &lt;span class=&#34;math inline&#34;&gt;\(M_{\leq k}\)&lt;/span&gt;
 the &lt;strong&gt;&lt;span class=&#34;math inline&#34;&gt;\(k\)&lt;/span&gt;-skeleton&lt;/strong&gt; of
-&lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt;, and it is a complex in its own
-right. &lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; is automatically equipped
-with a chain of inclusions of the skeleta &lt;span
+&lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt;, and it is a (&lt;span
+class=&#34;math inline&#34;&gt;\(k\)&lt;/span&gt;-)complex in its own right. &lt;span
+class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; is automatically equipped with a chain
+of inclusions of the skeleta &lt;span
 class=&#34;math inline&#34;&gt;\(M_0\hookrightarrow M_{\leq
 1}\hookrightarrow\cdots\hookrightarrow M_{\leq n}=M\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
