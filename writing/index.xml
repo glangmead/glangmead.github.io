@@ -128,8 +128,8 @@ class=&#34;toc-section-number&#34;&gt;4&lt;/span&gt; Connections and curvature&l
 &lt;li&gt;&lt;a href=&#34;#the-function-t&#34; id=&#34;toc-the-function-t&#34;&gt;&lt;span
 class=&#34;toc-section-number&#34;&gt;4.1&lt;/span&gt; The function &lt;span
 class=&#34;math inline&#34;&gt;\(T\)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#total-curvature&#34; id=&#34;toc-total-curvature&#34;&gt;&lt;span
-class=&#34;toc-section-number&#34;&gt;4.2&lt;/span&gt; Total curvature&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#total-holonomy&#34; id=&#34;toc-total-holonomy&#34;&gt;&lt;span
+class=&#34;toc-section-number&#34;&gt;4.2&lt;/span&gt; Total holonomy&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#existence-of-connections&#34;
 id=&#34;toc-existence-of-connections&#34;&gt;&lt;span
 class=&#34;toc-section-number&#34;&gt;4.3&lt;/span&gt; Existence of connections&lt;/a&gt;&lt;/li&gt;
@@ -137,9 +137,10 @@ class=&#34;toc-section-number&#34;&gt;4.3&lt;/span&gt; Existence of connections&
 &lt;li&gt;&lt;a href=&#34;#vector-fields&#34; id=&#34;toc-vector-fields&#34;&gt;&lt;span
 class=&#34;toc-section-number&#34;&gt;5&lt;/span&gt; Vector fields&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#index-of-a-vector-field&#34;
-id=&#34;toc-index-of-a-vector-field&#34;&gt;&lt;span
-class=&#34;toc-section-number&#34;&gt;5.1&lt;/span&gt; Index of a vector field&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#index-of-a-vector-field-subtracting-curvature&#34;
+id=&#34;toc-index-of-a-vector-field-subtracting-curvature&#34;&gt;&lt;span
+class=&#34;toc-section-number&#34;&gt;5.1&lt;/span&gt; Index of a vector field:
+subtracting curvature&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#equality-of-total-index-and-total-curvature&#34;
 id=&#34;toc-equality-of-total-index-and-total-curvature&#34;&gt;&lt;span
 class=&#34;toc-section-number&#34;&gt;5.2&lt;/span&gt; Equality of total index and total
@@ -937,7 +938,7 @@ are short for white, yellow, blue, red, green, and orange, the colors of
 the faces of a Rubik’s cube. The octahedron is the dual of the cube,
 with each vertex corresponding to a face.&lt;/p&gt;
 &lt;figure id=&#34;fig:hasse_octohedron&#34;&gt;
-&lt;img src=&#34;./d5743120eca41fcca336362bde409486e6435ecb.png&#34; /&gt;
+&lt;img src=&#34;./41cfa9cf6e056c83cc79c2711f6ee0981317076b.png&#34; /&gt;
 &lt;figcaption&gt;Hasse diagram of an octahedron &lt;span
 class=&#34;math inline&#34;&gt;\(O\)&lt;/span&gt;. The row of singletons is &lt;span
 class=&#34;math inline&#34;&gt;\(O_0\)&lt;/span&gt; and above it are &lt;span
@@ -1062,7 +1063,7 @@ movie. Or you can place your palm over the top of a cube and note where
 your fingers are pointing, then slide your hand to an equatorial face,
 then along the equator, then back to the top. The answer is: you come
 back rotated clockwise by a quarter-turn.&lt;/p&gt;
-&lt;div class=&#34;mydef&#34;&gt;
+&lt;div id=&#34;def:octahedron_holonomy&#34; class=&#34;mydef&#34;&gt;
 &lt;p&gt;&lt;strong&gt;Definition 16&lt;/strong&gt;. &lt;em&gt;The map &lt;span
 class=&#34;math inline&#34;&gt;\(R:C_4\to C_4\)&lt;/span&gt; rotates by one quarter turn,
 one “click&#34;:&lt;/em&gt;&lt;/p&gt;
@@ -1104,7 +1105,7 @@ homotopy from &lt;span
 class=&#34;math inline&#34;&gt;\(\ensuremath{\mathsf{refl}}_{T_1(w)}\)&lt;/span&gt; to
 &lt;span class=&#34;math inline&#34;&gt;\(T_1(wb\cdot br\cdot rw)\)&lt;/span&gt;. Here
 &lt;em&gt;there is no additional freedom&lt;/em&gt;.&lt;/p&gt;
-&lt;div class=&#34;mydef&#34;&gt;
+&lt;div id=&#34;def:octahedron_curvature&#34; class=&#34;mydef&#34;&gt;
 &lt;p&gt;&lt;strong&gt;Definition 17&lt;/strong&gt;. &lt;em&gt;Define &lt;span
 class=&#34;math inline&#34;&gt;\(T_2:\ensuremath{\mathbb{O}}\to\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)&lt;/span&gt;
 by extending &lt;span class=&#34;math inline&#34;&gt;\(T_1\)&lt;/span&gt; to the faces as
@@ -1148,10 +1149,10 @@ class=&#34;math inline&#34;&gt;\(f\)&lt;/span&gt; with boundary path &lt;span
 class=&#34;math inline&#34;&gt;\(p_f\)&lt;/span&gt; of a marked presented type &lt;span
 class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{M}}\)&lt;/span&gt; is the
 automorphism &lt;span class=&#34;math inline&#34;&gt;\(\mathsf{tr}(p_f)(Tv)\)&lt;/span&gt;
-together with a homotopy to &lt;span
-class=&#34;math inline&#34;&gt;\(\ensuremath{\text{id}}_{Tv}\)&lt;/span&gt;. Since
-curvature is a proof that the holonomy is the identity, we may also call
-it a &lt;strong&gt;flatness structure&lt;/strong&gt;.&lt;/em&gt;&lt;/p&gt;
+together with a homotopy &lt;span
+class=&#34;math inline&#34;&gt;\(H_f:\mathsf{tr}(p_f)(Tv)\sim\ensuremath{\text{id}}_{Tv}\)&lt;/span&gt;.
+Since curvature is a proof that the holonomy is the identity, we may
+also call it a &lt;strong&gt;flatness structure&lt;/strong&gt;.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;mynote&#34;&gt;
 &lt;p&gt;&lt;strong&gt;Note 2&lt;/strong&gt;. &lt;em&gt;We have defined a function on a cell by
@@ -1163,8 +1164,8 @@ class=&#34;math inline&#34;&gt;\(\partial\)&lt;/span&gt; is recognizable in &lt;
 class=&#34;math inline&#34;&gt;\(T_2\)&lt;/span&gt;, and we might say “curvature is the
 derivative of the connection.”&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;h2 data-number=&#34;4.2&#34; id=&#34;total-curvature&#34;&gt;&lt;span
-class=&#34;header-section-number&#34;&gt;4.2&lt;/span&gt; Total curvature&lt;/h2&gt;
+&lt;h2 data-number=&#34;4.2&#34; id=&#34;total-holonomy&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;4.2&lt;/span&gt; Total holonomy&lt;/h2&gt;
 &lt;div class=&#34;mydef&#34;&gt;
 &lt;p&gt;&lt;strong&gt;Definition 19&lt;/strong&gt;. &lt;em&gt;The &lt;strong&gt;triangular lasso
 &lt;span class=&#34;math inline&#34;&gt;\(L:\mathsf{Type}\)&lt;/span&gt; with tail of length
@@ -1183,37 +1184,66 @@ v_1\)&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;em&gt;triangle edges &lt;span class=&#34;math inline&#34;&gt;\(e_ij:v_i=_L
 v_j\)&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;em&gt;The loop determined by the lasso is the concatenation along the
-tail towards the triangle, then around the triangle clockwise, then
-backward along the tail:&lt;span class=&#34;math display&#34;&gt;\[e_1\cdot\cdots\cdot
-e_n\cdot e_{12}\cdot e_{23} \cdot e_{31}\cdot e_n^{-1}\cdot\cdots\cdot
-e_1^{-1}\]&lt;/span&gt;. Define the special case &lt;span
-class=&#34;math inline&#34;&gt;\(n=0\)&lt;/span&gt; to have an empty tail with &lt;span
+&lt;p&gt;&lt;em&gt;The loop &lt;span class=&#34;math inline&#34;&gt;\(\ell_L\)&lt;/span&gt; determined
+by the lasso is the concatenation along the tail towards the triangle,
+then around the triangle clockwise, then backward along the tail:&lt;span
+class=&#34;math display&#34;&gt;\[e_1\cdot\cdots\cdot e_n\cdot e_{12}\cdot e_{23}
+\cdot e_{31}\cdot e_n^{-1}\cdot\cdots\cdot e_1^{-1}.\]&lt;/span&gt; Define the
+special case &lt;span class=&#34;math inline&#34;&gt;\(n=0\)&lt;/span&gt; to have an empty
+tail with &lt;span
 class=&#34;math inline&#34;&gt;\(p_1\stackrel{\mathrm{def}}{=}v_1\)&lt;/span&gt; and
 &lt;span
 class=&#34;math inline&#34;&gt;\(e_1\stackrel{\mathrm{def}}{=}\ensuremath{\mathsf{refl}}_{v_1}\)&lt;/span&gt;,
 so includes only the triangle.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;figure id=&#34;fig:lasso&#34;&gt;
-&lt;img src=&#34;./748d05094387f685137edfab16e2a2f1b8a82659.png&#34; /&gt;
+&lt;img src=&#34;./7b2c4762a8a37a67c11e5d07b7ac3a7f126348e9.png&#34; /&gt;
 &lt;figcaption&gt;The lasso &lt;span class=&#34;math inline&#34;&gt;\(L\)&lt;/span&gt;, a triangle
 with a tail, for probing manifolds.&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;p&gt;The purpose of this type is to probe combinatorial manifolds in an
 organized fashion, by mapping &lt;span class=&#34;math inline&#34;&gt;\(L\)&lt;/span&gt;
 into the type &lt;span
-class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{M}}\)&lt;/span&gt;. If &lt;span
+class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{M}}\)&lt;/span&gt;.&lt;/p&gt;
+&lt;div id=&#34;def:face_enumerator&#34; class=&#34;mydef&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Definition 20&lt;/strong&gt;. &lt;em&gt;Let &lt;span
+class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; be a combinatorial 2-manifold with
+&lt;span class=&#34;math inline&#34;&gt;\(k=\#M_2\)&lt;/span&gt; 2-faces, and &lt;span
+class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{M}}\)&lt;/span&gt; its realization
+as a marked presented type. Let &lt;span
+class=&#34;math inline&#34;&gt;\(m:\ensuremath{\mathbb{M}}\)&lt;/span&gt; be a fixed
+basepoint. A &lt;strong&gt;face enumerator&lt;/strong&gt; for &lt;span
+class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{M}}\)&lt;/span&gt; is a set of &lt;span
+class=&#34;math inline&#34;&gt;\(k\)&lt;/span&gt; maps &lt;span
 class=&#34;math inline&#34;&gt;\(\pi_1,\ldots,\pi_k:L\to
-\ensuremath{\mathbb{M}}\)&lt;/span&gt; are &lt;span
-class=&#34;math inline&#34;&gt;\(k\)&lt;/span&gt; distinct probes, and &lt;span
-class=&#34;math inline&#34;&gt;\(\pi_i(p_1)=*_\ensuremath{\mathbb{M}}\)&lt;/span&gt; is a
-fixed basepoint for all &lt;span class=&#34;math inline&#34;&gt;\(i\)&lt;/span&gt;, then we
-have &lt;span
-class=&#34;math inline&#34;&gt;\(\pi_i(L):\Omega_*(\ensuremath{\mathbb{M}})\)&lt;/span&gt;
-and we can concatenate all the loops &lt;span
-class=&#34;math inline&#34;&gt;\(\pi_1(L)\cdot\cdots\cdot\pi_k(L)\)&lt;/span&gt;. This is
-the construction that will allow us to compute classical sums: total
-curvature and total index.&lt;/p&gt;
+\ensuremath{\mathbb{M}}\)&lt;/span&gt; such that &lt;span
+class=&#34;math inline&#34;&gt;\(\pi_i(p_1)=m\)&lt;/span&gt; for all &lt;span
+class=&#34;math inline&#34;&gt;\(i\)&lt;/span&gt;. We further require that the triangles
+circulate around the faces in a &lt;strong&gt;clockwise orientation&lt;/strong&gt;.
+This set of data is equivalent to specifying a base point &lt;span
+class=&#34;math inline&#34;&gt;\(m:\ensuremath{\mathbb{M}}\)&lt;/span&gt;, a base point
+&lt;span class=&#34;math inline&#34;&gt;\(f_i\)&lt;/span&gt; on the boundary of each face,
+fixed paths &lt;span
+class=&#34;math inline&#34;&gt;\(m=_\ensuremath{\mathbb{M}}f_i\)&lt;/span&gt;, and a
+clockwise orientation for all faces.&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Given a face enumerator we can form the compositions &lt;span
+class=&#34;math inline&#34;&gt;\(T\circ\ell_{L,i}\)&lt;/span&gt; with the associated loop
+to obtain transport isomorphisms &lt;span
+class=&#34;math inline&#34;&gt;\(T\circ\ell_{L,i}:Tm=Tm\)&lt;/span&gt;. We can
+concatenate all the loops &lt;span
+class=&#34;math inline&#34;&gt;\(\ell_{L,1}\cdot\cdots\cdot\ell_{L,k}\)&lt;/span&gt; and
+obtain a &lt;em&gt;total holonomy&lt;/em&gt; &lt;span
+class=&#34;math inline&#34;&gt;\(T\circ(\ell_{L,1}\cdot\cdots\cdot\ell_{L,k}):Tm=Tm\)&lt;/span&gt;.&lt;/p&gt;
+&lt;div class=&#34;mylemma&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Lemma 4&lt;/strong&gt;. &lt;em&gt;The total holonomy of &lt;span
+class=&#34;math inline&#34;&gt;\(T_1\)&lt;/span&gt; on &lt;span
+class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{O}}\)&lt;/span&gt;(Definition &lt;a
+href=&#34;#def:octahedron_holonomy&#34; data-reference-type=&#34;ref&#34;
+data-reference=&#34;def:octahedron_holonomy&#34;&gt;16&lt;/a&gt;) is &lt;span
+class=&#34;math inline&#34;&gt;\(R^8=\)&lt;/span&gt; which is two full rotations of &lt;span
+class=&#34;math inline&#34;&gt;\(C_4\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
 &lt;h2 data-number=&#34;4.3&#34; id=&#34;existence-of-connections&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;4.3&lt;/span&gt; Existence of connections&lt;/h2&gt;
 &lt;p&gt;How confident can we be that we can always define a connection on an
@@ -1233,44 +1263,31 @@ class=&#34;math inline&#34;&gt;\(T\)&lt;/span&gt;.&lt;/p&gt;
 open question.&lt;/p&gt;
 &lt;h1 data-number=&#34;5&#34; id=&#34;vector-fields&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;5&lt;/span&gt; Vector fields&lt;/h1&gt;
-&lt;div class=&#34;mydef&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Definition 20&lt;/strong&gt;. &lt;em&gt;A &lt;strong&gt;partial
-function&lt;/strong&gt; &lt;span class=&#34;math inline&#34;&gt;\(f:A\to B\)&lt;/span&gt; is a
-function &lt;span class=&#34;math inline&#34;&gt;\(f:A\to B+\mathbb{1}\)&lt;/span&gt;, the
-disjoint union of &lt;span class=&#34;math inline&#34;&gt;\(B\)&lt;/span&gt; with the
-1-element type.&lt;/em&gt;&lt;/p&gt;
-&lt;/div&gt;
 &lt;p&gt;If &lt;span
 class=&#34;math inline&#34;&gt;\(T:\ensuremath{\mathbb{M}}\to\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)&lt;/span&gt;
-is a bundle of mere circles, then a vector field should be a partial
-function &lt;span
-class=&#34;math inline&#34;&gt;\(T_\bullet:\ensuremath{\mathbb{M}}\to\mathrm{EM_{\bullet}}(\ensuremath{\mathbb{Z}},1)\)&lt;/span&gt;
-that lifts &lt;span class=&#34;math inline&#34;&gt;\(T\)&lt;/span&gt;. In other words, a
-pointing of &lt;em&gt;some&lt;/em&gt; of the fibers. This aligns with the classical
-picture of a choice of nonzero vector at each point, except for some
-points where the vector field vanishes.&lt;/p&gt;
+is a bundle of mere circles, then a vector field should consist of, in
+part, a choice of a point in each fiber:&lt;/p&gt;
 &lt;div class=&#34;mydef&#34;&gt;
 &lt;p&gt;&lt;strong&gt;Definition 21&lt;/strong&gt;. &lt;em&gt;Let &lt;span
 class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{M}}:\mathsf{CombMfd_2}\)&lt;/span&gt;
-be a combinatorial manifold and &lt;span class=&#34;math inline&#34;&gt;\(Z\)&lt;/span&gt;
-an isolated set of vertices. A &lt;strong&gt;vector field &lt;span
+be a combinatorial manifold. A &lt;strong&gt;vector field &lt;span
 class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; on &lt;span
-class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{M}}\)&lt;/span&gt; (with zero set
-&lt;span class=&#34;math inline&#34;&gt;\(Z\)&lt;/span&gt;)&lt;/strong&gt; is a partial section of
-&lt;span class=&#34;math inline&#34;&gt;\(P\)&lt;/span&gt;, i.e. a term &lt;span
-class=&#34;math inline&#34;&gt;\(X:\prod_{x:\ensuremath{\mathbb{M}}\setminus
-Z}T(x)\)&lt;/span&gt; (and eliding the unique term of &lt;span
-class=&#34;math inline&#34;&gt;\(Z\to\mathbb{1}\)&lt;/span&gt;).&lt;/em&gt;&lt;/p&gt;
+class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{M}}\)&lt;/span&gt;&lt;/strong&gt; is a
+section of &lt;span class=&#34;math inline&#34;&gt;\(P\)&lt;/span&gt; on the 1-skeleton of
+&lt;span class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{M}}\)&lt;/span&gt;, i.e. a
+term &lt;span
+class=&#34;math inline&#34;&gt;\(X:\prod_{x:\ensuremath{\mathbb{M}}_1}T(x)\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;p&gt;&lt;img src=&#34;./5e7e8b192ba3452d6ed1e8afc33ec3734771c702.png&#34;
+&lt;p&gt;&lt;img src=&#34;./9076f8a276d57916f6776836e29627e4971c06e9.png&#34;
 alt=&#34;image&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;where &lt;span class=&#34;math inline&#34;&gt;\(T_\bullet=\overline{T}\circ
 X\)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;The lift &lt;span class=&#34;math inline&#34;&gt;\(T_\bullet\)&lt;/span&gt; equips the
-fibers of &lt;span class=&#34;math inline&#34;&gt;\(T\)&lt;/span&gt; with points, and
-provides pointings to the transport maps. (The action of &lt;span
-class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; on paths provides the proofs of
-pointedness.)&lt;/p&gt;
+&lt;p&gt;On 1-paths &lt;span
+class=&#34;math inline&#34;&gt;\(p:x=_{\ensuremath{\mathbb{M}}_1}y\)&lt;/span&gt; &lt;span
+class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; assigns a choice of pathover &lt;span
+class=&#34;math inline&#34;&gt;\(\pi:\mathsf{tr}(p)(x)=_{Ty}y\)&lt;/span&gt;, which can
+also be thought of as a proof of pointedness of the transport map &lt;span
+class=&#34;math inline&#34;&gt;\(\mathsf{tr}(p)\)&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;The goal now is to recompute the total curvature in the context of
 some vector field &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; and obtain
 three values:&lt;/p&gt;
@@ -1289,8 +1306,54 @@ total function, and which produces a contractible pointed map, i.e.
 &lt;/ol&gt;
 &lt;p&gt;Once we have these, we will unpack how they provide a proof in HoTT
 of the Poincaré-Hopf theorem and the Gauss-Bonnet theorem.&lt;/p&gt;
-&lt;h2 data-number=&#34;5.1&#34; id=&#34;index-of-a-vector-field&#34;&gt;&lt;span
-class=&#34;header-section-number&#34;&gt;5.1&lt;/span&gt; Index of a vector field&lt;/h2&gt;
+&lt;h2 data-number=&#34;5.1&#34;
+id=&#34;index-of-a-vector-field-subtracting-curvature&#34;&gt;&lt;span
+class=&#34;header-section-number&#34;&gt;5.1&lt;/span&gt; Index of a vector field:
+subtracting curvature&lt;/h2&gt;
+&lt;p&gt;Index should be an integer that computes a winding number “of the
+vector field” around a zero. Classically this is done in a local
+trivialization around a zero of the vector field, with its canonical
+flat connection. We should therefore first look for a loop in one of our
+pointed fibers &lt;span class=&#34;math inline&#34;&gt;\((Tx, Xx)\)&lt;/span&gt;. Let &lt;span
+class=&#34;math inline&#34;&gt;\(\pi_1,\ldots,\pi_k:L\to\ensuremath{\mathbb{M}}\)&lt;/span&gt;
+be a face enumerator with basepoint &lt;span
+class=&#34;math inline&#34;&gt;\(m:\ensuremath{\mathbb{M}}\)&lt;/span&gt; (Definition &lt;a
+href=&#34;#def:face_enumerator&#34; data-reference-type=&#34;ref&#34;
+data-reference=&#34;def:face_enumerator&#34;&gt;20&lt;/a&gt;) and consider the loop &lt;span
+class=&#34;math inline&#34;&gt;\(\ell_{L,1}\)&lt;/span&gt;. Consider the triangle part of
+this loop, with vertices &lt;span
+class=&#34;math inline&#34;&gt;\(x,y,z:\ensuremath{\mathbb{M}}\)&lt;/span&gt; and edges
+&lt;span class=&#34;math inline&#34;&gt;\(e_{xy}:x=_\ensuremath{\mathbb{M}}y,
+e_{yz}:y=_\ensuremath{\mathbb{M}}z,
+e_{zx}:z=_\ensuremath{\mathbb{M}}x\)&lt;/span&gt;, and name the concatenation
+&lt;span class=&#34;math inline&#34;&gt;\(\ell\stackrel{\mathrm{def}}{=}e_{xy}\cdot
+e_{yz}\cdot e_{zx}:x=_\ensuremath{\mathbb{M}}x\)&lt;/span&gt;. We now have two
+structures we can transport around &lt;span
+class=&#34;math inline&#34;&gt;\(\ell\)&lt;/span&gt;: the bundle, and the vector
+field.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(T\ell:Tx=Tx\)&lt;/span&gt; is the holonomy
+around the loop, and it has flatness structure &lt;span
+class=&#34;math inline&#34;&gt;\(H\ell:T\ell=\ensuremath{\text{id}}_x\)&lt;/span&gt;. The
+vector field provides a loopover &lt;span
+class=&#34;math inline&#34;&gt;\(X\ell:T\ell(Xx)=Xx\)&lt;/span&gt; which is not a closed
+loop in general. This is the whole point of curvature: transporting
+around a loop does not produce a &lt;em&gt;pointed&lt;/em&gt; isomorphism of the
+fiber.&lt;/p&gt;
+&lt;p&gt;But notice that the flatness structure tells us exactly how to close
+the holonomy and produce a loop in &lt;span
+class=&#34;math inline&#34;&gt;\(Tx\)&lt;/span&gt;, namely by evaluating at &lt;span
+class=&#34;math inline&#34;&gt;\(Xx\)&lt;/span&gt;, giving &lt;span
+class=&#34;math inline&#34;&gt;\(H\ell(Xx):T\ell(Xx)=Xx\)&lt;/span&gt;, which is of the
+same type as &lt;span class=&#34;math inline&#34;&gt;\(X\ell\)&lt;/span&gt;. Forming the
+concatenation &lt;span class=&#34;math inline&#34;&gt;\(X\ell\cdot
+H\ell(Xx)^{-1}:Xx=Xx\)&lt;/span&gt; gives a term in the loop space &lt;span
+class=&#34;math inline&#34;&gt;\(\Omega(Xx)Tx\simeq\ensuremath{\mathbb{Z}}\)&lt;/span&gt;.
+Conceptually, we have asked how much the vector field swirls as it moves
+around the loop &lt;em&gt;not counting any swirl of the parallel
+transport&lt;/em&gt;. The concatenation &lt;span class=&#34;math inline&#34;&gt;\(\cdot
+H\ell(Xx)^{-1}\)&lt;/span&gt; is a subtraction of the effect of curvature.&lt;/p&gt;
+&lt;p&gt;(TODO: Now account for the tail of the lasso as well, allowing us to
+compute the total index.)&lt;/p&gt;
 &lt;h2 data-number=&#34;5.2&#34;
 id=&#34;equality-of-total-index-and-total-curvature&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;5.2&lt;/span&gt; Equality of total index and
