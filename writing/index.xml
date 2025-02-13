@@ -1312,48 +1312,54 @@ class=&#34;header-section-number&#34;&gt;5.1&lt;/span&gt; Index of a vector fiel
 subtracting curvature&lt;/h2&gt;
 &lt;p&gt;Index should be an integer that computes a winding number “of the
 vector field” around a zero. Classically this is done in a local
-trivialization around a zero of the vector field, with its canonical
-flat connection. We should therefore first look for a loop in one of our
-pointed fibers &lt;span class=&#34;math inline&#34;&gt;\((Tx, Xx)\)&lt;/span&gt;. Let &lt;span
+trivialization around a zero of the vector field, with a canonical flat
+connection associated to the trivialization (an isomorphism with a
+product bundle). We should therefore first look for a loop in one of our
+pointed fibers &lt;span class=&#34;math inline&#34;&gt;\((Tm, Xm)\)&lt;/span&gt;. Let &lt;span
 class=&#34;math inline&#34;&gt;\(\pi_1,\ldots,\pi_k:L\to\ensuremath{\mathbb{M}}\)&lt;/span&gt;
 be a face enumerator with basepoint &lt;span
 class=&#34;math inline&#34;&gt;\(m:\ensuremath{\mathbb{M}}\)&lt;/span&gt; (Definition &lt;a
 href=&#34;#def:face_enumerator&#34; data-reference-type=&#34;ref&#34;
 data-reference=&#34;def:face_enumerator&#34;&gt;20&lt;/a&gt;) and consider the loop &lt;span
-class=&#34;math inline&#34;&gt;\(\ell_{L,1}\)&lt;/span&gt;. Consider the triangle part of
-this loop, with vertices &lt;span
-class=&#34;math inline&#34;&gt;\(x,y,z:\ensuremath{\mathbb{M}}\)&lt;/span&gt; and edges
-&lt;span class=&#34;math inline&#34;&gt;\(e_{xy}:x=_\ensuremath{\mathbb{M}}y,
-e_{yz}:y=_\ensuremath{\mathbb{M}}z,
-e_{zx}:z=_\ensuremath{\mathbb{M}}x\)&lt;/span&gt;, and name the concatenation
-&lt;span class=&#34;math inline&#34;&gt;\(\ell\stackrel{\mathrm{def}}{=}e_{xy}\cdot
-e_{yz}\cdot e_{zx}:x=_\ensuremath{\mathbb{M}}x\)&lt;/span&gt;. We now have two
-structures we can transport around &lt;span
-class=&#34;math inline&#34;&gt;\(\ell\)&lt;/span&gt;: the bundle, and the vector
-field.&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(T\ell:Tx=Tx\)&lt;/span&gt; is the holonomy
-around the loop, and it has flatness structure &lt;span
-class=&#34;math inline&#34;&gt;\(H\ell:T\ell=\ensuremath{\text{id}}_x\)&lt;/span&gt;. The
-vector field provides a loopover &lt;span
-class=&#34;math inline&#34;&gt;\(X\ell:T\ell(Xx)=Xx\)&lt;/span&gt; which is not a closed
-loop in general. This is the whole point of curvature: transporting
-around a loop does not produce a &lt;em&gt;pointed&lt;/em&gt; isomorphism of the
-fiber.&lt;/p&gt;
+class=&#34;math inline&#34;&gt;\(\ell\stackrel{\mathrm{def}}{=}\ell_{L,1}\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(T\ell:Tm=Tm\)&lt;/span&gt; is the holonomy
+isomporphism of the loop, and it has flatness structure &lt;span
+class=&#34;math inline&#34;&gt;\(H\ell:T\ell=\ensuremath{\text{id}}_m\)&lt;/span&gt;. The
+vector field assigns a dependent path over the loop (a
+&lt;em&gt;loopover&lt;/em&gt;) &lt;span
+class=&#34;math inline&#34;&gt;\(X\ell:T\ell(Xm)=Xm\)&lt;/span&gt; which is not a closed
+loop in general. (Remember, this is the whole point of curvature:
+transporting around a loop does not produce a &lt;em&gt;pointed&lt;/em&gt;
+isomorphism of the fiber.)&lt;/p&gt;
 &lt;p&gt;But notice that the flatness structure tells us exactly how to close
-the holonomy and produce a loop in &lt;span
-class=&#34;math inline&#34;&gt;\(Tx\)&lt;/span&gt;, namely by evaluating at &lt;span
-class=&#34;math inline&#34;&gt;\(Xx\)&lt;/span&gt;, giving &lt;span
-class=&#34;math inline&#34;&gt;\(H\ell(Xx):T\ell(Xx)=Xx\)&lt;/span&gt;, which is of the
+the loopover and produce an honest loop in &lt;span
+class=&#34;math inline&#34;&gt;\((Tm,Xm)\)&lt;/span&gt;, namely by evaluating &lt;span
+class=&#34;math inline&#34;&gt;\(H\ell\)&lt;/span&gt; at &lt;span
+class=&#34;math inline&#34;&gt;\(Xm\)&lt;/span&gt;, giving &lt;span
+class=&#34;math inline&#34;&gt;\(H\ell(Xm):T\ell(Xm)=Xm\)&lt;/span&gt;, which is of the
 same type as &lt;span class=&#34;math inline&#34;&gt;\(X\ell\)&lt;/span&gt;. Forming the
 concatenation &lt;span class=&#34;math inline&#34;&gt;\(X\ell\cdot
-H\ell(Xx)^{-1}:Xx=Xx\)&lt;/span&gt; gives a term in the loop space &lt;span
-class=&#34;math inline&#34;&gt;\(\Omega(Xx)Tx\simeq\ensuremath{\mathbb{Z}}\)&lt;/span&gt;.
+H\ell(Xm)^{-1}:Xm=Xm\)&lt;/span&gt; gives a term in the loop space &lt;span
+class=&#34;math inline&#34;&gt;\(\Omega_{Xm}(Tm)\simeq\ensuremath{\mathbb{Z}}\)&lt;/span&gt;.
 Conceptually, we have asked how much the vector field swirls as it moves
 around the loop &lt;em&gt;not counting any swirl of the parallel
-transport&lt;/em&gt;. The concatenation &lt;span class=&#34;math inline&#34;&gt;\(\cdot
-H\ell(Xx)^{-1}\)&lt;/span&gt; is a subtraction of the effect of curvature.&lt;/p&gt;
-&lt;p&gt;(TODO: Now account for the tail of the lasso as well, allowing us to
-compute the total index.)&lt;/p&gt;
+transport&lt;/em&gt;. The concatenation &lt;span class=&#34;math inline&#34;&gt;\(-\cdot
+H\ell(Xm)^{-1}\)&lt;/span&gt; is a subtraction of the effect of curvature.&lt;/p&gt;
+&lt;p&gt;We have constructed a map &lt;span
+class=&#34;math inline&#34;&gt;\(\Omega_m(\ensuremath{\mathbb{M}})\to
+\Omega_{Xm}(Tm)\)&lt;/span&gt;:&lt;/p&gt;
+&lt;div class=&#34;mydef&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Definition 22&lt;/strong&gt;. &lt;em&gt;The &lt;strong&gt;index&lt;/strong&gt; &lt;span
+class=&#34;math inline&#34;&gt;\(\mathscr{I}_X:\Omega_m(\ensuremath{\mathbb{M}})\to
+\Omega_{Xm}(Tm)\)&lt;/span&gt; is the map &lt;span
+class=&#34;math inline&#34;&gt;\(\ell\mapsto X\ell\cdot
+H\ell(Xm)^{-1}:Xm=Xm\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;mydef&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Definition 23&lt;/strong&gt;. &lt;em&gt;The &lt;strong&gt;total index&lt;/strong&gt;
+of &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; is &lt;span
+class=&#34;math inline&#34;&gt;\(\mathscr{I}_X(\ell_{L,1}\cdot\cdots\cdot\ell_{L,k})\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
 &lt;h2 data-number=&#34;5.2&#34;
 id=&#34;equality-of-total-index-and-total-curvature&#34;&gt;&lt;span
 class=&#34;header-section-number&#34;&gt;5.2&lt;/span&gt; Equality of total index and

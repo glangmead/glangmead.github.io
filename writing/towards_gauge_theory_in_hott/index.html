@@ -1735,48 +1735,54 @@ class="header-section-number">5.1</span> Index of a vector field:
 subtracting curvature</h2>
 <p>Index should be an integer that computes a winding number “of the
 vector field” around a zero. Classically this is done in a local
-trivialization around a zero of the vector field, with its canonical
-flat connection. We should therefore first look for a loop in one of our
-pointed fibers <span class="math inline">\((Tx, Xx)\)</span>. Let <span
+trivialization around a zero of the vector field, with a canonical flat
+connection associated to the trivialization (an isomorphism with a
+product bundle). We should therefore first look for a loop in one of our
+pointed fibers <span class="math inline">\((Tm, Xm)\)</span>. Let <span
 class="math inline">\(\pi_1,\ldots,\pi_k:L\to\ensuremath{\mathbb{M}}\)</span>
 be a face enumerator with basepoint <span
 class="math inline">\(m:\ensuremath{\mathbb{M}}\)</span> (Definition <a
 href="#def:face_enumerator" data-reference-type="ref"
 data-reference="def:face_enumerator">20</a>) and consider the loop <span
-class="math inline">\(\ell_{L,1}\)</span>. Consider the triangle part of
-this loop, with vertices <span
-class="math inline">\(x,y,z:\ensuremath{\mathbb{M}}\)</span> and edges
-<span class="math inline">\(e_{xy}:x=_\ensuremath{\mathbb{M}}y,
-e_{yz}:y=_\ensuremath{\mathbb{M}}z,
-e_{zx}:z=_\ensuremath{\mathbb{M}}x\)</span>, and name the concatenation
-<span class="math inline">\(\ell\stackrel{\mathrm{def}}{=}e_{xy}\cdot
-e_{yz}\cdot e_{zx}:x=_\ensuremath{\mathbb{M}}x\)</span>. We now have two
-structures we can transport around <span
-class="math inline">\(\ell\)</span>: the bundle, and the vector
-field.</p>
-<p><span class="math inline">\(T\ell:Tx=Tx\)</span> is the holonomy
-around the loop, and it has flatness structure <span
-class="math inline">\(H\ell:T\ell=\ensuremath{\text{id}}_x\)</span>. The
-vector field provides a loopover <span
-class="math inline">\(X\ell:T\ell(Xx)=Xx\)</span> which is not a closed
-loop in general. This is the whole point of curvature: transporting
-around a loop does not produce a <em>pointed</em> isomorphism of the
-fiber.</p>
+class="math inline">\(\ell\stackrel{\mathrm{def}}{=}\ell_{L,1}\)</span>.</p>
+<p><span class="math inline">\(T\ell:Tm=Tm\)</span> is the holonomy
+isomporphism of the loop, and it has flatness structure <span
+class="math inline">\(H\ell:T\ell=\ensuremath{\text{id}}_m\)</span>. The
+vector field assigns a dependent path over the loop (a
+<em>loopover</em>) <span
+class="math inline">\(X\ell:T\ell(Xm)=Xm\)</span> which is not a closed
+loop in general. (Remember, this is the whole point of curvature:
+transporting around a loop does not produce a <em>pointed</em>
+isomorphism of the fiber.)</p>
 <p>But notice that the flatness structure tells us exactly how to close
-the holonomy and produce a loop in <span
-class="math inline">\(Tx\)</span>, namely by evaluating at <span
-class="math inline">\(Xx\)</span>, giving <span
-class="math inline">\(H\ell(Xx):T\ell(Xx)=Xx\)</span>, which is of the
+the loopover and produce an honest loop in <span
+class="math inline">\((Tm,Xm)\)</span>, namely by evaluating <span
+class="math inline">\(H\ell\)</span> at <span
+class="math inline">\(Xm\)</span>, giving <span
+class="math inline">\(H\ell(Xm):T\ell(Xm)=Xm\)</span>, which is of the
 same type as <span class="math inline">\(X\ell\)</span>. Forming the
 concatenation <span class="math inline">\(X\ell\cdot
-H\ell(Xx)^{-1}:Xx=Xx\)</span> gives a term in the loop space <span
-class="math inline">\(\Omega(Xx)Tx\simeq\ensuremath{\mathbb{Z}}\)</span>.
+H\ell(Xm)^{-1}:Xm=Xm\)</span> gives a term in the loop space <span
+class="math inline">\(\Omega_{Xm}(Tm)\simeq\ensuremath{\mathbb{Z}}\)</span>.
 Conceptually, we have asked how much the vector field swirls as it moves
 around the loop <em>not counting any swirl of the parallel
-transport</em>. The concatenation <span class="math inline">\(\cdot
-H\ell(Xx)^{-1}\)</span> is a subtraction of the effect of curvature.</p>
-<p>(TODO: Now account for the tail of the lasso as well, allowing us to
-compute the total index.)</p>
+transport</em>. The concatenation <span class="math inline">\(-\cdot
+H\ell(Xm)^{-1}\)</span> is a subtraction of the effect of curvature.</p>
+<p>We have constructed a map <span
+class="math inline">\(\Omega_m(\ensuremath{\mathbb{M}})\to
+\Omega_{Xm}(Tm)\)</span>:</p>
+<div class="mydef">
+<p><strong>Definition 22</strong>. <em>The <strong>index</strong> <span
+class="math inline">\(\mathscr{I}_X:\Omega_m(\ensuremath{\mathbb{M}})\to
+\Omega_{Xm}(Tm)\)</span> is the map <span
+class="math inline">\(\ell\mapsto X\ell\cdot
+H\ell(Xm)^{-1}:Xm=Xm\)</span>.</em></p>
+</div>
+<div class="mydef">
+<p><strong>Definition 23</strong>. <em>The <strong>total index</strong>
+of <span class="math inline">\(X\)</span> is <span
+class="math inline">\(\mathscr{I}_X(\ell_{L,1}\cdot\cdots\cdot\ell_{L,k})\)</span>.</em></p>
+</div>
 <h2 data-number="5.2"
 id="equality-of-total-index-and-total-curvature"><span
 class="header-section-number">5.2</span> Equality of total index and
