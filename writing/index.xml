@@ -494,10 +494,11 @@ complexes&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Definition 4&lt;/strong&gt;. &lt;em&gt;An &lt;strong&gt;abstract simplicial
 complex &lt;span
 class=&#34;math inline&#34;&gt;\(M\stackrel{\mathrm{def}}{=}[M_0,\ldots,M_n]\)&lt;/span&gt;
-of dimension &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;&lt;/strong&gt; is
-consisting of a set &lt;span class=&#34;math inline&#34;&gt;\(M_0\)&lt;/span&gt; of
-vertices, and for each &lt;span class=&#34;math inline&#34;&gt;\(0&amp;lt;k\leq n\)&lt;/span&gt;
-a set &lt;span class=&#34;math inline&#34;&gt;\(M_k\)&lt;/span&gt; of subsets of &lt;span
+of dimension &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;&lt;/strong&gt; is an
+ordered list consisting of a set &lt;span
+class=&#34;math inline&#34;&gt;\(M_0\)&lt;/span&gt; of vertices, and for each &lt;span
+class=&#34;math inline&#34;&gt;\(0&amp;lt;k\leq n\)&lt;/span&gt; a set &lt;span
+class=&#34;math inline&#34;&gt;\(M_k\)&lt;/span&gt; of subsets of &lt;span
 class=&#34;math inline&#34;&gt;\(M_0\)&lt;/span&gt; of cardinality &lt;span
 class=&#34;math inline&#34;&gt;\(k+1\)&lt;/span&gt;, such that any &lt;span
 class=&#34;math inline&#34;&gt;\((j+1)\)&lt;/span&gt;-element subset of &lt;span
@@ -509,10 +510,12 @@ class=&#34;math inline&#34;&gt;\(\mathsf{SimpCompSet_n}\)&lt;/span&gt; the type 
 abstract simplicial complexes of dimension &lt;span
 class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; (where the suffix &lt;span
 class=&#34;math inline&#34;&gt;\(\mathsf{Set}\)&lt;/span&gt; reminds us that this is a
-type of sets). and note that &lt;span class=&#34;math inline&#34;&gt;\(M_{\leq
-n}=M\)&lt;/span&gt;. We call &lt;span class=&#34;math inline&#34;&gt;\(M_{\leq k}\)&lt;/span&gt;
-the &lt;strong&gt;&lt;span class=&#34;math inline&#34;&gt;\(k\)&lt;/span&gt;-skeleton&lt;/strong&gt; of
-&lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt;, and it is a (&lt;span
+type of sets). Let &lt;span class=&#34;math inline&#34;&gt;\(M_{\leq k}=
+[M_0,\ldots,M_k]\)&lt;/span&gt; and note that &lt;span
+class=&#34;math inline&#34;&gt;\(M_{\leq n}=M\)&lt;/span&gt;. We call &lt;span
+class=&#34;math inline&#34;&gt;\(M_{\leq k}\)&lt;/span&gt; the &lt;strong&gt;&lt;span
+class=&#34;math inline&#34;&gt;\(k\)&lt;/span&gt;-skeleton&lt;/strong&gt; of &lt;span
+class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt;, and it is a (&lt;span
 class=&#34;math inline&#34;&gt;\(k\)&lt;/span&gt;-)complex in its own right. &lt;span
 class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; is automatically equipped with a chain
 of inclusions of the skeleta &lt;span
@@ -998,8 +1001,8 @@ could agree on points but differ on edges. We are going to identify this
 1-dimensional freedom with a connection:&lt;/p&gt;
 &lt;div id=&#34;def:connection&#34; class=&#34;mydef&#34;&gt;
 &lt;p&gt;&lt;strong&gt;Definition 14&lt;/strong&gt;. &lt;em&gt;A &lt;strong&gt;connection&lt;/strong&gt; on
-a higher combinatorial manifold is an extension of a circle bundle from
-the 0-skeleton to the 1-skeleton.&lt;/em&gt;&lt;/p&gt;
+a higher combinatorial manifold is an extension of a bundle from the
+0-skeleton to the 1-skeleton.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;Continuing the example, we will do something “tangent bundley”,
 imagining how &lt;span class=&#34;math inline&#34;&gt;\(T_1\)&lt;/span&gt; changes as we
@@ -1143,16 +1146,19 @@ class=&#34;math inline&#34;&gt;\(C_4=_{\mathrm{EM}(\ensuremath{\mathbb{Z}},1)}C_
 &lt;div id=&#34;def:curvature&#34; class=&#34;mydef&#34;&gt;
 &lt;p&gt;&lt;strong&gt;Definition 18&lt;/strong&gt;. &lt;em&gt;The &lt;strong&gt;curvature of a
 connection&lt;/strong&gt; on a family &lt;span
-class=&#34;math inline&#34;&gt;\(T:\ensuremath{\mathbb{M}}\to\mathcal{U}\)&lt;/span&gt;
+class=&#34;math inline&#34;&gt;\(T:\ensuremath{\mathbb{M}}_1\to\mathcal{U}\)&lt;/span&gt;
 at a vertex &lt;span class=&#34;math inline&#34;&gt;\(v\)&lt;/span&gt; of a 2-face &lt;span
 class=&#34;math inline&#34;&gt;\(f\)&lt;/span&gt; with boundary path &lt;span
 class=&#34;math inline&#34;&gt;\(p_f\)&lt;/span&gt; of a marked presented type &lt;span
 class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{M}}\)&lt;/span&gt; is the
-automorphism &lt;span class=&#34;math inline&#34;&gt;\(\mathsf{tr}(p_f)(Tv)\)&lt;/span&gt;
-together with a homotopy &lt;span
-class=&#34;math inline&#34;&gt;\(H_f:\mathsf{tr}(p_f)(Tv)\sim\ensuremath{\text{id}}_{Tv}\)&lt;/span&gt;.
-Since curvature is a proof that the holonomy is the identity, we may
-also call it a &lt;strong&gt;flatness structure&lt;/strong&gt;.&lt;/em&gt;&lt;/p&gt;
+automorphism &lt;span class=&#34;math inline&#34;&gt;\(\mathsf{tr}(p_f)(Tv)\)&lt;/span&gt;.
+A &lt;strong&gt;flatness structure on the face &lt;span
+class=&#34;math inline&#34;&gt;\(f\)&lt;/span&gt;&lt;/strong&gt; is an extension of &lt;span
+class=&#34;math inline&#34;&gt;\(T\)&lt;/span&gt; to &lt;span
+class=&#34;math inline&#34;&gt;\(f\)&lt;/span&gt;, which is a homotopy &lt;span
+class=&#34;math inline&#34;&gt;\(H_f:\mathsf{tr}(p_f)(Tv)\sim\ensuremath{\text{id}}_{Tv}\)&lt;/span&gt;
+from the curvature of &lt;span class=&#34;math inline&#34;&gt;\(f\)&lt;/span&gt; at &lt;span
+class=&#34;math inline&#34;&gt;\(v\)&lt;/span&gt; to the identity.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;mynote&#34;&gt;
 &lt;p&gt;&lt;strong&gt;Note 2&lt;/strong&gt;. &lt;em&gt;We have defined a function on a cell by
@@ -1168,8 +1174,8 @@ derivative of the connection.”&lt;/em&gt;&lt;/p&gt;
 class=&#34;header-section-number&#34;&gt;4.2&lt;/span&gt; Total holonomy&lt;/h2&gt;
 &lt;div class=&#34;mydef&#34;&gt;
 &lt;p&gt;&lt;strong&gt;Definition 19&lt;/strong&gt;. &lt;em&gt;The &lt;strong&gt;triangular lasso
-&lt;span class=&#34;math inline&#34;&gt;\(L:\mathsf{Type}\)&lt;/span&gt; with tail of length
-&lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;&lt;/strong&gt; (Figure &lt;a
+&lt;span class=&#34;math inline&#34;&gt;\(L_n:\mathsf{Type}\)&lt;/span&gt; with tail of
+length &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;&lt;/strong&gt; (Figure &lt;a
 href=&#34;#fig:lasso&#34; data-reference-type=&#34;ref&#34;
 data-reference=&#34;fig:lasso&#34;&gt;9&lt;/a&gt;) is a 1-type given by:&lt;/em&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -1198,8 +1204,8 @@ so includes only the triangle.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;figure id=&#34;fig:lasso&#34;&gt;
 &lt;img src=&#34;./7b2c4762a8a37a67c11e5d07b7ac3a7f126348e9.png&#34; /&gt;
-&lt;figcaption&gt;The lasso &lt;span class=&#34;math inline&#34;&gt;\(L\)&lt;/span&gt;, a triangle
-with a tail, for probing manifolds.&lt;/figcaption&gt;
+&lt;figcaption&gt;The lasso &lt;span class=&#34;math inline&#34;&gt;\(L_n\)&lt;/span&gt;, a
+triangle with a tail, for probing manifolds.&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;p&gt;The purpose of this type is to probe combinatorial manifolds in an
 organized fashion, by mapping &lt;span class=&#34;math inline&#34;&gt;\(L\)&lt;/span&gt;
@@ -1218,14 +1224,14 @@ class=&#34;math inline&#34;&gt;\(k\)&lt;/span&gt; maps &lt;span
 class=&#34;math inline&#34;&gt;\(\pi_1,\ldots,\pi_k:L\to
 \ensuremath{\mathbb{M}}\)&lt;/span&gt; such that &lt;span
 class=&#34;math inline&#34;&gt;\(\pi_i(p_1)=m\)&lt;/span&gt; for all &lt;span
-class=&#34;math inline&#34;&gt;\(i\)&lt;/span&gt;. We further require that the triangles
-circulate around the faces in a &lt;strong&gt;clockwise orientation&lt;/strong&gt;.
-This set of data is equivalent to specifying a base point &lt;span
+class=&#34;math inline&#34;&gt;\(i\)&lt;/span&gt;. We further require that . This set of
+data is equivalent to specifying a base point &lt;span
 class=&#34;math inline&#34;&gt;\(m:\ensuremath{\mathbb{M}}\)&lt;/span&gt;, a base point
 &lt;span class=&#34;math inline&#34;&gt;\(f_i\)&lt;/span&gt; on the boundary of each face,
 fixed paths &lt;span
 class=&#34;math inline&#34;&gt;\(m=_\ensuremath{\mathbb{M}}f_i\)&lt;/span&gt;, and a
-clockwise orientation for all faces.&lt;/em&gt;&lt;/p&gt;
+uniform orientation for all faces (all clockwise or
+counterclockwise).&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;Given a face enumerator we can form the compositions &lt;span
 class=&#34;math inline&#34;&gt;\(T\circ\ell_{L,i}\)&lt;/span&gt; with the associated loop
@@ -1278,10 +1284,8 @@ section of &lt;span class=&#34;math inline&#34;&gt;\(P\)&lt;/span&gt; on the 1-s
 term &lt;span
 class=&#34;math inline&#34;&gt;\(X:\prod_{x:\ensuremath{\mathbb{M}}_1}T(x)\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;p&gt;&lt;img src=&#34;./9076f8a276d57916f6776836e29627e4971c06e9.png&#34;
+&lt;p&gt;&lt;img src=&#34;./fc589b32b364594f94633ca819b4702474ba0522.png&#34;
 alt=&#34;image&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;where &lt;span class=&#34;math inline&#34;&gt;\(T_\bullet=\overline{T}\circ
-X\)&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;On 1-paths &lt;span
 class=&#34;math inline&#34;&gt;\(p:x=_{\ensuremath{\mathbb{M}}_1}y\)&lt;/span&gt; &lt;span
 class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; assigns a choice of pathover &lt;span

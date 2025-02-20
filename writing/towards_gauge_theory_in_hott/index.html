@@ -917,10 +917,11 @@ complexes</h2>
 <p><strong>Definition 4</strong>. <em>An <strong>abstract simplicial
 complex <span
 class="math inline">\(M\stackrel{\mathrm{def}}{=}[M_0,\ldots,M_n]\)</span>
-of dimension <span class="math inline">\(n\)</span></strong> is
-consisting of a set <span class="math inline">\(M_0\)</span> of
-vertices, and for each <span class="math inline">\(0&lt;k\leq n\)</span>
-a set <span class="math inline">\(M_k\)</span> of subsets of <span
+of dimension <span class="math inline">\(n\)</span></strong> is an
+ordered list consisting of a set <span
+class="math inline">\(M_0\)</span> of vertices, and for each <span
+class="math inline">\(0&lt;k\leq n\)</span> a set <span
+class="math inline">\(M_k\)</span> of subsets of <span
 class="math inline">\(M_0\)</span> of cardinality <span
 class="math inline">\(k+1\)</span>, such that any <span
 class="math inline">\((j+1)\)</span>-element subset of <span
@@ -932,10 +933,12 @@ class="math inline">\(\mathsf{SimpCompSet_n}\)</span> the type of
 abstract simplicial complexes of dimension <span
 class="math inline">\(n\)</span> (where the suffix <span
 class="math inline">\(\mathsf{Set}\)</span> reminds us that this is a
-type of sets). and note that <span class="math inline">\(M_{\leq
-n}=M\)</span>. We call <span class="math inline">\(M_{\leq k}\)</span>
-the <strong><span class="math inline">\(k\)</span>-skeleton</strong> of
-<span class="math inline">\(M\)</span>, and it is a (<span
+type of sets). Let <span class="math inline">\(M_{\leq k}=
+[M_0,\ldots,M_k]\)</span> and note that <span
+class="math inline">\(M_{\leq n}=M\)</span>. We call <span
+class="math inline">\(M_{\leq k}\)</span> the <strong><span
+class="math inline">\(k\)</span>-skeleton</strong> of <span
+class="math inline">\(M\)</span>, and it is a (<span
 class="math inline">\(k\)</span>-)complex in its own right. <span
 class="math inline">\(M\)</span> is automatically equipped with a chain
 of inclusions of the skeleta <span
@@ -1421,8 +1424,8 @@ could agree on points but differ on edges. We are going to identify this
 1-dimensional freedom with a connection:</p>
 <div id="def:connection" class="mydef">
 <p><strong>Definition 14</strong>. <em>A <strong>connection</strong> on
-a higher combinatorial manifold is an extension of a circle bundle from
-the 0-skeleton to the 1-skeleton.</em></p>
+a higher combinatorial manifold is an extension of a bundle from the
+0-skeleton to the 1-skeleton.</em></p>
 </div>
 <p>Continuing the example, we will do something “tangent bundley”,
 imagining how <span class="math inline">\(T_1\)</span> changes as we
@@ -1566,16 +1569,19 @@ class="math inline">\(C_4=_{\mathrm{EM}(\ensuremath{\mathbb{Z}},1)}C_4\)</span>.
 <div id="def:curvature" class="mydef">
 <p><strong>Definition 18</strong>. <em>The <strong>curvature of a
 connection</strong> on a family <span
-class="math inline">\(T:\ensuremath{\mathbb{M}}\to\mathcal{U}\)</span>
+class="math inline">\(T:\ensuremath{\mathbb{M}}_1\to\mathcal{U}\)</span>
 at a vertex <span class="math inline">\(v\)</span> of a 2-face <span
 class="math inline">\(f\)</span> with boundary path <span
 class="math inline">\(p_f\)</span> of a marked presented type <span
 class="math inline">\(\ensuremath{\mathbb{M}}\)</span> is the
-automorphism <span class="math inline">\(\mathsf{tr}(p_f)(Tv)\)</span>
-together with a homotopy <span
-class="math inline">\(H_f:\mathsf{tr}(p_f)(Tv)\sim\ensuremath{\text{id}}_{Tv}\)</span>.
-Since curvature is a proof that the holonomy is the identity, we may
-also call it a <strong>flatness structure</strong>.</em></p>
+automorphism <span class="math inline">\(\mathsf{tr}(p_f)(Tv)\)</span>.
+A <strong>flatness structure on the face <span
+class="math inline">\(f\)</span></strong> is an extension of <span
+class="math inline">\(T\)</span> to <span
+class="math inline">\(f\)</span>, which is a homotopy <span
+class="math inline">\(H_f:\mathsf{tr}(p_f)(Tv)\sim\ensuremath{\text{id}}_{Tv}\)</span>
+from the curvature of <span class="math inline">\(f\)</span> at <span
+class="math inline">\(v\)</span> to the identity.</em></p>
 </div>
 <div class="mynote">
 <p><strong>Note 2</strong>. <em>We have defined a function on a cell by
@@ -1591,8 +1597,8 @@ derivative of the connection.”</em></p>
 class="header-section-number">4.2</span> Total holonomy</h2>
 <div class="mydef">
 <p><strong>Definition 19</strong>. <em>The <strong>triangular lasso
-<span class="math inline">\(L:\mathsf{Type}\)</span> with tail of length
-<span class="math inline">\(n\)</span></strong> (Figure <a
+<span class="math inline">\(L_n:\mathsf{Type}\)</span> with tail of
+length <span class="math inline">\(n\)</span></strong> (Figure <a
 href="#fig:lasso" data-reference-type="ref"
 data-reference="fig:lasso">9</a>) is a 1-type given by:</em></p>
 <ul>
@@ -1621,8 +1627,8 @@ so includes only the triangle.</em></p>
 </div>
 <figure id="fig:lasso">
 <img src="./7b2c4762a8a37a67c11e5d07b7ac3a7f126348e9.png" />
-<figcaption>The lasso <span class="math inline">\(L\)</span>, a triangle
-with a tail, for probing manifolds.</figcaption>
+<figcaption>The lasso <span class="math inline">\(L_n\)</span>, a
+triangle with a tail, for probing manifolds.</figcaption>
 </figure>
 <p>The purpose of this type is to probe combinatorial manifolds in an
 organized fashion, by mapping <span class="math inline">\(L\)</span>
@@ -1641,14 +1647,14 @@ class="math inline">\(k\)</span> maps <span
 class="math inline">\(\pi_1,\ldots,\pi_k:L\to
 \ensuremath{\mathbb{M}}\)</span> such that <span
 class="math inline">\(\pi_i(p_1)=m\)</span> for all <span
-class="math inline">\(i\)</span>. We further require that the triangles
-circulate around the faces in a <strong>clockwise orientation</strong>.
-This set of data is equivalent to specifying a base point <span
+class="math inline">\(i\)</span>. We further require that . This set of
+data is equivalent to specifying a base point <span
 class="math inline">\(m:\ensuremath{\mathbb{M}}\)</span>, a base point
 <span class="math inline">\(f_i\)</span> on the boundary of each face,
 fixed paths <span
 class="math inline">\(m=_\ensuremath{\mathbb{M}}f_i\)</span>, and a
-clockwise orientation for all faces.</em></p>
+uniform orientation for all faces (all clockwise or
+counterclockwise).</em></p>
 </div>
 <p>Given a face enumerator we can form the compositions <span
 class="math inline">\(T\circ\ell_{L,i}\)</span> with the associated loop
@@ -1701,10 +1707,8 @@ section of <span class="math inline">\(P\)</span> on the 1-skeleton of
 term <span
 class="math inline">\(X:\prod_{x:\ensuremath{\mathbb{M}}_1}T(x)\)</span>.</em></p>
 </div>
-<p><img src="./9076f8a276d57916f6776836e29627e4971c06e9.png"
+<p><img src="./fc589b32b364594f94633ca819b4702474ba0522.png"
 alt="image" /></p>
-<p>where <span class="math inline">\(T_\bullet=\overline{T}\circ
-X\)</span>.</p>
 <p>On 1-paths <span
 class="math inline">\(p:x=_{\ensuremath{\mathbb{M}}_1}y\)</span> <span
 class="math inline">\(X\)</span> assigns a choice of pathover <span
