@@ -561,7 +561,7 @@
 </ul>
 <p>We will consider functions <span class="math inline">\(M\to \mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)</span> where <span class="math inline">\(\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)</span> is the connected component in the universe of the Eilenberg-MacLane space <span class="math inline">\(\mathrm{K}(\ensuremath{\mathbb{Z}},1)\)</span> which we will take to be <span class="math inline">\(S^1\)</span>, and where <span class="math inline">\(M\)</span> is a combinatorial manifold of dimension 2, which is a simplicial complex encoded in a higher inductive type, such that each vertex has a neighborhood that looks like a disk with a discrete circle boundary (i.e. a polygon). We can call terms <span class="math inline">\(C:\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)</span> “mere circles.”</p>
 <p>We will see in Section <a href="#sec:polygons" data-reference-type="ref" data-reference="sec:polygons">3.3</a> that <span class="math inline">\(\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)</span> contains all the polygons. We will construct a map <span class="math inline">\(\mathop{\mathrm{\mathsf{link}}}:M\to\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)</span> that maps each vertex to the polygon consisting of its neighbors. Then we can consider the type of pointed mere circles <span class="math inline">\(\mathrm{EM_{\bullet}}(\ensuremath{\mathbb{Z}},1)\stackrel{\mathrm{def}}{=}\sum_{Y:\mathrm{EM}(\ensuremath{\mathbb{Z}},1)}Y\)</span> as well as the first projection that forgets the point. This is a univalent fibration (univalent fibrations are always equivalent to a projection of a type of pointed types to some connected component of the universe<span class="citation" data-cites="christensen_univalence"> (<a href="#ref-christensen_univalence" role="doc-biblioref">Christensen, 2015</a>)</span>). If we form the pullback</p>
-<p><img src="./9c97f36dc8322034bc4869643bffe6cfd8a5fa50.png" alt="image" /></p>
+<p><img src="./9c97f36dc8322034bc4869643bffe6cfd8a5fa50.svg" alt="image" /></p>
 <p>then we have a bundle of mere circles, with total space given by the <span class="math inline">\(\sum_{}\)</span>-type construction. We will show that this is not a principal bundle, i.e. a bundle of torsors. Torsors are types with the additional structure of a group action. But if <span class="math inline">\(\mathop{\mathrm{\mathsf{link}}}\)</span> satisfies an additional property (amounting to an orientation) then the pullback is a principal fibration, i.e. <span class="math inline">\(\mathop{\mathrm{\mathsf{link}}}\)</span> factors through a map <span class="math inline">\(\mathrm{K}(\ensuremath{\mathbb{Z}},2)\to\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)</span>, where <span class="math inline">\(\mathrm{K}(\ensuremath{\mathbb{Z}},2)\)</span> is an Eilenberg-Mac Lane space.</p>
 <p>We will argue that extending <span class="math inline">\(\mathop{\mathrm{\mathsf{link}}}\)</span> to a function <span class="math inline">\(T\)</span> on paths can be thought of as constructing a connection, notably one that is not necessarily flat (trivial). Moreover, lifting <span class="math inline">\(T\)</span> to <span class="math inline">\(T_\bullet:M\to\mathrm{EM_{\bullet}}(\ensuremath{\mathbb{Z}},1)\)</span> can be thought of as a nonvanishing vector field. There will in general not be a total lift, just a partial function. The domain of <span class="math inline">\(T_\bullet\)</span> will have a boundary of circles, and the degree (winding number) on the disjoint union of these can be thought of as the index of <span class="math inline">\(T_\bullet\)</span>. We can then examine the total curvature and the total index and prove that they are equal, and argue that they are equal to the usual Euler characteristic. This will simultaneously prove the Poincaré-Hopf theorem and Gauss-Bonnet theorem in 2 dimensions, for combinatorial manifolds. This is similar to the classical proof of Hopf<span class="citation" data-cites="hopf"> (<a href="#ref-hopf" role="doc-biblioref">Hopf, 1983</a>)</span>, presented in detail in Needham<span class="citation" data-cites="needham"> (<a href="#ref-needham" role="doc-biblioref">Needham, 2021</a>)</span>.</p>
 <h2 data-number="1.1" id="future-work"><span class="header-section-number">1.1</span> Future work</h2>
@@ -618,14 +618,14 @@
 <div class="mydef">
 <p><strong>Definition 5</strong>. <em>Let <span class="math inline">\(\Delta^n\)</span> be the standard <span class="math inline">\(n\)</span>-simplex in <span class="math inline">\(\ensuremath{\mathbb{R}}^n\)</span> given by <span class="math inline">\(\{x_1,\ldots,x_n|\sum_i x_i\leq 1\}\)</span>. Let <span class="math inline">\(M:\mathsf{SimpCompSet_n}\)</span>. The <strong>geometric realization</strong> <span class="math inline">\(|M|:\mathsf{Top}\)</span> of <span class="math inline">\(M\)</span> in the category of topological spaces is given inductively as follows: <span class="math inline">\(|M_0|=M_0\)</span>, and given <span class="math inline">\(|M_{\leq k-1}|\)</span> we form <span class="math inline">\(|M_{\leq k}|\)</span> by the pushout in sets</em></p>
 </div>
-<p><img src="./1d466232198fe8eea7faa0f5e8b41a4717b84268.png" alt="image" /></p>
+<p><img src="./1d466232198fe8eea7faa0f5e8b41a4717b84268.svg" alt="image" /></p>
 <p>which attaches each <span class="math inline">\(k\)</span>-simplex by taking the convex hull of the appropriate <span class="math inline">\(k+1\)</span> points in <span class="math inline">\(|M_{\leq k-1}|\)</span>. The collection of vertical maps on the right gives a sequence of inclusion maps of skeleta <span class="math inline">\(|M_0|\xrightarrow[]{i_1}|M_{\leq 1}|\xrightarrow[]{i_2}\cdots\xrightarrow[]{i_n}|M_{\leq n}|=|M|\)</span>.</p>
 <div id="def:link" class="mydef">
 <p><strong>Definition 6</strong>. <em>In an abstract simplicial complex <span class="math inline">\(M\)</span> of dimension <span class="math inline">\(n\)</span>, the <strong>link</strong> of a vertex <span class="math inline">\(v\)</span> is the <span class="math inline">\(n-1\)</span>-dimensional subcomplex containing every face <span class="math inline">\(m\in M_{n-1}\)</span> such that <span class="math inline">\(v\notin m\)</span> and <span class="math inline">\(m\cup v\)</span> is an <span class="math inline">\(n\)</span>-face of <span class="math inline">\(M\)</span>. </em></p>
 </div>
 <p>The link is easier to understand as all the neighboring vertices of <span class="math inline">\(v\)</span> and the subcomplex containing these. See for example Figure <a href="#fig:link" data-reference-type="ref" data-reference="fig:link">2</a>.</p>
 <figure id="fig:link">
-<img src="./77310e6013360f123738b3984e7a97ecabc90011.png" />
+<img src="./77310e6013360f123738b3984e7a97ecabc90011.svg" />
 <figcaption>The link of <span class="math inline">\(v\)</span> in this complex consists of the vertices <span class="math inline">\(\{a,b,c,d,e,f\}\)</span> and the edges <span class="math inline">\(\{ab,bc,cd,de,ef,fa\}\)</span>, forming a hexagon.</figcaption>
 </figure>
 <div class="mydef">
@@ -639,14 +639,14 @@
 </figure>
 <h2 data-number="3.2" id="higher-inductive-combinatorial-manifolds"><span class="header-section-number">3.2</span> Higher inductive combinatorial manifolds</h2>
 <p>Instead of <span class="math inline">\(|M|:\mathsf{Top}\)</span> we can use the simplicial complex to obtain <span class="math inline">\(\ensuremath{\mathbb{M}}:\mathsf{Type}\)</span> by forming a sequence of <em>homotopy</em> pushouts. For example in dimension 1 we could take the triangle with vertices <span class="math inline">\(\{v_1, v_2, v_3\}\)</span> and edges <span class="math inline">\(\{e_{12}, e_{23}, e_{31}\}\)</span> and form a polygon <span class="math inline">\(C_3\)</span>:</p>
-<p><img src="./fb70e8046f0ef3601a17feb7806703caf5425365.png" alt="image" /></p>
+<p><img src="./fb70e8046f0ef3601a17feb7806703caf5425365.svg" alt="image" /></p>
 <p>The left vertical map expresses the connectivity between the edges and vertices in the set-based complex. The right vertical map <span class="math inline">\(*_1\)</span> provides a hub point for each edge, and the homotopy <span class="math inline">\(h_1\)</span> provides the spokes that connect the hub to the vertices. So in contrast to a geometric realization, the 1-dimensional cells in the HoTT sense are generated by the filler homotopy.</p>
 <p>In dimension 2 we could fill in maps from <span class="math inline">\(C_3\)</span> into our higher type by adding faces (hence reusing the object we just built above):</p>
-<p><img src="./59159619e9738f2cedd3c95491c185b941b34336.png" alt="image" /></p>
+<p><img src="./59159619e9738f2cedd3c95491c185b941b34336.svg" alt="image" /></p>
 <p>The types <span class="math inline">\(C_3\)</span> and <span class="math inline">\(\ensuremath{\mathbb{M}}_1\)</span> are 1-types, <span class="math inline">\(\ensuremath{\mathbb{M}}_2\)</span> is a 2-type, and the rest are sets. The map <span class="math inline">\(\partial_0\)</span> maps each pair <span class="math inline">\((e, S^0)\)</span> to the pair of points this edge connects.</p>
 <p>The <span class="math inline">\(h_i\)</span> are the proofs of commutativity, and the two squares are also both homotopy pushouts. Note that the pushouts could be re-expressed as HIT constructors.</p>
 <p>Whereas in geometric realization we use both <span class="math inline">\(\Delta^i\)</span> and <span class="math inline">\(\partial\Delta^i\)</span> to attach simplices, in this homotopy picture we need an explicit construction of “<span class="math inline">\(\partial\Delta^i\)</span>” as a type equivalent to an <span class="math inline">\(i-1\)</span>-dimensional sphere and the filling of this sphere with <span class="math inline">\(i\)</span>-dimensional stuff has moved into the proof of commutativity. So in dimension <span class="math inline">\(n\)</span> the picture would be</p>
-<p><img src="./060f84a40591ae2293f7dffd08753bc1ed0a2948.png" alt="image" /></p>
+<p><img src="./060f84a40591ae2293f7dffd08753bc1ed0a2948.svg" alt="image" /></p>
 <div id="def:higher_realization" class="mydef">
 <p><strong>Definition 8</strong>. <em>A <strong>higher realization</strong> of an abstract simplicial complex <span class="math inline">\(M:\mathsf{SimpCompSet_n}\)</span> consists of</em></p>
 <ol>
@@ -670,7 +670,7 @@ S^1&amp;:\mathsf{Type}\\
 <h2 data-number="3.4" id="adding-and-removing-points-from-polygons"><span class="header-section-number">3.4</span> Adding and removing points from polygons</h2>
 <p>Recall that given functions <span class="math inline">\(\phi,\psi:A\to B\)</span> between two arbitrary types we can form a type family of paths <span class="math inline">\(\alpha:A\to\mathcal{U}\)</span> by <span class="math inline">\(\alpha(a)\stackrel{\mathrm{def}}{=}(\phi(a)=_B\psi(a))\)</span>. Transport in this family is given by concatenation as follows, where <span class="math inline">\(p:a=_A a&#39;\)</span> and <span class="math inline">\(q:\phi(a)=\psi(a)\)</span> (see Figure <a href="#fig:transport_family_of_paths" data-reference-type="ref" data-reference="fig:transport_family_of_paths">4</a>): <span class="math display">\[\mathsf{tr}(p)(q) = \phi(p)^{-1}\cdot q\cdot \psi(p)\]</span> which gives a path in <span class="math inline">\(\phi(a&#39;)=\psi(a&#39;)\)</span> by connecting dots between the terms <span class="math inline">\(\phi(a&#39;), \phi(a), \psi(a), \psi(a&#39;)\)</span>. This relates a would-be homotopy <span class="math inline">\(\phi\sim\psi\)</span> specified at a single point, to a point at the end of a path. We will use this to help construct such homotopies.</p>
 <figure id="fig:transport_family_of_paths">
-<img src="./17fd332eed0d72f858e81f4722d8b1e5b33a5029.png" />
+<img src="./17fd332eed0d72f858e81f4722d8b1e5b33a5029.svg" />
 <figcaption>Transport along <span class="math inline">\(p\)</span> in the fibers of a family of paths. The fiber over <span class="math inline">\(a\)</span> is <span class="math inline">\(\phi(a)=\psi(a)\)</span> where <span class="math inline">\(\phi,\psi:A\to B\)</span>.</figcaption>
 </figure>
 <div id="lem:addpoints" class="mylemma">
@@ -733,12 +733,12 @@ g(f(e_{n,1}))&amp;= \ensuremath{\mathsf{refl}}_{v_1}.
 <h2 data-number="3.5" id="the-higher-inductive-type-oo"><span class="header-section-number">3.5</span> The higher inductive type <span class="math inline">\(\ensuremath{\mathbb{O}}\)</span></h2>
 <p>We will create our first combinatorial surface, an octahedron. In <span class="math inline">\(\mathsf{SimpCompSet_n}\)</span> the combinatorial data of the faces can be represented with a <em>Hasse diagram</em>, which shows the poset of inclusions in a graded manner, with a special top and bottom element. We give an octahedron in Figure <a href="#fig:hasse_octohedron" data-reference-type="ref" data-reference="fig:hasse_octohedron">5</a>. The names of the vertices are short for white, yellow, blue, red, green, and orange, the colors of the faces of a Rubik’s cube. The octahedron is the dual of the cube, with each vertex corresponding to a face.</p>
 <figure id="fig:hasse_octohedron">
-<img src="./41cfa9cf6e056c83cc79c2711f6ee0981317076b.png" />
+<img src="./41cfa9cf6e056c83cc79c2711f6ee0981317076b.svg" />
 <figcaption>Hasse diagram of an octahedron <span class="math inline">\(O\)</span>. The row of singletons is <span class="math inline">\(O_0\)</span> and above it are <span class="math inline">\(O_1\)</span> and <span class="math inline">\(O_2\)</span>.</figcaption>
 </figure>
 <p>Applying the map <span class="math inline">\(\mathcal{R}\)</span> to <span class="math inline">\(O_0\to O_1\to O\)</span> gives the presented type <span class="math inline">\(\ensuremath{\mathbb{O}}_0\to \ensuremath{\mathbb{O}}_1\to \ensuremath{\mathbb{O}}\)</span>.</p>
 <figure>
-<img src="./ff7f3a1e9ad288427a1f8fe354f5e5e4112b62fd.png" />
+<img src="./ff7f3a1e9ad288427a1f8fe354f5e5e4112b62fd.svg" />
 <figcaption>The marked presented type <span class="math inline">\(\ensuremath{\mathbb{O}}\)</span> which has 6 points, 12 1-paths, 8 2-paths.</figcaption>
 </figure>
 <h1 data-number="4" id="bundles-connections-and-curvature"><span class="header-section-number">4</span> Bundles, connections, and curvature</h1>
@@ -746,9 +746,9 @@ g(f(e_{n,1}))&amp;= \ensuremath{\mathsf{refl}}_{v_1}.
 <div id="def:connection" class="mydef">
 <p><strong>Definition 11</strong>. <em>If <span class="math inline">\(\ensuremath{\mathbb{M}}\)</span> is a higher combinatorial manifold and <span class="math inline">\(f_k:\ensuremath{\mathbb{M}}_k\to\mathcal{U}\)</span> are type families on each skeleton such that all the triangles commute in the diagram:</em></p>
 </div>
-<p><img src="./410f9577e3a3d74593e4c5b1653b42a1dd0def0e.png" alt="image" /></p>
+<p><img src="./410f9577e3a3d74593e4c5b1653b42a1dd0def0e.svg" alt="image" /></p>
 <p>and such that for each pushout defining <span class="math inline">\(\ensuremath{\mathbb{M}}_k\)</span> we have the diagram</p>
-<p><img src="./27ce799d943abb49f8e69dd66e145faf86086a4e.png" alt="image" /></p>
+<p><img src="./27ce799d943abb49f8e69dd66e145faf86086a4e.svg" alt="image" /></p>
 <p>then we say</p>
 <ul>
 <li><p>The map <span class="math inline">\(f_k\)</span> is a <strong><span class="math inline">\(k\)</span>-bundle</strong> on <span class="math inline">\(\ensuremath{\mathbb{M}}_k\)</span>.</p></li>
@@ -768,9 +768,9 @@ g(f(e_{n,1}))&amp;= \ensuremath{\mathsf{refl}}_{v_1}.
 \end{aligned}\]</span> We chose these orderings for the vertices in the link, by visualizing standing at the given vertex as if it were the north pole, then looking south and enumerating the link in clockwise order, starting from <span class="math inline">\(w\)</span> if possible, else <span class="math inline">\(b\)</span>.</em></p>
 </div>
 <figure id="fig:triangle_of_equators">
-<img src="./5223124258db050f495250e281a65d462714f6df.png" />
-<img src="./f8ad0fbb66a7ad51b3cb4db7a0f35ea8a8a56a4b.png" />
-<img src="./d3b55304a407c9ca808e19bf9256206529608d82.png" />
+<img src="./5223124258db050f495250e281a65d462714f6df.svg" />
+<img src="./f8ad0fbb66a7ad51b3cb4db7a0f35ea8a8a56a4b.svg" />
+<img src="./d3b55304a407c9ca808e19bf9256206529608d82.svg" />
 <figcaption><span class="math inline">\(\mathop{\mathrm{\mathsf{link}}}\)</span> for the vertices <span class="math inline">\(w, b\)</span> and <span class="math inline">\(r\)</span>.</figcaption>
 </figure>
 <p>To extend <span class="math inline">\(T_0\)</span> to a function <span class="math inline">\(T_1\)</span> on the 1-skeleton we have complete freedom. Defining a map by induction makes clear that the action on paths is its own structure. Two functions on the octahedron could agree on points but differ on edges. We are going to identify this 1-dimensional freedom with a connection:</p>
@@ -876,7 +876,7 @@ g(f(e_{n,1}))&amp;= \ensuremath{\mathsf{refl}}_{v_1}.
 <li><p>the three paths <span class="math inline">\(\mathsf{tr}(\ell)(X(x))\)</span>, <span class="math inline">\(\mathsf{tr}(e_{zx})\circ\mathsf{tr}(e_{yz})(X(y))\)</span>, and <span class="math inline">\(\mathsf{tr}(e_{zx})(X(e_{yz}))\)</span>.</p></li>
 </ol></li>
 </ol>
-<p><img src="./6e319fa11c58b55205c59653f95b6dcf273bcc06.png" alt="image" /></p>
+<p><img src="./6e319fa11c58b55205c59653f95b6dcf273bcc06.svg" alt="image" /></p>
 <p>Notice that the path <span class="math inline">\(\mathsf{tr}(\ell)(X(x))\)</span> is just one component of the path over <span class="math inline">\(\ell\)</span>. The path <span class="math inline">\(X(\ell)\)</span> is the concatenation of the three paths in item 4, each one “distorted” by 1, 2, or 3 transport maps, respectively. And of course we know already that this may not be a closed loop in <span class="math inline">\(T_1(x)\)</span>, because there may be nontrivial holonomy.</p>
 <p>But we can in fact close the loop with a fourth edge, exactly when <span class="math inline">\(T_1\)</span> has an extension to <span class="math inline">\(F\)</span>. The face <span class="math inline">\(F\)</span> provides a path <span class="math inline">\(\ell=_{v=_\ensuremath{\mathbb{M}}v} \ensuremath{\mathsf{refl}}(v)\)</span> that fills the loop, and an extension of <span class="math inline">\(T_1\)</span> to <span class="math inline">\(F\)</span> provides by functoriality a corresponding path <span class="math inline">\(T_1(\ell)=_{T_1(v)=T_1(v)}\ensuremath{\text{id}}(T_1(v))\)</span>, which is a homotopy between these two automorphisms of <span class="math inline">\(T_1(v)\)</span>. Evaluating this homotopy at <span class="math inline">\(X(x)\)</span> provides another term</p>
 <h1 data-number="6" id="total-constructions"><span class="header-section-number">6</span> Total constructions</h1>
@@ -894,7 +894,7 @@ g(f(e_{n,1}))&amp;= \ensuremath{\mathsf{refl}}_{v_1}.
 <p><em>The loop <span class="math inline">\(\ell_L\)</span> determined by the lasso is the concatenation along the tail towards the triangle, then around the triangle, then backward along the tail:<span class="math display">\[e_1\cdot\cdots\cdot e_n\cdot e_{12}\cdot e_{23} \cdot e_{31}\cdot e_n^{-1}\cdot\cdots\cdot e_1^{-1}.\]</span> Define the special case <span class="math inline">\(n=0\)</span> to have an empty tail with <span class="math inline">\(p_1\stackrel{\mathrm{def}}{=}v_1\)</span> and <span class="math inline">\(e_1\stackrel{\mathrm{def}}{=}\ensuremath{\mathsf{refl}}_{v_1}\)</span>, so includes only the triangle.</em></p>
 </div>
 <figure id="fig:lasso">
-<img src="./7b2c4762a8a37a67c11e5d07b7ac3a7f126348e9.png" />
+<img src="./7b2c4762a8a37a67c11e5d07b7ac3a7f126348e9.svg" />
 <figcaption>The lasso <span class="math inline">\(L_n\)</span>, a triangle with a tail, for probing manifolds.</figcaption>
 </figure>
 <p>The purpose of this type is to probe combinatorial manifolds in an organized fashion, by mapping <span class="math inline">\(L\)</span> into the type <span class="math inline">\(\ensuremath{\mathbb{M}}\)</span>.</p>
@@ -910,7 +910,7 @@ g(f(e_{n,1}))&amp;= \ensuremath{\mathsf{refl}}_{v_1}.
 </div>
 <p><em>Proof.</em> We will prove that changing the image of a point in the tail to an adjacent vertex does not affect the result. We will then prove that moving the master basepoint <span class="math inline">\(m\)</span> to an adjacent vertex does not affect the result. The full result follows by concatenating such proofs. Figure <a href="#fig:tail_move" data-reference-type="ref" data-reference="fig:tail_move">8</a> shows the image in <span class="math inline">\(\ensuremath{\mathbb{M}}\)</span> of two functions <span class="math inline">\(f, g\)</span> on a segment of the tail. If <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> agree on the rest of the lasso, how is total holonomy affected? We will traverse this segment twice: left to right, then later from right to left. When moving to the right we must compare <span class="math inline">\(g(e_i)\cdot g(e_{i+1})\)</span> to <span class="math inline">\(f(e_i)\cdot f(e_{i+1})\)</span>. There is a filler <span class="math inline">\(H:f(e_i)\cdot f(e_{i+1})=g(e_i)\cdot g(e_{i+1})\)</span> and so if the holonomy around the lasso <span class="math inline">\(f(L)\)</span> is <span class="math display">\[f(e_1)\cdot\cdots\cdot f(e_i)\cdot f(e_{i+1})\cdot\cdots\cdot f(e_{i+1})^{-1}\cdot f(e_i)^{-1}\cdot\cdots f(e_1)^{-1}\]</span> then there is a path <span class="math display">\[f(e_1)\cdot\cdots\cdot H\cdot\cdots\cdot H^{-1}\cdot\cdots f(e_1)^{-1}\]</span> from <span class="math inline">\(f(L)\)</span> to <span class="math inline">\(g(L)\)</span>. ◻</p>
 <figure id="fig:tail_move">
-<img src="./1b661c204b459eb843a3c3d714ae270179219569.png" />
+<img src="./1b661c204b459eb843a3c3d714ae270179219569.svg" />
 <figcaption>Two images of a part of the lasso tail.</figcaption>
 </figure>
 <h2 data-number="6.2" id="total-index-of-a-vector-field-subtracting-curvature"><span class="header-section-number">6.2</span> Total index of a vector field: subtracting curvature</h2>
