@@ -72,8 +72,9 @@
 </ul></li>
 <li><a href="#torsors-and-principal-bundles" id="toc-torsors-and-principal-bundles"><span class="toc-section-number">2</span> Torsors and principal bundles</a>
 <ul>
-<li><a href="#bundles-of-mere-circles" id="toc-bundles-of-mere-circles"><span class="toc-section-number">2.1</span> Bundles of mere circles</a></li>
-<li><a href="#sec:pathovers" id="toc-sec:pathovers"><span class="toc-section-number">2.2</span> Pathovers in circle bundles</a></li>
+<li><a href="#torsors" id="toc-torsors"><span class="toc-section-number">2.1</span> Torsors</a></li>
+<li><a href="#bundles-of-mere-circles" id="toc-bundles-of-mere-circles"><span class="toc-section-number">2.2</span> Bundles of mere circles</a></li>
+<li><a href="#sec:pathovers" id="toc-sec:pathovers"><span class="toc-section-number">2.3</span> Pathovers in circle bundles</a></li>
 </ul></li>
 <li><a href="#discrete-manifolds" id="toc-discrete-manifolds"><span class="toc-section-number">3</span> Discrete manifolds</a>
 <ul>
@@ -83,12 +84,15 @@
 </ul></li>
 <li><a href="#bundles-connections-and-curvature" id="toc-bundles-connections-and-curvature"><span class="toc-section-number">4</span> Bundles, connections, and curvature</a>
 <ul>
-<li><a href="#the-tangent-bundle-of-the-sphere" id="toc-the-tangent-bundle-of-the-sphere"><span class="toc-section-number">4.1</span> The tangent bundle of the sphere</a></li>
-<li><a href="#existence-of-connections" id="toc-existence-of-connections"><span class="toc-section-number">4.2</span> Existence of connections</a></li>
+<li><a href="#definitions" id="toc-definitions"><span class="toc-section-number">4.1</span> Definitions</a></li>
+<li><a href="#connections-as-local-trivializations" id="toc-connections-as-local-trivializations"><span class="toc-section-number">4.2</span> Connections as local trivializations</a></li>
+<li><a href="#the-tangent-bundle-of-the-sphere" id="toc-the-tangent-bundle-of-the-sphere"><span class="toc-section-number">4.3</span> The tangent bundle of the sphere</a></li>
+<li><a href="#existence-of-connections" id="toc-existence-of-connections"><span class="toc-section-number">4.4</span> Existence of connections</a></li>
 </ul></li>
 <li><a href="#vector-fields" id="toc-vector-fields"><span class="toc-section-number">5</span> Vector fields</a>
 <ul>
-<li><a href="#swirling" id="toc-swirling"><span class="toc-section-number">5.1</span> Swirling</a></li>
+<li><a href="#definition" id="toc-definition"><span class="toc-section-number">5.1</span> Definition</a></li>
+<li><a href="#swirling" id="toc-swirling"><span class="toc-section-number">5.2</span> Swirling</a></li>
 </ul></li>
 <li><a href="#total-constructions" id="toc-total-constructions"><span class="toc-section-number">6</span> Total constructions</a>
 <ul>
@@ -136,6 +140,7 @@
 <p>The results of this note can be extended in many directions. There are higher-dimensional generalizations of Gauss-Bonnet, including the theory of characteristic classes and Chern-Weil theory (which links characteristic classes to connections and curvature). These would involve working with nonabelian groups like <span class="math inline">\(SO(n)\)</span> and sphere bundles. Results from gauge theory could be imported into HoTT, as well as results from surgery theory and other topological constructions that may be especially amenable to this discrete setting. Relationships with computer graphics and discrete differential geometry<span class="citation" data-cites="crane_ddg"> (<a href="#ref-crane_ddg" role="doc-biblioref">Crane <em>et al.</em>, 2013</a>)</span><span class="citation" data-cites="crane_connections"> (<a href="#ref-crane_connections" role="doc-biblioref">Crane, 2010</a>)</span> could be explored. Finally, a theory that reintroduces smoothness could allow more formal versions of the analogies explored here.</p>
 <h1 data-number="2" id="torsors-and-principal-bundles"><span class="header-section-number">2</span> Torsors and principal bundles</h1>
 <p>The classical theory of principal bundles tells us to look for an appropriate classifying space of torsors to map into.</p>
+<h2 data-number="2.1" id="torsors"><span class="header-section-number">2.1</span> Torsors</h2>
 <div class="mydef">
 <p><strong>Definition 1</strong>. <em>Let <span class="math inline">\(G\)</span> be a group with identity element <span class="math inline">\(e\)</span> (with the usual classical structure and properties). A <strong><span class="math inline">\(G\)</span>-set</strong> is a set <span class="math inline">\(X\)</span> equipped with a homomorphism <span class="math inline">\(\phi:(G,e)\to\mathop{\mathrm{Aut}}(X)\)</span>. If in addition we have a term <span class="math display">\[\mathsf{is\_torsor}:||X||_{-1}\times \prod_{x:X}\mathsf{is\_equiv}(\phi(-,x):(G,e)\to (X,x))\]</span> then we call this data a <strong><span class="math inline">\(G\)</span>-torsor</strong>. Denote the type of <span class="math inline">\(G\)</span>-torsors by <span class="math inline">\(BG\)</span>.</em></p>
 </div>
@@ -151,7 +156,7 @@
 <p><strong>Corollary 4</strong>. <em>The pointed type <span class="math inline">\((BG,*)\)</span> is a <span class="math inline">\(\mathrm{K}(G,1)\)</span>.0◻</em></p>
 </div>
 <p>In particular, to classify principal <span class="math inline">\(S^1\)</span>-bundles we map into the space <span class="math inline">\(\mathrm{K}(S^1, 1)\)</span>, a type of torsors of the circle. Since <span class="math inline">\(S^1\)</span> is a <span class="math inline">\(\mathrm{K}(\ensuremath{\mathbb{Z}},1)\)</span>, we have <span class="math inline">\(\mathrm{K}(S^1,1)\simeq\mathrm{K}(\ensuremath{\mathbb{Z}},2)\)</span>.</p>
-<h2 data-number="2.1" id="bundles-of-mere-circles"><span class="header-section-number">2.1</span> Bundles of mere circles</h2>
+<h2 data-number="2.2" id="bundles-of-mere-circles"><span class="header-section-number">2.2</span> Bundles of mere circles</h2>
 <p>We find it illuminating to look also at the slightly more general classifying space of <span class="math inline">\(\mathrm{K}(\ensuremath{\mathbb{Z}},1)\)</span>-bundles, that is bundles whose fiber are equivalent to <span class="math inline">\(\mathrm{K}(\ensuremath{\mathbb{Z}},1)\)</span>. We can understand very well when these are in fact bundles of circle torsors, which will in turn shed light on orientation in this setting.</p>
 <p>We will follow Scoccola<span class="citation" data-cites="sco"> (<a href="#ref-sco" role="doc-biblioref">Scoccola, 2020</a>)</span>. We will state the definitions and theorems for a general <span class="math inline">\(\mathrm{K}(G,n)\)</span> but we will be focusing on <span class="math inline">\(n=1\)</span> in this note.</p>
 <div class="mydef">
@@ -169,7 +174,7 @@
 <div class="mynote">
 <p><strong>Remark 8</strong>. <em>Bundles of oriented mere circles are principal, but this fact does not hold for bundles of higher-dimensional spheres. Since this note will focus on 2-dimensional oriented manifolds we will be making use of this coincidence.</em></p>
 </div>
-<h2 data-number="2.2" id="sec:pathovers"><span class="header-section-number">2.2</span> Pathovers in circle bundles</h2>
+<h2 data-number="2.3" id="sec:pathovers"><span class="header-section-number">2.3</span> Pathovers in circle bundles</h2>
 <p>Suppose we have <span class="math inline">\(T:M\to\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)</span> and <span class="math inline">\(P\stackrel{\mathrm{def}}{=}\sum_{x:M}T(x)\)</span>. We adopt a convention of naming objects in <span class="math inline">\(M\)</span> with Latin letters, and the corresponding structures in <span class="math inline">\(P\)</span> with Greek letters. Recall that if <span class="math inline">\(p:a=_M b\)</span> then <span class="math inline">\(T\)</span> acts on <span class="math inline">\(p\)</span> with what’s called the <em>action on paths</em>, denoted <span class="math inline">\(\ensuremath{\mathsf{ap}}(T)(p):T(a)=T(b)\)</span>. This is a path in the codomain, which in this case is a type of types. Type theory also provides a function called <em>transport</em>, denoted <span class="math inline">\(\mathsf{tr}(p):T(a)\to T(b)\)</span> which acts on the fibers of <span class="math inline">\(P\)</span>. <span class="math inline">\(\mathsf{tr}(p)\)</span> is a function, acting on the terms of the types <span class="math inline">\(T(a)\)</span> and <span class="math inline">\(T(b)\)</span>, and univalence tells us this is the isomorphism corresponding to <span class="math inline">\(\ensuremath{\mathsf{ap}}(T)(p)\)</span>.</p>
 <p>Type theory also tells us that paths in <span class="math inline">\(P\)</span> are given by pairs of paths: a path <span class="math inline">\(p:a=_M b\)</span> in the base, and a pathover <span class="math inline">\(\pi:\mathsf{tr}(p)(\alpha)=_{T(b)}\beta\)</span> between <span class="math inline">\(\alpha:T(a)\)</span> and <span class="math inline">\(\beta:T(b)\)</span> in the fibers. We can’t directly compare <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> since they are of different types, so we apply transport to one of them. We say <span class="math inline">\(\pi\)</span> lies over <span class="math inline">\(p\)</span>. See Figure <a href="#fig:pathovers" data-reference-type="ref" data-reference="fig:pathovers">1</a>.</p>
 <figure id="fig:pathovers">
@@ -238,6 +243,7 @@
 </figure>
 <h1 data-number="4" id="bundles-connections-and-curvature"><span class="header-section-number">4</span> Bundles, connections, and curvature</h1>
 <p>A map out of a higher combinatorial manifold has various components. These line up with classical definitions, and identifying those is a primary purpose of this note.</p>
+<h2 data-number="4.1" id="definitions"><span class="header-section-number">4.1</span> Definitions</h2>
 <div id="def:connection" class="mydef">
 <p><strong>Definition 14</strong>. <em>If <span class="math inline">\(\ensuremath{\mathbb{M}}\)</span> is a higher combinatorial <span class="math inline">\(n\)</span>-manifold and <span class="math inline">\(f_k:\ensuremath{\mathbb{M}}_k\to\mathcal{U}\)</span> are type families on each skeleton such that all the triangles commute in the diagram:</em></p>
 </div>
@@ -259,7 +265,12 @@
 <div class="mynote">
 <p><strong>Remark 16</strong>. <em>Another classical object we can identify here is a <em>gauge transformation</em>, which is a bundle automorphism <span class="math inline">\(H:f\sim f\stackrel{\mathrm{def}}{=}\prod_{m:\ensuremath{\mathbb{M}}}f(m)=f(m)\)</span>. If we have <span class="math inline">\(||H=\ensuremath{\text{id}}_f||_{-1}\)</span> then the gauge transformation is called <em>small</em>, else <em>large</em>.</em></p>
 </div>
-<h2 data-number="4.1" id="the-tangent-bundle-of-the-sphere"><span class="header-section-number">4.1</span> The tangent bundle of the sphere</h2>
+<h2 data-number="4.2" id="connections-as-local-trivializations"><span class="header-section-number">4.2</span> Connections as local trivializations</h2>
+<p>This section can ve viewed as an extended remark. The observation we want to make is that the data of a <span class="math inline">\(k\)</span>-bundle is related to the construction of a trivialization: the fiber at one vertex can be extended throughout the face coherently, using the connection (the extension of the classifying map to the edges) to specify isomorphisms with the fibers at the other points, and the higher connections to establish commutativity between these.</p>
+<p>An important context for these remarks is if we imagine that the simplicial complex we started with is in fact a <em>Cech complex</em> of a good open cover <span class="math inline">\(\{U_i\}\)</span> (a cover by contractible open sets, each finite intersection of which is also contractible). This is just to say the vertices <span class="math inline">\(v_i\)</span> would represent the combinatorial data of the set of charts <span class="math inline">\(\{U_i\}\)</span> themselves, and the edges are formed if two charts overlap. The <span class="math inline">\(k\)</span>-faces are the <span class="math inline">\(k\)</span>-way overlaps, if any. For a good introduction to this point of view, see the introduction in Bott and Tu <span class="citation" data-cites="bott_tu"> (<a href="#ref-bott_tu" role="doc-biblioref">Bott &amp; Tu, 1982</a>)</span>. It bears emphasizing: the resulting <em>higher</em> types are the same ones we’ve been working with, it’s only the origin of the combinatorial data that we’re reimagining.</p>
+<p>Continuing the story, the type family <span class="math inline">\(f\)</span> at one vertex <span class="math inline">\(v_i\)</span>, <span class="math inline">\(f(v_i)\)</span> would represent a trivial bundle <span class="math inline">\(U_i\times f(v_i)\)</span> on one chart. Consider a 2-face <span class="math inline">\(F=\{v_1, v_2, v_3\}\)</span> and types <span class="math inline">\(f(v_1), f(v_2), f(v_3)\)</span> at the vertices. Extending <span class="math inline">\(f\)</span> to the edges <span class="math inline">\(\{e_{12}, e_{23}, e_{31}\}\)</span> provides isomorphisms <span class="math inline">\(f(e_{12}):f(v_1)=f(v_2)\)</span> and so on. There is a condition to check, however. We need the compatibility <span class="math inline">\(f(e_{31})\circ f(e_{23})\circ f(e_{12})=\ensuremath{\text{id}}_{f(v_1)}\)</span> on the 3-way overlap of the charts. This is provided by the flatness structure <span class="math inline">\(\flat(F)\)</span>, which is exactly a proof that the holonomy around the triangle is equal to the identity.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p>The classical theory of bundles on smooth manifolds is often presented in terms of just such combinatorial data, constructed from an appropriate atlas of charts and their overlaps. This is very much dual to the viewpoint where points are points, edges are paths, and so on. If one started with a cube, and covered it with six charts that each contained a different face (plus a little overlap), and formed the Cech complex of this data, you would arrive exactly at the dual polyhedron to the cube: the octahedron.</p>
+<h2 data-number="4.3" id="the-tangent-bundle-of-the-sphere"><span class="header-section-number">4.3</span> The tangent bundle of the sphere</h2>
 <p>We will build up a map <span class="math inline">\(T\)</span> out of <span class="math inline">\(\ensuremath{\mathbb{O}}\)</span> which is meant to be like the circle bundle of a tangent bundle. And so we will begin with the intrinsic data of the link at each point: taking the link of a vertex gives us a map from vertices to polygons.</p>
 <div class="mydef">
 <p><strong>Definition 17</strong>. <em><span class="math inline">\(T_0\stackrel{\mathrm{def}}{=}\mathop{\mathrm{\mathsf{link}}}:\ensuremath{\mathbb{O}}_0\to\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)</span> is given by: <span class="math display">\[\begin{aligned}
@@ -335,11 +346,12 @@
 </div>
 <p><em>where <span class="math inline">\(H_R:R=\ensuremath{\mathsf{refl}}_{C_4}\)</span> is the obvious homotopy given by composition with <span class="math inline">\(R^{-1}\)</span>. Passing through univalence we get a 2-path between <span class="math inline">\(R\)</span> and <span class="math inline">\(\ensuremath{\mathsf{refl}}\)</span> in the loop space <span class="math inline">\(C_4=_{\mathrm{EM}(\ensuremath{\mathbb{Z}},1)}C_4\)</span>.</em></p>
 </div>
-<h2 data-number="4.2" id="existence-of-connections"><span class="header-section-number">4.2</span> Existence of connections</h2>
+<h2 data-number="4.4" id="existence-of-connections"><span class="header-section-number">4.4</span> Existence of connections</h2>
 <p>How confident can we be that we can always define a connection on an arbitrary combinatorial manifold? Two things make the octahedron example special: the link is a 4-gon at every vertex, and every edge extends to a symmetry of the entire octahedron, embedded in 3-dimensional space. This imposed a coherence on the interactions of all the choices we made for the connection, which we can worry may not exist for more complex combinatorial data.</p>
 <p>We know as a fact outside of HoTT that any combinatorial surface that has been realized as a triangulated surface embedded in 3-dimensional euclidean space can inherit the parallel transport entailed in the embedding. We could then approximate that data to arbitrary precision with enough subdivision of the fibers of <span class="math inline">\(T\)</span>.</p>
 <p>What would a proof inside of HoTT look like? We will leave this as an open question.</p>
 <h1 data-number="5" id="vector-fields"><span class="header-section-number">5</span> Vector fields</h1>
+<h2 data-number="5.1" id="definition"><span class="header-section-number">5.1</span> Definition</h2>
 <p>Vector fields are sections of the tangent bundle of a manifold. We do not have a general theory of tangent bundles, even for 2-dimensional higher combinatorial manifolds, since we cannot yet prove that connections always exist on the 1-skeleton. But <em>given</em> an extension <span class="math inline">\(T\)</span> of the <span class="math inline">\(\mathop{\mathrm{\mathsf{link}}}\)</span> function, we can consider the type of sections <span class="math inline">\(\prod_{x:\ensuremath{\mathbb{M}}_1}T_1(x)\)</span>.</p>
 <div class="mydef">
 <p><strong>Definition 21</strong>. <em>A <strong>vector field</strong> on a higher combinatorial 2-manifold <span class="math inline">\(\ensuremath{\mathbb{M}}\)</span> equipped with type family <span class="math inline">\(T:\ensuremath{\mathbb{M}}\to\mathrm{K}(\ensuremath{\mathbb{Z}},2)\)</span> that extends <span class="math inline">\(\mathop{\mathrm{\mathsf{link}}}\)</span> is a term <span class="math inline">\(X:\prod_{x:\ensuremath{\mathbb{M}}_1}T_1(x)\)</span>. It may be possible to extend <span class="math inline">\(X\)</span> to one or more faces of <span class="math inline">\(\ensuremath{\mathbb{M}}\)</span>, but we call faces for which <span class="math inline">\(X\)</span> cannot be extended are called <strong>zeros of the vector field</strong>.</em></p>
@@ -351,7 +363,7 @@
 <div class="mynote">
 <p><strong>Remark 23</strong>. <em>Concrete pathover terms such as <span class="math inline">\(\pi\)</span> couple together the connection (the transport) and <span class="math inline">\(X\)</span>. The transport is needed to provide a single type in which to compare the two values of <span class="math inline">\(X\)</span>. The path <span class="math inline">\(\pi\)</span> therefore reflects both the movement of <span class="math inline">\(X\)</span> along the path <span class="math inline">\(p\)</span>, and the moving lens that allows us to examine in a single fiber the two points <span class="math inline">\(X(x)\)</span> and <span class="math inline">\(X(y)\)</span> as well as <span class="math inline">\(X(p)\)</span>.</em></p>
 </div>
-<h2 data-number="5.1" id="swirling"><span class="header-section-number">5.1</span> Swirling</h2>
+<h2 data-number="5.2" id="swirling"><span class="header-section-number">5.2</span> Swirling</h2>
 <p>Classically, vector fields are seen to swirl around between points. We can see this in HoTT as well, though in contrast to the classical explanations we always have a connection that interacts with the vector field.</p>
 <p>Consider a vertex <span class="math inline">\(x:\ensuremath{\mathbb{M}}\)</span>, a face <span class="math inline">\(F\)</span> containing vertices <span class="math inline">\(x, y, z\)</span>, and the boundary path <span class="math inline">\(\ell\stackrel{\mathrm{def}}{=}e_{xy}\cdot e_{yz} \cdot e_{zx}\)</span>. We can calculate <span class="math inline">\(X(\ell)\)</span> by concatenating the data along the path. As we visit each point we accumulate more information:</p>
 <ol>
@@ -539,6 +551,9 @@ g(f(e_{n,1}))&amp;= \ensuremath{\mathsf{refl}}_{v_1}.
 </div>
 <p>With <span class="math inline">\(m_k\)</span> we can start with a collection of pentagons and hexagons and make the collection homogeneous: by applying <span class="math inline">\(m_6\)</span> to the pentagons and <span class="math inline">\(m_5\)</span> to the hexagons we obtain a collection of 30-gons. This will be useful when we work more with the link function.</p>
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-bott_tu" class="csl-entry" role="listitem">
+<span class="smallcaps">Bott</span>, R. &amp; <span class="smallcaps">Tu</span>, L.W. (1982) <em>Differential forms in algebraic topology</em>, Graduate texts in mathematics. Springer New York.
+</div>
 <div id="ref-buchholtz2023central" class="csl-entry" role="listitem">
 <span class="smallcaps">Buchholtz</span>, U., <span class="smallcaps">Christensen</span>, J.D., <span class="smallcaps">Flaten</span>, J.G.T., &amp; <span class="smallcaps">Rijke</span>, E. (2023) <a href="https://arxiv.org/abs/2301.02636">Central h-spaces and banded types</a>.
 </div>
@@ -582,5 +597,11 @@ g(f(e_{n,1}))&amp;= \ensuremath{\mathsf{refl}}_{v_1}.
 <span class="smallcaps">Whitehead</span>, J.H.C. (1940) On <span><span class="math inline">\(C^1\)</span></span>-complexes. <em>Annals of Mathematics</em>, 809–824.
 </div>
 </div>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Not exactly. In Definition <a href="#def:connection" data-reference-type="ref" data-reference="def:connection">14</a> the flatness structure is a homotopy from a hub point to the polygonal boundary. But this is equivalent.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
 </body>
 </html>
