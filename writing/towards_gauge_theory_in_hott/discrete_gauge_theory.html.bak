@@ -87,7 +87,7 @@
 <li><a href="#bundles-connections-and-curvature" id="toc-bundles-connections-and-curvature"><span class="toc-section-number">4</span> Bundles, connections, and curvature</a>
 <ul>
 <li><a href="#definitions" id="toc-definitions"><span class="toc-section-number">4.1</span> Definitions</a></li>
-<li><a href="#connections-as-local-trivializations" id="toc-connections-as-local-trivializations"><span class="toc-section-number">4.2</span> Connections as local trivializations</a></li>
+<li><a href="#sec:localtriv" id="toc-sec:localtriv"><span class="toc-section-number">4.2</span> Connections as local trivializations</a></li>
 <li><a href="#the-tangent-bundle-of-the-sphere" id="toc-the-tangent-bundle-of-the-sphere"><span class="toc-section-number">4.3</span> The tangent bundle of the sphere</a></li>
 <li><a href="#existence-of-connections" id="toc-existence-of-connections"><span class="toc-section-number">4.4</span> Existence of connections</a></li>
 </ul></li>
@@ -96,13 +96,11 @@
 <li><a href="#definition" id="toc-definition"><span class="toc-section-number">5.1</span> Definition</a></li>
 <li><a href="#swirling" id="toc-swirling"><span class="toc-section-number">5.2</span> Swirling</a></li>
 </ul></li>
-<li><a href="#comparing-and-combining-constructions" id="toc-comparing-and-combining-constructions"><span class="toc-section-number">6</span> Comparing and combining constructions</a>
+<li><a href="#the-total-construction" id="toc-the-total-construction"><span class="toc-section-number">6</span> The total construction</a>
 <ul>
-<li><a href="#comparing-the-types" id="toc-comparing-the-types"><span class="toc-section-number">6.1</span> Comparing the types</a></li>
-<li><a href="#total-enumeration-of-faces" id="toc-total-enumeration-of-faces"><span class="toc-section-number">6.2</span> Total enumeration of faces</a></li>
-<li><a href="#total-holonomy" id="toc-total-holonomy"><span class="toc-section-number">6.3</span> Total holonomy</a></li>
-<li><a href="#total-index-of-a-vector-field" id="toc-total-index-of-a-vector-field"><span class="toc-section-number">6.4</span> Total index of a vector field</a></li>
-<li><a href="#the-main-theorem" id="toc-the-main-theorem"><span class="toc-section-number">6.5</span> The main theorem</a></li>
+<li><a href="#index-of-the-vector-field" id="toc-index-of-the-vector-field"><span class="toc-section-number">6.1</span> Index of the vector field</a></li>
+<li><a href="#cancellations" id="toc-cancellations"><span class="toc-section-number">6.2</span> Cancellations</a></li>
+<li><a href="#total-enumeration-of-faces" id="toc-total-enumeration-of-faces"><span class="toc-section-number">6.3</span> Total enumeration of faces</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -361,7 +359,7 @@ g(f(e_{n,1}))&amp;= \ensuremath{\mathsf{refl}}_{v_1}.
 <div class="mynote">
 <p><strong>Remark 25</strong>. <em>Another classical object we can identify here is a <em>gauge transformation</em>, which is a bundle automorphism <span class="math inline">\(H:f\sim f\stackrel{\mathrm{def}}{=}\prod_{m:\ensuremath{\mathbb{M}}}f(m)=f(m)\)</span>. If we have <span class="math inline">\(||H=\ensuremath{\text{id}}_f||_{-1}\)</span> then the gauge transformation is called <em>small</em>, else <em>large</em>.</em></p>
 </div>
-<h2 data-number="4.2" id="connections-as-local-trivializations"><span class="header-section-number">4.2</span> Connections as local trivializations</h2>
+<h2 data-number="4.2" id="sec:localtriv"><span class="header-section-number">4.2</span> Connections as local trivializations</h2>
 <p>This section can ve viewed as an extended remark. The observation we want to make is that the data of a <span class="math inline">\(1\)</span>-bundle is related to the construction of local trivializations: the fiber at one vertex can be extended throughout a single face coherently, using the connection (the extension of the classifying map to the edges) to specify isomorphisms with the fibers at the other points, and the higher connections to establish commutativity between these.</p>
 <p>We introduce a notation more suitable for the algebra of charts and overlaps: denote by <span class="math inline">\(g_{ji}:Ti\to Tj\)</span> the isomorphism of transport along an edge <span class="math inline">\(e_{ij}:i=_\ensuremath{\mathbb{M}}j\)</span>. The indices are ordered from right to left, which is compatible with function composition notation. Denote the inverse function by swapping indices: <span class="math inline">\(g_{ij}\stackrel{\mathrm{def}}{=}g_{ji}^{-1}\)</span>. Assume we have some fixed isomporphism <span class="math inline">\(T_i=S^1\)</span>, and to avoid composing everything with this function we will assume it is <span class="math inline">\(\ensuremath{\text{id}}\)</span>. In the diagram below we see the data arranged so that our bundles fibers are on the left, and the fiber of a trivial bundle is on the right.</p>
 <p><img src="./a7b6e29e62fa31b96fd6da3e7621be2ccd076268.svg" alt="image" /></p>
@@ -506,96 +504,94 @@ g(f(e_{n,1}))&amp;= \ensuremath{\mathsf{refl}}_{v_1}.
 <div class="mynote">
 <p><strong>Remark 34</strong>. <em>In Hopf <span class="citation" data-cites="hopf"> (<a href="#ref-hopf" role="doc-biblioref">Hopf, 1983</a>)</span> and in Needham <span class="citation" data-cites="needham"> (<a href="#ref-needham" role="doc-biblioref">Needham, 2021</a>)</span>, the value <span class="math inline">\(X(e_{xy})\)</span> is called “the change in angle between <span class="math inline">\(X\)</span> and <span class="math inline">\(X(x)_{||}\)</span> along the edge <span class="math inline">\(e_{xy}\)</span>,” where by <span class="math inline">\(X(x)_{||}\)</span> we mean the transport of the fixed single vector <span class="math inline">\(X(x)\)</span> to the point <span class="math inline">\(X(y)\)</span>, i.e. <span class="math inline">\(\mathsf{tr}(e_{xy})(X(x))\)</span>. The concatenation <span class="math inline">\(X(\ell)\)</span> is called “the sum of the changes in angle along each edge.” This remark is meant to help anyone intending to make further comparisons with classical results.</em></p>
 </div>
-<h1 data-number="6" id="comparing-and-combining-constructions"><span class="header-section-number">6</span> Comparing and combining constructions</h1>
+<h1 data-number="6" id="the-total-construction"><span class="header-section-number">6</span> The total construction</h1>
 <p>We will place holonomy, flatness, and vector fields on the same footing, and combine them. We will prove the equivalance of the total curvature of a tangent bundle, and total index of a vector field. This is the key relationship in proving both the Gauss-Bonnet theorem and the Poincaré-Hopf theorem.</p>
-<h2 data-number="6.1" id="comparing-the-types"><span class="header-section-number">6.1</span> Comparing the types</h2>
+<h2 data-number="6.1" id="index-of-the-vector-field"><span class="header-section-number">6.1</span> Index of the vector field</h2>
 <p>Given a polygon cellular type <span class="math inline">\(C_{n,0}\to C_{n,1}=C_n\)</span>, and map <span class="math inline">\(*_{C_n}:\mathbb{1}\to\mathrm{K}(\ensuremath{\mathbb{Z}},2)\)</span> giving it the structure of an <span class="math inline">\(S^1\)</span>-torsor, we have the following general fact:</p>
 <div id="prop:eveq" class="myprop">
 <p><strong>Proposition 35</strong>. <em>Given a pointing <span class="math inline">\(b:C_n\)</span> the evaluation map <span class="math inline">\(\mathrm{ev}(b):(C_n=C_n)\to C_n\)</span> is an equivalence.</em></p>
 </div>
 <p>Consider the cellular type <span class="math inline">\(\ensuremath{\mathbb{M}}_0\to\ensuremath{\mathbb{M}}_1\to\ensuremath{\mathbb{M}}\)</span> with point <span class="math inline">\(m:\ensuremath{\mathbb{M}}\)</span>. Consider a loop <span class="math inline">\(\ell:m=_\ensuremath{\mathbb{M}}m\)</span> with proof of contractibility <span class="math inline">\(f:\ell=\ensuremath{\mathsf{refl}}_m\)</span>. For example, we may have a face <span class="math inline">\(F\)</span> in a combinatorial realization, with <span class="math inline">\(m\)</span> a vertex of <span class="math inline">\(F\)</span> and <span class="math inline">\(\ell=\partial F\)</span> the boundary loop. We have accumulated the following constructions: <span class="math display">\[\begin{aligned}
 \mathsf{tr}(\ell)&amp;:Tm=Tm\\
-\flat(\ell)&amp;:\mathsf{tr}(\ell)=\ensuremath{\text{id}}\\
-X(\ell)&amp;:\mathsf{tr}(\ell)(X(m))=X(m)\\
-\end{aligned}\]</span> which invites us to make use of the equivalence <a href="#prop:eveq" data-reference-type="ref" data-reference="prop:eveq">35</a> to define <span class="math inline">\(X_e(\ell)\stackrel{\mathrm{def}}{=}\mathrm{ev}(X(m))^{-1}\circ X(\ell):\mathsf{tr}(\ell)=\ensuremath{\text{id}}\)</span> (where the subscript <span class="math inline">\(e\)</span> stands for the extension to all of <span class="math inline">\(Tm\)</span>) to obtain <span class="math display">\[\begin{aligned}
+\flat(\ell)&amp;:\mathsf{tr}(\ell)=_{Tm=Tm}\ensuremath{\text{id}}\\
+X(\ell)&amp;:\mathsf{tr}(\ell)(X(m))=_{Tm=Tm}X(m)\\
+\end{aligned}\]</span> which invites us to make use of the equivalence <a href="#prop:eveq" data-reference-type="ref" data-reference="prop:eveq">35</a> to define <span class="math inline">\(X_E(\ell)\stackrel{\mathrm{def}}{=}\mathrm{ev}(X(m))^{-1}\circ X(\ell):\mathsf{tr}(\ell)=\ensuremath{\text{id}}\)</span> (where the subscript <span class="math inline">\(E\)</span> stands for the extension to all of <span class="math inline">\(Tm\)</span>) to obtain <span class="math display">\[\begin{aligned}
 \mathsf{tr}(\ell)&amp;:Tm=Tm\\
-\flat(\ell)&amp;:\mathsf{tr}(\ell)=\ensuremath{\text{id}}\\
-X_e(\ell)&amp;:\mathsf{tr}(\ell)=\ensuremath{\text{id}}\\
-\end{aligned}\]</span> If a loop is of the form <span class="math inline">\(\ell&#39;=e\cdot \ell\cdot e^{-1}\)</span> then what can we say about the values of <span class="math inline">\(\mathsf{tr}\)</span>, <span class="math inline">\(\flat\)</span>, and <span class="math inline">\(X_e\)</span> on <span class="math inline">\(\ell&#39;\)</span> versus <span class="math inline">\(\ell\)</span>?</p>
-<div class="mylemma">
-<p><strong>Lemma 36</strong>. <em>Making use of the equivalence <span class="math inline">\(\tau:\prod_{x:M}(Tx=Tx)\xrightarrow[]{\simeq}(Tm=Tm)\)</span> from Lemma <a href="#lem:gauge_triv" data-reference-type="ref" data-reference="lem:gauge_triv">10</a> we have <span class="math inline">\(\tau(\mathsf{tr}(e\cdot\ell\cdot e^{-1}))=\tau(\mathsf{tr}(\ell))\)</span>.</em></p>
-</div>
-<p><em>Proof.</em> ◻</p>
-<div class="mylemma">
-<p><strong>Lemma 37</strong>. <em><span class="math inline">\(X_e(e\cdot\ell\cdot e^{-1}) = X_e(\ell)\)</span>.</em></p>
-</div>
-<p><em>Proof.</em> ◻</p>
-<h2 data-number="6.2" id="total-enumeration-of-faces"><span class="header-section-number">6.2</span> Total enumeration of faces</h2>
+\flat(\ell)&amp;:\mathsf{tr}(\ell)=_{Tm=Tm}\ensuremath{\text{id}}\\
+X_E(\ell)&amp;:\mathsf{tr}(\ell)=_{Tm=Tm}\ensuremath{\text{id}}\\
+\end{aligned}\]</span> These last two can be concatenated to make a loop.</p>
 <div class="mydef">
-<p><strong>Definition 38</strong>. <em>A <strong>total enumeration of faces</strong> for a combinatorial 2-manifold <span class="math inline">\(\ensuremath{\mathbb{M}}\)</span> with underlying simplicial complex <span class="math inline">\(M=[M_0, M_1, M_2]\)</span> consists of</em></p>
+<p><strong>Definition 36</strong>. <em>The <strong>index of the vector field <span class="math inline">\(X\)</span> around the loop <span class="math inline">\(\ell\)</span></strong> is the integer <span class="math inline">\(I_X(\ell):\flat(\ell)^{-1}\cdot X_E:\ensuremath{\text{id}}=_{Tm=Tm}\ensuremath{\text{id}}\)</span>.</em></p>
+</div>
+<div class="mynote">
+<p><strong>Remark 37</strong>. <em>Classically the index around a loop makes use of a trivialization of the tangent bundle, and does not take place in the presence of a connection. We know from section <a href="#sec:localtriv" data-reference-type="ref" data-reference="sec:localtriv">4.2</a> that the connection can serve as such a trivialization. Taking that point of view, the formula constitutes the difference between the swirling of the vector field inside the chart, and the twisting of the chart itself.</em></p>
+</div>
+<p>We now have the following list of ingredients given the loop <span class="math inline">\(\ell\)</span>: <span class="math display">\[\label{eq:face_elements}
+\begin{aligned}
+\mathsf{tr}(\ell)&amp;:Tm=Tm\\
+\flat(\ell)&amp;:\mathsf{tr}(\ell)=_{Tm=Tm}\ensuremath{\text{id}}\\
+X_E(\ell)&amp;:\mathsf{tr}(\ell)=_{Tm=Tm}\ensuremath{\text{id}}\\
+I_X(\ell)&amp;:\ensuremath{\text{id}}=_{Tm=Tm}\ensuremath{\text{id}}\\
+\end{aligned}\]</span></p>
+<h2 data-number="6.2" id="cancellations"><span class="header-section-number">6.2</span> Cancellations</h2>
+<p>The next observation is that we can relate the quantities in <a href="#eq:face_elements" data-reference-type="ref" data-reference="eq:face_elements">[eq:face_elements]</a> at different points around a cellular surface by making use of the automorphism bundle <span class="math inline">\(\sum_{x:\ensuremath{\mathbb{M}}}(Tx=Tx)\)</span> and its trivialization <span class="math inline">\(\tau:\prod_{x:M}(Tx=Tx)\xrightarrow[]{\simeq}(Tm=Tm)\)</span> as in Lemma <a href="#lem:gauge_triv" data-reference-type="ref" data-reference="lem:gauge_triv">10</a>.</p>
+<div class="mydef">
+<p><strong>Definition 38</strong>. <em>Consider the contractible type <span class="math inline">\(\sum_{\alpha:Tm=Tm}\alpha=\ensuremath{\text{id}}\)</span> with the addition law <span class="math inline">\((\alpha, p)+(\beta, q) = (\alpha\cdot\beta, p\cdot \alpha(q))\)</span> where <span class="math inline">\(\alpha(q):\alpha=\alpha\cdot\beta\)</span> (using concatenation notation instead of function composition). This is a commutative group with identity <span class="math inline">\(\ensuremath{\mathsf{refl}}_\ensuremath{\text{id}}\)</span> which we call the <strong>type of angles of <span class="math inline">\(Tm\)</span></strong>.</em></p>
+</div>
+<div class="mylemma">
+<p><strong>Lemma 39</strong>. <em><span class="math inline">\(\tau\circ X\)</span> maps concatenation of paths to the commutative operation <span class="math inline">\(+\)</span> in the type of angles <span class="math inline">\(\sum_{\alpha:Tm=Tm}\alpha=\ensuremath{\text{id}}\)</span>.</em></p>
+</div>
+<p><em>Proof.</em> Suppose we have <span class="math inline">\(p:x=_\ensuremath{\mathbb{M}}y\)</span> and <span class="math inline">\(q:y=_\ensuremath{\mathbb{M}}z\)</span>. Then <span class="math inline">\(X(p\cdot q)=\mathsf{tr}(q)(X(p))\cdot X(q)\)</span> which is exactly the operation <span class="math inline">\(+\)</span> but in the group <span class="math inline">\(\sum_{\alpha:Tz=Tz}\alpha=\ensuremath{\text{id}}\)</span>. We can then transport the result to <span class="math inline">\(m\)</span> by an arbitrary path. ◻</p>
+<div id="cor:x_cancel" class="mycor">
+<p><strong>Corollary 40</strong>. <em>With <span class="math inline">\(e, p, \ell\)</span> as in Figure <a href="#fig:lasso" data-reference-type="ref" data-reference="fig:lasso">8</a>, we have <span class="math inline">\(\tau(X_E(e\cdot\ell\cdot e^{-1})) = \tau(X_E(\ell))\)</span>.</em></p>
+</div>
+<p>So under <span class="math inline">\(\tau\)</span> we can cancel the contributions to <span class="math inline">\(X\)</span> from the edge <span class="math inline">\(e\)</span> after traversing it once in each direction. Meanwhile we have something similar for the transport automorphisms:</p>
+<div class="mylemma">
+<p><strong>Lemma 41</strong>. <em>With <span class="math inline">\(e, p, \ell\)</span> as in Figure <a href="#fig:lasso" data-reference-type="ref" data-reference="fig:lasso">8</a>, we have <span class="math inline">\(\tau(\mathsf{tr}(e\cdot\ell\cdot e^{-1}))=\tau(\mathsf{tr}(\ell))\)</span>.</em></p>
+</div>
+<p><em>Proof.</em> Recall that <span class="math inline">\(\tau\)</span> conjugates automorphisms by transport along some arbitrary path to <span class="math inline">\(m\)</span>. To transport automorphisms from <span class="math inline">\(x\)</span> to <span class="math inline">\(p\)</span>, choose a path <span class="math inline">\(p:m=_\ensuremath{\mathbb{M}}x\)</span>. Then make the specific choice <span class="math inline">\(p\cdot e:m=_\ensuremath{\mathbb{M}}y\)</span> to transport automorphisms from <span class="math inline">\(y\)</span> to <span class="math inline">\(p\)</span>. Then <span class="math inline">\(\tau(\mathsf{tr}(e\cdot\ell\cdot e^{-1}))\)</span> and <span class="math inline">\(\tau(\mathsf{tr}(\ell))\)</span> both compute to <span class="math inline">\(\mathsf{tr}((p\cdot e)\cdot\ell\cdot(p\cdot e)^{-1})\)</span>. ◻</p>
+<figure id="fig:lasso">
+<img src="./24a86fcb242fcbade879db4de4f4e6ab81e28dcc.svg" />
+<figcaption>Comparing maps on the edge <span class="math inline">\(e\)</span> at the master point <span class="math inline">\(m\)</span> with and without traversing <span class="math inline">\(\ell\)</span>.</figcaption>
+</figure>
+<h2 data-number="6.3" id="total-enumeration-of-faces"><span class="header-section-number">6.3</span> Total enumeration of faces</h2>
+<div class="mydef">
+<p><strong>Definition 42</strong>. <em>A <strong>total enumeration of faces</strong> for a combinatorial 2-manifold <span class="math inline">\(\ensuremath{\mathbb{M}}\)</span> with underlying simplicial complex <span class="math inline">\(M=[M_0, M_1, M_2]\)</span> consists of</em></p>
 <ol>
 <li><p><em>A “master basepoint” <span class="math inline">\(m:M_0\)</span>.</em></p></li>
-<li><p><em>For each face <span class="math inline">\(F:M_2\)</span> with vertices <span class="math inline">\(\{v_1, v_2, v_3\}\)</span> an enumeration of its vertices <span class="math inline">\([v_1, v_2, v_3]\)</span>, including the choice of the first vertex in the enumeration as the basepoint of <span class="math inline">\(F\)</span>, which is <strong>globally compatible</strong> with the choices for the other faces, meaning that when two faces <span class="math inline">\(F_1,F_2\)</span> share an edge <span class="math inline">\(\{v, w\}\)</span>, then one of the faces includes the sublist <span class="math inline">\([v, w]\)</span> and the other includes <span class="math inline">\([w, v]\)</span>.</em></p></li>
+<li><p><em>For each face <span class="math inline">\(F:M_2\)</span> with vertices <span class="math inline">\(\{v_{F,1}, v_{F,2}, v_{F,3}\}\)</span> an enumeration of its vertices <span class="math inline">\([v_{F,1}, v_{F,2}, v_{F,3}]\)</span>, including the choice of the first vertex in the enumeration as the basepoint of <span class="math inline">\(F\)</span>, which is <strong>globally compatible</strong> with the choices for the other faces, meaning that when two faces <span class="math inline">\(F_1,F_2\)</span> share an edge <span class="math inline">\(\{v, w\}\)</span>, then one of the faces includes the sublist <span class="math inline">\([v, w]\)</span> and the other includes <span class="math inline">\([w, v]\)</span>.</em></p></li>
 <li><p><em>An ordering of the faces <span class="math inline">\([F_1,\ldots,F_n]\)</span>.</em></p></li>
-<li><p><em>For each face <span class="math inline">\(F\)</span> a path <span class="math inline">\(p_F:m=_\ensuremath{\mathbb{M}}F_v\)</span> and a loop <span class="math inline">\(\ell_F\stackrel{\mathrm{def}}{=}p_F\cdot e_{12}\cdot e_{23}\cdot e_{31}\cdot p_F^{-1}\)</span> where <span class="math inline">\(e_{ij}:v_i=v_j\)</span> are the paths corresponding to the edges.</em></p></li>
 </ol>
 <p><em>Two enumerations that differ only in the ordering of vertices (2.) are said to have the <strong>same orientation</strong> if it is true for every face that the two orderings of vertices differ by an even orientation.</em></p>
 </div>
-<p>Note that the last bullet of the definition is the only one that uses the realization <span class="math inline">\(\ensuremath{\mathbb{M}}\)</span>.</p>
 <div class="mynote">
-<p><strong>Remark 39</strong>. <em>For such an enumeration to exist the underlying simplicial complex must be <em>orientable</em> in a classical sense. We are not going to explore this requirement internally in HoTT, nor prove any relationship between orientability of the set-based complex and orientation in the sense of factoring classifying maps through <span class="math inline">\(\mathrm{K}(\ensuremath{\mathbb{Z}},2)\to\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)</span>.</em></p>
+<p><strong>Remark 43</strong>. <em>For such an enumeration to exist the underlying simplicial complex must be <em>orientable</em> in a classical sense. We are not going to explore this requirement internally in HoTT, nor prove any relationship between orientability of the set-based complex and orientation in the sense of factoring classifying maps through <span class="math inline">\(\mathrm{K}(\ensuremath{\mathbb{Z}},2)\to\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)</span>.</em></p>
 </div>
 <div class="myex">
-<p><strong>Example 40</strong>. <em>The octahedron: for <span class="math inline">\(\ensuremath{\mathbb{O}}\)</span> we might choose <span class="math inline">\(b\)</span> as the master basepoint, as well as the basepoint for four of the faces. For the other four faces we could choose <span class="math inline">\(g\)</span> as the basepoint. We could choose <span class="math inline">\(br\cdot rg\)</span> as the path between the basepoints, and we could order the faces like this: <span class="math inline">\([bwo, brw, boy, byr, gow, gwr, gry, gyo]\)</span>.</em></p>
+<p><strong>Example 44</strong>. <em>The octahedron: for <span class="math inline">\(\ensuremath{\mathbb{O}}\)</span> we might choose <span class="math inline">\(b\)</span> as the master basepoint, as well as the basepoint for four of the faces. For the other four faces we could choose <span class="math inline">\(g\)</span> as the basepoint. We could choose <span class="math inline">\(br\cdot rg\)</span> as the path between the basepoints, and we could order the faces like this: <span class="math inline">\([bwo, brw, boy, byr, gow, gwr, gry, gyo]\)</span>.</em></p>
 </div>
 <div class="mydef">
-<p><strong>Definition 41</strong>. <em>Given a total enumeration of faces, the concatenation <span class="math inline">\(\ell_{\mathrm{tot}}\stackrel{\mathrm{def}}{=}\ell_{F_1}\cdot\cdots\cdot\ell_{F_n}\)</span> is called <strong>the total loop</strong> of the enumeration.</em></p>
+<p><strong>Definition 45</strong>. <em>The <strong>total path</strong> of an enumeration is the list <span class="math inline">\(\ell_{F_1},\ldots,\ell_{F_n}\)</span> of loops where <span class="math inline">\(\ell_{F_i}:v_{F_i,1}=v_{F_i,1}\)</span> is the loop around <span class="math inline">\(F_i\)</span> connecting vertices <span class="math inline">\(v_{F,1}, v_{F,2}, v_{F,3}\)</span>.</em></p>
 </div>
-<figure id="fig:lasso">
-<img src="./aa281afe7867f5b1bc6e068f4632201285d10a78.svg" />
-<figcaption>A loop <span class="math inline">\(\ell_F:m=_\ensuremath{\mathbb{M}}m\)</span> around the face <span class="math inline">\(F\)</span>.</figcaption>
-</figure>
-<h2 data-number="6.3" id="total-holonomy"><span class="header-section-number">6.3</span> Total holonomy</h2>
-<p>Given a total enumeration of faces we can form the compositions <span class="math inline">\(T\circ\ell_{F_i}\)</span> with the associated loop to obtain holonomy isomorphisms <span class="math inline">\(T\circ\ell_{F_i}:Tm=Tm\)</span>. We can concatenate all the loops <span class="math inline">\(\ell_{F_1}\cdot\cdots\cdot\ell_{F_n}\)</span> and obtain a <em>total holonomy</em> <span class="math inline">\(T\circ(\ell_{F_1}\cdot\cdots\cdot\ell_{F_n}):Tm=Tm\)</span>.</p>
 <div class="mydef">
-<p><strong>Definition 42</strong>. <em>The <strong>total holonomy</strong> of a total enumeration of faces is the map <span class="math inline">\(T\circ(\ell_{F_1}\cdot\cdots\cdot\ell_{F_n}):Tm=Tm\)</span>.</em></p>
+<p><strong>Definition 46</strong>. <em>Using <a href="#eq:face_elements" data-reference-type="ref" data-reference="eq:face_elements">[eq:face_elements]</a> we can define the <strong>total curvature</strong>, <strong>total swirling</strong> and <strong>total index</strong> of a total path as follows: <span class="math display">\[\label{eq:total_elements}
+\begin{aligned}
+\flat_\mathrm{tot}&amp;=\tau(\flat(\ell_{F_1}))+\cdots+\tau(\flat(\ell_{F_n}))\\
+X_\mathrm{tot}&amp;=\tau(X(\ell_{F_1}))+\cdots+\tau(X(\ell_{F_n}))\\
+I_\mathrm{tot}&amp;=\flat_\mathrm{tot}^{-1}\cdot X_\mathrm{tot}
+\end{aligned}\]</span> where the sums are taken in the group of angles <span class="math inline">\(\sum_{\alpha:Tm=Tm}\alpha=\ensuremath{\text{id}}\)</span>.</em></p>
 </div>
-<div class="myprop">
-<p><strong>Proposition 43</strong>. <em>The holonomy <span class="math inline">\(\ell_F\)</span> around a face <span class="math inline">\(F\)</span> is conjugated if we change the path <span class="math inline">\(p_F\)</span> or the basepoint <span class="math inline">\(m\)</span>. The holonomy becomes the inverse automorphism if we change the enumeration of <span class="math inline">\(F\)</span> by an odd permutation of its vertices (but keep the basepoint fixed).</em></p>
+<div id="lem:edges_cancel" class="mylemma">
+<p><strong>Lemma 47</strong>. <em>The total path of an enumeration visits each edge an even number of times, equally in each direction.</em></p>
 </div>
-<p><em>Proof.</em> If we change the path <span class="math inline">\(p_F\)</span> to a homotopic path <span class="math inline">\(p&#39;_F\)</span>, then the change is made up of a finite sequence of moves like the one in Figure <a href="#fig:tail_move" data-reference-type="ref" data-reference="fig:tail_move">9</a>, where the triangle <span class="math inline">\(xyz\)</span> bounds a face. Then <span class="math inline">\(p_{F}\)</span> is given by <span class="math display">\[(p\cdot e_{xy})\cdot (q\cdot e_{12}\cdot e_{23}\cdot e_{31}\cdot q^{-1})\cdot (p\cdot e_{xy})^{-1}\]</span> where we grouped the parts that involve the change and do not involve it. So replacing <span class="math inline">\(e_{xy}\)</span> by <span class="math inline">\(e_{xz}\cdot e_{zy}\)</span> is definitionally equal to <span class="math display">\[A\cdot (p\cdot e_{xy})\cdot (q\cdot e_{12}\cdot e_{23}\cdot e_{31}\cdot q^{-1})\cdot (p\cdot e_{xy})^{-1}\cdot A^{-1}\]</span> where <span class="math inline">\(A\stackrel{\mathrm{def}}{=}p\cdot e_{xz}\cdot e_{zy}\cdot e_{xy}^{-1}\cdot p^{-1}\)</span> is the loop that circulates the difference between the paths. Said another way, we are making use of the observation that <span class="math inline">\(p_F\)</span> is related to <span class="math inline">\(p&#39;_F\)</span> by conjugating with the loop, based at <span class="math inline">\(m\)</span>, that goes around the discrepancy. If we add more such basic changes then we add additional conjugations.</p>
-<p>If we change the basepoint <span class="math inline">\(m\)</span> to <span class="math inline">\(m&#39;\)</span> then we need to make a new choice, which is a path <span class="math inline">\(\pi:m&#39;=m\)</span>. This lengthens the path <span class="math inline">\(p_F\)</span> to the path <span class="math inline">\(\pi\cdot p_F\cdot \pi^{-1}\)</span>. This conjugation relates two different groups, the automorphism groups <span class="math inline">\(Tm=Tm\)</span> and <span class="math inline">\(Tm&#39;=Tm&#39;\)</span>. The two groups are not canonically identified because the identification relies on the choice of <span class="math inline">\(\pi\)</span>. If we change <span class="math inline">\(\pi\)</span> by a sequence of moves like we did with <span class="math inline">\(p_F\)</span> then again the holonomy at <span class="math inline">\(m&#39;\)</span> will change by a conjugation.</p>
-<p>Finally we observe that for the triangle <span class="math inline">\(F\)</span>, an odd permutation that keeps the basepoint fixed is simply a traversal of the loop in the opposite direction, sending <span class="math inline">\(\ell_F\)</span> to <span class="math inline">\(\ell_{F^{-1}}\)</span>. ◻</p>
-<figure id="fig:tail_move">
-<img src="./dc8265541ed4b848af6958ab0ac895633eae0f45.svg" />
-<figcaption>Two paths to the face, from <span class="math inline">\(x\)</span> to <span class="math inline">\(y\)</span> directly, or through <span class="math inline">\(z\)</span>.</figcaption>
-</figure>
-<div class="mycor">
-<p><strong>Corollary 44</strong>. <em>In a bundle of mere circles <span class="math inline">\(T:\ensuremath{\mathbb{M}}\to\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)</span> the total holonomy is independent of the choice of paths <span class="math inline">\(p_{F_i}\)</span> and the basepoint <span class="math inline">\(m\)</span>. It is inverted if we switch orientations.</em></p>
-</div>
-<p><em>Proof.</em> This follows from the commutativity of <span class="math inline">\(S^1\)</span> and hence of the holonomy isomorphism groups <span class="math inline">\(Tm=Tm\)</span>. See <span class="citation" data-cites="buchholtz2023central"> (<a href="#ref-buchholtz2023central" role="doc-biblioref">Buchholtz <em>et al.</em>, 2023</a>)</span>, Example 3.8. ◻</p>
-<div class="myex">
-<p><strong>Example 45</strong>. <em>The total holonomy of <span class="math inline">\(T_1\)</span> on <span class="math inline">\(\ensuremath{\mathbb{O}}\)</span> (Definition <a href="#def:octahedron_holonomy" data-reference-type="ref" data-reference="def:octahedron_holonomy">28</a>) is <span class="math inline">\(\ensuremath{\text{id}}\)</span>, and the flatness structure is the path <span class="math inline">\(\ensuremath{\text{id}}=R^8\)</span> which is two full rotations of <span class="math inline">\(C_4\)</span>.</em></p>
-</div>
-<h2 data-number="6.4" id="total-index-of-a-vector-field"><span class="header-section-number">6.4</span> Total index of a vector field</h2>
-<h2 data-number="6.5" id="the-main-theorem"><span class="header-section-number">6.5</span> The main theorem</h2>
 <div class="mythm">
-<p><strong>Theorem 46</strong>. <em>The total index is constant on <span class="math inline">\(\prod_{x:\ensuremath{\mathbb{M}}_1}T_1(x)\)</span>.</em></p>
+<p><strong>Theorem 48</strong>. <em><span class="math inline">\(\tau(X(\ell_{F_1}))\cdots\tau(X(\ell_{F_n}))=\ensuremath{\mathsf{refl}}\)</span> in <span class="math inline">\(\sum_{\alpha:Tm=Tm}\alpha=\ensuremath{\text{id}}\)</span>.</em></p>
 </div>
-<p>This appears to be a little less than what we have classically, which is:</p>
-<ol>
-<li><p>A definition of total curvature of a connection on the tangent bundle.</p></li>
-<li><p>A definition of total index, without using the connection.</p></li>
-<li><p>A definition of Euler characteristic.</p></li>
-<li><p>A proof that total index is independent of the vector field.</p></li>
-<li><p>A proof that total curvature is equal to total index.</p></li>
-</ol>
-<p>This collection of results provides enough redundancy to separately produce corollaries such as: total curvature is an integer; total curvature does not depend on the connection; a second proof that total index is independent of the vector field (since it is equal to total curvature, which does not so depend).</p>
-<p>How much of this do we have?</p>
+<p><em>Proof.</em> Immediate from Lemma <a href="#lem:edges_cancel" data-reference-type="ref" data-reference="lem:edges_cancel">47</a> and Corollary <a href="#cor:x_cancel" data-reference-type="ref" data-reference="cor:x_cancel">40</a>. ◻</p>
+<div class="mycor">
+<p><strong>Corollary 49</strong>. <em>The total index is equal to the opposite of the total curvature. The total curvature is an integer.</em></p>
+</div>
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
-<div id="ref-buchholtz2023central" class="csl-entry" role="listitem">
-<span class="smallcaps">Buchholtz</span>, U., <span class="smallcaps">Christensen</span>, J.D., <span class="smallcaps">Flaten</span>, J.G.T., &amp; <span class="smallcaps">Rijke</span>, E. (2023) <a href="https://arxiv.org/abs/2301.02636">Central h-spaces and banded types</a>.
-</div>
 <div id="ref-christensen_univalence" class="csl-entry" role="listitem">
 <span class="smallcaps">Christensen</span>, D. (2015) A characterization of univalent fibrations.
 </div>
