@@ -70,33 +70,34 @@
 <ul>
 <li><a href="#future-work" id="toc-future-work"><span class="toc-section-number">1.1</span> Future work</a></li>
 </ul></li>
-<li><a href="#torsors-and-principal-bundles" id="toc-torsors-and-principal-bundles"><span class="toc-section-number">2</span> Torsors and principal bundles</a>
+<li><a href="#sec:torsors" id="toc-sec:torsors"><span class="toc-section-number">2</span> Torsors and principal bundles</a>
 <ul>
 <li><a href="#torsors" id="toc-torsors"><span class="toc-section-number">2.1</span> Torsors</a></li>
 <li><a href="#bundles-of-eilenberg-mac-lane-spaces" id="toc-bundles-of-eilenberg-mac-lane-spaces"><span class="toc-section-number">2.2</span> Bundles of Eilenberg-Mac Lane spaces</a></li>
 <li><a href="#sec:pathovers" id="toc-sec:pathovers"><span class="toc-section-number">2.3</span> Pathovers</a></li>
 <li><a href="#sec:automorphisms" id="toc-sec:automorphisms"><span class="toc-section-number">2.4</span> The bundle of automorphisms</a></li>
 </ul></li>
-<li><a href="#discrete-manifolds" id="toc-discrete-manifolds"><span class="toc-section-number">3</span> Discrete manifolds</a>
+<li><a href="#sec:discrete_man" id="toc-sec:discrete_man"><span class="toc-section-number">3</span> Discrete manifolds</a>
 <ul>
 <li><a href="#abstract-simplicial-complexes" id="toc-abstract-simplicial-complexes"><span class="toc-section-number">3.1</span> Abstract simplicial complexes</a></li>
 <li><a href="#higher-inductive-combinatorial-manifolds" id="toc-higher-inductive-combinatorial-manifolds"><span class="toc-section-number">3.2</span> Higher inductive combinatorial manifolds</a></li>
 <li><a href="#sec:polygons" id="toc-sec:polygons"><span class="toc-section-number">3.3</span> Polygons</a></li>
 <li><a href="#the-octahedron-model-of-the-sphere" id="toc-the-octahedron-model-of-the-sphere"><span class="toc-section-number">3.4</span> The octahedron model of the sphere</a></li>
 </ul></li>
-<li><a href="#bundles-connections-and-curvature" id="toc-bundles-connections-and-curvature"><span class="toc-section-number">4</span> Bundles, connections, and curvature</a>
+<li><a href="#sec:connections" id="toc-sec:connections"><span class="toc-section-number">4</span> Bundles, connections, and curvature</a>
 <ul>
 <li><a href="#definitions" id="toc-definitions"><span class="toc-section-number">4.1</span> Definitions</a></li>
 <li><a href="#sec:localtriv" id="toc-sec:localtriv"><span class="toc-section-number">4.2</span> Connections as local trivializations</a></li>
 <li><a href="#the-tangent-bundle-of-the-sphere" id="toc-the-tangent-bundle-of-the-sphere"><span class="toc-section-number">4.3</span> The tangent bundle of the sphere</a></li>
 <li><a href="#existence-of-connections" id="toc-existence-of-connections"><span class="toc-section-number">4.4</span> Existence of connections</a></li>
 </ul></li>
-<li><a href="#vector-fields" id="toc-vector-fields"><span class="toc-section-number">5</span> Vector fields</a>
+<li><a href="#sec:vector_fields" id="toc-sec:vector_fields"><span class="toc-section-number">5</span> Vector fields</a>
 <ul>
 <li><a href="#definition" id="toc-definition"><span class="toc-section-number">5.1</span> Definition</a></li>
 <li><a href="#swirling" id="toc-swirling"><span class="toc-section-number">5.2</span> Swirling</a></li>
+<li><a href="#an-example-vector-field-on-the-sphere" id="toc-an-example-vector-field-on-the-sphere"><span class="toc-section-number">5.3</span> An example vector field on the sphere</a></li>
 </ul></li>
-<li><a href="#the-total-construction" id="toc-the-total-construction"><span class="toc-section-number">6</span> The total construction</a>
+<li><a href="#sec:totals" id="toc-sec:totals"><span class="toc-section-number">6</span> The total construction</a>
 <ul>
 <li><a href="#index-of-the-vector-field" id="toc-index-of-the-vector-field"><span class="toc-section-number">6.1</span> Index of the vector field</a></li>
 <li><a href="#cancellations" id="toc-cancellations"><span class="toc-section-number">6.2</span> Cancellations</a></li>
@@ -105,30 +106,31 @@
 </ul>
 </nav>
 <h1 class="unnumbered" id="abstract">Abstract</h1>
-<p>Higher inductive types can capture some concepts of differential geometry in two dimensions including connections, curvature, and vector fields. We define connections on higher inductive types. We then define tangent bundles and vector fields by looking at the special subclass of combinatorial manifolds, which are discrete in the sense of real cohesion<span class="citation" data-cites="shulman_cohesion"> (<a href="#ref-shulman_cohesion" role="doc-biblioref">Shulman, 2017</a>)</span>, drawing inspiration from the field of discrete differential geometry. We prove the Gauss-Bonnet theorem and Poincaré-Hopf theorem for combinatorial manifolds.</p>
+<p>Type families on higher inductive types such as pushouts can capture the homotopical properties of differential geometric constructions including connections, curvature, gauge transformations, and vector fields. We define a class of combinatorial pushouts, then define principal bundles, tangent bundles, connections, curvature, and vector fields on these. We draw inspiration in part from the young field of discrete differential geometry, and in part from the original classical proofs, which often make use of triangulations and other discrete arguments. We prove an equality relating the Gauss-Bonnet theorem to the Poincaré-Hopf theorem. We also attempt to map out future directions.</p>
 <p><em></em></p>
 <p>This thesis is dedicated to John Baez, Sean M. Carroll, Sabine Hossenfelder, and other communicators who are carrying the torch of science forward in the spirit of my hero Carl Sagan. I have followed you all for many years, and you have inspired me to continue my studies alongside my career. Thank you.</p>
 <blockquote>
 <p>“It is always ourselves we work on, whether we realize it or not. There is no other work to be done in the world.” — Stephen Talbott, <em>The Future Does Not Compute</em><span class="citation" data-cites="talbott"> (<a href="#ref-talbott" role="doc-biblioref">Talbott, 1995</a>)</span></p>
 </blockquote>
 <h1 data-number="1" id="overview"><span class="header-section-number">1</span> Overview</h1>
-<p>We will define</p>
+<p>The outline is that we will define</p>
 <ul>
-<li><p>combinatorial 2-manifolds</p></li>
-<li><p>circle bundles, and principal circle bundles of tangent bundles</p></li>
-<li><p>vector fields,</p></li>
+<li><p>principal bundles in Section <a href="#sec:torsors" data-reference-type="ref" data-reference="sec:torsors">2</a>,</p></li>
+<li><p>simplicial complexes, and homotopical realizations of these in Section <a href="#sec:discrete_man" data-reference-type="ref" data-reference="sec:discrete_man">3</a>,</p></li>
+<li><p>vector fields in Section <a href="#sec:vector_fields" data-reference-type="ref" data-reference="sec:vector_fields">5</a>,</p></li>
 </ul>
-<p>and then observe emerging from those definitions the presence of</p>
+<p>and observe emerging from those definitions the presence of</p>
 <ul>
-<li><p>connections</p></li>
-<li><p>curvature</p></li>
-<li><p>the index of a vector field,</p></li>
+<li><p>connections and curvature in Section <a href="#sec:connections" data-reference-type="ref" data-reference="sec:connections">4</a>,</p></li>
+<li><p>the index of a vector field in Section <a href="#sec:totals" data-reference-type="ref" data-reference="sec:totals">6</a>,</p></li>
 </ul>
-<p>and attempt to prove</p>
+<p>and then define in Section <a href="#sec:totals" data-reference-type="ref" data-reference="sec:totals">6</a></p>
 <ul>
-<li><p>the Gauss-Bonnet theorem</p></li>
-<li><p>and the Poincaré-Hopf theorem.</p></li>
+<li><p>the total curvature, as in the Gauss-Bonnet theorem</p></li>
+<li><p>the total index of a vector field, as in Poincaré-Hopf theorem,</p></li>
+<li><p>and prove the equality of these to each other.</p></li>
 </ul>
+<p>We will build up an example of all of these structures on an octahedron model of the sphere, and compute its Euler characteristic of 2. We will not, however, be supplying a separate definition of Euler characteristic so as to truly reproduce the Gauss-Bonnet and Poincaré-Hopf theorems.</p>
 <p>We will consider functions <span class="math inline">\(\ensuremath{\mathbb{M}}\to \mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)</span> where <span class="math inline">\(\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)</span> is the connected component in the universe of the Eilenberg-MacLane space <span class="math inline">\(\mathrm{K}(\ensuremath{\mathbb{Z}},1)\)</span> which we will take to be <span class="math inline">\(S^1\)</span>, and where <span class="math inline">\(\ensuremath{\mathbb{M}}\)</span> is a combinatorial manifold of dimension 2, which is a simplicial complex encoded in a higher inductive type, such that each vertex has a neighborhood that looks like a disk with a discrete circle boundary (i.e. a polygon). We can call terms <span class="math inline">\(C:\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)</span> “mere circles.”</p>
 <p>We will see in Section <a href="#sec:polygons" data-reference-type="ref" data-reference="sec:polygons">3.3</a> that <span class="math inline">\(\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)</span> contains all the polygons. We will construct a map <span class="math inline">\(\mathop{\mathrm{\mathsf{link}}}:\ensuremath{\mathbb{M}}\to\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)</span> that maps each vertex to the polygon consisting of its neighbors. Then we can consider the type of pointed mere circles <span class="math inline">\(\mathrm{EM_{\bullet}}(\ensuremath{\mathbb{Z}},1)\stackrel{\mathrm{def}}{=}\sum_{Y:\mathrm{EM}(\ensuremath{\mathbb{Z}},1)}Y\)</span> as well as the first projection that forgets the point. This is a univalent fibration (univalent fibrations are always equivalent to a projection of a type of pointed types to some connected component of the universe<span class="citation" data-cites="christensen_univalence"> (<a href="#ref-christensen_univalence" role="doc-biblioref">Christensen, 2015</a>)</span>). If we form the pullback</p>
 <p><img src="./92c490bab129a4cb8dda6425574bf97743214ebe.svg" alt="image" /></p>
@@ -137,7 +139,7 @@
 <p>We will then define a method for visiting all the faces of a manifold in order to form “totals” of local objects. We will examine the total curvature and the total index and prove that they are equal, and argue that they are equal to the usual Euler characteristic. This will simultaneously prove the Poincaré-Hopf theorem and Gauss-Bonnet theorem in 2 dimensions, for combinatorial manifolds. This is similar to the classical proof of Hopf<span class="citation" data-cites="hopf"> (<a href="#ref-hopf" role="doc-biblioref">Hopf, 1983</a>)</span>, presented in detail in Needham<span class="citation" data-cites="needham"> (<a href="#ref-needham" role="doc-biblioref">Needham, 2021</a>)</span>.</p>
 <h2 data-number="1.1" id="future-work"><span class="header-section-number">1.1</span> Future work</h2>
 <p>The results of this note can be extended in many directions. There are higher-dimensional generalizations of Gauss-Bonnet, including the theory of characteristic classes and Chern-Weil theory (which links characteristic classes to connections and curvature). These would involve working with nonabelian groups like <span class="math inline">\(SO(n)\)</span> and sphere bundles. Results from gauge theory could be imported into HoTT, as well as results from surgery theory and other topological constructions that may be especially amenable to this discrete setting. Relationships with computer graphics and discrete differential geometry<span class="citation" data-cites="crane_ddg"> (<a href="#ref-crane_ddg" role="doc-biblioref">Crane <em>et al.</em>, 2013</a>)</span><span class="citation" data-cites="crane_connections"> (<a href="#ref-crane_connections" role="doc-biblioref">Crane, 2010</a>)</span> could be explored. Finally, a theory that reintroduces smoothness could allow more formal versions of the analogies explored here.</p>
-<h1 data-number="2" id="torsors-and-principal-bundles"><span class="header-section-number">2</span> Torsors and principal bundles</h1>
+<h1 data-number="2" id="sec:torsors"><span class="header-section-number">2</span> Torsors and principal bundles</h1>
 <p>Differential geometry is the study of principal bundles and their automorphisms. Principal bundles are bundles of torsors, so we start there.</p>
 <h2 data-number="2.1" id="torsors"><span class="header-section-number">2.1</span> Torsors</h2>
 <div class="mydef">
@@ -189,8 +191,10 @@
 <div id="lem:gauge_triv" class="mylemma">
 <p><strong>Lemma 10</strong>. <em>Suppose <span class="math inline">\(M\)</span> is connected and we have a point <span class="math inline">\(m:M\)</span>. Then we have a trivialization <span class="math inline">\(\mathop{\mathrm{Aut}}P\simeq M\times (Tm=Tm)\)</span>. This is equivalent to saying the map <span class="math inline">\(\mathop{\mathrm{Aut}}T\)</span> is equivalent to a constant map.</em></p>
 </div>
-<p><em>Proof.</em> We will produce a term <span class="math inline">\(\tau:\prod_{x:M}(Tx=Tx)\xrightarrow[]{\simeq}(Tm=Tm)\)</span>. Suppose we have a path <span class="math inline">\(p:x=_M m\)</span>, and define <span class="math inline">\(\tau x=\mathsf{tr}(p)\)</span>. Transport in the family <span class="math inline">\(\mathop{\mathrm{Aut}}T\)</span> is given by concatenation (see <span class="citation" data-cites="hottbook"> (<a href="#ref-hottbook" role="doc-biblioref">Univalent Foundations Program, 2013</a>)</span> Theorem 2.11.3), i.e. <span class="math inline">\(\mathsf{tr}(p)(f)=T(p)^{-1}\cdot f\cdot T(p)\)</span>. To show that <span class="math inline">\(\tau\)</span> is independent of the choice of <span class="math inline">\(p\)</span>, suppose we have <span class="math inline">\(p,q:x=_M m\)</span>. Then <span class="math inline">\(\mathsf{tr}(p\cdot q^{-1})=T(p\cdot q^{-1})^{-1}\cdot -\cdot T(p\cdot q^{-1})\)</span> which is conjugation in the commutative group <span class="math inline">\(Tx=Tx\)</span>, hence is the identity. This proves that <span class="math inline">\(\mathsf{tr}(p)=\mathsf{tr}(q)\)</span>. ◻</p>
-<h1 data-number="3" id="discrete-manifolds"><span class="header-section-number">3</span> Discrete manifolds</h1>
+<div class="myproof">
+<p>We will produce a term <span class="math inline">\(\tau:\prod_{x:M}(Tx=Tx)\xrightarrow[]{\simeq}(Tm=Tm)\)</span>. Suppose we have a path <span class="math inline">\(p:x=_M m\)</span>, and define <span class="math inline">\(\tau x=\mathsf{tr}(p)\)</span>. Transport in the family <span class="math inline">\(\mathop{\mathrm{Aut}}T\)</span> is given by concatenation (see <span class="citation" data-cites="hottbook"> (<a href="#ref-hottbook" role="doc-biblioref">Univalent Foundations Program, 2013</a>)</span> Theorem 2.11.3), i.e. <span class="math inline">\(\mathsf{tr}(p)(f)=T(p)^{-1}\cdot f\cdot T(p)\)</span>. To show that <span class="math inline">\(\tau\)</span> is independent of the choice of <span class="math inline">\(p\)</span>, suppose we have <span class="math inline">\(p,q:x=_M m\)</span>. Then <span class="math inline">\(\mathsf{tr}(p\cdot q^{-1})=T(p\cdot q^{-1})^{-1}\cdot -\cdot T(p\cdot q^{-1})\)</span> which is conjugation in the commutative group <span class="math inline">\(Tx=Tx\)</span>, hence is the identity. This proves that <span class="math inline">\(\mathsf{tr}(p)=\mathsf{tr}(q)\)</span>.</p>
+</div>
+<h1 data-number="3" id="sec:discrete_man"><span class="header-section-number">3</span> Discrete manifolds</h1>
 <p>We will remind ourselves of the definition of a classical simplicial complex, in sets. Then we will create a higher type from the data of a complex, using pushouts. The type will both imitate the structure of the set-based complex and will contain explicit maps into it from the sets of the complex.</p>
 <h2 data-number="3.1" id="abstract-simplicial-complexes"><span class="header-section-number">3.1</span> Abstract simplicial complexes</h2>
 <div class="mydef">
@@ -256,7 +260,8 @@ S^1&amp;:\mathsf{Type}\\
 <div id="lem:addpoints" class="mylemma">
 <p><strong>Lemma 18</strong>. <em><span class="math inline">\(\llbracket{C_2}\rrbracket_1\simeq \llbracket{C_1}\rrbracket_1\)</span> and in fact <span class="math inline">\(\llbracket{C_n}\rrbracket_1\simeq \llbracket{C_{n-1}}\rrbracket_1\)</span>.</em></p>
 </div>
-<p><em>Proof.</em> (Compare to <span class="citation" data-cites="hottbook"> (<a href="#ref-hottbook" role="doc-biblioref">Univalent Foundations Program, 2013</a>)</span> Lemma 6.5.1.) In the case of <span class="math inline">\(\llbracket{C_1}\rrbracket_1\)</span> we will denote its constructors by <span class="math inline">\(\ensuremath{\mathsf{base}}\)</span> and <span class="math inline">\(\ensuremath{\mathsf{loop}}\)</span>. For <span class="math inline">\(\llbracket{C_2}\rrbracket_1\)</span> we will denote the points by <span class="math inline">\(v_1, v_2\)</span> and the edges by <span class="math inline">\(\ell_{12}, r_{21}\)</span>. For <span class="math inline">\(\llbracket{C_3}\rrbracket_1\)</span> and higher we will denote the points by <span class="math inline">\(v_1,\ldots,v_n\)</span> and the edges by <span class="math inline">\(e_{i,j}:v_i=v_j\)</span> where <span class="math inline">\(j=i+1\)</span> except for <span class="math inline">\(e_{n,1}\)</span>.</p>
+<div class="myproof">
+<p>(Compare to <span class="citation" data-cites="hottbook"> (<a href="#ref-hottbook" role="doc-biblioref">Univalent Foundations Program, 2013</a>)</span> Lemma 6.5.1.) In the case of <span class="math inline">\(\llbracket{C_1}\rrbracket_1\)</span> we will denote its constructors by <span class="math inline">\(\ensuremath{\mathsf{base}}\)</span> and <span class="math inline">\(\ensuremath{\mathsf{loop}}\)</span>. For <span class="math inline">\(\llbracket{C_2}\rrbracket_1\)</span> we will denote the points by <span class="math inline">\(v_1, v_2\)</span> and the edges by <span class="math inline">\(\ell_{12}, r_{21}\)</span>. For <span class="math inline">\(\llbracket{C_3}\rrbracket_1\)</span> and higher we will denote the points by <span class="math inline">\(v_1,\ldots,v_n\)</span> and the edges by <span class="math inline">\(e_{i,j}:v_i=v_j\)</span> where <span class="math inline">\(j=i+1\)</span> except for <span class="math inline">\(e_{n,1}\)</span>.</p>
 <p>First we will define <span class="math inline">\(f:\llbracket{C_2}\rrbracket_1\to \llbracket{C_1}\rrbracket_1\)</span> and <span class="math inline">\(g:\llbracket{C_1}\rrbracket_1\to \llbracket{C_2}\rrbracket_1\)</span>, then prove they are inverses. <span class="math display">\[\begin{aligned}
 f(v_1)=f(v_2)&amp;=\ensuremath{\mathsf{base}}&amp;\quad g(\ensuremath{\mathsf{base}})&amp;=v_1\\
 f(\ell_{12})&amp;=\ensuremath{\mathsf{loop}}&amp;\quad g(\ensuremath{\mathsf{loop}})&amp;=\ell_{12}\cdot r_{21}\\
@@ -265,7 +270,7 @@ f(r_{21}) &amp;= \ensuremath{\mathsf{refl}}_{\ensuremath{\mathsf{base}}}&amp; &a
 <p>We need to show that <span class="math inline">\(f\circ g\sim \ensuremath{\text{id}}_{\llbracket{C_1}\rrbracket_1}\)</span> and <span class="math inline">\(g\circ f\sim\ensuremath{\text{id}}_{\llbracket{C_2}\rrbracket_1}\)</span>. Think of <span class="math inline">\(f\)</span> as sliding <span class="math inline">\(v_2\)</span> along <span class="math inline">\(r_{21}\)</span> to coalesce with <span class="math inline">\(v_1\)</span>. This may help understand why the unfortunately intricate proof is working.</p>
 <p>Recall that given functions <span class="math inline">\(\phi,\psi:A\to B\)</span> between two arbitrary types we can form a type family of paths <span class="math inline">\(\alpha:A\to\mathcal{U}\)</span> by <span class="math inline">\(\alpha(a)\stackrel{\mathrm{def}}{=}(\phi(a)=_B\psi(a))\)</span>. Transport in this family is given by concatenation as follows (compare Lemma <a href="#lem:gauge_triv" data-reference-type="ref" data-reference="lem:gauge_triv">10</a>), where <span class="math inline">\(p:a=_A a&#39;\)</span> and <span class="math inline">\(q:\phi(a)=\psi(a)\)</span> (see Figure <a href="#fig:transport_family_of_paths" data-reference-type="ref" data-reference="fig:transport_family_of_paths">4</a>): <span class="math display">\[\mathsf{tr}(p)(q) = \phi(p)^{-1}\cdot q\cdot \psi(p)\]</span> which gives a path in <span class="math inline">\(\phi(a&#39;)=\psi(a&#39;)\)</span> by connecting dots between the terms <span class="math inline">\(\phi(a&#39;), \phi(a), \psi(a), \psi(a&#39;)\)</span>. This relates a would-be homotopy <span class="math inline">\(\phi\sim\psi\)</span> specified at a single point, to a point at the end of a path. We will use this to help construct such homotopies.</p>
 <figure id="fig:transport_family_of_paths">
-<img src="./17fd332eed0d72f858e81f4722d8b1e5b33a5029.svg" />
+
 <figcaption>Transport along <span class="math inline">\(p\)</span> in the fibers of a family of paths. The fiber over <span class="math inline">\(a\)</span> is <span class="math inline">\(\phi(a)=\psi(a)\)</span> where <span class="math inline">\(\phi,\psi:A\to B\)</span>.</figcaption>
 </figure>
 <p>We need terms <span class="math inline">\(p:\prod_{a:\llbracket{C_1}\rrbracket_1}f(g(a))=a\)</span> and <span class="math inline">\(q:\prod_{a:\llbracket{C_2}\rrbracket_1}g(f(a))=a\)</span>. We will proceed by induction, defining appropriate paths on point constructors and then checking a condition on path constructors that confirms that the built-in transport of these type families respects the definition on points.</p>
@@ -306,15 +311,24 @@ g(f(v_n))&amp;=v_1\\
 g(f(e_{n-1,n}))&amp;=e_{n-1,n}\cdot e_{n,1}\\
 g(f(e_{n,1}))&amp;= \ensuremath{\mathsf{refl}}_{v_1}.
 \end{aligned}\]</span> Guided by our previous experience we choose <span class="math inline">\({e_{n,1}}^{-1}:g(f(v_n))=v_n\)</span>, and define the pathovers by transport.</p>
-<p>The proof that <span class="math inline">\(f\circ g\sim\ensuremath{\text{id}}_{\llbracket{C_{n-1}}\rrbracket_1}\)</span> requires only noting that <span class="math inline">\(f(g(e_{n-1,1}))=f(e_{n-1,n}\cdot e_{n,1})=e_{n-1,1}\cdot\ensuremath{\mathsf{refl}}_{v_1}=e_{n-1,1}\)</span>. ◻</p>
+<p>The proof that <span class="math inline">\(f\circ g\sim\ensuremath{\text{id}}_{\llbracket{C_{n-1}}\rrbracket_1}\)</span> requires only noting that <span class="math inline">\(f(g(e_{n-1,1}))=f(e_{n-1,n}\cdot e_{n,1})=e_{n-1,1}\cdot\ensuremath{\mathsf{refl}}_{v_1}=e_{n-1,1}\)</span>.</p>
+</div>
 <div id="cor:gon" class="mycor">
 <p><strong>Corollary 19</strong>. <em>All polygons are equivalent to <span class="math inline">\(S^1\)</span>, i.e. we have terms <span class="math inline">\(e_n:||\llbracket{C_n}\rrbracket_1=S^1||_{-1}\)</span>, and hence we have constructed a map from the unit type <span class="math inline">\((\llbracket{C_n}\rrbracket_1, e_n):\mathbb{1}\to \mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)</span>.</em></p>
 </div>
-<p><em>Proof.</em> We can add <span class="math inline">\(n-1\)</span> points to <span class="math inline">\(S^1\)</span> and use Lemma <a href="#lem:addpoints" data-reference-type="ref" data-reference="lem:addpoints">18</a>. ◻</p>
+<div class="myproof">
+<p>We can add <span class="math inline">\(n-1\)</span> points to <span class="math inline">\(S^1\)</span> and use Lemma <a href="#lem:addpoints" data-reference-type="ref" data-reference="lem:addpoints">18</a>.</p>
+</div>
 <p>If we cyclically permute the vertices of a simplicial polygon, what map is induced on the realization and the bare types within?</p>
-<p>Let <span class="math inline">\(R:[{v_1\cdots v_n}]\to [{v_1\cdots v_n}]\)</span> (for “rotation”) be the map sending <span class="math inline">\(v_i\mapsto v_{i+1}\)</span> and <span class="math inline">\(v_n\mapsto v_0\)</span>. This map clearly preserves the edges, and so is a map of simplicial complexes, and extends to a map <span class="math inline">\(\llbracket{R}\rrbracket:\llbracket{v_1\cdots v_n}\rrbracket\to \llbracket{v_1\cdots v_n}\rrbracket\)</span>. A key point is that maps that have access to the combinatorial data are more numerous than the maps on the resulting bare types:</p>
-<div class="mylemma">
-<p><strong>Lemma 20</strong>. <em>The map <span class="math inline">\(\llbracket{R}\rrbracket_1: \llbracket{v_1\cdots v_n}\rrbracket_1\to \llbracket{v_1\cdots v_n}\rrbracket_1\)</span> is .</em></p>
+<div id="def:rotation" class="mydef">
+<p><strong>Definition 20</strong>. <em>Let <span class="math inline">\(R:[{v_1\cdots v_n}]\to [{v_1\cdots v_n}]\)</span> (for “rotation”) be the map sending <span class="math inline">\(v_i\mapsto v_{i+1}\)</span> and <span class="math inline">\(v_n\mapsto v_0\)</span>. This map clearly preserves the edges, and so is a map of simplicial complexes, and extends to a map <span class="math inline">\(\llbracket{R}\rrbracket:\llbracket{v_1\cdots v_n}\rrbracket\to \llbracket{v_1\cdots v_n}\rrbracket\)</span>.</em></p>
+</div>
+<p>A key point is that simplicial maps form a set, but the homotopical realization <span class="math inline">\(\llbracket{R}\rrbracket\)</span> has a path to the identity:</p>
+<div id="lem:rotation" class="mylemma">
+<p><strong>Lemma 21</strong>. <em>The map <span class="math inline">\(\llbracket{R}\rrbracket_1: \llbracket{v_1\cdots v_n}\rrbracket_1\to \llbracket{v_1\cdots v_n}\rrbracket_1\)</span> is connected to <span class="math inline">\(\ensuremath{\mathsf{refl}}_{\llbracket{v_1\cdots v_n}\rrbracket_1}\)</span> by a homotopy <span class="math inline">\(H_R:\prod_{x:\llbracket{v_1\cdots v_n}\rrbracket_1}\llbracket{R}\rrbracket_1(x)=x\)</span>.</em></p>
+</div>
+<div class="myproof">
+<p>If <span class="math inline">\(x\)</span> is a vertex, take <span class="math inline">\(H_R(x)\)</span> to be the obvious unique edge back to the starting vertex. This extends in the obvious functorial way to edges.</p>
 </div>
 <h2 data-number="3.4" id="the-octahedron-model-of-the-sphere"><span class="header-section-number">3.4</span> The octahedron model of the sphere</h2>
 <p>We will create our first combinatorial surface, an octahedron. We will not prove that this type is equivalent to the sphere. In <span class="math inline">\(\mathsf{SimpCompSet_n}\)</span> the combinatorial data of the faces can be represented with a <em>Hasse diagram</em>, which shows the poset of inclusions in a graded manner, with a special top and bottom element. We give an octahedron in Figure <a href="#fig:hasse_octohedron" data-reference-type="ref" data-reference="fig:hasse_octohedron">5</a>. The names of the vertices are short for white, yellow, blue, red, green, and orange, the colors of the faces of a Rubik’s cube. The octahedron is the dual of the cube, with each vertex corresponding to a face.</p>
@@ -324,19 +338,21 @@ g(f(e_{n,1}))&amp;= \ensuremath{\mathsf{refl}}_{v_1}.
 </figure>
 <p>We can realize <span class="math inline">\(O_0\to O_1\to O\)</span> as a cellular type denoted <span class="math inline">\(\ensuremath{\mathbb{O}}_0\to \ensuremath{\mathbb{O}}_1\to \ensuremath{\mathbb{O}}\)</span>.</p>
 <div class="mylemma">
-<p><strong>Lemma 21</strong>. <em>There is an equivalence <span class="math inline">\(\ensuremath{\mathbb{O}}\simeq S^2\)</span>.</em></p>
+<p><strong>Lemma 22</strong>. <em>There is an equivalence <span class="math inline">\(\ensuremath{\mathbb{O}}\simeq S^2\)</span>.</em></p>
 </div>
-<p><em>Proof.</em> Omitted. ◻</p>
+<div class="myproof">
+<p>Omitted.</p>
+</div>
 <figure>
 <img src="./ff7f3a1e9ad288427a1f8fe354f5e5e4112b62fd.svg" />
-<figcaption>The marked presented type <span class="math inline">\(\ensuremath{\mathbb{O}}\)</span> which has 6 points, 12 1-paths, 8 2-paths.</figcaption>
+<figcaption>The type <span class="math inline">\(\ensuremath{\mathbb{O}}\)</span> which has 6 points, 12 1-paths, 8 2-paths.</figcaption>
 </figure>
-<h1 data-number="4" id="bundles-connections-and-curvature"><span class="header-section-number">4</span> Bundles, connections, and curvature</h1>
+<h1 data-number="4" id="sec:connections"><span class="header-section-number">4</span> Bundles, connections, and curvature</h1>
 <p>Bundles are simply maps into the universe. By using the extra cellular structure and the even more detailed combinatorial structure of higher realizations, we can identify inside of HoTT some additional classical definitions.</p>
 <h2 data-number="4.1" id="definitions"><span class="header-section-number">4.1</span> Definitions</h2>
 <p>Having the cellular structure allows us to define bundles and connections.</p>
 <div id="def:connection" class="mydef">
-<p><strong>Definition 22</strong>. <em>If <span class="math inline">\(\ensuremath{\mathbb{M}}_0\xrightarrow[]{\imath_0}\cdots\xrightarrow[]{\imath_{n-1}}\ensuremath{\mathbb{M}}_n\)</span> is a cellular type and <span class="math inline">\(f_k:\ensuremath{\mathbb{M}}_k\to\mathcal{U}\)</span> are type families on each skeleton such that all the triangles commute in the diagram:</em></p>
+<p><strong>Definition 23</strong>. <em>If <span class="math inline">\(\ensuremath{\mathbb{M}}_0\xrightarrow[]{\imath_0}\cdots\xrightarrow[]{\imath_{n-1}}\ensuremath{\mathbb{M}}_n\)</span> is a cellular type and <span class="math inline">\(f_k:\ensuremath{\mathbb{M}}_k\to\mathcal{U}\)</span> are type families on each skeleton such that all the triangles commute in the diagram:</em></p>
 </div>
 <p><img src="./4248418ece56a3374e60d5b33f6f04b27a542a4e.svg" alt="image" /></p>
 <p>then we say</p>
@@ -346,18 +362,15 @@ g(f(e_{n,1}))&amp;= \ensuremath{\mathsf{refl}}_{v_1}.
 </ul>
 <p>Having the additional structure of a simplicial complex allows us to further define curvature, which is a local concept.</p>
 <div class="mydef">
-<p><strong>Definition 23</strong>. <em>If <span class="math inline">\(\llbracket{M}\rrbracket\)</span> is a higher combinatorial <span class="math inline">\(n\)</span>-manifold as above, and such that for each pushout defining <span class="math inline">\(\ensuremath{\mathbb{M}}_k\)</span> we have the diagram</em></p>
+<p><strong>Definition 24</strong>. <em>If <span class="math inline">\(\llbracket{M}\rrbracket\)</span> is a higher combinatorial <span class="math inline">\(n\)</span>-manifold as above, and such that for each pushout defining <span class="math inline">\(\ensuremath{\mathbb{M}}_k\)</span> we have the diagram</em></p>
 </div>
 <p><img src="./92dfaac67612e213064cfae51c59f46850aa749c.svg" alt="image" /></p>
 <p>the outer square of which restricts on each face to the diagram</p>
 <p><img src="./6a8c96007c33ec0e200dd4ac004232ec3cfc4e28.svg" alt="image" /></p>
 <p>then we say the filler <span class="math inline">\(\flat_k\)</span> is called a <strong>flatness structure for the face <span class="math inline">\(m_k\)</span></strong>, or, to align with classical terms, the <strong>curvature at the face <span class="math inline">\(m_k\)</span></strong>, and its ending path is called the <strong>holonomy around the face</strong>.</p>
 <p>The definitions can be digested to give</p>
-<div class="mylemma">
-<p><strong>Lemma 24</strong>. <em>Given <span class="math inline">\(f_{k-1}\)</span> as above, a <span class="math inline">\(k\)</span>-connection exists if and only if there exists a flatness structure for each <span class="math inline">\(k\)</span>-face.</em></p>
-</div>
-<div class="mynote">
-<p><strong>Remark 25</strong>. <em>Another classical object we can identify here is a <em>gauge transformation</em>, which is a bundle automorphism <span class="math inline">\(H:f\sim f\stackrel{\mathrm{def}}{=}\prod_{m:\ensuremath{\mathbb{M}}}f(m)=f(m)\)</span>. If we have <span class="math inline">\(||H=\ensuremath{\text{id}}_f||_{-1}\)</span> then the gauge transformation is called <em>small</em>, else <em>large</em>.</em></p>
+<div id="lem:extend_faces" class="mylemma">
+<p><strong>Lemma 25</strong>. <em>Given <span class="math inline">\(f_{k-1}\)</span> as above, a <span class="math inline">\(k\)</span>-connection exists if and only if there exists a flatness structure for each <span class="math inline">\(k\)</span>-face.</em></p>
 </div>
 <h2 data-number="4.2" id="sec:localtriv"><span class="header-section-number">4.2</span> Connections as local trivializations</h2>
 <p>This section can ve viewed as an extended remark. The observation we want to make is that the data of a <span class="math inline">\(1\)</span>-bundle is related to the construction of local trivializations: the fiber at one vertex can be extended throughout a single face coherently, using the connection (the extension of the classifying map to the edges) to specify isomorphisms with the fibers at the other points, and the higher connections to establish commutativity between these.</p>
@@ -405,27 +418,10 @@ g(f(e_{n,1}))&amp;= \ensuremath{\mathsf{refl}}_{v_1}.
 <li><p><em><span class="math inline">\(T_1(ob):\llbracket{wgyb}\rrbracket_1\mapsto \llbracket{woyr}\rrbracket_1\)</span></em></p></li>
 </ul>
 </div>
-<p>It’s very important to be able to visualize what <span class="math inline">\(T_1\)</span> does to triangular paths such as <span class="math inline">\(wb\cdot br\cdot rw\)</span> (which circulates around the boundary of face <span class="math inline">\(wbr\)</span>). You can see it if you imagine Figure <a href="#fig:triangle_of_equators" data-reference-type="ref" data-reference="fig:triangle_of_equators">6</a> as the frames of a short movie. Or you can place your palm over the top of a cube and note where your fingers are pointing, then slide your hand to an equatorial face, then along the equator, then back to the top. The answer is: you come back rotated clockwise by a quarter-turn.</p>
-<div id="def:octahedron_holonomy" class="mydef">
-<p><strong>Definition 28</strong>. <em>The map <span class="math inline">\(R:C_4\to C_4\)</span> rotates by one quarter turn, one “click":</em></p>
-<div class="multicols">
-<p><em><span>2</span></em></p>
-<ul>
-<li><p><em><span class="math inline">\(R(c_1) = c_2\)</span></em></p></li>
-<li><p><em><span class="math inline">\(R(c_2) = c_3\)</span></em></p></li>
-<li><p><em><span class="math inline">\(R(c_3) = c_4\)</span></em></p></li>
-<li><p><em><span class="math inline">\(R(c_4) = c_1\)</span></em></p></li>
-<li><p><em><span class="math inline">\(R(c_1c_2) = c_2c_3\)</span></em></p></li>
-<li><p><em><span class="math inline">\(R(c_2c_3) = c_3c_4\)</span></em></p></li>
-<li><p><em><span class="math inline">\(R(c_3c_4) = c_4c_1\)</span></em></p></li>
-<li><p><em><span class="math inline">\(R(c_4c_1) = c_1c_2\)</span></em></p></li>
-</ul>
-</div>
-</div>
-<p>Note by univalence the equivalence <span class="math inline">\(R\)</span> gives a loop in the universe, a term of <span class="math inline">\(C_4=_{\mathrm{EM}(\ensuremath{\mathbb{Z}},1)}C_4\)</span>.</p>
+<p>It’s very important to be able to visualize what <span class="math inline">\(T_1\)</span> does to triangular paths such as <span class="math inline">\(wb\cdot br\cdot rw\)</span> (which circulates around the boundary of face <span class="math inline">\(wbr\)</span>). You can see it if you imagine Figure <a href="#fig:triangle_of_equators" data-reference-type="ref" data-reference="fig:triangle_of_equators">6</a> as the frames of a short movie. Or you can place your palm over the top of a cube and note where your fingers are pointing, then slide your hand to an equatorial face, then along the equator, then back to the top. The answer is: you come back rotated clockwise by a quarter-turn, which we saw in Definition <a href="#def:rotation" data-reference-type="ref" data-reference="def:rotation">20</a> where it is called <span class="math inline">\(\llbracket{R}\rrbracket\)</span>.</p>
 <p>Now let’s extend <span class="math inline">\(T_1\)</span> to all of <span class="math inline">\(\ensuremath{\mathbb{O}}\)</span> by providing values for the eight faces. The face <span class="math inline">\(wbr\)</span> is a path from <span class="math inline">\(\ensuremath{\mathsf{refl}}_w\)</span> to the concatenation <span class="math inline">\(wb\cdot br\cdot rw\)</span>, and so the image of <span class="math inline">\(wbr\)</span> under the extended version of <span class="math inline">\(T_1\)</span> must be a homotopy from <span class="math inline">\(\ensuremath{\mathsf{refl}}_{T_1(w)}\)</span> to <span class="math inline">\(T_1(wb\cdot br\cdot rw)\)</span>. Here <em>there is no additional freedom</em>.</p>
 <div id="def:octahedron_curvature" class="mydef">
-<p><strong>Definition 29</strong>. <em>Define <span class="math inline">\(T_2:\ensuremath{\mathbb{O}}\to\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)</span> by extending <span class="math inline">\(T_1\)</span> to the faces as follows:</em></p>
+<p><strong>Definition 28</strong>. <em>Define <span class="math inline">\(T_2:\ensuremath{\mathbb{O}}\to\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)</span> by extending <span class="math inline">\(T_1\)</span> to the faces as follows (making use of <span class="math inline">\(H_R\)</span> from Lemma <a href="#lem:rotation" data-reference-type="ref" data-reference="lem:rotation">21</a>):</em></p>
 <div class="multicols">
 <p><em><span>2</span></em></p>
 <ul>
@@ -439,92 +435,95 @@ g(f(e_{n,1}))&amp;= \ensuremath{\mathsf{refl}}_{v_1}.
 <li><p><em><span class="math inline">\(T_2(ybo)=H_R\)</span></em></p></li>
 </ul>
 </div>
-<p><em>where <span class="math inline">\(H_R:R=\ensuremath{\mathsf{refl}}_{C_4}\)</span> is the obvious homotopy given by composition with <span class="math inline">\(R^{-1}\)</span>. Passing through univalence we get a 2-path between <span class="math inline">\(R\)</span> and <span class="math inline">\(\ensuremath{\mathsf{refl}}\)</span> in the loop space <span class="math inline">\(C_4=_{\mathrm{EM}(\ensuremath{\mathbb{Z}},1)}C_4\)</span>.</em></p>
+<p><em>Defining these flatness structures suffices to define <span class="math inline">\(T_2\)</span> by Lemma <a href="#lem:extend_faces" data-reference-type="ref" data-reference="lem:extend_faces">25</a>.</em></p>
 </div>
 <h2 data-number="4.4" id="existence-of-connections"><span class="header-section-number">4.4</span> Existence of connections</h2>
-<p>How confident can we be that we can always define a connection on an arbitrary combinatorial manifold? Two things make the octahedron example special: the link is a 4-gon at every vertex, and every edge extends to a symmetry of the entire octahedron, embedded in 3-dimensional space. This imposed a coherence on the interactions of all the choices we made for the connection, which we can worry may not exist for more complex combinatorial data.</p>
+<p>How confident can we be that we can always define a connection on an arbitrary combinatorial manifold? Two things make the octahedron example special: the link is a 4-gon at every vertex (as opposed to having a variable number of vertices), and every transport map extends to a rotation of the entire octahedron in 3-dimensional space. This imposed a coherence on the interactions of all the choices we made for the connection, which we can worry may not exist for more complex combinatorial data.</p>
 <p>We know as a fact outside of HoTT that any combinatorial surface that has been realized as a triangulated surface embedded in 3-dimensional euclidean space can inherit the parallel transport entailed in the embedding. We could then approximate that data to arbitrary precision with enough subdivision of the fibers of <span class="math inline">\(T\)</span>.</p>
 <p>What would a proof inside of HoTT look like? We will leave this as an open question.</p>
-<h1 data-number="5" id="vector-fields"><span class="header-section-number">5</span> Vector fields</h1>
+<h1 data-number="5" id="sec:vector_fields"><span class="header-section-number">5</span> Vector fields</h1>
 <h2 data-number="5.1" id="definition"><span class="header-section-number">5.1</span> Definition</h2>
 <p>Vector fields are sections of the tangent bundle of a manifold. We do not have a general theory of tangent bundles, even for 2-dimensional cellular types, since we cannot yet prove that connections always exist on the 1-skeleton. But <em>given</em> an extension <span class="math inline">\(T\)</span> of the <span class="math inline">\(\mathop{\mathrm{\mathsf{link}}}\)</span> function, we can consider the type of sections <span class="math inline">\(\prod_{x:\ensuremath{\mathbb{M}}_1}T_1(x)\)</span>.</p>
 <div class="mydef">
-<p><strong>Definition 30</strong>. <em>A <strong>vector field</strong> on a higher combinatorial 2-manifold <span class="math inline">\(\ensuremath{\mathbb{M}}\)</span> equipped with type family <span class="math inline">\(T:\ensuremath{\mathbb{M}}\to\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)</span> that extends <span class="math inline">\(\mathop{\mathrm{\mathsf{link}}}\)</span> is a term <span class="math inline">\(X:\prod_{x:\ensuremath{\mathbb{M}}_1}T_1(x)\)</span>. It may be possible to extend <span class="math inline">\(X\)</span> to one or more faces of <span class="math inline">\(\ensuremath{\mathbb{M}}\)</span>, but we call faces for which <span class="math inline">\(X\)</span> cannot be extended are called <strong>zeros of the vector field</strong>.</em></p>
+<p><strong>Definition 29</strong>. <em>A <strong>vector field</strong> on a higher combinatorial 2-manifold <span class="math inline">\(\ensuremath{\mathbb{M}}\)</span> equipped with type family <span class="math inline">\(T:\ensuremath{\mathbb{M}}\to\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)</span> that extends <span class="math inline">\(\mathop{\mathrm{\mathsf{link}}}\)</span> is a term <span class="math inline">\(X:\prod_{x:\ensuremath{\mathbb{M}}_1}T_1(x)\)</span>. It may be possible to extend <span class="math inline">\(X\)</span> to one or more faces of <span class="math inline">\(\ensuremath{\mathbb{M}}\)</span>, but we call faces for which <span class="math inline">\(X\)</span> cannot be extended <strong>zeros of the vector field</strong>.</em></p>
 </div>
 <div class="mynote">
-<p><strong>Remark 31</strong>. <em>A section <span class="math inline">\(\prod_{x:\ensuremath{\mathbb{M}}}f(x)\)</span> for <span class="math inline">\(f:\ensuremath{\mathbb{M}}\to\mathrm{K}(\ensuremath{\mathbb{Z}},2)\)</span> is a trivialization of the bundle. The fact that an orientation suffices to factor the tangent bundle of a 2-manifold (which <em>a priori</em> maps to <span class="math inline">\(\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)</span>) through a principal bundle classifier is special to dimension 2. For higher dimensional manifolds the tangent bundle is a bundle of spheres, and even if the bundle is oriented it is not necessarily a principal bundle. On the other hand, the <span class="math inline">\(n\)</span>-truncation modal operator maps the type of <span class="math inline">\(n\)</span>-spheres to the classifying space <span class="math inline">\(\mathrm{K}(\ensuremath{\mathbb{Z}},n)\)</span>, and so another way to phrase this remark is that <span class="math inline">\(S^1\)</span> is the only <span class="math inline">\(n\)</span>-sphere which is <span class="math inline">\(n\)</span>-truncated.</em></p>
+<p><strong>Remark 30</strong>. <em>A section <span class="math inline">\(\prod_{x:\ensuremath{\mathbb{M}}}T(x)\)</span> for <span class="math inline">\(T:\ensuremath{\mathbb{M}}\to\mathrm{K}(\ensuremath{\mathbb{Z}},2)\)</span> is a trivialization of the bundle. The fact that an orientation suffices to factor the tangent bundle of a 2-manifold (which <em>a priori</em> maps to <span class="math inline">\(\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)</span>) through a principal bundle classifier is special to dimension 2. For higher dimensional manifolds the tangent bundle is a bundle of spheres, and even if the bundle is oriented it is not necessarily a principal bundle. On the other hand, the <span class="math inline">\(n\)</span>-truncation modal operator maps the type of <span class="math inline">\(n\)</span>-spheres to the classifying space <span class="math inline">\(\mathrm{K}(\ensuremath{\mathbb{Z}},n)\)</span>, and so another way to phrase this remark is that <span class="math inline">\(S^1\)</span> is the only <span class="math inline">\(n\)</span>-sphere which is <span class="math inline">\(n\)</span>-truncated.</em></p>
 </div>
-<p>On the 0-skeleton <span class="math inline">\(X\)</span> picks a point in each link, i.e. a neighbor of each vertex. On a path <span class="math inline">\(p:x=_\ensuremath{\mathbb{M}}y\)</span>, <span class="math inline">\(X\)</span> assigns a dependent path over <span class="math inline">\(p\)</span>, which as we know is a term <span class="math inline">\(\pi:\mathsf{tr}(p)(X(x))=_{T_1 y} X(y)\)</span>.</p>
+<p>On the 0-skeleton <span class="math inline">\(X\)</span> picks a point in each link, i.e. a neighbor of each vertex. On a path <span class="math inline">\(p:x=_\ensuremath{\mathbb{M}}y\)</span>, <span class="math inline">\(X\)</span> assigns a dependent path over <span class="math inline">\(p\)</span>, which as we know is a term <span class="math inline">\(\pi:\mathsf{tr}(p)(X(x))=_{T y} X(y)\)</span>.</p>
 <div class="mynote">
-<p><strong>Remark 32</strong>. <em>Concrete pathover terms such as <span class="math inline">\(\pi\)</span> couple together the connection (the transport) and <span class="math inline">\(X\)</span>. The transport is needed to provide a single type in which to compare the two values of <span class="math inline">\(X\)</span>. The path <span class="math inline">\(\pi\)</span> therefore reflects both the movement of <span class="math inline">\(X\)</span> along the path <span class="math inline">\(p\)</span>, and the moving lens that allows us to examine in a single fiber the two points <span class="math inline">\(X(x)\)</span> and <span class="math inline">\(X(y)\)</span> as well as <span class="math inline">\(X(p)\)</span>.</em></p>
+<p><strong>Remark 31</strong>. <em>Concrete pathover terms such as <span class="math inline">\(\pi\)</span> couple together the connection (the transport) and <span class="math inline">\(X\)</span>. The transport is needed to provide a single type in which to compare the two values of <span class="math inline">\(X\)</span>. The path <span class="math inline">\(\pi\)</span> therefore reflects both the movement of <span class="math inline">\(X\)</span> along the path <span class="math inline">\(p\)</span>, and the moving lens that allows us to examine in a single fiber the two points <span class="math inline">\(X(x)\)</span> and <span class="math inline">\(X(y)\)</span> as well as <span class="math inline">\(X(p)\)</span>.</em></p>
 </div>
 <h2 data-number="5.2" id="swirling"><span class="header-section-number">5.2</span> Swirling</h2>
-<p>Classically, vector fields are seen to swirl around between points. We can see this in HoTT as well, though in contrast to the classical explanations we always have a connection that interacts with the vector field.</p>
-<p>Consider a vertex <span class="math inline">\(x:\ensuremath{\mathbb{M}}\)</span>, a face <span class="math inline">\(F\)</span> containing vertices <span class="math inline">\(x, y, z\)</span>, and the boundary path <span class="math inline">\(\ell\stackrel{\mathrm{def}}{=}e_{xy}\cdot e_{yz} \cdot e_{zx}\)</span>. We can calculate <span class="math inline">\(X(\ell)\)</span> by concatenating the data along the path. As we visit each point we accumulate more information:</p>
+<p>Classically, vector fields are seen to swirl around between points. We can see this in HoTT as well.</p>
+<p>See Figure <a href="#fig:swirling" data-reference-type="ref" data-reference="fig:swirling">7</a>. Consider the vertex <span class="math inline">\(v_1:\ensuremath{\mathbb{M}}\)</span>, a face <span class="math inline">\(F\)</span> containing vertices <span class="math inline">\(v_1, v_2, v_3\)</span>, and the boundary path <span class="math inline">\(\ell\stackrel{\mathrm{def}}{=}e_{12}\cdot e_{23} \cdot e_{31}\)</span>. We can calculate <span class="math inline">\(X(\ell)\)</span> by concatenating the data along the path. We will imagine that transport along <span class="math inline">\(e_{12}\)</span> does not rotate along the page, that transport along <span class="math inline">\(e_{23}\)</span> rotates counterclockwise by 90 degrees, and that transport along <span class="math inline">\(e_{31}\)</span> again does not rotate along the page.</p>
+<p>As we visit each point we accumulate more information:</p>
 <ol>
-<li><p>In <span class="math inline">\(T_1(x)\)</span> we have</p>
+<li><p>In <span class="math inline">\(T_1(v_1)\)</span> we have</p>
 <ol>
-<li><p>the point <span class="math inline">\(X(x)\)</span>.</p></li>
+<li><p>the point <span class="math inline">\(X(v_1)\stackrel{\mathrm{def}}{=}v_{11}\)</span>.</p></li>
 </ol></li>
-<li><p>In <span class="math inline">\(T_1(y)\)</span> we have</p>
+<li><p>In <span class="math inline">\(T_1(v_2)\)</span> we have</p>
 <ol>
-<li><p>point <span class="math inline">\(X(y)\)</span></p></li>
-<li><p>point <span class="math inline">\(\mathsf{tr}(e_{xy})(X(x))\)</span></p></li>
-<li><p>the path <span class="math inline">\(X(e_{xy}):\mathsf{tr}(e_{xy})(X(x))=X(y)\)</span> from (b) to (a).</p></li>
+<li><p>point <span class="math inline">\(X(v_2)\stackrel{\mathrm{def}}{=}v_{24}\)</span></p></li>
+<li><p>point <span class="math inline">\(\mathsf{tr}(e_{12})(X(v_1))\)</span></p></li>
+<li><p>the path <span class="math inline">\(X(e_{12}):\mathsf{tr}(e_{12})(X(v_1))=X(v_2)\)</span> from (b) to (a).</p></li>
 </ol></li>
-<li><p>In <span class="math inline">\(T_1(z)\)</span> we have</p>
+<li><p>In <span class="math inline">\(T_1(v_3)\)</span> we have</p>
 <ol>
-<li><p>point <span class="math inline">\(X(z)\)</span></p></li>
-<li><p>point <span class="math inline">\(\mathsf{tr}(e_{yz})(X(y))\)</span></p></li>
-<li><p>point <span class="math inline">\(\mathsf{tr}(e_{yz})\circ\mathsf{tr}(e_{xy})(X(x))\)</span></p></li>
-<li><p>path <span class="math inline">\(X(e_{yz}):\mathsf{tr}(e_{yz})(X(y))=X(z)\)</span> from (b) to (a)</p></li>
-<li><p>path <span class="math inline">\(\mathsf{tr}(e_{yz})(X(e_{xy}))\)</span> from (c) to (b)</p></li>
+<li><p>point <span class="math inline">\(X(v_3)\stackrel{\mathrm{def}}{=}v_{32}\)</span></p></li>
+<li><p>point <span class="math inline">\(\mathsf{tr}(e_{23})(X(v_2))\)</span></p></li>
+<li><p>point <span class="math inline">\(\mathsf{tr}(e_{23})\circ\mathsf{tr}(e_{12})(X(v_1))\)</span></p></li>
+<li><p>path <span class="math inline">\(X(e_{23}):\mathsf{tr}(e_{23})(X(v_2))=X(v_3)\)</span> from (b) to (a)</p></li>
+<li><p>path <span class="math inline">\(\mathsf{tr}(e_{23})(X(e_{12}))\)</span> from (c) to (b)</p></li>
 </ol></li>
-<li><p>Then back at <span class="math inline">\(T_1(x)\)</span> we have</p>
+<li><p>Then back at <span class="math inline">\(T_1(v_1)\)</span> we have</p>
 <ol>
-<li><p>point <span class="math inline">\(X(x)\)</span></p></li>
-<li><p>point <span class="math inline">\(\mathsf{tr}(e_{zx})(X(z))\)</span></p></li>
-<li><p>point <span class="math inline">\(\mathsf{tr}(e_{zx})\circ\mathsf{tr}(e_{yz})(X(y))\)</span></p></li>
-<li><p>point <span class="math inline">\(\mathsf{tr}(e_{zx})\circ\mathsf{tr}(e_{yz})\circ\mathsf{tr}(e_{xy})(X(x))\)</span>, i.e. <span class="math inline">\(\mathsf{tr}(\ell)(X(x))\)</span></p></li>
-<li><p>path <span class="math inline">\(X(e_{zx}): \mathsf{tr}(e_{zx})(X(z))=X(x)\)</span> from (b) to (a)</p></li>
-<li><p>path <span class="math inline">\(\mathsf{tr}(e_{zx})(X(e_{yz}))\)</span> from (c) to (b)</p></li>
-<li><p>path <span class="math inline">\(\mathsf{tr}(e_{zx})\circ\mathsf{tr}(e_{yz})(X(e_{xy}))\)</span> from (d) to (c).</p></li>
+<li><p>point <span class="math inline">\(X(v_1)\)</span></p></li>
+<li><p>point <span class="math inline">\(\mathsf{tr}(e_{31})(X(v_3))\)</span></p></li>
+<li><p>point <span class="math inline">\(\mathsf{tr}(e_{31})\circ\mathsf{tr}(e_{23})(X(v_2))\)</span></p></li>
+<li><p>point <span class="math inline">\(\mathsf{tr}(e_{31})\circ\mathsf{tr}(e_{23})\circ\mathsf{tr}(e_{12})(X(v_1))\)</span>, i.e. <span class="math inline">\(\mathsf{tr}(\ell)(X(v_1))\)</span></p></li>
+<li><p>path <span class="math inline">\(X(e_{31}): \mathsf{tr}(e_{31})(X(v_3))=X(v_1)\)</span> from (b) to (a)</p></li>
+<li><p>path <span class="math inline">\(\mathsf{tr}(e_{31})(X(e_{23}))\)</span> from (c) to (b)</p></li>
+<li><p>path <span class="math inline">\(\mathsf{tr}(e_{31})\circ\mathsf{tr}(e_{23})(X(e_{12}))\)</span> from (d) to (c).</p></li>
 </ol></li>
 </ol>
-<p>As we traverse an edge, say <span class="math inline">\(e_{xy}\)</span>, we get a path in <span class="math inline">\(T_1(y)\)</span> which is the image of <span class="math inline">\(e_{xy}\)</span> under <span class="math inline">\(X\)</span>. Although this path is then transported along further edges of the triangle, it will help us to think of it as maintaining its relationship to <span class="math inline">\(e_{xy}\)</span>:</p>
+<p>As we traverse an edge, say <span class="math inline">\(e_{12}\)</span>, we get a path in <span class="math inline">\(T_1(v_2)\)</span> which is the image of <span class="math inline">\(e_{12}\)</span> under <span class="math inline">\(X\)</span>. Although this path is then transported along further edges of the triangle, it will help us to think of it as maintaining its relationship to <span class="math inline">\(e_{12}\)</span>:</p>
 <div class="mydef">
-<p><strong>Definition 33</strong>. <em>If <span class="math inline">\(e_{xy}:x=_{\ensuremath{\mathbb{M}}_1} y, e_{yz}:y=_{\ensuremath{\mathbb{M}}_1}z\)</span> are paths in <span class="math inline">\(\ensuremath{\mathbb{M}}_1\)</span> and <span class="math inline">\(X\)</span> is a nonvanishing vector field on <span class="math inline">\(\ensuremath{\mathbb{M}}_1\)</span>, then we call <span class="math inline">\(\mathsf{tr}(e_{yz})(X(e_{xy}))\)</span> <strong>the contribution on <span class="math inline">\(e_{xy}\)</span> of <span class="math inline">\(X\)</span></strong>, even though this is a path in <span class="math inline">\(T_1(z)\)</span>.</em></p>
+<p><strong>Definition 32</strong>. <em>If <span class="math inline">\(e_{12}:v_1=_{\ensuremath{\mathbb{M}}_1} v_2, e_{23}:v_2=_{\ensuremath{\mathbb{M}}_1}v_3\)</span> are paths in <span class="math inline">\(\ensuremath{\mathbb{M}}_1\)</span> and <span class="math inline">\(X\)</span> is a nonvanishing vector field on <span class="math inline">\(\ensuremath{\mathbb{M}}_1\)</span>, then we call <span class="math inline">\(\mathsf{tr}(e_{23})(X(e_{12}))\)</span> <strong>the contribution on <span class="math inline">\(e_{12}\)</span> of <span class="math inline">\(X\)</span></strong>, even though this is a path in <span class="math inline">\(T_1(v_3)\)</span>.</em></p>
 </div>
-<p>As we traverse an additional edge this image is simply mapped to the next vertex through the lens of transport, which acts similarly on all the points in a fiber. The image is carried first to <span class="math inline">\(\mathsf{tr}(e_{yz})(X(e_{xy}))\)</span> then to <span class="math inline">\(\mathsf{tr}(e_{zx})\circ\mathsf{tr}(e_{yz})(X(x))\)</span>.</p>
-<p>At stage 4 we have three paths, each consisting of <span class="math inline">\(X\)</span> acting on a single edge of the triangle, mapped with some transport to <span class="math inline">\(T_1(x)\)</span>. We see that these three can be concatenated to form a path <span class="math inline">\(X(\ell):\mathsf{tr}(\ell)(X(x))=X(x)\)</span>.</p>
+<p>As we traverse an additional edge this image is simply mapped to the next vertex through the lens of transport, which acts similarly on all the points in a fiber. The image is carried first to <span class="math inline">\(\mathsf{tr}(e_{23})(X(e_{12}))\)</span> then to <span class="math inline">\(\mathsf{tr}(e_{31})\circ\mathsf{tr}(e_{23})(X(v_1))\)</span>.</p>
+<p>At stage 4 we have three paths, each consisting of <span class="math inline">\(X\)</span> acting on a single edge of the triangle, mapped with some transport to <span class="math inline">\(T_1(v_1)\)</span>. We see that these three can be concatenated to form a path <span class="math inline">\(X(\ell):\mathsf{tr}(\ell)(X(v_1))=X(v_1)\)</span>.</p>
 <figure id="fig:swirling">
 <img src="./716333416161229e3f5d215885288ec69267e5dd.svg" />
 <figcaption>A vector field swirling around a face, in a bundle of squares. Thick black vectors are the value at the point. Thin vectors are transported once, dashed twice, and dotted three times. The vertices <span class="math inline">\(v_{ij}\)</span> are in the tangent fibers. The colors of the arrows correspond: the red edge produced the red edge in the fibers.</figcaption>
 </figure>
-<div class="mynote">
-<p><strong>Remark 34</strong>. <em>In Hopf <span class="citation" data-cites="hopf"> (<a href="#ref-hopf" role="doc-biblioref">Hopf, 1983</a>)</span> and in Needham <span class="citation" data-cites="needham"> (<a href="#ref-needham" role="doc-biblioref">Needham, 2021</a>)</span>, the value <span class="math inline">\(X(e_{xy})\)</span> is called “the change in angle between <span class="math inline">\(X\)</span> and <span class="math inline">\(X(x)_{||}\)</span> along the edge <span class="math inline">\(e_{xy}\)</span>,” where by <span class="math inline">\(X(x)_{||}\)</span> we mean the transport of the fixed single vector <span class="math inline">\(X(x)\)</span> to the point <span class="math inline">\(X(y)\)</span>, i.e. <span class="math inline">\(\mathsf{tr}(e_{xy})(X(x))\)</span>. The concatenation <span class="math inline">\(X(\ell)\)</span> is called “the sum of the changes in angle along each edge.” This remark is meant to help anyone intending to make further comparisons with classical results.</em></p>
-</div>
-<h1 data-number="6" id="the-total-construction"><span class="header-section-number">6</span> The total construction</h1>
+<p>In Hopf <span class="citation" data-cites="hopf"> (<a href="#ref-hopf" role="doc-biblioref">Hopf, 1983</a>)</span> and in Needham <span class="citation" data-cites="needham"> (<a href="#ref-needham" role="doc-biblioref">Needham, 2021</a>)</span>, the value <span class="math inline">\(X(e_{12})\)</span> is called “the change in angle between <span class="math inline">\(X\)</span> and <span class="math inline">\(X(v_1)_{||}\)</span> along the edge <span class="math inline">\(e_{12}\)</span>,” where by <span class="math inline">\(X(v_1)_{||}\)</span> we mean the transport of the fixed single vector <span class="math inline">\(X(v_1)\)</span> to the point <span class="math inline">\(X(v_2)\)</span>, i.e. <span class="math inline">\(\mathsf{tr}(e_{12})(X(v_1))\)</span>. The concatenation <span class="math inline">\(X(\ell)\)</span> is called “the sum of the changes in angle along each edge.” This terminology will inspire our definition of angles in the next section.</p>
+<h2 data-number="5.3" id="an-example-vector-field-on-the-sphere"><span class="header-section-number">5.3</span> An example vector field on the sphere</h2>
+<h1 data-number="6" id="sec:totals"><span class="header-section-number">6</span> The total construction</h1>
 <p>We will place holonomy, flatness, and vector fields on the same footing, and combine them. We will prove the equivalance of the total curvature of a tangent bundle, and total index of a vector field. This is the key relationship in proving both the Gauss-Bonnet theorem and the Poincaré-Hopf theorem.</p>
 <h2 data-number="6.1" id="index-of-the-vector-field"><span class="header-section-number">6.1</span> Index of the vector field</h2>
 <p>Given a polygon cellular type <span class="math inline">\(C_{n,0}\to C_{n,1}=C_n\)</span>, and map <span class="math inline">\(*_{C_n}:\mathbb{1}\to\mathrm{K}(\ensuremath{\mathbb{Z}},2)\)</span> giving it the structure of an <span class="math inline">\(S^1\)</span>-torsor, we have the following general fact:</p>
 <div id="prop:eveq" class="myprop">
-<p><strong>Proposition 35</strong>. <em>Given a pointing <span class="math inline">\(b:C_n\)</span> the evaluation map <span class="math inline">\(\mathrm{ev}(b):(C_n=C_n)\to C_n\)</span> is an equivalence.</em></p>
+<p><strong>Proposition 33</strong>. <em>Given a pointing <span class="math inline">\(b:C_n\)</span> the evaluation map <span class="math inline">\(\mathrm{ev}(b):(C_n=C_n)\to C_n\)</span> is an equivalence.</em></p>
+</div>
+<div class="myproof">
+<p>See <span class="citation" data-cites="buchholtz2023central"> (<a href="#ref-buchholtz2023central" role="doc-biblioref">Buchholtz <em>et al.</em>, 2023</a>)</span>.</p>
 </div>
 <p>Consider the cellular type <span class="math inline">\(\ensuremath{\mathbb{M}}_0\to\ensuremath{\mathbb{M}}_1\to\ensuremath{\mathbb{M}}\)</span> with point <span class="math inline">\(m:\ensuremath{\mathbb{M}}\)</span>. Consider a loop <span class="math inline">\(\ell:m=_\ensuremath{\mathbb{M}}m\)</span> with proof of contractibility <span class="math inline">\(f:\ell=\ensuremath{\mathsf{refl}}_m\)</span>. For example, we may have a face <span class="math inline">\(F\)</span> in a combinatorial realization, with <span class="math inline">\(m\)</span> a vertex of <span class="math inline">\(F\)</span> and <span class="math inline">\(\ell=\partial F\)</span> the boundary loop. We have accumulated the following constructions: <span class="math display">\[\begin{aligned}
 \mathsf{tr}(\ell)&amp;:Tm=Tm\\
 \flat(\ell)&amp;:\mathsf{tr}(\ell)=_{Tm=Tm}\ensuremath{\text{id}}\\
 X(\ell)&amp;:\mathsf{tr}(\ell)(X(m))=_{Tm=Tm}X(m)\\
-\end{aligned}\]</span> which invites us to make use of the equivalence <a href="#prop:eveq" data-reference-type="ref" data-reference="prop:eveq">35</a> to define <span class="math inline">\(X_E(\ell)\stackrel{\mathrm{def}}{=}\mathrm{ev}(X(m))^{-1}\circ X(\ell):\mathsf{tr}(\ell)=\ensuremath{\text{id}}\)</span> (where the subscript <span class="math inline">\(E\)</span> stands for the extension to all of <span class="math inline">\(Tm\)</span>) to obtain <span class="math display">\[\begin{aligned}
+\end{aligned}\]</span> which invites us to make use of the equivalence <a href="#prop:eveq" data-reference-type="ref" data-reference="prop:eveq">33</a> to define <span class="math inline">\(X_E(\ell)\stackrel{\mathrm{def}}{=}\mathrm{ev}(X(m))^{-1}\circ X(\ell):\mathsf{tr}(\ell)=\ensuremath{\text{id}}\)</span> (where the subscript <span class="math inline">\(E\)</span> stands for the extension to all of <span class="math inline">\(Tm\)</span>) to obtain <span class="math display">\[\begin{aligned}
 \mathsf{tr}(\ell)&amp;:Tm=Tm\\
 \flat(\ell)&amp;:\mathsf{tr}(\ell)=_{Tm=Tm}\ensuremath{\text{id}}\\
 X_E(\ell)&amp;:\mathsf{tr}(\ell)=_{Tm=Tm}\ensuremath{\text{id}}\\
 \end{aligned}\]</span> These last two can be concatenated to make a loop.</p>
 <div class="mydef">
-<p><strong>Definition 36</strong>. <em>The <strong>index of the vector field <span class="math inline">\(X\)</span> around the loop <span class="math inline">\(\ell\)</span></strong> is the integer <span class="math inline">\(I_X(\ell):\flat(\ell)^{-1}\cdot X_E:\ensuremath{\text{id}}=_{Tm=Tm}\ensuremath{\text{id}}\)</span>.</em></p>
+<p><strong>Definition 34</strong>. <em>The <strong>index of the vector field <span class="math inline">\(X\)</span> around the loop <span class="math inline">\(\ell\)</span></strong> is the integer <span class="math inline">\(I_X(\ell)\stackrel{\mathrm{def}}{=}\flat(\ell)^{-1}\cdot X_E:\ensuremath{\text{id}}=_{Tm=Tm}\ensuremath{\text{id}}\)</span>.</em></p>
 </div>
 <div class="mynote">
-<p><strong>Remark 37</strong>. <em>Classically the index around a loop makes use of a trivialization of the tangent bundle, and does not take place in the presence of a connection. We know from section <a href="#sec:localtriv" data-reference-type="ref" data-reference="sec:localtriv">4.2</a> that the connection can serve as such a trivialization. Taking that point of view, the formula constitutes the difference between the swirling of the vector field inside the chart, and the twisting of the chart itself.</em></p>
+<p><strong>Remark 35</strong>. <em>Classically the index around a loop makes use of a trivialization of the tangent bundle, and does not take place in the presence of a connection. We know from section <a href="#sec:localtriv" data-reference-type="ref" data-reference="sec:localtriv">4.2</a> that the connection can serve as such a trivialization. Taking that point of view, the formula constitutes the difference between the swirling of the vector field inside the chart, and the twisting of the chart itself.</em></p>
 </div>
 <p>We now have the following list of ingredients given the loop <span class="math inline">\(\ell\)</span>: <span class="math display">\[\label{eq:face_elements}
 \begin{aligned}
@@ -534,29 +533,33 @@ X_E(\ell)&amp;:\mathsf{tr}(\ell)=_{Tm=Tm}\ensuremath{\text{id}}\\
 I_X(\ell)&amp;:\ensuremath{\text{id}}=_{Tm=Tm}\ensuremath{\text{id}}\\
 \end{aligned}\]</span></p>
 <h2 data-number="6.2" id="cancellations"><span class="header-section-number">6.2</span> Cancellations</h2>
-<p>The next observation is that we can relate the quantities in <a href="#eq:face_elements" data-reference-type="ref" data-reference="eq:face_elements">[eq:face_elements]</a> at different points around a cellular surface by making use of the automorphism bundle <span class="math inline">\(\sum_{x:\ensuremath{\mathbb{M}}}(Tx=Tx)\)</span> and its trivialization <span class="math inline">\(\tau:\prod_{x:M}(Tx=Tx)\xrightarrow[]{\simeq}(Tm=Tm)\)</span> as in Lemma <a href="#lem:gauge_triv" data-reference-type="ref" data-reference="lem:gauge_triv">10</a>.</p>
+<p>The next observation is that we can relate the quantities in Equation <a href="#eq:face_elements" data-reference-type="ref" data-reference="eq:face_elements">[eq:face_elements]</a> at different points around a cellular surface by making use of the automorphism bundle <span class="math inline">\(\sum_{x:\ensuremath{\mathbb{M}}}(Tx=Tx)\)</span> and its trivialization <span class="math inline">\(\tau:\prod_{x:M}(Tx=Tx)\xrightarrow[]{\simeq}(Tm=Tm)\)</span> as in Lemma <a href="#lem:gauge_triv" data-reference-type="ref" data-reference="lem:gauge_triv">10</a>. We will use the action on paths of <span class="math inline">\(\tau\)</span> to better understand <span class="math inline">\(\flat\)</span> and <span class="math inline">\(X_E\)</span> as <em>angles</em>.</p>
 <div class="mydef">
-<p><strong>Definition 38</strong>. <em>Consider the contractible type <span class="math inline">\(\sum_{\alpha:Tm=Tm}\alpha=\ensuremath{\text{id}}\)</span> with the addition law <span class="math inline">\((\alpha, p)+(\beta, q) = (\alpha\cdot\beta, p\cdot \alpha(q))\)</span> where <span class="math inline">\(\alpha(q):\alpha=\alpha\cdot\beta\)</span> (using concatenation notation instead of function composition). This is a commutative group with identity <span class="math inline">\(\ensuremath{\mathsf{refl}}_\ensuremath{\text{id}}\)</span> which we call the <strong>type of angles of <span class="math inline">\(Tm\)</span></strong>.</em></p>
+<p><strong>Definition 36</strong>. <em>Consider the contractible type <span class="math inline">\(\sum_{\alpha:Tm=Tm}\alpha=\ensuremath{\text{id}}\)</span> with the addition law <span class="math inline">\((\alpha, p)+(\beta, q) = (\alpha\cdot\beta, p\cdot \alpha(q))\)</span> where <span class="math inline">\(\alpha(q):\alpha=\alpha\cdot\beta\)</span> (using concatenation notation instead of function composition). This is a commutative group with identity <span class="math inline">\(\ensuremath{\mathsf{refl}}_\ensuremath{\text{id}}\)</span> which we call the <strong>type of angles of <span class="math inline">\(Tm\)</span></strong>.</em></p>
 </div>
 <div class="mylemma">
-<p><strong>Lemma 39</strong>. <em><span class="math inline">\(\tau\circ X\)</span> maps concatenation of paths to the commutative operation <span class="math inline">\(+\)</span> in the type of angles <span class="math inline">\(\sum_{\alpha:Tm=Tm}\alpha=\ensuremath{\text{id}}\)</span>.</em></p>
+<p><strong>Lemma 37</strong>. <em><span class="math inline">\(\tau\circ X\)</span> maps concatenation of paths to the commutative operation <span class="math inline">\(+\)</span> in the type of angles <span class="math inline">\(\sum_{\alpha:Tm=Tm}\alpha=\ensuremath{\text{id}}\)</span>.</em></p>
 </div>
-<p><em>Proof.</em> Suppose we have <span class="math inline">\(p:x=_\ensuremath{\mathbb{M}}y\)</span> and <span class="math inline">\(q:y=_\ensuremath{\mathbb{M}}z\)</span>. Then <span class="math inline">\(X(p\cdot q)=\mathsf{tr}(q)(X(p))\cdot X(q)\)</span> which is exactly the operation <span class="math inline">\(+\)</span> but in the group <span class="math inline">\(\sum_{\alpha:Tz=Tz}\alpha=\ensuremath{\text{id}}\)</span>. We can then transport the result to <span class="math inline">\(m\)</span> by an arbitrary path. ◻</p>
+<div class="myproof">
+<p>Suppose we have <span class="math inline">\(p:x=_\ensuremath{\mathbb{M}}y\)</span> and <span class="math inline">\(q:y=_\ensuremath{\mathbb{M}}z\)</span>. Then <span class="math inline">\(X(p\cdot q)=\mathsf{tr}(q)(X(p))\cdot X(q)\)</span> which is exactly the operation <span class="math inline">\(+\)</span> but in the group <span class="math inline">\(\sum_{\alpha:Tz=Tz}\alpha=\ensuremath{\text{id}}\)</span>. We can then transport the result to <span class="math inline">\(m\)</span> by an arbitrary path.</p>
+</div>
 <div id="cor:x_cancel" class="mycor">
-<p><strong>Corollary 40</strong>. <em>With <span class="math inline">\(e, p, \ell\)</span> as in Figure <a href="#fig:lasso" data-reference-type="ref" data-reference="fig:lasso">8</a>, we have <span class="math inline">\(\tau(X_E(e\cdot\ell\cdot e^{-1})) = \tau(X_E(\ell))\)</span>.</em></p>
+<p><strong>Corollary 38</strong>. <em>With <span class="math inline">\(e, p, \ell\)</span> as in Figure <a href="#fig:lasso" data-reference-type="ref" data-reference="fig:lasso">8</a>, we have <span class="math inline">\(\tau(X_E(e\cdot\ell\cdot e^{-1})) = \tau(X_E(\ell))\)</span>.</em></p>
 </div>
 <p>So under <span class="math inline">\(\tau\)</span> we can cancel the contributions to <span class="math inline">\(X\)</span> from the edge <span class="math inline">\(e\)</span> after traversing it once in each direction. Meanwhile we have something similar for the transport automorphisms:</p>
 <div class="mylemma">
-<p><strong>Lemma 41</strong>. <em>With <span class="math inline">\(e, p, \ell\)</span> as in Figure <a href="#fig:lasso" data-reference-type="ref" data-reference="fig:lasso">8</a>, we have <span class="math inline">\(\tau(\mathsf{tr}(e\cdot\ell\cdot e^{-1}))=\tau(\mathsf{tr}(\ell))\)</span>.</em></p>
+<p><strong>Lemma 39</strong>. <em>With <span class="math inline">\(e, p, \ell\)</span> as in Figure <a href="#fig:lasso" data-reference-type="ref" data-reference="fig:lasso">8</a>, we have <span class="math inline">\(\tau(\mathsf{tr}(e\cdot\ell\cdot e^{-1}))=\tau(\mathsf{tr}(\ell))\)</span>.</em></p>
 </div>
-<p><em>Proof.</em> Recall that <span class="math inline">\(\tau\)</span> conjugates automorphisms by transport along some arbitrary path to <span class="math inline">\(m\)</span>. To transport automorphisms from <span class="math inline">\(x\)</span> to <span class="math inline">\(p\)</span>, choose a path <span class="math inline">\(p:m=_\ensuremath{\mathbb{M}}x\)</span>. Then make the specific choice <span class="math inline">\(p\cdot e:m=_\ensuremath{\mathbb{M}}y\)</span> to transport automorphisms from <span class="math inline">\(y\)</span> to <span class="math inline">\(p\)</span>. Then <span class="math inline">\(\tau(\mathsf{tr}(e\cdot\ell\cdot e^{-1}))\)</span> and <span class="math inline">\(\tau(\mathsf{tr}(\ell))\)</span> both compute to <span class="math inline">\(\mathsf{tr}((p\cdot e)\cdot\ell\cdot(p\cdot e)^{-1})\)</span>. ◻</p>
+<div class="myproof">
+<p>Recall that <span class="math inline">\(\tau\)</span> conjugates automorphisms by transport along some arbitrary path to <span class="math inline">\(m\)</span>. To transport automorphisms from <span class="math inline">\(x\)</span> to <span class="math inline">\(p\)</span>, choose a path <span class="math inline">\(p:m=_\ensuremath{\mathbb{M}}x\)</span>. Then make the specific choice <span class="math inline">\(p\cdot e:m=_\ensuremath{\mathbb{M}}y\)</span> to transport automorphisms from <span class="math inline">\(y\)</span> to <span class="math inline">\(p\)</span>. Then <span class="math inline">\(\tau(\mathsf{tr}(e\cdot\ell\cdot e^{-1}))\)</span> and <span class="math inline">\(\tau(\mathsf{tr}(\ell))\)</span> both compute to <span class="math inline">\(\mathsf{tr}((p\cdot e)\cdot\ell\cdot(p\cdot e)^{-1})\)</span>.</p>
+</div>
 <figure id="fig:lasso">
 <img src="./24a86fcb242fcbade879db4de4f4e6ab81e28dcc.svg" />
 <figcaption>Comparing maps on the edge <span class="math inline">\(e\)</span> at the master point <span class="math inline">\(m\)</span> with and without traversing <span class="math inline">\(\ell\)</span>.</figcaption>
 </figure>
 <h2 data-number="6.3" id="total-enumeration-of-faces"><span class="header-section-number">6.3</span> Total enumeration of faces</h2>
 <div class="mydef">
-<p><strong>Definition 42</strong>. <em>A <strong>total enumeration of faces</strong> for a combinatorial 2-manifold <span class="math inline">\(\ensuremath{\mathbb{M}}\)</span> with underlying simplicial complex <span class="math inline">\(M=[M_0, M_1, M_2]\)</span> consists of</em></p>
+<p><strong>Definition 40</strong>. <em>A <strong>total enumeration of faces</strong> for a combinatorial 2-manifold <span class="math inline">\(\ensuremath{\mathbb{M}}\)</span> with underlying simplicial complex <span class="math inline">\(M=[M_0, M_1, M_2]\)</span> consists of</em></p>
 <ol>
 <li><p><em>A “master basepoint” <span class="math inline">\(m:M_0\)</span>.</em></p></li>
 <li><p><em>For each face <span class="math inline">\(F:M_2\)</span> with vertices <span class="math inline">\(\{v_{F,1}, v_{F,2}, v_{F,3}\}\)</span> an enumeration of its vertices <span class="math inline">\([v_{F,1}, v_{F,2}, v_{F,3}]\)</span>, including the choice of the first vertex in the enumeration as the basepoint of <span class="math inline">\(F\)</span>, which is <strong>globally compatible</strong> with the choices for the other faces, meaning that when two faces <span class="math inline">\(F_1,F_2\)</span> share an edge <span class="math inline">\(\{v, w\}\)</span>, then one of the faces includes the sublist <span class="math inline">\([v, w]\)</span> and the other includes <span class="math inline">\([w, v]\)</span>.</em></p></li>
@@ -565,16 +568,16 @@ I_X(\ell)&amp;:\ensuremath{\text{id}}=_{Tm=Tm}\ensuremath{\text{id}}\\
 <p><em>Two enumerations that differ only in the ordering of vertices (2.) are said to have the <strong>same orientation</strong> if it is true for every face that the two orderings of vertices differ by an even orientation.</em></p>
 </div>
 <div class="mynote">
-<p><strong>Remark 43</strong>. <em>For such an enumeration to exist the underlying simplicial complex must be <em>orientable</em> in a classical sense. We are not going to explore this requirement internally in HoTT, nor prove any relationship between orientability of the set-based complex and orientation in the sense of factoring classifying maps through <span class="math inline">\(\mathrm{K}(\ensuremath{\mathbb{Z}},2)\to\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)</span>.</em></p>
+<p><strong>Remark 41</strong>. <em>For such an enumeration to exist the underlying simplicial complex must be <em>orientable</em> in a classical sense. We are not going to explore this requirement internally in HoTT, nor prove any relationship between orientability of the set-based complex and orientation in the sense of factoring classifying maps through <span class="math inline">\(\mathrm{K}(\ensuremath{\mathbb{Z}},2)\to\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)</span>.</em></p>
 </div>
 <div class="myex">
-<p><strong>Example 44</strong>. <em>The octahedron: for <span class="math inline">\(\ensuremath{\mathbb{O}}\)</span> we might choose <span class="math inline">\(b\)</span> as the master basepoint, as well as the basepoint for four of the faces. For the other four faces we could choose <span class="math inline">\(g\)</span> as the basepoint. We could choose <span class="math inline">\(br\cdot rg\)</span> as the path between the basepoints, and we could order the faces like this: <span class="math inline">\([bwo, brw, boy, byr, gow, gwr, gry, gyo]\)</span>.</em></p>
+<p><strong>Example 42</strong>. <em>The octahedron: for <span class="math inline">\(\ensuremath{\mathbb{O}}\)</span> we might choose <span class="math inline">\(b\)</span> as the master basepoint, as well as the basepoint for four of the faces. For the other four faces we could choose <span class="math inline">\(g\)</span> as the basepoint. We could choose <span class="math inline">\(br\cdot rg\)</span> as the path between the basepoints, and we could order the faces like this: <span class="math inline">\([bwo, brw, boy, byr, gow, gwr, gry, gyo]\)</span>.</em></p>
 </div>
 <div class="mydef">
-<p><strong>Definition 45</strong>. <em>The <strong>total path</strong> of an enumeration is the list <span class="math inline">\(\ell_{F_1},\ldots,\ell_{F_n}\)</span> of loops where <span class="math inline">\(\ell_{F_i}:v_{F_i,1}=v_{F_i,1}\)</span> is the loop around <span class="math inline">\(F_i\)</span> connecting vertices <span class="math inline">\(v_{F,1}, v_{F,2}, v_{F,3}\)</span>.</em></p>
+<p><strong>Definition 43</strong>. <em>The <strong>total path</strong> of an enumeration is the list <span class="math inline">\(\ell_{F_1},\ldots,\ell_{F_n}\)</span> of loops where <span class="math inline">\(\ell_{F_i}:v_{F_i,1}=v_{F_i,1}\)</span> is the loop around <span class="math inline">\(F_i\)</span> connecting vertices <span class="math inline">\(v_{F,1}, v_{F,2}, v_{F,3}\)</span>.</em></p>
 </div>
 <div class="mydef">
-<p><strong>Definition 46</strong>. <em>Using <a href="#eq:face_elements" data-reference-type="ref" data-reference="eq:face_elements">[eq:face_elements]</a> we can define the <strong>total curvature</strong>, <strong>total swirling</strong> and <strong>total index</strong> of a total path as follows: <span class="math display">\[\label{eq:total_elements}
+<p><strong>Definition 44</strong>. <em>Using Equation <a href="#eq:face_elements" data-reference-type="ref" data-reference="eq:face_elements">[eq:face_elements]</a> we can define the <strong>total curvature</strong>, <strong>total swirling</strong> and <strong>total index</strong> of a total path as follows: <span class="math display">\[\label{eq:total_elements}
 \begin{aligned}
 \flat_\mathrm{tot}&amp;=\tau(\flat(\ell_{F_1}))+\cdots+\tau(\flat(\ell_{F_n}))\\
 X_\mathrm{tot}&amp;=\tau(X(\ell_{F_1}))+\cdots+\tau(X(\ell_{F_n}))\\
@@ -582,16 +585,21 @@ I_\mathrm{tot}&amp;=\flat_\mathrm{tot}^{-1}\cdot X_\mathrm{tot}
 \end{aligned}\]</span> where the sums are taken in the group of angles <span class="math inline">\(\sum_{\alpha:Tm=Tm}\alpha=\ensuremath{\text{id}}\)</span>.</em></p>
 </div>
 <div id="lem:edges_cancel" class="mylemma">
-<p><strong>Lemma 47</strong>. <em>The total path of an enumeration visits each edge an even number of times, equally in each direction.</em></p>
+<p><strong>Lemma 45</strong>. <em>The total path of an enumeration visits each edge an even number of times, equally in each direction.</em></p>
 </div>
 <div class="mythm">
-<p><strong>Theorem 48</strong>. <em><span class="math inline">\(\tau(X(\ell_{F_1}))\cdots\tau(X(\ell_{F_n}))=\ensuremath{\mathsf{refl}}\)</span> in <span class="math inline">\(\sum_{\alpha:Tm=Tm}\alpha=\ensuremath{\text{id}}\)</span>.</em></p>
+<p><strong>Theorem 46</strong>. <em><span class="math inline">\(\tau(X(\ell_{F_1}))\cdots\tau(X(\ell_{F_n}))=\ensuremath{\mathsf{refl}}\)</span> in <span class="math inline">\(\sum_{\alpha:Tm=Tm}\alpha=\ensuremath{\text{id}}\)</span>.</em></p>
 </div>
-<p><em>Proof.</em> Immediate from Lemma <a href="#lem:edges_cancel" data-reference-type="ref" data-reference="lem:edges_cancel">47</a> and Corollary <a href="#cor:x_cancel" data-reference-type="ref" data-reference="cor:x_cancel">40</a>. ◻</p>
+<div class="myproof">
+<p>Immediate from Lemma <a href="#lem:edges_cancel" data-reference-type="ref" data-reference="lem:edges_cancel">45</a> and Corollary <a href="#cor:x_cancel" data-reference-type="ref" data-reference="cor:x_cancel">38</a>.</p>
+</div>
 <div class="mycor">
-<p><strong>Corollary 49</strong>. <em>The total index is equal to the opposite of the total curvature. The total curvature is an integer.</em></p>
+<p><strong>Corollary 47</strong>. <em>The total index is equal to the opposite of the total curvature. The total curvature is an integer.</em></p>
 </div>
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-buchholtz2023central" class="csl-entry" role="listitem">
+<span class="smallcaps">Buchholtz</span>, U., <span class="smallcaps">Christensen</span>, J.D., <span class="smallcaps">Flaten</span>, J.G.T., &amp; <span class="smallcaps">Rijke</span>, E. (2023) <a href="https://arxiv.org/abs/2301.02636">Central h-spaces and banded types</a>.
+</div>
 <div id="ref-christensen_univalence" class="csl-entry" role="listitem">
 <span class="smallcaps">Christensen</span>, D. (2015) A characterization of univalent fibrations.
 </div>
@@ -621,9 +629,6 @@ I_\mathrm{tot}&amp;=\flat_\mathrm{tot}^{-1}\cdot X_\mathrm{tot}
 </div>
 <div id="ref-sco" class="csl-entry" role="listitem">
 <span class="smallcaps">Scoccola</span>, L. (2020) <a href="https://doi.org/10.1017/s0960129520000146">Nilpotent types and fracture squares in homotopy type theory</a>. <em>Mathematical Structures in Computer Science</em>, <strong>30</strong>, 511–544.
-</div>
-<div id="ref-shulman_cohesion" class="csl-entry" role="listitem">
-<span class="smallcaps">Shulman</span>, M. (2017) <a href="https://arxiv.org/abs/1509.07584">Brouwer’s fixed-point theorem in real-cohesive homotopy type theory</a>.
 </div>
 <div id="ref-talbott" class="csl-entry" role="listitem">
 <span class="smallcaps">Talbott</span>, S. (1995) <em><a href="https://books.google.com/books?id=KcXaAAAAMAAJ">The future does not compute: Transcending the machines in our midst</a></em>. O’Reilly &amp; Associates.
