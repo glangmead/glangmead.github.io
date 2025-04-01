@@ -78,7 +78,8 @@
 <li><a href="#abstract-simplicial-complexes" id="toc-abstract-simplicial-complexes"><span class="toc-section-number">3.1</span> Abstract simplicial complexes</a></li>
 <li><a href="#higher-inductive-realizations" id="toc-higher-inductive-realizations"><span class="toc-section-number">3.2</span> Higher inductive realizations</a></li>
 <li><a href="#sec:polygons" id="toc-sec:polygons"><span class="toc-section-number">3.3</span> Polygons</a></li>
-<li><a href="#the-octahedron-model-of-the-sphere" id="toc-the-octahedron-model-of-the-sphere"><span class="toc-section-number">3.4</span> The octahedron model of the sphere</a></li>
+<li><a href="#surfaces" id="toc-surfaces"><span class="toc-section-number">3.4</span> Surfaces</a></li>
+<li><a href="#the-octahedron-model-of-the-sphere" id="toc-the-octahedron-model-of-the-sphere"><span class="toc-section-number">3.5</span> The octahedron model of the sphere</a></li>
 </ul></li>
 <li><a href="#sec:connections" id="toc-sec:connections"><span class="toc-section-number">4</span> Bundles, connections, and curvature</a>
 <ul>
@@ -89,18 +90,19 @@
 </ul></li>
 <li><a href="#sec:vector_fields" id="toc-sec:vector_fields"><span class="toc-section-number">5</span> Vector fields</a>
 <ul>
-<li><a href="#definition" id="toc-definition"><span class="toc-section-number">5.1</span> Definition</a></li>
+<li><a href="#sec:vector_field_def" id="toc-sec:vector_field_def"><span class="toc-section-number">5.1</span> Definition</a></li>
 <li><a href="#swirling-of-dependent-paths" id="toc-swirling-of-dependent-paths"><span class="toc-section-number">5.2</span> Swirling of dependent paths</a></li>
-<li><a href="#an-example-vector-field-on-the-sphere" id="toc-an-example-vector-field-on-the-sphere"><span class="toc-section-number">5.3</span> An example vector field on the sphere</a></li>
+<li><a href="#sec:octahedron_vector_field" id="toc-sec:octahedron_vector_field"><span class="toc-section-number">5.3</span> An example vector field on the sphere</a></li>
 </ul></li>
 <li><a href="#sec:totals" id="toc-sec:totals"><span class="toc-section-number">6</span> The total construction</a>
 <ul>
 <li><a href="#index-of-the-vector-field-on-a-face" id="toc-index-of-the-vector-field-on-a-face"><span class="toc-section-number">6.1</span> Index of the vector field on a face</a></li>
-<li><a href="#total-curvature-and-index-on-the-sphere" id="toc-total-curvature-and-index-on-the-sphere"><span class="toc-section-number">6.2</span> Total curvature and index on the sphere</a></li>
+<li><a href="#total-flatness-total-index" id="toc-total-flatness-total-index"><span class="toc-section-number">6.2</span> Total flatness, total index</a></li>
+<li><a href="#calculation-on-the-sphere" id="toc-calculation-on-the-sphere"><span class="toc-section-number">6.3</span> Calculation on the sphere</a></li>
 </ul></li>
 <li><a href="#appendix-the-program-ahead" id="toc-appendix-the-program-ahead"><span class="toc-section-number">7</span> Appendix: the program ahead</a>
 <ul>
-<li><a href="#sec:automorphisms" id="toc-sec:automorphisms"><span class="toc-section-number">7.1</span> The bundle of automorphisms</a></li>
+<li><a href="#gauge-transformations" id="toc-gauge-transformations"><span class="toc-section-number">7.1</span> Gauge transformations</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -110,7 +112,7 @@
 <p>This thesis is dedicated to John Baez, Sean M. Carroll, Sabine Hossenfelder, and other communicators who are carrying the torch of science forward in the spirit of my hero Carl Sagan. I have followed you all for many years, and you have inspired me to continue my studies alongside my career. Thank you.</p>
 <h1 data-number="1" id="overview"><span class="header-section-number">1</span> Overview</h1>
 <blockquote>
-<p>“It is always ourselves we work on, whether we realize it or not. There is no other work to be done in the world.” — Stephen Talbott, <em>The Future Does Not Compute</em><span class="citation" data-cites="talbott"> (<a href="#ref-talbott" role="doc-biblioref">Talbott, 1995</a>)</span></p>
+<p>“It is always ourselves we work on, whether we realize it or not. There is no other work to be done in the world.” — Stephen Talbott, <em>The Future Does Not Compute</em><span class="citation" data-cites="talbott">[<a href="#ref-talbott" role="doc-biblioref">1</a>]</span></p>
 </blockquote>
 <p>We will define</p>
 <ul>
@@ -127,7 +129,7 @@
 <ul>
 <li><p>the total curvature, as in the Gauss-Bonnet theorem</p></li>
 <li><p>the total index of a vector field, as in the Poincaré-Hopf theorem,</p></li>
-<li><p>and prove the equality of these to each other when the complex is oriented (Theorem <a href="#thm:total_index_total_curvature" data-reference-type="ref" data-reference="thm:total_index_total_curvature">50</a>).</p></li>
+<li><p>and prove the equality of these to each other when the complex is oriented (Theorem <a href="#thm:total_index_total_curvature" data-reference-type="ref" data-reference="thm:total_index_total_curvature">52</a>).</p></li>
 </ul>
 <p>We will build up an example of all of these structures on an octahedron model of the sphere. We will not, however, be supplying a separate definition of Euler characteristic so as to truly reproduce the Gauss-Bonnet and Poincaré-Hopf theorems.</p>
 <p>Once we have defined homotopical realizations of simplicial complexes in Section <a href="#sec:discrete_man" data-reference-type="ref" data-reference="sec:discrete_man">3</a>, we will focus on dimensions 1 and 2. In dimension 1 we define polygons, which we prove are equivalent to <span class="math inline">\(S^1\)</span>, and so give terms in the type <span class="math inline">\(\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\stackrel{\mathrm{def}}{=}\sum_{A:\mathcal{U}}||A\simeq S^1||_1\)</span>. We can call this component of the universe “mere circles.” In dimension 2 we will focus on a subset of complexes where the neighboring vertices and edges of each vertex (the vertex’s “link”) form a polygon. The homotopical realization <span class="math inline">\(\ensuremath{\mathbb{M}}\)</span> of such a complex then has a map <span class="math inline">\(\mathop{\mathrm{\mathsf{link}}}\)</span> from each vertex to a homotopical polygon, i.e. a map to <span class="math inline">\(\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)</span>. We do not know under what conditions this map necessarily extends to the higher cells of the realization.</p>
@@ -136,36 +138,36 @@
 <p>to obtain a bundle of mere circles. We will discuss when such a map factors through a map <span class="math inline">\(\ensuremath{\mathbb{M}}\to \mathrm{K}(\ensuremath{\mathbb{Z}},2)\)</span>, and hence when it is in fact a principal fibration.</p>
 <p>Then in Section <a href="#sec:connections" data-reference-type="ref" data-reference="sec:connections">4</a> we will name various elements of the above construction, indicating their relationship to classical definitions.</p>
 <p>In Section <a href="#sec:vector_fields" data-reference-type="ref" data-reference="sec:vector_fields">5</a> we will define vector fields, which require a tangent bundle. We will introduce a method for decomposing a vector field along a concatenation of paths.</p>
-<p>Finally, in Section <a href="#sec:totals" data-reference-type="ref" data-reference="sec:totals">6</a> we will define a method for visiting all the faces of a manifold in order to form “totals” of local objects. We will examine the total curvature and the total index and prove that they are equal. Our proof tracks very closely with the classical proof of Hopf<span class="citation" data-cites="hopf"> (<a href="#ref-hopf" role="doc-biblioref">Hopf, 1983</a>)</span>, presented in detail in Needham<span class="citation" data-cites="needham"> (<a href="#ref-needham" role="doc-biblioref">Needham, 2021</a>)</span>. In their case they can go on to prove that these values are both equal to the Euler characteristic, but we would need an independent definition to prove agreement with, which we do not currently have.</p>
+<p>Finally, in Section <a href="#sec:totals" data-reference-type="ref" data-reference="sec:totals">6</a> we will define a method for visiting all the faces of a manifold in order to form “totals” of local objects. We will examine the total curvature and the total index and prove that they are equal. Our proof tracks very closely with the classical proof of Hopf<span class="citation" data-cites="hopf">[<a href="#ref-hopf" role="doc-biblioref">2</a>]</span>, presented in detail in Needham<span class="citation" data-cites="needham">[<a href="#ref-needham" role="doc-biblioref">3</a>]</span>. In their case they can go on to prove that these values are both equal to the Euler characteristic, but we would need an independent definition to prove agreement with, which we do not currently have.</p>
 <h1 data-number="2" id="sec:torsors"><span class="header-section-number">2</span> Torsors and principal bundles</h1>
 <h2 data-number="2.1" id="subsec:torsors"><span class="header-section-number">2.1</span> Torsors</h2>
-<p>We will review some definitions and facts, drawing on the excellent resource <span class="citation" data-cites="buchholtz2023central"> (<a href="#ref-buchholtz2023central" role="doc-biblioref">Buchholtz <em>et al.</em>, 2023</a>)</span>.</p>
+<p>We will review some definitions and facts, drawing on the excellent resource <span class="citation" data-cites="buchholtz2023central">[<a href="#ref-buchholtz2023central" role="doc-biblioref">4</a>]</span>.</p>
 <div class="mydef">
 <p><strong>Definition 1</strong>. <em>Let <span class="math inline">\(G\)</span> be a group with identity element <span class="math inline">\(e\)</span> (with the usual classical structure and properties). A <strong><span class="math inline">\(G\)</span>-set</strong> is a set <span class="math inline">\(X\)</span> equipped with a homomorphism <span class="math inline">\(\phi:(G,e)\to\mathop{\mathrm{Aut}}(X)\)</span>. If in addition we have a term of type <span class="math display">\[\mathsf{is\raisebox{0.5pt}{\underline{\phantom{t}}}torsor}(X,\phi)\stackrel{\mathrm{def}}{=}||X||_{-1}\times \prod_{x:X}\mathsf{is\raisebox{0.5pt}{\underline{\phantom{t}}}equiv}(\phi(-,x):(G,e)\to (X,x))\]</span> then we say <span class="math inline">\((X,\phi)\)</span> is a <strong><span class="math inline">\(G\)</span>-torsor</strong>. Denote the type of <span class="math inline">\(G\)</span>-torsors by <span class="math inline">\(BG\)</span>. Denote the <span class="math inline">\(G\)</span>-torsor given by <span class="math inline">\(G\)</span> itself under right-multiplication by <span class="math inline">\(\ensuremath{{G}_\mathrm{reg}}\)</span>.</em></p>
 </div>
 <p>A <span class="math inline">\(G\)</span>-equivariant map from <span class="math inline">\((X,\phi)\)</span> to <span class="math inline">\((Y,\psi)\)</span> is a function <span class="math inline">\(f:X\to Y\)</span> such that <span class="math inline">\(f(\phi(g,x))=\psi(g,f(x))\)</span>. Denote the type of <span class="math inline">\(G\)</span>-equivariant maps by <span class="math inline">\(X\to_G Y\)</span>.</p>
 <div class="mylemma">
-<p><strong>Lemma 2</strong>. <em>(<span class="citation" data-cites="buchholtz2023central"> (<a href="#ref-buchholtz2023central" role="doc-biblioref">Buchholtz <em>et al.</em>, 2023</a>)</span> Lemma 5.2). If <span class="math inline">\((X,\phi),(Y,\psi):BG\)</span> then there is a natural equivalence <span class="math inline">\((X=_{BG}Y) \simeq (X\to_G Y)\)</span>.0◻</em></p>
+<p><strong>Lemma 2</strong>. <em>(<span class="citation" data-cites="buchholtz2023central">[<a href="#ref-buchholtz2023central" role="doc-biblioref">4</a>]</span> Lemma 5.2). If <span class="math inline">\((X,\phi),(Y,\psi):BG\)</span> then there is a natural equivalence <span class="math inline">\((X=_{BG}Y) \simeq (X\to_G Y)\)</span>.0◻</em></p>
 </div>
 <div class="mylemma">
-<p><strong>Lemma 3</strong>. <em>(<span class="citation" data-cites="buchholtz2023central"> (<a href="#ref-buchholtz2023central" role="doc-biblioref">Buchholtz <em>et al.</em>, 2023</a>)</span> Proposition 5.4). A <span class="math inline">\(G\)</span>-set <span class="math inline">\((X,\phi)\)</span> is a <span class="math inline">\(G\)</span>-torsor if and only if there merely exists a <span class="math inline">\(G\)</span>-equivariant equivalence <span class="math inline">\(\ensuremath{{G}_\mathrm{reg}}\to_G X\)</span>.0◻</em></p>
+<p><strong>Lemma 3</strong>. <em>(<span class="citation" data-cites="buchholtz2023central">[<a href="#ref-buchholtz2023central" role="doc-biblioref">4</a>]</span> Proposition 5.4). A <span class="math inline">\(G\)</span>-set <span class="math inline">\((X,\phi)\)</span> is a <span class="math inline">\(G\)</span>-torsor if and only if there merely exists a <span class="math inline">\(G\)</span>-equivariant equivalence <span class="math inline">\(\ensuremath{{G}_\mathrm{reg}}\to_G X\)</span>.0◻</em></p>
 </div>
 <p>These lemmas lead to</p>
 <div class="mycor">
-<p><strong>Corollary 4</strong>. <em>(<span class="citation" data-cites="buchholtz2023central"> (<a href="#ref-buchholtz2023central" role="doc-biblioref">Buchholtz <em>et al.</em>, 2023</a>)</span> Corollary 5.5). The pointed type <span class="math inline">\((BG,*)\)</span> is a <span class="math inline">\(\mathrm{K}(G,1)\)</span>, that is <span class="math inline">\(BG\)</span> is connected and has a pointed equivalence <span class="math inline">\(\Omega BG\simeq_* G\)</span>.0◻</em></p>
+<p><strong>Corollary 4</strong>. <em>(<span class="citation" data-cites="buchholtz2023central">[<a href="#ref-buchholtz2023central" role="doc-biblioref">4</a>]</span> Corollary 5.5). The pointed type <span class="math inline">\((BG,*)\)</span> is a <span class="math inline">\(\mathrm{K}(G,1)\)</span>, that is <span class="math inline">\(BG\)</span> is connected and has a pointed equivalence <span class="math inline">\(\Omega BG\simeq_* G\)</span>.0◻</em></p>
 </div>
 <p>We call types <span class="math inline">\(X\)</span> such that <span class="math inline">\(\Omega X\simeq_* G\)</span> a <em>delooping</em> of <span class="math inline">\(G\)</span>. So the type of <span class="math inline">\(G\)</span>-torsors <span class="math inline">\(BG\)</span> is a delooping of <span class="math inline">\(G\)</span>.</p>
-<p>Suppose we have a basepoint <span class="math inline">\(b:BG\)</span>. Following <span class="citation" data-cites="buchholtz2023central"> (<a href="#ref-buchholtz2023central" role="doc-biblioref">Buchholtz <em>et al.</em>, 2023</a>)</span> Section 4.3, another term <span class="math inline">\(X:BG\)</span> is a torsor for the higher group <span class="math inline">\(\Omega_b(BG)\stackrel{\mathrm{def}}{=}(b=_{BG} b)\)</span>. In particular there is an action <span class="math inline">\(\alpha:(b=_{BG}b)\times X\to X\)</span>, and an equivalence <span class="math inline">\((\alpha, \ensuremath{\mathrm{pr}}_2) : (b=_{BG}b)\times X\stackrel{\sim}{\to}(X\times X)\)</span>.</p>
+<p>Suppose we have a basepoint <span class="math inline">\(b:BG\)</span>. Following <span class="citation" data-cites="buchholtz2023central">[<a href="#ref-buchholtz2023central" role="doc-biblioref">4</a>]</span> Section 4.3, another term <span class="math inline">\(X:BG\)</span> is a torsor for the higher group <span class="math inline">\(\Omega_b(BG)\stackrel{\mathrm{def}}{=}(b=_{BG} b)\)</span>. In particular there is an action <span class="math inline">\(\alpha:(b=_{BG}b)\times X\to X\)</span>, and an equivalence <span class="math inline">\((\alpha, \ensuremath{\mathrm{pr}}_2) : (b=_{BG}b)\times X\stackrel{\sim}{\to}(X\times X)\)</span>.</p>
 <p>If <span class="math inline">\(G\)</span> is abelian then <span class="math inline">\(\mathrm{K}(G,1)\)</span> can be delooped, and in fact can be delooped in a unique way, any number of times. In the next section we will learn how to proceed from a construction of <span class="math inline">\(\mathrm{K}(G, 1)\)</span> to obtain <span class="math inline">\(\mathrm{K}(G, n)\)</span>.</p>
 <h2 data-number="2.2" id="bundles-of-eilenberg-mac-lane-spaces"><span class="header-section-number">2.2</span> Bundles of Eilenberg-Mac Lane spaces</h2>
-<p>To construct maps into <span class="math inline">\(\mathrm{K}(\ensuremath{\mathbb{Z}},2)\)</span> we will follow Scoccola<span class="citation" data-cites="sco"> (<a href="#ref-sco" role="doc-biblioref">Scoccola, 2020</a>)</span>. When can a map into a connected component of the universe be factored through an Eilenberg-Mac Lane space?</p>
+<p>To construct maps into <span class="math inline">\(\mathrm{K}(\ensuremath{\mathbb{Z}},2)\)</span> we will follow Scoccola<span class="citation" data-cites="sco">[<a href="#ref-sco" role="doc-biblioref">5</a>]</span>. When can a map into a connected component of the universe be factored through an Eilenberg-Mac Lane space?</p>
 <div class="mydef">
 <p><strong>Definition 5</strong>. <em>Let <span class="math inline">\(G\)</span> be a group. Let <span class="math display">\[\mathrm{EM}(G,n)\stackrel{\mathrm{def}}{=}\mathop{\mathrm{BAut}}(\mathrm{K}(G,n))\stackrel{\mathrm{def}}{=}\sum_{Y:\mathcal{U}}||Y\simeq \mathrm{K}(G,n)||_{-1}\]</span> be the connected component of <span class="math inline">\(\mathcal{U}\)</span> containing <span class="math inline">\(\mathrm{K}(G,n)\)</span>. A <strong><span class="math inline">\(\mathrm{K}(G,n)\)</span>-bundle</strong> on a type <span class="math inline">\(M\)</span> is a map <span class="math inline">\(M\to\mathrm{EM}(G,n)\)</span>.</em></p>
 </div>
 <p>Scoccola constructs a map by composing</p>
 <ul>
-<li><p>suspension <span class="math inline">\(\Sigma:\mathrm{EM}(G,n)\to\mathrm{EM}_{\bullet\bullet}(G,n)\)</span> (see <span class="citation" data-cites="hottbook"> (<a href="#ref-hottbook" role="doc-biblioref">Univalent Foundations Program, 2013</a>)</span> §6.5), which maps into types with two points (denoted by the bullets),</p></li>
-<li><p><span class="math inline">\((n+1)\)</span>-truncation (see <span class="citation" data-cites="hottbook"> (<a href="#ref-hottbook" role="doc-biblioref">Univalent Foundations Program, 2013</a>)</span> §7.3),</p></li>
+<li><p>suspension <span class="math inline">\(\Sigma:\mathrm{EM}(G,n)\to\mathrm{EM}_{\bullet\bullet}(G,n)\)</span> (see <span class="citation" data-cites="hottbook">[<a href="#ref-hottbook" role="doc-biblioref">6</a>]</span> §6.5), which maps into types with two points (denoted by the bullets),</p></li>
+<li><p><span class="math inline">\((n+1)\)</span>-truncation (see <span class="citation" data-cites="hottbook">[<a href="#ref-hottbook" role="doc-biblioref">6</a>]</span> §7.3),</p></li>
 <li><p>forgetting a point <span class="math inline">\(F_\bullet:\mathrm{EM}_{\bullet\bullet}(G,n)\to \mathrm{EM}_{\bullet}(G,n)\)</span>,</p></li>
 </ul>
 <p>to form the composition <span class="math display">\[\mathrm{EM}(G,n)\xrightarrow[]{||\Sigma||_{n+1}} \mathrm{EM}_{\bullet\bullet}(G,n+1)\xrightarrow[]{F_\bullet}\mathrm{EM_{\bullet}}(G,n+1)\]</span> to types with two points (north and south), then to pointed types (by forgetting the south point).</p>
@@ -173,25 +175,25 @@
 <p><strong>Definition 6</strong>. <em>Given <span class="math inline">\(f:M\to\mathrm{EM}(G,n)\)</span>, the <strong>associated action of <span class="math inline">\(M\)</span> on <span class="math inline">\(G\)</span></strong>, denoted by <span class="math inline">\(f_\bullet\)</span> is defined to be <span class="math inline">\(f_\bullet=F_\bullet\circ||\Sigma||_{n+1}\circ f\)</span>.</em></p>
 </div>
 <div id="thm:sco" class="mythm">
-<p><strong>Theorem 7</strong>. <em>(Scoccola<span class="citation" data-cites="sco"> (<a href="#ref-sco" role="doc-biblioref">Scoccola, 2020</a>)</span> Proposition 2.39). A <span class="math inline">\(\mathrm{K}(G,n)\)</span> bundle <span class="math inline">\(f:M\to\mathrm{EM}(G,n)\)</span> factors through a map <span class="math inline">\(M\to\mathrm{K}(G,n+1)\)</span>, and so is a principal fibration, if and only if the associated action <span class="math inline">\(f_\bullet\)</span> is merely homotopic to a constant map.</em></p>
+<p><strong>Theorem 7</strong>. <em>(Scoccola<span class="citation" data-cites="sco">[<a href="#ref-sco" role="doc-biblioref">5</a>]</span> Proposition 2.39). A <span class="math inline">\(\mathrm{K}(G,n)\)</span> bundle <span class="math inline">\(f:M\to\mathrm{EM}(G,n)\)</span> factors through a map <span class="math inline">\(M\to\mathrm{K}(G,n+1)\)</span>, and so is a principal fibration, if and only if the associated action <span class="math inline">\(f_\bullet\)</span> is merely homotopic to a constant map.</em></p>
 </div>
 <p>The above theory of classifying spaces should be relevant to any future project to bring the study of gauge theory into homotopy type theory. In this note we will be focused on the special case <span class="math inline">\(G=\ensuremath{\mathbb{Z}}\)</span> and <span class="math inline">\(\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)</span> and <span class="math inline">\(\mathrm{K}(\ensuremath{\mathbb{Z}},2)\)</span>.</p>
 <div class="mynote">
-<p><strong>Remark 8</strong>. <em>Iterating the loop map gives the isomorphism <span class="math inline">\(\Omega^{(n+1)}:\mathrm{EM_{\bullet}}(G,n+1)\simeq \mathrm{K}(\mathop{\mathrm{Aut}}G,1)\)</span> (see <span class="citation" data-cites="sco"> (<a href="#ref-sco" role="doc-biblioref">Scoccola, 2020</a>)</span> Lemma 2.7). Theorem <a href="#thm:sco" data-reference-type="ref" data-reference="thm:sco">7</a> therefore says that the map <span class="math inline">\(f\)</span> factors through <span class="math inline">\(\mathrm{K}(G,n+1)\)</span> if and only if the map into <span class="math inline">\(\mathrm{K}(\mathop{\mathrm{Aut}}G,1)\)</span> is homotopic to a constant. In the case of <span class="math inline">\(G=\ensuremath{\mathbb{Z}}\)</span>, the map <span class="math inline">\(f_\bullet:M\to \mathrm{K}(\mathop{\mathrm{Aut}}\ensuremath{\mathbb{Z}}, 1)\)</span> deserves to be called the first Stiefel-Whitney class of <span class="math inline">\(f\)</span> and one can interpret its triviality as <em>orientability</em>. . This point of view is discussed in Schreiber<span class="citation" data-cites="dcct"> (<a href="#ref-dcct" role="doc-biblioref">Schreiber, 2013</a>)</span> (starting with Example 1.2.138) and in Myers<span class="citation" data-cites="myersgood"> (<a href="#ref-myersgood" role="doc-biblioref">Myers, 2022</a>)</span>.</em></p>
+<p><strong>Remark 8</strong>. <em>Iterating the loop map gives the isomorphism <span class="math inline">\(\Omega^{(n+1)}:\mathrm{EM_{\bullet}}(G,n+1)\simeq \mathrm{K}(\mathop{\mathrm{Aut}}G,1)\)</span> (see <span class="citation" data-cites="sco">[<a href="#ref-sco" role="doc-biblioref">5</a>]</span> Lemma 2.7). Theorem <a href="#thm:sco" data-reference-type="ref" data-reference="thm:sco">7</a> therefore says that the map <span class="math inline">\(f\)</span> factors through <span class="math inline">\(\mathrm{K}(G,n+1)\)</span> if and only if the map into <span class="math inline">\(\mathrm{K}(\mathop{\mathrm{Aut}}G,1)\)</span> is homotopic to a constant. In the case of <span class="math inline">\(G=\ensuremath{\mathbb{Z}}\)</span>, the map <span class="math inline">\(f_\bullet:M\to \mathrm{K}(\mathop{\mathrm{Aut}}\ensuremath{\mathbb{Z}}, 1)\)</span> deserves to be called the first Stiefel-Whitney class of <span class="math inline">\(f\)</span> and one can interpret its triviality as <em>orientability</em>. . This point of view is discussed in Schreiber<span class="citation" data-cites="dcct">[<a href="#ref-dcct" role="doc-biblioref">7</a>]</span> (starting with Example 1.2.138) and in Myers<span class="citation" data-cites="myersgood">[<a href="#ref-myersgood" role="doc-biblioref">8</a>]</span>.</em></p>
 </div>
 <h2 data-number="2.3" id="sec:pathovers"><span class="header-section-number">2.3</span> Pathovers</h2>
-<p>Here we will recall basic facts from homotopy type theory. See for example <span class="citation" data-cites="hottbook"> (<a href="#ref-hottbook" role="doc-biblioref">Univalent Foundations Program, 2013</a>)</span> or <span class="citation" data-cites="egbert"> (<a href="#ref-egbert" role="doc-biblioref">Rijke, 2025</a>)</span>. Suppose we have <span class="math inline">\(T:M\to\mathcal{U}\)</span> and <span class="math inline">\(P\stackrel{\mathrm{def}}{=}\sum_{x:M}Tx\)</span>. Recall that if <span class="math inline">\(p:a=_M b\)</span> then <span class="math inline">\(T\)</span> acts on <span class="math inline">\(p\)</span> with what’s called the <em>action on paths</em>, denoted <span class="math inline">\(\ensuremath{\mathsf{ap}}(T)(p):Ta=Tb\)</span> (<span class="citation" data-cites="hottbook"> (<a href="#ref-hottbook" role="doc-biblioref">Univalent Foundations Program, 2013</a>)</span> §2.2). This is a path in the codomain <span class="math inline">\(\mathcal{U}\)</span> of <span class="math inline">\(T\)</span>. Type theory also provides a function called <em>transport</em>, denoted <span class="math inline">\(\mathsf{tr}(p):Ta\to Tb\)</span> (<span class="citation" data-cites="hottbook"> (<a href="#ref-hottbook" role="doc-biblioref">Univalent Foundations Program, 2013</a>)</span> §2.3) which acts on the fibers of <span class="math inline">\(P\)</span>. <span class="math inline">\(\mathsf{tr}(p)\)</span> is a function, acting on the terms of the types <span class="math inline">\(Ta\)</span> and <span class="math inline">\(Tb\)</span>, and univalence tells us this is the isomorphism corresponding to <span class="math inline">\(\ensuremath{\mathsf{ap}}(T)(p)\)</span>.</p>
-<p>Type theory also tells us that paths in <span class="math inline">\(P\)</span> are given by pairs of paths: a path <span class="math inline">\(p:a=_M b\)</span> in the base, and a pathover <span class="math inline">\(\pi:\mathsf{tr}(p)(\alpha)=_{Tb}\beta\)</span> between <span class="math inline">\(\alpha:Ta\)</span> and <span class="math inline">\(\beta:Tb\)</span> in the fibers (<span class="citation" data-cites="hottbook"> (<a href="#ref-hottbook" role="doc-biblioref">Univalent Foundations Program, 2013</a>)</span> §2.7). We can’t directly compare <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> since they are of different types, so we apply transport to one of them. We say <span class="math inline">\(\pi\)</span> lies over <span class="math inline">\(p\)</span>. See Figure <a href="#fig:pathovers" data-reference-type="ref" data-reference="fig:pathovers">1</a>.</p>
+<p>Here we will recall basic facts from homotopy type theory. See for example <span class="citation" data-cites="hottbook">[<a href="#ref-hottbook" role="doc-biblioref">6</a>]</span> or <span class="citation" data-cites="egbert">[<a href="#ref-egbert" role="doc-biblioref">9</a>]</span>. Suppose we have <span class="math inline">\(T:M\to\mathcal{U}\)</span> and <span class="math inline">\(P\stackrel{\mathrm{def}}{=}\sum_{x:M}Tx\)</span>. Recall that if <span class="math inline">\(p:a=_M b\)</span> then <span class="math inline">\(T\)</span> acts on <span class="math inline">\(p\)</span> with what’s called the <em>action on paths</em>, denoted <span class="math inline">\(\ensuremath{\mathsf{ap}}(T)(p):Ta=Tb\)</span> (<span class="citation" data-cites="hottbook">[<a href="#ref-hottbook" role="doc-biblioref">6</a>]</span> §2.2). This is a path in the codomain <span class="math inline">\(\mathcal{U}\)</span> of <span class="math inline">\(T\)</span>. Type theory also provides a function called <em>transport</em>, denoted <span class="math inline">\(\mathsf{tr}(p):Ta\to Tb\)</span> (<span class="citation" data-cites="hottbook">[<a href="#ref-hottbook" role="doc-biblioref">6</a>]</span> §2.3) which acts on the fibers of <span class="math inline">\(P\)</span>. <span class="math inline">\(\mathsf{tr}(p)\)</span> is a function, acting on the terms of the types <span class="math inline">\(Ta\)</span> and <span class="math inline">\(Tb\)</span>, and univalence tells us this is the isomorphism corresponding to <span class="math inline">\(\ensuremath{\mathsf{ap}}(T)(p)\)</span>.</p>
+<p>Type theory also tells us that paths in <span class="math inline">\(P\)</span> are given by pairs of paths: a path <span class="math inline">\(p:a=_M b\)</span> in the base, and a pathover <span class="math inline">\(\pi:\mathsf{tr}(p)(\alpha)=_{Tb}\beta\)</span> between <span class="math inline">\(\alpha:Ta\)</span> and <span class="math inline">\(\beta:Tb\)</span> in the fibers (<span class="citation" data-cites="hottbook">[<a href="#ref-hottbook" role="doc-biblioref">6</a>]</span> §2.7). We can’t directly compare <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> since they are of different types, so we apply transport to one of them. We say <span class="math inline">\(\pi\)</span> lies over <span class="math inline">\(p\)</span>. See Figure <a href="#fig:pathovers" data-reference-type="ref" data-reference="fig:pathovers">1</a>.</p>
 <figure id="fig:pathovers">
 <embed src="figs/pathovers.pdf" style="width:2.77778in" />
 <figcaption>A path <span class="math inline">\(\pi\)</span> over the path <span class="math inline">\(p\)</span> in the base involves the transport function.</figcaption>
 </figure>
-<p>Given functions <span class="math inline">\(\phi,\psi:A\to B\)</span> between two arbitrary types we can form a type family of paths <span class="math inline">\(\alpha:A\to\mathcal{U}\)</span> by <span class="math inline">\(\alpha(a)\stackrel{\mathrm{def}}{=}(\phi(a)=_B\psi(a))\)</span>. Transport in this family is given by concatenation as follows (see Figure <a href="#fig:transport_family_of_paths" data-reference-type="ref" data-reference="fig:transport_family_of_paths">2</a>), where <span class="math inline">\(p:a=_A a&#39;\)</span> and <span class="math inline">\(q:\phi(a)=\psi(a)\)</span> (<span class="citation" data-cites="hottbook"> (<a href="#ref-hottbook" role="doc-biblioref">Univalent Foundations Program, 2013</a>)</span> Theorem 2.11.3): <span class="math display">\[\mathsf{tr}(p)(q) = \phi(p)^{-1}\cdot q\cdot \psi(p)\]</span> which gives a path in <span class="math inline">\(\phi(a&#39;)=\psi(a&#39;)\)</span> by connecting dots between the terms <span class="math inline">\(\phi(a&#39;), \phi(a), \psi(a), \psi(a&#39;)\)</span>. This relates a would-be homotopy <span class="math inline">\(\phi\sim\psi\)</span> specified at a single point, to a point at the end of a path. We will use this to help construct such homotopies.</p>
+<p>Given functions <span class="math inline">\(\phi,\psi:A\to B\)</span> between two arbitrary types we can form a type family of paths <span class="math inline">\(\alpha:A\to\mathcal{U}\)</span> by <span class="math inline">\(\alpha(a)\stackrel{\mathrm{def}}{=}(\phi(a)=_B\psi(a))\)</span>. Transport in this family is given by concatenation as follows (see Figure <a href="#fig:transport_family_of_paths" data-reference-type="ref" data-reference="fig:transport_family_of_paths">2</a>), where <span class="math inline">\(p:a=_A a&#39;\)</span> and <span class="math inline">\(q:\phi(a)=\psi(a)\)</span> (<span class="citation" data-cites="hottbook">[<a href="#ref-hottbook" role="doc-biblioref">6</a>]</span> Theorem 2.11.3): <span class="math display">\[\mathsf{tr}(p)(q) = \phi(p)^{-1}\cdot q\cdot \psi(p)\]</span> which gives a path in <span class="math inline">\(\phi(a&#39;)=\psi(a&#39;)\)</span> by connecting dots between the terms <span class="math inline">\(\phi(a&#39;), \phi(a), \psi(a), \psi(a&#39;)\)</span>. This relates a would-be homotopy <span class="math inline">\(\phi\sim\psi\)</span> specified at a single point, to a point at the end of a path. We will use this to help construct such homotopies.</p>
 <figure id="fig:transport_family_of_paths">
 <img src="./17fd332eed0d72f858e81f4722d8b1e5b33a5029.svg" />
 <figcaption>Transport along <span class="math inline">\(p\)</span> in the fibers of a family of paths. The fiber over <span class="math inline">\(a\)</span> is <span class="math inline">\(\phi(a)=\psi(a)\)</span> where <span class="math inline">\(\phi,\psi:A\to B\)</span>.</figcaption>
 </figure>
-<p>Finally, recall that in the presence of a section <span class="math inline">\(X:M\to P\)</span> there is a dependent generalization of <span class="math inline">\(\ensuremath{\mathsf{ap}}\)</span> called <span class="math inline">\(\mathsf{apd}\)</span>: <span class="math inline">\(\mathsf{apd}(X)(p):\mathsf{tr}(p)(X(a))=X(b)\)</span> which is a pathover between the two values of the section over the basepoints of the path <span class="math inline">\(p\)</span> (<span class="citation" data-cites="hottbook"> (<a href="#ref-hottbook" role="doc-biblioref">Univalent Foundations Program, 2013</a>)</span> Lemma 2.3.4).</p>
+<p>Finally, recall that in the presence of a section <span class="math inline">\(X:M\to P\)</span> there is a dependent generalization of <span class="math inline">\(\ensuremath{\mathsf{ap}}\)</span> called <span class="math inline">\(\mathsf{apd}\)</span>: <span class="math inline">\(\mathsf{apd}(X)(p):\mathsf{tr}(p)(X(a))=X(b)\)</span> which is a pathover between the two values of the section over the basepoints of the path <span class="math inline">\(p\)</span> (<span class="citation" data-cites="hottbook">[<a href="#ref-hottbook" role="doc-biblioref">6</a>]</span> Lemma 2.3.4).</p>
 <h1 data-number="3" id="sec:discrete_man"><span class="header-section-number">3</span> Discrete manifolds</h1>
 <p>We will remind ourselves of the definition of a classical simplicial complex, in sets. Then we will create a type that realizes the data of a complex, using pushouts.</p>
 <h2 data-number="3.1" id="abstract-simplicial-complexes"><span class="header-section-number">3.1</span> Abstract simplicial complexes</h2>
@@ -214,7 +216,7 @@
 <figcaption>The link of <span class="math inline">\(v\)</span> in this complex consists of the vertices <span class="math inline">\(\{a,b,c,d,e,f\}\)</span> and the edges <span class="math inline">\(\{ab,bc,cd,de,ef,fa\}\)</span>, forming a hexagon.</figcaption>
 </figure>
 <div class="mynote">
-<p><strong>Remark 12</strong>. <em>The <em>geometric realization</em> of a complex uses the combinatorial data to form pushouts of standard simplices inside the category of topological spaces. A <em>simplicial sphere</em> is a simplicial complex whose geometric realization is homeomorphic to a sphere. A classical 1940 result of Whitehead, building on Cairn, states that every smooth <span class="math inline">\(n\)</span>-manifold is the geometric realization of a simplicial complex of dimension <span class="math inline">\(n\)</span> such that the link is the geometric realization of an <span class="math inline">\((n-1)\)</span>-sphere<span class="citation" data-cites="whitehead_triangulation"> (<a href="#ref-whitehead_triangulation" role="doc-biblioref">Whitehead, 1940</a>)</span>. For more of this theory see the classic book by Kirby and Siebenmann<span class="citation" data-cites="kirby_siebenmann"> (<a href="#ref-kirby_siebenmann" role="doc-biblioref">Kirby &amp; Siebenmann, 1977</a>)</span>.</em></p>
+<p><strong>Remark 12</strong>. <em>The <em>geometric realization</em> of a complex uses the combinatorial data to form pushouts of standard simplices inside the category of topological spaces. A <em>simplicial sphere</em> is a simplicial complex whose geometric realization is homeomorphic to a sphere. A classical 1940 result of Whitehead, building on Cairn, states that every smooth <span class="math inline">\(n\)</span>-manifold is the geometric realization of a simplicial complex of dimension <span class="math inline">\(n\)</span> such that the link is the geometric realization of an <span class="math inline">\((n-1)\)</span>-sphere<span class="citation" data-cites="whitehead_triangulation">[<a href="#ref-whitehead_triangulation" role="doc-biblioref">10</a>]</span>. For more of this theory see the classic book by Kirby and Siebenmann<span class="citation" data-cites="kirby_siebenmann">[<a href="#ref-kirby_siebenmann" role="doc-biblioref">11</a>]</span>.</em></p>
 </div>
 <h2 data-number="3.2" id="higher-inductive-realizations"><span class="header-section-number">3.2</span> Higher inductive realizations</h2>
 <p>We will realize a simplicial complex as a higher inductive type by forming a sequence of pushouts. We will work upward by dimension so as to define a standard sphere that we need in the next dimension.</p>
@@ -280,7 +282,7 @@ v_1, v_2&amp;:\mathbb{C}(2) \\
 <p><strong>Lemma 23</strong>. <em><span class="math inline">\(\mathbb{C}(2)\simeq \mathbb{C}(1)\)</span> and in fact <span class="math inline">\(\mathbb{C}(n)\simeq \mathbb{C}(n-1)\)</span>.</em></p>
 </div>
 <div class="myproof">
-<p>(Compare to <span class="citation" data-cites="hottbook"> (<a href="#ref-hottbook" role="doc-biblioref">Univalent Foundations Program, 2013</a>)</span> Lemma 6.5.1.)</p>
+<p>(Compare to <span class="citation" data-cites="hottbook">[<a href="#ref-hottbook" role="doc-biblioref">6</a>]</span> Lemma 6.5.1.)</p>
 <p>First we will define <span class="math inline">\(f:\mathbb{C}(2)\to \mathbb{C}(1)\)</span> and <span class="math inline">\(g:\mathbb{C}(1)\to \mathbb{C}(2)\)</span>, then prove they are inverses. <span class="math display">\[\begin{aligned}
 f(v_1)=f(v_2)&amp;=\ensuremath{\mathsf{base}}&amp;\quad g(\ensuremath{\mathsf{base}})&amp;=v_1\\
 f(\ell_{12})&amp;=\ensuremath{\mathsf{loop}}&amp;\quad g(\ensuremath{\mathsf{loop}})&amp;=\ell_{12}\cdot r_{21}\\
@@ -348,15 +350,20 @@ g(f(e_{n,1}))&amp;= \ensuremath{\mathsf{refl}}_{v_1}.
 <p>If <span class="math inline">\(x\)</span> is a vertex, take <span class="math inline">\(H_R(x)\)</span> to be the obvious unique edge back to the starting vertex. This extends in the obvious functorial way to edges.</p>
 </div>
 <p>We wrote the homotopy <span class="math inline">\(H_R(x)\)</span> as starting at <span class="math inline">\(x\)</span> because it feels like a record of a time-based process of applying <span class="math inline">\(R\)</span>. We will rely on this convention when we define flatness.</p>
-<h2 data-number="3.4" id="the-octahedron-model-of-the-sphere"><span class="header-section-number">3.4</span> The octahedron model of the sphere</h2>
+<h2 data-number="3.4" id="surfaces"><span class="header-section-number">3.4</span> Surfaces</h2>
+<p>We will eventually focus on 2-dimensional simplicial complexes in this note, and our running example which begins in the next section is 2-dimensional. We have a simple way to define an orientation in this dimension, which we provide here. We will touch on the relationship between this classical definition and the definition of our HoTT classifying space when we discuss vector fields in Section <a href="#sec:vector_field_def" data-reference-type="ref" data-reference="sec:vector_field_def">5.1</a>.</p>
+<div class="mydef">
+<p><strong>Definition 27</strong>. <em>An <strong>orientation</strong> <span class="math inline">\(\mathscr{O}\)</span> of a 2-dimensional simplicial complex <span class="math inline">\(M=[M_0, M_1, M_2]\)</span> is an equivalence class of ordering maps <span class="math inline">\(O:M_2\to \mathsf{List}\)</span> to the type of ordered lists, where <span class="math inline">\(O\)</span> orders the vertices of every 2-face. If <span class="math inline">\(F:M_2\)</span> is a face and <span class="math inline">\(F=\{a, b, c\}\)</span> are its vertices, then <span class="math inline">\(O(F)\)</span> is a list of all the vertices, e.g. <span class="math inline">\([b, c, a]\)</span>. Two orderings <span class="math inline">\(O, O&#39;\)</span> are said to have the <strong>same orientation</strong> if it is true for every face <span class="math inline">\(F\)</span> that <span class="math inline">\(O(F)\)</span> and <span class="math inline">\(O&#39;(F)\)</span> differ by a cyclic permutation. The inclusion <span class="math inline">\(e\subset F\)</span> of an edge in a face induces an ordering of the vertices of the edge, called <strong>the induced order of <span class="math inline">\(e\subset F\)</span></strong>.</em></p>
+</div>
+<h2 data-number="3.5" id="the-octahedron-model-of-the-sphere"><span class="header-section-number">3.5</span> The octahedron model of the sphere</h2>
 <p>We will create our first combinatorial surface, an octahedron. We will not prove that this type is equivalent to the sphere. In <span class="math inline">\(\mathsf{SimCom_n}\)</span> the combinatorial data of the faces can be represented with a <em>Hasse diagram</em>, which shows the poset of inclusions in a graded manner, with a special top and bottom element. We give an octahedron in Figure <a href="#fig:hasse_octohedron" data-reference-type="ref" data-reference="fig:hasse_octohedron">5</a>. The names of the vertices are short for white, yellow, blue, red, green, and orange, the colors of the faces of a Rubik’s cube. The octahedron is the dual of the cube, with each vertex corresponding to a face.</p>
 <figure id="fig:hasse_octohedron">
 <img src="./41cfa9cf6e056c83cc79c2711f6ee0981317076b.svg" />
 <figcaption>Hasse diagram of an octahedron <span class="math inline">\(O\)</span>. The row of singletons is <span class="math inline">\(O_0\)</span> and above it are <span class="math inline">\(O_1\)</span> and <span class="math inline">\(O_2\)</span>.</figcaption>
 </figure>
 <p>We can realize <span class="math inline">\(O_0\to O_1\to O\)</span> as a cellular type denoted <span class="math inline">\(\ensuremath{\mathbb{O}}_0\to \ensuremath{\mathbb{O}}_1\to \ensuremath{\mathbb{O}}\)</span>.</p>
-<div class="mylemma">
-<p><strong>Lemma 27</strong>. <em>There is an equivalence <span class="math inline">\(\ensuremath{\mathbb{O}}\simeq S^2\)</span>.</em></p>
+<div id="lem:octahedron_sphere" class="mylemma">
+<p><strong>Lemma 28</strong>. <em>There is an equivalence <span class="math inline">\(\ensuremath{\mathbb{O}}\simeq S^2\)</span>.</em></p>
 </div>
 <div class="myproof">
 <p>Omitted.</p>
@@ -370,7 +377,7 @@ g(f(e_{n,1}))&amp;= \ensuremath{\mathsf{refl}}_{v_1}.
 <h2 data-number="4.1" id="definitions"><span class="header-section-number">4.1</span> Definitions</h2>
 <p>Having the cellular structure allows us to define bundles and connections.</p>
 <div id="def:connection" class="mydef">
-<p><strong>Definition 28</strong>. <em>If <span class="math inline">\(\ensuremath{\mathbb{M}}\stackrel{\mathrm{def}}{=}\ensuremath{\mathbb{M}}_0\xrightarrow[]{\imath_0}\cdots\xrightarrow[]{\imath_{n-1}}\ensuremath{\mathbb{M}}_n\)</span> is a cellular type and <span class="math inline">\(f_k:\ensuremath{\mathbb{M}}_k\to\mathcal{U}\)</span> are type families on each skeleton such that all the triangles commute in the diagram:</em></p>
+<p><strong>Definition 29</strong>. <em>If <span class="math inline">\(\ensuremath{\mathbb{M}}\stackrel{\mathrm{def}}{=}\ensuremath{\mathbb{M}}_0\xrightarrow[]{\imath_0}\cdots\xrightarrow[]{\imath_{n-1}}\ensuremath{\mathbb{M}}_n\)</span> is a cellular type and <span class="math inline">\(f_k:\ensuremath{\mathbb{M}}_k\to\mathcal{U}\)</span> are type families on each skeleton such that all the triangles commute in the diagram:</em></p>
 </div>
 <p><img src="./8c08d9a05614ecaf9c700522b041d788835f9826.svg" alt="image" /></p>
 <p>then we say</p>
@@ -380,7 +387,7 @@ g(f(e_{n,1}))&amp;= \ensuremath{\mathsf{refl}}_{v_1}.
 </ul>
 <p>Having the additional structure of a simplicial complex allows us to define curvature, which is a local concept.</p>
 <div class="mydef">
-<p><strong>Definition 29</strong>. <em>If <span class="math inline">\(\ensuremath{\mathbb{M}}\)</span> is the realization of a simplicial complex, such that for each pushout defining <span class="math inline">\(\ensuremath{\mathbb{M}}_k\)</span> we have the diagram</em></p>
+<p><strong>Definition 30</strong>. <em>If <span class="math inline">\(\ensuremath{\mathbb{M}}\)</span> is the realization of a simplicial complex, such that for each pushout defining <span class="math inline">\(\ensuremath{\mathbb{M}}_k\)</span> we have the diagram</em></p>
 </div>
 <p><img src="./66243204ce483cec2a440c2cac60b81bca276e63.svg" alt="image" /></p>
 <p>the outer square of which restricts on each face to the diagram</p>
@@ -389,20 +396,20 @@ g(f(e_{n,1}))&amp;= \ensuremath{\mathsf{refl}}_{v_1}.
 <p>Although all the pushout diagrams are introducing hub points for each edge and face, in practice we will ignore those. But in the case of flatness, which we will use extensively, we should clarify what its type is when we are ignoring hubs. If we have a face <span class="math inline">\(F\)</span> with vertices <span class="math inline">\(v_1, v_2, v_3\)</span> and paths <span class="math inline">\(e_{ij}:v_i=v_j\)</span> that are realizations of edges, and the loop <span class="math inline">\(\ell_F\stackrel{\mathrm{def}}{=}e_{12}\cdot e_{23}\cdot e_{31}\)</span> then we will write <span class="math inline">\(\flat(\ell_F):\ensuremath{\text{id}}_{f_0(v_1)}=f_1(\ell_F)\)</span> for a 2-path filling this loop.</p>
 <p>The definitions can be digested to give</p>
 <div id="lem:extend_faces" class="mylemma">
-<p><strong>Lemma 30</strong>. <em>Given <span class="math inline">\(f_{k-1}\)</span> as above, a <span class="math inline">\(k\)</span>-connection exists if and only if there exists a flatness structure for each <span class="math inline">\(k\)</span>-face.</em></p>
+<p><strong>Lemma 31</strong>. <em>Given <span class="math inline">\(f_{k-1}\)</span> as above, a <span class="math inline">\(k\)</span>-connection exists if and only if there exists a flatness structure for each <span class="math inline">\(k\)</span>-face.</em></p>
 </div>
 <p>On a 2-dimensional cellular type <span class="math inline">\(\ensuremath{\mathbb{M}}\stackrel{\mathrm{def}}{=}\ensuremath{\mathbb{M}}_0\to\ensuremath{\mathbb{M}}_1\to\ensuremath{\mathbb{M}}_2\)</span> the terminology works out as follows: a 0-bundle on <span class="math inline">\(\ensuremath{\mathbb{M}}\)</span> is a map <span class="math inline">\(T_0:\ensuremath{\mathbb{M}}_0\to\mathcal{U}\)</span>. A 1-connection on <span class="math inline">\(T_0\)</span> is an extension <span class="math inline">\(T_1:\ensuremath{\mathbb{M}}_1\to\mathcal{U}\)</span>. A 2-connection on <span class="math inline">\(T_1\)</span> is an extension <span class="math inline">\(T_2:\ensuremath{\mathbb{M}}_2\to\mathcal{U}\)</span>. Classically, a 1-extension that extends to a 2-connection is called <em>flat</em>.</p>
 <h2 data-number="4.2" id="sec:localtriv"><span class="header-section-number">4.2</span> Flat connections as local trivializations</h2>
-<p>This section can ve viewed as an extended remark. The observation we want to make is that the data of a 2-bundle on a realization of a 2-dimensional simplicial complex is related to the construction of local trivializations: the fiber at one vertex can be extended throughout a single face coherently, using the connection (the extension of the classifying map to the edges) to specify isomorphisms with the fibers at the other points, and the higher connections to establish commutativity between these.</p>
-<p>We introduce a notation more suitable for the algebra of charts and overlaps: denote the fiber at <span class="math inline">\(v_i\)</span> by <span class="math inline">\(T_i\)</span> and denote transport along <span class="math inline">\(e_{ij}:v_i=v_j\)</span> by <span class="math inline">\(T_{ji}:T_i\to T_j\)</span>. The indices are ordered from right to left, which is compatible with function composition notation. Denote the inverse function by swapping indices: <span class="math inline">\(T_{ij}\stackrel{\mathrm{def}}{=}T_{ji}^{-1}\)</span>. Assume we have some fixed isomporphism <span class="math inline">\(T_i=S^1\)</span>, and to avoid composing everything with this function we will assume it is <span class="math inline">\(\ensuremath{\text{id}}\)</span>. In the diagram below we see the data arranged so that our bundles fibers are on the left, and the fiber of a trivial bundle is on the right.</p>
+<p>This section can be viewed as an extended remark. The observation we want to make is that the data of a 2-bundle on a realization of a 2-dimensional simplicial complex is related to the construction of local trivializations: the fiber at one vertex can be extended throughout a single face coherently, using the connection (the extension of the classifying map to the edges) to specify isomorphisms with the fibers at the other points, and the higher connections to establish commutativity between these.</p>
+<p>We introduce a notation more suitable for the algebra of charts and overlaps: denote the fiber at <span class="math inline">\(v_i\)</span> by <span class="math inline">\(T_i\)</span> and denote transport along <span class="math inline">\(e_{ij}:v_i=v_j\)</span> by <span class="math inline">\(T_{ji}:T_i\to T_j\)</span>. The indices are ordered from right to left, which is compatible with function composition notation. Denote the inverse function by swapping indices: <span class="math inline">\(T_{ij}\stackrel{\mathrm{def}}{=}T_{ji}^{-1}\)</span>. Assume we have some fixed isomorphism <span class="math inline">\(T_i=S^1\)</span>, and to avoid composing everything with this function we will assume it is <span class="math inline">\(\ensuremath{\text{id}}\)</span>. In the diagram below we see the data arranged so that our bundles fibers are on the left, and the fiber of a trivial bundle is on the right.</p>
 <p><img src="./70376f3361d450aa965b9346f361bb45457fe2af.svg" alt="image" /></p>
 <p>The two middle squares commute definitionally. Call these two squares together the back face. The left triangle is filled by the flatness structure on the face, and the right triangular filler is trivial. There is also a filler needed for the front, i.e. the outer square. This requires proving that <span class="math inline">\(T_{ki}T_{ij}T_{jk}=\ensuremath{\text{id}}\)</span>, which is supplied by the flatness structure. There is also a 3-cell filling the interior of this prism, mapping the back face plus the left triangle filler to the front face plus the right triangle filler. These two faces both consist of one or two identities concatenated with the flatness structure, and so the 3-cell is definitional.</p>
-<p>This relationship between flatness structure and local triviality of a chart can be compared to the classical result that on a paracompact, simply connected manifold (such as a single chart), a connection on a principal bundle is flat if and only if the bundle is trivial. See for example <span class="citation" data-cites="kobayashinomizu"> (<a href="#ref-kobayashinomizu" role="doc-biblioref">Kobayashi &amp; Nomizu, 1963</a>)</span> Corollary 9.2.</p>
+<p>This relationship between flatness structure and local triviality of a chart can be compared to the classical result that on a paracompact, simply connected manifold (such as a single chart), a connection on a principal bundle is flat if and only if the bundle is trivial. See for example <span class="citation" data-cites="kobayashinomizu">[<a href="#ref-kobayashinomizu" role="doc-biblioref">12</a>]</span> Corollary 9.2.</p>
 <h2 data-number="4.3" id="the-tangent-bundle-of-the-sphere"><span class="header-section-number">4.3</span> The tangent bundle of the sphere</h2>
 <p>We will build up a map <span class="math inline">\(T\)</span> out of <span class="math inline">\(\ensuremath{\mathbb{O}}_0\to\ensuremath{\mathbb{O}}_1\to\ensuremath{\mathbb{O}}\)</span> which is meant to be a model of the tangent bundle of the sphere. The link function will serve as our approximation to the tangent space. Taking the link of a vertex gives us a map from vertices to polygons, so the codomain is <span class="math inline">\(\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)</span>.</p>
 <p>If <span class="math inline">\(\{b, r, g, o\}\)</span> are four vertices in <span class="math inline">\(\ensuremath{\mathbb{O}}\)</span>, the notation <span class="math inline">\([\![{brgo}]\!]\)</span> refers to the 4-gon spanned by these four vertices and the edges of <span class="math inline">\(\ensuremath{\mathbb{O}}\)</span> that connect them to each other.</p>
 <div class="mydef">
-<p><strong>Definition 31</strong>. <em><span class="math inline">\(T_0\stackrel{\mathrm{def}}{=}\mathop{\mathrm{\mathsf{link}}}:\ensuremath{\mathbb{O}}_0\to\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)</span> is given by: <span class="math display">\[\begin{aligned}
+<p><strong>Definition 32</strong>. <em><span class="math inline">\(T_0\stackrel{\mathrm{def}}{=}\mathop{\mathrm{\mathsf{link}}}:\ensuremath{\mathbb{O}}_0\to\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)</span> is given by: <span class="math display">\[\begin{aligned}
 \mathop{\mathrm{\mathsf{link}}}(w) &amp;= [\![{brgo}]\!] &amp; \mathop{\mathrm{\mathsf{link}}}(r) &amp;= [\![{wbyg}]\!] \\
 \mathop{\mathrm{\mathsf{link}}}(y) &amp;= [\![{bogr}]\!] &amp; \mathop{\mathrm{\mathsf{link}}}(g) &amp;= [\![{wryo}]\!] \\
 \mathop{\mathrm{\mathsf{link}}}(b) &amp;= [\![{woyr}]\!] &amp; \mathop{\mathrm{\mathsf{link}}}(o) &amp;= [\![{wgyb}]\!]
@@ -416,8 +423,8 @@ g(f(e_{n,1}))&amp;= \ensuremath{\mathsf{refl}}_{v_1}.
 <figcaption><span class="math inline">\(\mathop{\mathrm{\mathsf{link}}}\)</span> for the vertices <span class="math inline">\(w, b\)</span> and <span class="math inline">\(r\)</span>.</figcaption>
 </figure>
 <p>To extend <span class="math inline">\(T_0\)</span> to a function <span class="math inline">\(T_1\)</span> on the 1-skeleton we have some freedom. We will do something motivated by the figures we have been drawing of an octahedron embedded in 3-dimensional space. We will imagine how <span class="math inline">\(T_1\)</span> changes as we slide from point to point in the embedding shown in the figures. Sliding from <span class="math inline">\(w\)</span> to <span class="math inline">\(b\)</span> and tipping the link as we go, we see <span class="math inline">\(r\mapsto r\)</span> and <span class="math inline">\(o\mapsto o\)</span> because those lie on the axis of rotation. Then <span class="math inline">\(g\mapsto w\)</span> and <span class="math inline">\(b\mapsto y\)</span>.</p>
-<div class="mydef">
-<p><strong>Definition 32</strong>. <em>Define <span class="math inline">\(T_1:\ensuremath{\mathbb{O}}_1\to\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)</span> on just the 1-skeleton by extending <span class="math inline">\(T_0\)</span> as follows: Transport away from <span class="math inline">\(w\)</span>:</em></p>
+<div id="def:transport_oo" class="mydef">
+<p><strong>Definition 33</strong>. <em>Define <span class="math inline">\(T_1:\ensuremath{\mathbb{O}}_1\to\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)</span> on just the 1-skeleton by extending <span class="math inline">\(T_0\)</span> as follows: Transport away from <span class="math inline">\(w\)</span>:</em></p>
 <ul>
 <li><p><em><span class="math inline">\(T_1(wr):[\![{brgo}]\!]\mapsto [\![{bygw}]\!]\)</span> (<span class="math inline">\(b, g\)</span> fixed)</em></p></li>
 <li><p><em><span class="math inline">\(T_1(wg):[\![{brgo}]\!]\mapsto [\![{wryo}]\!]\)</span></em></p></li>
@@ -438,11 +445,12 @@ g(f(e_{n,1}))&amp;= \ensuremath{\mathsf{refl}}_{v_1}.
 <li><p><em><span class="math inline">\(T_1(go):[\![{wryo}]\!]\mapsto [\![{wgyb}]\!]\)</span></em></p></li>
 <li><p><em><span class="math inline">\(T_1(ob):[\![{wgyb}]\!]\mapsto [\![{woyr}]\!]\)</span></em></p></li>
 </ul>
+<p><em></em></p>
 </div>
 <p>It’s very important to be able to visualize what <span class="math inline">\(T_1\)</span> does to triangular paths such as <span class="math inline">\(wb\cdot br\cdot rw\)</span> (which circulates around the boundary of face <span class="math inline">\(wbr\)</span>). You can see it if you imagine Figure <a href="#fig:triangle_of_equators" data-reference-type="ref" data-reference="fig:triangle_of_equators">6</a> as the frames of a short movie. Or you can place your palm over the top of a cube and note where your fingers are pointing, then slide your hand to an equatorial face, then along the equator, then back to the top. The answer is: you come back rotated clockwise by a quarter-turn, which we saw in Definition <a href="#def:rotation" data-reference-type="ref" data-reference="def:rotation">25</a> where it is called <span class="math inline">\([\![{R}]\!]\)</span>.</p>
 <p>Now let’s extend <span class="math inline">\(T_1\)</span> to all of <span class="math inline">\(\ensuremath{\mathbb{O}}\)</span> by providing values for the eight faces. The face <span class="math inline">\(wbr\)</span> is a path from <span class="math inline">\(\ensuremath{\mathsf{refl}}_w\)</span> to the concatenation <span class="math inline">\(wb\cdot br\cdot rw\)</span>, and so the image of <span class="math inline">\(wbr\)</span> under the extended version of <span class="math inline">\(T_1\)</span> must be a homotopy from <span class="math inline">\(\ensuremath{\mathsf{refl}}_{T_1(w)}\)</span> to <span class="math inline">\(T_1(wb\cdot br\cdot rw)\)</span>. Here <em>there is no additional freedom</em>.</p>
 <div id="def:octahedron_curvature" class="mydef">
-<p><strong>Definition 33</strong>. <em>Define <span class="math inline">\(T_2:\ensuremath{\mathbb{O}}\to\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)</span> by extending <span class="math inline">\(T_1\)</span> to the faces as follows (making use of <span class="math inline">\(H_R\)</span> from Lemma <a href="#lem:rotation" data-reference-type="ref" data-reference="lem:rotation">26</a>):</em></p>
+<p><strong>Definition 34</strong>. <em>Define <span class="math inline">\(T_2:\ensuremath{\mathbb{O}}\to\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)</span> by extending <span class="math inline">\(T_1\)</span> to the faces as follows (making use of <span class="math inline">\(H_R\)</span> from Lemma <a href="#lem:rotation" data-reference-type="ref" data-reference="lem:rotation">26</a>):</em></p>
 <div class="multicols">
 <p><em><span>2</span></em></p>
 <ul>
@@ -456,21 +464,21 @@ g(f(e_{n,1}))&amp;= \ensuremath{\mathsf{refl}}_{v_1}.
 <li><p><em><span class="math inline">\(T_2(ybo)=H_R\)</span></em></p></li>
 </ul>
 </div>
-<p><em>Defining these flatness structures suffices to define <span class="math inline">\(T_2\)</span> by Lemma <a href="#lem:extend_faces" data-reference-type="ref" data-reference="lem:extend_faces">30</a>.</em></p>
+<p><em>Defining these flatness structures suffices to define <span class="math inline">\(T_2\)</span> by Lemma <a href="#lem:extend_faces" data-reference-type="ref" data-reference="lem:extend_faces">31</a>.</em></p>
 </div>
 <h2 data-number="4.4" id="sec:existence"><span class="header-section-number">4.4</span> Existence of connections</h2>
 <p>How confident can we be that we can always define a connection on the realization of an arbitrary simplicial complex? Two things make the octahedron example special: the link is a 4-gon at every vertex (as opposed to having a variable number of vertices), and every transport map extends to a rotation of the entire octahedron in 3-dimensional space. This imposed a coherence on the interactions of all the choices we made for the connection, which we can worry may not exist for more complex combinatorial data.</p>
 <p>We know as a fact outside of HoTT that any combinatorial surface that has been realized as a triangulated surface embedded in 3-dimensional euclidean space can inherit the parallel transport entailed in the embedding. We could then approximate that data to arbitrary precision with enough subdivision of the fibers of <span class="math inline">\(T\)</span>.</p>
 <p>What would a proof inside of HoTT look like? We will leave this as an open question.</p>
 <h1 data-number="5" id="sec:vector_fields"><span class="header-section-number">5</span> Vector fields</h1>
-<h2 data-number="5.1" id="definition"><span class="header-section-number">5.1</span> Definition</h2>
+<h2 data-number="5.1" id="sec:vector_field_def"><span class="header-section-number">5.1</span> Definition</h2>
 <p>Vector fields are sections of the tangent bundle of a manifold. We do not have a general theory of tangent bundles, even for 2-dimensional cellular types, since we cannot yet prove that connections always exist on the 1-skeleton (see Section <a href="#sec:existence" data-reference-type="ref" data-reference="sec:existence">4.4</a>). But if <span class="math inline">\(\ensuremath{\mathbb{M}}\stackrel{\mathrm{def}}{=}\ensuremath{\mathbb{M}}_0\to\ensuremath{\mathbb{M}}_1\to\ensuremath{\mathbb{M}}_2\)</span> is a cellular type, and <em>given</em> an extension <span class="math inline">\(T:\ensuremath{\mathbb{M}}\to\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)</span> of the <span class="math inline">\(\mathop{\mathrm{\mathsf{link}}}\)</span> function, we can consider the type of sections <span class="math inline">\(\prod_{x:\ensuremath{\mathbb{M}}_1}T_1(x)\)</span>.</p>
-<p>In this section and for the remainder of the note, we will assume that the bundle is principal, that is that the bundle is in fact a map <span class="math inline">\(T:\ensuremath{\mathbb{M}}\to\mathrm{K}(\ensuremath{\mathbb{Z}},2)\)</span>, the type of <span class="math inline">\(S^1\)</span>-torsors.</p>
+<p>In this section and for the remainder of the note, we will assume that the bundle is principal, that is that the bundle is in fact a map <span class="math inline">\(T:\ensuremath{\mathbb{M}}\to\mathrm{K}(\ensuremath{\mathbb{Z}},2)\)</span>, the type of <span class="math inline">\(S^1\)</span>-torsors. This assumption is in principle not needed if <span class="math inline">\(M\)</span> is equipped with an orientation <span class="math inline">\(\mathscr{O}\)</span>, but we are omitting a proof that such an <span class="math inline">\(\mathscr{O}\)</span> provides a factorization of <span class="math inline">\(T\)</span>.</p>
 <div class="mydef">
-<p><strong>Definition 34</strong>. <em>Given a 2-dimensional cellular type <span class="math inline">\(\ensuremath{\mathbb{M}}\stackrel{\mathrm{def}}{=}\ensuremath{\mathbb{M}}_0\to\ensuremath{\mathbb{M}}_1\to\ensuremath{\mathbb{M}}_2\)</span> equipped with type family <span class="math inline">\(T:\ensuremath{\mathbb{M}}\to\mathrm{K}(\ensuremath{\mathbb{Z}},2)\)</span> extending <span class="math inline">\(\mathop{\mathrm{\mathsf{link}}}\)</span>, a <strong>vector field</strong> on <span class="math inline">\(\ensuremath{\mathbb{M}}\)</span> is a section on the 1-skeleton, i.e. a term <span class="math inline">\(X:\prod_{x:\ensuremath{\mathbb{M}}_1}T(x)\)</span>.</em></p>
+<p><strong>Definition 35</strong>. <em>Given a 2-dimensional cellular type <span class="math inline">\(\ensuremath{\mathbb{M}}\stackrel{\mathrm{def}}{=}\ensuremath{\mathbb{M}}_0\to\ensuremath{\mathbb{M}}_1\to\ensuremath{\mathbb{M}}_2\)</span> equipped with type family <span class="math inline">\(T:\ensuremath{\mathbb{M}}\to\mathrm{K}(\ensuremath{\mathbb{Z}},2)\)</span> extending <span class="math inline">\(\mathop{\mathrm{\mathsf{link}}}\)</span>, a <strong>vector field</strong> on <span class="math inline">\(\ensuremath{\mathbb{M}}\)</span> is a section on the 1-skeleton, i.e. a term <span class="math inline">\(X:\prod_{x:\ensuremath{\mathbb{M}}_1}T(x)\)</span>.</em></p>
 </div>
 <div class="mynote">
-<p><strong>Remark 35</strong>. <em>The circle bundle extending <span class="math inline">\(\mathop{\mathrm{\mathsf{link}}}\)</span> captures the <em>unit spheres</em> of the classical tangent bundle. A section of this bundle is therefore analogous to a classical <em>nonvanishing</em> vector field. To allow for classical vector fields <em>with zeros</em>, we are limiting the section <span class="math inline">\(X\)</span> to the 1-skeleton of <span class="math inline">\(\ensuremath{\mathbb{M}}\)</span>.</em></p>
+<p><strong>Remark 36</strong>. <em>The circle bundle extending <span class="math inline">\(\mathop{\mathrm{\mathsf{link}}}\)</span> captures the <em>unit spheres</em> of the classical tangent bundle. A section of this bundle is therefore analogous to a classical <em>nonvanishing</em> vector field. To allow for classical vector fields <em>with zeros</em>, we are limiting the section <span class="math inline">\(X\)</span> to the 1-skeleton of <span class="math inline">\(\ensuremath{\mathbb{M}}\)</span>.</em></p>
 </div>
 <p>On the 0-skeleton <span class="math inline">\(X\)</span> picks a point in each link, i.e. a neighbor of each vertex. On a path <span class="math inline">\(p:x=_\ensuremath{\mathbb{M}}y\)</span>, <span class="math inline">\(X\)</span> assigns a dependent path over <span class="math inline">\(p\)</span>, which as we know is a term <span class="math inline">\(\pi:\mathsf{tr}(p)(X(x))=_{T y} X(y)\)</span>. We are very interested in working with the concatenation operation on dependent paths, which we call <em>swirling</em>.</p>
 <h2 data-number="5.2" id="swirling-of-dependent-paths"><span class="header-section-number">5.2</span> Swirling of dependent paths</h2>
@@ -484,18 +492,18 @@ g(f(e_{n,1}))&amp;= \ensuremath{\mathsf{refl}}_{v_1}.
 <img src="./92fbe28acde5ee04c88cf3d5cc5436724eceecb2.svg" />
 <figcaption>A vector field swirling counterclockwise around a face, in a bundle of squares. Imagine that transport along <span class="math inline">\(e_{12}\)</span> does not rotate along the page, that transport along <span class="math inline">\(e_{23}\)</span> rotates counterclockwise by 90 degrees, and that transport along <span class="math inline">\(e_{31}\)</span> again does not rotate along the page. Thick black vectors are the vector field at a point. Thin vectors are transported once, dashed twice, and dotted three times. The vertices <span class="math inline">\(v_{ij}\)</span> are in the tangent fibers. If you have a colorized version of the document, the colors of the arrows correspond: the red edge produced the red edge in the fibers.</figcaption>
 </figure>
-<p>We wish to simplify expressions such as <span class="math inline">\(T_{13}T_{32}X_{12}\cdot T_{13}X_{23}\cdot X_{31}\)</span>, which take place in a particular fiber (<span class="math inline">\(T_1\)</span> in this case), and which depend on arranging for the endpoint of one segment to agree with the start of another. The simplification will empower us to easily perform calculations over the whole manifold, and to prove Theorem <a href="#thm:total_index_total_curvature" data-reference-type="ref" data-reference="thm:total_index_total_curvature">50</a>.</p>
+<p>We wish to simplify expressions such as <span class="math inline">\(T_{13}T_{32}X_{12}\cdot T_{13}X_{23}\cdot X_{31}\)</span>, which take place in a particular fiber (<span class="math inline">\(T_1\)</span> in this case), and which depend on arranging for the endpoint of one segment to agree with the start of another. The simplification will empower us to easily perform calculations over the whole manifold, and to prove Theorem <a href="#thm:total_index_total_curvature" data-reference-type="ref" data-reference="thm:total_index_total_curvature">52</a>.</p>
 <p>First we will choose a specific group that acts on all the fibers of <span class="math inline">\(T\)</span>. Recall from Section <a href="#subsec:torsors" data-reference-type="ref" data-reference="subsec:torsors">2.1</a> that given some basepoint <span class="math inline">\(b:\mathrm{K}(\ensuremath{\mathbb{Z}},2)\)</span> and a type <span class="math inline">\(T_i:\mathrm{K}(\ensuremath{\mathbb{Z}},2)\)</span>, the group <span class="math inline">\(b=_{\mathrm{K}(\ensuremath{\mathbb{Z}},2)}b\)</span> acts on <span class="math inline">\(T_i\)</span>. Suppose we have a master basepoint <span class="math inline">\(m:\ensuremath{\mathbb{M}}\)</span>, and choose <span class="math inline">\(T_m:\mathrm{K}(\ensuremath{\mathbb{Z}},2)\)</span> as the basepoint, so that all the fibers of <span class="math inline">\(T\)</span> are now equipped with an action of <span class="math inline">\(T_m=_{\mathrm{K}(\ensuremath{\mathbb{Z}},2)}T_m\)</span>.</p>
-<p>We will give this group a nickname for brevity. Recall the bundle <span class="math inline">\(\mathop{\mathrm{Aut}}T\)</span> from Section <a href="#sec:automorphisms" data-reference-type="ref" data-reference="sec:automorphisms">7.1</a>.</p>
+<p>We will give this group a nickname for brevity. Recall the bundle <span class="math inline">\(\mathop{\mathrm{Aut}}T\)</span> from Section <a href="#sec:automorphisms" data-reference-type="ref" data-reference="sec:automorphisms">54</a>.</p>
 <div class="mydef">
-<p><strong>Definition 36</strong>. <em>Define <span class="math inline">\(\mathscr{G}\stackrel{\mathrm{def}}{=}\mathop{\mathrm{Aut}}T\)</span>, so that <span class="math inline">\(\mathscr{G}(m)=(T_m=_{\mathrm{K}(\ensuremath{\mathbb{Z}},2)}T_m)\)</span>. Since this group is commutative, we’ll denote the group operation by <span class="math inline">\(+:\mathscr{G}(m)\times\mathscr{G}(m)\to\mathscr{G}(m)\)</span>.</em></p>
+<p><strong>Definition 37</strong>. <em>Define <span class="math inline">\(\mathscr{G}\stackrel{\mathrm{def}}{=}\mathop{\mathrm{Aut}}T\)</span>, so that <span class="math inline">\(\mathscr{G}(m)=(T_m=_{\mathrm{K}(\ensuremath{\mathbb{Z}},2)}T_m)\)</span>. Since this group is commutative, we’ll denote the group operation by <span class="math inline">\(+:\mathscr{G}(m)\times\mathscr{G}(m)\to\mathscr{G}(m)\)</span>.</em></p>
 </div>
 <p>We need to derive two operations from <span class="math inline">\(\mathscr{G}(m)\)</span>.</p>
 <div class="mydef">
-<p><strong>Definition 37</strong>. <em>The map <span class="math inline">\(\ensuremath{\mathrm{pr}}_1\circ (\alpha, \ensuremath{\mathrm{pr}}_2)^{-1}:T_i\times T_i\to \mathscr{G}(m)\)</span> is called <strong>subtraction</strong>. It maps <span class="math inline">\((x,y)\)</span> to the unique term <span class="math inline">\(\delta:\mathscr{G}(m)\)</span> such that <span class="math inline">\(\alpha(\delta, x)=y\)</span>. For brevity we denote <span class="math inline">\(\ensuremath{\mathrm{pr}}_1\circ (\alpha, \ensuremath{\mathrm{pr}}_2)^{-1}(x,y)\)</span> by <span class="math inline">\(y-x\)</span>.</em></p>
+<p><strong>Definition 38</strong>. <em>The map <span class="math inline">\(\ensuremath{\mathrm{pr}}_1\circ (\alpha, \ensuremath{\mathrm{pr}}_2)^{-1}:T_i\times T_i\to \mathscr{G}(m)\)</span> is called <strong>subtraction</strong>. It maps <span class="math inline">\((x,y)\)</span> to the unique term <span class="math inline">\(\delta:\mathscr{G}(m)\)</span> such that <span class="math inline">\(\alpha(\delta, x)=y\)</span>. For brevity we denote <span class="math inline">\(\ensuremath{\mathrm{pr}}_1\circ (\alpha, \ensuremath{\mathrm{pr}}_2)^{-1}(x,y)\)</span> by <span class="math inline">\(y-x\)</span>.</em></p>
 </div>
 <div id="lem:multpath" class="mylemma">
-<p><strong>Lemma 38</strong>. <em>If <span class="math inline">\(G\)</span> is a higher group with multiplication <span class="math inline">\(\mu:G\times G\to G\)</span> and proof of commutativity <span class="math inline">\(\mathsf{is\raisebox{0.5pt}{\underline{\phantom{t}}}comm}:\prod_{a,b:G}\mu(a, b)=\mu(b, a)\)</span> then <span class="math inline">\(\mu\)</span> induces a function <span class="math inline">\(\mu_=:(x=_G y)\times (x&#39;=_G y&#39;)\to (\mu(x, x&#39;)=_G\mu(y,y&#39;))\)</span>.</em></p>
+<p><strong>Lemma 39</strong>. <em>If <span class="math inline">\(G\)</span> is a higher group with multiplication <span class="math inline">\(\mu:G\times G\to G\)</span> and proof of commutativity <span class="math inline">\(\mathsf{is\raisebox{0.5pt}{\underline{\phantom{t}}}comm}:\prod_{a,b:G}\mu(a, b)=\mu(b, a)\)</span> then <span class="math inline">\(\mu\)</span> induces a function <span class="math inline">\(\mu_=:(x=_G y)\times (x&#39;=_G y&#39;)\to (\mu(x, x&#39;)=_G\mu(y,y&#39;))\)</span>.</em></p>
 </div>
 <div class="myproof">
 <p>If <span class="math inline">\(p:x=_G y\)</span> and <span class="math inline">\(p&#39;:x&#39;=_G y&#39;\)</span>, then we can define <span class="math inline">\(\mu_=(p, p&#39;)\)</span> by concatenating the three paths <span class="math display">\[\begin{aligned}
@@ -506,11 +514,11 @@ g(f(e_{n,1}))&amp;= \ensuremath{\mathsf{refl}}_{v_1}.
 </div>
 <p>Each fiber <span class="math inline">\(T_i\)</span> is pointed by <span class="math inline">\(X_i\)</span>, so we can define the map <span class="math inline">\(T_i\xrightarrow[]{-X_i}\mathscr{G}(m)\)</span>, and then give a name to the special term <span class="math inline">\(T_{ij}X_j - X_i\)</span>.</p>
 <div class="mydef">
-<p><strong>Definition 39</strong>. <em>We define the <strong>rotation</strong> of <span class="math inline">\(T_{ij}\)</span> by <span class="math inline">\(\rho_{ij}\stackrel{\mathrm{def}}{=}T_{ij}X_j - X_i\)</span>. The map <span class="math inline">\(+\rho_{ij}:\mathscr{G}(m)\to\mathscr{G}(m)\)</span> makes the following diagram commute</em></p>
+<p><strong>Definition 40</strong>. <em>We define the <strong>rotation</strong> of <span class="math inline">\(T_{ij}\)</span> by <span class="math inline">\(\rho_{ij}\stackrel{\mathrm{def}}{=}T_{ij}X_j - X_i\)</span>. The map <span class="math inline">\(+\rho_{ij}:\mathscr{G}(m)\to\mathscr{G}(m)\)</span> makes the following diagram commute</em></p>
 </div>
 <p><img src="./c7641e6d52adfad1f65144d3ce278e95df747eb0.svg" alt="image" /></p>
 <div id="lem:subtraction" class="mylemma">
-<p><strong>Lemma 40</strong>. <em><span class="math inline">\(\rho_{ij}+\rho_{ji}=_{\mathscr{G}(m)}0\)</span>. </em></p>
+<p><strong>Lemma 41</strong>. <em><span class="math inline">\(\rho_{ij}+\rho_{ji}=_{\mathscr{G}(m)}0\)</span>. </em></p>
 </div>
 <div class="myproof">
 <p><span class="math display">\[\begin{aligned}
@@ -520,19 +528,19 @@ g(f(e_{n,1}))&amp;= \ensuremath{\mathsf{refl}}_{v_1}.
 &amp;=_{T_i} X_i&amp;&amp;\text{by definition of }T
 \end{aligned}\]</span></p>
 </div>
-<p>We can obtain a path in <span class="math inline">\(\mathscr{G}(m)\)</span> from a dependent path by again subtracing the basepoint: <span class="math display">\[\begin{aligned}
+<p>We can obtain a path in <span class="math inline">\(\mathscr{G}(m)\)</span> from a dependent path by again subtracting the basepoint: <span class="math display">\[\begin{aligned}
 \sigma_{ij}\stackrel{\mathrm{def}}{=}X_{ij}-X_j&amp;:T_{ji}X_i-X_j=_{\mathscr{G}(m)}0 \\
 &amp;:\rho_{ji}=_{\mathscr{G}(m)}0.
 \end{aligned}\]</span> Notice the reversal in indices between <span class="math inline">\(\sigma_{ij}\)</span> and <span class="math inline">\(\rho_{ji}\)</span>, which reflects our opposite conventions for <span class="math inline">\(X_{ij}\)</span> which we view as a path, and <span class="math inline">\(T_{ji}\)</span> which we view as a function.</p>
-<p>The key technical lemma is the following. Recall that dependent functions such as our vector field <span class="math inline">\(X\)</span> send <span class="math inline">\(\ensuremath{\mathsf{refl}}_{v_i}\)</span> to <span class="math inline">\(\ensuremath{\mathsf{refl}}_{X_i}\)</span> (by path induction, see for example <span class="citation" data-cites="hottbook"> (<a href="#ref-hottbook" role="doc-biblioref">Univalent Foundations Program, 2013</a>)</span> Lemma 2.3.4). As stated, this can only be used when we have a path that is <span class="math inline">\(\ensuremath{\mathsf{refl}}\)</span>, for example when traversing <span class="math inline">\(e_{ij}\cdot e_{ji}\)</span>, i.e. an edge followed by its inverse. We will use subtraction together with the operation of Lemma <a href="#lem:multpath" data-reference-type="ref" data-reference="lem:multpath">38</a> to lift this requirement, by obtaining paths in <span class="math inline">\(\mathscr{G}(m)\)</span> that can be added without needing to be concatenated directly.</p>
+<p>The key technical lemma is the following. Recall that dependent functions such as our vector field <span class="math inline">\(X\)</span> send <span class="math inline">\(\ensuremath{\mathsf{refl}}_{v_i}\)</span> to <span class="math inline">\(\ensuremath{\mathsf{refl}}_{X_i}\)</span> (by path induction, see for example <span class="citation" data-cites="hottbook">[<a href="#ref-hottbook" role="doc-biblioref">6</a>]</span> Lemma 2.3.4). As stated, this can only be used when we have a path that is <span class="math inline">\(\ensuremath{\mathsf{refl}}\)</span>, for example when traversing <span class="math inline">\(e_{ij}\cdot e_{ji}\)</span>, i.e. an edge followed by its inverse. We will use subtraction together with the operation of Lemma <a href="#lem:multpath" data-reference-type="ref" data-reference="lem:multpath">39</a> to lift this requirement, by obtaining paths in <span class="math inline">\(\mathscr{G}(m)\)</span> that can be added without needing to be concatenated directly.</p>
 <div id="lem:cancellation" class="mylemma">
-<p><strong>Lemma 41</strong>. <em>With the notation <span class="math inline">\(\sigma_{ij}\stackrel{\mathrm{def}}{=}X_{ij}-X_j\)</span>, and with addition of paths as in Lemma <a href="#lem:multpath" data-reference-type="ref" data-reference="lem:multpath">38</a>, we have <span class="math inline">\(\sigma_{ij}+\sigma_{ji}=_{0=_{\mathscr{G}(m)}0}\ensuremath{\mathsf{refl}}_0\)</span>.</em></p>
+<p><strong>Lemma 42</strong>. <em>With the notation <span class="math inline">\(\sigma_{ij}\stackrel{\mathrm{def}}{=}X_{ij}-X_j\)</span>, and with addition of paths as in Lemma <a href="#lem:multpath" data-reference-type="ref" data-reference="lem:multpath">39</a>, we have <span class="math inline">\(\sigma_{ij}+\sigma_{ji}=_{0=_{\mathscr{G}(m)}0}\ensuremath{\mathsf{refl}}_0\)</span>.</em></p>
 </div>
 <div class="myproof">
 <p>First we need to show that the sum is a loop, then we can prove that it is <span class="math inline">\(\ensuremath{\mathsf{refl}}_0\)</span>. The terms have these types: <span class="math display">\[\begin{aligned}
 \sigma_{ij}&amp;:\rho_{ji}=_{\mathscr{G}(m)}0\\
 \sigma_{ji}&amp;:\rho_{ij}=_{\mathscr{G}(m)}0
-\end{aligned}\]</span> so when we add these paths with <span class="math inline">\(+\)</span> we obtain a path <span class="math inline">\(\sigma_{ij}+\sigma_{ji}:\rho_{ji}+\rho_{ij}=_{\mathscr{G}(m)} 0\)</span> which by Lemma <a href="#lem:subtraction" data-reference-type="ref" data-reference="lem:subtraction">40</a> is <span class="math inline">\(0=_{\mathscr{G}(m)}0\)</span>. We compute <span class="math inline">\(+\)</span> using the concatenations in Lemma <a href="#lem:multpath" data-reference-type="ref" data-reference="lem:multpath">38</a>, which gives <span class="math display">\[\begin{aligned}
+\end{aligned}\]</span> so when we add these paths with <span class="math inline">\(+\)</span> we obtain a path <span class="math inline">\(\sigma_{ij}+\sigma_{ji}:\rho_{ji}+\rho_{ij}=_{\mathscr{G}(m)} 0\)</span> which by Lemma <a href="#lem:subtraction" data-reference-type="ref" data-reference="lem:subtraction">41</a> is <span class="math inline">\(0=_{\mathscr{G}(m)}0\)</span>. We compute <span class="math inline">\(+\)</span> using the concatenations in Lemma <a href="#lem:multpath" data-reference-type="ref" data-reference="lem:multpath">39</a>, which gives <span class="math display">\[\begin{aligned}
 \sigma_{ij}+\sigma_{ji} &amp;:
   (0+0) \overset{\mathrm{Lemma~}\ref{lem:subtraction}}{=\mathrel{\mkern-3mu}=}
   (\rho_{ji}+\rho_{ij}) \overset{\sigma_{ij}+\rho_{ij}}{=\mathrel{\mkern-3mu}=}
@@ -547,46 +555,146 @@ g(f(e_{n,1}))&amp;= \ensuremath{\mathsf{refl}}_{v_1}.
 \end{aligned}\]</span></p>
 </div>
 <div class="mynote">
-<p><strong>Remark 42</strong>. <em>The classical argument of Hopf <span class="citation" data-cites="hopf"> (<a href="#ref-hopf" role="doc-biblioref">Hopf, 1983</a>)</span>, which is presented in more detail in the more readily available <span class="citation" data-cites="needham"> (<a href="#ref-needham" role="doc-biblioref">Needham, 2021</a>)</span>, makes an implicit assumption that we can concatenate two terms of different type such as <span class="math inline">\(X_{ij}\)</span> and <span class="math inline">\(X_{kl}\)</span> by saying. The authors name such terms “change in angle across an edge” and stipulate that this is a function “defined on edges.” The extra work we are doing in this section amounts to a partial formalization of this idea.</em></p>
+<p><strong>Remark 43</strong>. <em>The classical argument of Hopf <span class="citation" data-cites="hopf">[<a href="#ref-hopf" role="doc-biblioref">2</a>]</span>, which is presented in more detail in the more readily available <span class="citation" data-cites="needham">[<a href="#ref-needham" role="doc-biblioref">3</a>]</span>, makes an implicit assumption that we can concatenate two terms of different type such as <span class="math inline">\(X_{ij}\)</span> and <span class="math inline">\(X_{kl}\)</span> by saying. The authors name such terms “change in angle across an edge” and stipulate that this is a function “defined on edges.” The extra work we are doing in this section amounts to a partial formalization of this idea.</em></p>
 </div>
-<h2 data-number="5.3" id="an-example-vector-field-on-the-sphere"><span class="header-section-number">5.3</span> An example vector field on the sphere</h2>
+<h2 data-number="5.3" id="sec:octahedron_vector_field"><span class="header-section-number">5.3</span> An example vector field on the sphere</h2>
+<p>Figure <a href="#fig:octahedron_vector_field" data-reference-type="ref" data-reference="fig:octahedron_vector_field">9</a> shows an example of a vector field <span class="math inline">\(X_\ensuremath{\mathbb{O}}^s\)</span> (<span class="math inline">\(s\)</span> for “spin”) on the octahedron <span class="math inline">\(\ensuremath{\mathbb{O}}\)</span>. The picture can really only convey the value of <span class="math inline">\(X_\ensuremath{\mathbb{O}}^s\)</span> on vertices, which it does by displaying it as an arrow on the surface itself, for example as an arrow from <span class="math inline">\(w\)</span> to <span class="math inline">\(r\)</span>, instead of trying to draw the fiber at <span class="math inline">\(w\)</span> which is where <span class="math inline">\(r:\mathop{\mathrm{\mathsf{link}}}(w)\)</span> actually lives. But hopefully there is a net gain in clarity.</p>
+<figure id="fig:octahedron_vector_field">
+<img src="./e260918460a655b445472645b23e64c54f225cbb.svg" />
+<figcaption>A vector field on <span class="math inline">\(\ensuremath{\mathbb{O}}\)</span>, which extends to a rotation of the octahedron in space.</figcaption>
+</figure>
+<p>We will define <span class="math inline">\(X_\ensuremath{\mathbb{O}}^s\)</span> on edges, and then compute the swirling around each face. These calculations will then be cited later when we discuss the total swirling on a realization. Here is all the data for <span class="math inline">\(X_\ensuremath{\mathbb{O}}^s\)</span>, which includes values when traversing an edge in either direction: <span class="math display">\[\begin{array}{|c|c|}
+\hline
+\multicolumn{2}{|c|}{X_\ensuremath{\mathbb{O}}^s\text{ on vertices}} \\
+\hline
+v &amp; X_\ensuremath{\mathbb{O}}^s(v) \\
+\hline
+w &amp; r \\
+r &amp; g \\
+g &amp; w \\
+\hline
+o &amp; b \\
+b &amp; y \\
+y &amp; o \\
+\hline
+\end{array}\,
+\begin{array}{|c|c|}
+\hline
+\multicolumn{2}{|c|}{X_\ensuremath{\mathbb{O}}^s\text{ on north edges}} \\
+\hline
+e &amp; X_\ensuremath{\mathbb{O}}^s(e) \\
+\hline
+wr &amp; yg \\
+wg &amp; rw \\
+wo &amp; wb \\
+wb &amp; ry \\
+\hline
+rw &amp; gr \\
+gw &amp; br \\
+ow &amp; br \\
+bw &amp; br \\
+\hline
+\end{array}\,
+\begin{array}{|c|c|}
+\hline
+\multicolumn{2}{|c|}{X_\ensuremath{\mathbb{O}}^s\text{ on south edges}} \\
+\hline
+e &amp; X_\ensuremath{\mathbb{O}}^s(e) \\
+\hline
+yr &amp; yg \\
+yg &amp; ow \\
+yo &amp; wb \\
+yb &amp; oy \\
+\hline
+ry &amp; go \\
+gy &amp; go \\
+oy &amp; bo \\
+by &amp; go \\
+\hline
+\end{array}\,
+\begin{array}{|c|c|}
+\hline
+\multicolumn{2}{|c|}{X_\ensuremath{\mathbb{O}}^s\text{ on equator edges}} \\
+\hline
+e &amp; X_\ensuremath{\mathbb{O}}^s(e) \\
+\hline
+br &amp; yg \\
+rg &amp; ow \\
+go &amp; wb \\
+ob &amp; ry \\
+\hline
+rb &amp; ry \\
+gr &amp; wg \\
+og &amp; ow \\
+bo &amp; yb \\
+\hline
+\end{array}\]</span> How do we read the tables for the edges? For example, <span class="math inline">\(X_\ensuremath{\mathbb{O}}^s(wr)\)</span> should be a term of type <span class="math inline">\(\mathsf{tr}(wr)X_\ensuremath{\mathbb{O}}^s(w)=_{Tr}X_\ensuremath{\mathbb{O}}^s(r)\)</span>. Looking up <span class="math inline">\(X_\ensuremath{\mathbb{O}}^s\)</span> on vertices means this type is <span class="math inline">\(\mathsf{tr}(wr)(r)=_{Tr}g\)</span>, and looking up <span class="math inline">\(\mathsf{tr}\)</span> in Definition <a href="#def:transport_oo" data-reference-type="ref" data-reference="def:transport_oo">33</a> means the type is <span class="math inline">\(y=_{Tr}g\)</span>. We can choose <span class="math inline">\(X_\ensuremath{\mathbb{O}}^s(wr)\)</span> to be any path from <span class="math inline">\(y\)</span> to <span class="math inline">\(g\)</span> and we choose the short path <span class="math inline">\(yg\)</span>.</p>
+<p>Next we want to compute <span class="math inline">\(X_\ensuremath{\mathbb{O}}^s\)</span> around a face. We will do this for the four north faces only. In this calculation we will denote paths by listing the vertices, so <span class="math inline">\(rg\cdot gw\)</span> is denoted <span class="math inline">\(rgw\)</span> and <span class="math inline">\(wrgw\)</span> is a loop at <span class="math inline">\(w\)</span>. <span class="math display">\[\begin{aligned}
+X_\ensuremath{\mathbb{O}}^s(wrgw) &amp;= \mathsf{tr}(rgw)X_\ensuremath{\mathbb{O}}^s(wr)\cdot\mathsf{tr}(gw)X_\ensuremath{\mathbb{O}}^s(rg)\cdot X_\ensuremath{\mathbb{O}}^s(gw)\\
+&amp;= \mathsf{tr}(rgw)(yg)\cdot\mathsf{tr}(gw)(ow)\cdot(br)\\
+&amp;= (yg\mapsto yo\mapsto \boxed{go})\cdot(ow\mapsto \boxed{ob})\cdot \boxed{br}\\
+&amp;= \boxed{gobr}
+\end{aligned}\]</span> To help follow along, in the third line we are showing the results of intermediate transports, and put a box around the result. The other three faces give <span class="math display">\[\begin{aligned}
+X_\ensuremath{\mathbb{O}}^s(wgow) &amp;= \mathsf{tr}(gow)X_\ensuremath{\mathbb{O}}^s(wg)\cdot\mathsf{tr}(ow)X_\ensuremath{\mathbb{O}}^s(go)\cdot X_\ensuremath{\mathbb{O}}^s(ow)\\
+&amp;= \mathsf{tr}(gow)(rw)\cdot\mathsf{tr}(ow)(wb)\cdot(br)\\
+&amp;= (rw\mapsto gw\mapsto \boxed{gr})\cdot(wb\mapsto \boxed{rb})\cdot \boxed{br}\\
+&amp;= \boxed{gr}
+\end{aligned}\]</span></p>
+<p><span class="math display">\[\begin{aligned}
+X_\ensuremath{\mathbb{O}}^s(wobw) &amp;= \mathsf{tr}(obw)X_\ensuremath{\mathbb{O}}^s(wo)\cdot\mathsf{tr}(bw)X_\ensuremath{\mathbb{O}}^s(ob)\cdot X_\ensuremath{\mathbb{O}}^s(bw)\\
+&amp;= \mathsf{tr}(obw)(wb)\cdot\mathsf{tr}(bw)(ry)\cdot(br)\\
+&amp;= (wb\mapsto wr\mapsto \boxed{gr})\cdot(ry\mapsto \boxed{rb})\cdot \boxed{br}\\
+&amp;= \boxed{gr}
+\end{aligned}\]</span></p>
+<p><span class="math display">\[\begin{aligned}
+X_\ensuremath{\mathbb{O}}^s(wbrw) &amp;= \mathsf{tr}(brw)X_\ensuremath{\mathbb{O}}^s(wb)\cdot\mathsf{tr}(rw)X_\ensuremath{\mathbb{O}}^s(br)\cdot X_\ensuremath{\mathbb{O}}^s(rw)\\
+&amp;= \mathsf{tr}(brw)(ry)\cdot\mathsf{tr}(rw)(yg)\cdot(gr)\\
+&amp;= (ry\mapsto gy\mapsto \boxed{gr})\cdot(yg\mapsto \boxed{rg})\cdot \boxed{gr}\\
+&amp;= \boxed{gr}
+\end{aligned}\]</span></p>
+<p>So we have these four edges in <span class="math inline">\(Tw\)</span>, which is pointed at <span class="math inline">\(X_\ensuremath{\mathbb{O}}^s(w)=r\)</span>: <span class="math inline">\(gobr, gr, gr, gr\)</span>. Lemma <a href="#lem:multpath" data-reference-type="ref" data-reference="lem:multpath">39</a> tells us we can add these by transporting them so as to be concatenate-able. This gives <span class="math inline">\(gobr\cdot rb\cdot bo\cdot og=\ensuremath{\mathsf{refl}}_g\)</span> in <span class="math inline">\(Tw\)</span>. So the total swirling in the northern hemisphere is trivial. We leave the computation in the southern hemisphere as an exercise, but it is very symmetrical with the northern hemisphere, and gives <span class="math inline">\(\ensuremath{\mathsf{refl}}_o\)</span> in <span class="math inline">\(Ty\)</span>.</p>
 <h1 data-number="6" id="sec:totals"><span class="header-section-number">6</span> The total construction</h1>
-<p>We will place holonomy, flatness, and vector fields on the same footing, and combine them. We will prove the equivalance of the total curvature of a tangent bundle, and total index of a vector field. This is the key relationship in proving both the Gauss-Bonnet theorem and the Poincaré-Hopf theorem.</p>
+<p>We will place holonomy, flatness, and vector fields on the same footing, and combine them. We will prove a relation between the total curvature of a tangent bundle, and total index of a vector field. This is the key step in the simultaneous proof of the Gauss-Bonnet theorem and the Poincaré-Hopf theorem, lacking only the relationship with the Euler characteristic.</p>
 <h2 data-number="6.1" id="index-of-the-vector-field-on-a-face"><span class="header-section-number">6.1</span> Index of the vector field on a face</h2>
-<p>The index of a vector field is derived from other data that we have. Consider a 2-dimensional simplicial complex <span class="math inline">\(M\)</span> and its 2-dimensional realization <span class="math inline">\(\ensuremath{\mathbb{M}}=\ensuremath{\mathbb{M}}_0\to\ensuremath{\mathbb{M}}_1\to\ensuremath{\mathbb{M}}_2\)</span>. Consider a face <span class="math inline">\(F:M_2\)</span>, with <span class="math inline">\(m:\ensuremath{\mathbb{M}}\)</span> a vertex of <span class="math inline">\(F\)</span> and <span class="math inline">\(\partial F:\partial\Delta^2\to\ensuremath{\mathbb{M}}\)</span> the boundary loop of the face. We have accumulated the following constructions: <span class="math display">\[\begin{aligned}
-\mathsf{tr}_F&amp;\stackrel{\mathrm{def}}{=}\mathsf{tr}(\partial F)&amp;&amp;:Tm=Tm&amp;&amp;\text{holonomy/curvature}\\
+<p>The index of a vector field is derived from other data that we have. Consider a 2-dimensional simplicial complex <span class="math inline">\(M\)</span> and its 2-dimensional realization <span class="math inline">\(\ensuremath{\mathbb{M}}=\ensuremath{\mathbb{M}}_0\to\ensuremath{\mathbb{M}}_1\to\ensuremath{\mathbb{M}}_2\)</span>, and a principal circle bundle <span class="math inline">\(T:\ensuremath{\mathbb{M}}\to\mathrm{K}(\ensuremath{\mathbb{Z}},2)\)</span> extending <span class="math inline">\(\mathop{\mathrm{\mathsf{link}}}\)</span>. Consider a face <span class="math inline">\(F:M_2\)</span>, with <span class="math inline">\(m:\ensuremath{\mathbb{M}}\)</span> a vertex of <span class="math inline">\(F\)</span> and <span class="math inline">\(\partial F:\partial\Delta^2\to\ensuremath{\mathbb{M}}\)</span> the boundary loop of the face. We have accumulated the following constructions: <span class="math display">\[\begin{aligned}
+\mathsf{tr}_F&amp;\stackrel{\mathrm{def}}{=}\mathsf{tr}(\partial F)&amp;&amp;:Tm=Tm&amp;&amp;\text{holonomy}\\
 \flat_F&amp;\stackrel{\mathrm{def}}{=}\flat(\partial F)&amp;&amp;:\ensuremath{\text{id}}=_{Tm=Tm}\mathsf{tr}(\partial F)&amp;&amp;\text{flatness}\\
 X_F&amp;\stackrel{\mathrm{def}}{=}X(\partial F)&amp;&amp;:\mathsf{tr}(\partial F)(X(m))=_{Tm}X(m)&amp;&amp;\text{swirling.}\\
-\end{aligned}\]</span> The flatness is a path in automorphisms of <span class="math inline">\(Tm\)</span> whereas the swirling is a path in <span class="math inline">\(Tm\)</span>, but we can view the latter it as a path in automorphisms as well:</p>
+\end{aligned}\]</span> The flatness is a path in automorphisms of <span class="math inline">\(Tm\)</span> whereas the swirling is a path in <span class="math inline">\(Tm\)</span>, but we can view the latter as a path in automorphisms as well:</p>
 <div id="prop:eveq" class="myprop">
-<p><strong>Proposition 43</strong>. <em>Given a polygon <span class="math inline">\(\mathbb{C}(n):\mathrm{K}(\ensuremath{\mathbb{Z}},2)\)</span> and a point <span class="math inline">\(b:\mathbb{C}(n)\)</span> the evaluation map <span class="math inline">\(\mathrm{ev}(b):(\mathbb{C}(n)=_{\mathrm{K}(\ensuremath{\mathbb{Z}},2)}\mathbb{C}(n))\to \mathbb{C}(n)\)</span> is an equivalence.</em></p>
+<p><strong>Proposition 44</strong>. <em>Given a polygon <span class="math inline">\(\mathbb{C}(n):\mathrm{K}(\ensuremath{\mathbb{Z}},2)\)</span> and a point <span class="math inline">\(b:\mathbb{C}(n)\)</span> the evaluation map <span class="math inline">\(\mathrm{ev}(b):(\mathbb{C}(n)=_{\mathrm{K}(\ensuremath{\mathbb{Z}},2)}\mathbb{C}(n))\to \mathbb{C}(n)\)</span> is an equivalence.</em></p>
 </div>
 <div class="myproof">
-<p>See <span class="citation" data-cites="buchholtz2023central"> (<a href="#ref-buchholtz2023central" role="doc-biblioref">Buchholtz <em>et al.</em>, 2023</a>)</span>.</p>
+<p>See <span class="citation" data-cites="buchholtz2023central">[<a href="#ref-buchholtz2023central" role="doc-biblioref">4</a>]</span>.</p>
 </div>
 <p>Now <span class="math inline">\(\sigma^X_F\stackrel{\mathrm{def}}{=}\mathrm{ev}(X(m))^{-1}(X_F)\)</span> is the automorphism of <span class="math inline">\(Tm\)</span> that corresponds to the swirling. We now have: <span class="math display">\[\begin{aligned}
-\mathsf{tr}_F&amp;:Tm=Tm&amp;&amp;\text{curvature on }F\\
+\mathsf{tr}_F&amp;:Tm=Tm&amp;&amp;\text{holonomy on }F\\
 \flat_F&amp;:\ensuremath{\text{id}}=_{Tm=Tm}\mathsf{tr}_F&amp;&amp;\text{flatness on }F\\
 \sigma^X_F&amp;:\mathsf{tr}_F=_{Tm=Tm}\ensuremath{\text{id}}&amp;&amp;\text{swirling on }F.\\
-\end{aligned}\]</span> These last two can be concatenated to make a loop. We can then obtain an integer by using the fact that the automorphisms are a circle <span class="math inline">\(\Omega_{Tm}(\mathrm{K}(\ensuremath{\mathbb{Z}},2))\simeq S^1\)</span>, plus the well known formula that loops in the circle are integers: <span class="math inline">\(\Omega(S^1,\ensuremath{\mathsf{base}})\simeq\ensuremath{\mathbb{Z}}\)</span> (e.g. <span class="citation" data-cites="hottbook"> (<a href="#ref-hottbook" role="doc-biblioref">Univalent Foundations Program, 2013</a>)</span> Corollary 8.1.10).</p>
-<div class="mydef">
-<p><strong>Definition 44</strong>. <em>The <strong>index of the vector field <span class="math inline">\(X\)</span> on the face <span class="math inline">\(F\)</span></strong> is the integer <span class="math inline">\(I^X_F\stackrel{\mathrm{def}}{=}\Omega(\flat_F\cdot \sigma^X_F):\Omega(\ensuremath{\text{id}}=_{Tm=Tm}\ensuremath{\text{id}})\)</span>.</em></p>
+\end{aligned}\]</span> These last two can be concatenated to make a loop. We can then obtain an integer by noting that the automorphisms are a circle <span class="math inline">\(\Omega_{Tm}(\mathrm{K}(\ensuremath{\mathbb{Z}},2))\simeq S^1\)</span>, and recalling the well known fact that loops in the circle are integers: <span class="math inline">\(\Omega(S^1,\ensuremath{\mathsf{base}})\simeq\ensuremath{\mathbb{Z}}\)</span> (e.g. <span class="citation" data-cites="hottbook">[<a href="#ref-hottbook" role="doc-biblioref">6</a>]</span> Corollary 8.1.10).</p>
+<div id="def:index" class="mydef">
+<p><strong>Definition 45</strong>. <em>The <strong>index of the vector field <span class="math inline">\(X\)</span> on the face <span class="math inline">\(F\)</span></strong> is the integer <span class="math inline">\(I^X_F\stackrel{\mathrm{def}}{=}\Omega(\flat_F\cdot \sigma^X_F):\Omega(\ensuremath{\text{id}}=_{Tm=Tm}\ensuremath{\text{id}})\)</span>.</em></p>
 </div>
-<p>We now have the following final list of ingredients at a single face: <span class="math display">\[\label{eq:face_elements}
+<p>We now have the final list of ingredients at a single face: <span class="math display">\[\label{eq:face_elements}
 \begin{aligned}
-\mathsf{tr}_F&amp;:Tm=Tm&amp;&amp;\text{curvature on }F\\
+\mathsf{tr}_F&amp;:Tm=Tm&amp;&amp;\text{holonomy on }F\\
 \flat_F&amp;:\ensuremath{\text{id}}=_{Tm=Tm}\mathsf{tr}_F&amp;&amp;\text{flatness on }F\\
 \sigma^X_F&amp;:\mathsf{tr}_F=_{Tm=Tm}\ensuremath{\text{id}}&amp;&amp;\text{swirling on }F\\
 I^X_F&amp;:\ensuremath{\mathbb{Z}}&amp;&amp;\text{index on }F.
 \end{aligned}\]</span></p>
-<h2 data-number="6.2" id="total-curvature-and-index-on-the-sphere"><span class="header-section-number">6.2</span> Total curvature and index on the sphere</h2>
-<p>Now we wish to compute a sum over all faces of the data. To do this we need the following.</p>
+<h2 data-number="6.2" id="total-flatness-total-index"><span class="header-section-number">6.2</span> Total flatness, total index</h2>
+<p>Now we wish to compute a sum over all faces of the data. To do this we need all of our definitions plus two new ones that help us organize the sum and make a key assumption about cancellation of edges.</p>
 <div class="mydef">
-<p><strong>Definition 45</strong>. <em>An <strong>oriented set of pointed faces</strong> of a realization <span class="math inline">\(\ensuremath{\mathbb{M}}\)</span> of an oriented 2-dimensional simplicial complex <span class="math inline">\(M=[M_0,M_1,M_2]\)</span>, is a choice <span class="math inline">\(v_F:F\)</span> of a vertex in each face <span class="math inline">\(F:M_2\)</span>, and a choice of boundary path <span class="math inline">\(\ell_F:v_F=v_F\)</span> on each face, satisfying the <strong>cancellation property</strong>: for each face the boundary path is a concatenation of three edge paths, and for each edge <span class="math inline">\(e=\{x,y\}\)</span> in <span class="math inline">\(M_1\)</span>, whose image under realization is denoted <span class="math inline">\(p_e:x=y\)</span>, the path <span class="math inline">\(p_e\)</span> appears as a concatenation term in exactly one loop, say <span class="math inline">\(\ell_F\)</span>, and <span class="math inline">\(p_e^{-1}\)</span> appears in exactly one loop <span class="math inline">\(\ell_{F&#39;}\)</span>.</em></p>
+<p><strong>Definition 46</strong>. <em>A 2-dimensional simplicial complex <span class="math inline">\(M^+=[M_0, M_1, M_2]\)</span> with orientation <span class="math inline">\(\mathscr{O}\)</span> is <strong>without boundary</strong> if every edge is a subset of exactly two faces, and if the orderings induced by the two inclusions differ by a swap of vertices.</em></p>
 </div>
-<p>We have seen in Lemma <a href="#lem:multpath" data-reference-type="ref" data-reference="lem:multpath">38</a> how to perform the required sum.</p>
+<p>Some of the assumptions in these definitions are unnecessary because they are entailed in other assumptions, but we will not attempt to eliminate them.</p>
 <div class="mydef">
-<p><strong>Definition 46</strong>. <em>The <strong>total flatness</strong>, <strong>total swirling</strong>, and <strong>total index</strong> on an oriented set of pointed faces is <span class="math display">\[\label{eq:tot_elements}
+<p><strong>Definition 47</strong>. <em>An <strong>oriented set of pointed faces</strong> of a realization <span class="math inline">\(\ensuremath{\mathbb{M}}\)</span> of a 2-dimensional simplicial complex <span class="math inline">\(M=[M_0,M_1,M_2]\)</span> with orientation <span class="math inline">\(\mathscr{O}\)</span> is a choice <span class="math inline">\(v_F:F\)</span> of a vertex in each face <span class="math inline">\(F:M_2\)</span>, and the boundary path <span class="math inline">\(\ell_F:v_F=v_F\)</span> that concatenates the three edges of the face in the order determined by the orientation.</em></p>
+</div>
+<p>For the rest of the note we will equip our simplicial complex <span class="math inline">\(M\)</span> with an orientation <span class="math inline">\(\mathscr{O}\)</span>, and our realization <span class="math inline">\(\ensuremath{\mathbb{M}}\)</span> with an oriented set of pointed faces.</p>
+<p>We have seen in Lemma <a href="#lem:multpath" data-reference-type="ref" data-reference="lem:multpath">39</a> how to perform the required sum.</p>
+<div class="mydef">
+<p><strong>Definition 48</strong>. <em>The <strong>net holonomy</strong>, <strong>total flatness</strong>, <strong>total swirling</strong>, and <strong>total index</strong> on an oriented set of pointed faces is <span class="math display">\[\label{eq:tot_elements}
 \begin{aligned}
 \mathsf{tr}_\mathrm{tot}&amp; \stackrel{\mathrm{def}}{=}\sum_F\mathsf{tr}_F &amp;&amp;:Tm=Tm\\
 \flat_\mathrm{tot}&amp; \stackrel{\mathrm{def}}{=}\sum_F\flat_F &amp;&amp;:\ensuremath{\text{id}}=_{Tm=Tm}\mathsf{tr}_\mathrm{tot}\\
@@ -594,82 +702,106 @@ I^X_F&amp;:\ensuremath{\mathbb{Z}}&amp;&amp;\text{index on }F.
 I^X_\mathrm{tot}&amp; \stackrel{\mathrm{def}}{=}\sum_F I^X_F &amp;&amp;:\ensuremath{\mathbb{Z}}.
 \end{aligned}\]</span></em></p>
 </div>
-<p>The assumption about edges appearing twice, once in each direction, together with Lemma <a href="#lem:subtraction" data-reference-type="ref" data-reference="lem:subtraction">40</a> proves the following</p>
+<p>The assumption about edges appearing twice, once in each direction, together with Lemma <a href="#lem:subtraction" data-reference-type="ref" data-reference="lem:subtraction">41</a> proves the following</p>
 <div id="prop:total_rotation" class="myprop">
-<p><strong>Proposition 47</strong>. <em>The total transport is <span class="math inline">\(0\)</span> in <span class="math inline">\(Tm=Tm\)</span>.</em></p>
+<p><strong>Proposition 49</strong>. <em>The net holonomy is <span class="math inline">\(0\)</span> in <span class="math inline">\(Tm=Tm\)</span>.</em></p>
 </div>
 <div class="myproof">
-<p>With a vector field <span class="math inline">\(X\)</span> chosen, we can compute <span class="math display">\[\sum_F\mathsf{tr}_F=\sum_{(\mathrm{edges\ }e_{ij})} \rho_{ij}+\rho_{ji}=_{Tm=Tm}0\]</span> and note that the result does not depend on <span class="math inline">\(X\)</span>.</p>
-</div>
-<p>And making use of Lemma <a href="#lem:cancellation" data-reference-type="ref" data-reference="lem:cancellation">41</a> we obtain</p>
-<div id="prop:total_swirling" class="myprop">
-<p><strong>Proposition 48</strong>. <em>The total swirling is <span class="math inline">\(\ensuremath{\mathsf{refl}}_0\)</span> in <span class="math inline">\(Tm=Tm\)</span>.</em></p>
-</div>
-<div class="myproof">
-<p><span class="math inline">\(\sum_F\sigma^X_F=\sum_{(\mathrm{edges\ }e_{ij})}\sigma_{ij}+\sigma_{ji}=_{Tm=Tm}\ensuremath{\mathsf{refl}}_0\)</span></p>
+<p>With a vector field <span class="math inline">\(X\)</span> chosen, we can compute <span class="math display">\[\sum_F\mathsf{tr}_F=\left[\sum_{(\mathrm{edges\ }e_{ij})} \rho_{ij}+\rho_{ji}\right]=_{Tm=Tm}0\]</span> and note that the result does not depend on <span class="math inline">\(X\)</span>.</p>
 </div>
 <div class="mycor">
-<p><strong>Corollary 49</strong>. <em>Total flatness is a loop: <span class="math inline">\(\flat_\mathrm{tot}:\ensuremath{\text{id}}=_{Tm=Tm}\ensuremath{\text{id}}\)</span>.</em></p>
+<p><strong>Corollary 50</strong>. <em>Total flatness is a loop: <span class="math inline">\(\flat_\mathrm{tot}:\ensuremath{\text{id}}=_{Tm=Tm}\ensuremath{\text{id}}\)</span>.</em></p>
 </div>
 <div class="myproof">
-<p>Follows from Corollary <a href="#prop:total_rotation" data-reference-type="ref" data-reference="prop:total_rotation">47</a>.</p>
+<p>Follows from Corollary <a href="#prop:total_rotation" data-reference-type="ref" data-reference="prop:total_rotation">49</a>.</p>
+</div>
+<p>And making use of Lemma <a href="#lem:cancellation" data-reference-type="ref" data-reference="lem:cancellation">42</a> we obtain</p>
+<div id="prop:total_swirling" class="myprop">
+<p><strong>Proposition 51</strong>. <em>The total swirling is <span class="math inline">\(\ensuremath{\mathsf{refl}}_0\)</span> in <span class="math inline">\(Tm=Tm\)</span>.</em></p>
+</div>
+<div class="myproof">
+<p>We can compute <span class="math display">\[\sum_F\sigma^X_F=\left[\sum_{(\mathrm{edges\ }e_{ij})}\sigma_{ij}+\sigma_{ji}\right]=_{Tm=Tm}\ensuremath{\mathsf{refl}}_0.\]</span></p>
 </div>
 <p>And finally, if we give the loop map <span class="math inline">\(\Omega\)</span> the nickname “winding number”:</p>
 <div id="thm:total_index_total_curvature" class="mythm">
-<p><strong>Theorem 50</strong>. <em>The winding number of total flatness equals the total index.</em></p>
+<p><strong>Theorem 52</strong>. <em>The winding number of total flatness equals the total index.</em></p>
 </div>
 <div class="myproof">
-<p>Follows directly from <span class="math inline">\(I^X_\mathrm{tot}\stackrel{\mathrm{def}}{=}\Omega(\flat_\mathrm{tot}\cdot \sigma^X_\mathrm{tot})\)</span> and Proposition <a href="#prop:total_swirling" data-reference-type="ref" data-reference="prop:total_swirling">48</a>.</p>
+<p>Follows directly from <span class="math inline">\(I^X_\mathrm{tot}\stackrel{\mathrm{def}}{=}\Omega(\flat_\mathrm{tot}\cdot \sigma^X_\mathrm{tot})\)</span> and Proposition <a href="#prop:total_swirling" data-reference-type="ref" data-reference="prop:total_swirling">51</a>.</p>
 </div>
+<div class="mynote">
+<p><strong>Remark 53</strong>. <em>The Gauss-Bonnet theorem is often stated in the form <span class="math display">\[\frac{1}{2\pi}\int_M K\,dA=\chi(M)\]</span> and although we won’t attempt an exhaustive translation between this and our approach, we want to point out that the factor of <span class="math inline">\(\frac{1}{2\pi}\)</span> is doing exactly what <span class="math inline">\(\Omega\)</span> is doing for us, which is converting an angle into a winding number. It seems likely that attending fully to constant coefficients in other important formulas can yield conceptual fruit.</em></p>
+</div>
+<h2 data-number="6.3" id="calculation-on-the-sphere"><span class="header-section-number">6.3</span> Calculation on the sphere</h2>
+<p>The flatness structures on the eight faces of <span class="math inline">\(\ensuremath{\mathbb{O}}\)</span> in Definition <a href="#def:octahedron_curvature" data-reference-type="ref" data-reference="def:octahedron_curvature">34</a> are all identical and equal to <span class="math inline">\(H_R:\ensuremath{\text{id}}=_{\mathbb{C}(4)=\mathbb{C}(4)}R\)</span> on a fixed 4-gon. Composing <span class="math inline">\(R\)</span> 8 times gives the identity, as required by Proposition <a href="#prop:total_rotation" data-reference-type="ref" data-reference="prop:total_rotation">49</a>. Adding the flatness structures gives <span class="math inline">\(8H_R:\ensuremath{\text{id}}=_{\mathbb{C}(4)=\mathbb{C}(4)}\ensuremath{\text{id}}\)</span> whose winding number is 2.</p>
+<p>Next we want to compute the total index of the vector field <span class="math inline">\(X_\ensuremath{\mathbb{O}}^s\)</span> from Section <a href="#sec:octahedron_vector_field" data-reference-type="ref" data-reference="sec:octahedron_vector_field">5.3</a>. We saw that on the four faces in the northern hemisphere the swirling gave us these four paths in <span class="math inline">\(Tw\)</span>: <span class="math inline">\(gobr, gr, gr, gr\)</span>. The flatness structures on each of these faces is <span class="math inline">\(H_R:\ensuremath{\text{id}}=_{Tw=Tw}R\)</span> where <span class="math inline">\(R\)</span> rotates by one vertex clockwise. Using Definition <a href="#def:index" data-reference-type="ref" data-reference="def:index">45</a> for the index we see that we first need to convert <span class="math inline">\(gobr\)</span> and <span class="math inline">\(gr\)</span> into paths of rotations, which give <span class="math display">\[\begin{aligned}
+\sigma^{X_\ensuremath{\mathbb{O}}^s}_{wrgw}=H_R^3   &amp;:R^{-3}=id \\
+\sigma^{X_\ensuremath{\mathbb{O}}^s}_{wgow}=H_R^{-1}&amp;:R=id \\
+\sigma^{X_\ensuremath{\mathbb{O}}^s}_{wobw}=H_R^{-1}&amp;:R=id \\
+\sigma^{X_\ensuremath{\mathbb{O}}^s}_{wbrw}=H_R^{-1}&amp;:R=id \\
+\end{aligned}\]</span> Now forming the concatenation of <span class="math inline">\(H_R\)</span> with each of these gives <span class="math inline">\(H_R^4, \ensuremath{\mathsf{refl}}_\ensuremath{\text{id}}, \ensuremath{\mathsf{refl}}_\ensuremath{\text{id}}, \ensuremath{\mathsf{refl}}_\ensuremath{\text{id}}\)</span> respectively. The winding numbers are <span class="math inline">\(1, 0, 0, 0\)</span>. So the index around the face that has all the swirling in Figure <a href="#fig:octahedron_vector_field" data-reference-type="ref" data-reference="fig:octahedron_vector_field">9</a> is 1 and around the other three is 0. We haven’t written out the computation for the southern hemisphere but it will provide another 1 and three 0s, giving a total index of 2.</p>
 <h1 data-number="7" id="appendix-the-program-ahead"><span class="header-section-number">7</span> Appendix: the program ahead</h1>
-<p>Euler characteristic. Chern-Weil theory. Atiyah bundle. Space of connections is contractible. Formalization.</p>
-<p>The results of this note can be extended in many directions. There are higher-dimensional generalizations of Gauss-Bonnet, including the theory of characteristic classes and Chern-Weil theory (which links characteristic classes to connections and curvature). These would involve working with nonabelian groups like <span class="math inline">\(SO(n)\)</span> and sphere bundles. Results from gauge theory could be imported into HoTT, as well as results from surgery theory and other topological constructions that may be especially amenable to this discrete setting. Relationships with computer graphics and discrete differential geometry<span class="citation" data-cites="crane_ddg"> (<a href="#ref-crane_ddg" role="doc-biblioref">Crane <em>et al.</em>, 2013</a>)</span><span class="citation" data-cites="crane_connections"> (<a href="#ref-crane_connections" role="doc-biblioref">Crane, 2010</a>)</span> could be explored. Finally, a theory that reintroduces smoothness could allow more formal versions of the analogies explored here.</p>
-<h2 data-number="7.1" id="sec:automorphisms"><span class="header-section-number">7.1</span> The bundle of automorphisms</h2>
-<div class="mydef">
-<p><strong>Definition 51</strong>. <em>Suppose we have <span class="math inline">\(T:M\to\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)</span> and <span class="math inline">\(P\stackrel{\mathrm{def}}{=}\sum_{x:M}Tx\)</span>. Then we can form the type family <span class="math inline">\(\mathop{\mathrm{Aut}}T:M\to\mathcal{U}\)</span> given by <span class="math inline">\(\mathop{\mathrm{Aut}}T(x)\stackrel{\mathrm{def}}{=}(Tx=Tx)\)</span>. The total space <span class="math inline">\(\mathop{\mathrm{Aut}}P\stackrel{\mathrm{def}}{=}\sum_{x:M}(Tx=Tx)\)</span>, which is a bundle of groups, is called the <strong>automorphism bundle</strong> or the <strong>gauge bundle</strong> and sections <span class="math inline">\(\prod_{x:M}(Tx=Tx)\)</span>, which are homotopies <span class="math inline">\(T\sim T\)</span>, are called <strong>automorphisms of <span class="math inline">\(P\)</span></strong> or <strong>gauge transformations</strong>.</em></p>
+<p>Follow-up work could remove the need to assume that maps from the realization of oriented simplicial complexes factor through <span class="math inline">\(\mathrm{K}(\ensuremath{\mathbb{Z}},2)\)</span>, instead proving that this is the case. This would unify two assumptions of orientability into one. The assumption that edges appear twice, once with each orientation, could also be deduced from presumably standard material.</p>
+<p>An internal definition of Euler characteristic is needed to provide the relationship between total index and the classic invariant.</p>
+<p>More relationships with discrete differential geometry<span class="citation" data-cites="crane_ddg">[<a href="#ref-crane_ddg" role="doc-biblioref">13</a>]</span><span class="citation" data-cites="crane_connections">[<a href="#ref-crane_connections" role="doc-biblioref">14</a>]</span> could be explored.</p>
+<p>The results could be formalized. A good starting point is Lemma <a href="#lem:octahedron_sphere" data-reference-type="ref" data-reference="lem:octahedron_sphere">28</a> that the octahedron is equivalent to the 2-sphere.</p>
+<p>Our hope is that this note can form the starting point for a complete formulation of the homotopical results of gauge theory and Chern-Weil theory. Classically we know the space of connections is contractible, and the group of based gauge transformations (see below) acts freely on it. Those statements should be easy to make in our framework. In <span class="citation" data-cites="atiyah1983yang">[<a href="#ref-atiyah1983yang" role="doc-biblioref">15</a>]</span> connections are presented as a splitting of a short exact sequence of bundles. The community has grappled with this picture (see the nLab at <span class="citation" data-cites="urs_atiyah">[<a href="#ref-urs_atiyah" role="doc-biblioref">16</a>]</span>), and it deserves clarification in HoTT.</p>
+<p>The paper of Freed and Hopkins<span class="citation" data-cites="freed2013chernweil">[<a href="#ref-freed2013chernweil" role="doc-biblioref">17</a>]</span> seeks a classifying space for the space of connections on a principal bundle. Their paper served as a primary motivation for this work, and we hope we have taken a step in that direction. Its focus on homotopy theory, model structures, and groupoids should make it accessible to many HoTT theoreticians. We conjecture that the theory of Koszul complexes that arises is the infinitesimal shadow of the higher groupoid structure of the relevant HoTT classifying space.</p>
+<h2 data-number="7.1" id="gauge-transformations"><span class="header-section-number">7.1</span> Gauge transformations</h2>
+<div id="sec:automorphisms" class="mydef">
+<p><strong>Definition 54</strong>. <em>Suppose we have <span class="math inline">\(T:M\to\mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)</span> and <span class="math inline">\(P\stackrel{\mathrm{def}}{=}\sum_{x:M}Tx\)</span>. Then we can form the type family <span class="math inline">\(\mathop{\mathrm{Aut}}T:M\to\mathcal{U}\)</span> given by <span class="math inline">\(\mathop{\mathrm{Aut}}T(x)\stackrel{\mathrm{def}}{=}(Tx=Tx)\)</span>. The total space <span class="math inline">\(\mathop{\mathrm{Aut}}P\stackrel{\mathrm{def}}{=}\sum_{x:M}(Tx=Tx)\)</span>, which is a bundle of groups, is called the <strong>automorphism bundle</strong> or the <strong>gauge bundle</strong> and sections <span class="math inline">\(\prod_{x:M}(Tx=Tx)\)</span>, which are homotopies <span class="math inline">\(T\sim T\)</span>, are called <strong>automorphisms of <span class="math inline">\(P\)</span></strong> or <strong>gauge transformations</strong>. If <span class="math inline">\(m:M\)</span> is a basepoint and if <span class="math inline">\(p:Tm\)</span> is a basepoint in the fiber at <span class="math inline">\(m\)</span>, then the <strong>pointed automorphisms of <span class="math inline">\(P\)</span></strong> or <strong>based gauge transformations</strong>.</em></p>
 </div>
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
-<div id="ref-buchholtz2023central" class="csl-entry" role="listitem">
-<span class="smallcaps">Buchholtz</span>, U., <span class="smallcaps">Christensen</span>, J.D., <span class="smallcaps">Flaten</span>, J.G.T., &amp; <span class="smallcaps">Rijke</span>, E. (2023) <a href="https://arxiv.org/abs/2301.02636">Central h-spaces and banded types</a>.
-</div>
-<div id="ref-crane_connections" class="csl-entry" role="listitem">
-<span class="smallcaps">Crane</span>, K. (2010) <a href="http://resolver.caltech.edu/CaltechTHESIS:05282010-102307125">Discrete connections for geometry processing</a> (Master’s thesis).
-</div>
-<div id="ref-crane_ddg" class="csl-entry" role="listitem">
-<span class="smallcaps">Crane</span>, K., <span class="smallcaps">Goes</span>, F. de, <span class="smallcaps">Desbrun</span>, M., &amp; <span class="smallcaps">Schröder</span>, P. (2013) <a href="{https://www.cs.cmu.edu/~kmcrane/Projects/DDG/}">Digital geometry processing with discrete exterior calculus</a>. <em>ACM SIGGRAPH 2013 courses</em>, <em>SIGGRAPH ’13</em>. New York, NY, USA: ACM.
+<div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
+<div id="ref-talbott" class="csl-entry" role="listitem">
+<div class="csl-left-margin">1. </div><div class="csl-right-inline">Talbott S (1995) <a href="https://books.google.com/books?id=KcXaAAAAMAAJ">The future does not compute: Transcending the machines in our midst</a>, O’Reilly &amp; Associates.</div>
 </div>
 <div id="ref-hopf" class="csl-entry" role="listitem">
-<span class="smallcaps">Hopf</span>, H. (1983) <a href="https://api.semanticscholar.org/CorpusID:117042538">Differential geometry in the large: Seminar lectures, new york university, 1946 and stanford university, 1956</a>.
-</div>
-<div id="ref-kirby_siebenmann" class="csl-entry" role="listitem">
-<span class="smallcaps">Kirby</span>, R.C. &amp; <span class="smallcaps">Siebenmann</span>, L.C. (1977) <em>Foundational essays on topological manifolds, smoothings, and triangulations</em>, Annals of mathematics studies. Princeton University Press.
-</div>
-<div id="ref-kobayashinomizu" class="csl-entry" role="listitem">
-<span class="smallcaps">Kobayashi</span>, S. &amp; <span class="smallcaps">Nomizu</span>, K. (1963) <em><a href="https://books.google.com/books?id=wn4pAQAAMAAJ">Foundations of differential geometry</a></em>, Foundations of differential geometry. Interscience Publishers.
-</div>
-<div id="ref-myersgood" class="csl-entry" role="listitem">
-<span class="smallcaps">Myers</span>, D.J. (2022) <a href="https://arxiv.org/abs/1908.08034">Good fibrations through the modal prism</a>.
+<div class="csl-left-margin">2. </div><div class="csl-right-inline">Hopf H (1983) <a href="https://api.semanticscholar.org/CorpusID:117042538">Differential geometry in the large: Seminar lectures, new york university, 1946 and stanford university, 1956</a>.</div>
 </div>
 <div id="ref-needham" class="csl-entry" role="listitem">
-<span class="smallcaps">Needham</span>, T. (2021) <em><a href="https://books.google.com/books?id=Mc0QEAAAQBAJ">Visual differential geometry and forms: A mathematical drama in five acts</a></em>. Princeton University Press.
+<div class="csl-left-margin">3. </div><div class="csl-right-inline">Needham T (2021) <a href="https://books.google.com/books?id=Mc0QEAAAQBAJ">Visual differential geometry and forms: A mathematical drama in five acts</a>, Princeton University Press.</div>
 </div>
-<div id="ref-egbert" class="csl-entry" role="listitem">
-<span class="smallcaps">Rijke</span>, E. (2025) <em>Introduction to homotopy type theory</em>, Cambridge studies in advanced mathematics. Cambridge University Press.
-</div>
-<div id="ref-dcct" class="csl-entry" role="listitem">
-<span class="smallcaps">Schreiber</span>, U. (2013) <a href="https://arxiv.org/abs/1310.7930v1">Differential cohomology in a cohesive infinity-topos</a>.
+<div id="ref-buchholtz2023central" class="csl-entry" role="listitem">
+<div class="csl-left-margin">4. </div><div class="csl-right-inline">Buchholtz U, Christensen JD, Flaten JGT, et al. (2023) <a href="https://arxiv.org/abs/2301.02636">Central h-spaces and banded types</a>.</div>
 </div>
 <div id="ref-sco" class="csl-entry" role="listitem">
-<span class="smallcaps">Scoccola</span>, L. (2020) <a href="https://doi.org/10.1017/s0960129520000146">Nilpotent types and fracture squares in homotopy type theory</a>. <em>Mathematical Structures in Computer Science</em>, <strong>30</strong>, 511–544.
-</div>
-<div id="ref-talbott" class="csl-entry" role="listitem">
-<span class="smallcaps">Talbott</span>, S. (1995) <em><a href="https://books.google.com/books?id=KcXaAAAAMAAJ">The future does not compute: Transcending the machines in our midst</a></em>. O’Reilly &amp; Associates.
+<div class="csl-left-margin">5. </div><div class="csl-right-inline">Scoccola L (2020) <a href="https://doi.org/10.1017/s0960129520000146">Nilpotent types and fracture squares in homotopy type theory</a>. <em>Mathematical Structures in Computer Science</em> 30: 511–544.</div>
 </div>
 <div id="ref-hottbook" class="csl-entry" role="listitem">
-<span class="smallcaps">Univalent Foundations Program</span> (2013) <em>Homotopy type theory: Univalent foundations of mathematics</em>. Institute for Advanced Study: <a href="https://homotopytypetheory.org/book" class="uri">https://homotopytypetheory.org/book</a>.
+<div class="csl-left-margin">6. </div><div class="csl-right-inline">Univalent Foundations Program (2013) Homotopy type theory: Univalent foundations of mathematics, Institute for Advanced Study, <a href="https://homotopytypetheory.org/book" class="uri">https://homotopytypetheory.org/book</a>.</div>
+</div>
+<div id="ref-dcct" class="csl-entry" role="listitem">
+<div class="csl-left-margin">7. </div><div class="csl-right-inline">Schreiber U (2013) <a href="https://arxiv.org/abs/1310.7930v1">Differential cohomology in a cohesive infinity-topos</a>.</div>
+</div>
+<div id="ref-myersgood" class="csl-entry" role="listitem">
+<div class="csl-left-margin">8. </div><div class="csl-right-inline">Myers DJ (2022) <a href="https://arxiv.org/abs/1908.08034">Good fibrations through the modal prism</a>.</div>
+</div>
+<div id="ref-egbert" class="csl-entry" role="listitem">
+<div class="csl-left-margin">9. </div><div class="csl-right-inline">Rijke E (2025) Introduction to homotopy type theory, Cambridge University Press.</div>
 </div>
 <div id="ref-whitehead_triangulation" class="csl-entry" role="listitem">
-<span class="smallcaps">Whitehead</span>, J.H.C. (1940) On <span><span class="math inline">\(C^1\)</span></span>-complexes. <em>Annals of Mathematics</em>, 809–824.
+<div class="csl-left-margin">10. </div><div class="csl-right-inline">Whitehead JHC (1940) On <span><span class="math inline">\(C^1\)</span></span>-complexes. <em>Annals of Mathematics</em> 809–824.</div>
+</div>
+<div id="ref-kirby_siebenmann" class="csl-entry" role="listitem">
+<div class="csl-left-margin">11. </div><div class="csl-right-inline">Kirby RC, Siebenmann LC (1977) Foundational essays on topological manifolds, smoothings, and triangulations, Princeton University Press.</div>
+</div>
+<div id="ref-kobayashinomizu" class="csl-entry" role="listitem">
+<div class="csl-left-margin">12. </div><div class="csl-right-inline">Kobayashi S, Nomizu K (1963) <a href="https://books.google.com/books?id=wn4pAQAAMAAJ">Foundations of differential geometry</a>, Interscience Publishers.</div>
+</div>
+<div id="ref-crane_ddg" class="csl-entry" role="listitem">
+<div class="csl-left-margin">13. </div><div class="csl-right-inline">Crane K, Goes F de, Desbrun M, et al. (2013) <a href="{https://www.cs.cmu.edu/~kmcrane/Projects/DDG/}">Digital geometry processing with discrete exterior calculus</a>, <em>ACM SIGGRAPH 2013 courses</em>, New York, NY, USA, ACM.</div>
+</div>
+<div id="ref-crane_connections" class="csl-entry" role="listitem">
+<div class="csl-left-margin">14. </div><div class="csl-right-inline">Crane K (2010) <a href="http://resolver.caltech.edu/CaltechTHESIS:05282010-102307125">Discrete connections for geometry processing</a>.</div>
+</div>
+<div id="ref-atiyah1983yang" class="csl-entry" role="listitem">
+<div class="csl-left-margin">15. </div><div class="csl-right-inline">Atiyah MF, Bott R (1983) The yang-mills equations over riemann surfaces. <em>Philosophical Transactions of the Royal Society of London Series A, Mathematical and Physical Sciences</em> 308: 523–615.</div>
+</div>
+<div id="ref-urs_atiyah" class="csl-entry" role="listitem">
+<div class="csl-left-margin">16. </div><div class="csl-right-inline">nLab authors (2024) <span>A</span>tiyah <span>L</span>ie groupoid.</div>
+</div>
+<div id="ref-freed2013chernweil" class="csl-entry" role="listitem">
+<div class="csl-left-margin">17. </div><div class="csl-right-inline">Freed DS, Hopkins MJ (2013) <a href="https://arxiv.org/abs/1301.5959">Chern-weil forms and abstract homotopy theory</a>.</div>
 </div>
 </div>
 </body>
