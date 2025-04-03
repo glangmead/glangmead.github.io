@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="dcterms.date" content="2025-04-01" />
-  <title>discrete_gauge_theory.tikzimg</title>
+  <title>pandoc_only_macros</title>
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -565,7 +565,7 @@ g(f(e_{n,1}))&amp;= \ensuremath{\mathsf{refl}}_{v_1}.
 </figure>
 <p>We will define <span class="math inline">\(X_\ensuremath{\mathbb{O}}^s\)</span> on edges, and then compute the swirling around each face. These calculations will then be cited later when we discuss the total swirling on a realization. Here is all the data for <span class="math inline">\(X_\ensuremath{\mathbb{O}}^s\)</span>, which includes values when traversing an edge in either direction: <span class="math display">\[\begin{array}{|c|c|}
 \hline
-\multicolumn{2}{|c|}{X_\ensuremath{\mathbb{O}}^s\text{ on vertices}} \\
+&amp;{X_\ensuremath{\mathbb{O}}^s\text{ on vertices}} \\
 \hline
 v &amp; X_\ensuremath{\mathbb{O}}^s(v) \\
 \hline
@@ -580,7 +580,7 @@ y &amp; o \\
 \end{array}\,
 \begin{array}{|c|c|}
 \hline
-\multicolumn{2}{|c|}{X_\ensuremath{\mathbb{O}}^s\text{ on north edges}} \\
+&amp;{X_\ensuremath{\mathbb{O}}^s\text{ on north edges}} \\
 \hline
 e &amp; X_\ensuremath{\mathbb{O}}^s(e) \\
 \hline
@@ -597,7 +597,7 @@ bw &amp; br \\
 \end{array}\,
 \begin{array}{|c|c|}
 \hline
-\multicolumn{2}{|c|}{X_\ensuremath{\mathbb{O}}^s\text{ on south edges}} \\
+&amp;{X_\ensuremath{\mathbb{O}}^s\text{ on south edges}} \\
 \hline
 e &amp; X_\ensuremath{\mathbb{O}}^s(e) \\
 \hline
@@ -614,7 +614,7 @@ by &amp; go \\
 \end{array}\,
 \begin{array}{|c|c|}
 \hline
-\multicolumn{2}{|c|}{X_\ensuremath{\mathbb{O}}^s\text{ on equator edges}} \\
+&amp;{X_\ensuremath{\mathbb{O}}^s\text{ on equator edges}} \\
 \hline
 e &amp; X_\ensuremath{\mathbb{O}}^s(e) \\
 \hline
