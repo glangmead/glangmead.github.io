@@ -230,7 +230,7 @@
 &lt;/div&gt;
 &lt;p&gt;The link is easier to understand as all the neighboring vertices of &lt;span class=&#34;math inline&#34;&gt;\(v\)&lt;/span&gt; and the subcomplex containing these. See for example Figure &lt;a href=&#34;#fig:link&#34; data-reference-type=&#34;ref&#34; data-reference=&#34;fig:link&#34;&gt;3&lt;/a&gt;.&lt;/p&gt;
 &lt;figure id=&#34;fig:link&#34;&gt;
-&lt;img src=&#34;./d626f162e40cdd325d646afbf42081d31a48d4f2.svg&#34; /&gt;
+&lt;img src=&#34;./794f5e937739ce226db3839a28ea98234c61aaab.svg&#34; /&gt;
 &lt;figcaption&gt;The link of &lt;span class=&#34;math inline&#34;&gt;\(v\)&lt;/span&gt; in this complex consists of the vertices &lt;span class=&#34;math inline&#34;&gt;\(\{a,b,c,d,e,f\}\)&lt;/span&gt; and the edges &lt;span class=&#34;math inline&#34;&gt;\(\{ab,bc,cd,de,ef,fa\}\)&lt;/span&gt;, forming a hexagon.&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;div class=&#34;mynote&#34;&gt;
@@ -256,7 +256,7 @@
 &lt;div class=&#34;mydef&#34;&gt;
 &lt;p&gt;&lt;strong&gt;Definition 17&lt;/strong&gt;. &lt;em&gt;A &lt;strong&gt;realization &lt;span class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{M}}_2\)&lt;/span&gt; of a 2-dimensional simplicial complex&lt;/strong&gt; &lt;span class=&#34;math inline&#34;&gt;\([M_0, M_1, M_2]\)&lt;/span&gt; is the pushout&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;p&gt;&lt;img src=&#34;./8258e1aa9142c7fbe4287007efd8d70ba4e3a89a.svg&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./b87c0eb80f89c1783eefaa1d603ed9090984dbef.svg&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;where &lt;span class=&#34;math inline&#34;&gt;\(\mathbb{A}_1\)&lt;/span&gt; is such that this additional diagram commutes&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;./700a76745a47fd235220bc11ab2eee0bebd28183.svg&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;In this diagram &lt;span class=&#34;math inline&#34;&gt;\(a_1\)&lt;/span&gt; is the simplicial attaching map from &lt;a href=&#34;#eq:attach&#34; data-reference-type=&#34;ref&#34; data-reference=&#34;eq:attach&#34;&gt;[eq:attach]&lt;/a&gt;, and &lt;span class=&#34;math inline&#34;&gt;\(*_{\mathbb{M}_{\leq 1}}\)&lt;/span&gt; simply gathers the hub maps from &lt;span class=&#34;math inline&#34;&gt;\(M_0\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(M_1\)&lt;/span&gt; into &lt;span class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{M}}_1\)&lt;/span&gt;. The commutativity then says that &lt;span class=&#34;math inline&#34;&gt;\(\mathbb{A}_1\)&lt;/span&gt; reflects the attachment data.&lt;/p&gt;

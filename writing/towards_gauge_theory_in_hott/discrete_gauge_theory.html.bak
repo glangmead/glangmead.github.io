@@ -212,7 +212,7 @@
 </div>
 <p>The link is easier to understand as all the neighboring vertices of <span class="math inline">\(v\)</span> and the subcomplex containing these. See for example Figure <a href="#fig:link" data-reference-type="ref" data-reference="fig:link">3</a>.</p>
 <figure id="fig:link">
-<img src="./d626f162e40cdd325d646afbf42081d31a48d4f2.svg" />
+<img src="./794f5e937739ce226db3839a28ea98234c61aaab.svg" />
 <figcaption>The link of <span class="math inline">\(v\)</span> in this complex consists of the vertices <span class="math inline">\(\{a,b,c,d,e,f\}\)</span> and the edges <span class="math inline">\(\{ab,bc,cd,de,ef,fa\}\)</span>, forming a hexagon.</figcaption>
 </figure>
 <div class="mynote">
@@ -238,7 +238,7 @@
 <div class="mydef">
 <p><strong>Definition 17</strong>. <em>A <strong>realization <span class="math inline">\(\ensuremath{\mathbb{M}}_2\)</span> of a 2-dimensional simplicial complex</strong> <span class="math inline">\([M_0, M_1, M_2]\)</span> is the pushout</em></p>
 </div>
-<p><img src="./8258e1aa9142c7fbe4287007efd8d70ba4e3a89a.svg" alt="image" /></p>
+<p><img src="./b87c0eb80f89c1783eefaa1d603ed9090984dbef.svg" alt="image" /></p>
 <p>where <span class="math inline">\(\mathbb{A}_1\)</span> is such that this additional diagram commutes</p>
 <p><img src="./700a76745a47fd235220bc11ab2eee0bebd28183.svg" alt="image" /></p>
 <p>In this diagram <span class="math inline">\(a_1\)</span> is the simplicial attaching map from <a href="#eq:attach" data-reference-type="ref" data-reference="eq:attach">[eq:attach]</a>, and <span class="math inline">\(*_{\mathbb{M}_{\leq 1}}\)</span> simply gathers the hub maps from <span class="math inline">\(M_0\)</span> and <span class="math inline">\(M_1\)</span> into <span class="math inline">\(\ensuremath{\mathbb{M}}_1\)</span>. The commutativity then says that <span class="math inline">\(\mathbb{A}_1\)</span> reflects the attachment data.</p>
