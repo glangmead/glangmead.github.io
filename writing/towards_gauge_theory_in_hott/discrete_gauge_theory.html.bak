@@ -358,7 +358,7 @@ g(f(e_{n,1}))&amp;= \ensuremath{\mathsf{refl}}_{v_1}.
 <h2 data-number="3.5" id="the-octahedron-model-of-the-sphere"><span class="header-section-number">3.5</span> The octahedron model of the sphere</h2>
 <p>We will create our first combinatorial surface, an octahedron. We will not prove that this type is equivalent to the sphere. In <span class="math inline">\(\mathsf{SimCom_n}\)</span> the combinatorial data of the faces can be represented with a <em>Hasse diagram</em>, which shows the poset of inclusions in a graded manner, with a special top and bottom element. We give an octahedron in Figure <a href="#fig:hasse_octohedron" data-reference-type="ref" data-reference="fig:hasse_octohedron">5</a>. The names of the vertices are short for white, yellow, blue, red, green, and orange, the colors of the faces of a Rubik’s cube. The octahedron is the dual of the cube, with each vertex corresponding to a face.</p>
 <figure id="fig:hasse_octohedron">
-<img src="./41cfa9cf6e056c83cc79c2711f6ee0981317076b.svg" />
+<img src="./5ba5a307b0c8b3bd4ba7803aa875cceecda88143.svg" />
 <figcaption>Hasse diagram of an octahedron <span class="math inline">\(O\)</span>. The row of singletons is <span class="math inline">\(O_0\)</span> and above it are <span class="math inline">\(O_1\)</span> and <span class="math inline">\(O_2\)</span>.</figcaption>
 </figure>
 <p>We can realize <span class="math inline">\(O_0\to O_1\to O\)</span> as a cellular type denoted <span class="math inline">\(\ensuremath{\mathbb{O}}_0\to \ensuremath{\mathbb{O}}_1\to \ensuremath{\mathbb{O}}\)</span>.</p>
