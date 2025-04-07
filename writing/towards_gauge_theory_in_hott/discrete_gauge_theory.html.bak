@@ -154,7 +154,7 @@
 </div>
 <p>These lemmas lead to</p>
 <div class="mycor">
-<p><strong>Corollary 4</strong>. <em>(<span class="citation" data-cites="buchholtz2023central">[<a href="#ref-buchholtz2023central" role="doc-biblioref">4</a>]</span> Corollary 5.5). The pointed type <span class="math inline">\((BG,*)\)</span> is a <span class="math inline">\(\mathrm{K}(G,1)\)</span>, that is <span class="math inline">\(BG\)</span> is connected and has a pointed equivalence <span class="math inline">\(\Omega BG\simeq_* G\)</span>.0◻</em></p>
+<p><strong>Corollary 4</strong>. <em>(<span class="citation" data-cites="buchholtz2023central">[<a href="#ref-buchholtz2023central" role="doc-biblioref">4</a>]</span> Corollary 5.5). The pointed type <span class="math inline">\((BG,\ensuremath{{G}_\mathrm{reg}})\)</span> is a <span class="math inline">\(\mathrm{K}(G,1)\)</span>, that is <span class="math inline">\(BG\)</span> is connected and has a pointed equivalence <span class="math inline">\(\Omega BG\simeq_* G\)</span>.0◻</em></p>
 </div>
 <p>We call types <span class="math inline">\(X\)</span> such that <span class="math inline">\(\Omega X\simeq_* G\)</span> a <em>delooping</em> of <span class="math inline">\(G\)</span>. So the type of <span class="math inline">\(G\)</span>-torsors <span class="math inline">\(BG\)</span> is a delooping of <span class="math inline">\(G\)</span>.</p>
 <p>Suppose we have a basepoint <span class="math inline">\(b:BG\)</span>. Following <span class="citation" data-cites="buchholtz2023central">[<a href="#ref-buchholtz2023central" role="doc-biblioref">4</a>]</span> Section 4.3, another term <span class="math inline">\(X:BG\)</span> is a torsor for the higher group <span class="math inline">\(\Omega_b(BG)\stackrel{\mathrm{def}}{=}(b=_{BG} b)\)</span>. In particular there is an action <span class="math inline">\(\alpha:(b=_{BG}b)\times X\to X\)</span>, and an equivalence <span class="math inline">\((\alpha, \ensuremath{\mathrm{pr}}_2) : (b=_{BG}b)\times X\stackrel{\sim}{\to}(X\times X)\)</span>.</p>
@@ -281,8 +281,9 @@ v_1, v_2&amp;:\mathbb{C}(2) \\
 <div id="lem:addpoints" class="mylemma">
 <p><strong>Lemma 23</strong>. <em><span class="math inline">\(\mathbb{C}(2)\simeq \mathbb{C}(1)\)</span> and in fact <span class="math inline">\(\mathbb{C}(n)\simeq \mathbb{C}(n-1)\)</span>.</em></p>
 </div>
-<div class="myproof">
+<div class="myproofnonqed">
 <p>(Compare to <span class="citation" data-cites="hottbook">[<a href="#ref-hottbook" role="doc-biblioref">6</a>]</span> Lemma 6.5.1.)</p>
+</div>
 <p>First we will define <span class="math inline">\(f:\mathbb{C}(2)\to \mathbb{C}(1)\)</span> and <span class="math inline">\(g:\mathbb{C}(1)\to \mathbb{C}(2)\)</span>, then prove they are inverses. <span class="math display">\[\begin{aligned}
 f(v_1)=f(v_2)&amp;=\ensuremath{\mathsf{base}}&amp;\quad g(\ensuremath{\mathsf{base}})&amp;=v_1\\
 f(\ell_{12})&amp;=\ensuremath{\mathsf{loop}}&amp;\quad g(\ensuremath{\mathsf{loop}})&amp;=\ell_{12}\cdot r_{21}\\
@@ -290,7 +291,7 @@ f(r_{21}) &amp;= \ensuremath{\mathsf{refl}}_{\ensuremath{\mathsf{base}}}&amp; &a
 \end{aligned}\]</span></p>
 <p>We need to show that <span class="math inline">\(f\circ g\sim \ensuremath{\text{id}}_{\mathbb{C}(1)}\)</span> and <span class="math inline">\(g\circ f\sim\ensuremath{\text{id}}_{\mathbb{C}(2)}\)</span>. Think of <span class="math inline">\(f\)</span> as sliding <span class="math inline">\(v_2\)</span> and <span class="math inline">\(v_1\)</span> towards each other along <span class="math inline">\(r_{21}\)</span> coalescing into just <span class="math inline">\(v_1\)</span>, as in Figure <a href="#fig:shrink" data-reference-type="ref" data-reference="fig:shrink">4</a>. This may help understand why the somewhat intricate proof is working.</p>
 <figure id="fig:shrink">
-
+<img src="./62b3e74a18449cb36e17e201f694d477c461f93f.svg" />
 <figcaption>We imagine shrinking <span class="math inline">\(r_{21}\)</span> down to become <span class="math inline">\(\ensuremath{\mathsf{refl}}_\ensuremath{\mathsf{base}}\)</span> in <span class="math inline">\(S^1\)</span>.</figcaption>
 </figure>
 <p>We need terms <span class="math inline">\(p:\prod_{a:\mathbb{C}(1)}f(g(a))=a\)</span> and <span class="math inline">\(q:\prod_{a:\mathbb{C}(2)}g(f(a))=a\)</span>. We will proceed by induction, defining appropriate paths on point constructors and then checking a condition on path constructors that confirms that the built-in transport of these type families respects the definition on points.</p>
@@ -331,8 +332,7 @@ g(f(v_n))&amp;=v_1\\
 g(f(e_{n-1,n}))&amp;=e_{n-1,n}\cdot e_{n,1}\\
 g(f(e_{n,1}))&amp;= \ensuremath{\mathsf{refl}}_{v_1}.
 \end{aligned}\]</span> Guided by our previous experience we choose <span class="math inline">\({e_{n,1}}^{-1}:g(f(v_n))=v_n\)</span>, and define the pathovers by transport.</p>
-<p>The proof that <span class="math inline">\(f\circ g\sim\ensuremath{\text{id}}_{\mathbb{C}(n-1)}\)</span> requires only noting that <span class="math inline">\(f(g(e_{n-1,1}))=f(e_{n-1,n}\cdot e_{n,1})=e_{n-1,1}\cdot\ensuremath{\mathsf{refl}}_{v_1}=e_{n-1,1}\)</span>.</p>
-</div>
+<p>The proof that <span class="math inline">\(f\circ g\sim\ensuremath{\text{id}}_{\mathbb{C}(n-1)}\)</span> requires only noting that <span class="math inline">\(f(g(e_{n-1,1}))=f(e_{n-1,n}\cdot e_{n,1})=e_{n-1,1}\cdot\ensuremath{\mathsf{refl}}_{v_1}=e_{n-1,1}\)</span>.0◻</p>
 <div id="cor:gon" class="mycor">
 <p><strong>Corollary 24</strong>. <em>All polygons are equivalent to <span class="math inline">\(S^1\)</span>, i.e. we have terms <span class="math inline">\(e_n:\mathbb{C}(n)=S^1\)</span>, and hence we have constructed a map from the unit type <span class="math inline">\((\mathbb{C}(n), ||e_n||_{-1}):\mathsf{\mathbf{1}}\to \mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)</span>.</em></p>
 </div>
@@ -359,7 +359,8 @@ g(f(e_{n,1}))&amp;= \ensuremath{\mathsf{refl}}_{v_1}.
 <p>We will create our first combinatorial surface, an octahedron. We will not prove that this type is equivalent to the sphere. In <span class="math inline">\(\mathsf{SimCom_n}\)</span> the combinatorial data of the faces can be represented with a <em>Hasse diagram</em>, which shows the poset of inclusions in a graded manner, with a special top and bottom element. We give an octahedron in Figure <a href="#fig:hasse_octohedron" data-reference-type="ref" data-reference="fig:hasse_octohedron">5</a>. The names of the vertices are short for white, yellow, blue, red, green, and orange, the colors of the faces of a Rubik’s cube. The octahedron is the dual of the cube, with each vertex corresponding to a face.</p>
 <figure id="fig:hasse_octohedron">
 <img src="./5ba5a307b0c8b3bd4ba7803aa875cceecda88143.svg" />
-<figcaption>Hasse diagram of an octahedron <span class="math inline">\(O\)</span>. The row of singletons is <span class="math inline">\(O_0\)</span> and above it are <span class="math inline">\(O_1\)</span> and <span class="math inline">\(O_2\)</span>.</figcaption>
+<img src="./ff7f3a1e9ad288427a1f8fe354f5e5e4112b62fd.svg" />
+<figcaption>The Hasse diagram of the simplicial complex <span class="math inline">\(\ensuremath{\mathbb{O}}\)</span>, and a possible realization. The row of singletons in the Hasse diagram is <span class="math inline">\(O_0\)</span> and above it are <span class="math inline">\(O_1\)</span> and <span class="math inline">\(O_2\)</span>.</figcaption>
 </figure>
 <p>We can realize <span class="math inline">\(O_0\to O_1\to O\)</span> as a cellular type denoted <span class="math inline">\(\ensuremath{\mathbb{O}}_0\to \ensuremath{\mathbb{O}}_1\to \ensuremath{\mathbb{O}}\)</span>.</p>
 <div id="lem:octahedron_sphere" class="mylemma">
@@ -368,10 +369,6 @@ g(f(e_{n,1}))&amp;= \ensuremath{\mathsf{refl}}_{v_1}.
 <div class="myproof">
 <p>Omitted.</p>
 </div>
-<figure>
-<img src="./ff7f3a1e9ad288427a1f8fe354f5e5e4112b62fd.svg" />
-<figcaption>The type <span class="math inline">\(\ensuremath{\mathbb{O}}\)</span> which has 6 points, 12 1-paths, 8 2-paths.</figcaption>
-</figure>
 <h1 data-number="4" id="sec:connections"><span class="header-section-number">4</span> Bundles, connections, and curvature</h1>
 <p>Bundles are simply maps into the universe. By using the extra cellular structure and the even more detailed combinatorial structure of realizations, we can identify inside of HoTT some additional classical definitions.</p>
 <h2 data-number="4.1" id="definitions"><span class="header-section-number">4.1</span> Definitions</h2>
@@ -391,7 +388,7 @@ g(f(e_{n,1}))&amp;= \ensuremath{\mathsf{refl}}_{v_1}.
 </div>
 <p><img src="./66243204ce483cec2a440c2cac60b81bca276e63.svg" alt="image" /></p>
 <p>the outer square of which restricts on each face to the diagram</p>
-<p><img src="./81668ffa97dbc57b904016b3bba9bfc903295e10.svg" alt="image" /></p>
+<p><img src="./51f70ddbfa2278ed16ace68e12b4817189d53ac8.svg" alt="image" /></p>
 <p>then we say the filler <span class="math inline">\(\flat_k\)</span> is called a <strong>flatness structure for the face <span class="math inline">\(m_k\)</span></strong>, and its ending path is called <strong>curvature at the face <span class="math inline">\(m_k\)</span></strong>.</p>
 <p>Although all the pushout diagrams are introducing hub points for each edge and face, in practice we will ignore those. But in the case of flatness, which we will use extensively, we should clarify what its type is when we are ignoring hubs. If we have a face <span class="math inline">\(F\)</span> with vertices <span class="math inline">\(v_1, v_2, v_3\)</span> and paths <span class="math inline">\(e_{ij}:v_i=v_j\)</span> that are realizations of edges, and the loop <span class="math inline">\(\ell_F\stackrel{\mathrm{def}}{=}e_{12}\cdot e_{23}\cdot e_{31}\)</span> then we will write <span class="math inline">\(\flat(\ell_F):\ensuremath{\text{id}}_{f_0(v_1)}=f_1(\ell_F)\)</span> for a 2-path filling this loop.</p>
 <p>The definitions can be digested to give</p>

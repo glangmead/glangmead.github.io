@@ -172,7 +172,7 @@
 &lt;/div&gt;
 &lt;p&gt;These lemmas lead to&lt;/p&gt;
 &lt;div class=&#34;mycor&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Corollary 4&lt;/strong&gt;. &lt;em&gt;(&lt;span class=&#34;citation&#34; data-cites=&#34;buchholtz2023central&#34;&gt;[&lt;a href=&#34;#ref-buchholtz2023central&#34; role=&#34;doc-biblioref&#34;&gt;4&lt;/a&gt;]&lt;/span&gt; Corollary 5.5). The pointed type &lt;span class=&#34;math inline&#34;&gt;\((BG,*)\)&lt;/span&gt; is a &lt;span class=&#34;math inline&#34;&gt;\(\mathrm{K}(G,1)\)&lt;/span&gt;, that is &lt;span class=&#34;math inline&#34;&gt;\(BG\)&lt;/span&gt; is connected and has a pointed equivalence &lt;span class=&#34;math inline&#34;&gt;\(\Omega BG\simeq_* G\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Corollary 4&lt;/strong&gt;. &lt;em&gt;(&lt;span class=&#34;citation&#34; data-cites=&#34;buchholtz2023central&#34;&gt;[&lt;a href=&#34;#ref-buchholtz2023central&#34; role=&#34;doc-biblioref&#34;&gt;4&lt;/a&gt;]&lt;/span&gt; Corollary 5.5). The pointed type &lt;span class=&#34;math inline&#34;&gt;\((BG,\ensuremath{{G}_\mathrm{reg}})\)&lt;/span&gt; is a &lt;span class=&#34;math inline&#34;&gt;\(\mathrm{K}(G,1)\)&lt;/span&gt;, that is &lt;span class=&#34;math inline&#34;&gt;\(BG\)&lt;/span&gt; is connected and has a pointed equivalence &lt;span class=&#34;math inline&#34;&gt;\(\Omega BG\simeq_* G\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;We call types &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; such that &lt;span class=&#34;math inline&#34;&gt;\(\Omega X\simeq_* G\)&lt;/span&gt; a &lt;em&gt;delooping&lt;/em&gt; of &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt;. So the type of &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt;-torsors &lt;span class=&#34;math inline&#34;&gt;\(BG\)&lt;/span&gt; is a delooping of &lt;span class=&#34;math inline&#34;&gt;\(G\)&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;Suppose we have a basepoint &lt;span class=&#34;math inline&#34;&gt;\(b:BG\)&lt;/span&gt;. Following &lt;span class=&#34;citation&#34; data-cites=&#34;buchholtz2023central&#34;&gt;[&lt;a href=&#34;#ref-buchholtz2023central&#34; role=&#34;doc-biblioref&#34;&gt;4&lt;/a&gt;]&lt;/span&gt; Section 4.3, another term &lt;span class=&#34;math inline&#34;&gt;\(X:BG\)&lt;/span&gt; is a torsor for the higher group &lt;span class=&#34;math inline&#34;&gt;\(\Omega_b(BG)\stackrel{\mathrm{def}}{=}(b=_{BG} b)\)&lt;/span&gt;. In particular there is an action &lt;span class=&#34;math inline&#34;&gt;\(\alpha:(b=_{BG}b)\times X\to X\)&lt;/span&gt;, and an equivalence &lt;span class=&#34;math inline&#34;&gt;\((\alpha, \ensuremath{\mathrm{pr}}_2) : (b=_{BG}b)\times X\stackrel{\sim}{\to}(X\times X)\)&lt;/span&gt;.&lt;/p&gt;
@@ -299,8 +299,9 @@ v_1, v_2&amp;amp;:\mathbb{C}(2) \\
 &lt;div id=&#34;lem:addpoints&#34; class=&#34;mylemma&#34;&gt;
 &lt;p&gt;&lt;strong&gt;Lemma 23&lt;/strong&gt;. &lt;em&gt;&lt;span class=&#34;math inline&#34;&gt;\(\mathbb{C}(2)\simeq \mathbb{C}(1)\)&lt;/span&gt; and in fact &lt;span class=&#34;math inline&#34;&gt;\(\mathbb{C}(n)\simeq \mathbb{C}(n-1)\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&#34;myproof&#34;&gt;
+&lt;div class=&#34;myproofnonqed&#34;&gt;
 &lt;p&gt;(Compare to &lt;span class=&#34;citation&#34; data-cites=&#34;hottbook&#34;&gt;[&lt;a href=&#34;#ref-hottbook&#34; role=&#34;doc-biblioref&#34;&gt;6&lt;/a&gt;]&lt;/span&gt; Lemma 6.5.1.)&lt;/p&gt;
+&lt;/div&gt;
 &lt;p&gt;First we will define &lt;span class=&#34;math inline&#34;&gt;\(f:\mathbb{C}(2)\to \mathbb{C}(1)\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(g:\mathbb{C}(1)\to \mathbb{C}(2)\)&lt;/span&gt;, then prove they are inverses. &lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
 f(v_1)=f(v_2)&amp;amp;=\ensuremath{\mathsf{base}}&amp;amp;\quad g(\ensuremath{\mathsf{base}})&amp;amp;=v_1\\
 f(\ell_{12})&amp;amp;=\ensuremath{\mathsf{loop}}&amp;amp;\quad g(\ensuremath{\mathsf{loop}})&amp;amp;=\ell_{12}\cdot r_{21}\\
@@ -308,7 +309,7 @@ f(r_{21}) &amp;amp;= \ensuremath{\mathsf{refl}}_{\ensuremath{\mathsf{base}}}&amp
 \end{aligned}\]&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;We need to show that &lt;span class=&#34;math inline&#34;&gt;\(f\circ g\sim \ensuremath{\text{id}}_{\mathbb{C}(1)}\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(g\circ f\sim\ensuremath{\text{id}}_{\mathbb{C}(2)}\)&lt;/span&gt;. Think of &lt;span class=&#34;math inline&#34;&gt;\(f\)&lt;/span&gt; as sliding &lt;span class=&#34;math inline&#34;&gt;\(v_2\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(v_1\)&lt;/span&gt; towards each other along &lt;span class=&#34;math inline&#34;&gt;\(r_{21}\)&lt;/span&gt; coalescing into just &lt;span class=&#34;math inline&#34;&gt;\(v_1\)&lt;/span&gt;, as in Figure &lt;a href=&#34;#fig:shrink&#34; data-reference-type=&#34;ref&#34; data-reference=&#34;fig:shrink&#34;&gt;4&lt;/a&gt;. This may help understand why the somewhat intricate proof is working.&lt;/p&gt;
 &lt;figure id=&#34;fig:shrink&#34;&gt;
-
+&lt;img src=&#34;./62b3e74a18449cb36e17e201f694d477c461f93f.svg&#34; /&gt;
 &lt;figcaption&gt;We imagine shrinking &lt;span class=&#34;math inline&#34;&gt;\(r_{21}\)&lt;/span&gt; down to become &lt;span class=&#34;math inline&#34;&gt;\(\ensuremath{\mathsf{refl}}_\ensuremath{\mathsf{base}}\)&lt;/span&gt; in &lt;span class=&#34;math inline&#34;&gt;\(S^1\)&lt;/span&gt;.&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;p&gt;We need terms &lt;span class=&#34;math inline&#34;&gt;\(p:\prod_{a:\mathbb{C}(1)}f(g(a))=a\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(q:\prod_{a:\mathbb{C}(2)}g(f(a))=a\)&lt;/span&gt;. We will proceed by induction, defining appropriate paths on point constructors and then checking a condition on path constructors that confirms that the built-in transport of these type families respects the definition on points.&lt;/p&gt;
@@ -349,8 +350,7 @@ g(f(v_n))&amp;amp;=v_1\\
 g(f(e_{n-1,n}))&amp;amp;=e_{n-1,n}\cdot e_{n,1}\\
 g(f(e_{n,1}))&amp;amp;= \ensuremath{\mathsf{refl}}_{v_1}.
 \end{aligned}\]&lt;/span&gt; Guided by our previous experience we choose &lt;span class=&#34;math inline&#34;&gt;\({e_{n,1}}^{-1}:g(f(v_n))=v_n\)&lt;/span&gt;, and define the pathovers by transport.&lt;/p&gt;
-&lt;p&gt;The proof that &lt;span class=&#34;math inline&#34;&gt;\(f\circ g\sim\ensuremath{\text{id}}_{\mathbb{C}(n-1)}\)&lt;/span&gt; requires only noting that &lt;span class=&#34;math inline&#34;&gt;\(f(g(e_{n-1,1}))=f(e_{n-1,n}\cdot e_{n,1})=e_{n-1,1}\cdot\ensuremath{\mathsf{refl}}_{v_1}=e_{n-1,1}\)&lt;/span&gt;.&lt;/p&gt;
-&lt;/div&gt;
+&lt;p&gt;The proof that &lt;span class=&#34;math inline&#34;&gt;\(f\circ g\sim\ensuremath{\text{id}}_{\mathbb{C}(n-1)}\)&lt;/span&gt; requires only noting that &lt;span class=&#34;math inline&#34;&gt;\(f(g(e_{n-1,1}))=f(e_{n-1,n}\cdot e_{n,1})=e_{n-1,1}\cdot\ensuremath{\mathsf{refl}}_{v_1}=e_{n-1,1}\)&lt;/span&gt;.&lt;/p&gt;
 &lt;div id=&#34;cor:gon&#34; class=&#34;mycor&#34;&gt;
 &lt;p&gt;&lt;strong&gt;Corollary 24&lt;/strong&gt;. &lt;em&gt;All polygons are equivalent to &lt;span class=&#34;math inline&#34;&gt;\(S^1\)&lt;/span&gt;, i.e. we have terms &lt;span class=&#34;math inline&#34;&gt;\(e_n:\mathbb{C}(n)=S^1\)&lt;/span&gt;, and hence we have constructed a map from the unit type &lt;span class=&#34;math inline&#34;&gt;\((\mathbb{C}(n), ||e_n||_{-1}):\mathsf{\mathbf{1}}\to \mathrm{EM}(\ensuremath{\mathbb{Z}},1)\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
@@ -377,7 +377,8 @@ g(f(e_{n,1}))&amp;amp;= \ensuremath{\mathsf{refl}}_{v_1}.
 &lt;p&gt;We will create our first combinatorial surface, an octahedron. We will not prove that this type is equivalent to the sphere. In &lt;span class=&#34;math inline&#34;&gt;\(\mathsf{SimCom_n}\)&lt;/span&gt; the combinatorial data of the faces can be represented with a &lt;em&gt;Hasse diagram&lt;/em&gt;, which shows the poset of inclusions in a graded manner, with a special top and bottom element. We give an octahedron in Figure &lt;a href=&#34;#fig:hasse_octohedron&#34; data-reference-type=&#34;ref&#34; data-reference=&#34;fig:hasse_octohedron&#34;&gt;5&lt;/a&gt;. The names of the vertices are short for white, yellow, blue, red, green, and orange, the colors of the faces of a Rubik’s cube. The octahedron is the dual of the cube, with each vertex corresponding to a face.&lt;/p&gt;
 &lt;figure id=&#34;fig:hasse_octohedron&#34;&gt;
 &lt;img src=&#34;./5ba5a307b0c8b3bd4ba7803aa875cceecda88143.svg&#34; /&gt;
-&lt;figcaption&gt;Hasse diagram of an octahedron &lt;span class=&#34;math inline&#34;&gt;\(O\)&lt;/span&gt;. The row of singletons is &lt;span class=&#34;math inline&#34;&gt;\(O_0\)&lt;/span&gt; and above it are &lt;span class=&#34;math inline&#34;&gt;\(O_1\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(O_2\)&lt;/span&gt;.&lt;/figcaption&gt;
+&lt;img src=&#34;./ff7f3a1e9ad288427a1f8fe354f5e5e4112b62fd.svg&#34; /&gt;
+&lt;figcaption&gt;The Hasse diagram of the simplicial complex &lt;span class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{O}}\)&lt;/span&gt;, and a possible realization. The row of singletons in the Hasse diagram is &lt;span class=&#34;math inline&#34;&gt;\(O_0\)&lt;/span&gt; and above it are &lt;span class=&#34;math inline&#34;&gt;\(O_1\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(O_2\)&lt;/span&gt;.&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;p&gt;We can realize &lt;span class=&#34;math inline&#34;&gt;\(O_0\to O_1\to O\)&lt;/span&gt; as a cellular type denoted &lt;span class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{O}}_0\to \ensuremath{\mathbb{O}}_1\to \ensuremath{\mathbb{O}}\)&lt;/span&gt;.&lt;/p&gt;
 &lt;div id=&#34;lem:octahedron_sphere&#34; class=&#34;mylemma&#34;&gt;
@@ -386,10 +387,6 @@ g(f(e_{n,1}))&amp;amp;= \ensuremath{\mathsf{refl}}_{v_1}.
 &lt;div class=&#34;myproof&#34;&gt;
 &lt;p&gt;Omitted.&lt;/p&gt;
 &lt;/div&gt;
-&lt;figure&gt;
-&lt;img src=&#34;./ff7f3a1e9ad288427a1f8fe354f5e5e4112b62fd.svg&#34; /&gt;
-&lt;figcaption&gt;The type &lt;span class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{O}}\)&lt;/span&gt; which has 6 points, 12 1-paths, 8 2-paths.&lt;/figcaption&gt;
-&lt;/figure&gt;
 &lt;h1 data-number=&#34;4&#34; id=&#34;sec:connections&#34;&gt;&lt;span class=&#34;header-section-number&#34;&gt;4&lt;/span&gt; Bundles, connections, and curvature&lt;/h1&gt;
 &lt;p&gt;Bundles are simply maps into the universe. By using the extra cellular structure and the even more detailed combinatorial structure of realizations, we can identify inside of HoTT some additional classical definitions.&lt;/p&gt;
 &lt;h2 data-number=&#34;4.1&#34; id=&#34;definitions&#34;&gt;&lt;span class=&#34;header-section-number&#34;&gt;4.1&lt;/span&gt; Definitions&lt;/h2&gt;
@@ -409,7 +406,7 @@ g(f(e_{n,1}))&amp;amp;= \ensuremath{\mathsf{refl}}_{v_1}.
 &lt;/div&gt;
 &lt;p&gt;&lt;img src=&#34;./66243204ce483cec2a440c2cac60b81bca276e63.svg&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;the outer square of which restricts on each face to the diagram&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;./81668ffa97dbc57b904016b3bba9bfc903295e10.svg&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./51f70ddbfa2278ed16ace68e12b4817189d53ac8.svg&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;then we say the filler &lt;span class=&#34;math inline&#34;&gt;\(\flat_k\)&lt;/span&gt; is called a &lt;strong&gt;flatness structure for the face &lt;span class=&#34;math inline&#34;&gt;\(m_k\)&lt;/span&gt;&lt;/strong&gt;, and its ending path is called &lt;strong&gt;curvature at the face &lt;span class=&#34;math inline&#34;&gt;\(m_k\)&lt;/span&gt;&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;Although all the pushout diagrams are introducing hub points for each edge and face, in practice we will ignore those. But in the case of flatness, which we will use extensively, we should clarify what its type is when we are ignoring hubs. If we have a face &lt;span class=&#34;math inline&#34;&gt;\(F\)&lt;/span&gt; with vertices &lt;span class=&#34;math inline&#34;&gt;\(v_1, v_2, v_3\)&lt;/span&gt; and paths &lt;span class=&#34;math inline&#34;&gt;\(e_{ij}:v_i=v_j\)&lt;/span&gt; that are realizations of edges, and the loop &lt;span class=&#34;math inline&#34;&gt;\(\ell_F\stackrel{\mathrm{def}}{=}e_{12}\cdot e_{23}\cdot e_{31}\)&lt;/span&gt; then we will write &lt;span class=&#34;math inline&#34;&gt;\(\flat(\ell_F):\ensuremath{\text{id}}_{f_0(v_1)}=f_1(\ell_F)\)&lt;/span&gt; for a 2-path filling this loop.&lt;/p&gt;
 &lt;p&gt;The definitions can be digested to give&lt;/p&gt;
