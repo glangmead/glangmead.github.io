@@ -63,13 +63,12 @@
   &lt;link rel=&#34;stylesheet&#34; href=&#34;https://fonts.googleapis.com/css2?family=Libre+Baskerville&amp;family=Quattrocento:wght@400&#34;&gt;
   &lt;style&gt;
   body {
-    font-family: Baskerville, &#39;Libre Baskerville&#39;, serif;
+    font-family: -apple-system-ui-serif, ui-serif, serif;
   }
   h1, h2, h3, h4, h5, h6, .abstract-title {
-    font-family: Quattrocento, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, &#39;Helvetica&#39;, sans-serif;
     font-weight: bold;
     text-align: center;
-  }
   img {
     display: block;
     margin-left: auto;
@@ -247,7 +246,7 @@
 &lt;div class=&#34;mydef&#34;&gt;
 &lt;p&gt;&lt;strong&gt;Definition 15&lt;/strong&gt;. &lt;em&gt;The &lt;strong&gt;realization &lt;span class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{M}}_1\)&lt;/span&gt; of a 1-dimensional simplicial complex&lt;/strong&gt; &lt;span class=&#34;math inline&#34;&gt;\([M_0, M_1]\)&lt;/span&gt; is the pushout&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;p&gt;&lt;img src=&#34;./fb34b6738d146e732fed6ad0a3018bc661d716f2.svg&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./7331fc1bf8118142c32d91c20cb7d8d37220b32a.svg&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;where &lt;span class=&#34;math inline&#34;&gt;\(a_k\)&lt;/span&gt; is the attachment data of the edges in &lt;span class=&#34;math inline&#34;&gt;\(M_1\)&lt;/span&gt;, as in diagram &lt;a href=&#34;#eq:attach&#34; data-reference-type=&#34;ref&#34; data-reference=&#34;eq:attach&#34;&gt;[eq:attach]&lt;/a&gt;. The right vertical map &lt;span class=&#34;math inline&#34;&gt;\(*_{\ensuremath{\mathbb{M}}_1}\)&lt;/span&gt; provides a hub point for each edge, and the homotopy &lt;span class=&#34;math inline&#34;&gt;\(h_1\)&lt;/span&gt; provides the spokes that connect the hub to the vertices.&lt;/p&gt;
 &lt;div class=&#34;mydef&#34;&gt;
 &lt;p&gt;&lt;strong&gt;Definition 16&lt;/strong&gt;. &lt;em&gt;The &lt;strong&gt;simplicial 1-sphere&lt;/strong&gt; &lt;span class=&#34;math inline&#34;&gt;\(\partial\Delta^{2}\)&lt;/span&gt; is the realization of &lt;span class=&#34;math inline&#34;&gt;\(\partial P(2)\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
@@ -432,9 +431,10 @@ g(f(e_{n,1}))&amp;amp;= \ensuremath{\mathsf{refl}}_{v_1}.
 &lt;p&gt;&lt;em&gt;We chose these orderings for the vertices in the link, by visualizing standing at the given vertex as if it were the north pole, then looking south and enumerating the link in clockwise order, starting from &lt;span class=&#34;math inline&#34;&gt;\(w\)&lt;/span&gt; if possible, else &lt;span class=&#34;math inline&#34;&gt;\(b\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;figure id=&#34;fig:triangle_of_equators&#34;&gt;
-&lt;img src=&#34;./5223124258db050f495250e281a65d462714f6df.svg&#34; /&gt;
-&lt;img src=&#34;./f8ad0fbb66a7ad51b3cb4db7a0f35ea8a8a56a4b.svg&#34; /&gt;
-&lt;img src=&#34;./d3b55304a407c9ca808e19bf9256206529608d82.svg&#34; /&gt;
+&lt;img src=&#34;./bc228117bed4f2a718898688d2ae72ccd5834b2e.svg&#34; /&gt;
+&lt;img src=&#34;./79abb2819d9b5eea1201c6011868d3094da39e41.svg&#34; /&gt;
+&lt;img src=&#34;./8d6943ecb4be30b9072cf62f41e77e80fb1f6b64.svg&#34; /&gt;
+&lt;img src=&#34;./e22ce95fad136eabf32ff6ef6f87e299b87c0016.svg&#34; /&gt;
 &lt;figcaption&gt;&lt;span class=&#34;math inline&#34;&gt;\(\mathop{\mathrm{\mathsf{link}}}\)&lt;/span&gt; for the vertices &lt;span class=&#34;math inline&#34;&gt;\(w, b\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(r\)&lt;/span&gt;.&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;p&gt;To extend &lt;span class=&#34;math inline&#34;&gt;\(T_0\)&lt;/span&gt; to a function &lt;span class=&#34;math inline&#34;&gt;\(T_1\)&lt;/span&gt; on the 1-skeleton we have some freedom. We will do something motivated by the figures we have been drawing of an octahedron embedded in 3-dimensional space. We will imagine how &lt;span class=&#34;math inline&#34;&gt;\(T_1\)&lt;/span&gt; changes as we slide from point to point in the embedding shown in the figures. Sliding from &lt;span class=&#34;math inline&#34;&gt;\(w\)&lt;/span&gt; to &lt;span class=&#34;math inline&#34;&gt;\(b\)&lt;/span&gt; and tipping the link as we go, we see &lt;span class=&#34;math inline&#34;&gt;\(r\mapsto r\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(o\mapsto o\)&lt;/span&gt; because those lie on the axis of rotation. Then &lt;span class=&#34;math inline&#34;&gt;\(g\mapsto w\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(b\mapsto y\)&lt;/span&gt;.&lt;/p&gt;

@@ -45,13 +45,12 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Quattrocento:wght@400">
   <style>
   body {
-    font-family: Baskerville, 'Libre Baskerville', serif;
+    font-family: -apple-system-ui-serif, ui-serif, serif;
   }
   h1, h2, h3, h4, h5, h6, .abstract-title {
-    font-family: Quattrocento, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Helvetica', sans-serif;
     font-weight: bold;
     text-align: center;
-  }
   img {
     display: block;
     margin-left: auto;
@@ -229,7 +228,7 @@
 <div class="mydef">
 <p><strong>Definition 15</strong>. <em>The <strong>realization <span class="math inline">\(\ensuremath{\mathbb{M}}_1\)</span> of a 1-dimensional simplicial complex</strong> <span class="math inline">\([M_0, M_1]\)</span> is the pushout</em></p>
 </div>
-<p><img src="./fb34b6738d146e732fed6ad0a3018bc661d716f2.svg" alt="image" /></p>
+<p><img src="./7331fc1bf8118142c32d91c20cb7d8d37220b32a.svg" alt="image" /></p>
 <p>where <span class="math inline">\(a_k\)</span> is the attachment data of the edges in <span class="math inline">\(M_1\)</span>, as in diagram <a href="#eq:attach" data-reference-type="ref" data-reference="eq:attach">[eq:attach]</a>. The right vertical map <span class="math inline">\(*_{\ensuremath{\mathbb{M}}_1}\)</span> provides a hub point for each edge, and the homotopy <span class="math inline">\(h_1\)</span> provides the spokes that connect the hub to the vertices.</p>
 <div class="mydef">
 <p><strong>Definition 16</strong>. <em>The <strong>simplicial 1-sphere</strong> <span class="math inline">\(\partial\Delta^{2}\)</span> is the realization of <span class="math inline">\(\partial P(2)\)</span>.</em></p>
@@ -414,9 +413,10 @@ g(f(e_{n,1}))&amp;= \ensuremath{\mathsf{refl}}_{v_1}.
 <p><em>We chose these orderings for the vertices in the link, by visualizing standing at the given vertex as if it were the north pole, then looking south and enumerating the link in clockwise order, starting from <span class="math inline">\(w\)</span> if possible, else <span class="math inline">\(b\)</span>.</em></p>
 </div>
 <figure id="fig:triangle_of_equators">
-<img src="./5223124258db050f495250e281a65d462714f6df.svg" />
-<img src="./f8ad0fbb66a7ad51b3cb4db7a0f35ea8a8a56a4b.svg" />
-<img src="./d3b55304a407c9ca808e19bf9256206529608d82.svg" />
+<img src="./bc228117bed4f2a718898688d2ae72ccd5834b2e.svg" />
+<img src="./79abb2819d9b5eea1201c6011868d3094da39e41.svg" />
+<img src="./8d6943ecb4be30b9072cf62f41e77e80fb1f6b64.svg" />
+<img src="./e22ce95fad136eabf32ff6ef6f87e299b87c0016.svg" />
 <figcaption><span class="math inline">\(\mathop{\mathrm{\mathsf{link}}}\)</span> for the vertices <span class="math inline">\(w, b\)</span> and <span class="math inline">\(r\)</span>.</figcaption>
 </figure>
 <p>To extend <span class="math inline">\(T_0\)</span> to a function <span class="math inline">\(T_1\)</span> on the 1-skeleton we have some freedom. We will do something motivated by the figures we have been drawing of an octahedron embedded in 3-dimensional space. We will imagine how <span class="math inline">\(T_1\)</span> changes as we slide from point to point in the embedding shown in the figures. Sliding from <span class="math inline">\(w\)</span> to <span class="math inline">\(b\)</span> and tipping the link as we go, we see <span class="math inline">\(r\mapsto r\)</span> and <span class="math inline">\(o\mapsto o\)</span> because those lie on the axis of rotation. Then <span class="math inline">\(g\mapsto w\)</span> and <span class="math inline">\(b\mapsto y\)</span>.</p>
