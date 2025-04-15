@@ -413,10 +413,10 @@ g(f(e_{n,1}))&amp;= \ensuremath{\mathsf{refl}}_{v_1}.
 <p><em>We chose these orderings for the vertices in the link, by visualizing standing at the given vertex as if it were the north pole, then looking south and enumerating the link in clockwise order, starting from <span class="math inline">\(w\)</span> if possible, else <span class="math inline">\(b\)</span>.</em></p>
 </div>
 <figure id="fig:triangle_of_equators">
-<img src="./bc228117bed4f2a718898688d2ae72ccd5834b2e.svg" />
-<img src="./79abb2819d9b5eea1201c6011868d3094da39e41.svg" />
-<img src="./8d6943ecb4be30b9072cf62f41e77e80fb1f6b64.svg" />
-<img src="./e22ce95fad136eabf32ff6ef6f87e299b87c0016.svg" />
+<img src="./5642e91b5003b0aeb33f959355a2a20edc881f27.svg" />
+<img src="./376369dc3698539eaed8f197e9f55569efd8e0be.svg" />
+<img src="./ac3811f777473553c5a43bafface29f2c3ad9123.svg" />
+<img src="./368050ad99f9db06be2724ef38118dc50903198f.svg" />
 <figcaption><span class="math inline">\(\mathop{\mathrm{\mathsf{link}}}\)</span> for the vertices <span class="math inline">\(w, b\)</span> and <span class="math inline">\(r\)</span>.</figcaption>
 </figure>
 <p>To extend <span class="math inline">\(T_0\)</span> to a function <span class="math inline">\(T_1\)</span> on the 1-skeleton we have some freedom. We will do something motivated by the figures we have been drawing of an octahedron embedded in 3-dimensional space. We will imagine how <span class="math inline">\(T_1\)</span> changes as we slide from point to point in the embedding shown in the figures. Sliding from <span class="math inline">\(w\)</span> to <span class="math inline">\(b\)</span> and tipping the link as we go, we see <span class="math inline">\(r\mapsto r\)</span> and <span class="math inline">\(o\mapsto o\)</span> because those lie on the axis of rotation. Then <span class="math inline">\(g\mapsto w\)</span> and <span class="math inline">\(b\mapsto y\)</span>.</p>
@@ -486,7 +486,7 @@ g(f(e_{n,1}))&amp;= \ensuremath{\mathsf{refl}}_{v_1}.
 </figure>
 <p>As we traverse an edge, say <span class="math inline">\(e_{12}\)</span>, we get a path in <span class="math inline">\(T_2\)</span> which is the image of <span class="math inline">\(e_{12}\)</span> under <span class="math inline">\(X\)</span>, denoted <span class="math inline">\(X_{12}\)</span>. As we traverse an additional edge, <span class="math inline">\(X_{12}\)</span> is simply mapped to the next vertex by transport. The image is carried first to <span class="math inline">\(T_{32}(X_{12})\)</span> then to <span class="math inline">\(T_{13}\circ T_{32}(X_{12})\)</span>.</p>
 <figure id="fig:swirling">
-<img src="./92fbe28acde5ee04c88cf3d5cc5436724eceecb2.svg" />
+<img src="./5bd5a8f4e359a4a931f354b4664248f3d550d43a.svg" />
 <figcaption>A vector field swirling counterclockwise around a face, in a bundle of squares. Imagine that transport along <span class="math inline">\(e_{12}\)</span> does not rotate along the page, that transport along <span class="math inline">\(e_{23}\)</span> rotates counterclockwise by 90 degrees, and that transport along <span class="math inline">\(e_{31}\)</span> again does not rotate along the page. Thick black vectors are the vector field at a point. Thin vectors are transported once, dashed twice, and dotted three times. The vertices <span class="math inline">\(v_{ij}\)</span> are in the tangent fibers. If you have a colorized version of the document, the colors of the arrows correspond: the red edge produced the red edge in the fibers.</figcaption>
 </figure>
 <p>We wish to simplify expressions such as <span class="math inline">\(T_{13}T_{32}X_{12}\cdot T_{13}X_{23}\cdot X_{31}\)</span>, which take place in a particular fiber (<span class="math inline">\(T_1\)</span> in this case), and which depend on arranging for the endpoint of one segment to agree with the start of another. The simplification will empower us to easily perform calculations over the whole manifold, and to prove Theorem <a href="#thm:total_index_total_curvature" data-reference-type="ref" data-reference="thm:total_index_total_curvature">52</a>.</p>
@@ -506,7 +506,7 @@ g(f(e_{n,1}))&amp;= \ensuremath{\mathsf{refl}}_{v_1}.
 <p>If <span class="math inline">\(p:x=_G y\)</span> and <span class="math inline">\(p&#39;:x&#39;=_G y&#39;\)</span>, then we can define <span class="math inline">\(\mu_=(p, p&#39;)\)</span> by concatenating the three paths <span class="math display">\[\begin{aligned}
 \mu(x&#39;,p)&amp;:\mu(x&#39;, x)=_G\mu(x&#39;, y)\\
 \mathsf{is\raisebox{0.5pt}{\underline{\phantom{t}}}comm}(x&#39;,y)&amp;:\mu(x&#39;,y)=_G\mu(y,x&#39;)\\
-\mu(y, p&#39;)&amp;:\mu(y, x&#39;)=_G\mu(y, y&#39;).
+\mu(y, p&#39;)&amp;:\mu(y, x&#39;)=_G\mu(y, y&#39;).\qedhere
 \end{aligned}\]</span></p>
 </div>
 <p>Each fiber <span class="math inline">\(T_i\)</span> is pointed by <span class="math inline">\(X_i\)</span>, so we can define the map <span class="math inline">\(T_i\xrightarrow[]{-X_i}\mathscr{G}(m)\)</span>, and then give a name to the special term <span class="math inline">\(T_{ij}X_j - X_i\)</span>.</p>
@@ -522,7 +522,7 @@ g(f(e_{n,1}))&amp;= \ensuremath{\mathsf{refl}}_{v_1}.
 (X_i + \rho_{ij})+\rho_{ji} &amp;=_{T_i} T_{ij}X_j + \rho_{ji}&amp;&amp;\text{by definition of }\rho_{ij}\\
 &amp;=_{T_i} T_{ij}(X_j + \rho_{ji})&amp;&amp;\text{by equivariance of transport} \\
 &amp;=_{T_i} T_{ij}(T_{ji}(X_i))&amp;&amp;\text{by definition of }\rho_{ji}\\
-&amp;=_{T_i} X_i&amp;&amp;\text{by definition of }T
+&amp;=_{T_i} X_i&amp;&amp;\text{by definition of }T\qedhere
 \end{aligned}\]</span></p>
 </div>
 <p>We can obtain a path in <span class="math inline">\(\mathscr{G}(m)\)</span> from a dependent path by again subtracting the basepoint: <span class="math display">\[\begin{aligned}
@@ -548,11 +548,11 @@ g(f(e_{n,1}))&amp;= \ensuremath{\mathsf{refl}}_{v_1}.
 &amp;=_{0=_{\mathscr{G}(m)}0} ((X_{ij}-X_j)+\rho_{ij})\cdot (X_{ji} - X_i)&amp;&amp;\text{definition of }\sigma s\\
 &amp;=_{0=_{\mathscr{G}(m)}0} (T_{ij}(X_{ij})-X_i)\cdot (X_{ji} - X_i)&amp;&amp;\text{action of }\rho_{ij}\text{ (see (\ref{eq:action_of_rho}))} \\
 &amp;=_{0=_{\mathscr{G}(m)}0} \ensuremath{\mathsf{refl}}_{X_i}-X_i&amp;&amp;\text{path induction for }X\\
-&amp;=_{0=_{\mathscr{G}(m)}0} \ensuremath{\mathsf{refl}}_0&amp;&amp;
+&amp;=_{0=_{\mathscr{G}(m)}0} \ensuremath{\mathsf{refl}}_0&amp;&amp;\qedhere
 \end{aligned}\]</span></p>
 </div>
 <div class="mynote">
-<p><strong>Remark 43</strong>. <em>The classical argument of Hopf <span class="citation" data-cites="hopf">[<a href="#ref-hopf" role="doc-biblioref">2</a>]</span>, which is presented in more detail in the more readily available <span class="citation" data-cites="needham">[<a href="#ref-needham" role="doc-biblioref">3</a>]</span>, makes an implicit assumption that we can concatenate two terms of different type such as <span class="math inline">\(X_{ij}\)</span> and <span class="math inline">\(X_{kl}\)</span> by saying. The authors name such terms “change in angle across an edge” and stipulate that this is a function “defined on edges.” The extra work we are doing in this section amounts to a partial formalization of this idea.</em></p>
+<p><strong>Remark 43</strong>. <em>The classical argument of Hopf <span class="citation" data-cites="hopf">[<a href="#ref-hopf" role="doc-biblioref">2</a>]</span>, which is presented in more detail in the more readily available <span class="citation" data-cites="needham">[<a href="#ref-needham" role="doc-biblioref">3</a>]</span>, makes an implicit assumption that we can concatenate two terms of different type such as <span class="math inline">\(X_{ij}\)</span> and <span class="math inline">\(X_{kl}\)</span>. The authors name such terms “change in angle across an edge” and stipulate that this is a function “defined on edges.” The extra work we are doing in this section amounts to a partial formalization of this idea.</em></p>
 </div>
 <h2 data-number="5.3" id="sec:octahedron_vector_field"><span class="header-section-number">5.3</span> An example vector field on the sphere</h2>
 <p>Figure <a href="#fig:octahedron_vector_field" data-reference-type="ref" data-reference="fig:octahedron_vector_field">9</a> shows an example of a vector field <span class="math inline">\(X_\ensuremath{\mathbb{O}}^s\)</span> (<span class="math inline">\(s\)</span> for “spin”) on the octahedron <span class="math inline">\(\ensuremath{\mathbb{O}}\)</span>. The picture can really only convey the value of <span class="math inline">\(X_\ensuremath{\mathbb{O}}^s\)</span> on vertices, which it does by displaying it as an arrow on the surface itself, for example as an arrow from <span class="math inline">\(w\)</span> to <span class="math inline">\(r\)</span>, instead of trying to draw the fiber at <span class="math inline">\(w\)</span> which is where <span class="math inline">\(r:\mathop{\mathrm{\mathsf{link}}}(w)\)</span> actually lives. But hopefully there is a net gain in clarity.</p>
@@ -717,7 +717,7 @@ I^X_\mathrm{tot}&amp; \stackrel{\mathrm{def}}{=}\sum_F I^X_F &amp;&amp;:\ensurem
 <p><strong>Proposition 51</strong>. <em>The total swirling is <span class="math inline">\(\ensuremath{\mathsf{refl}}_0\)</span> in <span class="math inline">\(Tm=Tm\)</span>.</em></p>
 </div>
 <div class="myproof">
-<p>We can compute <span class="math display">\[\sum_F\sigma^X_F=\left[\sum_{(\mathrm{edges\ }e_{ij})}\sigma_{ij}+\sigma_{ji}\right]=_{Tm=Tm}\ensuremath{\mathsf{refl}}_0.\]</span></p>
+<p>We can compute <span class="math display">\[\sum_F\sigma^X_F=\left[\sum_{(\mathrm{edges\ }e_{ij})}\sigma_{ij}+\sigma_{ji}\right]=_{Tm=Tm}\ensuremath{\mathsf{refl}}_0.\qedhere\]</span></p>
 </div>
 <p>And finally, if we give the loop map <span class="math inline">\(\Omega\)</span> the nickname “winding number”:</p>
 <div id="thm:total_index_total_curvature" class="mythm">

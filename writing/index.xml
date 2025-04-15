@@ -431,10 +431,10 @@ g(f(e_{n,1}))&amp;amp;= \ensuremath{\mathsf{refl}}_{v_1}.
 &lt;p&gt;&lt;em&gt;We chose these orderings for the vertices in the link, by visualizing standing at the given vertex as if it were the north pole, then looking south and enumerating the link in clockwise order, starting from &lt;span class=&#34;math inline&#34;&gt;\(w\)&lt;/span&gt; if possible, else &lt;span class=&#34;math inline&#34;&gt;\(b\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;figure id=&#34;fig:triangle_of_equators&#34;&gt;
-&lt;img src=&#34;./bc228117bed4f2a718898688d2ae72ccd5834b2e.svg&#34; /&gt;
-&lt;img src=&#34;./79abb2819d9b5eea1201c6011868d3094da39e41.svg&#34; /&gt;
-&lt;img src=&#34;./8d6943ecb4be30b9072cf62f41e77e80fb1f6b64.svg&#34; /&gt;
-&lt;img src=&#34;./e22ce95fad136eabf32ff6ef6f87e299b87c0016.svg&#34; /&gt;
+&lt;img src=&#34;./5642e91b5003b0aeb33f959355a2a20edc881f27.svg&#34; /&gt;
+&lt;img src=&#34;./376369dc3698539eaed8f197e9f55569efd8e0be.svg&#34; /&gt;
+&lt;img src=&#34;./ac3811f777473553c5a43bafface29f2c3ad9123.svg&#34; /&gt;
+&lt;img src=&#34;./368050ad99f9db06be2724ef38118dc50903198f.svg&#34; /&gt;
 &lt;figcaption&gt;&lt;span class=&#34;math inline&#34;&gt;\(\mathop{\mathrm{\mathsf{link}}}\)&lt;/span&gt; for the vertices &lt;span class=&#34;math inline&#34;&gt;\(w, b\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(r\)&lt;/span&gt;.&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;p&gt;To extend &lt;span class=&#34;math inline&#34;&gt;\(T_0\)&lt;/span&gt; to a function &lt;span class=&#34;math inline&#34;&gt;\(T_1\)&lt;/span&gt; on the 1-skeleton we have some freedom. We will do something motivated by the figures we have been drawing of an octahedron embedded in 3-dimensional space. We will imagine how &lt;span class=&#34;math inline&#34;&gt;\(T_1\)&lt;/span&gt; changes as we slide from point to point in the embedding shown in the figures. Sliding from &lt;span class=&#34;math inline&#34;&gt;\(w\)&lt;/span&gt; to &lt;span class=&#34;math inline&#34;&gt;\(b\)&lt;/span&gt; and tipping the link as we go, we see &lt;span class=&#34;math inline&#34;&gt;\(r\mapsto r\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(o\mapsto o\)&lt;/span&gt; because those lie on the axis of rotation. Then &lt;span class=&#34;math inline&#34;&gt;\(g\mapsto w\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(b\mapsto y\)&lt;/span&gt;.&lt;/p&gt;
@@ -504,7 +504,7 @@ g(f(e_{n,1}))&amp;amp;= \ensuremath{\mathsf{refl}}_{v_1}.
 &lt;/figure&gt;
 &lt;p&gt;As we traverse an edge, say &lt;span class=&#34;math inline&#34;&gt;\(e_{12}\)&lt;/span&gt;, we get a path in &lt;span class=&#34;math inline&#34;&gt;\(T_2\)&lt;/span&gt; which is the image of &lt;span class=&#34;math inline&#34;&gt;\(e_{12}\)&lt;/span&gt; under &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt;, denoted &lt;span class=&#34;math inline&#34;&gt;\(X_{12}\)&lt;/span&gt;. As we traverse an additional edge, &lt;span class=&#34;math inline&#34;&gt;\(X_{12}\)&lt;/span&gt; is simply mapped to the next vertex by transport. The image is carried first to &lt;span class=&#34;math inline&#34;&gt;\(T_{32}(X_{12})\)&lt;/span&gt; then to &lt;span class=&#34;math inline&#34;&gt;\(T_{13}\circ T_{32}(X_{12})\)&lt;/span&gt;.&lt;/p&gt;
 &lt;figure id=&#34;fig:swirling&#34;&gt;
-&lt;img src=&#34;./92fbe28acde5ee04c88cf3d5cc5436724eceecb2.svg&#34; /&gt;
+&lt;img src=&#34;./5bd5a8f4e359a4a931f354b4664248f3d550d43a.svg&#34; /&gt;
 &lt;figcaption&gt;A vector field swirling counterclockwise around a face, in a bundle of squares. Imagine that transport along &lt;span class=&#34;math inline&#34;&gt;\(e_{12}\)&lt;/span&gt; does not rotate along the page, that transport along &lt;span class=&#34;math inline&#34;&gt;\(e_{23}\)&lt;/span&gt; rotates counterclockwise by 90 degrees, and that transport along &lt;span class=&#34;math inline&#34;&gt;\(e_{31}\)&lt;/span&gt; again does not rotate along the page. Thick black vectors are the vector field at a point. Thin vectors are transported once, dashed twice, and dotted three times. The vertices &lt;span class=&#34;math inline&#34;&gt;\(v_{ij}\)&lt;/span&gt; are in the tangent fibers. If you have a colorized version of the document, the colors of the arrows correspond: the red edge produced the red edge in the fibers.&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;p&gt;We wish to simplify expressions such as &lt;span class=&#34;math inline&#34;&gt;\(T_{13}T_{32}X_{12}\cdot T_{13}X_{23}\cdot X_{31}\)&lt;/span&gt;, which take place in a particular fiber (&lt;span class=&#34;math inline&#34;&gt;\(T_1\)&lt;/span&gt; in this case), and which depend on arranging for the endpoint of one segment to agree with the start of another. The simplification will empower us to easily perform calculations over the whole manifold, and to prove Theorem &lt;a href=&#34;#thm:total_index_total_curvature&#34; data-reference-type=&#34;ref&#34; data-reference=&#34;thm:total_index_total_curvature&#34;&gt;52&lt;/a&gt;.&lt;/p&gt;
@@ -524,7 +524,7 @@ g(f(e_{n,1}))&amp;amp;= \ensuremath{\mathsf{refl}}_{v_1}.
 &lt;p&gt;If &lt;span class=&#34;math inline&#34;&gt;\(p:x=_G y\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(p&amp;#39;:x&amp;#39;=_G y&amp;#39;\)&lt;/span&gt;, then we can define &lt;span class=&#34;math inline&#34;&gt;\(\mu_=(p, p&amp;#39;)\)&lt;/span&gt; by concatenating the three paths &lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
 \mu(x&amp;#39;,p)&amp;amp;:\mu(x&amp;#39;, x)=_G\mu(x&amp;#39;, y)\\
 \mathsf{is\raisebox{0.5pt}{\underline{\phantom{t}}}comm}(x&amp;#39;,y)&amp;amp;:\mu(x&amp;#39;,y)=_G\mu(y,x&amp;#39;)\\
-\mu(y, p&amp;#39;)&amp;amp;:\mu(y, x&amp;#39;)=_G\mu(y, y&amp;#39;).
+\mu(y, p&amp;#39;)&amp;amp;:\mu(y, x&amp;#39;)=_G\mu(y, y&amp;#39;).\qedhere
 \end{aligned}\]&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;Each fiber &lt;span class=&#34;math inline&#34;&gt;\(T_i\)&lt;/span&gt; is pointed by &lt;span class=&#34;math inline&#34;&gt;\(X_i\)&lt;/span&gt;, so we can define the map &lt;span class=&#34;math inline&#34;&gt;\(T_i\xrightarrow[]{-X_i}\mathscr{G}(m)\)&lt;/span&gt;, and then give a name to the special term &lt;span class=&#34;math inline&#34;&gt;\(T_{ij}X_j - X_i\)&lt;/span&gt;.&lt;/p&gt;
@@ -540,7 +540,7 @@ g(f(e_{n,1}))&amp;amp;= \ensuremath{\mathsf{refl}}_{v_1}.
 (X_i + \rho_{ij})+\rho_{ji} &amp;amp;=_{T_i} T_{ij}X_j + \rho_{ji}&amp;amp;&amp;amp;\text{by definition of }\rho_{ij}\\
 &amp;amp;=_{T_i} T_{ij}(X_j + \rho_{ji})&amp;amp;&amp;amp;\text{by equivariance of transport} \\
 &amp;amp;=_{T_i} T_{ij}(T_{ji}(X_i))&amp;amp;&amp;amp;\text{by definition of }\rho_{ji}\\
-&amp;amp;=_{T_i} X_i&amp;amp;&amp;amp;\text{by definition of }T
+&amp;amp;=_{T_i} X_i&amp;amp;&amp;amp;\text{by definition of }T\qedhere
 \end{aligned}\]&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;We can obtain a path in &lt;span class=&#34;math inline&#34;&gt;\(\mathscr{G}(m)\)&lt;/span&gt; from a dependent path by again subtracting the basepoint: &lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
@@ -566,11 +566,11 @@ g(f(e_{n,1}))&amp;amp;= \ensuremath{\mathsf{refl}}_{v_1}.
 &amp;amp;=_{0=_{\mathscr{G}(m)}0} ((X_{ij}-X_j)+\rho_{ij})\cdot (X_{ji} - X_i)&amp;amp;&amp;amp;\text{definition of }\sigma s\\
 &amp;amp;=_{0=_{\mathscr{G}(m)}0} (T_{ij}(X_{ij})-X_i)\cdot (X_{ji} - X_i)&amp;amp;&amp;amp;\text{action of }\rho_{ij}\text{ (see (\ref{eq:action_of_rho}))} \\
 &amp;amp;=_{0=_{\mathscr{G}(m)}0} \ensuremath{\mathsf{refl}}_{X_i}-X_i&amp;amp;&amp;amp;\text{path induction for }X\\
-&amp;amp;=_{0=_{\mathscr{G}(m)}0} \ensuremath{\mathsf{refl}}_0&amp;amp;&amp;amp;
+&amp;amp;=_{0=_{\mathscr{G}(m)}0} \ensuremath{\mathsf{refl}}_0&amp;amp;&amp;amp;\qedhere
 \end{aligned}\]&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;mynote&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Remark 43&lt;/strong&gt;. &lt;em&gt;The classical argument of Hopf &lt;span class=&#34;citation&#34; data-cites=&#34;hopf&#34;&gt;[&lt;a href=&#34;#ref-hopf&#34; role=&#34;doc-biblioref&#34;&gt;2&lt;/a&gt;]&lt;/span&gt;, which is presented in more detail in the more readily available &lt;span class=&#34;citation&#34; data-cites=&#34;needham&#34;&gt;[&lt;a href=&#34;#ref-needham&#34; role=&#34;doc-biblioref&#34;&gt;3&lt;/a&gt;]&lt;/span&gt;, makes an implicit assumption that we can concatenate two terms of different type such as &lt;span class=&#34;math inline&#34;&gt;\(X_{ij}\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(X_{kl}\)&lt;/span&gt; by saying. The authors name such terms “change in angle across an edge” and stipulate that this is a function “defined on edges.” The extra work we are doing in this section amounts to a partial formalization of this idea.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Remark 43&lt;/strong&gt;. &lt;em&gt;The classical argument of Hopf &lt;span class=&#34;citation&#34; data-cites=&#34;hopf&#34;&gt;[&lt;a href=&#34;#ref-hopf&#34; role=&#34;doc-biblioref&#34;&gt;2&lt;/a&gt;]&lt;/span&gt;, which is presented in more detail in the more readily available &lt;span class=&#34;citation&#34; data-cites=&#34;needham&#34;&gt;[&lt;a href=&#34;#ref-needham&#34; role=&#34;doc-biblioref&#34;&gt;3&lt;/a&gt;]&lt;/span&gt;, makes an implicit assumption that we can concatenate two terms of different type such as &lt;span class=&#34;math inline&#34;&gt;\(X_{ij}\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(X_{kl}\)&lt;/span&gt;. The authors name such terms “change in angle across an edge” and stipulate that this is a function “defined on edges.” The extra work we are doing in this section amounts to a partial formalization of this idea.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;h2 data-number=&#34;5.3&#34; id=&#34;sec:octahedron_vector_field&#34;&gt;&lt;span class=&#34;header-section-number&#34;&gt;5.3&lt;/span&gt; An example vector field on the sphere&lt;/h2&gt;
 &lt;p&gt;Figure &lt;a href=&#34;#fig:octahedron_vector_field&#34; data-reference-type=&#34;ref&#34; data-reference=&#34;fig:octahedron_vector_field&#34;&gt;9&lt;/a&gt; shows an example of a vector field &lt;span class=&#34;math inline&#34;&gt;\(X_\ensuremath{\mathbb{O}}^s\)&lt;/span&gt; (&lt;span class=&#34;math inline&#34;&gt;\(s\)&lt;/span&gt; for “spin”) on the octahedron &lt;span class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{O}}\)&lt;/span&gt;. The picture can really only convey the value of &lt;span class=&#34;math inline&#34;&gt;\(X_\ensuremath{\mathbb{O}}^s\)&lt;/span&gt; on vertices, which it does by displaying it as an arrow on the surface itself, for example as an arrow from &lt;span class=&#34;math inline&#34;&gt;\(w\)&lt;/span&gt; to &lt;span class=&#34;math inline&#34;&gt;\(r\)&lt;/span&gt;, instead of trying to draw the fiber at &lt;span class=&#34;math inline&#34;&gt;\(w\)&lt;/span&gt; which is where &lt;span class=&#34;math inline&#34;&gt;\(r:\mathop{\mathrm{\mathsf{link}}}(w)\)&lt;/span&gt; actually lives. But hopefully there is a net gain in clarity.&lt;/p&gt;
@@ -735,7 +735,7 @@ I^X_\mathrm{tot}&amp;amp; \stackrel{\mathrm{def}}{=}\sum_F I^X_F &amp;amp;&amp;a
 &lt;p&gt;&lt;strong&gt;Proposition 51&lt;/strong&gt;. &lt;em&gt;The total swirling is &lt;span class=&#34;math inline&#34;&gt;\(\ensuremath{\mathsf{refl}}_0\)&lt;/span&gt; in &lt;span class=&#34;math inline&#34;&gt;\(Tm=Tm\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;myproof&#34;&gt;
-&lt;p&gt;We can compute &lt;span class=&#34;math display&#34;&gt;\[\sum_F\sigma^X_F=\left[\sum_{(\mathrm{edges\ }e_{ij})}\sigma_{ij}+\sigma_{ji}\right]=_{Tm=Tm}\ensuremath{\mathsf{refl}}_0.\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;We can compute &lt;span class=&#34;math display&#34;&gt;\[\sum_F\sigma^X_F=\left[\sum_{(\mathrm{edges\ }e_{ij})}\sigma_{ij}+\sigma_{ji}\right]=_{Tm=Tm}\ensuremath{\mathsf{refl}}_0.\qedhere\]&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;And finally, if we give the loop map &lt;span class=&#34;math inline&#34;&gt;\(\Omega\)&lt;/span&gt; the nickname “winding number”:&lt;/p&gt;
 &lt;div id=&#34;thm:total_index_total_curvature&#34; class=&#34;mythm&#34;&gt;
