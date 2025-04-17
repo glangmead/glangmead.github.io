@@ -223,7 +223,7 @@
 <p><strong>Definition 13</strong>. <em>The <strong>realization <span class="math inline">\(\ensuremath{\mathbb{M}}_0\)</span> of a 0-dimensional simplicial complex</strong> <span class="math inline">\(M_0\)</span> is simply the set <span class="math inline">\(M_0\)</span>.</em></p>
 </div>
 <div class="mydef">
-<p><strong>Definition 14</strong>. <em>The <strong>simplicial 0-sphere</strong> <span class="math inline">\(\partial\Delta^{1}\)</span> is the realization of <span class="math inline">\(\partial P(1)\)</span>.</em></p>
+<p><strong>Definition 14</strong>. <em>The <strong>simplicial 0-sphere</strong> <span class="math inline">\(\partial\Delta({1})\)</span> is the realization of <span class="math inline">\(\partial P(1)\)</span>.</em></p>
 </div>
 <div class="mydef">
 <p><strong>Definition 15</strong>. <em>The <strong>realization <span class="math inline">\(\ensuremath{\mathbb{M}}_1\)</span> of a 1-dimensional simplicial complex</strong> <span class="math inline">\([M_0, M_1]\)</span> is the pushout</em></p>
@@ -231,7 +231,7 @@
 <p><img src="./7331fc1bf8118142c32d91c20cb7d8d37220b32a.svg" alt="image" /></p>
 <p>where <span class="math inline">\(a_k\)</span> is the attachment data of the edges in <span class="math inline">\(M_1\)</span>, as in diagram <a href="#eq:attach" data-reference-type="ref" data-reference="eq:attach">[eq:attach]</a>. The right vertical map <span class="math inline">\(*_{\ensuremath{\mathbb{M}}_1}\)</span> provides a hub point for each edge, and the homotopy <span class="math inline">\(h_1\)</span> provides the spokes that connect the hub to the vertices.</p>
 <div class="mydef">
-<p><strong>Definition 16</strong>. <em>The <strong>simplicial 1-sphere</strong> <span class="math inline">\(\partial\Delta^{2}\)</span> is the realization of <span class="math inline">\(\partial P(2)\)</span>.</em></p>
+<p><strong>Definition 16</strong>. <em>The <strong>simplicial 1-sphere</strong> <span class="math inline">\(\partial\Delta({2})\)</span> is the realization of <span class="math inline">\(\partial P(2)\)</span>.</em></p>
 </div>
 <p><img src="./32e6509375339d58bf9f97549fb980d5550a1f0a.svg" alt="image" /></p>
 <div class="mydef">
@@ -258,7 +258,7 @@
 <p><em>A <strong>cellular type</strong> <span class="math inline">\(\ensuremath{\mathbb{M}}\)</span> is a sequence of types <span class="math inline">\(\ensuremath{\mathbb{M}}_0\xrightarrow[]{\imath_0}\ensuremath{\mathbb{M}}_1\xrightarrow[]{\imath_1}\cdots\xrightarrow[]{\imath_{n-1}}\ensuremath{\mathbb{M}}_n\)</span>, together with a proof of existence of some simplicial complex <span class="math inline">\(M\)</span> and a realization inducing this sequence.</em></p>
 </div>
 <h2 data-number="3.3" id="sec:polygons"><span class="header-section-number">3.3</span> Polygons</h2>
-<p>The 1-type <span class="math inline">\(\partial\Delta^{2}\)</span> has three vertices. In order to define the link of an arbitrary realization, we will need to have <span class="math inline">\(n\)</span>-gons for <span class="math inline">\(n\geq 3\)</span>. For example in Figure <a href="#fig:link" data-reference-type="ref" data-reference="fig:link">3</a> the link is a 6-gon. And since <span class="math inline">\(S^1\)</span> could be called a 1-gon, we will also define a 1-gon, and for completeness a 2-gon.</p>
+<p>The 1-type <span class="math inline">\(\partial\Delta({2})\)</span> has three vertices. In order to define the link of an arbitrary realization, we will need to have <span class="math inline">\(n\)</span>-gons for <span class="math inline">\(n\geq 3\)</span>. For example in Figure <a href="#fig:link" data-reference-type="ref" data-reference="fig:link">3</a> the link is a 6-gon. And since <span class="math inline">\(S^1\)</span> could be called a 1-gon, we will also define a 1-gon, and for completeness a 2-gon.</p>
 <div class="mydef">
 <p><strong>Definition 20</strong>. <em>Define <span class="math inline">\(C(n)\)</span>, <span class="math inline">\(n\geq 3\)</span> to be a simplicial complex with <span class="math inline">\(C(n)_{0}=\{v_1, \ldots, v_n\}\)</span> and edges <span class="math display">\[C(n)_1=\{e_1=\{v_1,v_2\}, \ldots, e_{n-1}=\{v_{n-1}, v_n\}, e_n=\{v_n, v_0\}\}.\]</span> We call <span class="math inline">\(C(n)\)</span> a <strong>polygon</strong> or <strong><span class="math inline">\(n\)</span>-gon</strong>. The realization of <span class="math inline">\(C(n)\)</span> will be denoted <span class="math inline">\(\mathbb{C}(n)\)</span>. When it is convenient we may refer to an <span class="math inline">\(n\)</span>-gon by <span class="math inline">\([{v_1\cdots v_n}]\)</span> and to its realization by <span class="math inline">\([\![{v_1\cdots v_n}]\!]\)</span>.</em></p>
 </div>
