@@ -105,10 +105,22 @@
 </ul></li>
 </ul>
 </nav>
-<h1 class="unnumbered" id="abstract">Abstract</h1>
-<p>Type families on higher inductive types such as pushouts can capture homotopical properties of differential geometric constructions including connections, curvature, and vector fields. We define a class of pushouts based on simplicial complexes, then define principal bundles, connections, and curvature on these. We provide an example of a tangent bundle but do not prove when these must exist. We define vector fields, and the index of a vector field. Our main result is a theorem relating total curvature and total index, a key step to proving the Gauss-Bonnet theorem and the Poincaré-Hopf theorem, but without an existing definition of Euler characteristic to compare them to. We draw inspiration in part from the young field of discrete differential geometry, and in part from the original classical proofs, which often make use of triangulations and other discrete arguments.</p>
+<div class="titlepage">
+<div class="center">
+<p>Department of Philosophy<br />
+Carnegie Mellon University<br />
+Pittsburgh, PA 15213</p>
+<p>Submitted in partial fulfillment of the requirements for the degree of<br />
+Master of Science in Logic, Computation and Methodology</p>
+<p><strong>Thesis Committee</strong></p>
+<p>Steven M. Awodey, chair<br />
+Mathieu Anel</p>
+</div>
+</div>
 <p><em></em></p>
 <p>This thesis is dedicated to John Baez, Sean M. Carroll, Sabine Hossenfelder, and other communicators who are carrying the torch of science forward in the spirit of my hero Carl Sagan. I have followed you all for many years, and you have inspired me to continue my studies alongside my career. Thank you.</p>
+<h1 class="unnumbered" id="abstract">Abstract</h1>
+<p>Type families on higher inductive types such as pushouts can capture homotopical properties of differential geometric constructions including connections, curvature, and vector fields. We define a class of pushouts based on simplicial complexes, then define principal bundles, connections, and curvature on these. We provide an example of a tangent bundle but do not prove when these must exist. We define vector fields, and the index of a vector field. Our main result is a theorem relating total curvature and total index, a key step to proving the Gauss-Bonnet theorem and the Poincaré-Hopf theorem, but without an existing definition of Euler characteristic to compare them to. We draw inspiration in part from the young field of discrete differential geometry, and in part from the original classical proofs, which often make use of triangulations and other discrete arguments.</p>
 <blockquote>
 <p>“It is always ourselves we work on, whether we realize it or not. There is no other work to be done in the world.” — Stephen Talbott, <em>The Future Does Not Compute</em><span class="citation" data-cites="talbott">[<a href="#ref-talbott" role="doc-biblioref">1</a>]</span></p>
 </blockquote>
