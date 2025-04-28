@@ -6,7 +6,7 @@
     <description>Recent content in Research and writing on Long Head</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 01 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 25 Apr 2025 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="https://greg.langmead.info/writing/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Discrete differential geometry in homotopy type theory</title>
       <link>https://greg.langmead.info/writing/towards_gauge_theory_in_hott/</link>
-      <pubDate>Tue, 01 Apr 2025 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 25 Apr 2025 00:00:00 +0000</pubDate>
       
       <guid>https://greg.langmead.info/writing/towards_gauge_theory_in_hott/</guid>
       <description>&lt;!DOCTYPE html&gt;
@@ -23,7 +23,7 @@
   &lt;meta charset=&#34;utf-8&#34; /&gt;
   &lt;meta name=&#34;generator&#34; content=&#34;pandoc&#34; /&gt;
   &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0, user-scalable=yes&#34; /&gt;
-  &lt;meta name=&#34;dcterms.date&#34; content=&#34;2025-04-01&#34; /&gt;
+  &lt;meta name=&#34;dcterms.date&#34; content=&#34;2025-04-25&#34; /&gt;
   &lt;style&gt;
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -235,7 +235,7 @@ Mathieu Anel&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;Note that &lt;span class=&#34;math inline&#34;&gt;\(\Delta(n)_{(n-1)}\)&lt;/span&gt; has &lt;span class=&#34;math inline&#34;&gt;\(n+1\)&lt;/span&gt; elements. For example, &lt;span class=&#34;math inline&#34;&gt;\(\Delta(2)_1\)&lt;/span&gt; consists of the three 2-element subsets of &lt;span class=&#34;math inline&#34;&gt;\(\{0, 1, 2\}\)&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;Given &lt;span class=&#34;math inline&#34;&gt;\(M=[M_0,\ldots,M_n]\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(k\leq n\)&lt;/span&gt;, a face &lt;span class=&#34;math inline&#34;&gt;\(f_k:M_k\)&lt;/span&gt; is the union of &lt;span class=&#34;math inline&#34;&gt;\((k+1)\)&lt;/span&gt; faces in &lt;span class=&#34;math inline&#34;&gt;\(M_{k-1}\)&lt;/span&gt;, and so the &lt;span class=&#34;math inline&#34;&gt;\(k\)&lt;/span&gt;-skeleton is obtained from the &lt;span class=&#34;math inline&#34;&gt;\((k-1)\)&lt;/span&gt;-skeleton by forming the following pushout of sets:&lt;br /&gt;
-&lt;img src=&#34;./a759d588a14f8c3262cd16583e7da6f92659664d.svg&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;./a759d588a14f8c3262cd16583e7da6f92659664d.svg&#34; alt=&#34;image&#34; id=&#34;eq:attach&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;where the vertical “attach” map &lt;span class=&#34;math inline&#34;&gt;\(a_k(f_k, -)\)&lt;/span&gt; picks out the &lt;span class=&#34;math inline&#34;&gt;\(k+1\)&lt;/span&gt; subsets of &lt;span class=&#34;math inline&#34;&gt;\(f_k\)&lt;/span&gt;.&lt;/p&gt;
 &lt;div id=&#34;def:link&#34; class=&#34;mydef&#34;&gt;
 &lt;p&gt;&lt;strong&gt;Definition 11&lt;/strong&gt;. &lt;em&gt;In an abstract simplicial complex &lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt; of dimension &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;, the &lt;strong&gt;link&lt;/strong&gt; of a vertex &lt;span class=&#34;math inline&#34;&gt;\(v\)&lt;/span&gt; is the &lt;span class=&#34;math inline&#34;&gt;\((n-1)\)&lt;/span&gt;-dimensional subcomplex containing every face &lt;span class=&#34;math inline&#34;&gt;\(m\in M_{n-1}\)&lt;/span&gt; such that &lt;span class=&#34;math inline&#34;&gt;\(v\notin m\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(m\cup v\)&lt;/span&gt; is an &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;-face of &lt;span class=&#34;math inline&#34;&gt;\(M\)&lt;/span&gt;. &lt;/em&gt;&lt;/p&gt;
@@ -260,7 +260,7 @@ Mathieu Anel&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Definition 15&lt;/strong&gt;. &lt;em&gt;The &lt;strong&gt;realization &lt;span class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{M}}\)&lt;/span&gt; of a 1-dimensional simplicial complex&lt;/strong&gt; &lt;span class=&#34;math inline&#34;&gt;\(M=[M_0, M_1]\)&lt;/span&gt; is the pushout&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;&lt;img src=&#34;./7331fc1bf8118142c32d91c20cb7d8d37220b32a.svg&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;where &lt;span class=&#34;math inline&#34;&gt;\(a_k\)&lt;/span&gt; is the attachment data of the edges in &lt;span class=&#34;math inline&#34;&gt;\(M_1\)&lt;/span&gt;, as in diagram &lt;a href=&#34;#eq:attach&#34; data-reference-type=&#34;ref&#34; data-reference=&#34;eq:attach&#34;&gt;[eq:attach]&lt;/a&gt;. The right vertical map &lt;span class=&#34;math inline&#34;&gt;\(*_{\ensuremath{\mathbb{M}}_1}\)&lt;/span&gt; provides a hub point for each edge, and the homotopy &lt;span class=&#34;math inline&#34;&gt;\(h_1\)&lt;/span&gt; provides the spokes that connect the hub to the vertices.&lt;/p&gt;
+&lt;p&gt;where &lt;span class=&#34;math inline&#34;&gt;\(a_k\)&lt;/span&gt; is the attachment data of the edges in &lt;span class=&#34;math inline&#34;&gt;\(M_1\)&lt;/span&gt;, as in the diagram &lt;a href=&#34;#eq:attach&#34; data-reference-type=&#34;ref&#34; data-reference=&#34;eq:attach&#34;&gt;above&lt;/a&gt;. The right vertical map &lt;span class=&#34;math inline&#34;&gt;\(*_{\ensuremath{\mathbb{M}}_1}\)&lt;/span&gt; provides a hub point for each edge, and the homotopy &lt;span class=&#34;math inline&#34;&gt;\(h_1\)&lt;/span&gt; provides the spokes that connect the hub to the vertices.&lt;/p&gt;
 &lt;div class=&#34;mydef&#34;&gt;
 &lt;p&gt;&lt;strong&gt;Definition 16&lt;/strong&gt;. &lt;em&gt;The &lt;strong&gt;simplicial 1-sphere&lt;/strong&gt; &lt;span class=&#34;math inline&#34;&gt;\(\partial\Delta\mkern-11mu{\scalebox{0.7}{\ensuremath{\Delta}}}({2})\)&lt;/span&gt; is the realization of &lt;span class=&#34;math inline&#34;&gt;\(\partial \Delta(2)\)&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
@@ -271,7 +271,7 @@ Mathieu Anel&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;./b87c0eb80f89c1783eefaa1d603ed9090984dbef.svg&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;where &lt;span class=&#34;math inline&#34;&gt;\(\mathbb{A}_1\)&lt;/span&gt; is such that this additional diagram commutes&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;./8e89efc062b5e723c36e028546876636721668ca.svg&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;In this diagram &lt;span class=&#34;math inline&#34;&gt;\(a_1\)&lt;/span&gt; is the simplicial attaching map from &lt;a href=&#34;#eq:attach&#34; data-reference-type=&#34;ref&#34; data-reference=&#34;eq:attach&#34;&gt;[eq:attach]&lt;/a&gt;, and &lt;span class=&#34;math inline&#34;&gt;\(*_{\mathbb{M}_{\leq 1}}\)&lt;/span&gt; simply gathers the hub maps from &lt;span class=&#34;math inline&#34;&gt;\(M_0\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(M_1\)&lt;/span&gt; into &lt;span class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{M}}_1\)&lt;/span&gt;. The commutativity then says that &lt;span class=&#34;math inline&#34;&gt;\(\mathbb{A}_1\)&lt;/span&gt; reflects the attachment data.&lt;/p&gt;
+&lt;p&gt;In this diagram &lt;span class=&#34;math inline&#34;&gt;\(a_1\)&lt;/span&gt; is the simplicial attaching map from &lt;a href=&#34;#eq:attach&#34; data-reference-type=&#34;ref&#34; data-reference=&#34;eq:attach&#34;&gt;above&lt;/a&gt;, and &lt;span class=&#34;math inline&#34;&gt;\(*_{\mathbb{M}_{\leq 1}}\)&lt;/span&gt; simply gathers the hub maps from &lt;span class=&#34;math inline&#34;&gt;\(M_0\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(M_1\)&lt;/span&gt; into &lt;span class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{M}}_1\)&lt;/span&gt;. The commutativity then says that &lt;span class=&#34;math inline&#34;&gt;\(\mathbb{A}_1\)&lt;/span&gt; reflects the attachment data.&lt;/p&gt;
 &lt;div class=&#34;mydef&#34;&gt;
 &lt;p&gt;&lt;strong&gt;Definition 18&lt;/strong&gt;. &lt;em&gt;Given a notion of realization in dimension &lt;span class=&#34;math inline&#34;&gt;\(n-1\)&lt;/span&gt;, a &lt;strong&gt;realization &lt;span class=&#34;math inline&#34;&gt;\(\ensuremath{\mathbb{M}}\)&lt;/span&gt; of an &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;-dimensional simplicial complex&lt;/strong&gt; &lt;span class=&#34;math inline&#34;&gt;\(M=[M_0, \ldots, M_n]\)&lt;/span&gt; is the pushout&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;

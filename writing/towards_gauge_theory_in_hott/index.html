@@ -107,9 +107,9 @@
   <meta property="og:description" content="My masters thesis defining connections, curvature, and vector fields in the discrete setting of homotopy type theory."><meta property="og:image" content="https://greg.langmead.info/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2025-04-01T00:00:00&#43;00:00">
+  <meta property="article:published_time" content="2025-04-25T00:00:00&#43;00:00">
   
-  <meta property="article:modified_time" content="2025-04-01T00:00:00&#43;00:00">
+  <meta property="article:modified_time" content="2025-04-25T00:00:00&#43;00:00">
   
 
   
@@ -343,8 +343,8 @@
 
 
 
-<meta content="2025-04-01 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-<meta content="2025-04-01 00:00:00 &#43;0000 UTC" itemprop="dateModified">
+<meta content="2025-04-25 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2025-04-25 00:00:00 &#43;0000 UTC" itemprop="dateModified">
 
 <div class="article-metadata">
 
@@ -357,7 +357,7 @@
     
       
     
-    <time>Apr 1, 2025</time>
+    <time>Apr 25, 2025</time>
   </span>
   
 
@@ -407,7 +407,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="dcterms.date" content="2025-04-01" />
+  <meta name="dcterms.date" content="2025-04-25" />
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -619,7 +619,7 @@ Mathieu Anel</p>
 </div>
 <p>Note that <span class="math inline">\(\Delta(n)_{(n-1)}\)</span> has <span class="math inline">\(n+1\)</span> elements. For example, <span class="math inline">\(\Delta(2)_1\)</span> consists of the three 2-element subsets of <span class="math inline">\(\{0, 1, 2\}\)</span>.</p>
 <p>Given <span class="math inline">\(M=[M_0,\ldots,M_n]\)</span> and <span class="math inline">\(k\leq n\)</span>, a face <span class="math inline">\(f_k:M_k\)</span> is the union of <span class="math inline">\((k+1)\)</span> faces in <span class="math inline">\(M_{k-1}\)</span>, and so the <span class="math inline">\(k\)</span>-skeleton is obtained from the <span class="math inline">\((k-1)\)</span>-skeleton by forming the following pushout of sets:<br />
-<img src="./a759d588a14f8c3262cd16583e7da6f92659664d.svg" alt="image" /></p>
+<img src="./a759d588a14f8c3262cd16583e7da6f92659664d.svg" alt="image" id="eq:attach" /></p>
 <p>where the vertical “attach” map <span class="math inline">\(a_k(f_k, -)\)</span> picks out the <span class="math inline">\(k+1\)</span> subsets of <span class="math inline">\(f_k\)</span>.</p>
 <div id="def:link" class="mydef">
 <p><strong>Definition 11</strong>. <em>In an abstract simplicial complex <span class="math inline">\(M\)</span> of dimension <span class="math inline">\(n\)</span>, the <strong>link</strong> of a vertex <span class="math inline">\(v\)</span> is the <span class="math inline">\((n-1)\)</span>-dimensional subcomplex containing every face <span class="math inline">\(m\in M_{n-1}\)</span> such that <span class="math inline">\(v\notin m\)</span> and <span class="math inline">\(m\cup v\)</span> is an <span class="math inline">\(n\)</span>-face of <span class="math inline">\(M\)</span>. </em></p>
@@ -644,7 +644,7 @@ Mathieu Anel</p>
 <p><strong>Definition 15</strong>. <em>The <strong>realization <span class="math inline">\(\ensuremath{\mathbb{M}}\)</span> of a 1-dimensional simplicial complex</strong> <span class="math inline">\(M=[M_0, M_1]\)</span> is the pushout</em></p>
 </div>
 <p><img src="./7331fc1bf8118142c32d91c20cb7d8d37220b32a.svg" alt="image" /></p>
-<p>where <span class="math inline">\(a_k\)</span> is the attachment data of the edges in <span class="math inline">\(M_1\)</span>, as in diagram <a href="#eq:attach" data-reference-type="ref" data-reference="eq:attach">[eq:attach]</a>. The right vertical map <span class="math inline">\(*_{\ensuremath{\mathbb{M}}_1}\)</span> provides a hub point for each edge, and the homotopy <span class="math inline">\(h_1\)</span> provides the spokes that connect the hub to the vertices.</p>
+<p>where <span class="math inline">\(a_k\)</span> is the attachment data of the edges in <span class="math inline">\(M_1\)</span>, as in the diagram <a href="#eq:attach" data-reference-type="ref" data-reference="eq:attach">above</a>. The right vertical map <span class="math inline">\(*_{\ensuremath{\mathbb{M}}_1}\)</span> provides a hub point for each edge, and the homotopy <span class="math inline">\(h_1\)</span> provides the spokes that connect the hub to the vertices.</p>
 <div class="mydef">
 <p><strong>Definition 16</strong>. <em>The <strong>simplicial 1-sphere</strong> <span class="math inline">\(\partial\Delta\mkern-11mu{\scalebox{0.7}{\ensuremath{\Delta}}}({2})\)</span> is the realization of <span class="math inline">\(\partial \Delta(2)\)</span>.</em></p>
 </div>
@@ -655,7 +655,7 @@ Mathieu Anel</p>
 <p><img src="./b87c0eb80f89c1783eefaa1d603ed9090984dbef.svg" alt="image" /></p>
 <p>where <span class="math inline">\(\mathbb{A}_1\)</span> is such that this additional diagram commutes</p>
 <p><img src="./8e89efc062b5e723c36e028546876636721668ca.svg" alt="image" /></p>
-<p>In this diagram <span class="math inline">\(a_1\)</span> is the simplicial attaching map from <a href="#eq:attach" data-reference-type="ref" data-reference="eq:attach">[eq:attach]</a>, and <span class="math inline">\(*_{\mathbb{M}_{\leq 1}}\)</span> simply gathers the hub maps from <span class="math inline">\(M_0\)</span> and <span class="math inline">\(M_1\)</span> into <span class="math inline">\(\ensuremath{\mathbb{M}}_1\)</span>. The commutativity then says that <span class="math inline">\(\mathbb{A}_1\)</span> reflects the attachment data.</p>
+<p>In this diagram <span class="math inline">\(a_1\)</span> is the simplicial attaching map from <a href="#eq:attach" data-reference-type="ref" data-reference="eq:attach">above</a>, and <span class="math inline">\(*_{\mathbb{M}_{\leq 1}}\)</span> simply gathers the hub maps from <span class="math inline">\(M_0\)</span> and <span class="math inline">\(M_1\)</span> into <span class="math inline">\(\ensuremath{\mathbb{M}}_1\)</span>. The commutativity then says that <span class="math inline">\(\mathbb{A}_1\)</span> reflects the attachment data.</p>
 <div class="mydef">
 <p><strong>Definition 18</strong>. <em>Given a notion of realization in dimension <span class="math inline">\(n-1\)</span>, a <strong>realization <span class="math inline">\(\ensuremath{\mathbb{M}}\)</span> of an <span class="math inline">\(n\)</span>-dimensional simplicial complex</strong> <span class="math inline">\(M=[M_0, \ldots, M_n]\)</span> is the pushout</em></p>
 </div>

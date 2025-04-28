@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="dcterms.date" content="2025-04-01" />
+  <meta name="dcterms.date" content="2025-04-25" />
   <title>pandoc_only_macros</title>
   <style>
     code{white-space: pre-wrap;}
@@ -242,7 +242,7 @@ Mathieu Anel</p>
 <p><strong>Definition 15</strong>. <em>The <strong>realization <span class="math inline">\(\ensuremath{\mathbb{M}}\)</span> of a 1-dimensional simplicial complex</strong> <span class="math inline">\(M=[M_0, M_1]\)</span> is the pushout</em></p>
 </div>
 <p><img src="./7331fc1bf8118142c32d91c20cb7d8d37220b32a.svg" alt="image" /></p>
-<p>where <span class="math inline">\(a_k\)</span> is the attachment data of the edges in <span class="math inline">\(M_1\)</span>, as in diagram <a href="#eq:attach" data-reference-type="ref" data-reference="eq:attach">[eq:attach]</a>. The right vertical map <span class="math inline">\(*_{\ensuremath{\mathbb{M}}_1}\)</span> provides a hub point for each edge, and the homotopy <span class="math inline">\(h_1\)</span> provides the spokes that connect the hub to the vertices.</p>
+<p>where <span class="math inline">\(a_k\)</span> is the attachment data of the edges in <span class="math inline">\(M_1\)</span>, as in the diagram <a href="#eq:attach" data-reference-type="ref" data-reference="eq:attach">[eq:attach]</a>. The right vertical map <span class="math inline">\(*_{\ensuremath{\mathbb{M}}_1}\)</span> provides a hub point for each edge, and the homotopy <span class="math inline">\(h_1\)</span> provides the spokes that connect the hub to the vertices.</p>
 <div class="mydef">
 <p><strong>Definition 16</strong>. <em>The <strong>simplicial 1-sphere</strong> <span class="math inline">\(\partial\Delta\mkern-11mu{\scalebox{0.7}{\ensuremath{\Delta}}}({2})\)</span> is the realization of <span class="math inline">\(\partial \Delta(2)\)</span>.</em></p>
 </div>
