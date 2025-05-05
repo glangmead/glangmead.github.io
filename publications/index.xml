@@ -6,10 +6,19 @@
     <description>Recent content in Publications on Long Head</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 24 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 25 Apr 2025 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="https://greg.langmead.info/publications/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Discrete differential geometry in homotopy type theory</title>
+      <link>https://greg.langmead.info/publications/langmead-geometry-hott-2025/</link>
+      <pubDate>Fri, 25 Apr 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://greg.langmead.info/publications/langmead-geometry-hott-2025/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Personalization Aggregate Content Item Recommendations</title>

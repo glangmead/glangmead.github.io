@@ -2,19 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://greg.langmead.info/</loc>
+    <lastmod>2025-05-05T17:30:43-04:00</lastmod>
+  </url><url>
+    <loc>https://greg.langmead.info/posts/2025-05-05-masters-thesis/</loc>
+    <lastmod>2025-05-05T17:30:43-04:00</lastmod>
+  </url><url>
+    <loc>https://greg.langmead.info/posts/</loc>
+    <lastmod>2025-05-05T17:30:43-04:00</lastmod>
+  </url><url>
+    <loc>https://greg.langmead.info/publication-type/2/</loc>
+    <lastmod>2025-04-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://greg.langmead.info/publications/langmead-geometry-hott-2025/</loc>
+    <lastmod>2025-04-25T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://greg.langmead.info/writing/differential_geometry_in_hott/</loc>
     <lastmod>2025-04-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://greg.langmead.info/</loc>
+    <loc>https://greg.langmead.info/tag/mathematics-category-theory/</loc>
+    <lastmod>2025-04-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://greg.langmead.info/tag/mathematics-differential-geometry/</loc>
+    <lastmod>2025-04-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://greg.langmead.info/publication_types/</loc>
+    <lastmod>2025-04-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://greg.langmead.info/publications/</loc>
     <lastmod>2025-04-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://greg.langmead.info/writing/</loc>
     <lastmod>2025-04-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://greg.langmead.info/posts/2025-01-18-nazi-seizure-of-power-book-review/</loc>
-    <lastmod>2025-01-18T00:00:00+00:00</lastmod>
+    <loc>https://greg.langmead.info/tags/</loc>
+    <lastmod>2025-04-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://greg.langmead.info/posts/</loc>
+    <loc>https://greg.langmead.info/posts/2025-01-18-nazi-seizure-of-power-book-review/</loc>
     <lastmod>2025-01-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://greg.langmead.info/posts/2024-09-07-adventure-system/</loc>
@@ -42,12 +66,6 @@
     <lastmod>2020-09-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://greg.langmead.info/publications/recommendations-2019/</loc>
-    <lastmod>2020-09-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://greg.langmead.info/publication_types/</loc>
-    <lastmod>2020-09-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://greg.langmead.info/publications/</loc>
     <lastmod>2020-09-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://greg.langmead.info/publications/entity-linking-2015/</loc>
@@ -362,19 +380,10 @@
     <loc>https://greg.langmead.info/writing/susydonaldson/</loc>
     <lastmod>2002-10-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://greg.langmead.info/publication-type/2/</loc>
-    <lastmod>2002-10-01T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://greg.langmead.info/publications/langmead-supersymmetric-2002/</loc>
     <lastmod>2002-10-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://greg.langmead.info/tag/high-energy-physics-theory/</loc>
-    <lastmod>2002-10-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://greg.langmead.info/tag/mathematics-differential-geometry/</loc>
-    <lastmod>2002-10-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://greg.langmead.info/tags/</loc>
     <lastmod>2002-10-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://greg.langmead.info/posts/2002-08-14-so-langmeadinfo-seems-relatively-stable/</loc>
