@@ -79,7 +79,7 @@
   &lt;script src=&#34;https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6&#34;&gt;&lt;/script&gt;
   &lt;script src=&#34;https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js&#34; type=&#34;text/javascript&#34;&gt;&lt;/script&gt;
 &lt;/head&gt;
-&lt;body&gt;&lt;ul&gt;&lt;li&gt;See the talk &lt;a href=&#34;https://youtu.be/gfES21UUEy4&#34;&gt;on YouTube&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#34;https://arxiv.org/abs/2504.20363&#34;&gt;Arxiv link&lt;/a&gt;&lt;/li&gt; &lt;li&gt;Download &lt;a href=&#34;discrete_gauge_theory.pdf&#34;&gt;the local PDF version&lt;/a&gt; or &lt;a href=&#34;dgt_talk_handout.pdf&#34;&gt;the slides&lt;/a&gt;.&lt;/li&gt;&lt;/ul&gt;&lt;hr/&gt;
+&lt;body&gt;&lt;ul&gt;&lt;li&gt;See the talk &lt;a href=&#34;https://youtu.be/gfES21UUEy4&#34;&gt;on YouTube&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#34;https://arxiv.org/abs/2504.20363&#34;&gt;Arxiv link&lt;/a&gt;&lt;/li&gt; &lt;li&gt;Download &lt;a href=&#34;dgt_talk_handout.pdf&#34;&gt;the slides&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;hr/&gt;
 &lt;nav id=&#34;TOC&#34; role=&#34;doc-toc&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#abstract&#34; id=&#34;toc-abstract&#34;&gt;Abstract&lt;/a&gt;&lt;/li&gt;
