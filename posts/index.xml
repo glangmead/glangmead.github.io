@@ -6,10 +6,108 @@
     <description>Recent content in Posts on Long Head</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 05 May 2025 17:30:43 -0400</lastBuildDate>
+    <lastBuildDate>Mon, 22 Sep 2025 16:42:32 -0400</lastBuildDate>
     
 	    <atom:link href="https://greg.langmead.info/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Game state in Swift</title>
+      <link>https://greg.langmead.info/posts/2025-09-22-game-state-swift/</link>
+      <pubDate>Mon, 22 Sep 2025 16:42:32 -0400</pubDate>
+      
+      <guid>https://greg.langmead.info/posts/2025-09-22-game-state-swift/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;m working towards a goal of having a strongly typed, functional (as in programming) engine for board game logic. This should enable a game to be built up in composable pieces. I don&amp;rsquo;t yet have a compelling pitch for why this is a good thing, but my intuition tells me it will for example allow a game to be playable after any subset of its components and rules are defined. Imagine reading a rulebook and you get to page 10 where it says &amp;ldquo;oh and if a blue piece captures a red piece then advance the morale track&amp;rdquo;. Before reaching page 10 you, the reader, already have a game in your head. Then you &amp;ldquo;add one more rule&amp;rdquo; to that game and get a new, slightly larger game. I want to make some sort of game editor that supports this way of thinking.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m going to start by exploring what appropriate types would be to represent game &lt;em&gt;state&lt;/em&gt; and game &lt;em&gt;actions&lt;/em&gt;. Then later on in some future post I&amp;rsquo;ll talk about the category theory of lenses and dynamical systems, which provide a compositional pattern for the runtime of applying actions, i.e. advancing the state of a game. That&amp;rsquo;s for future posts.&lt;/p&gt;
+&lt;p&gt;Another way to describe the context of this work is to say that I&amp;rsquo;m trying to improve on game engine research such as &lt;a href=&#34;http://ludii.games&#34;&gt;Ludii&lt;/a&gt;, &lt;a href=&#34;https://gaigresearch.github.io/projects/TAG&#34;&gt;TAG&lt;/a&gt;, and the ancient &lt;a href=&#34;http://logic.stanford.edu/ggp/notes/gdl.html&#34;&gt;GDL&lt;/a&gt;. These are cool and inspiring (especially TAG) but they are tuned for their own specific tradeoffs, none of which is making it user-friendly to input the rules for a new game (and TAG, cool at it is, specifically and emphatically discards this goal).&lt;/p&gt;
+&lt;p&gt;My insight today is how we might &lt;em&gt;decompose&lt;/em&gt; the state of the game into the state of each of its &lt;em&gt;components&lt;/em&gt;. For example if a game has &lt;em&gt;pieces&lt;/em&gt;, each piece might be in some space on the board, or off the board in a pile of pieces not yet deployed to the board. The game may also have an overall state of whose turn it is, and what phase of their turn it is. I&amp;rsquo;ll call those components as well. Call the type of components $C$.&lt;/p&gt;
+&lt;p&gt;Each component has its own specific (private but not programming-language-private) space of states. By &amp;ldquo;has&amp;rdquo; I mean we have a &lt;em&gt;type family&lt;/em&gt; $f:C\to\mathsf{Type}$, i.e. a type of possible values for each game component. A complete game state is a choice of state for each component, i.e. a section of the type family $f$. A section is denoted $S:\prod_{c:C}f(c)$,  and the type $\prod_{c:C}f(c)$ is often called a &lt;em&gt;pi-type&lt;/em&gt;. I think that&amp;rsquo;s neat.&lt;/p&gt;
+&lt;p&gt;But it gets neater! What is an action? I think a pure atomic action is a change of the state of one component. Such an action may have side-effects, or it might be illegal, and those need to be modeled in this system at some point. But a would-be action without its side effects is a choice of a component $c:C$ and a new value $n$ in its fiber, i.e. $n:f(c)$. Pairs like $(c,n)$ are points in the total space of the type family, i.e. terms $a:\sum_{c:C}f(c)$. This total space $\sum_{c:C}f(c)$ is called a &lt;em&gt;sigma-type&lt;/em&gt;. It&amp;rsquo;s the other standard construction given a type family!&lt;/p&gt;
+&lt;p&gt;So the paradigm I&amp;rsquo;m working towards is that states are dependent functions, and actions are atomic tweaks to the function. Let&amp;rsquo;s look at an example.&lt;/p&gt;
+&lt;h2 id=&#34;states-and-actions-in-swift&#34;&gt;States and actions in Swift&lt;/h2&gt;
+&lt;p&gt;In the game &lt;a href=&#34;https://en.wikipedia.org/wiki/Can%27t_Stop_%28board_game%29&#34;&gt;&amp;ldquo;Can&amp;rsquo;t Stop&amp;rdquo;&lt;/a&gt; there are 2-4 players who take turns, and on their turn they keep alternating between two phases: whether to roll or pass, and then rolling and deciding what pieces to move. We&amp;rsquo;ll assume there are two players in this post.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m determined to stick with Swift&amp;rsquo;s value types for these. The &lt;code&gt;enum&lt;/code&gt; is a coproduct/disjoint union, and &lt;code&gt;struct&lt;/code&gt; is a product. Like we said, the base of the type family consists of the components. First there are the pieces:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-swift&#34; data-lang=&#34;swift&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;enum&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Piece&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;case&lt;/span&gt; white1, white2, white3
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;case&lt;/span&gt; red2, red3, red4, red5, red6, red7, red8, red9, red10, red11, red12
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;case&lt;/span&gt; blue2, blue3, blue4, blue5, blue6, blue7, blue8, blue9, blue10, blue11, blue12
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Players and phases are enums as well:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-swift&#34; data-lang=&#34;swift&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;enum&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;PlayerAmongTwo&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;case&lt;/span&gt; player1
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;case&lt;/span&gt; player2
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;enum&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Phase&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;case&lt;/span&gt; notRolled
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;case&lt;/span&gt; rolled
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;A component is either a piece, a player, or a phase:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-swift&#34; data-lang=&#34;swift&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;enum&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Component&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;case&lt;/span&gt; piece(Piece)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;case&lt;/span&gt; player
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;case&lt;/span&gt; phase
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now for the type family. The board has columns numbered 2-12 and a variable height for each column (making a stop sign). I&amp;rsquo;ll use &amp;ldquo;column 0&amp;rdquo; to be the off-board pile where the unused pieces are:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-swift&#34; data-lang=&#34;swift&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;enum&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Column&lt;/span&gt;: Int {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;case&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;none&lt;/span&gt; = &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;case&lt;/span&gt; two = &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;, three, four, five, six, seven, eight, nine, ten, eleven, twelve
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; colHeights: [Column: Int] = [
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  .two:    &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  .three:  &lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  .four:   &lt;span style=&#34;color:#ae81ff&#34;&gt;7&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  .five:   &lt;span style=&#34;color:#ae81ff&#34;&gt;9&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  .six:    &lt;span style=&#34;color:#ae81ff&#34;&gt;11&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  .seven:  &lt;span style=&#34;color:#ae81ff&#34;&gt;13&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  .eight:  &lt;span style=&#34;color:#ae81ff&#34;&gt;11&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  .nine:   &lt;span style=&#34;color:#ae81ff&#34;&gt;9&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  .ten:    &lt;span style=&#34;color:#ae81ff&#34;&gt;7&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  .eleven: &lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  .twelve: &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;typealias&lt;/span&gt; Board = [Column: [Int]]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; board: Board = [
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  Column.two:    [Int](repeating: &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, count: colHeights[Column.two]&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;),
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  Column.three:  [Int](repeating: &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, count: colHeights[Column.three]&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;),
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  Column.four:   [Int](repeating: &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, count: colHeights[Column.four]&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;),
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  Column.five:   [Int](repeating: &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, count: colHeights[Column.five]&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;),
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  Column.six:    [Int](repeating: &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, count: colHeights[Column.six]&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;),
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  Column.seven:  [Int](repeating: &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, count: colHeights[Column.seven]&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;),
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  Column.eight:  [Int](repeating: &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, count: colHeights[Column.eight]&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;),
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  Column.nine:   [Int](repeating: &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, count: colHeights[Column.nine]&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;),
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  Column.ten:    [Int](repeating: &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, count: colHeights[Column.ten]&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;),
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  Column.eleven: [Int](repeating: &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, count: colHeights[Column.eleven]&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;),
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  Column.twelve: [Int](repeating: &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, count: colHeights[Column.twelve]&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The columns are fixed-size arrays containing zeros. I don&amp;rsquo;t care what they contain, I don&amp;rsquo;t think we&amp;rsquo;ll look at the data inside the board at all.&lt;/p&gt;
+&lt;p&gt;Now for some payoff. In Swift there is no type-of-types such as &lt;code&gt;Type&lt;/code&gt; in Agda, but we won&amp;rsquo;t miss it. A state is a choice of board space for &lt;em&gt;every&lt;/em&gt; piece, plus a choice of player and phase:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-swift&#34; data-lang=&#34;swift&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// the pi type of the family, i.e. a type of sections of the family&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;struct&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;State&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; piece: (Piece) -&amp;gt; Board
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; player: Player
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; phase: Phase
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;It&amp;rsquo;s a struct because a map out of a disjoint union is a product of maps on each component. Actions will be dual to this: an action will again be an &lt;code&gt;enum&lt;/code&gt;, holding both a component and its value:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-swift&#34; data-lang=&#34;swift&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// the sigma type of the type family: pairs of (component, value)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;enum&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Action&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;// the state of one piece&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;struct&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;PiecePosition&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; piece: Piece
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; position: Board
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;case&lt;/span&gt; piecePosition(PiecePosition)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;case&lt;/span&gt; player(Player)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;case&lt;/span&gt; phase(Phase)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I wanted to use a tuple for &lt;code&gt;piecePosition&lt;/code&gt;, i.e. &lt;code&gt;case piecePosition((Piece, Board))&lt;/code&gt;, since it&amp;rsquo;s a pair after all, but I need to use types that conform to &lt;code&gt;Hashable&lt;/code&gt; (to put them in sets-of-actions) and tuples don&amp;rsquo;t conform, so fine we&amp;rsquo;ll use a helper struct &lt;code&gt;PiecePosition&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;That&amp;rsquo;s where I am so far. I&amp;rsquo;ll keep implementing &amp;ldquo;Can&amp;rsquo;t Stop&amp;rdquo; and some lenses for it next.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Masters thesis!</title>

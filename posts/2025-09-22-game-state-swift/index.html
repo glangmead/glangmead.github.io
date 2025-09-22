@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.3.1">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Greg Langmead">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="I&rsquo;m working towards a goal of having a strongly typed, functional (as in programming) engine for board game logic. This should enable a game to be built up in composable pieces. I don&rsquo;t yet have a compelling pitch for why this is a good thing, but my intuition tells me it will for example allow a game to be playable after any subset of its components and rules are defined. Imagine reading a rulebook and you get to page 10 where it says &ldquo;oh and if a blue piece captures a red piece then advance the morale track&rdquo;. Before reaching page 10 you, the reader, already have a game in your head. Then you &ldquo;add one more rule&rdquo; to that game and get a new, slightly larger game. I want to make some sort of game editor that supports this way of thinking.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://greg.langmead.info/posts/2025-09-22-game-state-swift/">
+
+  
+
+
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.2/css/all.css" integrity="sha384-PPIZEGYM1v8zp5Py7UjFb79S58UeqCL9pYVnVPURKEqvioPROaVAJKKLzvH2rDnI" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,400italic,700|Roboto+Mono">
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.min.92dfd3933367ff6988c22b6d083a0e7a.css">
+
+  
+
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="https://greg.langmead.info/posts/2025-09-22-game-state-swift/">
+
+  
+  
+  
+  
+    
+    
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="Long Head">
+  <meta property="og:url" content="https://greg.langmead.info/posts/2025-09-22-game-state-swift/">
+  <meta property="og:title" content="Game state in Swift | Long Head">
+  <meta property="og:description" content="I&rsquo;m working towards a goal of having a strongly typed, functional (as in programming) engine for board game logic. This should enable a game to be built up in composable pieces. I don&rsquo;t yet have a compelling pitch for why this is a good thing, but my intuition tells me it will for example allow a game to be playable after any subset of its components and rules are defined. Imagine reading a rulebook and you get to page 10 where it says &ldquo;oh and if a blue piece captures a red piece then advance the morale track&rdquo;. Before reaching page 10 you, the reader, already have a game in your head. Then you &ldquo;add one more rule&rdquo; to that game and get a new, slightly larger game. I want to make some sort of game editor that supports this way of thinking."><meta property="og:image" content="https://greg.langmead.info/img/icon-192.png">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2025-09-22T16:42:32-04:00">
+  
+  <meta property="article:modified_time" content="2025-09-22T16:42:32-04:00">
+  
+
+  
+
+
+  <link rel="me" href="https://mathstodon.xyz/@glangmead" />
+
+
+  <title>Game state in Swift | Long Head</title>
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+<nav class="navbar fixed-top navbar-expand-lg py-0" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/">Long Head</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav ml-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/cv"><span>CV</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/writing"><span>Research</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/publications"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/posts"><span>Blog</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+
+        
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-sun fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+  <article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1 itemprop="name">Game state in Swift</h1>
+
+  
+
+  
+    
+
+
+
+<meta content="2025-09-22 16:42:32 -0400 EDT" itemprop="datePublished">
+<meta content="2025-09-22 16:42:32 -0400 EDT" itemprop="dateModified">
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    <time>Sep 22, 2025</time>
+  </span>
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+    
+
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style" itemprop="articleBody">
+      <p>I&rsquo;m working towards a goal of having a strongly typed, functional (as in programming) engine for board game logic. This should enable a game to be built up in composable pieces. I don&rsquo;t yet have a compelling pitch for why this is a good thing, but my intuition tells me it will for example allow a game to be playable after any subset of its components and rules are defined. Imagine reading a rulebook and you get to page 10 where it says &ldquo;oh and if a blue piece captures a red piece then advance the morale track&rdquo;. Before reaching page 10 you, the reader, already have a game in your head. Then you &ldquo;add one more rule&rdquo; to that game and get a new, slightly larger game. I want to make some sort of game editor that supports this way of thinking.</p>
+<p>I&rsquo;m going to start by exploring what appropriate types would be to represent game <em>state</em> and game <em>actions</em>. Then later on in some future post I&rsquo;ll talk about the category theory of lenses and dynamical systems, which provide a compositional pattern for the runtime of applying actions, i.e. advancing the state of a game. That&rsquo;s for future posts.</p>
+<p>Another way to describe the context of this work is to say that I&rsquo;m trying to improve on game engine research such as <a href="http://ludii.games">Ludii</a>, <a href="https://gaigresearch.github.io/projects/TAG">TAG</a>, and the ancient <a href="http://logic.stanford.edu/ggp/notes/gdl.html">GDL</a>. These are cool and inspiring (especially TAG) but they are tuned for their own specific tradeoffs, none of which is making it user-friendly to input the rules for a new game (and TAG, cool at it is, specifically and emphatically discards this goal).</p>
+<p>My insight today is how we might <em>decompose</em> the state of the game into the state of each of its <em>components</em>. For example if a game has <em>pieces</em>, each piece might be in some space on the board, or off the board in a pile of pieces not yet deployed to the board. The game may also have an overall state of whose turn it is, and what phase of their turn it is. I&rsquo;ll call those components as well. Call the type of components $C$.</p>
+<p>Each component has its own specific (private but not programming-language-private) space of states. By &ldquo;has&rdquo; I mean we have a <em>type family</em> $f:C\to\mathsf{Type}$, i.e. a type of possible values for each game component. A complete game state is a choice of state for each component, i.e. a section of the type family $f$. A section is denoted $S:\prod_{c:C}f(c)$,  and the type $\prod_{c:C}f(c)$ is often called a <em>pi-type</em>. I think that&rsquo;s neat.</p>
+<p>But it gets neater! What is an action? I think a pure atomic action is a change of the state of one component. Such an action may have side-effects, or it might be illegal, and those need to be modeled in this system at some point. But a would-be action without its side effects is a choice of a component $c:C$ and a new value $n$ in its fiber, i.e. $n:f(c)$. Pairs like $(c,n)$ are points in the total space of the type family, i.e. terms $a:\sum_{c:C}f(c)$. This total space $\sum_{c:C}f(c)$ is called a <em>sigma-type</em>. It&rsquo;s the other standard construction given a type family!</p>
+<p>So the paradigm I&rsquo;m working towards is that states are dependent functions, and actions are atomic tweaks to the function. Let&rsquo;s look at an example.</p>
+<h2 id="states-and-actions-in-swift">States and actions in Swift</h2>
+<p>In the game <a href="https://en.wikipedia.org/wiki/Can%27t_Stop_%28board_game%29">&ldquo;Can&rsquo;t Stop&rdquo;</a> there are 2-4 players who take turns, and on their turn they keep alternating between two phases: whether to roll or pass, and then rolling and deciding what pieces to move. We&rsquo;ll assume there are two players in this post.</p>
+<p>I&rsquo;m determined to stick with Swift&rsquo;s value types for these. The <code>enum</code> is a coproduct/disjoint union, and <code>struct</code> is a product. Like we said, the base of the type family consists of the components. First there are the pieces:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">enum</span> <span style="color:#a6e22e">Piece</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">case</span> white1, white2, white3
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">case</span> red2, red3, red4, red5, red6, red7, red8, red9, red10, red11, red12
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">case</span> blue2, blue3, blue4, blue5, blue6, blue7, blue8, blue9, blue10, blue11, blue12
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Players and phases are enums as well:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">enum</span> <span style="color:#a6e22e">PlayerAmongTwo</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">case</span> player1
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">case</span> player2
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">enum</span> <span style="color:#a6e22e">Phase</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">case</span> notRolled
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">case</span> rolled
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>A component is either a piece, a player, or a phase:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">enum</span> <span style="color:#a6e22e">Component</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">case</span> piece(Piece)
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">case</span> player
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">case</span> phase
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Now for the type family. The board has columns numbered 2-12 and a variable height for each column (making a stop sign). I&rsquo;ll use &ldquo;column 0&rdquo; to be the off-board pile where the unused pieces are:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">enum</span> <span style="color:#a6e22e">Column</span>: Int {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">case</span> <span style="color:#66d9ef">none</span> = <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">case</span> two = <span style="color:#ae81ff">2</span>, three, four, five, six, seven, eight, nine, ten, eleven, twelve
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> colHeights: [Column: Int] = [
+</span></span><span style="display:flex;"><span>  .two:    <span style="color:#ae81ff">3</span>,
+</span></span><span style="display:flex;"><span>  .three:  <span style="color:#ae81ff">5</span>,
+</span></span><span style="display:flex;"><span>  .four:   <span style="color:#ae81ff">7</span>,
+</span></span><span style="display:flex;"><span>  .five:   <span style="color:#ae81ff">9</span>,
+</span></span><span style="display:flex;"><span>  .six:    <span style="color:#ae81ff">11</span>,
+</span></span><span style="display:flex;"><span>  .seven:  <span style="color:#ae81ff">13</span>,
+</span></span><span style="display:flex;"><span>  .eight:  <span style="color:#ae81ff">11</span>,
+</span></span><span style="display:flex;"><span>  .nine:   <span style="color:#ae81ff">9</span>,
+</span></span><span style="display:flex;"><span>  .ten:    <span style="color:#ae81ff">7</span>,
+</span></span><span style="display:flex;"><span>  .eleven: <span style="color:#ae81ff">5</span>,
+</span></span><span style="display:flex;"><span>  .twelve: <span style="color:#ae81ff">3</span>,
+</span></span><span style="display:flex;"><span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">typealias</span> Board = [Column: [Int]]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> board: Board = [
+</span></span><span style="display:flex;"><span>  Column.two:    [Int](repeating: <span style="color:#ae81ff">0</span>, count: colHeights[Column.two]<span style="color:#f92672">!</span>),
+</span></span><span style="display:flex;"><span>  Column.three:  [Int](repeating: <span style="color:#ae81ff">0</span>, count: colHeights[Column.three]<span style="color:#f92672">!</span>),
+</span></span><span style="display:flex;"><span>  Column.four:   [Int](repeating: <span style="color:#ae81ff">0</span>, count: colHeights[Column.four]<span style="color:#f92672">!</span>),
+</span></span><span style="display:flex;"><span>  Column.five:   [Int](repeating: <span style="color:#ae81ff">0</span>, count: colHeights[Column.five]<span style="color:#f92672">!</span>),
+</span></span><span style="display:flex;"><span>  Column.six:    [Int](repeating: <span style="color:#ae81ff">0</span>, count: colHeights[Column.six]<span style="color:#f92672">!</span>),
+</span></span><span style="display:flex;"><span>  Column.seven:  [Int](repeating: <span style="color:#ae81ff">0</span>, count: colHeights[Column.seven]<span style="color:#f92672">!</span>),
+</span></span><span style="display:flex;"><span>  Column.eight:  [Int](repeating: <span style="color:#ae81ff">0</span>, count: colHeights[Column.eight]<span style="color:#f92672">!</span>),
+</span></span><span style="display:flex;"><span>  Column.nine:   [Int](repeating: <span style="color:#ae81ff">0</span>, count: colHeights[Column.nine]<span style="color:#f92672">!</span>),
+</span></span><span style="display:flex;"><span>  Column.ten:    [Int](repeating: <span style="color:#ae81ff">0</span>, count: colHeights[Column.ten]<span style="color:#f92672">!</span>),
+</span></span><span style="display:flex;"><span>  Column.eleven: [Int](repeating: <span style="color:#ae81ff">0</span>, count: colHeights[Column.eleven]<span style="color:#f92672">!</span>),
+</span></span><span style="display:flex;"><span>  Column.twelve: [Int](repeating: <span style="color:#ae81ff">0</span>, count: colHeights[Column.twelve]<span style="color:#f92672">!</span>)
+</span></span><span style="display:flex;"><span>]
+</span></span></code></pre></div><p>The columns are fixed-size arrays containing zeros. I don&rsquo;t care what they contain, I don&rsquo;t think we&rsquo;ll look at the data inside the board at all.</p>
+<p>Now for some payoff. In Swift there is no type-of-types such as <code>Type</code> in Agda, but we won&rsquo;t miss it. A state is a choice of board space for <em>every</em> piece, plus a choice of player and phase:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#75715e">// the pi type of the family, i.e. a type of sections of the family</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">State</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> piece: (Piece) -&gt; Board
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> player: Player
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> phase: Phase
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>It&rsquo;s a struct because a map out of a disjoint union is a product of maps on each component. Actions will be dual to this: an action will again be an <code>enum</code>, holding both a component and its value:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#75715e">// the sigma type of the type family: pairs of (component, value)</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">enum</span> <span style="color:#a6e22e">Action</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// the state of one piece</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">PiecePosition</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> piece: Piece
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> position: Board
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">case</span> piecePosition(PiecePosition)
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">case</span> player(Player)
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">case</span> phase(Phase)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>I wanted to use a tuple for <code>piecePosition</code>, i.e. <code>case piecePosition((Piece, Board))</code>, since it&rsquo;s a pair after all, but I need to use types that conform to <code>Hashable</code> (to put them in sets-of-actions) and tuples don&rsquo;t conform, so fine we&rsquo;ll use a helper struct <code>PiecePosition</code>.</p>
+<p>That&rsquo;s where I am so far. I&rsquo;ll keep implementing &ldquo;Can&rsquo;t Stop&rdquo; and some lenses for it next.</p>
+
+    </div>
+
+    
+
+
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+  
+  
+  
+  <div class="media author-card" itemscope itemtype="http://schema.org/Person">
+    
+
+    <div class="media-body">
+      <h5 class="card-title" itemprop="name"><a href="/authors/authors/"></a></h5>
+      
+      
+      <ul class="network-icon" aria-hidden="true">
+        
+      </ul>
+    </div>
+  </div>
+
+
+
+      
+      
+    
+
+    
+
+    
+
+
+  </div>
+</article>
+
+      
+
+    
+    
+    
+    <script src="/js/mathjax-config.js"></script>
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
+        
+      
+
+      
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_CHTML-full" integrity="sha256-GhM+5JHb6QUzOQPXSJLEWP7R73CbkisjzK5Eyij4U9w=" crossorigin="anonymous" async></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "results found",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script src="/js/academic.min.6061f8c4837e3929c777fecba4438ac0.js"></script>
+
+    
+
+
+
+
+
+
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" id="back_to_top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
