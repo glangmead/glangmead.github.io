@@ -80,9 +80,11 @@
   &lt;script src=&#34;https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js&#34; type=&#34;text/javascript&#34;&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
+  Below is an HTML version of my thesis. Some related links:
   &lt;ul&gt;
-  &lt;li&gt;The thesis &lt;a href=&#34;https://arxiv.org/abs/2504.20363&#34;&gt;on the Arxiv&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;See my solo talk &lt;a href=&#34;https://youtu.be/gfES21UUEy4&#34;&gt;on YouTube&lt;/a&gt; and get &lt;a href=&#34;dgt_talk_handout.pdf&#34;&gt;the slides&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&#34;https://arxiv.org/abs/2504.20363&#34;&gt;Get the thesis on the Arxiv&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&#34;https://youtu.be/gfES21UUEy4&#34;&gt;See my solo talk&lt;/a&gt; (YouTube) and get &lt;a href=&#34;dgt_talk_handout.pdf&#34;&gt;the slides.&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&#34;https://youtu.be/Vp8N-XQQBYW&#34;&gt;See my talk&lt;/a&gt; (YouTube) at &lt;a href=&#34;https://hottest-seminar.github.io&#34;&gt;the HoTTEST seminar&lt;/a&gt; from October, 2025.&lt;/li&gt;
   &lt;li&gt;There is a nascent formalization in Agda of this work. See &lt;a href=&#34;https://github.com/glangmead/writing/tree/master/differential_geometry_in_hott&#34;&gt;this Readme&lt;/a&gt;.
 &lt;/ul&gt;
 &lt;hr/&gt;
