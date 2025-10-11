@@ -2,13 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://greg.langmead.info/posts/2025-09-22-game-state-swift/</loc>
-    <lastmod>2025-09-22T16:42:32-04:00</lastmod>
+    <loc>https://greg.langmead.info/posts/2025-10-10-classical-composers/</loc>
+    <lastmod>2025-10-10T20:47:19-04:00</lastmod>
   </url><url>
     <loc>https://greg.langmead.info/</loc>
-    <lastmod>2025-09-22T16:42:32-04:00</lastmod>
+    <lastmod>2025-10-10T20:47:19-04:00</lastmod>
   </url><url>
     <loc>https://greg.langmead.info/posts/</loc>
+    <lastmod>2025-10-10T20:47:19-04:00</lastmod>
+  </url><url>
+    <loc>https://greg.langmead.info/posts/2025-09-22-game-state-swift/</loc>
     <lastmod>2025-09-22T16:42:32-04:00</lastmod>
   </url><url>
     <loc>https://greg.langmead.info/posts/2025-05-05-masters-thesis/</loc>
