@@ -492,16 +492,16 @@
 <table id="composerTable" class="display">
   <thead>
     <tr>
-      <th id="name1Header" data-type="string">Name (LF)</th>
-      <th id="name2Header" data-type="string">Name (FL)</th>
-      <th id="wikiHeader" data-type="string">Wiki</th>
-      <th id="appleHeader" data-type="string">Music Essentials</th>
-      <th id="greatHeader" data-type="string">Great</th>
-      <th id="dateHeader" data-type="string">Dates</th>
-      <th id="nationHeader" data-type="string">Nationality</th>
-      <th id="periodHeader" data-type="string">Period</th>
-      <th id="perfCountHeader" data-type="number">Performances</th>
-      <th id="trackCountHeader" data-type="number">Tracks</th>
+      <th>Name (LF)</th>
+      <th>Name (FL)</th>
+      <th>Wiki</th>
+      <th>Music Essentials</th>
+      <th>Great</th>
+      <th>Dates</th>
+      <th>Nationality</th>
+      <th>Period</th>
+      <th>Performances</th>
+      <th>Tracks</th>
     </tr>
   </thead>
   <tbody>
@@ -4387,7 +4387,10 @@
 <script>
   let table = new DataTable('#composerTable', {
       responsive: true,
-      paging: false
+      paging: false,
+      columnDefs: [
+        { type: 'num', targets: [8, 9] }
+      ],
   });
 </script>
 

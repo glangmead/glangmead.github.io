@@ -23,16 +23,16 @@
 &lt;table id=&#34;composerTable&#34; class=&#34;display&#34;&gt;
   &lt;thead&gt;
     &lt;tr&gt;
-      &lt;th id=&#34;name1Header&#34; data-type=&#34;string&#34;&gt;Name (LF)&lt;/th&gt;
-      &lt;th id=&#34;name2Header&#34; data-type=&#34;string&#34;&gt;Name (FL)&lt;/th&gt;
-      &lt;th id=&#34;wikiHeader&#34; data-type=&#34;string&#34;&gt;Wiki&lt;/th&gt;
-      &lt;th id=&#34;appleHeader&#34; data-type=&#34;string&#34;&gt;Music Essentials&lt;/th&gt;
-      &lt;th id=&#34;greatHeader&#34; data-type=&#34;string&#34;&gt;Great&lt;/th&gt;
-      &lt;th id=&#34;dateHeader&#34; data-type=&#34;string&#34;&gt;Dates&lt;/th&gt;
-      &lt;th id=&#34;nationHeader&#34; data-type=&#34;string&#34;&gt;Nationality&lt;/th&gt;
-      &lt;th id=&#34;periodHeader&#34; data-type=&#34;string&#34;&gt;Period&lt;/th&gt;
-      &lt;th id=&#34;perfCountHeader&#34; data-type=&#34;number&#34;&gt;Performances&lt;/th&gt;
-      &lt;th id=&#34;trackCountHeader&#34; data-type=&#34;number&#34;&gt;Tracks&lt;/th&gt;
+      &lt;th&gt;Name (LF)&lt;/th&gt;
+      &lt;th&gt;Name (FL)&lt;/th&gt;
+      &lt;th&gt;Wiki&lt;/th&gt;
+      &lt;th&gt;Music Essentials&lt;/th&gt;
+      &lt;th&gt;Great&lt;/th&gt;
+      &lt;th&gt;Dates&lt;/th&gt;
+      &lt;th&gt;Nationality&lt;/th&gt;
+      &lt;th&gt;Period&lt;/th&gt;
+      &lt;th&gt;Performances&lt;/th&gt;
+      &lt;th&gt;Tracks&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
@@ -3918,7 +3918,10 @@
 &lt;script&gt;
   let table = new DataTable(&#39;#composerTable&#39;, {
       responsive: true,
-      paging: false
+      paging: false,
+      columnDefs: [
+        { type: &#39;num&#39;, targets: [8, 9] }
+      ],
   });
 &lt;/script&gt;
 </description>
