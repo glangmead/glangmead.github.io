@@ -1,0 +1,3 @@
+Adapter for allowing both online and offline training of a text to text system
+
+

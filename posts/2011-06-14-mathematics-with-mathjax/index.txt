@@ -1,0 +1,5 @@
+Mathematics with MathJax
+
+This is a post to test the functionality of MathJax. Just put a simple script tag in your header, pointing to a global copy of mathjax.js distributed via Amazon’s CloudFront content distribution network. After that, you can enter LaTeX or MathML directly in your posts and MathJax will render it into beautiful equations. Here is a favorite (from my dissertation):
+[ \Pi \wedge^{2}{+}TX\otimes\wedge^{2}{+}T^{}X \hookrightarrow \Pi\wedge^{2}_{+}TX\otimes T^{}X\otimes T^{*}X ]
+

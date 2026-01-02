@@ -1,0 +1,4 @@
+Beware of Bounceweb!
+
+Boy, Bounceweb threw us for a loop. Our site went down so hard that when it came back up, various files and directories were gone! They had to restore from backups, and even so there was a lot of work to do.
+

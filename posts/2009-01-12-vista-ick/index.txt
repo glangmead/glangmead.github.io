@@ -1,0 +1,4 @@
+Vista = Ick
+
+I’m so tired of living with Windows Vista. Especially when it comes to USB. Whenever I plug in a USB device that I’ve used a million times before, but I plug it into a different USB port, Vista goes into overdrive. “Searching for driver!” it exclaims in a balloon. The hard drive churns and churns for about two minutes. You can’t do anything else disk-intensive during this time, so basically you’re just waiting at this point. If you click the little tray icon that appears, it says “Searching for driver in installed locations” or something. Finally it’s done and it says “Canon digital camera.” No kidding, the one I plugged in yesterday? Congratulations. Maybe I should plug it into each port in my hub so that I can go through this once and then know that I’m safe.
+

@@ -1,0 +1,5 @@
+How old is the term 'bug'?
+
+Robert X. Cringely, my favorite tech pundit, had an interesting aside in this week’s column (which is otherwise about Apple and Blu-Ray). He ran across a use of the term ‘bug’ to mean a glitch in a technical system in a magazine article from the 1930s. I found this fascinating, since we always assume “we” invented the term when computers came along. He closes with this:
+Read the full article.
+

@@ -1,0 +1,4 @@
+VisiCalc history
+
+Bob Frankston, co-creator of the original spreadsheet VisiCalc, has recently written down a postmortem, 25 years later!
+

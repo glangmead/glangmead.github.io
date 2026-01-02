@@ -1,0 +1,6 @@
+MathML
+
+My friend and former coworker, Robert Miner, has written an article about MathML in the latest issue of Notices of the American Mathematics Society, which you can read online [pdf]. MathML is a standard XML representation of math notation and semantics, and has been adopted steadily ever since Robert co-created it in 1998. When I worked at Design Science with Robert, MathML was becoming a major focus for the company.
+I was happy to see this article, because the academic math community is still very focused on TeX/LaTeX, which are fine as far as they go, but somewhat old-fashioned and limited compared to MathML. TeX is strictly for presentation, for example, and conveys no semantic content. You couldn’t paste TeX into a computer algebra system, for example, and expect it to compute anything. MathML is a better, more general solution, and has other benefits Robert covers in the article. One likely future application is the ability to index and search math formulas, something I began working on with Robert towards the end of my tenure at Design Science.
+I hope the math community becomes more aware of this technology and begins to adopt it. Nice work, Robert!
+

@@ -1,0 +1,3 @@
+Reader application with a personalized feed and method of providing recommendations while maintaining user privacy
+
+
