@@ -1,0 +1,5 @@
+Xcode Assistant: Wow
+
+I wanted to save for posterity the last week of working with Xcode 26.3 and 26.4 to resume development of an app I’m building (currently called “Orbital”). Every day I’ve been appreciating more and more how helpful it is to talk at such a high level and get things done. I feel like this tool is exactly for me and my capabilities.
+Here is a link to an HTML version of my chat logs as converted by claude-code-log.
+
