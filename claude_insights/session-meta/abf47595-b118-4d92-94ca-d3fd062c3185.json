@@ -1,0 +1,38 @@
+{
+  "session_id": "abf47595-b118-4d92-94ca-d3fd062c3185",
+  "project_path": "/Users/glangmead/proj/thegame",
+  "start_time": "2026-03-11T19:46:17.009Z",
+  "duration_minutes": 3,
+  "user_message_count": 1,
+  "assistant_message_count": 23,
+  "tool_counts": {
+    "Grep": 4,
+    "Read": 3,
+    "Edit": 7
+  },
+  "languages": {},
+  "git_commits": 0,
+  "git_pushes": 0,
+  "input_tokens": 27,
+  "output_tokens": 4420,
+  "first_prompt": "We're using Helvetica in various places in SpriteKit. I'd like all of those to use system fonts, chosen semantically if possible. If semantic fonts selection is not available, use APIs that tell you t…",
+  "user_interruptions": 0,
+  "user_response_times": [],
+  "tool_errors": 1,
+  "tool_error_categories": {
+    "Other": 1
+  },
+  "uses_task_agent": false,
+  "uses_mcp": false,
+  "uses_web_search": false,
+  "uses_web_fetch": false,
+  "lines_added": 9,
+  "lines_removed": 6,
+  "files_modified": 1,
+  "message_hours": [
+    15
+  ],
+  "user_message_timestamps": [
+    "2026-03-11T19:47:43.154Z"
+  ]
+}

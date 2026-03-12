@@ -1,0 +1,52 @@
+{
+  "session_id": "556eb85b-8302-40fe-a11a-0ac3c2adaa2e",
+  "project_path": "/Users/glangmead/proj/agent_videogames",
+  "start_time": "2026-02-22T16:03:38.105Z",
+  "duration_minutes": 2,
+  "user_message_count": 4,
+  "assistant_message_count": 16,
+  "tool_counts": {
+    "mcp__Steam__get-games": 1,
+    "Glob": 6,
+    "Read": 1,
+    "mcp__Steam__get-recent-games": 1
+  },
+  "languages": {
+    "JSON": 1
+  },
+  "git_commits": 0,
+  "git_pushes": 0,
+  "input_tokens": 97,
+  "output_tokens": 76,
+  "first_prompt": "using my Steam server, what are my top 5 most played games?",
+  "user_interruptions": 1,
+  "user_response_times": [
+    23.777,
+    19.555,
+    39.25
+  ],
+  "tool_errors": 3,
+  "tool_error_categories": {
+    "User Rejected": 2,
+    "Other": 1
+  },
+  "uses_task_agent": false,
+  "uses_mcp": true,
+  "uses_web_search": false,
+  "uses_web_fetch": false,
+  "lines_added": 0,
+  "lines_removed": 0,
+  "files_modified": 0,
+  "message_hours": [
+    11,
+    11,
+    11,
+    11
+  ],
+  "user_message_timestamps": [
+    "2026-02-22T16:03:50.110Z",
+    "2026-02-22T16:04:27.406Z",
+    "2026-02-22T16:05:10.600Z",
+    "2026-02-22T16:05:30.295Z"
+  ]
+}

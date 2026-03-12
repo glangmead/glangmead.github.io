@@ -1,0 +1,35 @@
+{
+  "session_id": "25a8f6e1-bc34-4cb5-9d27-9cce37b37a33",
+  "project_path": "/Users/glangmead/proj/thegame",
+  "start_time": "2026-03-12T00:21:59.454Z",
+  "duration_minutes": 0,
+  "user_message_count": 1,
+  "assistant_message_count": 4,
+  "tool_counts": {
+    "Read": 2,
+    "Grep": 1
+  },
+  "languages": {},
+  "git_commits": 0,
+  "git_pushes": 0,
+  "input_tokens": 12,
+  "output_tokens": 497,
+  "first_prompt": "No prompt",
+  "user_interruptions": 0,
+  "user_response_times": [],
+  "tool_errors": 0,
+  "tool_error_categories": {},
+  "uses_task_agent": false,
+  "uses_mcp": false,
+  "uses_web_search": false,
+  "uses_web_fetch": false,
+  "lines_added": 0,
+  "lines_removed": 0,
+  "files_modified": 0,
+  "message_hours": [
+    20
+  ],
+  "user_message_timestamps": [
+    "2026-03-12T00:21:59.454Z"
+  ]
+}

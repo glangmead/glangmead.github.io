@@ -1,0 +1,59 @@
+{
+  "session_id": "932e7e51-4b2b-4430-85c4-45541a603524",
+  "project_path": "/Users/glangmead/proj/thegame",
+  "start_time": "2026-03-11T19:15:39.876Z",
+  "duration_minutes": 33,
+  "user_message_count": 8,
+  "assistant_message_count": 35,
+  "tool_counts": {
+    "Read": 15,
+    "Agent": 3,
+    "Skill": 1
+  },
+  "languages": {
+    "Markdown": 2
+  },
+  "git_commits": 0,
+  "git_pushes": 0,
+  "input_tokens": 70,
+  "output_tokens": 7654,
+  "first_prompt": "Take a look at docs/lod_nested_choices.md. It's time to add all of that to Legions of Darkness. Here's what I want to discuss. The whole purpose of this RulePage engine is to enable compositionality.…",
+  "user_interruptions": 0,
+  "user_response_times": [
+    322.821,
+    344.295,
+    259.552,
+    44.756
+  ],
+  "tool_errors": 1,
+  "tool_error_categories": {
+    "File Not Found": 1
+  },
+  "uses_task_agent": true,
+  "uses_mcp": false,
+  "uses_web_search": false,
+  "uses_web_fetch": false,
+  "lines_added": 0,
+  "lines_removed": 0,
+  "files_modified": 0,
+  "message_hours": [
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15
+  ],
+  "user_message_timestamps": [
+    "2026-03-11T19:15:39.938Z",
+    "2026-03-11T19:15:39.872Z",
+    "2026-03-11T19:20:56.800Z",
+    "2026-03-11T19:28:22.180Z",
+    "2026-03-11T19:39:08.858Z",
+    "2026-03-11T19:43:53.988Z",
+    "2026-03-11T19:45:25.893Z",
+    "2026-03-11T19:45:39.950Z"
+  ]
+}

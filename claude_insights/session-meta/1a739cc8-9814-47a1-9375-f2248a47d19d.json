@@ -1,0 +1,57 @@
+{
+  "session_id": "1a739cc8-9814-47a1-9375-f2248a47d19d",
+  "project_path": "/Users/glangmead/proj/thegame",
+  "start_time": "2026-03-10T14:53:28.172Z",
+  "duration_minutes": 258,
+  "user_message_count": 7,
+  "assistant_message_count": 22,
+  "tool_counts": {
+    "Agent": 2,
+    "Read": 4,
+    "Bash": 1,
+    "Write": 1
+  },
+  "languages": {
+    "Markdown": 2
+  },
+  "git_commits": 0,
+  "git_pushes": 0,
+  "input_tokens": 46,
+  "output_tokens": 15264,
+  "first_prompt": "Take a look at OpenLoopMCTS and a literature review, and propose some research directions for greatly improving this algorithm. It needs a lot of iterations to perform well on simple games. Could it h…",
+  "user_interruptions": 0,
+  "user_response_times": [
+    1405.66,
+    154.708,
+    128.451,
+    555.55,
+    960.617
+  ],
+  "tool_errors": 0,
+  "tool_error_categories": {},
+  "uses_task_agent": true,
+  "uses_mcp": false,
+  "uses_web_search": false,
+  "uses_web_fetch": false,
+  "lines_added": 267,
+  "lines_removed": 0,
+  "files_modified": 1,
+  "message_hours": [
+    10,
+    11,
+    14,
+    14,
+    14,
+    14,
+    15
+  ],
+  "user_message_timestamps": [
+    "2026-03-10T14:55:22.756Z",
+    "2026-03-10T15:27:05.115Z",
+    "2026-03-10T18:38:30.227Z",
+    "2026-03-10T18:41:23.110Z",
+    "2026-03-10T18:44:22.693Z",
+    "2026-03-10T18:54:12.165Z",
+    "2026-03-10T19:11:22.220Z"
+  ]
+}

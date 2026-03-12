@@ -1,0 +1,36 @@
+{
+  "session_id": "28a6d4e3-74f1-4d5d-9ea9-9bded7f07266",
+  "project_path": "/Users/glangmead/proj/agent_videogames",
+  "start_time": "2026-02-22T15:45:05.963Z",
+  "duration_minutes": 0,
+  "user_message_count": 1,
+  "assistant_message_count": 3,
+  "tool_counts": {
+    "Read": 1
+  },
+  "languages": {
+    "Markdown": 1
+  },
+  "git_commits": 0,
+  "git_pushes": 0,
+  "input_tokens": 30,
+  "output_tokens": 3,
+  "first_prompt": "What's a good plan for my first turn in a game of Dominions 6?",
+  "user_interruptions": 0,
+  "user_response_times": [],
+  "tool_errors": 0,
+  "tool_error_categories": {},
+  "uses_task_agent": false,
+  "uses_mcp": false,
+  "uses_web_search": false,
+  "uses_web_fetch": false,
+  "lines_added": 0,
+  "lines_removed": 0,
+  "files_modified": 0,
+  "message_hours": [
+    10
+  ],
+  "user_message_timestamps": [
+    "2026-02-22T15:45:19.413Z"
+  ]
+}

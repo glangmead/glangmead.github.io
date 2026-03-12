@@ -1,0 +1,40 @@
+{
+  "session_id": "29ac498c-f9c5-4151-b1d2-5a8703d28f2b",
+  "project_path": "/Users/glangmead/proj/themusic",
+  "start_time": "2026-03-07T15:13:24.788Z",
+  "duration_minutes": 2,
+  "user_message_count": 2,
+  "assistant_message_count": 5,
+  "tool_counts": {
+    "ToolSearch": 2,
+    "Skill": 1,
+    "Read": 1
+  },
+  "languages": {
+    "Markdown": 1
+  },
+  "git_commits": 0,
+  "git_pushes": 0,
+  "input_tokens": 14,
+  "output_tokens": 231,
+  "first_prompt": "Use the swiftui-pro skill and Apple docs to help answer the question: What are the SwiftUI containers that behave like a Tab bar on small screens and split views on larger screens? Or like a Navigatio…",
+  "user_interruptions": 0,
+  "user_response_times": [],
+  "tool_errors": 0,
+  "tool_error_categories": {},
+  "uses_task_agent": false,
+  "uses_mcp": false,
+  "uses_web_search": false,
+  "uses_web_fetch": false,
+  "lines_added": 0,
+  "lines_removed": 0,
+  "files_modified": 0,
+  "message_hours": [
+    10,
+    10
+  ],
+  "user_message_timestamps": [
+    "2026-03-07T15:15:07.035Z",
+    "2026-03-07T15:15:13.250Z"
+  ]
+}

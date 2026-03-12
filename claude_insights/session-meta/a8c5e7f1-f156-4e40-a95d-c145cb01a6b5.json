@@ -1,0 +1,46 @@
+{
+  "session_id": "a8c5e7f1-f156-4e40-a95d-c145cb01a6b5",
+  "project_path": "/Users/glangmead/proj/agent_videogames",
+  "start_time": "2026-02-22T16:18:25.857Z",
+  "duration_minutes": 1,
+  "user_message_count": 3,
+  "assistant_message_count": 8,
+  "tool_counts": {
+    "WebSearch": 1,
+    "ListMcpResourcesTool": 2,
+    "Bash": 1
+  },
+  "languages": {},
+  "git_commits": 0,
+  "git_pushes": 0,
+  "input_tokens": 53,
+  "output_tokens": 172,
+  "first_prompt": "what does the smithsonian have from before the year 1700",
+  "user_interruptions": 1,
+  "user_response_times": [
+    4.962,
+    11.73
+  ],
+  "tool_errors": 2,
+  "tool_error_categories": {
+    "User Rejected": 1,
+    "Other": 1
+  },
+  "uses_task_agent": false,
+  "uses_mcp": false,
+  "uses_web_search": true,
+  "uses_web_fetch": false,
+  "lines_added": 0,
+  "lines_removed": 0,
+  "files_modified": 0,
+  "message_hours": [
+    11,
+    11,
+    11
+  ],
+  "user_message_timestamps": [
+    "2026-02-22T16:18:45.535Z",
+    "2026-02-22T16:18:54.097Z",
+    "2026-02-22T16:19:00.865Z"
+  ]
+}

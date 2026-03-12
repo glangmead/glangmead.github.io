@@ -1,0 +1,22 @@
+{
+  "underlying_goal": "Query personal Steam data and game information using connected MCP servers",
+  "goal_categories": {
+    "data_retrieval": 3,
+    "information_request": 1
+  },
+  "outcome": "partially_achieved",
+  "user_satisfaction_counts": {
+    "likely_satisfied": 1,
+    "dissatisfied": 1
+  },
+  "claude_helpfulness": "moderately_helpful",
+  "session_type": "multi_task",
+  "friction_counts": {
+    "wrong_approach": 1,
+    "misunderstood_request": 1
+  },
+  "friction_detail": "Claude couldn't fulfill strategy tips request via Steam server and user had to redirect to gamebrain tool, which was then interrupted.",
+  "primary_success": "fast_accurate_search",
+  "brief_summary": "User wanted to query Steam library data and game info across MCP servers; got top played games but follow-up requests were only partially fulfilled.",
+  "session_id": "a1ddd81b-c926-4c42-afae-9d5d99fd7aaf"
+}

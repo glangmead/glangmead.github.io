@@ -1,0 +1,41 @@
+{
+  "session_id": "6cd2440a-e01e-4d86-acd7-937d4c655e63",
+  "project_path": "/Users/glangmead/proj/thegame",
+  "start_time": "2026-03-10T14:50:52.265Z",
+  "duration_minutes": 3,
+  "user_message_count": 1,
+  "assistant_message_count": 22,
+  "tool_counts": {
+    "Read": 5,
+    "Bash": 2,
+    "Glob": 5,
+    "Agent": 3
+  },
+  "languages": {
+    "Markdown": 5
+  },
+  "git_commits": 0,
+  "git_pushes": 0,
+  "input_tokens": 28,
+  "output_tokens": 2362,
+  "first_prompt": "Please read the session logs for this project, and update .claude/skills/vassal-import to reflect best practices. I'd like you to work towards an autonomous situation, where you rely on reading and re…",
+  "user_interruptions": 0,
+  "user_response_times": [],
+  "tool_errors": 2,
+  "tool_error_categories": {
+    "File Not Found": 2
+  },
+  "uses_task_agent": true,
+  "uses_mcp": false,
+  "uses_web_search": false,
+  "uses_web_fetch": false,
+  "lines_added": 0,
+  "lines_removed": 0,
+  "files_modified": 0,
+  "message_hours": [
+    10
+  ],
+  "user_message_timestamps": [
+    "2026-03-10T14:52:09.115Z"
+  ]
+}

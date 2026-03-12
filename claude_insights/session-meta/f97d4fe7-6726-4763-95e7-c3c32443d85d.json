@@ -1,0 +1,40 @@
+{
+  "session_id": "f97d4fe7-6726-4763-95e7-c3c32443d85d",
+  "project_path": "/Users/glangmead/proj/agent_videogames/four_against_darkness",
+  "start_time": "2026-02-26T02:56:54.237Z",
+  "duration_minutes": 2,
+  "user_message_count": 1,
+  "assistant_message_count": 36,
+  "tool_counts": {
+    "Read": 9,
+    "Glob": 1,
+    "Grep": 2,
+    "Write": 1,
+    "Edit": 8
+  },
+  "languages": {
+    "Python": 18
+  },
+  "git_commits": 0,
+  "git_pushes": 0,
+  "input_tokens": 81,
+  "output_tokens": 5419,
+  "first_prompt": "No prompt",
+  "user_interruptions": 0,
+  "user_response_times": [],
+  "tool_errors": 0,
+  "tool_error_categories": {},
+  "uses_task_agent": false,
+  "uses_mcp": false,
+  "uses_web_search": false,
+  "uses_web_fetch": false,
+  "lines_added": 326,
+  "lines_removed": 3,
+  "files_modified": 3,
+  "message_hours": [
+    21
+  ],
+  "user_message_timestamps": [
+    "2026-02-26T02:56:54.237Z"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "session_id": "75010dd3-ce96-418c-a52a-6a2aacd24993",
+  "project_path": "/Users/glangmead/proj/thegame",
+  "start_time": "2026-02-22T17:26:07.868Z",
+  "duration_minutes": 4,
+  "user_message_count": 1,
+  "assistant_message_count": 10,
+  "tool_counts": {
+    "Task": 1,
+    "Read": 3
+  },
+  "languages": {},
+  "git_commits": 0,
+  "git_pushes": 0,
+  "input_tokens": 100,
+  "output_tokens": 1440,
+  "first_prompt": "This app contains a rules engine for games. Rules are functions from predicates on game state to lists of actions. Actions are applied to game state to give a new game state. We rely on value types, s…",
+  "user_interruptions": 0,
+  "user_response_times": [],
+  "tool_errors": 0,
+  "tool_error_categories": {},
+  "uses_task_agent": true,
+  "uses_mcp": false,
+  "uses_web_search": false,
+  "uses_web_fetch": false,
+  "lines_added": 0,
+  "lines_removed": 0,
+  "files_modified": 0,
+  "message_hours": [
+    12
+  ],
+  "user_message_timestamps": [
+    "2026-02-22T17:27:58.679Z"
+  ]
+}

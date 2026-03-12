@@ -1,0 +1,42 @@
+{
+  "session_id": "e09a6ca4-3803-421e-82c4-7e978a9af21b",
+  "project_path": "/Users/glangmead/proj/thegame",
+  "start_time": "2026-03-11T01:09:57.358Z",
+  "duration_minutes": 6,
+  "user_message_count": 3,
+  "assistant_message_count": 28,
+  "tool_counts": {
+    "Agent": 1,
+    "Read": 7,
+    "Grep": 2,
+    "Edit": 3,
+    "Bash": 1
+  },
+  "languages": {},
+  "git_commits": 0,
+  "git_pushes": 0,
+  "input_tokens": 34,
+  "output_tokens": 11001,
+  "first_prompt": "In the SwiftUI version of games, I'd like to run OpenLoopMCTS with 1000 iterations, and indicate in each List row what the stats say. Maybe something like  Attack (324/1000 wins) Move Rogue (19/1000 w…",
+  "user_interruptions": 0,
+  "user_response_times": [],
+  "tool_errors": 0,
+  "tool_error_categories": {},
+  "uses_task_agent": true,
+  "uses_mcp": false,
+  "uses_web_search": false,
+  "uses_web_fetch": false,
+  "lines_added": 53,
+  "lines_removed": 2,
+  "files_modified": 1,
+  "message_hours": [
+    21,
+    21,
+    21
+  ],
+  "user_message_timestamps": [
+    "2026-03-11T01:09:57.414Z",
+    "2026-03-11T01:09:57.357Z",
+    "2026-03-11T01:12:10.788Z"
+  ]
+}

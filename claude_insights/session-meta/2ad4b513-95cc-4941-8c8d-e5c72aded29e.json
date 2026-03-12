@@ -1,0 +1,32 @@
+{
+  "session_id": "2ad4b513-95cc-4941-8c8d-e5c72aded29e",
+  "project_path": "/Users/glangmead/proj/themusic",
+  "start_time": "2026-02-25T17:56:16.378Z",
+  "duration_minutes": 48,
+  "user_message_count": 0,
+  "assistant_message_count": 14,
+  "tool_counts": {
+    "Glob": 14
+  },
+  "languages": {},
+  "git_commits": 0,
+  "git_pushes": 0,
+  "input_tokens": 568286,
+  "output_tokens": 1139,
+  "first_prompt": "No prompt",
+  "user_interruptions": 0,
+  "user_response_times": [],
+  "tool_errors": 1,
+  "tool_error_categories": {
+    "Other": 1
+  },
+  "uses_task_agent": false,
+  "uses_mcp": false,
+  "uses_web_search": false,
+  "uses_web_fetch": false,
+  "lines_added": 0,
+  "lines_removed": 0,
+  "files_modified": 0,
+  "message_hours": [],
+  "user_message_timestamps": []
+}

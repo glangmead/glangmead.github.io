@@ -1,0 +1,34 @@
+{
+  "session_id": "624bf2d6-6c66-4a1e-bfe5-b5651771467e",
+  "project_path": "/Users/glangmead/proj/agent_videogames",
+  "start_time": "2026-02-24T17:27:52.501Z",
+  "duration_minutes": 2,
+  "user_message_count": 1,
+  "assistant_message_count": 3,
+  "tool_counts": {
+    "mcp__bgg__bgg-search": 1
+  },
+  "languages": {},
+  "git_commits": 0,
+  "git_pushes": 0,
+  "input_tokens": 30,
+  "output_tokens": 24,
+  "first_prompt": "what board games are made by the makers of wingspan?",
+  "user_interruptions": 0,
+  "user_response_times": [],
+  "tool_errors": 0,
+  "tool_error_categories": {},
+  "uses_task_agent": false,
+  "uses_mcp": true,
+  "uses_web_search": false,
+  "uses_web_fetch": false,
+  "lines_added": 0,
+  "lines_removed": 0,
+  "files_modified": 0,
+  "message_hours": [
+    12
+  ],
+  "user_message_timestamps": [
+    "2026-02-24T17:30:03.444Z"
+  ]
+}

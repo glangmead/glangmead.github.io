@@ -1,0 +1,43 @@
+{
+  "session_id": "54e90f1a-8276-45bf-a4a9-2aaf8284cfdf",
+  "project_path": "/Users/glangmead/proj/thegame",
+  "start_time": "2026-03-10T22:18:01.480Z",
+  "duration_minutes": 4,
+  "user_message_count": 2,
+  "assistant_message_count": 20,
+  "tool_counts": {
+    "Bash": 4,
+    "ToolSearch": 2,
+    "mcp__xcode__XcodeListWindows": 1,
+    "mcp__xcode__RunAllTests": 1,
+    "Agent": 1,
+    "Read": 1
+  },
+  "languages": {},
+  "git_commits": 0,
+  "git_pushes": 0,
+  "input_tokens": 44,
+  "output_tokens": 2820,
+  "first_prompt": "Here's a new report from Instruments. I have opened the disclosure triangle on the top couple methods to help ascertain their call sites: 7.50 G  100.0%    -     gamer (64043) 345.57 M   4.6%    345.5…",
+  "user_interruptions": 0,
+  "user_response_times": [
+    31.391
+  ],
+  "tool_errors": 0,
+  "tool_error_categories": {},
+  "uses_task_agent": true,
+  "uses_mcp": true,
+  "uses_web_search": false,
+  "uses_web_fetch": false,
+  "lines_added": 0,
+  "lines_removed": 0,
+  "files_modified": 0,
+  "message_hours": [
+    18,
+    18
+  ],
+  "user_message_timestamps": [
+    "2026-03-10T22:18:01.480Z",
+    "2026-03-10T22:20:58.128Z"
+  ]
+}

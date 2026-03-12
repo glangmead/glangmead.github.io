@@ -1,0 +1,56 @@
+{
+  "session_id": "f2515b23-9fcf-461e-8969-657387d16b14",
+  "project_path": "/Users/glangmead/proj/agent_videogames",
+  "start_time": "2026-02-23T22:48:16.300Z",
+  "duration_minutes": 12,
+  "user_message_count": 9,
+  "assistant_message_count": 5,
+  "tool_counts": {
+    "mcp__Wolfram__WolframAlpha": 1,
+    "mcp__Wolfram__WolframLanguageEvaluator": 1
+  },
+  "languages": {},
+  "git_commits": 0,
+  "git_pushes": 0,
+  "input_tokens": 41,
+  "output_tokens": 369,
+  "first_prompt": "what's the 123456789th prime?",
+  "user_interruptions": 1,
+  "user_response_times": [
+    114.551,
+    514.762
+  ],
+  "tool_errors": 1,
+  "tool_error_categories": {
+    "User Rejected": 1
+  },
+  "uses_task_agent": false,
+  "uses_mcp": true,
+  "uses_web_search": false,
+  "uses_web_fetch": false,
+  "lines_added": 0,
+  "lines_removed": 0,
+  "files_modified": 0,
+  "message_hours": [
+    17,
+    17,
+    17,
+    17,
+    17,
+    17,
+    17,
+    17,
+    18
+  ],
+  "user_message_timestamps": [
+    "2026-02-23T22:48:30.202Z",
+    "2026-02-23T22:48:30.202Z",
+    "2026-02-23T22:48:30.202Z",
+    "2026-02-23T22:49:22.461Z",
+    "2026-02-23T22:49:22.461Z",
+    "2026-02-23T22:49:22.461Z",
+    "2026-02-23T22:49:45.232Z",
+    "2026-02-23T22:51:52.857Z",
+    "2026-02-23T23:00:32.635Z"
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "session_id": "308169c0-56c8-46cc-b40b-f6b88c74df89",
+  "project_path": "/Users/glangmead/proj/thegame",
+  "start_time": "2026-03-11T17:59:53.977Z",
+  "duration_minutes": 39,
+  "user_message_count": 12,
+  "assistant_message_count": 199,
+  "tool_counts": {
+    "Read": 27,
+    "Skill": 1,
+    "Bash": 33,
+    "Glob": 2,
+    "Grep": 4,
+    "Write": 4,
+    "Edit": 30,
+    "ToolSearch": 4,
+    "mcp__xcode__BuildProject": 11,
+    "mcp__xcode__RunSomeTests": 1,
+    "mcp__xcode__GetTestList": 1,
+    "mcp__xcode__XcodeListWindows": 1
+  },
+  "languages": {
+    "Markdown": 1
+  },
+  "git_commits": 0,
+  "git_pushes": 0,
+  "input_tokens": 512,
+  "output_tokens": 42639,
+  "first_prompt": "Please implement docs/superpowers/plans/2026-03-11-vassal-scene.md",
+  "user_interruptions": 0,
+  "user_response_times": [
+    789.761,
+    73.029,
+    89.173,
+    82.762,
+    81.469,
+    55.193,
+    77.777,
+    55.647
+  ],
+  "tool_errors": 9,
+  "tool_error_categories": {
+    "File Not Found": 2,
+    "Command Failed": 5,
+    "Other": 2
+  },
+  "uses_task_agent": false,
+  "uses_mcp": true,
+  "uses_web_search": false,
+  "uses_web_fetch": false,
+  "lines_added": 812,
+  "lines_removed": 90,
+  "files_modified": 5,
+  "message_hours": [
+    13,
+    13,
+    13,
+    14,
+    14,
+    14,
+    14,
+    14,
+    14,
+    14,
+    14,
+    14
+  ],
+  "user_message_timestamps": [
+    "2026-03-11T17:59:54.056Z",
+    "2026-03-11T17:59:53.975Z",
+    "2026-03-11T17:59:59.089Z",
+    "2026-03-11T18:00:04.041Z",
+    "2026-03-11T18:23:43.269Z",
+    "2026-03-11T18:25:29.448Z",
+    "2026-03-11T18:27:33.660Z",
+    "2026-03-11T18:30:22.185Z",
+    "2026-03-11T18:33:01.611Z",
+    "2026-03-11T18:34:49.348Z",
+    "2026-03-11T18:37:19.935Z",
+    "2026-03-11T18:38:40.907Z"
+  ]
+}

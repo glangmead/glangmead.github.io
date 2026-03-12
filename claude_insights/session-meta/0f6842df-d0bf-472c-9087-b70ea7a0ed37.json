@@ -1,0 +1,44 @@
+{
+  "session_id": "0f6842df-d0bf-472c-9087-b70ea7a0ed37",
+  "project_path": "/Users/glangmead/proj/thegame",
+  "start_time": "2026-03-12T16:19:38.207Z",
+  "duration_minutes": 3,
+  "user_message_count": 4,
+  "assistant_message_count": 11,
+  "tool_counts": {
+    "Skill": 1,
+    "Read": 5,
+    "Agent": 1
+  },
+  "languages": {
+    "Markdown": 1
+  },
+  "git_commits": 0,
+  "git_pushes": 0,
+  "input_tokens": 18,
+  "output_tokens": 554,
+  "first_prompt": "Use writing-plans to plan implementation of docs/superpowers/specs/2026-03-12-hearts-design.md",
+  "user_interruptions": 0,
+  "user_response_times": [],
+  "tool_errors": 0,
+  "tool_error_categories": {},
+  "uses_task_agent": true,
+  "uses_mcp": false,
+  "uses_web_search": false,
+  "uses_web_fetch": false,
+  "lines_added": 0,
+  "lines_removed": 0,
+  "files_modified": 0,
+  "message_hours": [
+    12,
+    12,
+    12,
+    12
+  ],
+  "user_message_timestamps": [
+    "2026-03-12T16:19:38.283Z",
+    "2026-03-12T16:19:38.204Z",
+    "2026-03-12T16:20:08.125Z",
+    "2026-03-12T16:20:12.344Z"
+  ]
+}

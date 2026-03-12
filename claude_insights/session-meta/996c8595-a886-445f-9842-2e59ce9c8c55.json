@@ -1,0 +1,32 @@
+{
+  "session_id": "996c8595-a886-445f-9842-2e59ce9c8c55",
+  "project_path": "/Users/glangmead/proj/themusic",
+  "start_time": "2026-03-07T01:03:27.059Z",
+  "duration_minutes": 1,
+  "user_message_count": 1,
+  "assistant_message_count": 2,
+  "tool_counts": {},
+  "languages": {},
+  "git_commits": 0,
+  "git_pushes": 0,
+  "input_tokens": 6,
+  "output_tokens": 179,
+  "first_prompt": "Do you have a skill installed named swiftui-pro?",
+  "user_interruptions": 0,
+  "user_response_times": [],
+  "tool_errors": 0,
+  "tool_error_categories": {},
+  "uses_task_agent": false,
+  "uses_mcp": false,
+  "uses_web_search": false,
+  "uses_web_fetch": false,
+  "lines_added": 0,
+  "lines_removed": 0,
+  "files_modified": 0,
+  "message_hours": [
+    20
+  ],
+  "user_message_timestamps": [
+    "2026-03-07T01:03:54.297Z"
+  ]
+}

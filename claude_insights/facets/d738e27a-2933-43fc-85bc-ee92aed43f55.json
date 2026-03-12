@@ -1,0 +1,17 @@
+{
+  "underlying_goal": "Create a digital version implementation plan for the Four Against Darkness tabletop game",
+  "goal_categories": {
+    "planning": 1
+  },
+  "outcome": "partially_achieved",
+  "user_satisfaction_counts": {},
+  "claude_helpfulness": "moderately_helpful",
+  "session_type": "single_task",
+  "friction_counts": {
+    "user_rejected_action": 1
+  },
+  "friction_detail": "User interrupted Claude's tool use, suggesting the approach or output wasn't what they wanted at that moment.",
+  "primary_success": "none",
+  "brief_summary": "User wanted an implementation plan for a digital Four Against Darkness game; Claude began writing it but was interrupted before completion.",
+  "session_id": "d738e27a-2933-43fc-85bc-ee92aed43f55"
+}

@@ -1,0 +1,43 @@
+{
+  "session_id": "94e27596-86f8-4153-8b12-0c2c857eeefb",
+  "project_path": "/Users/glangmead/proj/thegame",
+  "start_time": "2026-03-10T18:58:41.150Z",
+  "duration_minutes": 9,
+  "user_message_count": 4,
+  "assistant_message_count": 36,
+  "tool_counts": {
+    "Skill": 1,
+    "Agent": 1,
+    "Read": 13,
+    "Grep": 5
+  },
+  "languages": {
+    "Markdown": 1
+  },
+  "git_commits": 0,
+  "git_pushes": 0,
+  "input_tokens": 6665,
+  "output_tokens": 14464,
+  "first_prompt": "I tested the UI a bit and have some feedback. 1. Each track needs a name. If the row (not really a track) of spells had been labeled \"Spells\" I wouldn't have had to search the code for what \"FB\" was :…",
+  "user_interruptions": 0,
+  "user_response_times": [],
+  "tool_errors": 0,
+  "tool_error_categories": {},
+  "uses_task_agent": true,
+  "uses_mcp": false,
+  "uses_web_search": false,
+  "uses_web_fetch": false,
+  "lines_added": 0,
+  "lines_removed": 0,
+  "files_modified": 0,
+  "message_hours": [
+    14,
+    14,
+    15,
+    15
+  ],
+  "user_message_timestamps": [
+    "2026-03-10T18:58:41.201Z",
+    "2026-03-10T18:58:41.145Z",
+    "2026-03-10T19:01:55.453Z",
+    "2026-03-10

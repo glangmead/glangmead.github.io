@@ -1,0 +1,55 @@
+{
+  "session_id": "120a7fb7-8ed8-4d78-b67a-a0c53c13000d",
+  "project_path": "/Users/glangmead/proj/thegame",
+  "start_time": "2026-03-12T11:34:17.112Z",
+  "duration_minutes": 85,
+  "user_message_count": 5,
+  "assistant_message_count": 23,
+  "tool_counts": {
+    "Skill": 1,
+    "Agent": 1,
+    "Glob": 1,
+    "Read": 6,
+    "Bash": 1,
+    "Write": 1
+  },
+  "languages": {
+    "Markdown": 1
+  },
+  "git_commits": 0,
+  "git_pushes": 0,
+  "input_tokens": 442,
+  "output_tokens": 13770,
+  "first_prompt": "I'm interested in prior art around the idea of encoding all our RulePages as declarative data in a DSL such as JSON. We already have the components and SiteGraph ready for such a DSL, do you agree? If…",
+  "user_interruptions": 0,
+  "user_response_times": [
+    753.78,
+    343.933,
+    3228.642
+  ],
+  "tool_errors": 1,
+  "tool_error_categories": {
+    "File Too Large": 1
+  },
+  "uses_task_agent": true,
+  "uses_mcp": false,
+  "uses_web_search": false,
+  "uses_web_fetch": false,
+  "lines_added": 408,
+  "lines_removed": 0,
+  "files_modified": 1,
+  "message_hours": [
+    7,
+    7,
+    7,
+    8,
+    8
+  ],
+  "user_message_timestamps": [
+    "2026-03-12T11:38:35.172Z",
+    "2026-03-12T11:38:44.081Z",
+    "2026-03-12T11:56:03.585Z",
+    "2026-03-12T12:02:51.608Z",
+    "2026-03-12T12:57:23.565Z"
+  ]
+}

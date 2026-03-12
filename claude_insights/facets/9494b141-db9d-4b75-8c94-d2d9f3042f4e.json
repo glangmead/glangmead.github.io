@@ -1,0 +1,20 @@
+{
+  "underlying_goal": "Explore various MCP tools (MTG, Wolfram, GameBrain) for fun informational queries",
+  "goal_categories": {
+    "information_lookup": 3
+  },
+  "outcome": "mostly_achieved",
+  "user_satisfaction_counts": {
+    "likely_satisfied": 2
+  },
+  "claude_helpfulness": "very_helpful",
+  "session_type": "multi_task",
+  "friction_counts": {
+    "tool_unavailable": 1,
+    "user_rejected_action": 1
+  },
+  "friction_detail": "Wolfram MCP was initially disconnected, and user interrupted the GameBrain search before it completed.",
+  "primary_success": "fast_accurate_search",
+  "brief_summary": "User tested multiple MCP tools for MTG commander decks, a prime number lookup, and a game search; most queries succeeded after resolving a Wolfram connection issue.",
+  "session_id": "9494b141-db9d-4b75-8c94-d2d9f3042f4e"
+}

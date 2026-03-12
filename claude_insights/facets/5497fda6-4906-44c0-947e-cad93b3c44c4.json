@@ -1,0 +1,15 @@
+{
+  "underlying_goal": "User was attempting to reconnect to a Smithsonian MCP server, not interacting with Claude directly",
+  "goal_categories": {
+    "warmup_minimal": 1
+  },
+  "outcome": "not_achieved",
+  "user_satisfaction_counts": {},
+  "claude_helpfulness": "unhelpful",
+  "session_type": "single_task",
+  "friction_counts": {},
+  "friction_detail": "MCP connection to Smithsonian failed twice; no interaction with Claude occurred.",
+  "primary_success": "none",
+  "brief_summary": "User tried to reconnect to a Smithsonian MCP server twice but failed both times, with no Claude interaction.",
+  "session_id": "5497fda6-4906-44c0-947e-cad93b3c44c4"
+}

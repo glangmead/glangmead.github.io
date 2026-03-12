@@ -1,0 +1,22 @@
+{
+  "underlying_goal": "Get information about board games (Wingspan publisher's games, Civ5 strategy guide, BGG collection count)",
+  "goal_categories": {
+    "information_lookup": 3,
+    "content_creation": 1
+  },
+  "outcome": "partially_achieved",
+  "user_satisfaction_counts": {
+    "likely_satisfied": 1,
+    "frustrated": 1
+  },
+  "claude_helpfulness": "slightly_helpful",
+  "session_type": "multi_task",
+  "friction_counts": {
+    "wrong_approach": 1,
+    "external_api_failure": 4
+  },
+  "friction_detail": "BGG API consistently returned 401 errors across all endpoints, blocking 2 of 3 user requests despite multiple retries and reconnections.",
+  "primary_success": "good_explanations",
+  "brief_summary": "User wanted board game info from BGG and a Civ5 strategy guide; the Civ5 guide was written successfully but BGG API failures blocked the other two requests.",
+  "session_id": "624bf2d6-6c66-4a1e-bfe5-b5651771467e"
+}

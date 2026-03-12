@@ -1,0 +1,44 @@
+{
+  "session_id": "8e1d13f7-0224-4d85-aed1-638e511a1dbb",
+  "project_path": "/Users/glangmead/proj/thegame",
+  "start_time": "2026-03-10T20:11:30.983Z",
+  "duration_minutes": 3,
+  "user_message_count": 4,
+  "assistant_message_count": 25,
+  "tool_counts": {
+    "Skill": 1,
+    "Agent": 2,
+    "Read": 7,
+    "Grep": 2,
+    "Edit": 2
+  },
+  "languages": {},
+  "git_commits": 0,
+  "git_pushes": 0,
+  "input_tokens": 35,
+  "output_tokens": 2673,
+  "first_prompt": "OpenLoopMCTS runs of LegionsOfDarkess are neither winning nor losing. Is there some depth limit I'm hitting such that it can't run games to completion?",
+  "user_interruptions": 0,
+  "user_response_times": [],
+  "tool_errors": 0,
+  "tool_error_categories": {},
+  "uses_task_agent": true,
+  "uses_mcp": false,
+  "uses_web_search": false,
+  "uses_web_fetch": false,
+  "lines_added": 4,
+  "lines_removed": 0,
+  "files_modified": 2,
+  "message_hours": [
+    16,
+    16,
+    16,
+    16
+  ],
+  "user_message_timestamps": [
+    "2026-03-10T20:11:31.072Z",
+    "2026-03-10T20:11:30.980Z",
+    "2026-03-10T20:12:02.203Z",
+    "2026-03-10T20:12:07.970Z"
+  ]
+}

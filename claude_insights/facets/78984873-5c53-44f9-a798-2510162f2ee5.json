@@ -1,0 +1,17 @@
+{
+  "underlying_goal": "Verify whether a 'swiftui-pro' skill plugin is accessible to Claude Code after installing it to ~/.agents",
+  "goal_categories": {
+    "troubleshooting_configuration": 1
+  },
+  "outcome": "partially_achieved",
+  "user_satisfaction_counts": {
+    "likely_satisfied": 1
+  },
+  "claude_helpfulness": "moderately_helpful",
+  "session_type": "quick_question",
+  "friction_counts": {},
+  "friction_detail": "",
+  "primary_success": "good_explanations",
+  "brief_summary": "User asked if Claude could see an installed skill; Claude identified it was in the wrong directory but the session ended before resolution.",
+  "session_id": "78984873-5c53-44f9-a798-2510162f2ee5"
+}

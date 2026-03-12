@@ -1,0 +1,21 @@
+{
+  "underlying_goal": "Debug a display issue with attack actions showing '(0)', then design a major refactoring to split a monolithic action enum into grouped sub-enums with better UI organization",
+  "goal_categories": {
+    "bug_investigation": 1,
+    "code_fix": 1,
+    "architecture_design": 1,
+    "documentation": 1
+  },
+  "outcome": "mostly_achieved",
+  "user_satisfaction_counts": {
+    "satisfied": 3,
+    "likely_satisfied": 3
+  },
+  "claude_helpfulness": "very_helpful",
+  "session_type": "multi_task",
+  "friction_counts": {},
+  "friction_detail": "",
+  "primary_success": "good_explanations",
+  "brief_summary": "User investigated a display bug showing '(0)' in attack actions, got a quick fix, then collaboratively designed a plan to refactor actions into grouped sub-enums with better UI headers and rule corrections.",
+  "session_id": "64fc190f-5125-4012-a229-8f62caaa2cd1"
+}

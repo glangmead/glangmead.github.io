@@ -1,0 +1,35 @@
+{
+  "session_id": "3e7a3b1b-8412-4c28-b6df-0df30f47eb63",
+  "project_path": "/Users/glangmead/proj/agent_hott",
+  "start_time": "2026-03-01T17:31:55.438Z",
+  "duration_minutes": 18,
+  "user_message_count": 1,
+  "assistant_message_count": 15,
+  "tool_counts": {
+    "Read": 4,
+    "Agent": 1
+  },
+  "languages": {},
+  "git_commits": 0,
+  "git_pushes": 0,
+  "input_tokens": 150,
+  "output_tokens": 2802,
+  "first_prompt": "In @papers/18_freed_hopkins_chernweil.pdf they say \"the homotopy theory of simplicial presheaves knows about sheaves\". I want to know more about that. Maybe some of their references discuss it, or may…",
+  "user_interruptions": 0,
+  "user_response_times": [],
+  "tool_errors": 0,
+  "tool_error_categories": {},
+  "uses_task_agent": true,
+  "uses_mcp": false,
+  "uses_web_search": false,
+  "uses_web_fetch": false,
+  "lines_added": 0,
+  "lines_removed": 0,
+  "files_modified": 0,
+  "message_hours": [
+    12
+  ],
+  "user_message_timestamps": [
+    "2026-03-01T17:33:30.016Z"
+  ]
+}

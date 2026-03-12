@@ -1,0 +1,20 @@
+{
+  "underlying_goal": "Query the Smithsonian's collection for items from before the year 1700 using an MCP server",
+  "goal_categories": {
+    "information_retrieval": 1
+  },
+  "outcome": "not_achieved",
+  "user_satisfaction_counts": {
+    "dissatisfied": 1
+  },
+  "claude_helpfulness": "slightly_helpful",
+  "session_type": "single_task",
+  "friction_counts": {
+    "wrong_approach": 1,
+    "user_rejected_action": 1
+  },
+  "friction_detail": "Claude initially tried a web search instead of the Smithsonian MCP server, and the MCP server itself failed to connect.",
+  "primary_success": "none",
+  "brief_summary": "User wanted to query the Smithsonian MCP server for pre-1700 items but the server failed to connect and no results were obtained.",
+  "session_id": "a8c5e7f1-f156-4e40-a95d-c145cb01a6b5"
+}

@@ -1,0 +1,72 @@
+{
+  "session_id": "ee78cf83-f4b8-4dee-a87a-1690e43a585e",
+  "project_path": "/Users/glangmead/proj/themusic/.claude/worktrees/relaxed-williams",
+  "start_time": "2026-02-23T23:06:16.361Z",
+  "duration_minutes": 15,
+  "user_message_count": 12,
+  "assistant_message_count": 65,
+  "tool_counts": {
+    "Bash": 22,
+    "Read": 10,
+    "Edit": 14
+  },
+  "languages": {
+    "Python": 16
+  },
+  "git_commits": 0,
+  "git_pushes": 0,
+  "input_tokens": 97,
+  "output_tokens": 892,
+  "first_prompt": "<task-notification> <task-id>b32cbd3</task-id> <tool-use-id>toolu_01LKw2NWqtrX2ZyN2zzxuoDF</tool-use-id> <output-file>/private/tmp/claude-501/-Users-glangmead-proj-themusic--claude-worktrees-relaxed-w…",
+  "user_interruptions": 0,
+  "user_response_times": [
+    87.497,
+    46.206,
+    46.684,
+    34.51,
+    16.843,
+    35.486,
+    36.494,
+    36.72,
+    25.238,
+    20.662,
+    174.191
+  ],
+  "tool_errors": 0,
+  "tool_error_categories": {},
+  "uses_task_agent": false,
+  "uses_mcp": false,
+  "uses_web_search": false,
+  "uses_web_fetch": false,
+  "lines_added": 65,
+  "lines_removed": 36,
+  "files_modified": 1,
+  "message_hours": [
+    18,
+    18,
+    18,
+    18,
+    18,
+    18,
+    18,
+    18,
+    18,
+    18,
+    18,
+    18
+  ],
+  "user_message_timestamps": [
+    "2026-02-23T23:07:06.122Z",
+    "2026-02-23T23:08:37.711Z",
+    "2026-02-23T23:09:39.613Z",
+    "2026-02-23T23:10:54.940Z",
+    "2026-02-23T23:12:00.214Z",
+    "2026-02-23T23:12:34.324Z",
+    "2026-02-23T23:13:30.978Z",
+    "2026-02-23T23:14:37.848Z",
+    "2026-02-23T23:15:46.781Z",
+    "2026-02-23T23:16:45.884Z",
+    "2026-02-23T23:17:30.576Z",
+    "2026-02-23T23:20:50.585Z"
+  ]
+}

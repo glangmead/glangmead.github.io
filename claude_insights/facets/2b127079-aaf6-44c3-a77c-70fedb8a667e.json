@@ -1,0 +1,15 @@
+{
+  "underlying_goal": "User ran an MCP command to check/reconnect MCP servers, no explicit request to Claude",
+  "goal_categories": {
+    "warmup_minimal": 1
+  },
+  "outcome": "unclear_from_transcript",
+  "user_satisfaction_counts": {},
+  "claude_helpfulness": "unhelpful",
+  "session_type": "single_task",
+  "friction_counts": {},
+  "friction_detail": "",
+  "primary_success": "none",
+  "brief_summary": "User ran a local /mcp command that failed to reconnect to bgg; no interaction with Claude occurred.",
+  "session_id": "2b127079-aaf6-44c3-a77c-70fedb8a667e"
+}

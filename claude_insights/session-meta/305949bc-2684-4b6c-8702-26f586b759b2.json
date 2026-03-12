@@ -1,0 +1,35 @@
+{
+  "session_id": "305949bc-2684-4b6c-8702-26f586b759b2",
+  "project_path": "/Users/glangmead/proj/thegame",
+  "start_time": "2026-03-10T20:32:22.719Z",
+  "duration_minutes": 2,
+  "user_message_count": 1,
+  "assistant_message_count": 5,
+  "tool_counts": {
+    "Agent": 1,
+    "Read": 2
+  },
+  "languages": {},
+  "git_commits": 0,
+  "git_pushes": 0,
+  "input_tokens": 11,
+  "output_tokens": 611,
+  "first_prompt": "Every game that OpenLoopMCTS plays it reports the ending state as \"Walls: gate: breached\". Never another breach. Could there be a bug? Either one that prevents dealing well with the gate track, or som…",
+  "user_interruptions": 0,
+  "user_response_times": [],
+  "tool_errors": 0,
+  "tool_error_categories": {},
+  "uses_task_agent": true,
+  "uses_mcp": false,
+  "uses_web_search": false,
+  "uses_web_fetch": false,
+  "lines_added": 0,
+  "lines_removed": 0,
+  "files_modified": 0,
+  "message_hours": [
+    16
+  ],
+  "user_message_timestamps": [
+    "2026-03-10T20:33:24.646Z"
+  ]
+}

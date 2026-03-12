@@ -1,0 +1,55 @@
+{
+  "session_id": "4bb45189-0ac9-4d6a-8343-702cf7afc22c",
+  "project_path": "/Users/glangmead/proj/thegame",
+  "start_time": "2026-03-11T19:58:45.618Z",
+  "duration_minutes": 79,
+  "user_message_count": 7,
+  "assistant_message_count": 133,
+  "tool_counts": {
+    "Read": 32,
+    "Skill": 2,
+    "ToolSearch": 1,
+    "Agent": 8,
+    "Grep": 6,
+    "TaskCreate": 7,
+    "TaskUpdate": 18,
+    "Bash": 13
+  },
+  "languages": {
+    "Markdown": 2
+  },
+  "git_commits": 0,
+  "git_pushes": 0,
+  "input_tokens": 182,
+  "output_tokens": 36014,
+  "first_prompt": "Please implement the plan in docs/superpowers/plans/2026-03-11-nested-choices.md with parallel agents if possible, and with the usual swiftlint and swiftui-pro smarts.",
+  "user_interruptions": 1,
+  "user_response_times": [],
+  "tool_errors": 0,
+  "tool_error_categories": {},
+  "uses_task_agent": true,
+  "uses_mcp": false,
+  "uses_web_search": false,
+  "uses_web_fetch": false,
+  "lines_added": 0,
+  "lines_removed": 0,
+  "files_modified": 0,
+  "message_hours": [
+    15,
+    15,
+    15,
+    15,
+    16,
+    16,
+    16
+  ],
+  "user_message_timestamps": [
+    "2026-03-11T19:58:45.675Z",
+    "2026-03-11T19:58:45.616Z",
+    "2026-03-11T19:59:13.388Z",
+    "2026-03-11T19:59:18.101Z",
+    "2026-03-11T20:00:54.422Z",
+    "2026-03-11T20:00:58.098Z",
+    "2026-03-11T20:01:37.118Z"
+  ]
+}

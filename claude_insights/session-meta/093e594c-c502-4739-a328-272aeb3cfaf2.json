@@ -1,0 +1,49 @@
+{
+  "session_id": "093e594c-c502-4739-a328-272aeb3cfaf2",
+  "project_path": "/Users/glangmead/proj/longhead",
+  "start_time": "2026-02-22T15:41:24.052Z",
+  "duration_minutes": 4,
+  "user_message_count": 5,
+  "assistant_message_count": 6,
+  "tool_counts": {
+    "mcp__gamebrain__search": 2
+  },
+  "languages": {},
+  "git_commits": 0,
+  "git_pushes": 0,
+  "input_tokens": 60,
+  "output_tokens": 18,
+  "first_prompt": "show me RPG games for PC",
+  "user_interruptions": 2,
+  "user_response_times": [
+    136.417,
+    139.308,
+    10.336,
+    56.714
+  ],
+  "tool_errors": 2,
+  "tool_error_categories": {
+    "User Rejected": 2
+  },
+  "uses_task_agent": false,
+  "uses_mcp": true,
+  "uses_web_search": false,
+  "uses_web_fetch": false,
+  "lines_added": 0,
+  "lines_removed": 0,
+  "files_modified": 0,
+  "message_hours": [
+    10,
+    10,
+    10,
+    10,
+    10
+  ],
+  "user_message_timestamps": [
+    "2026-02-22T15:42:00.092Z",
+    "2026-02-22T15:44:20.927Z",
+    "2026-02-22T15:44:23.818Z",
+    "2026-02-22T15:44:38.878Z",
+    "2026-02-22T15:45:39.578Z"
+  ]
+}

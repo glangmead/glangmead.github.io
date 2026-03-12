@@ -1,0 +1,19 @@
+{
+  "underlying_goal": "Search for RPG games available on PC",
+  "goal_categories": {
+    "information_lookup": 1
+  },
+  "outcome": "not_achieved",
+  "user_satisfaction_counts": {
+    "likely_satisfied": 1
+  },
+  "claude_helpfulness": "slightly_helpful",
+  "session_type": "single_task",
+  "friction_counts": {
+    "user_rejected_action": 2
+  },
+  "friction_detail": "User interrupted/denied the MCP tool permission twice, preventing the search from completing.",
+  "primary_success": "none",
+  "brief_summary": "User wanted to find RPG games for PC but the search tool was interrupted by permission denials both times.",
+  "session_id": "093e594c-c502-4739-a328-272aeb3cfaf2"
+}

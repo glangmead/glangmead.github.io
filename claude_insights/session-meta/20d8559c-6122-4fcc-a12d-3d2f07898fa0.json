@@ -1,0 +1,25 @@
+{
+  "session_id": "20d8559c-6122-4fcc-a12d-3d2f07898fa0",
+  "project_path": "/Users/glangmead/proj/themusic",
+  "start_time": "2026-03-06T16:03:23.669Z",
+  "duration_minutes": 140,
+  "user_message_count": 17,
+  "assistant_message_count": 76,
+  "tool_counts": {
+    "ToolSearch": 4,
+    "WebSearch": 14,
+    "Glob": 2,
+    "Read": 6,
+    "Bash": 10,
+    "Edit": 11
+  },
+  "languages": {
+    "Markdown": 1,
+    "Python": 16
+  },
+  "git_commits": 0,
+  "git_pushes": 0,
+  "input_tokens": 126,
+  "output_tokens": 13541,
+  "first_prompt": "Tell me the state of the art in automatically performing a reduction of a piece of music, either starting from MusicXML or from MIDI. What I mean is, a roman numeral analysis or even just reducing to…",
+  "user_interrupti

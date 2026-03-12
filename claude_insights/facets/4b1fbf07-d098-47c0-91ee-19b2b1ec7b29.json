@@ -1,0 +1,19 @@
+{
+  "underlying_goal": "Find their top 5 most played Steam games using the Steam MCP server",
+  "goal_categories": {
+    "data_retrieval": 2
+  },
+  "outcome": "not_achieved",
+  "user_satisfaction_counts": {
+    "frustrated": 1
+  },
+  "claude_helpfulness": "unhelpful",
+  "session_type": "single_task",
+  "friction_counts": {
+    "wrong_approach": 1
+  },
+  "friction_detail": "Steam API calls kept returning 400 errors, likely due to configuration issues, and Claude started searching config files before being interrupted.",
+  "primary_success": "none",
+  "brief_summary": "User wanted their top 5 most played Steam games but the Steam API calls failed repeatedly and the user interrupted the session.",
+  "session_id": "4b1fbf07-d098-47c0-91ee-19b2b1ec7b29"
+}

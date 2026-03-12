@@ -1,0 +1,15 @@
+{
+  "underlying_goal": "Get solo board game recommendations, likely from BoardGameGeek data",
+  "goal_categories": {
+    "game_recommendations": 1
+  },
+  "outcome": "unclear_from_transcript",
+  "user_satisfaction_counts": {},
+  "claude_helpfulness": "very_helpful",
+  "session_type": "exploration",
+  "friction_counts": {},
+  "friction_detail": "",
+  "primary_success": "fast_accurate_search",
+  "brief_summary": "User asked for solo board game recommendations and Claude provided curated suggestions using BGG data, though the session transcript is incomplete.",
+  "session_id": "5a199f9b-1e59-458c-97c5-aea6c63ec980"
+}

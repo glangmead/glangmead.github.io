@@ -1,0 +1,43 @@
+{
+  "session_id": "d738e27a-2933-43fc-85bc-ee92aed43f55",
+  "project_path": "/Users/glangmead/proj/agent_videogames",
+  "start_time": "2026-02-26T01:58:01.254Z",
+  "duration_minutes": 2,
+  "user_message_count": 2,
+  "assistant_message_count": 5,
+  "tool_counts": {
+    "Write": 1,
+    "ExitPlanMode": 1
+  },
+  "languages": {
+    "Markdown": 1
+  },
+  "git_commits": 0,
+  "git_pushes": 0,
+  "input_tokens": 32,
+  "output_tokens": 23,
+  "first_prompt": "No prompt",
+  "user_interruptions": 1,
+  "user_response_times": [
+    50.55
+  ],
+  "tool_errors": 1,
+  "tool_error_categories": {
+    "User Rejected": 1
+  },
+  "uses_task_agent": false,
+  "uses_mcp": false,
+  "uses_web_search": false,
+  "uses_web_fetch": false,
+  "lines_added": 175,
+  "lines_removed": 0,
+  "files_modified": 1,
+  "message_hours": [
+    20,
+    20
+  ],
+  "user_message_timestamps": [
+    "2026-02-26T01:58:01.254Z",
+    "2026-02-26T01:59:54.918Z"
+  ]
+}
