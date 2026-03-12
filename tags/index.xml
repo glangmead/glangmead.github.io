@@ -6,6 +6,8 @@
     <description>Recent content in Tags on Long Head</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
+    <managingEditor>Greg Langmead</managingEditor>
+    <webMaster>Greg Langmead</webMaster>
     <lastBuildDate>Fri, 25 Apr 2025 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="https://greg.langmead.info/tags/index.xml" rel="self" type="application/rss+xml" />
@@ -15,7 +17,6 @@
       <title>Mathematics - Category Theory</title>
       <link>https://greg.langmead.info/tag/mathematics-category-theory/</link>
       <pubDate>Fri, 25 Apr 2025 00:00:00 +0000</pubDate>
-      
       <guid>https://greg.langmead.info/tag/mathematics-category-theory/</guid>
       <description></description>
     </item>
@@ -24,7 +25,6 @@
       <title>Mathematics - Differential Geometry</title>
       <link>https://greg.langmead.info/tag/mathematics-differential-geometry/</link>
       <pubDate>Fri, 25 Apr 2025 00:00:00 +0000</pubDate>
-      
       <guid>https://greg.langmead.info/tag/mathematics-differential-geometry/</guid>
       <description></description>
     </item>
@@ -33,7 +33,6 @@
       <title>High Energy Physics - Theory</title>
       <link>https://greg.langmead.info/tag/high-energy-physics-theory/</link>
       <pubDate>Tue, 01 Oct 2002 00:00:00 +0000</pubDate>
-      
       <guid>https://greg.langmead.info/tag/high-energy-physics-theory/</guid>
       <description></description>
     </item>

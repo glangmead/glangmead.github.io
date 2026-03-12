@@ -6,6 +6,8 @@
     <description>Recent content in Mathematics - Category Theory on Long Head</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
+    <managingEditor>Greg Langmead</managingEditor>
+    <webMaster>Greg Langmead</webMaster>
     <lastBuildDate>Fri, 25 Apr 2025 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="https://greg.langmead.info/tag/mathematics-category-theory/index.xml" rel="self" type="application/rss+xml" />
@@ -15,7 +17,6 @@
       <title>Discrete differential geometry in homotopy type theory</title>
       <link>https://greg.langmead.info/publications/langmead-geometry-hott-2025/</link>
       <pubDate>Fri, 25 Apr 2025 00:00:00 +0000</pubDate>
-      
       <guid>https://greg.langmead.info/publications/langmead-geometry-hott-2025/</guid>
       <description></description>
     </item>

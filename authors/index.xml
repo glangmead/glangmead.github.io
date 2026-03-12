@@ -6,6 +6,8 @@
     <description>Recent content in Authors on Long Head</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
+    <managingEditor>Greg Langmead</managingEditor>
+    <webMaster>Greg Langmead</webMaster>
     
 	    <atom:link href="https://greg.langmead.info/authors/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +16,6 @@
       <title></title>
       <link>https://greg.langmead.info/authors/admin/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://greg.langmead.info/authors/admin/</guid>
       <description>&lt;p&gt;My name is Greg Langmead. From 2011–2025 I worked for &lt;a href=&#34;https://machinelearning.apple.com&#34;&gt;Apple&lt;/a&gt;, where for my last year I was a machine learning manager for &lt;a href=&#34;https://www.apple.com/news/&#34;&gt;Apple News&lt;/a&gt; and Stocks. For the previous 10 years was a machine learning engineer on News and Stocks, and before that an engineer for Books (née iBooks).&lt;/p&gt;
 &lt;p&gt;I have a Ph.D. in mathematics from Columbia University (2001) where I studied gauge theory, supersymmetry, and four-dimensional topology. My dissertation was titled &amp;ldquo;&lt;a href=&#34;https://arxiv.org/abs/hep-th/0210192&#34;&gt;A Supersymmetric Gauge Theory Formulation of the Donaldson Polynomial Invariants&lt;/a&gt;.&amp;rdquo;&lt;/p&gt;
@@ -29,7 +30,6 @@
       <title></title>
       <link>https://greg.langmead.info/authors/authors/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://greg.langmead.info/authors/authors/</guid>
       <description></description>
     </item>

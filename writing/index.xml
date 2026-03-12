@@ -6,6 +6,8 @@
     <description>Recent content in Research and writing on Long Head</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
+    <managingEditor>Greg Langmead</managingEditor>
+    <webMaster>Greg Langmead</webMaster>
     <lastBuildDate>Fri, 25 Apr 2025 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="https://greg.langmead.info/writing/index.xml" rel="self" type="application/rss+xml" />
@@ -15,7 +17,6 @@
       <title>Discrete differential geometry in homotopy type theory</title>
       <link>https://greg.langmead.info/writing/differential_geometry_in_hott/</link>
       <pubDate>Fri, 25 Apr 2025 00:00:00 +0000</pubDate>
-      
       <guid>https://greg.langmead.info/writing/differential_geometry_in_hott/</guid>
       <description>&lt;!DOCTYPE html&gt;
 &lt;html xmlns=&#34;http://www.w3.org/1999/xhtml&#34; lang=&#34;&#34; xml:lang=&#34;&#34;&gt;
@@ -847,7 +848,6 @@ I^X_\mathrm{tot}&amp;amp; \stackrel{\mathrm{def}}{=}\sum_F I^X_F &amp;amp;&amp;a
       <title>Frege&#39;s Values</title>
       <link>https://greg.langmead.info/writing/frege/</link>
       <pubDate>Wed, 15 Dec 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://greg.langmead.info/writing/frege/</guid>
       <description>&lt;h1 id=&#34;freges-values&#34;&gt;Frege&amp;rsquo;s Values&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;By Greg Langmead, December 2021.&lt;/strong&gt;&lt;/p&gt;
@@ -1173,7 +1173,6 @@ Logic
       <title>Randomness as Pointlessness</title>
       <link>https://greg.langmead.info/writing/randomness/</link>
       <pubDate>Wed, 16 Dec 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://greg.langmead.info/writing/randomness/</guid>
       <description>&lt;!DOCTYPE html&gt;&lt;html&gt;
 &lt;head&gt;
@@ -1555,7 +1554,6 @@ i}.&#34; display=&#34;inline&#34;&gt;&lt;mrow&gt;&lt;mi mathvariant=&#34;normal&
       <title>Categories and modalities for smoothness</title>
       <link>https://greg.langmead.info/writing/smoothness/</link>
       <pubDate>Fri, 09 Nov 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://greg.langmead.info/writing/smoothness/</guid>
       <description>&lt;!DOCTYPE html&gt;&lt;html&gt;
 &lt;head&gt;
@@ -2144,7 +2142,6 @@ ev_{x_{1}}}}\mathbb{R}.&#34; display=&#34;block&#34;&gt;&lt;mrow&gt;&lt;mrow&gt;
       <title>Lord of the Rings Annotated Differences From the Peter Jackson Movies</title>
       <link>https://greg.langmead.info/writing/lord-of-the-rings-annotated-differences-from-the-peter-jackson-movies/</link>
       <pubDate>Tue, 11 Aug 2009 20:21:41 +0000</pubDate>
-      
       <guid>https://greg.langmead.info/writing/lord-of-the-rings-annotated-differences-from-the-peter-jackson-movies/</guid>
       <description>&lt;p&gt;I am a huge fan of Peter Jackson’s movie versions of The Lord of the Rings novels. A HUGE fan. But I am also a fan of the books, which I have read several times, and which I have also done supplementary reading on.&lt;/p&gt;
 &lt;p&gt;This post is for anyone who enjoyed watching the movies, is willing to re-watch the extended editions, and has a desire to read the books but hesitates to invest the full time required to read 3 novels.&lt;/p&gt;
@@ -2159,7 +2156,6 @@ ev_{x_{1}}}}\mathbb{R}.&#34; display=&#34;block&#34;&gt;&lt;mrow&gt;&lt;mrow&gt;
       <title>A Supersymmetric Quantum Field Theory Formulation of the Donaldson Polynomial Invariants</title>
       <link>https://greg.langmead.info/writing/susydonaldson/</link>
       <pubDate>Mon, 21 Oct 2002 00:00:00 +0000</pubDate>
-      
       <guid>https://greg.langmead.info/writing/susydonaldson/</guid>
       <description>&lt;!DOCTYPE html&gt;&lt;html&gt;
 &lt;head&gt;

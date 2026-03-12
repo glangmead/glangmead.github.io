@@ -6,6 +6,8 @@
     <description>Recent content on Long Head</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
+    <managingEditor>Greg Langmead</managingEditor>
+    <webMaster>Greg Langmead</webMaster>
     <lastBuildDate>Sat, 28 Feb 2026 09:57:47 -0500</lastBuildDate>
     
 	    <atom:link href="https://greg.langmead.info/index.xml" rel="self" type="application/rss+xml" />
@@ -15,7 +17,6 @@
       <title>Posts</title>
       <link>https://greg.langmead.info/posts/</link>
       <pubDate>Sat, 28 Feb 2026 09:57:47 -0500</pubDate>
-      
       <guid>https://greg.langmead.info/posts/</guid>
       <description></description>
     </item>
@@ -24,7 +25,6 @@
       <title>Publications</title>
       <link>https://greg.langmead.info/publications/</link>
       <pubDate>Fri, 25 Apr 2025 00:00:00 +0000</pubDate>
-      
       <guid>https://greg.langmead.info/publications/</guid>
       <description></description>
     </item>
@@ -33,7 +33,6 @@
       <title>Research and writing</title>
       <link>https://greg.langmead.info/writing/</link>
       <pubDate>Fri, 25 Apr 2025 00:00:00 +0000</pubDate>
-      
       <guid>https://greg.langmead.info/writing/</guid>
       <description></description>
     </item>
@@ -42,7 +41,6 @@
       <title></title>
       <link>https://greg.langmead.info/cv/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://greg.langmead.info/cv/</guid>
       <description>&lt;h1 id=&#34;greg-langmead-phd&#34;&gt;Greg Langmead, Ph.D.&lt;/h1&gt;
 &lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
@@ -203,7 +201,6 @@ to Apple Inc., Patent and Trademark Office, 2019.&lt;/p&gt;
       <title>Authors</title>
       <link>https://greg.langmead.info/authors/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://greg.langmead.info/authors/</guid>
       <description></description>
     </item>

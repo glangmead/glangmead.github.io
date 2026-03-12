@@ -6,6 +6,8 @@
     <description>Recent content in 1 on Long Head</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
+    <managingEditor>Greg Langmead</managingEditor>
+    <webMaster>Greg Langmead</webMaster>
     <lastBuildDate>Sat, 01 Jan 2011 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="https://greg.langmead.info/publication-type/1/index.xml" rel="self" type="application/rss+xml" />
@@ -15,7 +17,6 @@
       <title>Extraction programs: a unified approach to translation rule extraction</title>
       <link>https://greg.langmead.info/publications/hopkins-extraction-2011/</link>
       <pubDate>Sat, 01 Jan 2011 00:00:00 +0000</pubDate>
-      
       <guid>https://greg.langmead.info/publications/hopkins-extraction-2011/</guid>
       <description></description>
     </item>
@@ -24,7 +25,6 @@
       <title>SCFG decoding without binarization</title>
       <link>https://greg.langmead.info/publications/hopkins-scfg-2010/</link>
       <pubDate>Fri, 01 Jan 2010 00:00:00 +0000</pubDate>
-      
       <guid>https://greg.langmead.info/publications/hopkins-scfg-2010/</guid>
       <description></description>
     </item>
@@ -33,7 +33,6 @@
       <title>Cube pruning as heuristic search</title>
       <link>https://greg.langmead.info/publications/hopkins-cube-2009/</link>
       <pubDate>Thu, 01 Jan 2009 00:00:00 +0000</pubDate>
-      
       <guid>https://greg.langmead.info/publications/hopkins-cube-2009/</guid>
       <description></description>
     </item>

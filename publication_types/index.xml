@@ -6,6 +6,8 @@
     <description>Recent content in Publication_types on Long Head</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
+    <managingEditor>Greg Langmead</managingEditor>
+    <webMaster>Greg Langmead</webMaster>
     <lastBuildDate>Fri, 25 Apr 2025 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="https://greg.langmead.info/publication_types/index.xml" rel="self" type="application/rss+xml" />
@@ -15,7 +17,6 @@
       <title>2</title>
       <link>https://greg.langmead.info/publication-type/2/</link>
       <pubDate>Fri, 25 Apr 2025 00:00:00 +0000</pubDate>
-      
       <guid>https://greg.langmead.info/publication-type/2/</guid>
       <description></description>
     </item>
@@ -24,7 +25,6 @@
       <title>8</title>
       <link>https://greg.langmead.info/publication-type/8/</link>
       <pubDate>Thu, 24 Sep 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://greg.langmead.info/publication-type/8/</guid>
       <description></description>
     </item>
@@ -33,7 +33,6 @@
       <title>1</title>
       <link>https://greg.langmead.info/publication-type/1/</link>
       <pubDate>Sat, 01 Jan 2011 00:00:00 +0000</pubDate>
-      
       <guid>https://greg.langmead.info/publication-type/1/</guid>
       <description></description>
     </item>

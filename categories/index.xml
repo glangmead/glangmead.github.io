@@ -6,6 +6,8 @@
     <description>Recent content in Categories on Long Head</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
+    <managingEditor>Greg Langmead</managingEditor>
+    <webMaster>Greg Langmead</webMaster>
     <lastBuildDate>Mon, 28 Aug 2023 17:33:15 -0400</lastBuildDate>
     
 	    <atom:link href="https://greg.langmead.info/categories/index.xml" rel="self" type="application/rss+xml" />
@@ -15,7 +17,6 @@
       <title>Tech</title>
       <link>https://greg.langmead.info/category/tech/</link>
       <pubDate>Mon, 28 Aug 2023 17:33:15 -0400</pubDate>
-      
       <guid>https://greg.langmead.info/category/tech/</guid>
       <description></description>
     </item>
@@ -24,7 +25,6 @@
       <title>Misc</title>
       <link>https://greg.langmead.info/category/misc/</link>
       <pubDate>Mon, 05 Nov 2018 12:36:54 +0000</pubDate>
-      
       <guid>https://greg.langmead.info/category/misc/</guid>
       <description></description>
     </item>
@@ -33,7 +33,6 @@
       <title>Personal</title>
       <link>https://greg.langmead.info/category/personal/</link>
       <pubDate>Tue, 23 Jun 2015 02:21:22 +0000</pubDate>
-      
       <guid>https://greg.langmead.info/category/personal/</guid>
       <description></description>
     </item>
@@ -42,7 +41,6 @@
       <title>Mac Stuff</title>
       <link>https://greg.langmead.info/category/mac-stuff/</link>
       <pubDate>Mon, 30 Nov 2009 15:04:16 +0000</pubDate>
-      
       <guid>https://greg.langmead.info/category/mac-stuff/</guid>
       <description></description>
     </item>
@@ -51,7 +49,6 @@
       <title>Games</title>
       <link>https://greg.langmead.info/category/games/</link>
       <pubDate>Sun, 17 Aug 2008 05:17:07 +0000</pubDate>
-      
       <guid>https://greg.langmead.info/category/games/</guid>
       <description></description>
     </item>
