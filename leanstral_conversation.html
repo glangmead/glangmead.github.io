@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leanstral &amp; Model Adaptation — Conversation (2026-03-22)</title>
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$','$']],
+      displayMath: [['$$','$$']],
+    }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    line-height: 1.7;
+    color: #1a1a1a;
+    background: #fff;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+  }
+  h1 { font-size: 1.8rem; margin-bottom: 0.5rem; }
+  h2 { font-size: 1.4rem; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+  h3 { font-size: 1.15rem; margin-top: 1.2rem; margin-bottom: 0.5rem; }
+  p { margin-bottom: 0.9rem; }
+  .user {
+    background: #d6e8f7;
+    border-left: 4px solid #3a7bbf;
+    padding: 1rem 1.25rem;
+    margin: 1.5rem 0;
+    border-radius: 6px;
+    font-style: italic;
+  }
+  .assistant {
+    background: #fff;
+    padding: 1rem 0;
+    margin: 0.5rem 0 1.5rem 0;
+  }
+  pre {
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 0.8rem 1rem;
+    overflow-x: auto;
+    font-size: 0.88rem;
+    line-height: 1.5;
+    margin: 0.75rem 0;
+  }
+  code {
+    font-family: 'Menlo', 'Consolas', monospace;
+    font-size: 0.88rem;
+  }
+  p code, li code {
+    background: #f0f0f0;
+    padding: 0.1rem 0.35rem;
+    border-radius: 3px;
+  }
+  table {
+    border-collapse: collapse;
+    margin: 0.75rem 0;
+    width: 100%;
+    font-size: 0.95rem;
+  }
+  th, td {
+    border: 1px solid #ccc;
+    padding: 0.45rem 0.7rem;
+    text-align: left;
+  }
+  th { background: #f0f0f0; font-weight: 600; }
+  ul, ol { margin: 0.5rem 0 0.9rem 1.5rem; }
+  li { margin-bottom: 0.3rem; }
+  a { color: #2a6496; }
+  .separator { border-top: 1px solid #ddd; margin: 2rem 0; }
+  strong { font-weight: 700; }
+</style>
+</head>
+<body>
+
+<h1>Leanstral &amp; Model Adaptation</h1>
+<p style="color:#666; font-size:0.9rem;">Conversation — March 22, 2026</p>
+
+<div class="separator"></div>
+
+<!-- ============ EXCHANGE 1 ============ -->
+
+<div class="user">
+I was pondering the project "leanstral" (https://mistral.ai/news/leanstral). It is presumably created by taking a foundation model and then... adapting it to some other loss function or test set, in this case around proving math results with Lean. What are the most up to date 2026 methods for adaptation, both the algorithms and the kinds of data and amounts of data. Where can I read more about this. Are folks still using LoRA, which I heard about a year or so ago?
+</div>
+
+<div class="assistant">
+
+<h2>What is Leanstral?</h2>
+
+<p>Released March 16, 2026, it's Mistral's open-source Lean 4 theorem proving agent, built on <strong>Mistral Small 4</strong> (119B total params, MoE with 6.5B active per token, 256K context). Trained specifically to work with Lean's language server via MCP. On FLTEval (Fermat's Last Theorem formalization benchmark), Leanstral pass@2 beats Claude Sonnet 4.6 at 15% of the cost. Apache 2.0 licensed, weights on HuggingFace. Mistral hasn't published the training details yet — a tech report is forthcoming.</p>
+
+<h2>Adaptation Methods in 2025–2026</h2>
+
+<p><strong>LoRA is still the workhorse.</strong> It remains the dominant PEFT method. Its main successors:</p>
+<ul>
+  <li><strong>DoRA</strong> (ICML 2024 Oral, NVIDIA) — decomposes weights into magnitude + direction, applies LoRA only to direction. Consistently outperforms LoRA, especially at low ranks. Now in HuggingFace PEFT.</li>
+  <li><strong>QLoRA</strong> — LoRA + 4-bit quantized base model. Fine-tune a 7B model on a single RTX 4090.</li>
+</ul>
+
+<p>A NeurIPS 2025 paper showed LoRA and full fine-tuning produce structurally different weight matrices — LoRA introduces "intruder dimensions" linked to catastrophic forgetting. So full fine-tuning is still preferred when resources allow.</p>
+
+<p><strong>The big 2025 shift is RL with verifiable rewards (RLVR)</strong>, especially for math/code/proofs where a checker provides binary correctness signals:</p>
+
+<ul>
+  <li><strong>GRPO</strong> (DeepSeek-R1) — samples multiple responses per prompt, normalizes rewards within the group. No critic model needed. DeepSeek-R1-Zero went from 15.6% to 71.0% on AIME 2024 using purely rule-based rewards.</li>
+  <li><strong>DAPO</strong> (ByteDance, NeurIPS 2025) — stabilizes GRPO for long reasoning chains. Trained Qwen2.5-32B to 50 AIME points with 50% fewer steps than DeepSeek-R1-Zero.</li>
+  <li><strong>DPO</strong> remains the most cost-effective alignment method for most production cases (~2K preference pairs is enough). Variants: SimPO, KTO (binary feedback instead of pairs), ORPO (merges SFT + preference in one objective).</li>
+</ul>
+
+<p><strong>For theorem proving specifically, expert iteration dominates:</strong></p>
+<ol>
+  <li>Model generates proof attempts</li>
+  <li>Lean verifier checks them</li>
+  <li>Fine-tune on verified-correct proofs</li>
+  <li>Repeat</li>
+</ol>
+
+<p>Notable systems:</p>
+<ul>
+  <li><strong>DeepSeek-Prover-V2</strong> — expert iteration + GRPO + subgoal decomposition (88.9% MiniF2F)</li>
+  <li><strong>Goedel-Prover-V2</strong> — formalizes 1.64M NL math statements into Lean, iterative expert iteration with scaffolded difficulty (88.1% MiniF2F at pass@32)</li>
+  <li><strong>STP</strong> — dual-agent self-play: a conjecturer generates barely-provable statements, a prover attempts them. Doubled previous best on LeanWorkbook.</li>
+</ul>
+
+<h2>Data Requirements</h2>
+
+<table>
+  <tr><th>Method</th><th>Typical size</th></tr>
+  <tr><td>LoRA (classification)</td><td>100–300 examples per category</td></tr>
+  <tr><td>LoRA (domain adaptation)</td><td>1K–5K examples</td></tr>
+  <tr><td>DPO pairs</td><td>2K–10K</td></tr>
+  <tr><td>GRPO/DAPO prompts</td><td>~17K curated, but millions of rollouts generated</td></tr>
+  <tr><td>Expert iteration (proofs)</td><td>1.6M+ formalized statements, 241M+ generated proofs</td></tr>
+  <tr><td>Synthetic continued pretraining</td><td>~1M tokens (ICLR 2025 showed this can work)</td></tr>
+</table>
+
+<p>Quality consistently beats quantity.</p>
+
+<h2>Reading List</h2>
+
+<p><strong>Foundational:</strong></p>
+<ul>
+  <li><a href="https://arxiv.org/abs/2410.21228">LoRA vs Full Fine-tuning: An Illusion of Equivalence</a> (NeurIPS 2025)</li>
+  <li><a href="https://arxiv.org/abs/2402.09353">DoRA</a> (ICML 2024)</li>
+</ul>
+
+<p><strong>RL for reasoning:</strong></p>
+<ul>
+  <li><a href="https://arxiv.org/abs/2501.12948">DeepSeek-R1</a> — the GRPO paper</li>
+  <li><a href="https://arxiv.org/abs/2503.14476">DAPO</a> (NeurIPS 2025)</li>
+  <li><a href="https://llm-stats.com/blog/research/post-training-techniques-2026">Post-Training in 2026: GRPO, DAPO, RLVR &amp; Beyond</a></li>
+</ul>
+
+<p><strong>Theorem proving:</strong></p>
+<ul>
+  <li><a href="https://arxiv.org/abs/2504.21801">DeepSeek-Prover-V2</a></li>
+  <li><a href="https://arxiv.org/abs/2502.07640">Goedel-Prover</a></li>
+  <li><a href="https://arxiv.org/html/2502.00212">STP: Self-play Theorem Provers</a></li>
+</ul>
+
+<p><strong>Practical tutorials:</strong></p>
+<ul>
+  <li><a href="https://www.philschmid.de/rl-with-llms-in-2025-dpo">How to Align Open LLMs in 2025 with DPO &amp; Synthetic Data</a></li>
+  <li><a href="https://proceedings.iclr.cc/paper_files/paper/2025/file/6dcf277ea32ce3288914faf369fe6de0-Paper-Conference.pdf">Synthetic Continued Pretraining</a> (ICLR 2025)</li>
+</ul>
+
+</div>
+
+<div class="separator"></div>
+
+<!-- ============ EXCHANGE 2 ============ -->
+
+<div class="user">
+What is taking place intuitively and mathematically in PEFT?
+</div>
+
+<div class="assistant">
+
+<h2>The core observation</h2>
+
+<p>A pretrained model has a weight matrix $W_0 \in \mathbb{R}^{d \times k}$ at each layer. Full fine-tuning learns an update $\Delta W$ of the same shape, so the new weight is $W = W_0 + \Delta W$. The matrix $\Delta W$ has $d \times k$ free parameters — millions or billions across all layers.</p>
+
+<p>The empirical finding (Aghajanyan et al. 2020, "Intrinsic Dimensionality Explains the Effectiveness of Language Model Fine-Tuning") is that <strong>task-specific adaptation lives in a much lower-dimensional subspace than the full parameter space</strong>. You can project the update into a random low-dimensional subspace and still recover most of the fine-tuning performance. The "intrinsic dimension" of fine-tuning is surprisingly small — often a few thousand, even for models with hundreds of millions of parameters.</p>
+
+<h2>LoRA: the mechanism</h2>
+
+<p>Given that $\Delta W$ is effectively low-rank, LoRA parametrizes it directly as a low-rank factorization:</p>
+
+$$\Delta W = BA$$
+
+<p>where $B \in \mathbb{R}^{d \times r}$ and $A \in \mathbb{R}^{r \times k}$, with $r \ll \min(d, k)$. Typical $r$ values are 4, 8, 16, 32.</p>
+
+<p>During a forward pass, the output of the adapted layer is:</p>
+
+$$h = W_0 x + BAx$$
+
+<p>$A$ is initialized with small random values (usually Gaussian), $B$ is initialized to zero, so $\Delta W = 0$ at the start of training — the model begins exactly at the pretrained weights. Only $A$ and $B$ are trained; $W_0$ is frozen.</p>
+
+<p>The parameter count drops from $d \times k$ to $r \times (d + k)$. For a typical transformer attention projection with $d = k = 4096$ and $r = 16$, that's $16.8\text{M} \to 131\text{K}$ — a <strong>128x reduction</strong> per matrix.</p>
+
+<p><strong>Intuitively:</strong> you're saying "the pretrained model already knows almost everything needed; adaptation only needs to nudge the representations along a few directions." The rank $r$ controls how many independent directions of adjustment you allow.</p>
+
+<h2>Where LoRA is applied</h2>
+
+<p>Typically to the query and value projection matrices ($W_Q$, $W_V$) in attention layers. Some practitioners also include $W_K$, $W_O$, and the MLP layers. More target matrices = more expressiveness but more parameters. The original LoRA paper found $W_Q$ and $W_V$ sufficient for most tasks.</p>
+
+<h2>DoRA: decomposing magnitude and direction</h2>
+
+<p>A weight matrix $W$ can be decomposed as:</p>
+
+$$W = m \frac{V}{\|V\|_c}$$
+
+<p>where $m$ is a magnitude scalar (per column or per output neuron) and $V / \|V\|_c$ is the directional component (column-normalized).</p>
+
+<p>DoRA's observation: full fine-tuning tends to make <strong>large directional changes with small magnitude changes</strong>. Standard LoRA couples these — adding $BA$ changes both magnitude and direction simultaneously, and it tends to produce correlated magnitude-direction updates that don't match what full fine-tuning does.</p>
+
+<p>DoRA decouples them:</p>
+<ul>
+  <li>Learn magnitude $m$ as a free vector (one scalar per output neuron)</li>
+  <li>Apply LoRA only to the directional component $V$</li>
+</ul>
+
+$$W' = m' \frac{V + BA}{\|V + BA\|_c}$$
+
+<p>This gives the optimizer independent control over "how much" vs. "which way," matching the structure of full fine-tuning updates more faithfully. The result is better performance at the same rank, and the improvement is largest at low ranks where LoRA is most constrained.</p>
+
+<h2>QLoRA: a memory optimization, not a mathematical one</h2>
+
+<p>QLoRA is orthogonal to the above. It quantizes the frozen $W_0$ to 4-bit (using NormalFloat4 quantization), stores it compressed, dequantizes on the fly during the forward pass, and keeps the LoRA adapters $A$, $B$ in full precision (bfloat16). The backward pass computes gradients only for $A$ and $B$.</p>
+
+<p>There is a precision loss from the 4-bit base, but it's small because the base weights are frozen — you never accumulate gradient errors in them. The adapters absorb the task-specific signal at full precision.</p>
+
+<h2>The "intruder dimensions" problem</h2>
+
+<p>The NeurIPS 2025 paper found something structural. Take the SVD of the adapted weight $W_0 + BA$. LoRA introduces new high-ranking singular vectors — directions that weren't prominent in $W_0$ and don't appear in full fine-tuning either. These "intruder dimensions" are artifacts of the low-rank constraint forcing the update into a subspace that doesn't align with the model's existing representational structure. They correlate with catastrophic forgetting: the model performs well on the new task but loses capability on the original distribution.</p>
+
+<p>Full fine-tuning, unconstrained, finds updates that stay within the model's natural singular vector basis. LoRA, constrained to rank $r$, sometimes can't express the needed update within that basis and instead introduces orthogonal directions that interfere with existing representations.</p>
+
+<p>This is the fundamental tradeoff: low rank saves memory and compute, but if the true $\Delta W$ has important components outside the rank-$r$ subspace, LoRA will either miss them or distort the representation to compensate.</p>
+
+<h2>Summary of the mathematical picture</h2>
+
+<table>
+  <tr><th>Concept</th><th>What it means</th></tr>
+  <tr><td>Intrinsic dimensionality</td><td>The effective number of free parameters needed for adaptation is far less than the model size</td></tr>
+  <tr><td>$\Delta W = BA$</td><td>Restrict the update to a rank-$r$ subspace</td></tr>
+  <tr><td>Frozen $W_0$</td><td>All pretrained knowledge preserved exactly (modulo intruder dimension interference)</td></tr>
+  <tr><td>DoRA's decomposition</td><td>Separate magnitude from direction so LoRA updates match full fine-tuning's structure</td></tr>
+  <tr><td>QLoRA's quantization</td><td>Compress $W_0$ to 4-bit; adapters stay full precision</td></tr>
+  <tr><td>Intruder dimensions</td><td>Low-rank constraint can force spurious singular vectors that cause forgetting</td></tr>
+</table>
+
+<p>The entire family rests on one bet: that the gap between "what the pretrained model knows" and "what the task needs" is low-dimensional. For most practical tasks, this bet pays off.</p>
+
+</div>
+
+<div class="separator"></div>
+
+<!-- ============ EXCHANGE 3 ============ -->
+
+<div class="user">
+What sorts of data are shown to the training in LoRA, DoRA and so on? And how much? And if the answer is, you have it generate a Lean proof and then tell it "nope" or "yep", how is that backpropagated?
+</div>
+
+<div class="assistant">
+
+<h2>What the training data looks like</h2>
+
+<p>For <strong>SFT-based LoRA/DoRA</strong>, the data is just input-output pairs, formatted as the model would see them at inference. For theorem proving, a single training example might be:</p>
+
+<pre><code>Input:  "Prove that for all n : ℕ, 0 + n = n"
+Output: "theorem zero_add (n : ℕ) : 0 + n = n := by
+          induction n with
+          | zero =&gt; rfl
+          | succ n ih =&gt; simp [Nat.add_succ, ih]"</code></pre>
+
+<p>The loss is standard next-token cross-entropy on the output tokens, with the input tokens masked (no gradient signal from them). LoRA vs. full fine-tuning differs only in which parameters receive the gradient updates — the loss function and data format are identical.</p>
+
+<p>For <strong>preference-based methods</strong> (DPO), the data is triples: a prompt, a preferred response, and a dispreferred response. For theorem proving you'd generate two proof attempts, check which one Lean accepts, and label accordingly.</p>
+
+<p>Typical volumes for LoRA SFT: 1K–10K high-quality examples for domain adaptation. You can get results with a few hundred. More data helps but with sharply diminishing returns past ~5K for most tasks.</p>
+
+<h2>The harder question: how does "yep/nope" become gradients?</h2>
+
+<p>This is where GRPO (and REINFORCE-family methods generally) come in, and it's worth being precise about the mechanism because it's not obvious.</p>
+
+<h3>The setup</h3>
+
+<p>You have a language model $\pi_\theta$ that generates tokens autoregressively. Given a prompt $x$ (a theorem statement), it samples a response $y = (y_1, y_2, \ldots, y_T)$ (a proof attempt). The Lean checker returns a binary reward:</p>
+
+$$R(x, y) = \begin{cases} 1 & \text{proof checks} \\ 0 & \text{proof fails} \end{cases}$$
+
+<p>The question: the reward is a function of the <em>entire</em> completed sequence. It's not differentiable — Lean's type checker is an opaque binary oracle. How do you get gradients for $\theta$?</p>
+
+<h3>The policy gradient trick</h3>
+
+<p>The objective is to maximize expected reward:</p>
+
+$$J(\theta) = \mathbb{E}_{y \sim \pi_\theta(\cdot|x)}[R(x, y)]$$
+
+<p>You can't differentiate through the sampling process directly. But you can use the log-derivative trick (REINFORCE, Williams 1992):</p>
+
+$$\nabla_\theta J(\theta) = \mathbb{E}_{y \sim \pi_\theta(\cdot|x)}\left[R(x, y) \cdot \nabla_\theta \log \pi_\theta(y|x)\right]$$
+
+<p>The term $\log \pi_\theta(y|x)$ is just the sum of log-probabilities of the tokens the model actually generated:</p>
+
+$$\log \pi_\theta(y|x) = \sum_{t=1}^{T} \log \pi_\theta(y_t | x, y_{&lt;t})$$
+
+<p>This <strong>is</strong> differentiable with respect to $\theta$ — it's the same computation as the standard language modeling forward pass. You already compute these logits during generation.</p>
+
+<p>So the gradient is:</p>
+
+$$\nabla_\theta J \approx R(x, y) \cdot \sum_{t=1}^{T} \nabla_\theta \log \pi_\theta(y_t | x, y_{&lt;t})$$
+
+<p><strong>Intuitively:</strong> if the proof checked ($R=1$), increase the probability of every token in that sequence. If it failed ($R=0$), the gradient is zero — that attempt contributes nothing. The model learns by reinforcing successful generation paths.</p>
+
+<h3>The problem with raw REINFORCE</h3>
+
+<p>This has terrible variance. Most proofs fail, so most samples contribute zero gradient. The successful ones push the model toward those specific token sequences, but the signal is noisy — a proof might have succeeded for reasons unrelated to most of its tokens.</p>
+
+<h3>GRPO's solution: relative rewards within a group</h3>
+
+<p>For each prompt $x$, sample $G$ responses $\{y_1, \ldots, y_G\}$ (typically $G = 8$ to $64$). Compute rewards $\{R_1, \ldots, R_G\}$. Normalize within the group:</p>
+
+$$\hat{A}_i = \frac{R_i - \text{mean}(\{R_j\})}{\text{std}(\{R_j\})}$$
+
+<p>The gradient becomes:</p>
+
+$$\nabla_\theta J \approx \frac{1}{G} \sum_{i=1}^{G} \hat{A}_i \cdot \nabla_\theta \log \pi_\theta(y_i | x)$$
+
+<p>Now a proof that succeeds when most others fail gets a large positive advantage. A proof that fails when all others also fail gets advantage near zero. A proof that fails when others succeed gets a <strong>negative</strong> advantage — actively pushing the model away from that token sequence.</p>
+
+<p>This is why GRPO works with binary rewards: the relative signal within the group converts a sparse binary signal into a richer gradient. If you sample 16 proofs and 2 check, those 2 get boosted and the other 14 get suppressed, proportionally.</p>
+
+<p>There's also a KL penalty term against a reference policy $\pi_{\text{ref}}$ to prevent the model from collapsing to a narrow set of proof strategies:</p>
+
+$$\mathcal{L} = -\hat{A}_i \cdot \frac{\pi_\theta(y_i|x)}{\pi_{\text{ref}}(y_i|x)} + \beta \cdot D_{\text{KL}}(\pi_\theta \| \pi_{\text{ref}})$$
+
+<h3>The full loop for theorem proving</h3>
+
+<ol>
+  <li><strong>Sample:</strong> Given theorem statement $x$, generate 16 proof attempts from $\pi_\theta$</li>
+  <li><strong>Verify:</strong> Send each to Lean's type checker. Get binary rewards.</li>
+  <li><strong>Normalize:</strong> Compute group-relative advantages $\hat{A}_i$</li>
+  <li><strong>Update:</strong> Run the forward pass on all 16 sequences, compute log-probs, weight by advantages, backpropagate through the LoRA/DoRA adapters (or full weights)</li>
+  <li><strong>Repeat</strong> with new theorem statements</li>
+</ol>
+
+<p>The Lean checker is never differentiated through. It's purely an oracle. All the differentiable computation happens inside the model's own forward pass on sequences it already generated. The reward just tells you which direction to push.</p>
+
+<h3>Why this works despite being so crude</h3>
+
+<p>The model already knows a lot about Lean syntax and proof strategies from pretraining. The RL signal doesn't need to teach it Lean from scratch — it just needs to shift probability mass from almost-correct proofs to actually-correct ones. The intrinsic dimensionality of that adjustment is low, which is exactly why LoRA works here too.</p>
+
+</div>
+
+<div class="separator"></div>
+
+<!-- ============ EXCHANGE 4 ============ -->
+
+<div class="user">
+How can you perturb the model to better understand a certain genre of query? i.e. what if the way people ask math questions is a little different than standard chats? Can you provide a large corpus of those maybe? Without proofs, just stylistic language?
+</div>
+
+<div class="assistant">
+
+<p>This is the distinction between adapting the model's <strong>input comprehension</strong> (understanding math-register language) versus its <strong>output capability</strong> (generating proofs). Different methods apply.</p>
+
+<h2>Continued pretraining</h2>
+
+<p>The most direct approach. You take the frozen pretrained model and do additional unsupervised language modeling (next-token prediction) on a large corpus of mathematical text. No labels needed — just raw text in the target register.</p>
+
+<p>This shifts the model's token distribution, attention patterns, and internal representations toward mathematical discourse. After continued pretraining, the model will:</p>
+<ul>
+  <li>Parse "WLOG assume $n &gt; 0$" without stumbling</li>
+  <li>Understand that "clearly" means "I'm not going to prove this"</li>
+  <li>Handle mixed notation/prose fluently</li>
+  <li>Recognize implicit structure ("by the above," "the claim follows")</li>
+</ul>
+
+<p><strong>Typical data volumes:</strong> 1B–30B tokens for standard continued pretraining. But the ICLR 2025 synthetic continued pretraining paper showed ~1M tokens can work if the data is sufficiently targeted and augmented with entity-relationship paraphrases.</p>
+
+<p><strong>The catastrophic forgetting problem:</strong> if you only train on math text, the model loses general capability. The standard fix is mixing: 50–80% domain data, 20–50% replayed general data (or data from the original pretraining distribution).</p>
+
+<h2>What corpora exist</h2>
+
+<p><strong>Large-scale mathematical text:</strong></p>
+<ul>
+  <li><strong>OpenWebMath</strong> (~15B tokens) — math web pages filtered from Common Crawl, cleaned of boilerplate. Probably the most used open corpus for math continued pretraining.</li>
+  <li><strong>RedPajama</strong> and <strong>Proof-Pile</strong> (EleutherAI) — includes arXiv, Math StackExchange, textbooks. Proof-Pile II is ~55B tokens.</li>
+  <li><strong>arXiv bulk access</strong> — all papers, ~2M+ math papers. Raw LaTeX source. Very heavy on formal notation mixed with terse prose.</li>
+  <li><strong>Math StackExchange / MathOverflow</strong> data dumps — Q&amp;A format, informal-to-semiformal register, exactly the genre you're describing. ~3M questions on MSE.</li>
+  <li><strong>ProofWiki</strong>, <strong>Mathlib docs</strong>, <strong>Lean Zulip archives</strong> — for the formal verification register specifically.</li>
+  <li><strong>AlgebraicStack</strong> (used by Llemma) — 11B tokens, curated blend of arXiv, StackExchange, open textbooks, and formal proof libraries.</li>
+</ul>
+
+<p><strong>The Llemma model</strong> (EleutherAI, 2023) is the canonical example of this approach: they took Code Llama 7B/34B and did continued pretraining on AlgebraicStack (11B tokens). No fine-tuning, no RL — just more pretraining on math text. It substantially improved performance on math benchmarks purely from better input comprehension and domain familiarity.</p>
+
+<h2>The register issue specifically</h2>
+
+<p>Mathematical discourse has several distinct registers, and they differ more than people realize:</p>
+
+<table>
+  <tr><th>Register</th><th>Example</th><th>Where to find it</th></tr>
+  <tr><td>Textbook formal</td><td>"Let $G$ be a finite group. Then the order of every element divides $|G|$."</td><td>Open textbooks, Proof-Pile</td></tr>
+  <tr><td>Research paper</td><td>"The result follows from a straightforward application of Thm. 3.2 combined with the spectral bound established in §4."</td><td>arXiv</td></tr>
+  <tr><td>Student question</td><td>"I don't get why you can just swap the limit and the integral here??"</td><td>Math StackExchange</td></tr>
+  <tr><td>Lean/formal</td><td><code>theorem dvd_of_mem_order (h : a ∈ G) : orderOf a ∣ card G</code></td><td>Mathlib, Lean Zulip</td></tr>
+  <tr><td>Informal expert</td><td>"This is basically just Yoneda in disguise, right?"</td><td>MathOverflow, Zulip, Twitter/Mastodon</td></tr>
+</table>
+
+<p>If your target users write in the "student question" register but your model was pretrained mostly on arXiv, there's a distribution mismatch on the input side. Continued pretraining on Math StackExchange data specifically would close that gap without needing any labeled proof data.</p>
+
+<h2>How little data can work</h2>
+
+<p>You don't always need billions of tokens. Two lighter approaches:</p>
+
+<p><strong>1. Synthetic continued pretraining (~1M tokens).</strong> Take a small set of domain documents, use a larger model to generate paraphrases that express the same concepts in varied phrasings:</p>
+<ul>
+  <li>"Prove that the sum of two even numbers is even"</li>
+  <li>"Show that adding two even integers gives an even result"</li>
+  <li>"Why is it true that even + even = even?"</li>
+  <li>"Let $m = 2a$ and $n = 2b$. Verify that $m + n$ is even."</li>
+</ul>
+
+<p>This creates an entity-relationship graph across phrasings that helps the model generalize from a small seed corpus.</p>
+
+<p><strong>2. Prefix/prompt tuning.</strong> Instead of modifying any model weights, learn a small set of continuous "virtual tokens" (soft prompts) prepended to the input. These are trained on math text to steer the model's attention patterns toward mathematical parsing. Parameter count: ~20K (tens of virtual tokens × embedding dimension). This is even cheaper than LoRA but less expressive.</p>
+
+<h2>Combining input and output adaptation</h2>
+
+<p>The full pipeline for something like Leanstral is likely:</p>
+<ol>
+  <li><strong>Continued pretraining</strong> on math + Lean corpus (input comprehension)</li>
+  <li><strong>SFT</strong> on verified proof pairs (output capability)</li>
+  <li><strong>GRPO/RL</strong> with Lean checker rewards (output refinement beyond training data)</li>
+</ol>
+
+<p>Step 1 is what you're asking about — and it's often underappreciated. A model that can't parse the question register will struggle regardless of how much RL you throw at the output side.</p>
+
+</div>
+
+<div class="separator"></div>
+
+<!-- ============ EXCHANGE 5 ============ -->
+
+<div class="user">
+These all require access to the full model weights then?
+</div>
+
+<div class="assistant">
+
+<p>Yes. Continued pretraining, SFT, LoRA, DoRA, GRPO — all of them require the weights because you're either modifying them directly or computing gradients through the forward pass.</p>
+
+<p>The approaches that <strong>don't</strong> require weights:</p>
+
+<h2>Prompt-based methods (API-only)</h2>
+
+<p><strong>Few-shot prompting.</strong> Prepend examples of the target register to every query. No training, no weights — you're just using context to shift the model's output distribution. Costs tokens at inference time but works surprisingly well for register adaptation.</p>
+
+<p><strong>Retrieval-Augmented Generation (RAG).</strong> At query time, retrieve relevant math text from a corpus and inject it into the context. The model never changes — you're giving it reference material on the fly. For register adaptation specifically, you'd retrieve examples of similar questions and their answers.</p>
+
+<p><strong>System prompts / meta-prompting.</strong> "You are a mathematician. Users will ask questions using informal mathematical language. Parse their intent carefully." Crude but non-zero.</p>
+
+<h2>Distillation (API access to a teacher, weights of a student)</h2>
+
+<p>If you have API access to a strong model (e.g. Claude, GPT) but weights of a smaller open model (e.g. Llama, Mistral), you can:</p>
+<ol>
+  <li>Send math questions to the large model via API</li>
+  <li>Collect its responses</li>
+  <li>Fine-tune the small model on those pairs using LoRA/SFT</li>
+</ol>
+
+<p>You never touch the large model's weights. You do need weights for the small model you're training.</p>
+
+<h2>The hard constraint</h2>
+
+<p>There's no way around it: if you want the model itself to <em>change</em> — to internalize a new register, shift its probability distribution, update its representations — somebody needs the weights. The gradient has to flow through the model's parameters.</p>
+
+<p>The API-only methods don't change the model. They change what the model sees at inference time. That's a meaningful distinction — you're compensating for the model's gaps with context engineering rather than fixing them. It works, but it has limits: context windows are finite, retrieval adds latency, and the model's underlying biases remain.</p>
+
+<p>This is why open-weight models (Llama, Mistral, Qwen) matter so much for specialized domains. Without weights, you're limited to steering; with weights, you can actually teach.</p>
+
+</div>
+
+<div class="separator"></div>
+
+<!-- ============ EXCHANGE 6 ============ -->
+
+<div class="user">
+Can any of these adaptation methods run on an M3 Max laptop in reasonable time, like a few days?
+</div>
+
+<div class="assistant">
+
+<p>Yes, within limits.</p>
+
+<h2>What fits</h2>
+
+<p>An M3 Max has 48GB or 96GB unified memory (CPU and GPU share it). The Metal backend in MLX (Apple's ML framework) and llama.cpp can use all of it. This is the main advantage over discrete GPUs — a 4090 has 24GB, and you'd need multi-GPU setups for anything the M3 Max handles in one pool.</p>
+
+<p><strong>QLoRA on a 7–8B model:</strong> This is the sweet spot. Quantize the base model to 4-bit (~4GB), keep LoRA adapters in bfloat16 (~50–100MB for rank 16). Total memory: ~6–8GB. With MLX or Hugging Face's <code>mlx-lm</code> fine-tuning, you can process ~1K–5K examples in hours, not days.</p>
+
+<p><strong>QLoRA on a 13–14B model:</strong> ~8–10GB quantized. Still fine on 48GB. A few hours to a day for typical SFT datasets.</p>
+
+<p><strong>QLoRA on a 32–34B model:</strong> ~18–20GB quantized. Fits on 48GB, comfortable on 96GB. Training is slower — expect 1–3 days for a few thousand examples.</p>
+
+<p><strong>QLoRA on 70B:</strong> ~35–40GB quantized. Only fits on the 96GB configuration, and tightly. Training is feasible but slow — several days. You'd want to be sure of your data before committing.</p>
+
+<p><strong>Full fine-tuning of 7B in bfloat16:</strong> The model alone is ~14GB, but optimizer states (Adam) roughly 3x that — so ~50–60GB. Possible on 96GB, too tight on 48GB. Slower than QLoRA but avoids the intruder dimension problem.</p>
+
+<h2>What doesn't fit</h2>
+
+<p>Full fine-tuning of anything above ~7B. GRPO/DAPO — these require holding multiple copies of the model (policy + reference) and generating dozens of rollouts per prompt. Even with a 7B model, the throughput is too low to finish the millions of rollouts needed in any reasonable time.</p>
+
+<p>Continued pretraining on billions of tokens — even with QLoRA, the sheer data volume makes this a multi-week affair on laptop hardware.</p>
+
+<h2>The practical path on your hardware</h2>
+
+<table>
+  <tr><th>Task</th><th>Model size</th><th>Method</th><th>Time estimate</th></tr>
+  <tr><td>Math register SFT</td><td>7–8B (Mistral, Llama 3.1)</td><td>QLoRA via MLX</td><td>Hours</td></tr>
+  <tr><td>Domain SFT</td><td>14B</td><td>QLoRA via MLX</td><td>~1 day</td></tr>
+  <tr><td>Domain SFT</td><td>32B</td><td>QLoRA via MLX</td><td>1–3 days</td></tr>
+  <tr><td>Small-scale preference (DPO)</td><td>7–8B</td><td>QLoRA</td><td>Hours–1 day</td></tr>
+  <tr><td>Synthetic continued pretraining (~1M tokens)</td><td>7–8B</td><td>QLoRA</td><td>~1 day</td></tr>
+</table>
+
+<h2>Tooling</h2>
+
+<p><strong>MLX</strong> is the path of least resistance on Apple Silicon. <code>mlx-lm</code> has built-in LoRA/QLoRA fine-tuning with a single command:</p>
+
+<pre><code>mlx_lm.lora \
+  --model mistralai/Mistral-7B-v0.3 \
+  --train \
+  --data ./math-qa-data \
+  --batch-size 4 \
+  --lora-layers 16 \
+  --iters 1000</code></pre>
+
+<p><strong>Unsloth</strong> also supports Apple Silicon and claims 2x speed improvements over stock implementations through fused kernels, though Metal support is less mature than their CUDA path.</p>
+
+<p>So: QLoRA + 7–8B + MLX is the comfortable local option. You can genuinely adapt a model to a math register on your laptop in an afternoon.</p>
+
+</div>
+
+<div class="separator"></div>
+
+<!-- ============ EXCHANGE 7 ============ -->
+
+<div class="user">
+Wow, could you set me up with steps to download open weights and some math register data to run that mlx command on an M3 Max with 36GB? And another to also tune on Lean theorems with Lean (which I have installed)? And a validation corpus to see the improvement of my results compared to the base model?
+</div>
+
+<div class="assistant">
+
+<h2>Part 1: Environment setup</h2>
+
+<pre><code># Create a workspace outside the game project
+mkdir -p ~/proj/math-finetune &amp;&amp; cd ~/proj/math-finetune
+
+# Install MLX fine-tuning tools
+pip install mlx-lm datasets huggingface_hub
+
+# Login to HuggingFace (some models require agreement to terms)
+huggingface-cli login</code></pre>
+
+<h2>Part 2: Math register fine-tuning</h2>
+
+<p><strong>Model choice:</strong> Qwen2.5-7B-Instruct has the strongest math baseline among 7B-class models. At 4-bit quantization it's ~4GB, leaving plenty of room in 36GB for training.</p>
+
+<p><strong>Data:</strong> MetaMathQA (~395K math Q&amp;A pairs bootstrapped from GSM8K and MATH, in the informal question-asking register).</p>
+
+<pre><code># Download and prepare the data
+python - &lt;&lt;'PYEOF'
+from datasets import load_dataset
+import json, os, random
+
+# MetaMathQA: math questions in natural language with step-by-step answers
+ds = load_dataset("meta-math/MetaMathQA", split="train")
+
+# Shuffle and take a manageable subset (5K trains fast, ~2hrs)
+indices = list(range(len(ds)))
+random.seed(42)
+random.shuffle(indices)
+
+os.makedirs("math-data", exist_ok=True)
+
+def to_chat(example):
+    return {"messages": [
+        {"role": "user", "content": example["query"]},
+        {"role": "assistant", "content": example["response"]}
+    ]}
+
+# 5000 train, 500 validation, 500 test
+splits = [("train.jsonl", indices[:5000]),
+          ("valid.jsonl", indices[5000:5500]),
+          ("test.jsonl",  indices[5500:6000])]
+
+for fname, idxs in splits:
+    with open(f"math-data/{fname}", "w") as f:
+        for i in idxs:
+            f.write(json.dumps(to_chat(ds[i])) + "\n")
+
+print(f"Wrote {len(splits)} splits to math-data/")
+PYEOF</code></pre>
+
+<p><strong>Run the fine-tune:</strong></p>
+
+<pre><code>mlx_lm.lora \
+  --model Qwen/Qwen2.5-7B-Instruct \
+  --train \
+  --data ./math-data \
+  --batch-size 2 \
+  --lora-layers 16 \
+  --lora-rank 16 \
+  --iters 1000 \
+  --learning-rate 1e-5 \
+  --adapter-path ./adapters-math \
+  --seed 42</code></pre>
+
+<p>This should take 1–3 hours on an M3 Max. Watch the validation loss — if it starts climbing, you're overfitting and can stop early.</p>
+
+<p><strong>Test it interactively:</strong></p>
+
+<pre><code>mlx_lm.generate \
+  --model Qwen/Qwen2.5-7B-Instruct \
+  --adapter-path ./adapters-math \
+  --prompt "Prove that the square root of 2 is irrational."</code></pre>
+
+<h2>Part 3: Lean theorem proving fine-tuning</h2>
+
+<p>This is a separate adapter trained on Lean 4 tactic proofs.</p>
+
+<p><strong>Data:</strong> LeanWorkbook (from InternLM) contains Lean 4 theorem statements with proofs.</p>
+
+<pre><code>python - &lt;&lt;'PYEOF'
+from datasets import load_dataset
+import json, os, random
+
+# LeanWorkbook: Lean 4 theorem-proof pairs
+ds = load_dataset("InternLM/Lean-Workbook", split="train")
+
+os.makedirs("lean-data", exist_ok=True)
+
+examples = []
+for row in ds:
+    # Filter for entries that have complete proofs
+    stmt = row.get("formal_statement", "")
+    proof = row.get("proof", "")
+    if not stmt or not proof:
+        continue
+    examples.append({"messages": [
+        {"role": "user", "content": f"Prove the following in Lean 4:\n\n{stmt}"},
+        {"role": "assistant", "content": proof}
+    ]})
+
+random.seed(42)
+random.shuffle(examples)
+
+splits = [("train.jsonl", examples[:5000]),
+          ("valid.jsonl", examples[5000:5500]),
+          ("test.jsonl",  examples[5500:6000])]
+
+for fname, data in splits:
+    with open(f"lean-data/{fname}", "w") as f:
+        for ex in data:
+            f.write(json.dumps(ex) + "\n")
+
+print(f"Wrote {len(examples)} total examples, split to lean-data/")
+PYEOF</code></pre>
+
+<p><strong>Run the fine-tune:</strong></p>
+
+<pre><code>mlx_lm.lora \
+  --model Qwen/Qwen2.5-7B-Instruct \
+  --train \
+  --data ./lean-data \
+  --batch-size 2 \
+  --lora-layers 16 \
+  --lora-rank 16 \
+  --iters 1000 \
+  --learning-rate 1e-5 \
+  --adapter-path ./adapters-lean \
+  --seed 42</code></pre>
+
+<h2>Part 4: Validation — measuring improvement</h2>
+
+<p>Two evaluation scripts: one for math, one for Lean with actual proof checking.</p>
+
+<h3>Math validation (compare base vs. fine-tuned on MATH benchmark)</h3>
+
+<pre><code>python - &lt;&lt;'PYEOF'
+import json, re
+from mlx_lm import load, generate
+
+def eval_model(model_path, adapter_path=None):
+    model, tokenizer = load(model_path, adapter_path=adapter_path)
+
+    with open("math-data/test.jsonl") as f:
+        tests = [json.loads(line) for line in f]
+
+    correct = 0
+    total = len(tests)
+
+    for i, test in enumerate(tests[:200]):  # eval on 200 for speed
+        question = test["messages"][0]["content"]
+        expected = test["messages"][1]["content"]
+
+        prompt = tokenizer.apply_chat_template(
+            [{"role": "user", "content": question}],
+            tokenize=False, add_generation_prompt=True
+        )
+        response = generate(model, tokenizer, prompt=prompt, max_tokens=512)
+
+        # Extract final numerical answer (crude but functional)
+        nums_expected = re.findall(
+            r'[-+]?\d*\.?\d+',
+            expected.split("The answer is")[-1]
+            if "The answer is" in expected else expected[-100:]
+        )
+        nums_got = re.findall(
+            r'[-+]?\d*\.?\d+',
+            response.split("The answer is")[-1]
+            if "The answer is" in response else response[-100:]
+        )
+
+        if nums_expected and nums_got and nums_expected[-1] == nums_got[-1]:
+            correct += 1
+
+        if (i + 1) % 50 == 0:
+            print(f"  {i+1}/{min(total,200)}: {correct}/{i+1} "
+                  f"correct ({100*correct/(i+1):.1f}%)")
+
+    print(f"Final: {correct}/{min(total,200)} "
+          f"({100*correct/min(total,200):.1f}%)")
+
+print("=== Base model ===")
+eval_model("Qwen/Qwen2.5-7B-Instruct")
+
+print("\n=== Math-tuned model ===")
+eval_model("Qwen/Qwen2.5-7B-Instruct", adapter_path="./adapters-math")
+PYEOF</code></pre>
+
+<h3>Lean validation (generate proofs, check with Lean)</h3>
+
+<pre><code>mkdir -p lean-eval
+
+cat &gt; lean-eval/eval_lean.py &lt;&lt;'PYEOF'
+import json, subprocess, tempfile, os
+from mlx_lm import load, generate
+
+def check_lean_proof(statement, proof):
+    """Send a proof to Lean 4 and check if it type-checks."""
+    lean_code = f"""import Mathlib\n\n{statement} := by\n{proof}\n"""
+
+    with tempfile.NamedTemporaryFile(
+        mode='w', suffix='.lean', delete=False, dir='.'
+    ) as f:
+        f.write(lean_code)
+        fname = f.name
+
+    try:
+        result = subprocess.run(
+            ["lean", fname],
+            capture_output=True, text=True, timeout=60
+        )
+        return result.returncode == 0
+    except subprocess.TimeoutExpired:
+        return False
+    finally:
+        os.unlink(fname)
+
+def eval_lean_model(model_path, adapter_path=None, label="model"):
+    model, tokenizer = load(model_path, adapter_path=adapter_path)
+
+    with open("lean-data/test.jsonl") as f:
+        tests = [json.loads(line) for line in f]
+
+    proved = 0
+    attempted = min(50, len(tests))  # Lean checking is slow
+
+    for i, test in enumerate(tests[:attempted]):
+        statement = test["messages"][0]["content"].replace(
+            "Prove the following in Lean 4:\n\n", ""
+        )
+        prompt = tokenizer.apply_chat_template(
+            [{"role": "user",
+              "content": test["messages"][0]["content"]}],
+            tokenize=False, add_generation_prompt=True
+        )
+        response = generate(
+            model, tokenizer, prompt=prompt, max_tokens=1024
+        )
+
+        if check_lean_proof(statement, response):
+            proved += 1
+            print(f"  [{label}] {i+1}: PROVED")
+        else:
+            print(f"  [{label}] {i+1}: failed")
+
+    print(f"\n{label}: {proved}/{attempted} "
+          f"proved ({100*proved/attempted:.1f}%)")
+    return proved
+
+print("=== Base model ===")
+base = eval_lean_model(
+    "Qwen/Qwen2.5-7B-Instruct", label="base"
+)
+
+print("\n=== Lean-tuned model ===")
+tuned = eval_lean_model(
+    "Qwen/Qwen2.5-7B-Instruct",
+    adapter_path="./adapters-lean", label="lean-tuned"
+)
+
+print(f"\nDelta: {tuned - base} more proofs from fine-tuning")
+PYEOF
+
+cd lean-eval &amp;&amp; python eval_lean.py</code></pre>
+
+<h2>Part 5: Stacking adapters (optional)</h2>
+
+<p>Train math register first, fuse those adapters into the base weights, then train Lean on top. This tests whether math register comprehension helps Lean proving.</p>
+
+<pre><code># Fuse math adapter into base weights
+mlx_lm.fuse \
+  --model Qwen/Qwen2.5-7B-Instruct \
+  --adapter-path ./adapters-math \
+  --save-path ./qwen-math-fused
+
+# Then train Lean adapter on the math-fused model
+mlx_lm.lora \
+  --model ./qwen-math-fused \
+  --train \
+  --data ./lean-data \
+  --batch-size 2 \
+  --lora-layers 16 \
+  --lora-rank 16 \
+  --iters 1000 \
+  --adapter-path ./adapters-lean-stacked</code></pre>
+
+<h2>Caveats</h2>
+
+<ul>
+  <li><strong>The Lean evaluation script is naive.</strong> It assumes Mathlib is available in the Lean environment, generates one attempt per problem (pass@1), and uses a 60-second timeout. Real systems generate 16–64 attempts per theorem. You'll get low absolute numbers but the relative improvement between base and tuned is what matters.</li>
+  <li><strong>The LeanWorkbook dataset structure may differ</strong> from what's assumed here — field names might be <code>natural_language</code> and <code>lean_proof</code> instead of <code>formal_statement</code> and <code>proof</code>. Check the dataset card and adjust the field names in the data prep script.</li>
+  <li><strong>Watch validation loss</strong> during training. If it starts climbing while training loss keeps dropping, you're overfitting. Stop early and use the checkpoint with lowest validation loss.</li>
+</ul>
+
+</div>
+
+<div class="separator"></div>
+
+<!-- ============ EXCHANGE 8 ============ -->
+
+<div class="user">
+Could you write that to a file ~/Downloads/my_leanstral.md ?
+</div>
+
+<div class="assistant">
+<p>Written to <code>~/Downloads/my_leanstral.md</code>.</p>
+</div>
+
+<div class="separator"></div>
+
+<!-- ============ EXCHANGE 9 ============ -->
+
+<div class="user">
+Save our whole conversation this session in a single HTML page with rendered math equations and with blue color backgrounds for the paragraphs where I'm prompting, and plain white background for the rest of the page.
+</div>
+
+<div class="assistant">
+<p><em>[This file.]</em></p>
+</div>
+
+</body>
+</html>
