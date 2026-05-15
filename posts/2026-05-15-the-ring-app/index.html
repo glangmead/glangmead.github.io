@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.3.1">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Greg Langmead">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="I&rsquo;m working on a new app, and in fact it&rsquo;s nearly complete. It&rsquo;s a listening companion for Wagner&rsquo;s opera cycle The Ring of the Nibelung. I made a fancy page for it that lists its features.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://greg.langmead.info/posts/2026-05-15-the-ring-app/">
+
+  
+
+
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.2/css/all.css" integrity="sha384-PPIZEGYM1v8zp5Py7UjFb79S58UeqCL9pYVnVPURKEqvioPROaVAJKKLzvH2rDnI" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,400italic,700|Roboto+Mono">
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.min.cc5a4ba16860e3c9b79ac8e16630ca2d.css">
+
+  
+
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="https://greg.langmead.info/posts/2026-05-15-the-ring-app/">
+
+  
+  
+  
+  
+    
+    
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="Long Head">
+  <meta property="og:url" content="https://greg.langmead.info/posts/2026-05-15-the-ring-app/">
+  <meta property="og:title" content="Coming soon: The Ring App | Long Head">
+  <meta property="og:description" content="I&rsquo;m working on a new app, and in fact it&rsquo;s nearly complete. It&rsquo;s a listening companion for Wagner&rsquo;s opera cycle The Ring of the Nibelung. I made a fancy page for it that lists its features."><meta property="og:image" content="https://greg.langmead.info/img/icon-192.png">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2026-05-15T10:15:20-04:00">
+  
+  <meta property="article:modified_time" content="2026-05-15T10:15:20-04:00">
+  
+
+  
+
+
+      
+
+    
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
+        
+      
+
+      
+      
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "results found",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script src="/js/academic.min.8c2fe112ab689edb388fada422bc8900.js"></script>
+
+        <link rel="stylesheet" href="https://cdn.datatables.net/2.3.4/css/dataTables.dataTables.min.css">
+    <script src="https://cdn.datatables.net/2.3.4/js/dataTables.min.js"></script>
+
+
+
+<link rel="me" href="https://mathstodon.xyz/@glangmead" />
+
+
+  <title>Coming soon: The Ring App | Long Head</title>
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+<nav class="navbar fixed-top navbar-expand-lg py-0" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/">Long Head</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav ml-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/cv"><span>CV</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/writing"><span>Research</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/publications"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/posts"><span>Blog</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+
+        
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-sun fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+  <article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1 itemprop="name">Coming soon: The Ring App</h1>
+
+  
+
+  
+    
+
+
+
+<meta content="2026-05-15 10:15:20 -0400 EDT" itemprop="datePublished">
+<meta content="2026-05-15 10:15:20 -0400 EDT" itemprop="dateModified">
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    <time>May 15, 2026</time>
+  </span>
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+    
+
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style" itemprop="articleBody">
+      <p>I&rsquo;m working on a new app, and in fact it&rsquo;s nearly complete. It&rsquo;s a listening companion for Wagner&rsquo;s opera cycle <a href="https://en.wikipedia.org/wiki/Der_Ring_des_Nibelungen">The Ring of the Nibelung</a>. I made <a href="https://www.luminousdesigns.tech/ring/">a fancy page for it</a> that lists its features.</p>
+<p>The data that made the app possible is the <a href="https://transactions.ismir.net/articles/10.5334/tismir.161">Wagner Ring Dataset</a> (WRD) from 2023, which is a collection of annotations by experts and by machine learning models. There is a new digital score, which is a digitization of a piano reduction. The piano reduction is pretty crazy, it contains every minute of the full opera! It&rsquo;s by Richard Kleinmichel (1846–1901). The data includes a link between each line of libretto text and the span of musical measures during which that line is sung. The score is in turn linked to fractional-second time offsets in 16 of the audio recordings released on major labels. Lastly, <a href="https://transactions.ismir.net/articles/10.5334/tismir.116">a companion paper</a> and <a href="https://zenodo.org/records/4245472">its data</a> includes spans for all the occurrences of 10 of the major leitmotifs Wagner uses to structure the music and the thematic content of the story.</p>
+<p>Together, I figured these data sets would allow the app to highlight the line of libretto text being sung, like the lyrics feature in streaming music apps. It should also highlight the musical measure of the piano score. The vision of the app immediately appeared in my mind: we&rsquo;d show the libretto and score in real time, and we&rsquo;d support all the recordings by streaming them from the user&rsquo;s Apple Music account (which would be required &ndash; there&rsquo;s no other reasonable way to offer the performance audio). But I worried about a few things. The Wagner Ring Dataset and the leitmotif dataset were devised by researchers in the field of Music Information Retrieval, and they wanted to train a model that could identify all the occurrences of a given motif from some labeled spans. This means that they kept spans for some motifs private, and released the synthetically generated ones. That&rsquo;s by definition not a complete set.</p>
+<p>Furthermore, their segmentation of the libretto into lines of text was incomplete, in my opinion. What I apprecaite about the book by Stewart Spencer, <a href="https://bookshop.org/p/books/wagner-s-ring-of-the-nibelung-a-companion-barry-millington/e88df0ca3a0ee730?ean=9780500281949&amp;next=t&amp;"><em>Wagner&rsquo;s Ring of the Nibelung: a Companion</em></a>, is how he preserves the poetic structure of the libretto. I was excited to learn only recently that the libretto is a poem in alliterative verse, a form I knew about from my studies of Tolkien (e.g. &ldquo;Arise now, arise, Riders of Théoden! / Dire deeds awake: dark is it eastward.&rdquo;). There are many links with Tolkien, in fact! I wrote about that <a href="/posts/2024-03-31-wagner-and-tolkien/">in this post</a>. Thus Spencer&rsquo;s libretto is segmented more finely than the WRD, and furthermore indicates with indentation which lines have the full 3 metrical lifts, versus those with fewer. I wanted to perform that segmentation and indentation on the WRD text. Theoretically they are the same libretto, but you know how it goes: WRD&rsquo;s text came from digitizing Wagner&rsquo;s score, and changes were made in that version that weren&rsquo;t made in other sources. Spencer&rsquo;s work is copyrighted, and anyway isn&rsquo;t the text that is aligned to the score and the audio. So I had to <em>map</em> the segmentation and indentation from Spencer to WRD.</p>
+<p>What about English? Spencer wrote a translation and it&rsquo;s great, but again, not available to me to distribute. But in 1910 Margaret Armour wrote a translation which is in the public domain. And furthermore she aimed to provide a full alliterative verse translation including her own similar segmentation and indentation, so it provided what I wanted to offer. (Spencer provides the same &ndash; alliterative verse in English with indentation). But I had to align it to the German. This is nontrivial, due in large part to episodes where multiple characters sing at the same time and different presentations display that simultaneity in different ways. It&rsquo;s also the case that the translations are not line-by-line but sentence-by-sentence or even speaker-turn by speaker-turn. Once I realized I should align at the level of the turn, things got pretty accurate! You see, this is exactly where I felt I could add value. My background is in natural language processing, machine translation, and other types of fancy-pants algorithms, so I tackled this alignment problem. The tentpole feature is to see the poem in real time in both languages. This will unlock understanding and appreciation, says me.</p>
+<p>Then what about those leitmotifs? These are such a fun angle of their own. They are widely discussed and presented in books, in audio presentations, and on YouTube. Here&rsquo;s <a href="https://www.monsalvat.no/RingList.htm">a good blog post about them</a>. But I needed to bottle &ldquo;them&rdquo; up. There&rsquo;s no canonical &ldquo;them&rdquo; but I wanted to take a stab; I wanted a more complete set than what WRD provides. I needed to map them into my libretto and the audio. I turned to another old resource: a book by Julius Burghold from 1897 which contained a German libretto of the Ring with marginal annotations through the entire text, indicating when motifs were playing according to his reckoning and naming scheme. This book is also in the public domain and needed a careful OCR and digital alignment of the margin notes to the libretto lines. This was two more alignment challenges: motif to Burghold lines, and Burghold lines to WRD lines. I did a first automated pass then built a web app to help me fix up every annotation, add missing ones, and so on. Here&rsquo;s that web app:</p>
+<p><img src="/img/burghold_337.png" alt="Page 337 from Julius Burghold’s libretto, plus my annotations"></p>
+<p>And here&rsquo;s how that is presented in my app at the moment:</p>
+<p><img src="/img/ringapp.png" alt="Screenshot of The Ring App running on macOS, showing the same region of the libretto as the Julius Burghold screenshot."></p>
+<p>The app presents all this data in a hopefully intuitive manner that flows. I am fixing bugs in all the different text processing steps, and in the UI. I am also trying to give it some more &ldquo;intellectual sparkle,&rdquo; by doing much more reading about how different people have selected leitmotifs, have named them, and most fun of all, have noticed how they grow out of each other. I think I can bring some of this understanding directly into my own choice of names and presentation.</p>
+<p>The app is in a beta release in TestFlight. I plan for the app to be free with all its features available for experiencing the first opera, <em>Das Rheingold</em>. A single in-app purchase will unlock the other three operas. An Apple Music subscription is required, and a live internet connection to stream the audio.</p>
+
+    </div>
+
+    
+
+
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+  
+  
+  
+  <div class="media author-card" itemscope itemtype="http://schema.org/Person">
+    
+
+    <div class="media-body">
+      <h5 class="card-title" itemprop="name"><a href="/authors/authors/"></a></h5>
+      
+      
+      <ul class="network-icon" aria-hidden="true">
+        
+      </ul>
+    </div>
+  </div>
+
+
+
+      
+      
+    
+
+    
+
+    
+
+
+  </div>
+</article>
+
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" id="back_to_top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
