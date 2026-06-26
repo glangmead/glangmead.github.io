@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.3.1">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Greg Langmead">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="AI commits at least three categories of sins, of harms against humanity all of which we know were known and intended as harms.
+First, the training of the models leveraged human labor without permission, because it was the only way to make them as capable as they are. The ends justified the means for the first movers, who will personally benefit, and this personal benefit was the primary criterion, though for some a wacko supernatural belief was also in the mix. This is in the historical record and I am not taking questions. From the icky downloading of book torrents to the wholesale scraping of Q&amp;A sites, there was definitely a spectrum of magnitudes of these strip-mining crimes, but they were all despicable.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://greg.langmead.info/posts/2026-06-26-ai-coding-models/">
+
+  
+
+
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.2/css/all.css" integrity="sha384-PPIZEGYM1v8zp5Py7UjFb79S58UeqCL9pYVnVPURKEqvioPROaVAJKKLzvH2rDnI" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,400italic,700|Roboto+Mono">
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.min.cc5a4ba16860e3c9b79ac8e16630ca2d.css">
+
+  
+
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="https://greg.langmead.info/posts/2026-06-26-ai-coding-models/">
+
+  
+  
+  
+  
+    
+    
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="Long Head">
+  <meta property="og:url" content="https://greg.langmead.info/posts/2026-06-26-ai-coding-models/">
+  <meta property="og:title" content="AI Coding Models Are Less Sinful | Long Head">
+  <meta property="og:description" content="AI commits at least three categories of sins, of harms against humanity all of which we know were known and intended as harms.
+First, the training of the models leveraged human labor without permission, because it was the only way to make them as capable as they are. The ends justified the means for the first movers, who will personally benefit, and this personal benefit was the primary criterion, though for some a wacko supernatural belief was also in the mix. This is in the historical record and I am not taking questions. From the icky downloading of book torrents to the wholesale scraping of Q&amp;A sites, there was definitely a spectrum of magnitudes of these strip-mining crimes, but they were all despicable."><meta property="og:image" content="https://greg.langmead.info/img/icon-192.png">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2026-06-26T10:19:26-04:00">
+  
+  <meta property="article:modified_time" content="2026-06-26T10:19:26-04:00">
+  
+
+  
+
+
+      
+
+    
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
+        
+      
+
+      
+      
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "results found",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script src="/js/academic.min.8c2fe112ab689edb388fada422bc8900.js"></script>
+
+        <link rel="stylesheet" href="https://cdn.datatables.net/2.3.4/css/dataTables.dataTables.min.css">
+    <script src="https://cdn.datatables.net/2.3.4/js/dataTables.min.js"></script>
+
+
+
+<link rel="me" href="https://mathstodon.xyz/@glangmead" />
+
+
+  <title>AI Coding Models Are Less Sinful | Long Head</title>
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+<nav class="navbar fixed-top navbar-expand-lg py-0" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/">Long Head</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav ml-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/cv"><span>CV</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/writing"><span>Research</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/publications"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/posts"><span>Blog</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+
+        
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-sun fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+  <article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1 itemprop="name">AI Coding Models Are Less Sinful</h1>
+
+  
+
+  
+    
+
+
+
+<meta content="2026-06-26 10:19:26 -0400 EDT" itemprop="datePublished">
+<meta content="2026-06-26 10:19:26 -0400 EDT" itemprop="dateModified">
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    <time>Jun 26, 2026</time>
+  </span>
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+    
+
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style" itemprop="articleBody">
+      <p>AI commits at least three categories of sins, of harms against humanity all of which we know were known and intended as harms.</p>
+<p>First, the training of the models leveraged human labor without permission, because it was the only way to make them as capable as they are. The ends justified the means for the first movers, who will personally benefit, and this personal benefit was the primary criterion, though for some a wacko supernatural belief was also in the mix. This is in the historical record and I am not taking questions. From the icky downloading of book torrents to the wholesale scraping of Q&amp;A sites, there was definitely a spectrum of <em>magnitudes</em> of these strip-mining crimes, but they were all despicable.</p>
+<p>Second, and this one has complicity from a large segment of everyday citizens, most of whom lean technical, is the bad-faith claims of human-level intelligence. To even offer an AI image generator you have to have a debased view of the human creative spirit. You have to have capitalism in your veins. You have to believe a pile of tech malarky, namely that despite knowing exactly how the LLMs are implemented (it&rsquo;s common knowledge, it&rsquo;s lists of floating point values added and multiplied in ingenius ways), you stipulate something emergent that is equivalent, if not superior, to a human mind. And further, that anyone incapable of documenting in equivalent detail how a human mind works has no reasoned counterargument. Hubris? Piles. Self-hatred? A large helping. Stupidity? Definitely. Wrong? Entirely. I made a diagram to describe the arguments I see and why they&rsquo;re silly:</p>
+<p><img src="/img/AreLLMsHuman.png" alt="The argument I see"></p>
+<p>The third sin is the sinking of resources into training and serving models. In my view the majority of these concerns are held in good faith, though some have proved wrong a posteriori. The majority of pushback that I see, however, is made in bad faith. I also see hierarchical behavior from tech people, who believe that only a technical person is morally authorized to weigh the tradeoffs. I reject that utterly!</p>
+<p>There&rsquo;s no doubt, however, that animosity stemming from all three of these sins is being channeled right into this third issue. You see it with the backlash over the construction of new data centers. I expect it to play a larger role in our politics over the short term.</p>
+<p>Knowing all of the above, I still use Claude Code with Opus, and I used Fable for a few days when it was available. I have a pitch to make about why it avoids the second sin above. The reason is this: code lacks human semantics. Code has <em>semantics</em>, of course, in a computer science sense. They love to use analogies like &ldquo;semantics,&rdquo; &ldquo;intelligence,&rdquo; &ldquo;thinking,&rdquo; &ldquo;learning,&rdquo; and so on. It&rsquo;s the whole laundering process that the CS field uses to make its work seem more important than it perhaps is. And maybe it was done innocently enough, by its facinated early pioneers. I certainly love, love, love computers and feel that pull. But it&rsquo;s not truly semantics in the important sense. The CS definition of semantics is just &ldquo;what the program does&rdquo; &ndash; its meaning. It&rsquo;s distinct from a program&rsquo;s <em>syntax</em> or expression in symbols. But computers can only do logically null activities. They are logic machines. The output is entailed in the input. An LLM is a computer program whose logic is entailed in the input! So guess what, an LLM is not only very good at emitting code and other computer commands, it&rsquo;s behaving innocently, free from sin, when it does so. It&rsquo;s not punching above its weight, it&rsquo;s not <em>reducing</em> anything magically human <em>to</em> syntax, it&rsquo;s just staying in its lane. That&rsquo;s the pitch. It&rsquo;s the opposite of the situation when it&rsquo;s generating art.</p>
+<p>On a personal note, I have been having <em>the time of my life</em> working with Opus to develop software. I have been a professional software engineer for 25 years, and I am using every skill I ever learned to do this work. It&rsquo;s the same job, but with emphasis shifted to parts that I find much easier and more enjoyable. Ooh, you say, aha, that sounds like a trap! It&rsquo;s enjoyable and happens to be less sinful, you say? Convenient! To which I retort, yes you are very smart, you have detected a trap. I have detected it, too. Everyone can see it, it&rsquo;s obvious. But where does it leave us? We still need to grapple directly with the important questions.</p>
+<p>At its recent WWDC conference for developers, Apple has emphasized that they are investing in the support for coding agents in their tools and platforms. My current philosophy is to make use of everything they offer, so long as what I&rsquo;m doing is making apps for their platforms. I might change my mind as I learn more. If a model that can make stronger ethical claims comes along, and maybe it even runs on my laptop, I&rsquo;ll switch to it. There&rsquo;s an offramp coming in that sense. For the first time, though, the computer is actually <a href="https://www.youtube.com/watch?v=VjzmV7A2Q4Y">a bicycle for my mind</a>, and I&rsquo;mma ride it!</p>
+
+    </div>
+
+    
+
+
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+  
+  
+  
+  <div class="media author-card" itemscope itemtype="http://schema.org/Person">
+    
+
+    <div class="media-body">
+      <h5 class="card-title" itemprop="name"><a href="/authors/authors/"></a></h5>
+      
+      
+      <ul class="network-icon" aria-hidden="true">
+        
+      </ul>
+    </div>
+  </div>
+
+
+
+      
+      
+    
+
+    
+
+    
+
+
+  </div>
+</article>
+
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" id="back_to_top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
