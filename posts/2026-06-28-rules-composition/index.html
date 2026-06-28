@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.3.1">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Greg Langmead">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="In the previous post I described the process of reading a rulebook for the first time: you read up to page 10, where it says &ldquo;oh and if a blue piece captures a red piece then advance the morale track.&rdquo; Before reaching that page you already had a game in your head, and now you need to add one more rule and you obtain a new, slightly larger game. I wanted a software engine where that is reflected in the architecture. In this post I&rsquo;ll explain RulePage and the operations that combine them into a game. The main outermost operation, the one you apply in your brain after you&rsquo;ve finished reading all the rules, is called oapply after the operad-algebra constructor of the same name in AlgebraicDynamics.jl.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://greg.langmead.info/posts/2026-06-28-rules-composition/">
+
+  
+
+
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.2/css/all.css" integrity="sha384-PPIZEGYM1v8zp5Py7UjFb79S58UeqCL9pYVnVPURKEqvioPROaVAJKKLzvH2rDnI" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,400italic,700|Roboto+Mono">
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.min.cc5a4ba16860e3c9b79ac8e16630ca2d.css">
+
+  
+
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="https://greg.langmead.info/posts/2026-06-28-rules-composition/">
+
+  
+  
+  
+  
+    
+    
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="Long Head">
+  <meta property="og:url" content="https://greg.langmead.info/posts/2026-06-28-rules-composition/">
+  <meta property="og:title" content="An algebra of game rules | Long Head">
+  <meta property="og:description" content="In the previous post I described the process of reading a rulebook for the first time: you read up to page 10, where it says &ldquo;oh and if a blue piece captures a red piece then advance the morale track.&rdquo; Before reaching that page you already had a game in your head, and now you need to add one more rule and you obtain a new, slightly larger game. I wanted a software engine where that is reflected in the architecture. In this post I&rsquo;ll explain RulePage and the operations that combine them into a game. The main outermost operation, the one you apply in your brain after you&rsquo;ve finished reading all the rules, is called oapply after the operad-algebra constructor of the same name in AlgebraicDynamics.jl."><meta property="og:image" content="https://greg.langmead.info/img/icon-192.png">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2026-06-28T09:36:22-04:00">
+  
+  <meta property="article:modified_time" content="2026-06-28T09:36:22-04:00">
+  
+
+  
+
+
+      
+
+    
+    
+    
+    <script src="/js/mathjax-config.js"></script>
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
+        
+      
+
+      
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_CHTML-full" integrity="sha256-GhM+5JHb6QUzOQPXSJLEWP7R73CbkisjzK5Eyij4U9w=" crossorigin="anonymous" async></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "results found",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script src="/js/academic.min.8c2fe112ab689edb388fada422bc8900.js"></script>
+
+        <link rel="stylesheet" href="https://cdn.datatables.net/2.3.4/css/dataTables.dataTables.min.css">
+    <script src="https://cdn.datatables.net/2.3.4/js/dataTables.min.js"></script>
+
+
+
+<link rel="me" href="https://mathstodon.xyz/@glangmead" />
+
+
+  <title>An algebra of game rules | Long Head</title>
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+<nav class="navbar fixed-top navbar-expand-lg py-0" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/">Long Head</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav ml-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/cv"><span>CV</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/writing"><span>Research</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/publications"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/posts"><span>Blog</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+
+        
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-sun fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+  <article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1 itemprop="name">An algebra of game rules</h1>
+
+  
+
+  
+    
+
+
+
+<meta content="2026-06-28 09:36:22 -0400 EDT" itemprop="datePublished">
+<meta content="2026-06-28 09:36:22 -0400 EDT" itemprop="dateModified">
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    <time>Jun 28, 2026</time>
+  </span>
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+    
+
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style" itemprop="articleBody">
+      <p>In the <a href="../2025-09-22-game-state-swift">previous post</a> I described the process of reading a rulebook for the first time: you read up to page 10, where it says &ldquo;oh and if a blue piece captures a red piece then advance the morale track.&rdquo; Before reaching that page you already had a game in your head, and now you need to add one more rule and you obtain a new, slightly larger game. I wanted a software engine where that is reflected in the architecture. In this post I&rsquo;ll explain <code>RulePage</code> and the operations that combine them into a game. The main outermost operation, the one you apply in your brain after you&rsquo;ve finished reading all the rules, is called <code>oapply</code> after the operad-algebra constructor of the same name in <a href="https://github.com/AlgebraicJulia/AlgebraicDynamics.jl">AlgebraicDynamics.jl</a>.</p>
+<h2 id="gamerule-and-rulepage"><code>GameRule</code> and <code>RulePage</code></h2>
+<p>A page owns two things: a set of <em>offered actions</em>, and a way to <em>reduce</em> the actions it offered by applying that action to the state. An offer, called a <code>GameRule</code>, is a pair: a condition (predicate) and a list of actions. When the condition holds on some state, the page offers those actions, e.g. &ldquo;if it&rsquo;s your turn, you can play cards A, B, or C.&rdquo;</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">GameRule</span>&lt;State, Action&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">let</span> condition: (State) -&gt; Bool
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">let</span> actions: (State) -&gt; [Action]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><code>RulePage</code> bundles a list of these with a reducer. The reducer is partial: given an action, it either handles it (mutating state, returning logs and follow-up actions) or returns <code>nil</code> if it doesn&rsquo;t handle that action.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">RulePage</span>&lt;State, Action: Hashable&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">let</span> name: String
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">let</span> rules: [GameRule&lt;State, Action&gt;]
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">let</span> reduce: (<span style="color:#66d9ef">inout</span> State, Action) -&gt; ([Log], [Action])?
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="how-rulepages-compose">How <code>RulePage</code>s compose</h2>
+<p>A game is a list of <code>RulePage</code>s and is called a <code>ComposedGame</code>. To collect the legal actions in a state, take the union over what every page offers:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">getLegalActions</span>(state: State) -&gt; [Action] {
+</span></span><span style="display:flex;"><span>  pages.flatMap { page <span style="color:#66d9ef">in</span>
+</span></span><span style="display:flex;"><span>    page.rules.flatMap { rule <span style="color:#66d9ef">in</span>
+</span></span><span style="display:flex;"><span>      rule.condition(state) ? rule.actions(state) : []
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>To apply an action, offer it to every page. (We require that exactly one page claims it: each action&rsquo;s enum case has a single owner, so at most one reducer returns non-<code>nil</code>. The loop below early-exits as an optimization):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">reduce</span>(into state: <span style="color:#66d9ef">inout</span> State, action: Action) -&gt; [Log] {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">for</span> page <span style="color:#66d9ef">in</span> pages {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#66d9ef">let</span> (logs, followUps) = page.reduce(&amp;state, action) {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">return</span> logs <span style="color:#f92672">+</span> followUps.flatMap { reduce(into: &amp;state, action: $0) }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> []
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Let me mention a couple of extensions that <code>ComposedGame</code> supports.</p>
+<ul>
+<li>A reducer may return <strong>follow-up actions</strong>: Hearts scores a hand by having the action that ends the trick emit <code>.scoreHand</code>, which the scoring page handles.</li>
+<li>A <strong>priority rule</strong> fires instead of the one that would normally claim an action: e.g. a victory check, <code>.claimVictory</code>, pre-empts ordinary play the moment the game is won.</li>
+<li><strong>AutoRules</strong> are logical entailments of the state, they read it directly and apply consequences with no action involved: noticing that hearts were played this trick causes a &ldquo;hearts broken&rdquo; flag to be set.</li>
+</ul>
+<p>Presumably these extensions are equivalent to a purer framework that has extra state to orchestrate these additional actions and the ordering. The north star of this design is to think like a game designer or a player learning the game, and I do feel these extensions are intuitive.</p>
+<h2 id="hearts">Hearts</h2>
+<p><a href="https://en.wikipedia.org/wiki/Hearts_%28card_game%29">Hearts</a> demonstrates the way games decompose. First of all, it has a simple trick-taking core: four players follow the suit that was led. We can add the rest one piece at a time.</p>
+<p><strong>Page one: play a card.</strong> On your turn, before the trick is full, you may play any card in your hand.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">static</span> <span style="color:#66d9ef">var</span> playPage: RulePage&lt;State, Action&gt; {
+</span></span><span style="display:flex;"><span>  RulePage(
+</span></span><span style="display:flex;"><span>    name: <span style="color:#e6db74">&#34;Play&#34;</span>,
+</span></span><span style="display:flex;"><span>    rules: [GameRule(
+</span></span><span style="display:flex;"><span>      condition: { $0.phase == .playing <span style="color:#f92672">&amp;&amp;</span> $0.currentTrick.count <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">4</span> },
+</span></span><span style="display:flex;"><span>      actions: { state <span style="color:#66d9ef">in</span> (state.hands[state.player] ?? []).map { .playCard($0) } }
+</span></span><span style="display:flex;"><span>    )],
+</span></span><span style="display:flex;"><span>    reduce: { state, action <span style="color:#66d9ef">in</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">guard</span> <span style="color:#66d9ef">case</span> .playCard(<span style="color:#66d9ef">let</span> card) = action <span style="color:#66d9ef">else</span> { <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span> }
+</span></span><span style="display:flex;"><span>      state.hands[state.player]?.removeAll { $0 == card }
+</span></span><span style="display:flex;"><span>      state.currentTrick.append(TrickPlay(seat: state.player, card: card))
+</span></span><span style="display:flex;"><span>      state.player = state.player.next
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">return</span> ([Log(msg: <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">\(</span>state.player<span style="color:#e6db74">)</span><span style="color:#e6db74"> plays </span><span style="color:#e6db74">\(</span>card<span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>)], [])
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  )
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>This already runs: four players take turns dumping cards into a pile.</p>
+<p><strong>Follow the suit that was led.</strong> The first real rule narrows the offer. Replace the permissive <code>actions</code> with <code>legalPlays</code>, which is just a filter on the hand:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> legalPlays: [Card] {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">guard</span> <span style="color:#66d9ef">let</span> hand = hands[player] <span style="color:#66d9ef">else</span> { <span style="color:#66d9ef">return</span> [] }
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> currentTrick.isEmpty ? legalLeads(hand) : legalFollows(hand)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">legalFollows</span>(<span style="color:#66d9ef">_</span> hand: [Card]) -&gt; [Card] {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">let</span> led = currentTrick[<span style="color:#ae81ff">0</span>].card.suit
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">let</span> inSuit = hand.filter { $0.suit == led }
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> inSuit.isEmpty ? hand : inSuit   <span style="color:#75715e">// must follow if you can</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Note what did not change: the reducer.</p>
+<p><strong>Resolve the trick.</strong> A new page that owns one new action. It offers <code>.resolveTrick</code> exactly when the trick is full, awards the cards to the highest card of the led suit, and makes that seat lead next.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">static</span> <span style="color:#66d9ef">var</span> trickPage: RulePage&lt;State, Action&gt; {
+</span></span><span style="display:flex;"><span>  RulePage(
+</span></span><span style="display:flex;"><span>    name: <span style="color:#e6db74">&#34;Trick&#34;</span>,
+</span></span><span style="display:flex;"><span>    rules: [GameRule(
+</span></span><span style="display:flex;"><span>      condition: { $0.currentTrick.count == <span style="color:#ae81ff">4</span> },
+</span></span><span style="display:flex;"><span>      actions: { <span style="color:#66d9ef">_</span> <span style="color:#66d9ef">in</span> [.resolveTrick] }
+</span></span><span style="display:flex;"><span>    )],
+</span></span><span style="display:flex;"><span>    reduce: { state, action <span style="color:#66d9ef">in</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">guard</span> <span style="color:#66d9ef">case</span> .resolveTrick = action <span style="color:#66d9ef">else</span> { <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span> }
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">let</span> winner = state.trickWinner!
+</span></span><span style="display:flex;"><span>      state.award(state.currentTrick, to: winner)
+</span></span><span style="display:flex;"><span>      state.currentTrick.removeAll()
+</span></span><span style="display:flex;"><span>      state.player = winner
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">return</span> ([Log(msg: <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">\(</span>winner<span style="color:#e6db74">)</span><span style="color:#e6db74"> takes the trick&#34;</span>)], [])
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  )
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>Score the hand.</strong> Another page owning another action, <code>.scoreHand</code>: count one point per heart, thirteen for the queen of spades. Append it after the play and trick pages.</p>
+<p>Now stop reading. With three pages plus scoring you have a playable game of Hearts.</p>
+<p><strong>Add the passing phase.</strong> Hearts opens with each player passing three cards. This is a whole new phase that runs before play, and a whole new pair of actions: <code>.selectPassCard</code> and <code>.confirmPass</code>. It is a new page. The existing pages don&rsquo;t need to know about it.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">static</span> <span style="color:#66d9ef">var</span> passingPage: RulePage&lt;State, Action&gt; {
+</span></span><span style="display:flex;"><span>  RulePage(
+</span></span><span style="display:flex;"><span>    name: <span style="color:#e6db74">&#34;Passing&#34;</span>,
+</span></span><span style="display:flex;"><span>    rules: [
+</span></span><span style="display:flex;"><span>      GameRule(
+</span></span><span style="display:flex;"><span>        condition: { $0.phase == .passing <span style="color:#f92672">&amp;&amp;</span> ($0.passingState?.selected.count ?? <span style="color:#ae81ff">0</span>) <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">3</span> },
+</span></span><span style="display:flex;"><span>        actions: { state <span style="color:#66d9ef">in</span> (state.hands[state.player] ?? []).map { .selectPassCard($0) } }
+</span></span><span style="display:flex;"><span>      ),
+</span></span><span style="display:flex;"><span>      GameRule(
+</span></span><span style="display:flex;"><span>        condition: { $0.passingState?.selected.count == <span style="color:#ae81ff">3</span> },
+</span></span><span style="display:flex;"><span>        actions: { <span style="color:#66d9ef">_</span> <span style="color:#66d9ef">in</span> [.confirmPass] }
+</span></span><span style="display:flex;"><span>      )
+</span></span><span style="display:flex;"><span>    ],
+</span></span><span style="display:flex;"><span>    reduce: { state, action <span style="color:#66d9ef">in</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">switch</span> action {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">case</span> .selectPassCard(<span style="color:#66d9ef">let</span> c): state.passingState?.selected.append(c); <span style="color:#66d9ef">return</span> ([], [])
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">case</span> .confirmPass: state.executePasses(); <span style="color:#66d9ef">return</span> ([Log(msg: <span style="color:#e6db74">&#34;Cards passed&#34;</span>)], [])
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">default</span>: <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  )
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>Shooting the moon.</strong> If one player takes every heart and the queen, they score zero and everyone else takes 26. This is an amendment to scoring, and it lives entirely inside the hand page&rsquo;s reducer:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#75715e">// inside scoreCurrentHand()</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> seat <span style="color:#66d9ef">in</span> Seat.allCases <span style="color:#66d9ef">where</span> isShootingTheMoon(seat: seat) {
+</span></span><span style="display:flex;"><span>  handPenalties[seat] = <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">for</span> other <span style="color:#66d9ef">in</span> Seat.allCases <span style="color:#66d9ef">where</span> other <span style="color:#f92672">!=</span> seat { handPenalties[other] = <span style="color:#ae81ff">26</span> }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>No other page can tell that this rule exists.</p>
+<p><strong>You may not lead hearts until they are broken.</strong> The last amendment narrows the cards you can lead with:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">legalLeads</span>(<span style="color:#66d9ef">_</span> hand: [Card]) -&gt; [Card] {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> heartsBroken { <span style="color:#66d9ef">return</span> hand }
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">let</span> nonHearts = hand.filter { $0.suit <span style="color:#f92672">!=</span> .hearts }
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> nonHearts.isEmpty ? hand : nonHearts
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Every amendment was implemented in one of three ways: a new page owning a new case for the action enum (passing, trick resolution), a narrowing of some page&rsquo;s offer (follow suit, can&rsquo;t lead hearts), or a tweak to one page&rsquo;s reducer (shooting the moon). None of them reached across pages.</p>
+<h2 id="bonding-even-more-compositionality">Bonding: even more compositionality</h2>
+<p><code>oapply</code> builds a game by taking the disjoint union of pages. The predicates are each checked for truth and the actions are unioned. The reducers are all run (though we assume only one handler, which was the reason for the early exit in the code above). But we can tease out <em>another operator</em> from what we just described above! I&rsquo;m calling it <em>bonding</em>, written $\oplus$, and it is the product to <code>oapply</code>&rsquo;s sum.</p>
+<p>Bonding folds two compatible <code>RulePage</code>s into a single <code>RulePage</code>: it <strong>ANDs</strong> the preconditions, <strong>concatenates</strong> the reduce-steps in list order, and unions the offers, though in practice there&rsquo;s only one nonempty <code>offer</code> field, as you&rsquo;ll see in the example. Because the reduce steps concatenate in order, $\oplus$ is associative but not commutative: a page that reads what an earlier page wrote must come after it.</p>
+<p>Two Hearts rules are expressible with bonding:</p>
+<p><strong>Legal plays are an AND of independent restrictions.</strong> The rulebook gives three sentences about what you may play, and each narrows the same <code>.playCard</code>:</p>
+<ul>
+<li><code>FollowSuit</code>: follow the led suit if you can</li>
+<li><code>NoLeadHearts</code>: do not lead hearts until they break</li>
+<li><code>First2Clubs</code>: the holder of 2♣ leads it on the first trick</li>
+</ul>
+<p>Each is a modifier contributing one predicate, and bonding them ANDs them. So bonding is like amending the rules by saying &ldquo;oh, but you can&rsquo;t&hellip;&rdquo; or &ldquo;oh, but you have to&hellip;&rdquo; The earlier version of <code>legalPlays</code> inlined these amendments. But it&rsquo;s better expressed as three fragments $\oplus$&rsquo;d together. If you use the rule that hearts and the queen of spades cannot be played on the first trick, you can bond that in.</p>
+<p><strong>Hand scoring is an ordered sum of penalty contributions.</strong></p>
+<ul>
+<li><code>Hearts+1</code>: plus one per heart</li>
+<li><code>Queen+13</code>: plus thirteen for the queen of spades</li>
+<li><code>ShootMoon</code>: plus 0 and other players get plus 26</li>
+</ul>
+<p>If you want to use &ldquo;minus ten for the jack of diamonds&rdquo; then bond in <code>JackDiamonds-10</code>. Shooting the moon reads the finished total and inverts it, so it must bond <em>last</em>. That is the non-commutative half: the moon page does not commute with the additions it depends on.</p>
+<h2 id="the-full-picture-so-far">The full picture, so far</h2>
+<p>Here&rsquo;s how everything fits:</p>
+<p><img src="/img/oapply.png" alt="The game engine, ComposedGame, with two kinds of composition"></p>
+<p><code>oapply</code> is borrowed vocabulary. In the AlgebraicJulia line of work, following <a href="https://arxiv.org/abs/1408.1598">Vagner, Spivak, and Lerman</a>, <code>oapply</code> is the action of a <em>wiring-diagram operad</em> on an algebra of open dynamical systems. The operad&rsquo;s operations are boxes wired together: each inner box exposes ports, the operation says how the ports connect, and <code>oapply</code> evaluates the wiring into one composite system. The wiring carries real information: which output feeds which input.</p>
+<p>I don&rsquo;t quite live up to this. My pages share one global <code>State</code> and one global <code>Action</code> enum, and the &ldquo;wiring&rdquo; is just &ldquo;collect these $n$ pages&rdquo;. We don&rsquo;t have to express that the &ldquo;trick pile&rdquo; from the rule that plays a card is the same &ldquo;trick pile&rdquo; that is scored and removed later. We just let both rules refer to the same-named State member. The wires have zero length. The corollary is that we can&rsquo;t paste in a new RulePage that introduces new state members, which would be ideal. Imagine a game like <a href="https://en.wikipedia.org/wiki/Magic:_The_Gathering">Magic: the Gathering</a> where your friend plays a card you&rsquo;ve never seen, and that card says to count all the creatures on the battlefield. That&rsquo;s the compositionality that I&rsquo;m going for in its most extreme form: new rules being added on the fly to make a larger game. In my engine you&rsquo;d have to have already known about this card and supplied a &ldquo;creatureCount&rdquo; state member.</p>
+<h2 id="next-steps">Next steps</h2>
+<p>The external API of ComposedGame, <code>getLegalActions</code> and <code>reduce</code>, is exactly the generic interface we need to implement a game-playing agent. It has always been a required feature of this project that the games are automatically playable by a reusable bot. The bot I have right now is a Monte-Carlo tree search (MCTS) bot that knows how to play with more than two players, and with hidden information. I&rsquo;ll talk about that later.</p>
+<p>In addition, the implementation of games is actually <em>not</em> in Swift, it&rsquo;s in JSON. Inspired by <a href="http://ludii.games">Ludii</a>, I have developed a domain-specific language that will eventually allow users to share their own game rules with each other. The motivating example I&rsquo;m working towards is taking a <a href="https://vassalengine.org/library/projects">Vassal module</a> and a PDF of the rulebook, and working with an AI agent to write the JSON. I&rsquo;m developing an agent skill to do this in one shot. Combined with the graphics from the Vassal module, you&rsquo;d have a rules-enforced complete game app with a bot opponent. The fact that the mathematical rules engine is sticking so closely to how a human reader digests a rulebook should allow the coding agent to translate the text in the rulebook &ldquo;easily&rdquo;. We&rsquo;ll see.</p>
+
+    </div>
+
+    
+
+
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+  
+  
+  
+  <div class="media author-card" itemscope itemtype="http://schema.org/Person">
+    
+
+    <div class="media-body">
+      <h5 class="card-title" itemprop="name"><a href="/authors/authors/"></a></h5>
+      
+      
+      <ul class="network-icon" aria-hidden="true">
+        
+      </ul>
+    </div>
+  </div>
+
+
+
+      
+      
+    
+
+    
+
+    
+
+
+  </div>
+</article>
+
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" id="back_to_top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
