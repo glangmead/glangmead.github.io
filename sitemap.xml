@@ -2,10 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://greg.langmead.info/posts/2026-06-28-rules-composition/</loc>
-    <lastmod>2026-06-28T09:36:22-04:00</lastmod>
+    <loc>https://greg.langmead.info/courses/code2026/</loc>
+    <lastmod>2026-08-19T08:36:26-04:00</lastmod>
+  </url><url>
+    <loc>https://greg.langmead.info/courses/</loc>
+    <lastmod>2026-08-19T08:36:26-04:00</lastmod>
   </url><url>
     <loc>https://greg.langmead.info/</loc>
+    <lastmod>2026-08-19T08:36:26-04:00</lastmod>
+  </url><url>
+    <loc>https://greg.langmead.info/posts/2026-06-28-rules-composition/</loc>
     <lastmod>2026-06-28T09:36:22-04:00</lastmod>
   </url><url>
     <loc>https://greg.langmead.info/posts/</loc>

@@ -1,0 +1,3 @@
+code2026
+
+Links History Margaret Hamilton Apps Apple’s iOS Pathway 100 Days of SwiftUI – I used this. Web sites Reddit thread about what to use in 2026 Next.js on Wikipedia – understanding what this entry is saying about rendering on the server versus in the browser is an excellent goal. Reddit thread about building a custom CRM with a floating chat window – I just want to share how people talk about these things. Terminal programs Roguelike dungeon-crawl tutorial in Rust 

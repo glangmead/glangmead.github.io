@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Courses on Long Head</title>
+    <link>https://greg.langmead.info/courses/</link>
+    <description>Recent content in Courses on Long Head</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
+    <language>en-us</language>
+    <managingEditor>Greg Langmead</managingEditor>
+    <webMaster>Greg Langmead</webMaster>
+    <lastBuildDate>Wed, 19 Aug 2026 08:36:26 -0400</lastBuildDate>
+    
+	    <atom:link href="https://greg.langmead.info/courses/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>code2026</title>
+      <link>https://greg.langmead.info/courses/code2026/</link>
+      <pubDate>Wed, 19 Aug 2026 08:36:26 -0400</pubDate>
+      <guid>https://greg.langmead.info/courses/code2026/</guid>
+      <description>&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+&lt;h3 id=&#34;history&#34;&gt;History&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Margaret_Hamilton_%28software_engineer%29&#34;&gt;Margaret Hamilton&lt;/a&gt; &lt;img src=&#34;https://greg.langmead.info/img/margaret_hamilton.jpg&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;apps&#34;&gt;Apps&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://developer.apple.com/ios/get-started/&#34;&gt;Apple&amp;rsquo;s iOS Pathway&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.hackingwithswift.com/100/swiftui&#34;&gt;100 Days of SwiftUI&lt;/a&gt; &amp;ndash; I used this.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;web-sites&#34;&gt;Web sites&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.reddit.com/r/webdevelopment/comments/1smfe68/whats_your_preferred_way_of_building_websites_for/&#34;&gt;Reddit thread about what to use in 2026&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Next.js&#34;&gt;Next.js on Wikipedia&lt;/a&gt; &amp;ndash; understanding what this entry is saying about rendering on the server versus in the browser is an excellent goal.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.reddit.com/r/nextjs/comments/1mgo7on/built_an_internal_crm_with_nextjs_for_my_company/&#34;&gt;Reddit thread about building a custom CRM with a floating chat window&lt;/a&gt; &amp;ndash; I just want to share how people talk about these things.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;terminal-programs&#34;&gt;Terminal programs&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://bfnightly.bracketproductions.com/rustbook/&#34;&gt;Roguelike dungeon-crawl tutorial in Rust&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

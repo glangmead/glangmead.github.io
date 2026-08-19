@@ -8,10 +8,18 @@
     <language>en-us</language>
     <managingEditor>Greg Langmead</managingEditor>
     <webMaster>Greg Langmead</webMaster>
-    <lastBuildDate>Sun, 28 Jun 2026 09:36:22 -0400</lastBuildDate>
+    <lastBuildDate>Wed, 19 Aug 2026 08:36:26 -0400</lastBuildDate>
     
 	    <atom:link href="https://greg.langmead.info/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Courses</title>
+      <link>https://greg.langmead.info/courses/</link>
+      <pubDate>Wed, 19 Aug 2026 08:36:26 -0400</pubDate>
+      <guid>https://greg.langmead.info/courses/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Posts</title>
