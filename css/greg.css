@@ -1,0 +1,8 @@
+/* Override theme's Google-font stack (Montserrat/Roboto) with the
+   OS system font: SF Pro on Apple browsers, Helvetica elsewhere. */
+html,
+.navbar-light,
+h1, h2, h3, h4, h5, h6,
+figcaption {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
