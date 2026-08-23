@@ -20,7 +20,11 @@
       <guid>https://greg.langmead.info/courses/code2026/</guid>
       <description>&lt;h2 id=&#34;in-class-tools-maybe&#34;&gt;In-class tools maybe&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://pythontutor.com/member.html?glangmead@gmail.com&#34;&gt;Python visualizer&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://pythontutor.com/member.html?glangmead@gmail.com&#34;&gt;Python visualizer&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://pythontutor.com/articles/python-visualizer.html&#34;&gt;Examples&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://jupytereverywhere.org&#34;&gt;Jupyter everywhere&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;the-best-links-to-understand-everything&#34;&gt;The best links to understand everything&lt;/h2&gt;
@@ -35,6 +39,10 @@
 &lt;li&gt;&lt;a href=&#34;https://abbycovert.com/make-sense/&#34;&gt;How to Make Sense of Any Mess&lt;/a&gt; (Abby Covert; full text free) &amp;ndash; information architecture: &amp;ldquo;the way we arrange the parts of something to make it understandable.&amp;rdquo;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://aws.amazon.com/compare/the-difference-between-web-apps-native-apps-and-hybrid-apps/&#34;&gt;Web apps vs native apps vs hybrid apps&lt;/a&gt; (AWS) &amp;ndash; basic lingo.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.theodinproject.com/lessons/foundations-introduction-to-web-development&#34;&gt;Introduction to Web Development&lt;/a&gt; (The Odin Project) &amp;ndash; another high level overview.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;books&#34;&gt;Books&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.manning.com/books/learn-ai-assisted-python-programming-second-edition&#34;&gt;Learn AI-Assisted Python Programming, 2nd ed.&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;history&#34;&gt;History&lt;/h2&gt;
 &lt;ul&gt;
