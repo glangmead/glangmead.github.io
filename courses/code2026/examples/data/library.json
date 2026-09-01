@@ -1,0 +1,44 @@
+[
+  {
+    "title": "The Overstory",
+    "author": "Richard Powers",
+    "pages": 502,
+    "year": 2018,
+    "read": true
+  },
+  {
+    "title": "Piranesi",
+    "author": "Susanna Clarke",
+    "pages": 245,
+    "year": 2020,
+    "read": true
+  },
+  {
+    "title": "Educated",
+    "author": "Tara Westover",
+    "pages": 352,
+    "year": 2018,
+    "read": true
+  },
+  {
+    "title": "Klara and the Sun",
+    "author": "Kazuo Ishiguro",
+    "pages": 303,
+    "year": 2021,
+    "read": false
+  },
+  {
+    "title": "Bewilderment",
+    "author": "Richard Powers",
+    "pages": 288,
+    "year": 2021,
+    "read": false
+  },
+  {
+    "title": "Bridget Jones's Diary",
+    "author": "Helen Fielding",
+    "pages": 288,
+    "year": 1996,
+    "read": true
+  }
+]
