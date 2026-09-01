@@ -27,8 +27,9 @@
 &lt;li&gt;for loop&lt;/li&gt;
 &lt;li&gt;lists, concatenation, appending, indexing, changing, length, membership test, looping, sorting&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Links&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Links&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://pythontutor.com/member.html&#34;&gt;Python tutor visualizer&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://ehmatthes.github.io/pcc_3e/cheat_sheets/&#34;&gt;Python cheat sheets&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://jupytereverywhere.org&#34;&gt;Jupyter everywhere&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Practical Python Programming: &lt;a href=&#34;https://dabeaz-course.github.io/practical-python/Notes/01_Introduction/03_Numbers.html&#34;&gt;numbers&lt;/a&gt;, &lt;a href=&#34;https://dabeaz-course.github.io/practical-python/Notes/01_Introduction/05_Lists.html&#34;&gt;lists&lt;/a&gt;&lt;/li&gt;
