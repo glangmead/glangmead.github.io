@@ -33,6 +33,7 @@
 &lt;li&gt;&lt;a href=&#34;https://ehmatthes.github.io/pcc_3e/cheat_sheets/&#34;&gt;Python cheat sheets&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://jupytereverywhere.org&#34;&gt;Jupyter everywhere&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Practical Python Programming: &lt;a href=&#34;https://dabeaz-course.github.io/practical-python/Notes/01_Introduction/03_Numbers.html&#34;&gt;numbers&lt;/a&gt;, &lt;a href=&#34;https://dabeaz-course.github.io/practical-python/Notes/01_Introduction/05_Lists.html&#34;&gt;lists&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.python.org/3/tutorial/floatingpoint.html&#34;&gt;A little about why&lt;/a&gt; floating point numbers behave unexpectedly&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;front-end-back-end&#34;&gt;Front end, back end&lt;/h3&gt;
 &lt;ul&gt;
