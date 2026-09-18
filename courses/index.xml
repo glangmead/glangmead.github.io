@@ -70,7 +70,42 @@
 &lt;h3 id=&#34;the-notional-machine&#34;&gt;The notional machine&lt;/h3&gt;
 &lt;h2 id=&#34;class-6&#34;&gt;Class 6&lt;/h2&gt;
 &lt;hr /&gt;
-&lt;h3 id=&#34;advanced-python-topics-sympy-numpy-pytorch&#34;&gt;Advanced python topics: sympy, numpy, pytorch&lt;/h3&gt;
+&lt;h3 id=&#34;security-and-privacy&#34;&gt;Security and privacy&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Secrets, i.e. passwords and access keys to your app&amp;rsquo;s data
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Uber, 2014.&lt;/strong&gt; An engineer put an Amazon web services (AWS) access key into code he published in a public repository. Someone used it to download a file with 100,000+ drivers&amp;rsquo; names and licence numbers. Sources: &lt;a href=&#34;https://www.ftc.gov/system/files/documents/cases/152_3054_c-4662_uber_technologies_revised_complaint.pdf&#34;&gt;FTC revised complaint (PDF)&lt;/a&gt;, &lt;a href=&#34;https://www.ftc.gov/system/files/documents/cases/1523054_uber_technologies_revised_analysis.pdf&#34;&gt;FTC analysis of proposed order&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;A solo developer, 2015.&lt;/strong&gt; Pushed AWS keys to GitHub, noticed, deleted them
+about five minutes later. A bot had already taken them and started ~140 EC2
+instances mining Bitcoin, and the dev was charged $2,375. Sources: &lt;a href=&#34;https://www.theregister.com/2015/01/06/dev_blunder_shows_github_crawling_with_keyslurping_bots&#34;&gt;The Register&lt;/a&gt;, &lt;a href=&#34;https://it.slashdot.org/story/15/01/02/2342228/bots-scanning-github-to-steal-amazon-ec2-keys&#34;&gt;Slashdot discussion&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Having logins in your wite is a big responsibility
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Adobe, 2013 — 153 million accounts.&lt;/strong&gt; The passwords were &lt;em&gt;encrypted&lt;/em&gt;, not
+hashed, which produces identical output for identical input. So every user with the password &lt;code&gt;123456&lt;/code&gt; had the same ciphertext. The dump also included every user&amp;rsquo;s plaintext password hint. Sources: &lt;a href=&#34;https://www.schneier.com/blog/archives/2013/11/cryptographic_b.html&#34;&gt;Schneier, &amp;ldquo;Cryptographic Blunders Revealed by Adobe&amp;rsquo;s Password Leak&amp;rdquo;&lt;/a&gt;, &lt;a href=&#34;https://www.csoonline.com/article/540070/network-security-adobe-confirms-stolen-passwords-were-encrypted-not-hashed.html&#34;&gt;CSO Online: encrypted, not hashed&lt;/a&gt;, &lt;a href=&#34;https://haveibeenpwned.com/Breach/Adobe&#34;&gt;Have I Been Pwned record&lt;/a&gt;, &lt;a href=&#34;https://xkcd.com/1286/&#34;&gt;XKCD 1286&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;RockYou, 2009 — 32.6 million passwords in plain text.&lt;/strong&gt; Breached by SQL
+injection (explained in the comic below). Sources: &lt;a href=&#34;https://techcrunch.com/2009/12/14/rockyou-hacked/&#34;&gt;TechCrunch (2009)&lt;/a&gt;, &lt;a href=&#34;https://www.helpnetsecurity.com/2009/12/14/serious-sql-flaw-could-have-compromised-millions-of-rockyoucom-users/&#34;&gt;Help Net Security, on the SQL injection&lt;/a&gt;. &lt;br/&gt; &lt;a href=&#34;https://xkcd.com/327/&#34;&gt;&lt;img src=&#34;https://imgs.xkcd.com/comics/exploits_of_a_mom.png&#34; width=&#34;500&#34; /&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Facebook 2019, and Twitter and GitHub in 2018.&lt;/strong&gt; Passwords written to
+internal log files in plain text before the hashing step. Three of the largest engineering organisations on the planet. Sources: &lt;a href=&#34;https://krebsonsecurity.com/2019/03/facebook-stored-hundreds-of-millions-of-user-passwords-in-plain-text-for-years/&#34;&gt;Krebs on Security&lt;/a&gt;, &lt;a href=&#34;https://techcrunch.com/2019/03/21/facebook-plaintext-passwords/&#34;&gt;TechCrunch&lt;/a&gt;, &lt;a href=&#34;https://www.bleepingcomputer.com/news/security/twitter-admits-recording-plaintext-passwords-in-internal-logs-just-like-github/&#34;&gt;BleepingComputer, on Twitter and GitHub&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Storing images is a big responsibility.
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Tea, July 2025 — 72,000 images including 13,000 selfies and photo IDs.&lt;/strong&gt; An
+app for women&amp;rsquo;s dating safety required a selfie plus a government ID. The images
+were stored in a cloud storage bucket with no authentication; anyone with the URL could list and download everything. Sources: &lt;a href=&#34;https://www.americanbar.org/groups/intellectual_property_law/resources/newsletters/cloud-misconfiguration-private-right-of-action-tea-app-data-breach/&#34;&gt;American Bar Association technical and legal analysis&lt;/a&gt;, &lt;a href=&#34;https://www.engadget.com/cybersecurity/tea-app-suffers-breach-exposing-thousands-of-user-images-190731414.html&#34;&gt;Engadget&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Using third party libraries in your web app is a commitment to applying vulnerability patches forever.
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Equifax, 2017: 147.9 million people.&lt;/strong&gt; An Apache
+Struts security patch was published on 7 March. An internal notice went out on 9 March. A
+scan on 15 March failed to find the affected system. Attackers got in in May and
+were not noticed until 29 July. The fix was to run &lt;code&gt;pip install pip-audit &amp;amp;&amp;amp; pip-audit&lt;/code&gt;. Sources: &lt;a href=&#34;https://www.gao.gov/assets/gao-18-559.pdf&#34;&gt;GAO-18-559 (PDF)&lt;/a&gt;, &lt;a href=&#34;https://oversight.house.gov/wp-content/uploads/2018/12/Equifax-Report.pdf&#34;&gt;House Oversight report (PDF)&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h3 id=&#34;qa&#34;&gt;QA&lt;/h3&gt;
 &lt;h3 id=&#34;theory-of-programming-languages&#34;&gt;Theory of programming languages&lt;/h3&gt;
 &lt;h1 id=&#34;notes&#34;&gt;Notes&lt;/h1&gt;

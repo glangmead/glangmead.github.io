@@ -611,7 +611,42 @@
 <h3 id="the-notional-machine">The notional machine</h3>
 <h2 id="class-6">Class 6</h2>
 <hr />
-<h3 id="advanced-python-topics-sympy-numpy-pytorch">Advanced python topics: sympy, numpy, pytorch</h3>
+<h3 id="security-and-privacy">Security and privacy</h3>
+<ul>
+<li>Secrets, i.e. passwords and access keys to your app&rsquo;s data
+<ul>
+<li><strong>Uber, 2014.</strong> An engineer put an Amazon web services (AWS) access key into code he published in a public repository. Someone used it to download a file with 100,000+ drivers&rsquo; names and licence numbers. Sources: <a href="https://www.ftc.gov/system/files/documents/cases/152_3054_c-4662_uber_technologies_revised_complaint.pdf">FTC revised complaint (PDF)</a>, <a href="https://www.ftc.gov/system/files/documents/cases/1523054_uber_technologies_revised_analysis.pdf">FTC analysis of proposed order</a>.</li>
+<li><strong>A solo developer, 2015.</strong> Pushed AWS keys to GitHub, noticed, deleted them
+about five minutes later. A bot had already taken them and started ~140 EC2
+instances mining Bitcoin, and the dev was charged $2,375. Sources: <a href="https://www.theregister.com/2015/01/06/dev_blunder_shows_github_crawling_with_keyslurping_bots">The Register</a>, <a href="https://it.slashdot.org/story/15/01/02/2342228/bots-scanning-github-to-steal-amazon-ec2-keys">Slashdot discussion</a>.</li>
+</ul>
+</li>
+<li>Having logins in your wite is a big responsibility
+<ul>
+<li><strong>Adobe, 2013 — 153 million accounts.</strong> The passwords were <em>encrypted</em>, not
+hashed, which produces identical output for identical input. So every user with the password <code>123456</code> had the same ciphertext. The dump also included every user&rsquo;s plaintext password hint. Sources: <a href="https://www.schneier.com/blog/archives/2013/11/cryptographic_b.html">Schneier, &ldquo;Cryptographic Blunders Revealed by Adobe&rsquo;s Password Leak&rdquo;</a>, <a href="https://www.csoonline.com/article/540070/network-security-adobe-confirms-stolen-passwords-were-encrypted-not-hashed.html">CSO Online: encrypted, not hashed</a>, <a href="https://haveibeenpwned.com/Breach/Adobe">Have I Been Pwned record</a>, <a href="https://xkcd.com/1286/">XKCD 1286</a>.</li>
+<li><strong>RockYou, 2009 — 32.6 million passwords in plain text.</strong> Breached by SQL
+injection (explained in the comic below). Sources: <a href="https://techcrunch.com/2009/12/14/rockyou-hacked/">TechCrunch (2009)</a>, <a href="https://www.helpnetsecurity.com/2009/12/14/serious-sql-flaw-could-have-compromised-millions-of-rockyoucom-users/">Help Net Security, on the SQL injection</a>. <br/> <a href="https://xkcd.com/327/"><img src="https://imgs.xkcd.com/comics/exploits_of_a_mom.png" width="500" /></a></li>
+<li><strong>Facebook 2019, and Twitter and GitHub in 2018.</strong> Passwords written to
+internal log files in plain text before the hashing step. Three of the largest engineering organisations on the planet. Sources: <a href="https://krebsonsecurity.com/2019/03/facebook-stored-hundreds-of-millions-of-user-passwords-in-plain-text-for-years/">Krebs on Security</a>, <a href="https://techcrunch.com/2019/03/21/facebook-plaintext-passwords/">TechCrunch</a>, <a href="https://www.bleepingcomputer.com/news/security/twitter-admits-recording-plaintext-passwords-in-internal-logs-just-like-github/">BleepingComputer, on Twitter and GitHub</a>.</li>
+</ul>
+</li>
+<li>Storing images is a big responsibility.
+<ul>
+<li><strong>Tea, July 2025 — 72,000 images including 13,000 selfies and photo IDs.</strong> An
+app for women&rsquo;s dating safety required a selfie plus a government ID. The images
+were stored in a cloud storage bucket with no authentication; anyone with the URL could list and download everything. Sources: <a href="https://www.americanbar.org/groups/intellectual_property_law/resources/newsletters/cloud-misconfiguration-private-right-of-action-tea-app-data-breach/">American Bar Association technical and legal analysis</a>, <a href="https://www.engadget.com/cybersecurity/tea-app-suffers-breach-exposing-thousands-of-user-images-190731414.html">Engadget</a>.</li>
+</ul>
+</li>
+<li>Using third party libraries in your web app is a commitment to applying vulnerability patches forever.
+<ul>
+<li><strong>Equifax, 2017: 147.9 million people.</strong> An Apache
+Struts security patch was published on 7 March. An internal notice went out on 9 March. A
+scan on 15 March failed to find the affected system. Attackers got in in May and
+were not noticed until 29 July. The fix was to run <code>pip install pip-audit &amp;&amp; pip-audit</code>. Sources: <a href="https://www.gao.gov/assets/gao-18-559.pdf">GAO-18-559 (PDF)</a>, <a href="https://oversight.house.gov/wp-content/uploads/2018/12/Equifax-Report.pdf">House Oversight report (PDF)</a>.</li>
+</ul>
+</li>
+</ul>
 <h3 id="qa">QA</h3>
 <h3 id="theory-of-programming-languages">Theory of programming languages</h3>
 <h1 id="notes">Notes</h1>
