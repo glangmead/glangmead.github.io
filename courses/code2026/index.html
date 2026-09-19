@@ -630,52 +630,143 @@
 <ol>
 <li>
 <p>Running programs live in memory, which is divided between a <strong>call stack</strong> (the &ldquo;frames&rdquo; in the CS Circles visualizer) and a <strong>heap</strong> (called &ldquo;objects&rdquo; in the CS Circles visualizer).</p>
-<p>See this for example in CS Circles section 10 <iframe width='500' height='480' frameborder='0' scrolling='no' src='https://cscircles.cemc.uwaterloo.ca/wp-content/plugins/pybox/OnlinePythonTutor3-cemc/iframe-embed.html#code=def+square%28x%29%3A+++++%23+function+definition%0A++++return+x%2Ax+++++%23+body+only+has+one+line%0A%0A%23+use+the+function%2C+now+that+it%27s+defined%0Aprint%28square%2810%29%29++++++++%0Aprint%28square%28square%282%29%29%29&cumulative=false&heapPrimitives=false&drawParentPointers=false&textReferences=false&showOnlyOutputs=false&py=3&curInstr=0&resizeContainer=true&highlightLines&width=460&rightStdout=1'></iframe></p>
+<p>See this for example in CS Circles section 10, reproduced here <p><iframe width="800" height="400" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=def%20square%28x%29%3A%20%20%20%20%20%23%20function%20definition%0A%20%20%20%20return%20x*x%20%20%20%20%20%23%20body%20only%20has%20one%20line%0A%0A%23%20use%20the%20function,%20now%20that%20it's%20defined%0Aprint%28square%2810%29%29%20%20%20%20%20%20%20%20%0Aprint%28square%28square%282%29%29%29&codeDivHeight=400&codeDivWidth=350&curInstr=0&origin=opt-frontend.js&py=311"> </iframe></p>
 </li>
 <li>
-<p>When code is executed, Python steps through the instructions, doing what each one tells it to in turn.</p>
-<p>see it here</p>
+<p>When code is executed, Python steps through the instructions, doing what each one tells it to in turn. That&rsquo;s what the &ldquo;Next&rdquo; button simulates in the visualization above.</p>
 </li>
 <li>
 <p>Every piece of data is stored in a two-part structure. The first part says what <strong>type</strong> the data is, and the second part is the actual <strong>value</strong>.</p>
-<p>see it here</p>
 </li>
 <li>
 <p>Memory for some types is allocated in the stack, and for others inside the heap. This shows up in the visualizer.</p>
-<p>see it here</p>
 </li>
 <li>
-<p>Lists, dictionaries and other collections store references to other data rather than storing those values directly. They can be modified after they are created, i.e. a list can be extended or new values can be added to a set.</p>
-<p>see it here</p>
+<p>Lists, dictionaries and other collections store references to other data rather than storing those values directly. They can be modified after they are created, e.g. a list can be extended. In the visualizer these are the arrows pointing out of the frame into the objects, as opposed to values like integers shown directly in the frame.</p>
 </li>
 <li>
 <p>When code is loaded into memory, Python converts it to a sequence of instructions that are stored like any other data. This is why it’s possible to assign functions to variables and pass them as parameters.</p>
-<p>see it here</p>
+<p>Here&rsquo;s an example of using functions as data <p><iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=%23%20Using%20functions%20as%20just%20another%20kind%20of%20data%0A%0Adef%20square%28x%29%3A%0A%20%20%20%20return%20x*x%0A%0Adef%20addone%28x%29%3A%0A%20%20%20%20return%20x%20%2B%201%0A%0Afns%20%3D%20%5Bsquare,%20addone%5D%0Aval%20%3D%204%0Afor%20f%20in%20fns%3A%0A%20%20%20%20val%20%3D%20f%28val%29%0Aprint%28val%29&codeDivHeight=400&codeDivWidth=350&curInstr=16&origin=opt-frontend.js&py=311"> </iframe></p>
 </li>
 <li>
 <p>Some instructions make Python read data, do calculations, and create new data. Other instructions control what instructions Python executes, which is how loops and conditionals work. Yet another instruction tells Python to call a function.</p>
-<p>see it here</p>
 </li>
 <li>
 <p>When a function is called, Python pushes a new stack frame onto the call stack.</p>
-<p>see it here</p>
 </li>
 <li>
 <p>Each stack frame stores variables’ names and references to data. Function parameters are just more variables in the frame.</p>
-<p>see it here</p>
 </li>
 <li>
 <p>When a variable is used, Python looks for it in the top stack frame. If it isn’t there, it looks in the bottom (global) frame.</p>
-<p>see it here</p>
+<p>Here&rsquo;s a variant of an earlier visualization where inside <code>add_something</code> there is a local variable <code>x</code> in the frame, but also a global variable <code>to_add</code> that the interpreter accesses from the global frame <p><iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=%23%20Using%20functions%20as%20just%20another%20kind%20of%20data%0A%0Ato_add%20%3D%201%0A%0Adef%20square%28x%29%3A%0A%20%20%20%20return%20x*x%0A%0Adef%20add_something%28x%29%3A%0A%20%20%20%20return%20x%20%2B%20to_add%0A%0Afns%20%3D%20%5Bsquare,%20add_something%5D%0Aval%20%3D%204%0Afor%20f%20in%20fns%3A%0A%20%20%20%20val%20%3D%20f%28val%29%0Aprint%28val%29&codeDivHeight=400&codeDivWidth=350&curInstr=13&origin=opt-frontend.js&py=311"> </iframe></p>
 </li>
 <li>
 <p>When the function finishes, Python erases its stack frame and jumps backs to the instructions it was executing before the function call. If there isn’t a “before,” the program has finished.</p>
-<p>see it here</p>
 </li>
 </ol>
-<p><a href="https://cscircles.cemc.uwaterloo.ca/10-def/">https://cscircles.cemc.uwaterloo.ca/10-def/</a></p>
+<p>That&rsquo;s software in a nutshell!</p>
 <h3 id="notebooks">Notebooks</h3>
 <p>A notebook is another way to interact with Python (or R, or Mathematica, or others). It&rsquo;s a document with three types of cells: formatted text, cells for entering code, and cells that show the output of the code. They usually are web pages. There&rsquo;s a free site that offers notebooks called <a href="https://jupytereverywhere.org">Jupyter everywhere</a>. They run on your own comptuer in the browser, via a special version of python that&rsquo;s also running in your browser.</p>
+<h3 id="odds-and-ends">Odds and ends</h3>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Zero-based_numbering">Zero-based numbering</a> (Wikipedia): why lists start at 0.</li>
+<li><a href="https://wizardzines.com/comics/floating-point-weird/">Floating point is weird</a> (Julia Evans comic)</li>
+<li><a href="https://en.wikipedia.org/wiki/Hash_table">Hash table</a> (Wikipedia), <a href="https://en.wikipedia.org/wiki/Associative_array">Associative array</a> (Wikipedia).</li>
+<li><a href="https://technically.dev/universe/object-oriented">Object oriented</a> (Technically glossary): &ldquo;an object is a &rsquo;thing&rsquo; that can hold data and do stuff, and you can create many of.&rdquo;</li>
+</ul>
+<h3 id="importing-other-modules">Importing other modules</h3>
+<p>Try <a href="https://jupytereverywhere.org/lab/index.html?notebook=beloved-adaptable-stingray">this Jupyter Everywhere notebook</a> which contains the following code to obtain a weather report. It imports a few modules: <code>json</code>, <code>time</code>, and <code>urllib</code> to help it do its job.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> json
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> time
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> urllib
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">fetch</span>(url, timeout<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;Fetch a URL. Returns (status, headers, body-as-text).
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    A request has to say who&#39;s asking. Many servers reject the default
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Python user-agent outright; an honest one that names the project is both
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    politer and more reliable. Never lie about being a browser.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    request <span style="color:#f92672">=</span> urllib<span style="color:#f92672">.</span>request<span style="color:#f92672">.</span>Request(
+</span></span><span style="display:flex;"><span>        url,
+</span></span><span style="display:flex;"><span>        headers<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#34;User-Agent&#34;</span>: <span style="color:#e6db74">&#34;code2026-class-example/1.0 (teaching example)&#34;</span>},
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># timeout is not optional in real code. Without it, a server that never</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># answers hangs your program forever.</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">with</span> urllib<span style="color:#f92672">.</span>request<span style="color:#f92672">.</span>urlopen(request, timeout<span style="color:#f92672">=</span>timeout) <span style="color:#66d9ef">as</span> response:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> response<span style="color:#f92672">.</span>status, dict(response<span style="color:#f92672">.</span>headers), response<span style="color:#f92672">.</span>read()<span style="color:#f92672">.</span>decode(<span style="color:#e6db74">&#34;utf-8&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>weather_url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://api.open-meteo.com/v1/forecast?&#34;</span> <span style="color:#f92672">+</span> urllib<span style="color:#f92672">.</span>parse<span style="color:#f92672">.</span>urlencode({
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;latitude&#34;</span>: <span style="color:#ae81ff">40.7128</span>,      <span style="color:#75715e"># New York</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;longitude&#34;</span>: <span style="color:#f92672">-</span><span style="color:#ae81ff">74.0060</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;current&#34;</span>: <span style="color:#e6db74">&#34;temperature_2m,wind_speed_10m&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;temperature_unit&#34;</span>: <span style="color:#e6db74">&#34;fahrenheit&#34;</span>,
+</span></span><span style="display:flex;"><span>})
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Pause between calls to a different service. One request is fine;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># a loop making hundreds will get your address blocked.</span>
+</span></span><span style="display:flex;"><span>    time<span style="color:#f92672">.</span>sleep(<span style="color:#ae81ff">0.5</span>)
+</span></span><span style="display:flex;"><span>    _, _, weather_body <span style="color:#f92672">=</span> fetch(weather_url)
+</span></span><span style="display:flex;"><span>    weather <span style="color:#f92672">=</span> json<span style="color:#f92672">.</span>loads(weather_body)
+</span></span><span style="display:flex;"><span>    now <span style="color:#f92672">=</span> weather[<span style="color:#e6db74">&#34;current&#34;</span>]
+</span></span><span style="display:flex;"><span>    units <span style="color:#f92672">=</span> weather[<span style="color:#e6db74">&#34;current_units&#34;</span>]
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;  New York right now: </span><span style="color:#e6db74">{</span>now[<span style="color:#e6db74">&#39;temperature_2m&#39;</span>]<span style="color:#e6db74">}{</span>units[<span style="color:#e6db74">&#39;temperature_2m&#39;</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74">, &#34;</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;wind </span><span style="color:#e6db74">{</span>now[<span style="color:#e6db74">&#39;wind_speed_10m&#39;</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74"> </span><span style="color:#e6db74">{</span>units[<span style="color:#e6db74">&#39;wind_speed_10m&#39;</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;  (reading taken at </span><span style="color:#e6db74">{</span>now[<span style="color:#e6db74">&#39;time&#39;</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74">)&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">except</span> <span style="color:#a6e22e">Exception</span> <span style="color:#66d9ef">as</span> error:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;  weather lookup failed: </span><span style="color:#e6db74">{</span>type(error)<span style="color:#f92672">.</span>__name__<span style="color:#e6db74">}</span><span style="color:#e6db74">: </span><span style="color:#e6db74">{</span>error<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span></code></pre></div><p>Those modules come from somewhere. In this case the Jupyter Everywhere system has them instaleld because they are very common modules everyone needs. But if a given system doesn&rsquo;t have a module, you can install it with <code>pip install json</code> or similar. Here are some links that provide context on this infrastructure:</p>
+<ul>
+<li><a href="https://technically.dev/universe/package-registry">package registry</a> (Technically glossary): importing other libraries into python.</li>
+<li><a href="https://en.wikipedia.org/wiki/Python_Package_Index">Python Package Index</a> (Wikipedia): where <code>pip install</code> gets things.</li>
+</ul>
+<h3 id="downloading-a-web-page-and-extracting-information-from-it">Downloading a web page and extracting information from it</h3>
+<ul>
+<li>Technically glossary: <a href="https://technically.dev/universe/http">HTTP</a>, <a href="https://technically.dev/universe/scrape">scrape</a>, <a href="https://technically.dev/universe/ip-address">IP address</a>, <a href="https://technically.dev/universe/dns">DNS</a>.</li>
+</ul>
+<h3 id="games-and-game-state-trees">Games (and game state trees)</h3>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Game_tree">Game tree</a> (Wikipedia)</li>
+<li><a href="https://banay.me/post/tic-tac-toe-minimax/">Game tree for tic-tac-toe in python</a> including building an AI to play the game</li>
+</ul>
+<h3 id="security-and-privacy">Security and privacy</h3>
+<p>Here I only wanted to share some stories, which will help you know what to do by counterexample.</p>
+<ul>
+<li>Do not store secrets, i.e. your, the developer&rsquo;s, own passwords and access keys (or, even scarier, those of your employer).
+<ul>
+<li><strong>Uber, 2014.</strong> An engineer put an Amazon web services (AWS) access key into code he published in a public repository. Someone used it to download a file with 100,000+ drivers&rsquo; names and licence numbers. Sources: <a href="https://www.ftc.gov/system/files/documents/cases/152_3054_c-4662_uber_technologies_revised_complaint.pdf">FTC revised complaint (PDF)</a>, <a href="https://www.ftc.gov/system/files/documents/cases/1523054_uber_technologies_revised_analysis.pdf">FTC analysis of proposed order</a>.</li>
+<li><strong>A solo developer, 2015.</strong> Pushed AWS keys to GitHub, noticed, deleted them
+about five minutes later. A bot had already taken them and started ~140 EC2
+instances mining Bitcoin, and the dev was charged $2,375. Sources: <a href="https://www.theregister.com/2015/01/06/dev_blunder_shows_github_crawling_with_keyslurping_bots">The Register</a>, <a href="https://it.slashdot.org/story/15/01/02/2342228/bots-scanning-github-to-steal-amazon-ec2-keys">Slashdot discussion</a>.</li>
+</ul>
+</li>
+<li>Having users log in to your site is a big responsibility.
+<ul>
+<li><strong>Adobe, 2013: 153 million accounts.</strong> The passwords were <em>encrypted</em>, not
+hashed, which produces identical output for identical input. So every user with the password <code>123456</code> had the same ciphertext. The dump also included every user&rsquo;s plaintext password hint. Sources: <a href="https://www.schneier.com/blog/archives/2013/11/cryptographic_b.html">Schneier, &ldquo;Cryptographic Blunders Revealed by Adobe&rsquo;s Password Leak&rdquo;</a>, <a href="https://www.csoonline.com/article/540070/network-security-adobe-confirms-stolen-passwords-were-encrypted-not-hashed.html">CSO Online: encrypted, not hashed</a>, <a href="https://haveibeenpwned.com/Breach/Adobe">Have I Been Pwned record</a>, <a href="https://xkcd.com/1286/">XKCD 1286</a>.</li>
+<li><strong>RockYou, 2009: 32.6 million passwords in plain text.</strong> Breached by SQL
+injection (explained in the comic below). Sources: <a href="https://techcrunch.com/2009/12/14/rockyou-hacked/">TechCrunch (2009)</a>, <a href="https://www.helpnetsecurity.com/2009/12/14/serious-sql-flaw-could-have-compromised-millions-of-rockyoucom-users/">Help Net Security, on the SQL injection</a>. <br/> <a href="https://xkcd.com/327/"><img src="https://imgs.xkcd.com/comics/exploits_of_a_mom.png" width="500" /></a></li>
+<li><strong>Facebook 2019, and Twitter and GitHub in 2018.</strong> Passwords written to
+internal log files in plain text before the hashing step. Three of the largest engineering organisations on the planet. Sources: <a href="https://krebsonsecurity.com/2019/03/facebook-stored-hundreds-of-millions-of-user-passwords-in-plain-text-for-years/">Krebs on Security</a>, <a href="https://techcrunch.com/2019/03/21/facebook-plaintext-passwords/">TechCrunch</a>, <a href="https://www.bleepingcomputer.com/news/security/twitter-admits-recording-plaintext-passwords-in-internal-logs-just-like-github/">BleepingComputer, on Twitter and GitHub</a>.</li>
+</ul>
+</li>
+<li>Storing images is a big responsibility.
+<ul>
+<li><strong>Tea, July 2025: 72,000 images including 13,000 selfies and photo IDs.</strong> An
+app for women&rsquo;s dating safety required a selfie plus a government ID. The images
+were stored in a cloud storage bucket with no authentication; anyone with the URL could list and download everything. Sources: <a href="https://www.americanbar.org/groups/intellectual_property_law/resources/newsletters/cloud-misconfiguration-private-right-of-action-tea-app-data-breach/">American Bar Association technical and legal analysis</a>, <a href="https://www.engadget.com/cybersecurity/tea-app-suffers-breach-exposing-thousands-of-user-images-190731414.html">Engadget</a>.</li>
+</ul>
+</li>
+<li>Using third party libraries in your web app is a commitment to applying vulnerability patches forever.
+<ul>
+<li><strong>Equifax, 2017: 147.9 million people.</strong> An Apache
+Struts security patch was published on March 7. An internal notice went out on March 9. A
+scan on March 15 failed to find the affected system. Attackers got in in May and
+were not noticed until July 29. The fix was only to run <code>pip install pip-audit &amp;&amp; pip-audit</code>. Sources: <a href="https://www.gao.gov/assets/gao-18-559.pdf">GAO-18-559 (PDF)</a>, <a href="https://oversight.house.gov/wp-content/uploads/2018/12/Equifax-Report.pdf">House Oversight report (PDF)</a>.</li>
+</ul>
+</li>
+</ul>
 <hr />
 <h2 id="software-and-the-prompting-of">Software and the prompting of</h2>
 <h3 id="front-end-back-end">Front end, back end</h3>
@@ -731,46 +822,6 @@
 <li><a href="https://docs.pytest.org/en/stable/getting-started.html">pytest: Get Started</a>: the 4-line first test.</li>
 <li><a href="https://en.wikipedia.org/wiki/Software_testing">Software testing</a>, <a href="https://en.wikipedia.org/wiki/Unit_testing">Unit testing</a>, <a href="https://en.wikipedia.org/wiki/Software_bug">Software bug</a> (Wikipedia): references.</li>
 <li><a href="https://en.wikipedia.org/wiki/Rubber_duck_debugging">Rubber duck debugging</a> (Wikipedia)</li>
-</ul>
-<h3 id="functions-variables">Functions, variables</h3>
-<h3 id="dictionaries-objects-libraries">Dictionaries, objects, libraries</h3>
-<h3 id="files-network-scraping">Files, network, scraping</h3>
-<h3 id="storage-games-and-game-state-trees">Storage, games (and game state trees)</h3>
-<h3 id="security-and-privacy">Security and privacy</h3>
-<ul>
-<li>Do not store secrets, i.e. your, the developer&rsquo;s, own passwords and access keys (or, even scarier, those of your employer).
-<ul>
-<li><strong>Uber, 2014.</strong> An engineer put an Amazon web services (AWS) access key into code he published in a public repository. Someone used it to download a file with 100,000+ drivers&rsquo; names and licence numbers. Sources: <a href="https://www.ftc.gov/system/files/documents/cases/152_3054_c-4662_uber_technologies_revised_complaint.pdf">FTC revised complaint (PDF)</a>, <a href="https://www.ftc.gov/system/files/documents/cases/1523054_uber_technologies_revised_analysis.pdf">FTC analysis of proposed order</a>.</li>
-<li><strong>A solo developer, 2015.</strong> Pushed AWS keys to GitHub, noticed, deleted them
-about five minutes later. A bot had already taken them and started ~140 EC2
-instances mining Bitcoin, and the dev was charged $2,375. Sources: <a href="https://www.theregister.com/2015/01/06/dev_blunder_shows_github_crawling_with_keyslurping_bots">The Register</a>, <a href="https://it.slashdot.org/story/15/01/02/2342228/bots-scanning-github-to-steal-amazon-ec2-keys">Slashdot discussion</a>.</li>
-</ul>
-</li>
-<li>Having users log in to your site is a big responsibility.
-<ul>
-<li><strong>Adobe, 2013: 153 million accounts.</strong> The passwords were <em>encrypted</em>, not
-hashed, which produces identical output for identical input. So every user with the password <code>123456</code> had the same ciphertext. The dump also included every user&rsquo;s plaintext password hint. Sources: <a href="https://www.schneier.com/blog/archives/2013/11/cryptographic_b.html">Schneier, &ldquo;Cryptographic Blunders Revealed by Adobe&rsquo;s Password Leak&rdquo;</a>, <a href="https://www.csoonline.com/article/540070/network-security-adobe-confirms-stolen-passwords-were-encrypted-not-hashed.html">CSO Online: encrypted, not hashed</a>, <a href="https://haveibeenpwned.com/Breach/Adobe">Have I Been Pwned record</a>, <a href="https://xkcd.com/1286/">XKCD 1286</a>.</li>
-<li><strong>RockYou, 2009: 32.6 million passwords in plain text.</strong> Breached by SQL
-injection (explained in the comic below). Sources: <a href="https://techcrunch.com/2009/12/14/rockyou-hacked/">TechCrunch (2009)</a>, <a href="https://www.helpnetsecurity.com/2009/12/14/serious-sql-flaw-could-have-compromised-millions-of-rockyoucom-users/">Help Net Security, on the SQL injection</a>. <br/> <a href="https://xkcd.com/327/"><img src="https://imgs.xkcd.com/comics/exploits_of_a_mom.png" width="500" /></a></li>
-<li><strong>Facebook 2019, and Twitter and GitHub in 2018.</strong> Passwords written to
-internal log files in plain text before the hashing step. Three of the largest engineering organisations on the planet. Sources: <a href="https://krebsonsecurity.com/2019/03/facebook-stored-hundreds-of-millions-of-user-passwords-in-plain-text-for-years/">Krebs on Security</a>, <a href="https://techcrunch.com/2019/03/21/facebook-plaintext-passwords/">TechCrunch</a>, <a href="https://www.bleepingcomputer.com/news/security/twitter-admits-recording-plaintext-passwords-in-internal-logs-just-like-github/">BleepingComputer, on Twitter and GitHub</a>.</li>
-</ul>
-</li>
-<li>Storing images is a big responsibility.
-<ul>
-<li><strong>Tea, July 2025: 72,000 images including 13,000 selfies and photo IDs.</strong> An
-app for women&rsquo;s dating safety required a selfie plus a government ID. The images
-were stored in a cloud storage bucket with no authentication; anyone with the URL could list and download everything. Sources: <a href="https://www.americanbar.org/groups/intellectual_property_law/resources/newsletters/cloud-misconfiguration-private-right-of-action-tea-app-data-breach/">American Bar Association technical and legal analysis</a>, <a href="https://www.engadget.com/cybersecurity/tea-app-suffers-breach-exposing-thousands-of-user-images-190731414.html">Engadget</a>.</li>
-</ul>
-</li>
-<li>Using third party libraries in your web app is a commitment to applying vulnerability patches forever.
-<ul>
-<li><strong>Equifax, 2017: 147.9 million people.</strong> An Apache
-Struts security patch was published on March 7. An internal notice went out on March 9. A
-scan on March 15 failed to find the affected system. Attackers got in in May and
-were not noticed until July 29. The fix was only to run <code>pip install pip-audit &amp;&amp; pip-audit</code>. Sources: <a href="https://www.gao.gov/assets/gao-18-559.pdf">GAO-18-559 (PDF)</a>, <a href="https://oversight.house.gov/wp-content/uploads/2018/12/Equifax-Report.pdf">House Oversight report (PDF)</a>.</li>
-</ul>
-</li>
 </ul>
 <h1 id="backup-notes">Backup notes</h1>
 <hr />
