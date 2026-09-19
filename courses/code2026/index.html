@@ -559,7 +559,20 @@
   <div class="article-container">
 
     <div class="article-style" itemprop="articleBody">
-      <h2>Table of Contents</h2>
+      <p>This is a resource for someone wanting to learn how to code (with the help of AI) from scratch. It has three parts, which you are invited to jump between in any order.</p>
+<ol>
+<li>
+<p>To understand code, you need to understand a little about how computers and the internet work. This extra material is not usually included in coding classes, but it&rsquo;s the wax-on-wax-off portion that will make you the Karate Kid.</p>
+</li>
+<li>
+<p>You need to learn a specific language, in this case python. You&rsquo;ll need to look at the code the agent writes for you to some degree, and there&rsquo;s no getting around that. So you still need to &ldquo;learn to code&rdquo; the old-fashioned way, as far as we can tell. Maybe with more reading than writing. The takeaway is not just python, but the abstract <strong>notional machine</strong> that python targets. It&rsquo;s a model of how computer programs execute, and it carries over to other programming languages.</p>
+</li>
+<li>
+<p>You need to know what to ask the agent for. You need to know what kinds of software there are, such as web sites and apps. You need to look more closely at the ones you use every day and see what all their ingredients are, what screens they have. You need to know when you need a database. You need to know about security and privacy. You need to know about testing (QA, quality assurance). You need to know about app stores.</p>
+</li>
+</ol>
+<p>Then you&rsquo;ll be an expert!</p>
+<h2>Table of Contents</h2>
 <nav id="TableOfContents">
   <ul>
     <li><a href="#the-computer">The Computer</a>
@@ -574,7 +587,7 @@
       <ul>
         <li><a href="#the-notional-machine">The notional machine</a></li>
         <li><a href="#notebooks">Notebooks</a></li>
-        <li><a href="#odds-and-ends">Odds and ends</a></li>
+        <li><a href="#data-types">Data types</a></li>
         <li><a href="#importing-other-modules-and-connecting-to-the-internet">Importing other modules, and connecting to the internet</a></li>
         <li><a href="#games-and-game-state-trees">Games (and game state trees)</a></li>
         <li><a href="#security-and-privacy">Security and privacy</a></li>
@@ -597,19 +610,6 @@
   </ul>
 </nav>
 
-<p>This is a resource for someone wanting to learn how to code (with the help of AI) from scratch. It has three parts, which you are invited to jump between in any order.</p>
-<ol>
-<li>
-<p>To understand code, you need to understand a little about how computers and the internet work. This extra material is not usually included in coding classes, but it&rsquo;s the wax-on-wax-off portion that will make you the Karate Kid.</p>
-</li>
-<li>
-<p>You need to learn a specific language, in this case python. You&rsquo;ll need to look at the code the agent writes for you to some degree, and there&rsquo;s no getting around that. So you still need to &ldquo;learn to code&rdquo; the old-fashioned way, as far as we can tell. Maybe with more reading than writing. The takeaway is not just python, but the abstract <strong>notional machine</strong> that python targets. It&rsquo;s a model of how computer programs execute, and it carries over to other programming languages.</p>
-</li>
-<li>
-<p>You need to know what to ask the agent for. You need to know what kinds of software there are, such as web sites and apps. You need to look more closely at the ones you use every day and see what all their ingredients are, what screens they have. You need to know when you need a database. You need to know about security and privacy. You need to know about testing (QA, quality assurance). You need to know about app stores.</p>
-</li>
-</ol>
-<p>Then you&rsquo;ll be an expert!</p>
 <h2 id="the-computer">The Computer</h2>
 <h3 id="addition-circuits">Addition circuits</h3>
 <p>Computers add numbers together by putting two simple electrical circuits together. It&rsquo;s a trick, to cause hardware to do something we can call &ldquo;adding numbers.&rdquo; I hope this can demystify a lot.</p>
@@ -627,6 +627,7 @@
 <li>Ben Eater: <a href="https://www.youtube.com/watch?v=sTu3LwpF6XI">Making logic gates from transistors</a> (13 min), <a href="https://eater.net/8bit/alu">the ALU</a> (the &ldquo;Binary addition&rdquo; video, 14 min), using breadboards.</li>
 </ul>
 <h3 id="computer-organization">Computer organization</h3>
+<p>Curated resources that explain more about how computers work, building up hierarchically from the individual gates.</p>
 <ul>
 <li>Crash Course Computer Science <a href="https://www.youtube.com/watch?v=fpnE6UAfbtU">#6 Registers and RAM</a>, <a href="https://www.youtube.com/watch?v=FZGugFqdr60">#7 The CPU</a>, <a href="https://www.youtube.com/watch?v=zltgXvg6r3k">#8 Instructions &amp; Programs</a>: 11 min each; fetch-decode-execute on screen. (#5, the ALU, is under Class 1.)</li>
 <li>Technically glossary: <a href="https://technically.dev/universe/cpu-processor">CPU</a>, <a href="https://technically.dev/universe/ram-memory">RAM</a>, <a href="https://technically.dev/universe/disk-ssd-hdd">disk/SSD</a>, <a href="https://technically.dev/universe/binary">binary</a>, <a href="https://technically.dev/universe/operating-system">operating system</a>, <a href="https://technically.dev/universe/kernel">kernel</a>.</li>
@@ -638,6 +639,7 @@
 <li><a href="https://github.com/alex/what-happens-when">What happens when you type google.com</a>: the exhaustive answer, keypress to pixels.</li>
 </ul>
 <h3 id="the-apps-that-run-our-code">The apps that run our code</h3>
+<p>Code is either compiled into an executable, or interpreted live within a host executable (the latter being what python does). These compilers/interpreters are the apps that run our apps. They can grow very large and become IDEs (integrated development environments) if they also take on additional tasks like debugging, designing user interfaces, or managing multiple target platforms.</p>
 <ul>
 <li><a href="https://github.com/python/cpython">The github repository of python itself</a></li>
 <li><a href="https://en.wikipedia.org/wiki/CPython">The python Wikipedia page</a></li>
@@ -650,10 +652,12 @@
 <li><a href="https://swcarpentry.github.io/shell-novice/">The Unix Shell</a> (Software Carpentry), episodes 1-2: what a file, directory, path, and command are.</li>
 </ul>
 <h3 id="programming-languages-and-what-they-have-in-common">Programming languages and what they have in common</h3>
+<p>Languages themselves are objects of study. Some of them make it harder to write bugs, believe it or not! Python, sadly, is not one of those.</p>
 <ul>
 <li><a href="https://craftinginterpreters.com/a-map-of-the-territory.html">A Map of the Territory</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Abstract_syntax_tree">Abstract syntax tree</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Type_system">Type system</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Functional_programming">Functional programming</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Turing_completeness">Turing completeness</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Call_stack">Call stack</a> (Wikipedia)</li>
 <li>The dichotomy: <a href="https://en.wikipedia.org/wiki/Syntax_%28programming_languages%29">Syntax (programming languages)</a>, <a href="https://en.wikipedia.org/wiki/Semantics_%28computer_science%29">Semantics (computer science)</a></li>
@@ -702,10 +706,10 @@
 <p>When the function finishes, Python erases its stack frame and jumps backs to the instructions it was executing before the function call. If there isn’t a “before,” the program has finished.</p>
 </li>
 </ol>
-<p>That&rsquo;s software in a nutshell!</p>
+<p>That&rsquo;s software in a nutshell! <a href="https://notionalmachines.github.io/notional-machines.html">Here are some analogies</a> about bits of the notional machine.</p>
 <h3 id="notebooks">Notebooks</h3>
 <p>A notebook is another way to interact with Python (or R, or Mathematica, or others). It&rsquo;s a document with three types of cells: formatted text, cells for entering code, and cells that show the output of the code. They usually are web pages. There&rsquo;s a free site that offers notebooks called <a href="https://jupytereverywhere.org">Jupyter everywhere</a>. They run on your own comptuer in the browser, via a special version of python that&rsquo;s also running in your browser.</p>
-<h3 id="odds-and-ends">Odds and ends</h3>
+<h3 id="data-types">Data types</h3>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/Zero-based_numbering">Zero-based numbering</a> (Wikipedia): why lists start at 0.</li>
 <li><a href="https://wizardzines.com/comics/floating-point-weird/">Floating point is weird</a> (Julia Evans comic)</li>
@@ -760,9 +764,11 @@
 <li>Technically glossary: <a href="https://technically.dev/universe/http">HTTP</a>, <a href="https://technically.dev/universe/scrape">scrape</a>, <a href="https://technically.dev/universe/ip-address">IP address</a>, <a href="https://technically.dev/universe/dns">DNS</a>.</li>
 </ul>
 <h3 id="games-and-game-state-trees">Games (and game state trees)</h3>
+<p>In case you want to think about writing games or AIs that play games.</p>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/Game_tree">Game tree</a> (Wikipedia)</li>
 <li><a href="https://banay.me/post/tic-tac-toe-minimax/">Game tree for tic-tac-toe in python</a> including building an AI to play the game</li>
+<li><a href="https://www.norvig.com/sudoku.html">Solving any Sudoku puzzle with Python</a></li>
 </ul>
 <h3 id="security-and-privacy">Security and privacy</h3>
 <p>Here I only wanted to share some stories, which will help you know what to do by counterexample.</p>
@@ -804,6 +810,7 @@ were not noticed until July 29. The fix was only to run <code>pip install pip-au
 <hr />
 <h2 id="software-and-the-prompting-of">Software and the prompting of</h2>
 <h3 id="front-end-back-end">Front end, back end</h3>
+<p>The basic dichotomies and building blocks, mostly written specifically for people coding with AI.</p>
 <ul>
 <li><a href="https://read.technically.dev/p/software-eng-vibe-coders-frontends-backends">Technically: Frontends + Backends</a>: restaurant analogy (dining room = frontend, kitchen =</li>
 <li>Technically glossary: <a href="https://technically.dev/universe/frontend">frontend</a>, <a href="https://technically.dev/universe/backend">backend</a>, <a href="https://technically.dev/universe/database">database</a>, <a href="https://technically.dev/universe/api">API</a>, <a href="https://technically.dev/universe/server">server</a>, <a href="https://technically.dev/universe/client">client</a></li>
@@ -812,11 +819,13 @@ were not noticed until July 29. The fix was only to run <code>pip install pip-au
 <li><a href="https://aws.amazon.com/compare/the-difference-between-web-apps-native-apps-and-hybrid-apps/">Web apps vs native apps vs hybrid apps</a> (AWS): basic lingo.</li>
 </ul>
 <h3 id="information-architecture-how-to-present-information">Information architecture: how to present information</h3>
+<p>Look at the world of software around you and how it&rsquo;s organized. Then you can prompt for those good patterns.</p>
 <ul>
 <li><a href="https://mobbin.com/apps/flighty-ios-e6531374-23b5-4b62-9e1c-5ec41d351780/812571a1-c341-471e-9dc4-26b0fa92720a/screens">Mobbin flow</a>: see many, many screens from apps. Be an observer of apps and sites you like, and bring that organization to your own.</li>
 <li><a href="https://abbycovert.com/make-sense/">How to Make Sense of Any Mess</a> (Abby Covert; full text free): information architecture: &ldquo;the way we arrange the parts of something to make it understandable.&rdquo;</li>
 </ul>
 <h3 id="databases">Databases</h3>
+<p>If you need to store data, you probably need a database.</p>
 <ul>
 <li><a href="https://read.technically.dev/p/software-eng-for-vibe-coders-databases">Software Eng for Vibe Coders: Databases + Storage</a> (Technically): part 2 of the series you already link. &ldquo;Like a spreadsheet, except with more rules.&rdquo; Free.</li>
 <li><a href="https://technically.dev/posts/the-beginners-guide-to-databases">The Beginner&rsquo;s Guide to Databases</a> (Technically): baking-ingredients metaphor.</li>
@@ -826,6 +835,7 @@ were not noticed until July 29. The fix was only to run <code>pip install pip-au
 <li>Automate the Boring Stuff, 3rd ed.: <a href="https://automatetheboringstuff.com/3e/chapter16.html">SQLite Databases</a>.</li>
 </ul>
 <h3 id="git">git</h3>
+<p>Software is stored in git because it lets you go backwards and forwards in the change history, with metadata about who changed what, and with the ability to mark certain states with release tags. It also lets people go off on a new branch while others fix bugs on the old branch. It fits the software engineering discipline.</p>
 <ul>
 <li><a href="https://technically.dev/posts/whats-version-control-and-github">What&rsquo;s version control and GitHub?</a> (Technically): <code>presentation_final_final_2.pptx</code> analogy.</li>
 <li>Glossary: <a href="https://technically.dev/universe/version-control">version control</a>, <a href="https://technically.dev/universe/branch">branch</a>, <a href="https://technically.dev/universe/pull-request">pull request</a>, <a href="https://technically.dev/universe/merging">merging</a>.</li>
@@ -838,9 +848,9 @@ were not noticed until July 29. The fix was only to run <code>pip install pip-au
 </ul>
 <h3 id="software-engineering">Software engineering</h3>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Margaret_Hamilton_%28software_engineer%29">Margaret Hamilton</a> <img src="/img/margaret_hamilton.jpg" alt=""></li>
+<li><a href="https://en.wikipedia.org/wiki/Margaret_Hamilton_%28software_engineer%29">Coiner of the term, Margaret Hamilton</a> <img src="/img/margaret_hamilton.jpg" alt=""></li>
 </ul>
-<p>Specs</p>
+<p><strong>Specs</strong></p>
 <p>It remains to be seen if we need to retain this paradigm exactly, but everything here needs to reappear somewhere in the prompt-based development cycle, even if it&rsquo;s in your head. Learn from your elders!</p>
 <ul>
 <li>Joel Spolsky, Painless Functional Specifications: <a href="https://www.joelonsoftware.com/2000/10/02/painless-functional-specifications-part-1-why-bother/">Part 1, Why Bother?</a>, <a href="https://www.joelonsoftware.com/2000/10/03/painless-functional-specifications-part-2-whats-a-spec/">Part 2, What&rsquo;s a Spec?</a>: part 2 links a sample spec (WhatTimeIsIt).</li>
@@ -849,6 +859,7 @@ were not noticed until July 29. The fix was only to run <code>pip install pip-au
 <li><a href="https://htdp.org/">How to Design Programs</a>: the design recipe: problem, signature, examples, body, tests.</li>
 </ul>
 <h3 id="building-apps">Building apps</h3>
+<p>Coding for devices has its own languages and UI idioms that are designed more centrally by one company, usually. And there are extra steps to build apps for an app store such as Apple&rsquo;s.</p>
 <ul>
 <li><a href="https://developer.apple.com/ios/get-started/">Apple&rsquo;s iOS Pathway</a></li>
 <li><a href="https://developer.apple.com/pathways/developer/">Apple developer Pathway</a>: steps to ship an app</li>
@@ -858,16 +869,19 @@ were not noticed until July 29. The fix was only to run <code>pip install pip-au
 Unwrap)</li>
 </ul>
 <h3 id="building-web-sites">Building web sites</h3>
+<p>Web sites can be built in many different ways, though there&rsquo;s usually a mainstream way to do it at any given moment. If you launch something publically, it needs hosting and databases and security.</p>
 <ul>
 <li><a href="https://www.reddit.com/r/webdevelopment/comments/1smfe68/whats_your_preferred_way_of_building_websites_for/">Reddit thread about what to use in 2026</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Next.js">Next.js on Wikipedia</a>: understanding what this entry is saying about rendering on the server versus in the browser is an excellent goal.</li>
 <li><a href="https://www.reddit.com/r/nextjs/comments/1mgo7on/built_an_internal_crm_with_nextjs_for_my_company/">Reddit thread about building a custom CRM with a floating chat window</a>: I just want to share how people talk about these things.</li>
 </ul>
 <h3 id="building-terminal-programs">Building terminal programs</h3>
+<p>Or you can build a little text-based app, old-school.</p>
 <ul>
 <li><a href="https://bfnightly.bracketproductions.com/rustbook/">Roguelike dungeon-crawl tutorial in Rust</a></li>
 </ul>
 <h3 id="ai-for-coding">AI for coding</h3>
+<p>You will help write the book on this aspect. For now there are some good early discoveries about how to do this well.</p>
 <ul>
 <li><a href="https://simonwillison.net/2025/Mar/19/vibe-coding/">Not all AI-assisted programming is vibe coding</a> (Simon Willison): low stakes only, watch secrets and data privacy, set billing limits, get a review.</li>
 <li><a href="https://www.manning.com/books/learn-ai-assisted-python-programming-second-edition">Learn AI-Assisted Python Programming, 2nd ed.</a></li>
