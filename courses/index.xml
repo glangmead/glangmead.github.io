@@ -18,7 +18,56 @@
       <link>https://greg.langmead.info/courses/code2026/</link>
       <pubDate>Wed, 19 Aug 2026 08:36:26 -0400</pubDate>
       <guid>https://greg.langmead.info/courses/code2026/</guid>
-      <description>&lt;p&gt;This is a resource for someone wanting to learn how to code (with the help of AI) from scratch. It has three parts, which aren&amp;rsquo;t in any order.&lt;/p&gt;
+      <description>&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;nav id=&#34;TableOfContents&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#the-computer&#34;&gt;The Computer&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#addition-circuits&#34;&gt;Addition circuits&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#computer-organization&#34;&gt;Computer organization&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#the-apps-that-run-our-code&#34;&gt;The apps that run our code&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#the-notional-machine&#34;&gt;The notional machine&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#theory-of-programming-languages&#34;&gt;Theory of programming languages&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#python&#34;&gt;Python&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#the-notional-machine-1&#34;&gt;The notional machine&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#notebooks&#34;&gt;Notebooks&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#odds-and-ends&#34;&gt;Odds and ends&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#importing-other-modules&#34;&gt;Importing other modules&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#downloading-a-web-page-and-extracting-information-from-it&#34;&gt;Downloading a web page and extracting information from it&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#games-and-game-state-trees&#34;&gt;Games (and game state trees)&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#security-and-privacy&#34;&gt;Security and privacy&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#software-and-the-prompting-of&#34;&gt;Software and the prompting of&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#front-end-back-end&#34;&gt;Front end, back end&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#information-architecture-how-to-present-information&#34;&gt;Information architecture: how to present information&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#databases&#34;&gt;Databases&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#git&#34;&gt;git&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#specs&#34;&gt;Specs&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#qa&#34;&gt;QA&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#coding&#34;&gt;Coding&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#overviews&#34;&gt;Overviews&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#building-apps&#34;&gt;Building apps&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#building-web-sites&#34;&gt;Building web sites&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#building-terminal-programs&#34;&gt;Building terminal programs&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#ai-for-coding&#34;&gt;AI for coding&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#pedagogy&#34;&gt;Pedagogy&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;p&gt;This is a resource for someone wanting to learn how to code (with the help of AI) from scratch. It has three parts, which aren&amp;rsquo;t in any order.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;To understand code, you need to understand a little about how computers work, and about the abstract &lt;strong&gt;notional machine&lt;/strong&gt; that the programming language targets. It&amp;rsquo;s a model of how computer programs execute, and it&amp;rsquo;s what you&amp;rsquo;re talking to when you code. This extra material is not usually included in coding classes, but it&amp;rsquo;s the wax-on-wax-off portion that will make you the Karate Kid.&lt;/p&gt;
