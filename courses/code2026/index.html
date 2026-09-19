@@ -623,26 +623,64 @@
 </ul>
 <hr />
 <h2 id="python">Python</h2>
-<h3 id="arithmetic-loops-lists">Arithmetic, loops, lists</h3>
-<ul>
-<li>kinds of values: boolean, integer, floating point</li>
-<li>add, subtract, multiply, divide, modulus (remainder)</li>
-<li>for loop</li>
-<li>lists, concatenation, appending, indexing, changing, length, membership test, looping, sorting</li>
-</ul>
-<p><strong>Links</strong></p>
-<ul>
-<li><a href="https://pythontutor.com/member.html">Python tutor visualizer</a></li>
-<li><a href="https://ehmatthes.github.io/pcc_3e/cheat_sheets/">Python cheat sheets</a></li>
-<li><a href="https://jupytereverywhere.org">Jupyter everywhere</a></li>
-<li>Practical Python Programming: <a href="https://dabeaz-course.github.io/practical-python/Notes/01_Introduction/03_Numbers.html">numbers</a>, <a href="https://dabeaz-course.github.io/practical-python/Notes/01_Introduction/05_Lists.html">lists</a></li>
-<li><a href="https://docs.python.org/3/tutorial/floatingpoint.html">A little about why</a> floating point numbers behave unexpectedly</li>
-</ul>
+<p><a href="https://cscircles.cemc.uwaterloo.ca">Computer Science Circles</a>: What you want to do is work through this site. They cover python in just the right way: with in-page visualizations of what the notional machine is doing.</p>
+<p>I offer some supplementary material to look at alongside.</p>
+<h3 id="the-notional-machine-1">The notional machine</h3>
+<p>What you want to come away understanding is the following, which will allow you to understand every single programming language at once.</p>
+<ol>
+<li>
+<p>Running programs live in memory, which is divided between a <strong>call stack</strong> (the &ldquo;frames&rdquo; in the CS Circles visualizer) and a <strong>heap</strong> (called &ldquo;objects&rdquo; in the CS Circles visualizer).</p>
+<p>See this for example in CS Circles section 10 <iframe width='500' height='480' frameborder='0' scrolling='no' src='https://cscircles.cemc.uwaterloo.ca/wp-content/plugins/pybox/OnlinePythonTutor3-cemc/iframe-embed.html#code=def+square%28x%29%3A+++++%23+function+definition%0A++++return+x%2Ax+++++%23+body+only+has+one+line%0A%0A%23+use+the+function%2C+now+that+it%27s+defined%0Aprint%28square%2810%29%29++++++++%0Aprint%28square%28square%282%29%29%29&cumulative=false&heapPrimitives=false&drawParentPointers=false&textReferences=false&showOnlyOutputs=false&py=3&curInstr=0&resizeContainer=true&highlightLines&width=460&rightStdout=1'></iframe></p>
+</li>
+<li>
+<p>When code is executed, Python steps through the instructions, doing what each one tells it to in turn.</p>
+<p>see it here</p>
+</li>
+<li>
+<p>Every piece of data is stored in a two-part structure. The first part says what <strong>type</strong> the data is, and the second part is the actual <strong>value</strong>.</p>
+<p>see it here</p>
+</li>
+<li>
+<p>Memory for some types is allocated in the stack, and for others inside the heap. This shows up in the visualizer.</p>
+<p>see it here</p>
+</li>
+<li>
+<p>Lists, dictionaries and other collections store references to other data rather than storing those values directly. They can be modified after they are created, i.e. a list can be extended or new values can be added to a set.</p>
+<p>see it here</p>
+</li>
+<li>
+<p>When code is loaded into memory, Python converts it to a sequence of instructions that are stored like any other data. This is why it’s possible to assign functions to variables and pass them as parameters.</p>
+<p>see it here</p>
+</li>
+<li>
+<p>Some instructions make Python read data, do calculations, and create new data. Other instructions control what instructions Python executes, which is how loops and conditionals work. Yet another instruction tells Python to call a function.</p>
+<p>see it here</p>
+</li>
+<li>
+<p>When a function is called, Python pushes a new stack frame onto the call stack.</p>
+<p>see it here</p>
+</li>
+<li>
+<p>Each stack frame stores variables’ names and references to data. Function parameters are just more variables in the frame.</p>
+<p>see it here</p>
+</li>
+<li>
+<p>When a variable is used, Python looks for it in the top stack frame. If it isn’t there, it looks in the bottom (global) frame.</p>
+<p>see it here</p>
+</li>
+<li>
+<p>When the function finishes, Python erases its stack frame and jumps backs to the instructions it was executing before the function call. If there isn’t a “before,” the program has finished.</p>
+<p>see it here</p>
+</li>
+</ol>
+<p><a href="https://cscircles.cemc.uwaterloo.ca/10-def/">https://cscircles.cemc.uwaterloo.ca/10-def/</a></p>
+<h3 id="notebooks">Notebooks</h3>
+<p>A notebook is another way to interact with Python (or R, or Mathematica, or others). It&rsquo;s a document with three types of cells: formatted text, cells for entering code, and cells that show the output of the code. They usually are web pages. There&rsquo;s a free site that offers notebooks called <a href="https://jupytereverywhere.org">Jupyter everywhere</a>. They run on your own comptuer in the browser, via a special version of python that&rsquo;s also running in your browser.</p>
 <hr />
 <h2 id="software-and-the-prompting-of">Software and the prompting of</h2>
 <h3 id="front-end-back-end">Front end, back end</h3>
 <ul>
-<li><a href="https://read.technically.dev/p/software-eng-vibe-coders-frontends-backends">Frontends + Backends</a>  restaurant analogy (dining room = frontend, kitchen =</li>
+<li><a href="https://read.technically.dev/p/software-eng-vibe-coders-frontends-backends">Technically: Frontends + Backends</a>: restaurant analogy (dining room = frontend, kitchen =</li>
 <li>Technically glossary: <a href="https://technically.dev/universe/frontend">frontend</a>, <a href="https://technically.dev/universe/backend">backend</a>, <a href="https://technically.dev/universe/database">database</a>, <a href="https://technically.dev/universe/api">API</a>, <a href="https://technically.dev/universe/server">server</a>, <a href="https://technically.dev/universe/client">client</a></li>
 <li><a href="https://read.technically.dev/p/whats-an-api">What&rsquo;s an API?</a> &ldquo;like drive-thru windows, but in code.&rdquo;</li>
 <li><a href="https://en.wikipedia.org/wiki/Frontend_and_backend">Front end and back end on Wikipedia</a></li>
@@ -650,7 +688,7 @@
 </ul>
 <h3 id="information-architecture-how-to-present-information">Information architecture: how to present information</h3>
 <ul>
-<li><a href="https://mobbin.com/apps/flighty-ios-e6531374-23b5-4b62-9e1c-5ec41d351780/812571a1-c341-471e-9dc4-26b0fa92720a/screens">Mobbin flow</a>: see many, many screens from apps.</li>
+<li><a href="https://mobbin.com/apps/flighty-ios-e6531374-23b5-4b62-9e1c-5ec41d351780/812571a1-c341-471e-9dc4-26b0fa92720a/screens">Mobbin flow</a>: see many, many screens from apps. Be an observer of apps and sites you like, and bring that organization to your own.</li>
 <li><a href="https://abbycovert.com/make-sense/">How to Make Sense of Any Mess</a> (Abby Covert; full text free): information architecture: &ldquo;the way we arrange the parts of something to make it understandable.&rdquo;</li>
 </ul>
 <h3 id="databases">Databases</h3>
