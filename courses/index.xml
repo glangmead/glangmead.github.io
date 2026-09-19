@@ -106,7 +106,7 @@
 &lt;li&gt;&lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/What_is_JavaScript&#34;&gt;What is JavaScript?&lt;/a&gt; (MDN): the browser is the runtime.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Integrated_development_environment&#34;&gt;Integrated development environment&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Shell_%28computing%29&#34;&gt;Shell (computing)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Xcode&#34;&gt;Xcode&lt;/a&gt; (Wikipedia): references.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Xcode&#34;&gt;Xcode&lt;/a&gt; (Wikipedia)&lt;/li&gt;
 &lt;li&gt;Technically glossary: &lt;a href=&#34;https://technically.dev/universe/runtime&#34;&gt;runtime&lt;/a&gt;, &lt;a href=&#34;https://technically.dev/universe/terminal&#34;&gt;terminal&lt;/a&gt;, &lt;a href=&#34;https://technically.dev/universe/macos-windows-linux&#34;&gt;macOS/Windows/Linux&lt;/a&gt;, &lt;a href=&#34;https://technically.dev/universe/ios-android&#34;&gt;iOS/Android&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://swcarpentry.github.io/shell-novice/&#34;&gt;The Unix Shell&lt;/a&gt; (Software Carpentry), episodes 1-2: what a file, directory, path, and command are.&lt;/li&gt;
 &lt;/ul&gt;
@@ -314,7 +314,7 @@ were not noticed until July 29. The fix was only to run &lt;code&gt;pip install 
 &lt;ul&gt;
 &lt;li&gt;Joel Spolsky, Painless Functional Specifications: &lt;a href=&#34;https://www.joelonsoftware.com/2000/10/02/painless-functional-specifications-part-1-why-bother/&#34;&gt;Part 1, Why Bother?&lt;/a&gt;, &lt;a href=&#34;https://www.joelonsoftware.com/2000/10/03/painless-functional-specifications-part-2-whats-a-spec/&#34;&gt;Part 2, What&amp;rsquo;s a Spec?&lt;/a&gt;: part 2 links a sample spec (WhatTimeIsIt).&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/User_story&#34;&gt;User story&lt;/a&gt; (Wikipedia): &amp;ldquo;As a &amp;hellip;, I want &amp;hellip;, so that &amp;hellip;&amp;rdquo; template.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Software_requirements_specification&#34;&gt;Software requirements specification&lt;/a&gt;, &lt;a href=&#34;https://en.wikipedia.org/wiki/Product_requirements_document&#34;&gt;Product requirements document&lt;/a&gt; (Wikipedia): references.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Software_requirements_specification&#34;&gt;Software requirements specification&lt;/a&gt;, &lt;a href=&#34;https://en.wikipedia.org/wiki/Product_requirements_document&#34;&gt;Product requirements document&lt;/a&gt; (Wikipedia)&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://htdp.org/&#34;&gt;How to Design Programs&lt;/a&gt;: the design recipe: problem, signature, examples, body, tests.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;building-apps&#34;&gt;Building apps&lt;/h3&gt;
@@ -355,7 +355,7 @@ Unwrap)&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://wizardzines.com/comics/better-at-debugging/&#34;&gt;How I got better at debugging&lt;/a&gt; (Julia Evans comic): &amp;ldquo;it&amp;rsquo;s never magic.&amp;rdquo;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://technically.dev/universe/debugging&#34;&gt;Debugging&lt;/a&gt; (Technically glossary)&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://docs.pytest.org/en/stable/getting-started.html&#34;&gt;pytest: Get Started&lt;/a&gt;: the 4-line first test.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Software_testing&#34;&gt;Software testing&lt;/a&gt;, &lt;a href=&#34;https://en.wikipedia.org/wiki/Unit_testing&#34;&gt;Unit testing&lt;/a&gt;, &lt;a href=&#34;https://en.wikipedia.org/wiki/Software_bug&#34;&gt;Software bug&lt;/a&gt; (Wikipedia): references.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Software_testing&#34;&gt;Software testing&lt;/a&gt;, &lt;a href=&#34;https://en.wikipedia.org/wiki/Unit_testing&#34;&gt;Unit testing&lt;/a&gt;, &lt;a href=&#34;https://en.wikipedia.org/wiki/Software_bug&#34;&gt;Software bug&lt;/a&gt; (Wikipedia).&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Rubber_duck_debugging&#34;&gt;Rubber duck debugging&lt;/a&gt; (Wikipedia)&lt;/li&gt;
 &lt;/ul&gt;
 </description>
