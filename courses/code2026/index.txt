@@ -1,4 +1,4 @@
-code2026
+Learn to Code (including with AI)
 
 This is a resource for someone wanting to learn how to code (with the help of AI) from scratch. It has three parts, which you are invited to jump between in any order.
 To understand code, you need to understand a little about how computers and the internet work. This extra material is not usually included in coding classes, but it’s the wax-on-wax-off portion that will make you the Karate Kid.
