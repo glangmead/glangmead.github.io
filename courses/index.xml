@@ -327,7 +327,7 @@ were not noticed until July 29. The fix was only to run &lt;code&gt;pip install 
 &lt;li&gt;&lt;a href=&#34;https://apps.apple.com/us/app/unwrap/id1440611372&#34;&gt;Unwrap: Learn Swift on your iPad&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;building-web-sites&#34;&gt;Building web sites&lt;/h3&gt;
-&lt;p&gt;Web sites can be built in many different ways, though there&amp;rsquo;s usually a mainstream way to do it at any given moment. If you launch something publically, it needs hosting and databases and security.&lt;/p&gt;
+&lt;p&gt;Web sites can be built in many different ways, though there&amp;rsquo;s usually a mainstream way to do it at any given moment. If you launch something publicly, it needs hosting and databases and security.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.reddit.com/r/webdevelopment/comments/1smfe68/whats_your_preferred_way_of_building_websites_for/&#34;&gt;Reddit thread about what to use in 2026&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Next.js&#34;&gt;Next.js on Wikipedia&lt;/a&gt;: understanding what this entry is saying about rendering on the server versus in the browser is an excellent goal.&lt;/li&gt;
