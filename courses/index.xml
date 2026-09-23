@@ -341,11 +341,11 @@ were not noticed until July 29. The fix was only to run &lt;code&gt;pip install 
 &lt;h3 id=&#34;ai-for-coding&#34;&gt;AI for coding&lt;/h3&gt;
 &lt;p&gt;You will help write the book on this aspect. For now there are some good early discoveries about how to do this well.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://simonwillison.net/2025/Mar/19/vibe-coding/&#34;&gt;Not all AI-assisted programming is vibe coding&lt;/a&gt; (Simon Willison): low stakes only, watch secrets and data privacy, set billing limits, get a review.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://simonwillison.net/2025/Mar/19/vibe-coding/&#34;&gt;Not all AI-assisted programming is vibe coding&lt;/a&gt; (Simon Willison): rules of thumg: low stakes projects only, watch secrets and data privacy (see above), set billing limits, get a review.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.manning.com/books/learn-ai-assisted-python-programming-second-edition&#34;&gt;Learn AI-Assisted Python Programming, 2nd ed.&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;qa&#34;&gt;QA&lt;/h3&gt;
-&lt;p&gt;This is your job now. The agent can build software but you have test it and find bugs and crashes.&lt;/p&gt;
+&lt;p&gt;This is your job now. The agent can build software but you have test it and find bugs and crashes. (That said, there are skills to help the agent test in a real browser or device simulator and find problems on its own.)&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/List_of_software_bugs&#34;&gt;List of famous software bugs&lt;/a&gt; (Wikipedia): Ariane 5, Therac-25, Mars Climate Orbiter stories.&lt;/li&gt;
 &lt;li&gt;Willison, &lt;a href=&#34;https://simonwillison.net/2025/Mar/11/using-llms-for-code/&#34;&gt;Here&amp;rsquo;s how I use LLMs to help me write code&lt;/a&gt;: &amp;ldquo;the one thing you absolutely cannot outsource to the machine is testing.&amp;rdquo;&lt;/li&gt;
